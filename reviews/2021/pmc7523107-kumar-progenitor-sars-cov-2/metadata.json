@@ -1,0 +1,21 @@
+{
+  "id": "PMC7523107",
+  "doi": "10.1101/2020.09.24.311845",
+  "published_doi": "10.1093/molbev/msab118",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7523107/",
+  "title": "An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic",
+  "authors": "Sudhir Kumar, Qiqing Tao, Steven Weaver, Maxwell Sanderford, Marcos A. Caraballo-Ortiz, Sudip Sharma, Sergei L. K. Pond, Sayaka Miura",
+  "authors_short": "Kumar et al. (Pond, Miura)",
+  "venue": "bioRxiv / Mol Biol Evol (2021)",
+  "year": 2021,
+  "reviewed_at": "2026-10-25T19:54:30-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.0,
+    "biology": 1.4,
+    "reproducibility": 1.6,
+    "overall": 7.9
+  },
+  "tier": "Strong / Sound"
+}

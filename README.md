@@ -12,7 +12,9 @@ Automated, intellectually rigorous peer reviews of published manuscripts and pre
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)
 
 <!-- LEADERBOARD_START -->
-_No manuscripts reviewed yet. Open an [Issue](../../issues/new?template=review_request.yml) to trigger an automated review._
+| Rank | Date | Manuscript Title | Authors | Venue / Year | Rigor (/3.5) | Claims (/2.5) | Biology (/2.0) | Repro (/2.0) | **Overall (/10)** | Tier | Review |
+| :---: | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
+| 1 | 2026-10-25 | [An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523107/) | Kumar et al. (Pond, Miura) | bioRxiv / Mol Biol Evol (2021) | 2.9 | 2.0 | 1.4 | 1.6 | **7.9** | Strong / Sound | [Review](reviews/2021/pmc7523107-kumar-progenitor-sars-cov-2/review.md) |
 <!-- LEADERBOARD_END -->
 
 ---
