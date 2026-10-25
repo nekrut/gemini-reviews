@@ -1,0 +1,44 @@
+name: Manuscript Review Request
+description: Submit a published manuscript or preprint for automated 7-Pillar peer review and 1-10 scoring
+title: "[Review] "
+labels: ["pending-review"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Manuscript Title
+      description: Full title of the paper or preprint
+      placeholder: "e.g., Natural selection in the evolution of SARS-CoV-2 in bats created a generalist virus..."
+    validations:
+      required: true
+  - type: input
+    id: identifier
+    attributes:
+      label: DOI, PMID, or Preprint URL
+      description: Provide the DOI, bioRxiv/medRxiv URL, or PubMed Central ID
+      placeholder: "e.g., 10.1371/journal.pbio.3001115"
+    validations:
+      required: true
+  - type: input
+    id: authors
+    attributes:
+      label: Authors (First / Senior)
+      description: Key authors for the leaderboard table
+      placeholder: "e.g., MacLean et al. (Robertson, Kosakovsky Pond)"
+    validations:
+      required: false
+  - type: input
+    id: venue
+    attributes:
+      label: Journal or Preprint Server & Year
+      placeholder: "e.g., PLOS Biology (2021)"
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Specific Focus or Context (Optional)
+      description: Any specific claims, figures, supplemental files, or local file paths to include in the audit
+      placeholder: "Optional notes or links to PDF/Supplementary Material..."
+    validations:
+      required: false
