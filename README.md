@@ -14,8 +14,9 @@ Automated, intellectually rigorous peer reviews of published manuscripts and pre
 <!-- LEADERBOARD_START -->
 | Rank | Date | Manuscript Title | Authors | Venue / Year | Rigor (/3.5) | Claims (/2.5) | Biology (/2.0) | Repro (/2.0) | **Overall (/10)** | Tier | Review |
 | :---: | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
-| 1 | 2026-10-25 | [An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523107/) | Kumar et al. (Pond, Miura) | bioRxiv / Mol Biol Evol (2021) | 2.9 | 2.0 | 1.4 | 1.6 | **7.9** | Strong / Sound | [Review](reviews/2021/pmc7523107-kumar-progenitor-sars-cov-2/review.md) |
-| 2 | 2026-10-25 | [Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy](https://pubmed.ncbi.nlm.nih.gov/36029839/) | Amendola et al. (Pond, Kumar, Tanzi) | Environmental Research (2022) | 1.4 | 0.9 | 0.7 | 1.4 | **4.4** | Flawed / Overstated | [Review](reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md) |
+| 1 | 2026-10-25 | [The emergence and ongoing convergent evolution of the SARS-CoV-2 N501Y lineages](https://pmc.ncbi.nlm.nih.gov/articles/PMC8421097/) | Martin, Weaver et al. (de Oliveira, Pond) | Cell (2021) | 3.2 | 2.1 | 1.7 | 1.8 | **8.8** | Strong / Sound | [Review](reviews/2021/pmc8421097-martin-n501y-convergent-evolution/review.md) |
+| 2 | 2026-10-25 | [An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523107/) | Kumar et al. (Pond, Miura) | bioRxiv / Mol Biol Evol (2021) | 2.9 | 2.0 | 1.4 | 1.6 | **7.9** | Strong / Sound | [Review](reviews/2021/pmc7523107-kumar-progenitor-sars-cov-2/review.md) |
+| 3 | 2026-10-25 | [Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy](https://pubmed.ncbi.nlm.nih.gov/36029839/) | Amendola et al. (Pond, Kumar, Tanzi) | Environmental Research (2022) | 1.4 | 0.9 | 0.7 | 1.4 | **4.4** | Flawed / Overstated | [Review](reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md) |
 <!-- LEADERBOARD_END -->
 
 ---

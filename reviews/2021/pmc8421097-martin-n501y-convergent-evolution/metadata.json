@@ -1,0 +1,21 @@
+{
+  "id": "PMC8421097",
+  "pmid": "34537136",
+  "doi": "10.1016/j.cell.2021.09.003",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8421097/",
+  "title": "The emergence and ongoing convergent evolution of the SARS-CoV-2 N501Y lineages",
+  "authors": "Darren P. Martin, Steven Weaver, Houriiyah Tegally, James Emmanuel San, Stephen D. Shank, Eduan Wilkinson, Alexander G. Lucaci, Jennifer Giandhari, Sureshnee Naidoo, Yeshnee Pillay, Lavanya Singh, Richard J. Lessells, Ravindra K. Gupta, Joel O. Wertheim, Anton Nekrutenko, Ben Murrell, Gordon W. Harkins, Philippe Lemey, Oscar A. MacLean, David L. Robertson, Tulio de Oliveira, Sergei L. Kosakovsky Pond",
+  "authors_short": "Martin, Weaver et al. (de Oliveira, Pond)",
+  "venue": "Cell (2021)",
+  "year": 2021,
+  "reviewed_at": "2026-10-25T20:05:30-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.2,
+    "claims": 2.1,
+    "biology": 1.7,
+    "reproducibility": 1.8,
+    "overall": 8.8
+  },
+  "tier": "Strong / Sound"
+}
