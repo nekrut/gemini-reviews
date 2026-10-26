@@ -8,14 +8,14 @@
   "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
   "venue": "Environmental Research (2022)",
   "year": 2022,
-  "reviewed_at": "2026-10-25T20:02:15-04:00",
+  "reviewed_at": "2026-10-25T20:34:30-04:00",
   "issue_number": null,
   "scores": {
-    "rigor": 1.4,
-    "claims": 0.9,
+    "rigor": 1.2,
+    "claims": 0.8,
     "biology": 0.7,
     "reproducibility": 1.4,
-    "overall": 4.4
+    "overall": 4.1
   },
   "tier": "Flawed / Overstated"
 }

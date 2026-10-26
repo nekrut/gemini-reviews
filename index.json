@@ -9,14 +9,14 @@
     "authors_short": "Martin, Weaver et al. (de Oliveira, Pond)",
     "venue": "Cell (2021)",
     "year": 2021,
-    "reviewed_at": "2026-10-25T20:05:30-04:00",
+    "reviewed_at": "2026-10-25T20:35:00-04:00",
     "issue_number": null,
     "scores": {
-      "rigor": 3.2,
-      "claims": 2.1,
+      "rigor": 3.1,
+      "claims": 2.0,
       "biology": 1.7,
       "reproducibility": 1.8,
-      "overall": 8.8
+      "overall": 8.6
     },
     "tier": "Strong / Sound",
     "review_path": "reviews/2021/pmc8421097-martin-n501y-convergent-evolution/review.md"
@@ -31,14 +31,14 @@
     "authors_short": "Kumar et al. (Pond, Miura)",
     "venue": "bioRxiv / Mol Biol Evol (2021)",
     "year": 2021,
-    "reviewed_at": "2026-10-25T19:54:30-04:00",
+    "reviewed_at": "2026-10-25T20:34:00-04:00",
     "issue_number": null,
     "scores": {
-      "rigor": 2.9,
-      "claims": 2.0,
+      "rigor": 2.6,
+      "claims": 1.9,
       "biology": 1.4,
       "reproducibility": 1.6,
-      "overall": 7.9
+      "overall": 7.5
     },
     "tier": "Strong / Sound",
     "review_path": "reviews/2021/pmc7523107-kumar-progenitor-sars-cov-2/review.md"
@@ -53,14 +53,14 @@
     "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
     "venue": "Environmental Research (2022)",
     "year": 2022,
-    "reviewed_at": "2026-10-25T20:02:15-04:00",
+    "reviewed_at": "2026-10-25T20:34:30-04:00",
     "issue_number": null,
     "scores": {
-      "rigor": 1.4,
-      "claims": 0.9,
+      "rigor": 1.2,
+      "claims": 0.8,
       "biology": 0.7,
       "reproducibility": 1.4,
-      "overall": 4.4
+      "overall": 4.1
     },
     "tier": "Flawed / Overstated",
     "review_path": "reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md"

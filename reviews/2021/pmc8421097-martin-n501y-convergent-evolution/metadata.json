@@ -8,14 +8,14 @@
   "authors_short": "Martin, Weaver et al. (de Oliveira, Pond)",
   "venue": "Cell (2021)",
   "year": 2021,
-  "reviewed_at": "2026-10-25T20:05:30-04:00",
+  "reviewed_at": "2026-10-25T20:35:00-04:00",
   "issue_number": null,
   "scores": {
-    "rigor": 3.2,
-    "claims": 2.1,
+    "rigor": 3.1,
+    "claims": 2.0,
     "biology": 1.7,
     "reproducibility": 1.8,
-    "overall": 8.8
+    "overall": 8.6
   },
   "tier": "Strong / Sound"
 }

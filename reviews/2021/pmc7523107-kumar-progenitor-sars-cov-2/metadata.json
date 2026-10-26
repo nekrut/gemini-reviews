@@ -8,14 +8,14 @@
   "authors_short": "Kumar et al. (Pond, Miura)",
   "venue": "bioRxiv / Mol Biol Evol (2021)",
   "year": 2021,
-  "reviewed_at": "2026-10-25T19:54:30-04:00",
+  "reviewed_at": "2026-10-25T20:34:00-04:00",
   "issue_number": null,
   "scores": {
-    "rigor": 2.9,
-    "claims": 2.0,
+    "rigor": 2.6,
+    "claims": 1.9,
     "biology": 1.4,
     "reproducibility": 1.6,
-    "overall": 7.9
+    "overall": 7.5
   },
   "tier": "Strong / Sound"
 }
