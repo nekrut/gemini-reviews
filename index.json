@@ -20,5 +20,27 @@
     },
     "tier": "Strong / Sound",
     "review_path": "reviews/2021/pmc7523107-kumar-progenitor-sars-cov-2/review.md"
+  },
+  {
+    "id": "PMID:36029839",
+    "pmcid": "PMC9404229",
+    "doi": "10.1016/j.envres.2022.113979",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36029839/",
+    "title": "Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy",
+    "authors": "Antonella Amendola, Marta Canuti, Silvia Bianchi, Sudhir Kumar, Clara Fappani, Maria Gori, Daniela Colzani, Sergei L. Kosakovsky Pond, Sayaka Miura, Melissa Baggieri, Antonella Marchi, Elisa Borghi, Gianvincenzo Zuccotti, Mario C. Raviglione, Fabio Magurano, Elisabetta Tanzi",
+    "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
+    "venue": "Environmental Research (2022)",
+    "year": 2022,
+    "reviewed_at": "2026-10-25T20:02:15-04:00",
+    "issue_number": null,
+    "scores": {
+      "rigor": 1.4,
+      "claims": 0.9,
+      "biology": 0.7,
+      "reproducibility": 1.4,
+      "overall": 4.4
+    },
+    "tier": "Flawed / Overstated",
+    "review_path": "reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md"
   }
 ]
