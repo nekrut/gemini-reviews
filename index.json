@@ -2540,6 +2540,32 @@
     "review_path": "reviews/2025/pmc12729862-pu-systemic-inflammation-polygenic-risk-score/review.md"
   },
   {
+    "id": "PMID42749808",
+    "pmid": "42749808",
+    "doi": "10.1038/s41586-026-11044-y",
+    "url": "https://www.nature.com/articles/s41586-026-11044-y",
+    "title": "Reimagining research papers as interactive and reliable AI agents",
+    "authors": "Miao J, Davis JR, Zhang Y, Pritchard JK, Zou J.",
+    "authors_short": "Miao J et al. (Zou J.)",
+    "venue": "Nature (2026)",
+    "year": 2026,
+    "cohort": "C",
+    "cohort_id": "C101",
+    "anon_id": "ANON_201",
+    "domain": "Transcriptomics & CompBio",
+    "reviewed_at": "2026-10-27T22:07:00-04:00",
+    "issue_number": null,
+    "scores": {
+      "rigor": 1.8,
+      "claims": 1.5,
+      "biology": 1.4,
+      "reproducibility": 1.4,
+      "overall": 6.1
+    },
+    "tier": "Mixed / Salvageable",
+    "review_path": "reviews/2026/pmid42749808-miao-reimagining-research-papers-as-interactive/review.md"
+  },
+  {
     "id": "PMC11682804",
     "pmid": "39661025",
     "doi": "10.3201/eid3101.241266",
