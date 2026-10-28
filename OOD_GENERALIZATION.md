@@ -1,7 +1,7 @@
 # Out-of-Domain Generalization Study ($N = 60$ Wild Manuscripts Across 3 Untested Adjacent Fields)
 
 ## 1. Study Design & Two-Stage Adaptive Review Protocol
-To test whether the high methodological failure rates observed in our original 5-domain wild sample ($N = 100$: Molecular Evolution, Viral Evolution, Statistical Genetics, Cancer & Microbiome, and Transcriptomics/CompBio ML) generalize to adjacent quantitative fields that were **not** part of our calibration benchmark, we drew a stratified random sample of **$N = 60$ Open Access research articles (`2018–2025`, $20$ per domain)** from Europe PMC (`seed = 20261028`) across three untested domains:
+To test whether the high methodological failure rates observed in our original 5-domain wild sample ($N = 100$: Molecular Evolution, Viral Evolution, Statistical Genetics, Cancer & Microbiome, and Transcriptomics/CompBio ML) generalize to adjacent quantitative fields that were **not** part of our calibration benchmark, we drew a stratified random sample of **$N = 60$ Open Access research articles (sampling frame `2018–2025`; realized `2020–2025`, 51/60 published 2024–2025; $20$ per domain)** from Europe PMC (`seed = 20261028`) across three untested domains:
 
 1. **Systems & Cognitive Neuroscience (`Neuroscience & Neuroimaging`, $n = 20$):** Resting-state and task fMRI functional connectivity, EEG/fNIRS biomarkers, graph-theoretic brain network topology, and neural decoding.
 2. **Quantitative Ecology, Macroevolution & Climate Change Biology (`Ecology & Macroevolution`, $n = 20$):** Species distribution modeling (`MaxEnt`, `Biomod2`), climate-change range shifts, plant–pollinator phenological mismatch, and macroecological population dynamics.
@@ -24,12 +24,12 @@ Combining the 60 Out-of-Domain (`OOD`) wild manuscripts with the 100 original Co
 | **2. Viral Evolution & Phylodynamics** | Orig C | **5.97** | **6.35** | **35.0%** (`7/20`) | **45.0%** (`9/20`) | **55.0%** (`11/20`) | Unpartitioned recombination clocks, sampling skew, egg-passaging artifacts |
 | **3. Statistical Genetics / GWAS** | Orig C | **5.37** | **5.40** | **40.0%** (`8/20`) | **65.0%** (`13/20`) | **75.0%** (`15/20`) | In-sample GWAS feature leakage before CV, two-sample MR ancestry/pleiotropy errors |
 | **4. Ecology & Macroevolution** | **OOD** | **5.19** | **4.80** | **55.0%** (`11/20`) | **75.0%** (`15/20`) | **75.0%** (`15/20`) | `MaxEnt` overfitting ($p > n$), roadside bias, static altitude in warming projections, area arithmetic errors |
-| **5. Neuroscience & Neuroimaging** | **OOD** | **4.88** | **4.80** | **50.0%** (`10/20`) | **75.0%** (`15/20`) | **85.0%** (`17/20`) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
+| **5. Neuroscience & Neuroimaging** | **OOD** | **4.88** | **4.80** | **50.0%** (`10/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
 | **6. Cancer & Microbiome** | Orig C | **4.78** | **4.60** | **60.0%** (`12/20`) | **75.0%** (`15/20`) | **85.0%** (`17/20`) | Low-biomass kitome contamination, cross-BioProject batch & antibiotic confounding, stool pooling |
 | **7. Structural Bioinfo & AI Drug Discovery** | **OOD** | **4.57** | **4.67** | **60.0%** (`12/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) | PDBbind–CASF pocket homology leakage, transductive DTI kernel leakage, docking to wrong PDB target |
 | **8. Transcriptomics & CompBio ML** | Orig C | **4.33** | **4.20** | **75.0%** (`15/20`) | **85.0%** (`17/20`) | **90.0%** (`18/20`) | Validation cohort leakage into LASSO screening, cell-level scRNA pseudoreplication, text-table sign flips |
-| **OOD Subtotal ($N = 60$, 3 New Domains)** | **OOD** | **4.88** | **4.80** | **55.0%** (`33/60`) | **76.7%** (`46/60`) | **81.7%** (`49/60`) | Rogan-Gladen $\hat{\pi}_{\text{true}} = 75.0\%$ (`<5.0`), $87.2\%$ (`<6.0`) |
-| **All 8 Domains Combined ($N = 160$)** | **All Wild** | **5.25** | **5.02** | **47.5%** (`76/160`) | **66.9%** (`107/160`) | **74.4%** (`119/160`) | Monotonic split between mechanistic/model-based vs. template ML/associative fields |
+| **OOD Subtotal ($N = 60$, 3 New Domains)** | **OOD** | **4.88** | **4.80** | **55.0%** (`33/60`) | **78.3%** (`47/60`) | **81.7%** (`49/60`) | Rogan-Gladen $\hat{\pi}_{\text{true}} = 75.0\%$ (`<5.0`), $92.6\%$ (`<6.0`); RG = (p_obs + Sp − 1)/(Se + Sp − 1), using in-domain Se_int and Sp from CALIBRATION.md §6B (<5.0: Se 73.3%, Sp 100%; <6.0: Se 84.4%, Sp 98%) applied to p_obs = 33/60 and 47/60; this assumes calibration Se/Sp transfer to these untested domains. |
+| **All 8 Domains Combined ($N = 160$)** | **All Wild** | **5.25** | **5.02** | **47.5%** (`76/160`) | **67.5%** (`108/160`) | **74.4%** (`119/160`) | Monotonic split between mechanistic/model-based vs. template ML/associative fields |
 
 ### Citation-Tier Stratification in the Out-of-Domain Cohort ($N = 60$)
 
@@ -43,7 +43,7 @@ Combining the 60 Out-of-Domain (`OOD`) wild manuscripts with the 100 original Co
 
 ## 3. Domain-Specific Forensic Taxonomy in the 3 New Fields
 
-### A. Systems & Cognitive Neuroscience (`Mean = 4.88`, `50% < 5.0`, `75% < 6.0`)
+### A. Systems & Cognitive Neuroscience (`Mean = 4.88`, `50% < 5.0`, `80% < 6.0`)
 * **Exemplary Benchmarks (`9.10 / 10`):**
   * `D03` (`PMC12240839`, *Nat Methods* 2025, `9.10`): Comprehensive benchmark of 239 pairwise interaction statistics across $N=326$ HCP participants and 6 replication cohorts with open code.
   * `D05` (`PMC11513045`, *Commun Biol* 2024, `9.10`): 100-node Wilson-Cowan neural mass + Balloon-Windkessel hemodynamic benchmark proving that correlational PPI fails to isolate task modulation and deconvolution + FIR regression eliminates co-activation false positives.
