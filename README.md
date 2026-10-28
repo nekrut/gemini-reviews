@@ -41,6 +41,15 @@ Applying our Two-Stage Adaptive Blinded Protocol (`88` reviews total: Stage 1 on
 | **All OOD Combined ($N = 60$)** | **4.88** | **4.80** | **55.0%** ($33/60$) | **76.7%** ($46/60$) | **81.7%** ($49/60$) | Citation gradient: High ($\ge 25$): `6.21` (`18.8% <5.0`) vs. Mid: `4.68` (`60.9%`) vs. Low: `4.08` (`76.2%`) |
 | **All 8 Domains Combined ($N = 160$)** | **5.25** | **5.02** | **47.5%** ($76/160$) | **66.9%** ($107/160$) | **74.4%** ($119/160$) | Consistent split between mechanistic models vs. formulaic template pipelines (`MaxEnt`, LASSO, docking, rs-fMRI) |
 
+### Value-Added of Human Peer Review: Paired Preprint vs. Published Audit & Human Peer Review Files ([`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md))
+Across **$N = 20$ version-blinded Preprint (`v1`) $\rightarrow$ Final Published Journal pairs (`40` full-text manuscripts)** split across two disjoint waves (`PR_W1_01`–`PR_W1_20` and `PR_W2_01`–`PR_W2_20`) and compared against **$210+$ pages of verbatim Human Peer Review Files** (`PLoS Pathogens`, `eLife`, `Nature Communications`, `Nature Cell Biology`, and `Nature`):
+* **Overall Peer-Review Treatment Effect ($\Delta S = S_{\text{published}} - S_{\text{preprint}}$):** **`+0.65 ± 0.69` points** (Preprint Mean `6.53` $\rightarrow$ Published Mean `7.18`, Median $\Delta S = +0.65$, paired $t = 4.27, p = 0.0004$; Wilcoxon $p = 0.0003$).
+* **Where the Gain Comes From:** **`38.5%` (`+0.25` pts)** of the total score increase comes from **Data, Code & Reproducibility** (replacing missing preprint accessions with live GEO/SRA/PRIDE/Zenodo accessions at publication), **`32.3%` (`+0.21` pts)** from **Methodological & Statistical Rigor**, **`21.5%` (`+0.14` pts)** from **Claim–Evidence Alignment**, and only **`6.2%` (`+0.04` pts)** from **Biological & Evolutionary Models**.
+* **Tier 1/2 (Selective Flagship/Society, $n=10$) vs. Tier 3 (Megajournal / Open-Threshold, $n=10$):**
+  * **Selection Effect:** Tier 1/2 papers start **`+1.21` points higher as preprints** (`7.13` vs. `5.92`).
+  * **Treatment Effect:** Tier 1/2 peer review adds **`+0.85` points** ($p = 0.0049$; **`+0.59` pts non-reproducibility scientific gain**), resolving the sole `< 6.0` preprint (`PAIR_07`, *NAR*, `5.2 -> 7.3`). Tier 3 peer review adds **`+0.46` points** ($p = 0.0427$), of which **`52.2%` (`+0.24` pts) is purely Data Availability deposition** (`+0.22` pts non-reproducibility gain), leaving the `< 6.0` failure rate completely unchanged (`50.0%` Preprint `< 6.0` $\rightarrow$ `50.0%` Published `< 6.0`).
+* **Blinded AI Reviewer vs. Verbatim Human Referee Reports (`5` Dossiers):** The single-pass blinded AI reviewer independently recalled **`91.7%` (`22 / 24`)** of the consensus major methodological/interpretive critiques raised by human referee panels while catching **14 additional mathematical, statistical, and cohort-confounding errors** (including revision-induced read-level Wilcoxon pseudoreplication and PARPi-naïve clinical survival confounding) that escaped all human referees.
+
 ---
 
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)

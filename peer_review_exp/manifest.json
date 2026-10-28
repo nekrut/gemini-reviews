@@ -1,0 +1,628 @@
+{
+  "pairs": [
+    {
+      "ppr_id": "PPR1231382",
+      "ppr_doi": "10.64898/2025.12.15.694445",
+      "ppr_year": 2025,
+      "pmid": "42302084",
+      "title": "Extended poly(A) tails are a shared feature of herpesvirus mRNAs",
+      "pmcid": "PMC13271517",
+      "journal": "PLoS pathogens",
+      "year": 2026,
+      "doi": "10.1371/journal.ppat.1014341",
+      "authors": "Fuhrmann E, Toda S, Leins J, Cetraro P, Deshpande V, Rowell J, Chapman EA, Jacobsen C, Kropp KA, Lamers MM, Loliashvili E, Saleban M, Verstraten R, Vogt C, Wongwiwat W, Ouwendijk WJD, Viejo-Borbolla A, White RE, Wilson AC, Burgess HM, Depledge DP.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_01",
+      "cohort_id": "PAIR_01",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": true,
+      "preprint_anon_id": "PR_W1_11",
+      "preprint_wave": 1,
+      "preprint_bytes": 44000,
+      "published_anon_id": "PR_W2_12",
+      "published_wave": 2,
+      "published_bytes": 62115
+    },
+    {
+      "ppr_id": "PPR963780",
+      "ppr_doi": "10.1101/2025.01.08.631908",
+      "ppr_year": 2025,
+      "pmid": "42154822",
+      "title": "Lineage priming and cell type proportioning depends on the interplay between stochastic and deterministic factors",
+      "pmcid": "PMC13186565",
+      "journal": "eLife",
+      "year": 2026,
+      "doi": "10.7554/elife.105512",
+      "authors": "Salvidge W, Brimson C, Gruenheit N, Huang LY, Pears C, Wolf J, Thompson C.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_02",
+      "cohort_id": "PAIR_02",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": true,
+      "published_anon_id": "PR_W1_18",
+      "published_wave": 1,
+      "published_bytes": 121830,
+      "preprint_anon_id": "PR_W2_15",
+      "preprint_wave": 2,
+      "preprint_bytes": 69257
+    },
+    {
+      "ppr_id": "PPR1047658",
+      "ppr_doi": "10.1101/2025.07.08.663208",
+      "ppr_year": 2025,
+      "pmid": "41922875",
+      "title": "MitoPerturb-Seq identifies common and gene-specific single-cell responses to mitochondrial DNA depletion and heteroplasmy",
+      "pmcid": "PMC13095666",
+      "journal": "Nature structural & molecular biology",
+      "year": 2026,
+      "doi": "10.1038/s41594-026-01779-7",
+      "authors": "Burr SP, Auckland K, Glynos A, Dhawanjewar A, Ryall C, Wei W, Hynes-Allen A, Prater M, Sczaniecka-Clift M, Prudent J, Chinnery PF, van den Ameele J.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_03",
+      "cohort_id": "PAIR_03",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": true,
+      "published_anon_id": "PR_W2_04",
+      "published_wave": 2,
+      "published_bytes": 115850,
+      "preprint_anon_id": "PR_W1_13",
+      "preprint_wave": 1,
+      "preprint_bytes": 74405
+    },
+    {
+      "ppr_id": "PPR1230660",
+      "ppr_doi": "10.64898/2025.12.19.693361",
+      "ppr_year": 2025,
+      "pmid": "42567864",
+      "title": "Systematic profiling of growth interactions in human gut microbiome species",
+      "pmcid": "PMC13451373",
+      "journal": "Nature communications",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-76526-z",
+      "authors": "Buyanbadrakh B, Baland E, Lambeck P, P\u00e9rez Jim\u00e9nez L, Holmberg SM, Pu\u00e9rtolas-Balint F, Toh E, Wai SN, Schroeder BO, Ramstedt M, Zhu S, Mateus A.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_04",
+      "cohort_id": "PAIR_04",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": true,
+      "published_anon_id": "PR_W1_09",
+      "published_wave": 1,
+      "published_bytes": 49645,
+      "preprint_anon_id": "PR_W2_13",
+      "preprint_wave": 2,
+      "preprint_bytes": 32114
+    },
+    {
+      "ppr_id": "PPR1231604",
+      "ppr_doi": "10.64898/2025.12.11.692727",
+      "ppr_year": 2025,
+      "pmid": "42230924",
+      "title": "Nucleophagy removes cytotoxic trapped PARP1",
+      "pmcid": "PMC13278974",
+      "journal": "Nature cell biology",
+      "year": 2026,
+      "doi": "10.1038/s41556-026-01961-5",
+      "authors": "Hoslett G, Tribble S, Lascaux P, Koukouravas S, Torrecilla I, Song W, Hou CX, Li J, Gonz\u00e1lez-Fern\u00e1ndez M, De Gregoriis G, Dagg RA, O'Brien D, Pierangelini A, Martial T, Ng AWT, Raimundo N, Milosevic I, Freire R, Li Y, Rottenberg S, Krastev DB, Lord CJ, Tarsounas M, Ramadan K.",
+      "citedByCount": 4,
+      "pair_id": "PAIR_05",
+      "cohort_id": "PAIR_05",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": true,
+      "preprint_anon_id": "PR_W1_12",
+      "preprint_wave": 1,
+      "preprint_bytes": 74542,
+      "published_anon_id": "PR_W2_05",
+      "published_wave": 2,
+      "published_bytes": 106742
+    },
+    {
+      "ppr_id": "PPR1216740",
+      "ppr_doi": "10.64898/2025.12.19.694963",
+      "ppr_year": 2025,
+      "pmid": "42715300",
+      "title": "Probabilistic inference of Homonymous and Heteronymous Recurrent Inhibition in Human Muscles from Large-Scale Motor Neuron Recordings",
+      "pmcid": "PMC13557072",
+      "journal": "Science advances",
+      "year": 2026,
+      "doi": "10.1126/sciadv.aee9425",
+      "authors": "Dernoncourt F, Avrillon S, Cattagni T, Farina D, Hug F.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_06",
+      "cohort_id": "PAIR_06",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_06",
+      "published_wave": 1,
+      "published_bytes": 95281,
+      "preprint_anon_id": "PR_W2_06",
+      "preprint_wave": 2,
+      "preprint_bytes": 81634
+    },
+    {
+      "ppr_id": "PPR1214248",
+      "ppr_doi": "10.64898/2025.12.01.691549",
+      "ppr_year": 2025,
+      "pmid": "42234577",
+      "title": "SNooPy: a statistical framework for long-read metagenomic variant calling",
+      "pmcid": "PMC13233072",
+      "journal": "Nucleic acids research",
+      "year": 2026,
+      "doi": "10.1093/nar/gkag556",
+      "authors": "Faure R, Faure U, Truong T, Derzelle A, Lavenier D, Flot JF, Quince C.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_07",
+      "cohort_id": "PAIR_07",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_17",
+      "preprint_wave": 1,
+      "preprint_bytes": 24188,
+      "published_anon_id": "PR_W2_18",
+      "published_wave": 2,
+      "published_bytes": 28859
+    },
+    {
+      "ppr_id": "PPR1229728",
+      "ppr_doi": "10.64898/2025.12.17.694686",
+      "ppr_year": 2025,
+      "pmid": "42636255",
+      "title": "Mechanochemical modeling of exercise-induced skeletal muscle hypertrophy",
+      "pmcid": "PMC13529250",
+      "journal": "PLoS computational biology",
+      "year": 2026,
+      "doi": "10.1371/journal.pcbi.1014691",
+      "authors": "Devold IS, Rognes ME, Rangamani P.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_08",
+      "cohort_id": "PAIR_08",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W2_08",
+      "preprint_wave": 2,
+      "preprint_bytes": 50870,
+      "published_anon_id": "PR_W1_15",
+      "published_wave": 1,
+      "published_bytes": 68814
+    },
+    {
+      "ppr_id": "PPR1231346",
+      "ppr_doi": "10.64898/2025.12.15.694194",
+      "ppr_year": 2025,
+      "pmid": "42777062",
+      "title": "Engineering plant tandem kinase immune receptors expands effector recognition profiles",
+      "pmcid": "PMC13600239",
+      "journal": "Science advances",
+      "year": 2026,
+      "doi": "10.1126/sciadv.aef2426",
+      "authors": "Yu DS, Zdrza\u0142ek R, Katayama E, Akiyama H, Daykin L, Williams NJ, Goodridge I, Asuke S, Banfield MJ.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_09",
+      "cohort_id": "PAIR_09",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_14",
+      "preprint_wave": 1,
+      "preprint_bytes": 21801,
+      "published_anon_id": "PR_W2_02",
+      "published_wave": 2,
+      "published_bytes": 45212
+    },
+    {
+      "ppr_id": "PPR1231554",
+      "ppr_doi": "10.64898/2025.12.15.694297",
+      "ppr_year": 2025,
+      "pmid": "42530440",
+      "title": "De novo genome sequence assembly of the model algal endosymbiont Micractinium conductrix derived from its host Paramecium bursaria 186b",
+      "pmcid": "PMC13543684",
+      "journal": "Genome biology and evolution",
+      "year": 2026,
+      "doi": "10.1093/gbe/evag194",
+      "authors": "Leonard G, Vitonyt\u0117 I, Savory FR, Hansson EM, Cameron DD, Brockhurst MA, Richards TA.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_10",
+      "cohort_id": "PAIR_10",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W2_14",
+      "preprint_wave": 2,
+      "preprint_bytes": 29165,
+      "published_anon_id": "PR_W1_03",
+      "published_wave": 1,
+      "published_bytes": 39098
+    },
+    {
+      "ppr_id": "PPR1032999",
+      "ppr_doi": "10.1101/2025.06.03.657636",
+      "ppr_year": 2025,
+      "pmid": "41219156",
+      "title": "De novo genome assembly of Ansell\u2019s mole-rat (  <i>Fukomys anselli</i>  )",
+      "pmcid": "PMC12774600",
+      "journal": "G3 (Bethesda, Md.)",
+      "year": 2026,
+      "doi": "10.1093/g3journal/jkaf271",
+      "authors": "Bekavac M, Coimbra R, Busa VF, Behm M, Wagner RE, Goncalves A, Begall S, Frye M, Odom DT.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_11",
+      "cohort_id": "PAIR_11",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_05",
+      "preprint_wave": 1,
+      "preprint_bytes": 27215,
+      "published_anon_id": "PR_W2_11",
+      "published_wave": 2,
+      "published_bytes": 36333
+    },
+    {
+      "ppr_id": "PPR1035572",
+      "ppr_doi": "10.21203/rs.3.rs-6856057/v1",
+      "ppr_year": 2025,
+      "pmid": "41634709",
+      "title": "Transcriptomic analysis of non-model Drosophilidae reveals novel AMP candidates",
+      "pmcid": "PMC12958777",
+      "journal": "BMC biology",
+      "year": 2026,
+      "doi": "10.1186/s12915-026-02535-5",
+      "authors": "Dhakad P, Newman D, Obbard DJ.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_12",
+      "cohort_id": "PAIR_12",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_07",
+      "published_wave": 1,
+      "published_bytes": 63426,
+      "preprint_anon_id": "PR_W2_19",
+      "preprint_wave": 2,
+      "preprint_bytes": 47043
+    },
+    {
+      "ppr_id": "PPR1231029",
+      "ppr_doi": "10.64898/2025.12.18.695118",
+      "ppr_year": 2025,
+      "pmid": "41844788",
+      "title": "The MIME-seq technique allows to monitor the interaction of small non-coding RNAs with Argonaute proteins and their transfer to other cells",
+      "pmcid": "PMC13128916",
+      "journal": "Scientific reports",
+      "year": 2026,
+      "doi": "10.1038/s41598-026-44270-5",
+      "authors": "Perrard J, Guay C, Zanou N, Regazzi R.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_13",
+      "cohort_id": "PAIR_13",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_01",
+      "preprint_wave": 1,
+      "preprint_bytes": 27272,
+      "published_anon_id": "PR_W2_09",
+      "published_wave": 2,
+      "published_bytes": 35460
+    },
+    {
+      "ppr_id": "PPR1229977",
+      "ppr_doi": "10.64898/2025.12.24.696349",
+      "ppr_year": 2025,
+      "pmid": "42021140",
+      "title": "Genomic selection accuracy and bias using imputed genotypes on growth, welfare and fitness traits in two Pekin duck lines",
+      "pmcid": "PMC13235070",
+      "journal": "BMC genomics",
+      "year": 2026,
+      "doi": "10.1186/s12864-026-12855-z",
+      "authors": "Matika O, Tarsani E, McIntosh K, Kebede FG, Talenti A, Rae AM, Kranis A, Watson KA.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_14",
+      "cohort_id": "PAIR_14",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_08",
+      "published_wave": 1,
+      "published_bytes": 35422,
+      "preprint_anon_id": "PR_W2_20",
+      "preprint_wave": 2,
+      "preprint_bytes": 25704
+    },
+    {
+      "ppr_id": "PPR1230802",
+      "ppr_doi": "10.64898/2025.12.19.695414",
+      "ppr_year": 2025,
+      "pmid": "41823267",
+      "title": "Role of small intronic RNAs in the crosstalk between immune cells and \u03b2-cells during type 1 diabetes development",
+      "pmcid": "PMC12998025",
+      "journal": "RNA biology",
+      "year": 2026,
+      "doi": "10.1080/15476286.2026.2645442",
+      "authors": "Poddar S, Brozzi F, Cosentino C, Jacovetti C, Guay C, Perrard J, Regazzi R.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_15",
+      "cohort_id": "PAIR_15",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_10",
+      "preprint_wave": 1,
+      "preprint_bytes": 29627,
+      "published_anon_id": "PR_W2_16",
+      "published_wave": 2,
+      "published_bytes": 40070
+    },
+    {
+      "ppr_id": "PPR1229707",
+      "ppr_doi": "10.64898/2025.12.23.696156",
+      "ppr_year": 2025,
+      "pmid": "42182064",
+      "title": "Introducing a translationally relevant mouse model of radiosurgery-induced unilateral hearing loss",
+      "pmcid": "PMC13189964",
+      "journal": "Frontiers in neuroscience",
+      "year": 2026,
+      "doi": "10.3389/fnins.2026.1748309",
+      "authors": "Daskalou D, Rousset F, Sgroi S, Oberhauser L, Thiran JP, Tuleasca C, Jelescu IO, Levivier M, Senn P.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_16",
+      "cohort_id": "PAIR_16",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_02",
+      "published_wave": 1,
+      "published_bytes": 55851,
+      "preprint_anon_id": "PR_W2_10",
+      "preprint_wave": 2,
+      "preprint_bytes": 38702
+    },
+    {
+      "ppr_id": "PPR1171629",
+      "ppr_doi": "",
+      "ppr_year": 2025,
+      "pmid": "40987853",
+      "pmcid": "PMC13495268",
+      "title": "Evolutionary dynamics and molecular adaptation of Rift Valley fever virus across human and non-human outbreaks in Africa",
+      "journal": "BMC genomics",
+      "year": 2025,
+      "doi": "",
+      "authors": "",
+      "citedByCount": 0,
+      "pair_id": "PAIR_17",
+      "cohort_id": "PAIR_17",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_04",
+      "preprint_wave": 1,
+      "preprint_bytes": 38544,
+      "published_anon_id": "PR_W2_03",
+      "published_wave": 2,
+      "published_bytes": 52566
+    },
+    {
+      "ppr_id": "PPR1219406",
+      "ppr_doi": "",
+      "ppr_year": 2025,
+      "pmid": "40971510",
+      "pmcid": "PMC13483317",
+      "title": "MATRIX: Rapid Quantification of Total and Active Microbial Cells with Single-Cell Phenotypes for Environmental Microbiomes",
+      "journal": "mSystems",
+      "year": 2025,
+      "doi": "",
+      "authors": "",
+      "citedByCount": 0,
+      "pair_id": "PAIR_18",
+      "cohort_id": "PAIR_18",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_19",
+      "published_wave": 1,
+      "published_bytes": 52267,
+      "preprint_anon_id": "PR_W2_17",
+      "preprint_wave": 2,
+      "preprint_bytes": 36583
+    },
+    {
+      "ppr_id": "PPR1230726",
+      "ppr_doi": "",
+      "ppr_year": 2025,
+      "pmid": "40893512",
+      "pmcid": "PMC13444607",
+      "title": "A single-cell transcriptomic atlas of peripheral blood immune cells spanning progressive canine leishmaniosis",
+      "journal": "iScience",
+      "year": 2025,
+      "doi": "",
+      "authors": "",
+      "citedByCount": 0,
+      "pair_id": "PAIR_19",
+      "cohort_id": "PAIR_19",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "preprint_anon_id": "PR_W1_16",
+      "preprint_wave": 1,
+      "preprint_bytes": 57558,
+      "published_anon_id": "PR_W2_07",
+      "published_wave": 2,
+      "published_bytes": 69431
+    },
+    {
+      "ppr_id": "PPR1231219",
+      "ppr_doi": "",
+      "ppr_year": 2025,
+      "pmid": "39934812",
+      "pmcid": "PMC12888548",
+      "title": "Microsatellite Analysis of Genetic Differentiation Among Populations of the Malaria Vector, Anopheles funestus , across Mainland Tanzania Reveals Contrasted Patterns of Geographic Isolation and Gene Flow",
+      "journal": "Parasites & vectors",
+      "year": 2025,
+      "doi": "",
+      "authors": "",
+      "citedByCount": 0,
+      "pair_id": "PAIR_20",
+      "cohort_id": "PAIR_20",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "has_embedded_human_review": false,
+      "published_anon_id": "PR_W1_20",
+      "published_wave": 1,
+      "published_bytes": 37787,
+      "preprint_anon_id": "PR_W2_01",
+      "preprint_wave": 2,
+      "preprint_bytes": 31540
+    }
+  ],
+  "wave1_map": {
+    "PR_W1_01": {
+      "pair_id": "PAIR_13",
+      "version": "preprint"
+    },
+    "PR_W1_02": {
+      "pair_id": "PAIR_16",
+      "version": "published"
+    },
+    "PR_W1_03": {
+      "pair_id": "PAIR_10",
+      "version": "published"
+    },
+    "PR_W1_04": {
+      "pair_id": "PAIR_17",
+      "version": "preprint"
+    },
+    "PR_W1_05": {
+      "pair_id": "PAIR_11",
+      "version": "preprint"
+    },
+    "PR_W1_06": {
+      "pair_id": "PAIR_06",
+      "version": "published"
+    },
+    "PR_W1_07": {
+      "pair_id": "PAIR_12",
+      "version": "published"
+    },
+    "PR_W1_08": {
+      "pair_id": "PAIR_14",
+      "version": "published"
+    },
+    "PR_W1_09": {
+      "pair_id": "PAIR_04",
+      "version": "published"
+    },
+    "PR_W1_10": {
+      "pair_id": "PAIR_15",
+      "version": "preprint"
+    },
+    "PR_W1_11": {
+      "pair_id": "PAIR_01",
+      "version": "preprint"
+    },
+    "PR_W1_12": {
+      "pair_id": "PAIR_05",
+      "version": "preprint"
+    },
+    "PR_W1_13": {
+      "pair_id": "PAIR_03",
+      "version": "preprint"
+    },
+    "PR_W1_14": {
+      "pair_id": "PAIR_09",
+      "version": "preprint"
+    },
+    "PR_W1_15": {
+      "pair_id": "PAIR_08",
+      "version": "published"
+    },
+    "PR_W1_16": {
+      "pair_id": "PAIR_19",
+      "version": "preprint"
+    },
+    "PR_W1_17": {
+      "pair_id": "PAIR_07",
+      "version": "preprint"
+    },
+    "PR_W1_18": {
+      "pair_id": "PAIR_02",
+      "version": "published"
+    },
+    "PR_W1_19": {
+      "pair_id": "PAIR_18",
+      "version": "published"
+    },
+    "PR_W1_20": {
+      "pair_id": "PAIR_20",
+      "version": "published"
+    }
+  },
+  "wave2_map": {
+    "PR_W2_01": {
+      "pair_id": "PAIR_20",
+      "version": "preprint"
+    },
+    "PR_W2_02": {
+      "pair_id": "PAIR_09",
+      "version": "published"
+    },
+    "PR_W2_03": {
+      "pair_id": "PAIR_17",
+      "version": "published"
+    },
+    "PR_W2_04": {
+      "pair_id": "PAIR_03",
+      "version": "published"
+    },
+    "PR_W2_05": {
+      "pair_id": "PAIR_05",
+      "version": "published"
+    },
+    "PR_W2_06": {
+      "pair_id": "PAIR_06",
+      "version": "preprint"
+    },
+    "PR_W2_07": {
+      "pair_id": "PAIR_19",
+      "version": "published"
+    },
+    "PR_W2_08": {
+      "pair_id": "PAIR_08",
+      "version": "preprint"
+    },
+    "PR_W2_09": {
+      "pair_id": "PAIR_13",
+      "version": "published"
+    },
+    "PR_W2_10": {
+      "pair_id": "PAIR_16",
+      "version": "preprint"
+    },
+    "PR_W2_11": {
+      "pair_id": "PAIR_11",
+      "version": "published"
+    },
+    "PR_W2_12": {
+      "pair_id": "PAIR_01",
+      "version": "published"
+    },
+    "PR_W2_13": {
+      "pair_id": "PAIR_04",
+      "version": "preprint"
+    },
+    "PR_W2_14": {
+      "pair_id": "PAIR_10",
+      "version": "preprint"
+    },
+    "PR_W2_15": {
+      "pair_id": "PAIR_02",
+      "version": "preprint"
+    },
+    "PR_W2_16": {
+      "pair_id": "PAIR_15",
+      "version": "published"
+    },
+    "PR_W2_17": {
+      "pair_id": "PAIR_18",
+      "version": "preprint"
+    },
+    "PR_W2_18": {
+      "pair_id": "PAIR_07",
+      "version": "published"
+    },
+    "PR_W2_19": {
+      "pair_id": "PAIR_12",
+      "version": "preprint"
+    },
+    "PR_W2_20": {
+      "pair_id": "PAIR_14",
+      "version": "preprint"
+    }
+  }
+}
