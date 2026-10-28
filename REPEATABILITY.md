@@ -16,7 +16,7 @@ To quantify how much of an agentic forensic peer review's quantitative score ($S
 
 ## 2. Quantitative Repeatability Metrics ($\text{ICC}$, Pairwise $r$, and Deviation)
 
-| Metric | Single-Run $\text{ICC}(2,1)$ (Absolute Agreement) | Single-Run $\text{ICC}(3,1)$ (Consistency) | 3-Run Ensemble $\text{ICC}(2,3)$ | Within-Paper $\text{SD}_w$ | Mean Pairwise $\|\Delta S\|$ | Pairwise Pearson $r_{12} / r_{13} / r_{23}$ |
+| Metric | Single-Run $\text{ICC}(2,1)$ (Absolute Agreement) | Single-Run $\text{ICC}(3,1)$ (Consistency) | 3-Run Ensemble $\text{ICC}(2,3)$ | Residual $\text{SD}_w = \sqrt{\text{MS}_E}$ | Mean Pairwise $\|\Delta S\|$ | Pairwise Pearson $r_{12} / r_{13} / r_{23}$ |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Overall Score (`/10.0`)** | **0.9671** | **0.9691** | **0.9888** | **0.46 pts** | **0.49 pts** | `0.979 / 0.968 / 0.964` |
 | **Rigor (`/3.5`)** | **0.9692** | **0.9727** | **0.9895** | **0.17 pts** | **0.18 pts** | `0.986 / 0.973 / 0.965` |
@@ -32,15 +32,17 @@ To quantify how much of an agentic forensic peer review's quantitative score ($S
 
 ## 3. Cohort-Stratified Stability & Binary Classification Concordance (`< 6.0` Threshold)
 
-| Cohort | $n$ | Run 1 Mean | Run 2 Mean | Run 3 Mean | Mean Pairwise $\|\Delta S\|$ | Mean Within-Paper SD | `< 6.0` Count (Run 1 / Run 2 / Run 3 / 3-Run Mean) | Unanimous 3/3 Binary Agreement |
+| Cohort | $n$ | Run 1 Mean | Run 2 Mean | Run 3 Mean | Mean Pairwise $\|\Delta S\|$ | Mean of Per-Paper SDs | `< 6.0` Count (Run 1 / Run 2 / Run 3 / 3-Run Mean) | Unanimous 3/3 Binary Agreement |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Cohort A (Known Invalids)** | 10 | `3.61` | `3.69` | `4.06` | `0.49` | `0.38` | `9/10` \| `9/10` \| `9/10` \| `9/10` (`90%` sens.) | **10 / 10 (`100%`)** |
 | **Cohort B (Validated Controls)** | 10 | `8.72` | `9.02` | `9.02` | `0.32` | `0.25` | `0/10` \| `0/10` \| `0/10` \| `0/10` (`100%` spec.) | **10 / 10 (`100%`)** |
 | **Cohort C (Wild Literature)** | 10 | `4.98` | `4.84` | `5.08` | `0.66` | `0.52` | `7/10` \| `7/10` \| `8/10` \| `7/10` (`70%` fail) | **8 / 10 (`80%`)** |
 | **All Stratified Papers** | **30** | **`5.77`** | **`5.85`** | **`6.05`** | **`0.49`** | **`0.38`** | **`16/30` \| `16/30` \| `17/30` \| `16/30`** | **28 / 30 (`93.3%`)** |
 
+*Note: Residual SD_w = sqrt(MSE from two-way ANOVA) = 0.46; mean of per-paper sample SDs = 0.385; RMS within-paper SD = 0.476.*
+
 * **Fleiss' Kappa ($\kappa$) Across the 3 Blinded Runs:** **$\kappa = 0.9104$** (Pairwise binary agreement $\bar{P} = 95.6\%$).
-* **100% Unanimity on Ground-Truth Cohorts A & B (`20 / 20`):** Every single Cohort A and Cohort B manuscript received the exact same binary classification across all 3 runs (`90%` sensitivity and `100%` specificity in Run 1, Run 2, and Run 3). Notably, the single Cohort A false negative (`A30`, Bakewell et al. *PNAS* 2007) scored `7.4`, `7.7`, and `8.4` across the 3 runs, proving that its high score is a deterministic consequence of $t_0$ information isolation (the manuscript's internal $Q20$ filtering description appears sound without external re-alignment of the draft `panTro1` assembly) rather than stochastic reviewer noise.
+* **100% Unanimity on Ground-Truth Cohorts A & B (`20 / 20`):** Every single Cohort A and Cohort B manuscript received the exact same binary classification across all 3 runs (`90%` sensitivity and `100%` specificity in Run 1, Run 2, and Run 3). Notably, the single Cohort A false negative (`A30`, Bakewell et al. *PNAS* 2007) was consistently scored above threshold (`7.4`/`7.7`/`8.4`; SD `0.51`), plausibly reflecting $t_0$ information isolation (the manuscript's internal $Q20$ filtering description appears sound without external re-alignment of the draft `panTro1` assembly).
 * **Disagreements Are Strictly Confined to the `6.0` Boundary (`5.2 – 7.1`):** The only 2 manuscripts out of 30 (`6.7%`) that crossed the `6.0` cutoff across runs were two Cohort C papers whose 3-run mean scores sit right on the `6.0` decision boundary:
   1. `C45` (*Enterococcus faecium / E. lactis* pangenome): Run 1 = `5.8`, Run 2 = `7.1`, Run 3 = `5.2` (**Mean = `6.03`**).
   2. `C98` (*Cho et al.*, bladder cancer scRNA/bulk signature): Run 1 = `6.4`, Run 2 = `5.6`, Run 3 = `5.5` (**Mean = `5.83`**).

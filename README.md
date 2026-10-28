@@ -36,10 +36,10 @@ Applying our Two-Stage Adaptive Blinded Protocol (`88` reviews total: Stage 1 on
 | Out-of-Domain Stratum ($n = 20$ Each) | Mean Score (/10) | Median | Strict Failure ($<5.0$) | Calibrated Failure ($<6.0$) | Major Flaw ($<6.5$) | Dominant Domain-Specific Failure Modes |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Ecology & Macroevolution** | **5.19** | **4.80** | **55.0%** ($11/20$) | **75.0%** ($15/20$) | **75.0%** ($15/20$) | `MaxEnt` overfitting ($p>n$), roadside bias, static altitude in warming projections, area arithmetic errors |
-| **Neuroscience & Neuroimaging** | **4.88** | **4.80** | **50.0%** ($10/20$) | **75.0%** ($15/20$) | **85.0%** ($17/20$) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
+| **Neuroscience & Neuroimaging** | **4.88** | **4.80** | **50.0%** ($10/20$) | **80.0%** ($16/20$) | **85.0%** ($17/20$) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
 | **Structural Bioinfo & AI Drug Discovery** | **4.57** | **4.67** | **60.0%** ($12/20$) | **80.0%** ($16/20$) | **85.0%** ($17/20$) | PDBbind–CASF pocket homology leakage, transductive DTI kernel leakage, docking to wrong PDB target |
-| **All OOD Combined ($N = 60$)** | **4.88** | **4.80** | **55.0%** ($33/60$) | **76.7%** ($46/60$) | **81.7%** ($49/60$) | Citation gradient: High ($\ge 25$): `6.21` (`18.8% <5.0`) vs. Mid: `4.68` (`60.9%`) vs. Low: `4.08` (`76.2%`) |
-| **All 8 Domains Combined ($N = 160$)** | **5.25** | **5.02** | **47.5%** ($76/160$) | **66.9%** ($107/160$) | **74.4%** ($119/160$) | Consistent split between mechanistic models vs. formulaic template pipelines (`MaxEnt`, LASSO, docking, rs-fMRI) |
+| **All OOD Combined ($N = 60$)** | **4.88** | **4.80** | **55.0%** ($33/60$) | **78.3%** ($47/60$) | **81.7%** ($49/60$) | Citation gradient: High ($\ge 25$): `6.21` (`18.8% <5.0`) vs. Mid: `4.68` (`60.9%`) vs. Low: `4.08` (`76.2%`) |
+| **All 8 Domains Combined ($N = 160$)** | **5.25** | **5.02** | **47.5%** ($76/160$) | **67.5%** ($108/160$) | **74.4%** ($119/160$) | Consistent split between mechanistic models vs. formulaic template pipelines (`MaxEnt`, LASSO, docking, rs-fMRI) |
 
 ### Value-Added of Human Peer Review: Paired Preprint vs. Published Audit & Human Peer Review Files ([`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md))
 Across **$N = 20$ version-blinded Preprint (`v1`) $\rightarrow$ Final Published Journal pairs (`40` full-text manuscripts)** split across two disjoint waves (`PR_W1_01`–`PR_W1_20` and `PR_W2_01`–`PR_W2_20`) and compared against **$210+$ pages of verbatim Human Peer Review Files** (`PLoS Pathogens`, `eLife`, `Nature Communications`, `Nature Cell Biology`, and `Nature`):
