@@ -72,7 +72,7 @@ A manuscript is classified as **Failed / Invalidated** when the review identifie
 The study as executed and reported in [`CALIBRATION.md`](../CALIBRATION.md) deviates from the protocol above as follows:
 
 1. **Sample size:** $N$ expanded from 25/25/25 (phase 1, Results Sections 2–5 of `CALIBRATION.md`) to 50/50/100 (Cohorts A/B/C; Section 6 of `CALIBRATION.md`, `cohorts_200.json`, `results_200.json`).
-2. **Cutoffs:** Only $S < 5.0$ and the claim-based rule (Section 4.3) were pre-specified. Cutoffs $S < 5.5$, $< 6.0$ and $< 6.5$ were added and should be treated as exploratory.
+2. **Cutoffs:** Only $S < 5.0$ and the claim-based rule (Section 4, item 3) were pre-specified. Cutoffs $S < 5.5$, $< 6.0$ and $< 6.5$ were added and should be treated as exploratory.
 3. **Internal ($N=45$) vs. Upstream ($N=5$) Cohort A split:** Not specified in this protocol; defined after phase 1, where the 5 Cohort A papers scoring $\ge 7.0$ motivated the internal/upstream distinction. `CALIBRATION.md` Section 1.1 describes this stratification as a priori.
 4. **Cohort reassignment:** `PMC8135569` (Kumar et al. 2021, *Mol Biol Evol*) moved from Cohort B (`B02`) to Cohort A (`A26`) after phase 1; `B02` was reassigned to `PMC7418704` (Starr et al. 2020, *Cell*).
 5. **Review reuse:** All 75 phase-1 de-identified reviews (`ANON_01`–`ANON_75`) were reused unchanged in the $N = 200$ analysis (same anon IDs, scores and review files in `deidentified_results.json` and `results_200.json`).
