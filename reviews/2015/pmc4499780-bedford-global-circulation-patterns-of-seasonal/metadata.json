@@ -21,5 +21,7 @@
     "reproducibility": 1.8,
     "overall": 9.1
   },
-  "tier": "Exemplary"
+  "tier": "Exemplary",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

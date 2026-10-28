@@ -8,9 +8,9 @@ The goal is to produce **human-scale, direct, technically rigorous reviews** tha
 
 ## PART 0: DE-IDENTIFICATION & $t_0$ ISOLATION PROTOCOL (ANTI-PRESTIGE-HALO MANDATE)
 
-Empirical calibration across 75 paired Identified vs. De-Identified manuscripts ([`CALIBRATION.md`](CALIBRATION.md)) demonstrated that visible author names, institutional affiliations, and elite journal labels (*Nature*, *Science*, *Cell*, *PNAS*, *Nature Medicine*) induce a **+$0.35$-point "prestige halo"** that softens critiques of methodologically flawed papers, while megajournal labels (*Frontiers*, *MDPI*) induce a slight negative penalty.
+Visible author names, institutional affiliations, and elite journal labels (*Nature*, *Science*, *Cell*, *PNAS*, *Nature Medicine*) can induce a prestige halo that softens critiques of methodologically flawed papers, while megajournal or preprint labels can induce a negative penalty (see [`CALIBRATION.md`](CALIBRATION.md) for empirical calibration tables and operating characteristics).
 
-To eliminate prestige and venue bias while preserving **$r = 0.91$** score concordance and specificity of 100% (50/50) in the N=200 de-identified run and 96% (24/25) in the paired pilot, at S < 5.0:
+To eliminate prestige and venue bias while ensuring objective evaluation strictly on technical merits:
 1. **Pre-Audit De-Identification:** Strip the manuscript Title, Author Names, Affiliations, Correspondence headers, Journal Name, Publication Year, DOI, and PMCID/PMID before running the 7-Pillar Audit (`[REDACTED FOR BLINDED REVIEW]`).
 2. **$t_0$ Information Isolation:** Evaluate the manuscript strictly on its internal mathematical, statistical, methodological, biological, and table/data merits as published at $t_0$. Do not query external commentary, PubPeer threads, retraction notices, or subsequent citing papers during the audit.
 3. **Post-Audit Header Restoration:** Re-attach the bibliographic metadata (`Title`, `Authors`, `Journal`, `DOI`/`PMCID`) only after the sub-scores, overall score, and 3-section critique have been locked.
@@ -27,7 +27,9 @@ Before writing, audit the manuscript against these seven diagnostic pillars:
 4. **Statistical Support, Power & Uncertainty Propagation:** Are $p$-values, Bayes factors, confidence/credible intervals, or model selection criteria (AIC/BIC) properly calibrated? Is uncertainty propagated across all stages of multi-step pipelines? Do the authors conflate failing to reject a null hypothesis (due to low power or small sample size) with evidence for the null?
 5. **Baselines, Controls & Symmetric Hypothesis Testing:** Are competing models or hypotheses evaluated under symmetric constraints, matched sample sizes, and realistic null simulations? Do Tables and Supplements actually support the model chosen in the main text?
 6. **Biological & Physical Plausibility:** Do inferred rates, effect sizes, and mechanistic narratives respect known biophysical, molecular, evolutionary, or epidemiological constraints?
-7. **Reproducibility & Technical Sanity Checks:** Are raw data and executable code publicly available? Audit equations, check that numbers in the main text match tables and supplementary text, and scan for broken figure/table cross-references, mislabeled axes, and truncated or inaccurate citations.
+7. **Reproducibility, Data & Code Completeness & Technical Sanity Checks:** Are raw data and executable code available? Audit equations, check that numbers in the main text match tables and supplementary text, and scan for broken figure/table cross-references, mislabeled axes, and truncated or inaccurate citations.
+   * **Ethical / Consent-Mandated Controlled-Access Repositories Receive Full Credit:** Human genomic/clinical cohorts deposited in recognized controlled-access repositories (`dbGaP`, `EGA`, `SFARI Base`, `All of Us Researcher Workbench`, `UK Biobank`, `AnVIL`, `GISAID`) or governed by Indigenous data sovereignty / CARE / MTA frameworks receive **full Data Availability credit** when accession numbers or formal access procedures are documented. Never penalize a paper for ethical/legal privacy protections on human participants.
+   * **Published Versioned Pipelines vs. Novel Unreleased Software:** Distinguish novel computational algorithms/software (which require open source code) from standard genomic/bioinformatic analyses that chain published, versioned community tools (`verkko`, `hifiasm`, `minimap2`, `HyPhy`, `GATK`, `Seurat`), which should not be penalized as "irreproducible" when tool versions and parameters are documented.
 
 ---
 
@@ -35,27 +37,35 @@ Before writing, audit the manuscript against these seven diagnostic pillars:
 
 * **Direct and proportional:** Keep total length proportional to the manuscript's substance. State strengths and flaws plainly without theatrical adjectives (*"groundbreaking," "tour de force," "pivotal," "crucial," "compelling"*).
 * **No LLM filler or syntactic cliches:** Avoid *"delve into," "tapestry," "landscape," "it is worth noting," "importantly," "not only... but also," "serves as a testament," "crucially," "landmark,"* and formulaic compliment sandwiches.
-* **Concrete and verifiable:** Anchor every critique to specific sections, equations, tables, figures, or parameter values in the manuscript.
+* **Concrete and verifiable:** Anchor every critique to specific sections, equations, tables, figures, or parameter values in the manuscript. Verify any absence claim ("not reported") against the full text, figure legends, and Data/Code Availability sections before stating it.
 
 ---
 
-## PART 3: THE 1–10 QUANTITATIVE SCORING RUBRIC
+## PART 3: THE 1–10 QUANTITATIVE SCORING RUBRIC (STRUCTURED QUANTITATIVE SCORECARD)
 
-Every reviewed manuscript receives an **Overall Score (1.0 – 10.0)** computed as the sum of four diagnostic sub-scores mapped to the 7 Pillars:
+Every reviewed manuscript is evaluated on four diagnostic sub-scores mapped to the 7 Pillars, reporting both the **Total Composite Score (`/ 10.0`)** and the **Scientific Core Score (`/ 8.0` = `Rigor + Claims + Biology`, excluding `Reproducibility`)** so that historical papers (1990s/2000s) and controlled-access resource papers are never confounded by modern open-code norms:
 
-1. **Methodological & Statistical Rigor (0.0 – 3.5 pts | Pillars 3, 4, 5):** Model specification, internal consistency, calibration of $p$-values/Bayes factors/AIC, uncertainty propagation across multi-step pipelines, and symmetric baseline/null controls.
+1. **Methodological & Statistical Rigor (0.0 – 3.5 pts | Pillars 3, 4, 5):** Model specification, technical validation of the primary deliverable, internal consistency, calibration of $p$-values/Bayes factors/AIC, uncertainty propagation across multi-step pipelines, and symmetric baseline/null controls.
+   * **Primary Deliverable vs. Exploratory Add-On Weighting (Resource / Assembly / Benchmark Papers):** For foundational resource, genome assembly (e.g., T2T, pangenome), or benchmark manuscripts, `Methodological Rigor (/ 3.5)` must be anchored on the technical validation of the primary deliverable (e.g., assembly QV, switch/hamming error, orthogonal platform concordance, BAC/optical validation). Secondary exploratory vignettes (e.g., illustrative PheWAS or pilot organoid assays) must be critiqued under `Claims vs. Evidence (/ 2.5)` proportional to their centrality to the headline claim, and must not cap the overall score of a technically rigorous primary resource below `7.0`.
 2. **Claim-to-Evidence Alignment (0.0 – 2.5 pts | Pillars 1, 5):** Correspondence between title/abstract/discussion claims and what was formally tested; proportion of core claims that are *Well Supported* vs. *Fragile/Overstated/Methodologically Flawed*.
 3. **Data Integrity & Biological Plausibility (0.0 – 2.0 pts | Pillars 2, 6):** Data provenance, handling of ascertainment/sampling skew, absence of leakage or post-hoc circularity, contamination controls, and adherence to biophysical, molecular, and epidemiological constraints.
-4. **Reproducibility & Technical Execution (0.0 – 2.0 pts | Pillar 7):** Public availability of raw data and executable code, mathematical accuracy of equations, numerical consistency between main text and tables/supplements, and clean figures/references.
+4. **Reproducibility & Data Integrity (0.0 – 2.0 pts | Pillar 7):** Availability of raw data and executable code, mathematical accuracy of equations, numerical consistency between main text and tables/supplements, and clean figures/references.
+   * **Ethical / Consent-Mandated Controlled-Access Repositories Receive Full Credit:** Human genomic/clinical cohorts deposited in recognized controlled-access repositories (`dbGaP`, `EGA`, `SFARI Base`, `All of Us Researcher Workbench`, `UK Biobank`, `AnVIL`, `GISAID`) or governed by Indigenous data sovereignty / CARE / MTA frameworks receive **full Data Availability credit** when accession numbers or formal access procedures are documented. Never penalize a paper for ethical/legal privacy protections on human participants.
+
+### Composite Score Metrics
+* **Total Composite Score (`/ 10.0`):** `Rigor (/ 3.5) + Claims (/ 2.5) + Biology (/ 2.0) + Reproducibility (/ 2.0)`
+* **Scientific Core Score (`/ 8.0`):** `Rigor (/ 3.5) + Claims (/ 2.5) + Biology (/ 2.0)` (evaluates purely scientific, methodological, and biological validity independent of archival code/data repository norms).
 
 ### Calibration Tiers
 | Score | Tier | Diagnostic Interpretation |
 | :---: | :--- | :--- |
-| **9.0 – 10.0** | **Exemplary** | Sound model specification, calibrated uncertainty, symmetric controls, open data/code, and claims strictly bounded by statistical support. |
-| **7.0 – 8.9** | **Strong / Sound** | Solid methodological and empirical contribution; minor modeling caveats, unpropagated intermediate uncertainty, or secondary framing overreach. |
-| **5.0 – 6.9** | **Mixed / Salvageable** | Useful dataset or core method, but undermined by 1–2 major pillar violations (e.g., circular conditioning, uncalibrated tests, or missing baselines) requiring re-analysis. |
+| **9.0 – 10.0** | **Exemplary** | Sound model specification or primary technical validation, calibrated uncertainty, symmetric controls, compliant open or controlled-access data/code, and claims strictly bounded by statistical support. |
+| **7.0 – 8.9** | **Strong / Sound** | Solid methodological, resource, or empirical contribution; minor modeling caveats, unpropagated intermediate uncertainty, or secondary exploratory framing overreach. |
+| **5.0 – 6.9** | **Mixed / Salvageable** | Useful dataset or core method, but undermined by 1–2 major pillar violations in the primary analysis (e.g., circular conditioning, uncalibrated tests, or missing baselines) requiring re-analysis. |
 | **3.0 – 4.9** | **Flawed / Overstated** | Core conclusions rest on statistical artifacts, severe ascertainment/contamination bias, or biologically implausible assumptions. |
 | **1.0 – 2.9** | **Fundamentally Invalid** | Pervasive technical failures, unaddressed leakage/contamination, or claims directly contradicted by the manuscript's own tables. |
+
+*(Note: Empirical calibration outcome tables and operating characteristics across the $N=200$ double-blinded benchmark and companion studies live in [`CALIBRATION.md`](CALIBRATION.md) and are intentionally excluded from this prompt template so that reviews are generated strictly from evaluation instructions without post-calibration anchor numbers.)*
 
 ---
 
@@ -67,7 +77,7 @@ Every reviewed manuscript receives an **Overall Score (1.0 – 10.0)** computed 
 **Manuscript Title:** [INSERT FULL MANUSCRIPT TITLE]  
 **Authors:** [INSERT AUTHOR LIST]  
 **Journal / Preprint:** [INSERT JOURNAL OR PREPRINT ID]  
-**Overall Score:** **[X.X] / 10.0** ([Tier Name])  
+**Overall Score:** **[X.X] / 10.0** ([Tier Name]) | **Scientific Core Score:** **[X.X] / 8.0**  
 * **Score Breakdown:** Rigor: [X.X]/3.5 | Claims: [X.X]/2.5 | Biology: [X.X]/2.0 | Reproducibility: [X.X]/2.0
 
 ---
@@ -122,21 +132,3 @@ Every reviewed manuscript receives an **Overall Score (1.0 – 10.0)** computed 
 * **WHY:** [Inconsistencies between text and tables, equation typos, and broken references undermine reader confidence.]
 * **WHAT & HOW:** [Itemized list of exact page/line fixes for equations, table values, figure cross-references, and bibliography entries.]
 ```
-
-
----
-
-## PART 5: EMPIRICAL CALIBRATION & OPERATING CHARACTERISTICS ($N = 200$ STUDY)
-
-The 1–10 scoring rubric was calibrated across **200 double-blinded full-text manuscripts** ([`CALIBRATION.md`](CALIBRATION.md)):
-* **Cohort A ($N = 50$ Known Invalid / Refuted):** Mean **4.42** ($\pm 1.97$), Median **4.10** (Internal-flaw subset $N=45$: Mean **4.09**, Median **3.80**).
-* **Cohort B ($N = 50$ Genre-Matched Validated Controls):** Mean **8.64** ($\pm 0.84$), Median **8.85** (43 replicated empirical studies: Mean **8.64**, Median **9.00**; 7 methods benchmarks: Mean **8.59**, Median **8.60**).
-* **Cohort C ($N = 100$ Stratified Wild Sample across 5 Subfields):** Mean **5.47** ($\pm 1.78$), Median **5.40**.
-* **Classifier Separation:** **ROC-AUC = $0.9688$** ($0.9672$ against empirical controls alone).
-
-| Decision Threshold | Sensitivity ($\widehat{\text{Se}}_{\text{all}}$ / $\widehat{\text{Se}}_{\text{internal}}$) | Specificity ($\widehat{\text{Sp}}$) | Wild Literature Failure Rate ($\hat{p}_{\text{obs}}$) | Rogan-Gladen True Prevalence ($\hat{\pi}_{\text{true}}$) |
-| :--- | :---: | :---: | :---: | :---: |
-| **Strict Fatal Invalidation ($S < 5.0$)** | $66.0\%$ / $73.3\%$ | **$100.0\%$** ($50/50$) | **$43.0\%$** ($\pm 8.5\%$) | **$58.6\% \text{ -- } 65.2\%$** |
-| **Substantive Failure ($S < 5.5$)** | $66.0\%$ / $73.3\%$ | **$100.0\%$** ($50/50$) | **$53.0\%$** ($\pm 9.1\%$) | **$72.3\% \text{ -- } 80.3\%$** |
-| **Major Methodological Flaw ($S < 6.0$)** | $76.0\%$ / $84.4\%$ | **$98.0\%$** ($49/50$) | **$61.0\%$** ($\pm 8.7\%$) | **$71.6\% \text{ -- } 79.7\%$** |
-| **Any Major Pillar Violation ($S < 6.5$)** | $80.0\%$ / $86.7\%$ | **$96.0\%$** ($48/50$) | **$70.0\%$** ($\pm 8.3\%$) | **$79.8\% \text{ -- } 86.8\%$** |

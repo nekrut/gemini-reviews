@@ -21,5 +21,7 @@
     "reproducibility": 0.6,
     "overall": 2.8
   },
-  "tier": "Fundamentally Invalid"
+  "tier": "Fundamentally Invalid",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

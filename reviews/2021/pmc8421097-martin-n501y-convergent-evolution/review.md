@@ -3,8 +3,11 @@
 **Manuscript Title:** The emergence and ongoing convergent evolution of the SARS-CoV-2 N501Y lineages  
 **Authors:** Darren P. Martin, Steven Weaver, Houriiyah Tegally, James Emmanuel San, Stephen D. Shank, Eduan Wilkinson, Alexander G. Lucaci, Jennifer Giandhari, Sureshnee Naidoo, Yeshnee Pillay, Lavanya Singh, Richard J. Lessells, Ravindra K. Gupta, Joel O. Wertheim, Anton Nekrutenko, Ben Murrell, Gordon W. Harkins, Philippe Lemey, Oscar A. MacLean, David L. Robertson, Tulio de Oliveira, Sergei L. Kosakovsky Pond  
 **Journal / Preprint:** *Cell* (2021, Vol. 184, pp. 5189–5200.e7; `PMC8421097` / `10.1016/j.cell.2021.09.003`)  
-**Overall Score:** **8.6 / 10.0** (Strong / Sound)  
-* **Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.0/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.8/2.0
+**Calibration Study Cohort:** Cohort B — Genre-Matched Validated Control (`B01` | Double-Blinded as `ANON_18`)  
+**Overall Score:** **8.3 / 10.0** (Strong / Sound — Blinded Calibration Score; Initial Unblinded Pilot Score: **8.6 / 10.0**, Strong / Sound)  
+* **Blinded Score Breakdown (`ANON_18`):** Rigor: 2.7/3.5 | Claims: 2.0/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.8/2.0  
+* **Initial Unblinded Pilot Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.0/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.8/2.0  
+> **Provenance Note ([Issue #9](https://github.com/spond/gemini-reviews/issues/9)):** This entry was one of the two initial pre-protocol unblinded pilot reviews (`8.6 / 10.0`) before the $N=200$ double-blinded calibration study (`calibration/reviews_anon/ANON_18.md`, where it scored `8.3 / 10.0`). To maintain a single canonical score source across `index.json` and `calibration/results_200.json`, the metadata and header now report the blinded calibration score (`8.3 / 10.0`) alongside the initial unblinded pilot score (`8.6 / 10.0`).
 
 ---
 

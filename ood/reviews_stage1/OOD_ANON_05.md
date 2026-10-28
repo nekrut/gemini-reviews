@@ -1,0 +1,52 @@
+# Review of OOD_ANON_05
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **5.4 / 10.0** (Mixed / Salvageable)  
+* **Score Breakdown:** Rigor: 1.4/3.5 | Claims: 1.5/2.5 | Biology: 1.2/2.0 | Reproducibility: 1.3/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This ecological modeling study forecasts the past (Last Interglacial [LIG] and Middle Holocene [MH]), current, and future (2050s and 2070s under RCP2.6, RCP4.5, and RCP8.5) potential geographic distribution of the endangered Chinese endemic tree *Sinojackia xylocarpa* (Styracaceae), and performs a conservation gap analysis against China's national and provincial nature reserve network. Combining 21 spatially rarefied field and herbarium occurrence records (at 30 arc-second / $1\text{ km}^2$ resolution) with 22 environmental predictors (bioclimatic, topographic, and soil variables), the authors build a 6-algorithm ensemble species distribution model (SDM) in `Biomod2` (combining GBM, FDA, RF, MaxEnt, ANN, and CTA). They report that precipitation of the driest quarter (`Bio17`, 61.0% contribution) dominates current habitat suitability, that current suitable habitat covers $697,200\text{ km}^2$ in southeastern China with only $3.91\%$ protected within nature reserves, and that suitable habitat will contract by an average of $10.97\%$ and shift northeastward under future climate change.
+
+The manuscript integrates recent 2022–2024 field surveys and taxonomic revisions (merging *S. huangmeiensis* into *S. xylocarpa*) and provides all 21 occurrence coordinates in Table S1. However, the modeling design suffers from severe overfitting ($p = 22$ predictors fit to $N = 15$ training presence points across six complex machine-learning algorithms), an Asymmetric Predictor Specification across time periods (paleoclimate models were fit with 10–11 bioclimatic variables only, whereas current/future models used a different set of 22 bioclimatic, topographic, and static soil variables, making temporal range comparisons invalid), and an internal error in climate model provenance (claiming to use CMIP6 while actually using CMIP5 models `BCC-CSM1-1`, `CCSM4`, `MIROC-ESM` and `RCP` scenarios). These methodological issues can be resolved through a streamlined re-analysis of the authors' existing dataset.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Ensemble model performance ($\text{AUC} = 0.9960 \pm 0.0641$, $\text{TSS} = 0.9500 \pm 0.0610$) and predictor importance (`Bio17` = 61.0%) from 21 occurrence records and 22 environmental variables (Tables 1–2): [Fragile].**  
+  With only $N = 21$ total presence points split 75%/25% into training ($N \approx 15$–$16$ presences) and testing ($N \approx 5$–$6$ presences) against 1,000 random pseudo-absences across all of China ($9.6 \times 10^6\text{ km}^2$), fitting 22 environmental predictors in complex non-linear learners (ANN, RF, GBM, MaxEnt) violates the minimum events-per-variable rule by more than an order of magnitude. Furthermore, sampling 1,000 pseudo-absences across the entirety of China (including tibetan plateau, desert, and boreal zones thousands of kilometers outside the subtropical dispersal range of *S. xylocarpa*) artificially inflates AUC and TSS toward $1.0$ by turning a local niche model into a coarse macro-regional classifier (southeast China vs. the rest of China), which also explains why `Bio17` (winter precipitation, defining the subtropical humid zone of SE China) absorbs $61.0\%$ of the model variance. Additionally, $\text{AUC} = 0.9960 \pm 0.0641$ implies values exceeding the mathematical upper bound of $1.000$.
+
+* **Comparison of past (LIG, MH) vs. current and future habitat areas and variable contributions (Tables 1 and 3, Figures 5–7): [Methodologically Flawed].**  
+  To project distribution changes across time, a single calibrated SDM must be projected onto past and future environmental layers using an identical predictor set. Instead, as shown in Table 1 and Section 2.2, the authors fit three *different* models with incompatible predictor sets: (1) an LIG model with 10 bioclimatic variables (excluding `Bio1`, `Bio6`, `Bio9`, `Bio12`, and all topography/soil); (2) an MH model with 11 bioclimatic variables (excluding `Bio4` and `Bio10`, which contributed $19.1\%$ and $21.7\%$ in LIG!); and (3) a Current/Future model with 7 bioclimatic variables, 2 topographic variables, and 13 soil variables (excluding `Bio8`, `Bio11`, `Bio13`, which contributed $31.5\%$ in MH!). Comparing predicted habitat areas ($63.84 \times 10^4\text{ km}^2$ in LIG vs. $69.72 \times 10^4\text{ km}^2$ in Current) and variable contributions across models built on completely different feature spaces confounds paleoclimatic range shifts with predictor-set changes.
+
+* **Future habitat projections under "CMIP6" climate scenarios (Section 2.2, Table 3, Figures 6–7): [Moderately Supported].**  
+  In Section 2.2, the authors state that they incorporated "multiple climate models from the Coupled Model Intercomparison Project Phase 6 (CMIP6). Future bioclimatic data were derived from three global climate models: BCC-CSM1-1..., CCSM4..., and MIROC-ESM... Additionally, three Representative Concentration Pathways (RCPs) were selected... RCP2.6, RCP4.5, and RCP8.5" for the 2050s (2041–2060) and 2070s (2061–2080). In fact, `BCC-CSM1-1`, `CCSM4`, `MIROC-ESM`, the 2050s/2070s time slices, and `RCP2.6/4.5/8.5` are **CMIP5** (WorldClim v1.4) models and scenarios, whereas CMIP6 uses Shared Socioeconomic Pathways (SSP1-2.6, SSP2-4.5, SSP5-8.5) and different model versions (e.g., `BCC-CSM2-MR`, `CESM2`, `MIROC6`). While the projections themselves remain valid CMIP5 ensemble estimates, the text misidentifies the climate model generation.
+
+* **Conservation gap analysis showing only 3.91% protection of current suitable habitat within national and provincial nature reserves (Section 3.3, Figure 4): [Moderately Supported].**  
+  Overlaying the predicted current suitable range with the 464 national and 806 provincial nature reserves is a sound spatial conservation prioritization approach, and the authors appropriately note in Section 4.3 that predicted suitability in Taiwan ($>130\text{ km}$ across the Taiwan Strait) is biologically unreachable due to the heavy drupe fruits ($98.4\text{ g}$ per 100 kernels). However, there is a minor arithmetic discrepancy in Section 3.3: national reserves cover $1.84\%$ ($12,800\text{ km}^2$) and provincial reserves cover $2.15\%$ ($15,000\text{ km}^2$), which sum to $3.99\%$ ($27,800 / 697,200\text{ km}^2$), whereas the text reports $3.91\%$ (likely due to spatial overlap between national and provincial reserve polygons, which should be explicitly stated).
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Standardize the Predictor Set Across Past, Current, and Future Projections and Reduce Dimensionality
+* **WHY:** Fitting 22 variables to $N = 15$ training points causes severe overfitting, and using different bioclimatic variables for LIG, MH, and Current models invalidates temporal comparisons of habitat area and centroid shifts.
+* **WHAT:** Restrict the predictor set to $\le 5$–$6$ uncorrelated variables ($\lvert r \rvert < 0.7$) that are available across all time periods (or run two matched models: a climate+elevation model across LIG, MH, Current, and Future using the exact same bioclimatic variables, and a current-only sensitivity model adding soil variables).
+* **HOW:** Perform Pearson correlation filtering and VIF ($< 5$) selection once on the current climate data at the 21 occurrence points plus background, select the top 5–6 ecologically relevant variables (e.g., `Bio17`, `Bio10`, `Bio18`, `Bio4`, `Elevation`), and project that single calibrated `Biomod2` ensemble onto the LIG, MH, Current, and Future rasters.
+
+#### 2. Restrict Pseudo-Absence Sampling to a Biologically Accessible Background Buffer
+* **WHY:** Generating 1,000 pseudo-absences across the entire territory of China (including arid northwestern deserts and the Qinghai-Tibet Plateau) inflates AUC/TSS and overestimates the suitable area ($697,200\text{ km}^2$) across southeastern China.
+* **WHAT:** Restrict pseudo-absence generation to an ecoregional or radial buffer (e.g., $200$–$500\text{ km}$ around known occurrences, or the subtropical evergreen broad-leaved forest zone of China) and exclude Taiwan from the suitable area totals.
+* **HOW:** In ArcGIS 10.8 / `Biomod2`, clip the modeling background to the East China / Central China subtropical ecoregions (excluding Taiwan, which the authors already note in Section 4.3 is dispersal-inaccessible), sample pseudo-absences within this accessible area ($M$), and use block or jackknife ($k$-fold / leave-one-out) cross-validation appropriate for $N = 21$ small samples instead of a random 75/25 split with $N=5$ test points.
+
+#### 3. Correct the CMIP5 vs. CMIP6 Climate Model Attribution and Narrative Contradictions
+* **WHY:** Section 2.2 claims the study uses CMIP6 while listing CMIP5 GCMs (`BCC-CSM1-1`, `CCSM4`, `MIROC-ESM`) and RCP scenarios, and Sections 3.4 and 4.4 contradict each other on whether suitable habitat contracted or expanded from the LIG to the present.
+* **WHAT & HOW:**
+  1. In Section 2.2, change "Coupled Model Intercomparison Project Phase 6 (CMIP6)" to "Coupled Model Intercomparison Project Phase 5 (CMIP5)" (or update the rasters to CMIP6 SSP scenarios from WorldClim v2.1).
+  2. Reconcile Section 3.4 and Section 4.4: Table 3 shows that total suitable area *increased* from LIG ($63.84 \times 10^4\text{ km}^2$) to MH ($64.50 \times 10^4\text{ km}^2$) to Current ($69.72 \times 10^4\text{ km}^2$). Section 4.4 correctly states "S. xylocarpa had a suitable area of 638,400 km2 in the Last Interglacial (LIG) and moderately expanded to 645,000 km2 in the Middle Holocene (MH)... Overall, there was an increasing trend in suitable habitats for S. xylocarpa over time," whereas Section 3.4 erroneously states "the results show a continuous contraction... from the Last Interglacial to the Middle Holocene" by misinterpreting the negative percentage relative to Current ($\downarrow 8.43\%$ and $\downarrow 7.49\%$).
+  3. Fix the cross-reference errors in Section 4.4 ("Figure 4" $\to$ "Figure 5", "Figure 5" $\to$ "Figure 6", "Figure 6" $\to$ "Figure 7", and "Table 2" $\to$ "Table 1").

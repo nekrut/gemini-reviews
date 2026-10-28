@@ -14,7 +14,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "PCR positive-control carryover + invalid linear clock extrapolation from single-locus amplicons",
-      "refutation": "Worobey et al. / community scrutiny"
+      "refutation": "Worobey et al. / community scrutiny",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7107875",
@@ -30,7 +33,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Tang et al. (2020) L/S lineage claim: mistaking founder effect & ascertainment for intrinsic selective advantage and misusing dN/dS on intraspecific polymorphism",
-      "refutation": "MacLean et al. (2020) Nat Microbiol"
+      "refutation": "MacLean et al. (2020) Nat Microbiol",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7196762",
@@ -46,7 +52,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Forster et al. (2020) PNAS median-joining network: inappropriate distance rooting with divergent bat virus and homoplasy misinterpretation",
-      "refutation": "Sanchez-Pacheco et al. (2020) PNAS; Mavian et al. (2020) PNAS"
+      "refutation": "Sanchez-Pacheco et al. (2020) PNAS; Mavian et al. (2020) PNAS",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7184484",
@@ -62,7 +71,10 @@
       "cohort": "A",
       "domain": "Molecular Evolution",
       "ground_truth_flaw": "Xia (2020) MBE canine origin of SARS-CoV-2 from CpG deficiency: failed to control for broader bat sarbecovirus CpG distribution and ZAP biology",
-      "refutation": "Pollock et al. (2020) MBE"
+      "refutation": "Pollock et al. (2020) MBE",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7138088",
@@ -78,7 +90,10 @@
       "cohort": "A",
       "domain": "Molecular Evolution",
       "ground_truth_flaw": "Ji et al. (2020) JMV snake reservoir & spike homologous recombination claim from RSCU codon bias: invalid distance metric and background host set",
-      "refutation": "Zhang et al. (2020) JPR; Castells et al. (2020) JMV"
+      "refutation": "Zhang et al. (2020) JPR; Castells et al. (2020) JMV",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC9349972",
@@ -94,7 +109,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Desingu et al. (2022) JMV Omicron BA.4/BA.5 mouse host origin claim: misinterpreting mutational spectra and dN/dS without phylogenetic controls",
-      "refutation": "Post-publication phylogenetic refutations"
+      "refutation": "Post-publication phylogenetic refutations",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7199730",
@@ -110,7 +128,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "van Dorp et al. (2020) Infect Genet Evol recurrent mutations in SARS-CoV-2: unmasked sequencing/amplicon homoplasy artifacts and host RNA editing confounding",
-      "refutation": "De Maio et al. (2020); Turakhia et al. (2020) PLoS Genet"
+      "refutation": "De Maio et al. (2020); Turakhia et al. (2020) PLoS Genet",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "upstream_or_congruence",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC7428442",
@@ -126,7 +147,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "La Rosa et al. (2021) Northern Italy Dec 2019 wastewater SARS-CoV-2: nested PCR amplicon contamination and discordant assay results",
-      "refutation": "Environmental surveillance methodological critiques"
+      "refutation": "Environmental surveillance methodological critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC8529295",
@@ -142,7 +166,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Apolone et al. (2020) Tumori Sept 2019 SARS-CoV-2 antibodies in Italy: uncalibrated cross-reactive ELISA/neutralization without pre-pandemic negative specificity controls",
-      "refutation": "WHO/re-testing & serological specificity critiques"
+      "refutation": "WHO/re-testing & serological specificity critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7276232",
@@ -158,7 +185,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Chaw et al. (2020) JMV cooperative synonymous mutations driving SARS-CoV-2 outbreak: confounding genealogical linkage (hitchhiking) with epistatic selection",
-      "refutation": "MacLean et al. (2020) / phylogenetic linkage critiques"
+      "refutation": "MacLean et al. (2020) / phylogenetic linkage critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC5182071",
@@ -174,7 +204,10 @@
       "cohort": "A",
       "domain": "Population Genomics",
       "ground_truth_flaw": "Field et al. (2016) Science Singleton Density Score (SDS) polygenic adaptation on height in Britons: GIANT GWAS population stratification confounding",
-      "refutation": "Sohail et al. (2019) eLife; Berg et al. (2019) eLife"
+      "refutation": "Sohail et al. (2019) eLife; Berg et al. (2019) eLife",
+      "defect_locus_giant_strict": "upstream_consortium",
+      "defect_locus_pilot5": "upstream_or_congruence",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC7267315",
@@ -190,7 +223,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Becerra-Flores & Cardozo (2020) G614 higher case fatality rate: ecological fallacy & temporal confounding across country epidemic stages",
-      "refutation": "Volz et al. (2021); ecological confounding critiques"
+      "refutation": "Volz et al. (2021); ecological confounding critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7375454",
@@ -206,7 +242,10 @@
       "cohort": "A",
       "domain": "Viral Genomics",
       "ground_truth_flaw": "Toyoshima et al. (2020) ORF1ab variants associated with COVID-19 mortality: uncorrected ecological/country-level population structure confounding",
-      "refutation": "Phylogenetic & epidemiological confounding critiques"
+      "refutation": "Phylogenetic & epidemiological confounding critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7247990",
@@ -222,7 +261,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Bhattacharyya et al. (2020) D614G and host protease polymorphism mortality correlation: country-level ecological regression without individual-level linkage",
-      "refutation": "Ecological fallacy critiques"
+      "refutation": "Ecological fallacy critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7395502",
@@ -238,7 +280,10 @@
       "cohort": "A",
       "domain": "Epidemiology / Stats",
       "ground_truth_flaw": "Escobar et al. (2020) PNAS BCG vaccination protection against severe COVID-19: residual epidemic-stage, reporting, and spatial confounding",
-      "refutation": "Hensel et al. (2020); randomized trial & methodological refutations"
+      "refutation": "Hensel et al. (2020); randomized trial & methodological refutations",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7500457",
@@ -254,7 +299,10 @@
       "cohort": "A",
       "domain": "Cancer Microbiome",
       "ground_truth_flaw": "Poore et al. (2020) Nature blood/tissue cancer microbiome diagnostic (Retracted): human read contamination in microbial genomes + Voom-SNM supervised batch correction leakage",
-      "refutation": "Gihawi et al. (2023) mBio"
+      "refutation": "Gihawi et al. (2023) mBio",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC6858566",
@@ -270,7 +318,10 @@
       "cohort": "A",
       "domain": "Cancer Microbiome",
       "ground_truth_flaw": "Aykut et al. (2019) Nature fungal mycobiome promotes pancreatic oncogenesis (Retracted): low-biomass sequence contamination & batch artifacts",
-      "refutation": "Fletcher et al. (2023) Nature"
+      "refutation": "Fletcher et al. (2023) Nature",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC9567272",
@@ -286,7 +337,10 @@
       "cohort": "A",
       "domain": "Cancer Microbiome",
       "ground_truth_flaw": "Narunsky-Haziza et al. (2022) Cell pan-cancer mycobiome: low-biomass human/reagent read misclassification and supervised normalization leakage",
-      "refutation": "Gihawi et al. (2023); Salzberg et al. critiques"
+      "refutation": "Gihawi et al. (2023); Salzberg et al. critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7757858",
@@ -302,7 +356,10 @@
       "cohort": "A",
       "domain": "Cancer Microbiome",
       "ground_truth_flaw": "Nejman et al. (2020) Science human tumor microbiome: low-biomass contamination controls and cross-batch classifier inflation concerns",
-      "refutation": "Tumor microbiome reanalysis literature"
+      "refutation": "Tumor microbiome reanalysis literature",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "upstream_or_congruence",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC5617305",
@@ -318,7 +375,10 @@
       "cohort": "A",
       "domain": "Statistical Genetics",
       "ground_truth_flaw": "Lippert et al. (2017) PNAS individual identification from WGS trait prediction: ancestry/demographic confounding driving apparent matching accuracy",
-      "refutation": "Erlich (2017) bioRxiv/Nature news refutation"
+      "refutation": "Erlich (2017) bioRxiv/Nature news refutation",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC6613792",
@@ -334,7 +394,10 @@
       "cohort": "A",
       "domain": "Statistical Genetics",
       "ground_truth_flaw": "Wei & Nielsen (2019) Nat Med CCR5-delta32 homozygote mortality (Retracted): UK Biobank genotyping probe batch/calling artifact violating HWE",
-      "refutation": "Maier et al. (2020) Nat Med"
+      "refutation": "Maier et al. (2020) Nat Med",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC3261167",
@@ -350,7 +413,10 @@
       "cohort": "A",
       "domain": "Statistical Genetics",
       "ground_truth_flaw": "Sebastiani et al. (2012/2010) exceptional longevity GWAS: platform-specific SNP array strand/batch mismatch between cases and controls (Science 2010 retracted)",
-      "refutation": "MacArthur / Sebastiani Science retraction (2011)"
+      "refutation": "MacArthur / Sebastiani Science retraction (2011)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC3480734",
@@ -366,7 +432,10 @@
       "cohort": "A",
       "domain": "Population Genomics",
       "ground_truth_flaw": "Turchin et al. (2012) Nat Genet polygenic adaptation on height in Europe: uncorrected population stratification in GIANT GWAS summary statistics",
-      "refutation": "Sohail et al. (2019) eLife; Berg et al. (2019) eLife"
+      "refutation": "Sohail et al. (2019) eLife; Berg et al. (2019) eLife",
+      "defect_locus_giant_strict": "upstream_consortium",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC4125079",
@@ -382,7 +451,10 @@
       "cohort": "A",
       "domain": "Population Genomics",
       "ground_truth_flaw": "Berg & Coop (2014) PLoS Genet polygenic adaptation signal across populations: residual GIANT GWAS stratification inflating excess variance signals",
-      "refutation": "Berg et al. (2019) eLife self-correction"
+      "refutation": "Berg et al. (2019) eLife self-correction",
+      "defect_locus_giant_strict": "upstream_consortium",
+      "defect_locus_pilot5": "upstream_or_congruence",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC3935878",
@@ -398,7 +470,10 @@
       "cohort": "A",
       "domain": "Macroevolution / Stats",
       "ground_truth_flaw": "Rabosky (2014) BAMM diversification rate shifts on extant timetrees: unidentifiability of speciation/extinction rate histories and compound Poisson prior pathology",
-      "refutation": "Moore et al. (2016) PNAS; Louca & Pennell (2020) Nature"
+      "refutation": "Moore et al. (2016) PNAS; Louca & Pennell (2020) Nature",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "upstream_or_congruence",
+      "defect_locus_broad6": "upstream_or_congruence"
     },
     {
       "pmcid": "PMC8135569",
@@ -413,10 +488,12 @@
       "cohort_id": "A26",
       "cohort": "A",
       "domain": "Viral Evolution",
-      "validation_note": "Kumar et al. (2021) MBE: mutational order portrait of progenitor SARS-CoV-2 (already reviewed: 7.5/10)",
-      "validation": "Validated against Huanan market / early lineage reconstructions",
       "ground_truth_flaw": "Kumar et al. (2021) MBE proCoV2 mutational-order rooting: coding RaTG13-matching bases as ancestral (0) in SCITE inverted APOBEC C->U reversions in North American Lineage A.1 into a false pre-Wuhan progenitor root",
-      "refutation": "Pekar, Worobey et al. (2022) Science"
+      "refutation": "Pekar, Worobey et al. (2022) Science",
+      "protocol_note": "Originally included in pilot Cohort B as B02 (identified review on bioRxiv preprint PMC7523107 scored 7.5); reclassified to Cohort A (A26) after Pekar et al. (2022) Science refutation of proCoV2 rooting was documented and blinded review of published MBE text (PMC8135569) scored 3.3. Independently scored 4.2/10 (Reject) in the 164-paper blinded Pond self-audit (SP_ANON_003).",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC4929217",
@@ -432,7 +509,10 @@
       "cohort": "A",
       "domain": "Cancer & Microbiome",
       "ground_truth_flaw": "Aagaard et al. (2014) Sci Transl Med placental microbiome claim: low-biomass reagent ('kitome') contamination and batch effects without matched blank controls",
-      "refutation": "Lauder et al. (2016) Microbiome; de Goffau et al. (2019) Nature"
+      "refutation": "Lauder et al. (2016) Microbiome; de Goffau et al. (2019) Nature",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC8240556",
@@ -448,7 +528,10 @@
       "cohort": "A",
       "domain": "Cancer & Microbiome",
       "ground_truth_flaw": "Mishra et al. (2021) Cell fetal in-utero gut/tissue microbiome claim: low-biomass reagent and delivery contamination mistaken for viable fetal colonization",
-      "refutation": "Kennedy et al. (2023) Nature"
+      "refutation": "Kennedy et al. (2023) Nature",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC8110246",
@@ -464,7 +547,10 @@
       "cohort": "A",
       "domain": "Cancer & Microbiome",
       "ground_truth_flaw": "Rackaityte et al. (2020) Nat Med fetal intestine Micrococcus colonization claim: low-biomass contamination and batch effects",
-      "refutation": "Kennedy et al. (2023) Nature; de Goffau et al. (2021)"
+      "refutation": "Kennedy et al. (2023) Nature; de Goffau et al. (2021)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC1863478",
@@ -480,7 +566,10 @@
       "cohort": "A",
       "domain": "Molecular Evolution",
       "ground_truth_flaw": "Bakewell et al. (2007) PNAS claim that more genes underwent positive selection in chimpanzees than humans: 4x draft chimp sequencing base-call errors and alignment artifacts inflating dN/dS",
-      "refutation": "Mallick et al. (2009) Genome Res; Schneider et al. (2009) Science"
+      "refutation": "Mallick et al. (2009) Genome Res; Schneider et al. (2009) Science",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC2837078",
@@ -496,7 +585,10 @@
       "cohort": "A",
       "domain": "Molecular Evolution",
       "ground_truth_flaw": "Hughes et al. (2008) codon-based positive selection critique & parsimony counting: conflating relaxed purifying selection and synonymous saturation with likelihood branch-site properties",
-      "refutation": "Yang & dos Reis (2011) MBE"
+      "refutation": "Yang & dos Reis (2011) MBE",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC8264168",
@@ -512,7 +604,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Fongaro et al. (2021) Sci Total Environ claim of SARS-CoV-2 in November 2019 Brazilian sewage: nested amplicon contamination and discordant target amplification",
-      "refutation": "Worobey / environmental virology scrutiny"
+      "refutation": "Worobey / environmental virology scrutiny",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7196402",
@@ -528,7 +623,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Deslandes et al. (2020) IJAA claim of late December 2019 SARS-CoV-2 case in France from single high-Ct RdRp/E RT-PCR without sequencing confirmation or contamination controls",
-      "refutation": "Post-publication clinical virology critiques"
+      "refutation": "Post-publication clinical virology critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7864798",
@@ -544,7 +642,10 @@
       "cohort": "A",
       "domain": "Viral Epidemiology",
       "ground_truth_flaw": "Carrat et al. (2021) Eur J Epidemiol claim of November 2019 SARS-CoV-2 seropositivity in France: false-positive rate of ELISA/neutralization exceeding observed pre-pandemic prevalence",
-      "refutation": "Costagliola et al. (2022) Eur J Epidemiol refutation"
+      "refutation": "Costagliola et al. (2022) Eur J Epidemiol refutation",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7859469",
@@ -560,7 +661,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Sallard et al. (2021) tracing origins of SARS-CoV-2 in coronavirus phylogenies: uncalibrated molecular clock & recombination breakpoint misinterpretations",
-      "refutation": "Lytras et al. (2022) Genome Res"
+      "refutation": "Lytras et al. (2022) Genome Res",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7077245",
@@ -576,7 +680,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Vilar & Iscla (2020) Return of the coronavirus 2019-nCoV: elementary phylogenetic rooting and sequence-similarity misinterpretations",
-      "refutation": "Coronaviridae phylogenetics critiques"
+      "refutation": "Coronaviridae phylogenetics critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7106301",
@@ -592,7 +699,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Paraskevis et al. (2020) full-genome evolutionary analysis of 2019-nCoV: sliding-window SimPlot distance misinterpretation ignoring RBD recombination history",
-      "refutation": "Boni et al. (2020) Nat Microbiol"
+      "refutation": "Boni et al. (2020) Nat Microbiol",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7166400",
@@ -608,7 +718,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Benvenuto et al. (2020) JMV 2019-nCoV fast evolution and positive selection from 15 early genomes: applying FUBAR/FEL to nearly identical epidemic genomes with sequencing errors",
-      "refutation": "MacLean et al. (2020) Nat Microbiol"
+      "refutation": "MacLean et al. (2020) Nat Microbiol",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7174922",
@@ -624,7 +737,10 @@
       "cohort": "A",
       "domain": "Viral Genomics",
       "ground_truth_flaw": "Pachetti et al. (2020) J Transl Med SARS-CoV-2 RdRp mutation hotspots: geographic sampling skew and unadjusted linkage with Spike D614G",
-      "refutation": "Phylogenetic linkage critiques"
+      "refutation": "Phylogenetic linkage critiques",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7375210",
@@ -640,7 +756,10 @@
       "cohort": "A",
       "domain": "Viral Genomics",
       "ground_truth_flaw": "Koyama et al. (2020) Bull WHO variant analysis of SARS-CoV-2 genomes: unmasked sequencing artifacts and unstratified geographic variant counts",
-      "refutation": "Turakhia et al. (2020) PLoS Genet"
+      "refutation": "Turakhia et al. (2020) PLoS Genet",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7458444",
@@ -656,7 +775,10 @@
       "cohort": "A",
       "domain": "Viral Evolution",
       "ground_truth_flaw": "Lvov et al. / Lau et al. (2020) EID emergence of SARS-CoV-2 through recombination and purifying selection: failure to separate recombinant blocks before molecular clock/selection inference",
-      "refutation": "Boni et al. (2020) Nat Microbiol"
+      "refutation": "Boni et al. (2020) Nat Microbiol",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC9488757",
@@ -672,7 +794,10 @@
       "cohort": "A",
       "domain": "Epidemiology / Stats",
       "ground_truth_flaw": "Spurious early ecological association of BCG vaccination with COVID-19 morbidity/mortality: severe demographic, testing-rate, and epidemic-stage confounding",
-      "refutation": "Randomized BCG trial refutations"
+      "refutation": "Randomized BCG trial refutations",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC7267326",
@@ -688,7 +813,10 @@
       "cohort": "A",
       "domain": "Epidemiology / Stats",
       "ground_truth_flaw": "Kloc et al. (2020) ecological correlation of BCG vaccination policy and COVID-19 mortality: ecological fallacy and country-level confounding",
-      "refutation": "Hensel et al. (2020) / RCT refutations"
+      "refutation": "Hensel et al. (2020) / RCT refutations",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC8759701",
@@ -703,8 +831,14 @@
       "cohort_id": "A44",
       "cohort": "A",
       "domain": "Statistical Genetics",
-      "ground_truth_flaw": "Retracted GWAS mapping study (PMC8759701): statistical and data-integrity failures in genome-wide association analysis",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Ahmed et al. (2022) PLoS One wheat 90k SNP GWAS (PMC8759701): non-positive-semidefinite correlation matrix in Table 1 (det(R) = -0.729 < 0), biologically implausible trait means (TGW = 73 g; canopy temperature dropping under heat stress before heat stress was applied), unadjusted P <= 1e-3 threshold (~514 expected false positives vs 320 reported MTAs), and GAPIT total CMLM R^2 misreported as single-SNP PVE (summing to 300-800% variance).",
+      "refutation": "Retraction Notice: PLoS One 2023 Jun 14;18(6):e0286776 (DOI: 10.1371/journal.pone.0286776; PMID: 37314997; PMCID: PMC10266673) \u2014 retracted due to compromised peer review, authorship, and competing-interest concerns; severe internal mathematical/statistical invalidity verified in ANON_78.",
+      "retraction_doi": "10.1371/journal.pone.0286776",
+      "retraction_pmid": "37314997",
+      "retraction_category": "Compromised peer review / paper-mill sweep + internal mathematical invalidity (det(R) < 0)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC11999383",
@@ -719,8 +853,14 @@
       "cohort_id": "A45",
       "cohort": "A",
       "domain": "Statistical Genetics",
-      "ground_truth_flaw": "Retracted Mendelian randomization / GWAS causal inference study (PMC11999383): invalid instrumental variable assumptions, pleiotropy, and sample overlap",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Nian et al. (2025) JMIR Form Res two-sample Mendelian randomization of COVID-19 and Graves disease (PMC11999383): unrecognized ancestry mismatch between European COVID-19 HGI exposures (clumped with 1000G EUR) and East Asian BioBank Japan outcome (bbj-a-123), mathematically impossible Table 2 MR-Egger 95% CI (0.786-1.245, asymmetric around OR=1.047 and 4x narrower than IVW 0.405-2.851), inverted F-statistic equation, and exposure/outcome reversal in Table 2.",
+      "refutation": "Retraction Notice: J Med Internet Res 2026 Jun 12;28:e101185 (DOI: 10.2196/101185; PMID: 42284586; PMCID: PMC13263009) \u2014 retracted due to compromised peer-review process and undisclosed reviewer conflict; severe internal 2SMR and mathematical CI errors verified in ANON_91.",
+      "retraction_doi": "10.2196/101185",
+      "retraction_pmid": "42284586",
+      "retraction_category": "Compromised peer review + internal mathematical/ancestry invalidity",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC4225573",
@@ -735,8 +875,14 @@
       "cohort_id": "A46",
       "cohort": "A",
       "domain": "Transcriptomics & CompBio",
-      "ground_truth_flaw": "Retracted gene expression profiling / transcriptomic biomarker study (PMC4225573): unadjusted multiple testing and microarray analytical errors",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Gao et al. (2013) BMC Neurol Parkinson putamen microarray re-analysis of GSE20291 (PMC4225573): 12,688 unadjusted Student t-tests at p < 0.05 with no fold-change cutoff (~634 expected false positives out of 715 reported DEGs; expected FDR ~89%), whole-genome rather than U133A array background in DAVID, degree-confounded HPRD hub claims, and misattribution of public US GEO dataset ethics approval to the authors hospital.",
+      "refutation": "Retraction Notice: BMC Neurol 2015 Mar 26;15:45 (DOI: 10.1186/s12883-015-0307-3; PMID: 25884429; PMCID: PMC4374333) \u2014 retracted due to third-party peer-review manipulation; foundational multiple-testing failure (89% expected FDR) verified in ANON_77.",
+      "retraction_doi": "10.1186/s12883-015-0307-3",
+      "retraction_pmid": "25884429",
+      "retraction_category": "Compromised peer review + unadjusted multiple testing (89% expected FDR)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC9468935",
@@ -751,8 +897,14 @@
       "cohort_id": "A47",
       "cohort": "A",
       "domain": "Transcriptomics & CompBio",
-      "ground_truth_flaw": "Retracted necroptosis-related gene prognostic signature in cancer (PMC9468935): circular LASSO/Cox feature selection and validation defects",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Zhang et al. (2022) Comput Math Methods Med necroptosis-related lncRNA signature in glioma (PMC9468935): direct validation-set survival leakage (pre-filtering 43 candidate lncRNAs by requiring univariate Cox P < 0.001 in the CGGA validation cohort before LASSO training on TCGA), feeding continuous limma::removeBatchEffect outputs into integer-count DESeq2 across collinear TCGA-tumor vs GTEx-normal batches, and self-contradictory immunotherapy susceptibility claims between Sections 3.6 and 3.8.",
+      "refutation": "Retraction Notice: Comput Math Methods Med 2023 Dec 6;2023:9838096 (DOI: 10.1155/2023/9838096; PMID: 38094385; PMCID: PMC10718893) \u2014 retracted following publisher investigation into systematic manipulation; test-set survival leakage and DESeq2 pipeline errors verified in ANON_187.",
+      "retraction_doi": "10.1155/2023/9838096",
+      "retraction_pmid": "38094385",
+      "retraction_category": "Compromised peer review / paper-mill sweep + CGGA validation survival leakage",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC12471436",
@@ -767,8 +919,14 @@
       "cohort_id": "A48",
       "cohort": "A",
       "domain": "Transcriptomics & CompBio",
-      "ground_truth_flaw": "Retracted machine-learning survival prediction in cancer (PMC12471436): train-test data leakage and flawed feature selection pipeline",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Lee et al. (2025) J Pers Med machine-learning survival prediction in castration-resistant prostate cancer (PMC12471436): severe immortal-time / lookahead bias (predicting survival from CRPC diagnosis using post-diagnosis time to first-line therapy and durations of 1st/2nd/3rd-line treatments), pre-split IterativeImputer data leakage across all 801 patients, and misclassifying right-censored patients as dead (reporting 17.7% 2-year OS when total study mortality was 73.4%).",
+      "refutation": "Retraction Notice: J Pers Med 2026 Feb 2;16(2):83 (DOI: 10.3390/jpm16020083; PMID: 41627288; PMCID: PMC12863097) \u2014 retracted by Editorial Board and authors specifically due to confirmed methodological flaws in model development/validation and information leakage.",
+      "retraction_doi": "10.3390/jpm16020083",
+      "retraction_pmid": "41627288",
+      "retraction_category": "Direct analytical/methodological retraction (information leakage and model validation flaws)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC12609430",
@@ -783,8 +941,14 @@
       "cohort_id": "A49",
       "cohort": "A",
       "domain": "Transcriptomics & CompBio",
-      "ground_truth_flaw": "Retracted transcriptomic & signaling study (PMC12609430): internal data inconsistencies and analytical defects",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Abdi et al. (2025) Int J Mol Sci Duloxetine targeting pSTAT3 in-silico and RNA-seq study (PMC12609430): docking pSTAT3 (6QHD) at the coiled-coil domain (residues 176-207) vs unphosphorylated STAT3 (6NJS) at the SH2 domain (591-639), using JAK1/2 inhibitor Ruxolitinib as a positive control for direct STAT3 binding, inverted DEG threshold (-log10(p) < 0.05), and mm39 alignment vs mm10 rMATS GTF assembly mismatch.",
+      "refutation": "Retraction Notice: Int J Mol Sci 2026 Jun 23;27(13):5656 (DOI: 10.3390/ijms27135656; PMID: 42340316; PMCID: PMC13292605) \u2014 retracted by Editorial Board following investigation confirming inconsistencies in the molecular docking simulations and methodological limitations.",
+      "retraction_doi": "10.3390/ijms27135656",
+      "retraction_pmid": "42340316",
+      "retraction_category": "Direct analytical/methodological retraction (molecular docking inconsistencies and methodological flaws)",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     },
     {
       "pmcid": "PMC13107010",
@@ -799,8 +963,14 @@
       "cohort_id": "A50",
       "cohort": "A",
       "domain": "Transcriptomics & CompBio",
-      "ground_truth_flaw": "Retracted single-cell RNA-seq viral dissection study (PMC13107010): single-cell analytical and data-provenance failures",
-      "refutation": "Formal Retraction Notice"
+      "ground_truth_flaw": "Zhou et al. (2025) Acta Biochim Biophys Sin scRNA-seq of H1N1 in chicken and mouse hosts (PMC13107010): merging chicken (Gallus_gallus-6.0) and mouse (GRCm39) lung/trachea cells across 4 timepoints into a single unstratified UMAP/barplot, annotating avian/murine cells with human PBMC and pig bulk RNA-seq SingleR references, claiming expansion of avian neutrophils (birds have heterophils, not neutrophils) and human HLA-DR/IL8 expression, and attributing the same Figure 1C barplot to chickens in Results and mammals in Discussion.",
+      "refutation": "Retraction Notice: Acta Biochim Biophys Sin (Shanghai) 2026 Sep 15 (DOI: 10.3724/abbs.2026153; PMID: 42743020) \u2014 formal retraction of publication; catastrophic cross-species scRNA-seq bioinformatic and immunological invalidity verified in ANON_173.",
+      "retraction_doi": "10.3724/abbs.2026153",
+      "retraction_pmid": "42743020",
+      "retraction_category": "Formal retraction + cross-species scRNA-seq bioinformatic/immunological invalidity",
+      "defect_locus_giant_strict": "internal",
+      "defect_locus_pilot5": "internal",
+      "defect_locus_broad6": "internal"
     }
   ],
   "cohort_b": [

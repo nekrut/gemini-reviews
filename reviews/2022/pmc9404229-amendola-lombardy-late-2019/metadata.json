@@ -1,21 +1,38 @@
 {
-  "id": "PMID:36029839",
+  "id": "PMC9404229",
+  "pmid": "36029839",
   "pmcid": "PMC9404229",
   "doi": "10.1016/j.envres.2022.113979",
-  "url": "https://pubmed.ncbi.nlm.nih.gov/36029839/",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9404229/",
   "title": "Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy",
   "authors": "Antonella Amendola, Marta Canuti, Silvia Bianchi, Sudhir Kumar, Clara Fappani, Maria Gori, Daniela Colzani, Sergei L. Kosakovsky Pond, Sayaka Miura, Melissa Baggieri, Antonella Marchi, Elisa Borghi, Gianvincenzo Zuccotti, Mario C. Raviglione, Fabio Magurano, Elisabetta Tanzi",
   "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
   "venue": "Environmental Research (2022)",
   "year": 2022,
-  "reviewed_at": "2026-10-25T20:34:30-04:00",
+  "cohort": "A",
+  "cohort_id": "A01",
+  "anon_id": "ANON_37",
+  "domain": "Viral Evolution",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
   "issue_number": null,
+  "blinded_score": 2.5,
+  "identified_score": 4.1,
+  "score": 2.5,
   "scores": {
+    "rigor": 0.5,
+    "claims": 0.4,
+    "biology": 0.5,
+    "reproducibility": 1.1,
+    "overall": 2.5
+  },
+  "identified_scores": {
     "rigor": 1.2,
     "claims": 0.8,
     "biology": 0.7,
     "reproducibility": 1.4,
     "overall": 4.1
   },
-  "tier": "Flawed / Overstated"
+  "tier": "Fundamentally Invalid"
 }

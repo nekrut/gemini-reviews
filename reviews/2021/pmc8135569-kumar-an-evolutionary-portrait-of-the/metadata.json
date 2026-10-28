@@ -2,6 +2,8 @@
   "id": "PMC8135569",
   "pmid": "33942847",
   "doi": "10.1093/molbev/msab118",
+  "preprint_pmcid": "PMC7523107",
+  "preprint_doi": "10.1101/2020.09.24.311845",
   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8135569/",
   "title": "An Evolutionary Portrait of the Progenitor SARS-CoV-2 and Its Dominant Offshoots in COVID-19 Pandemic",
   "authors": "Kumar S, Tao Q, Weaver S, Sanderford M, Caraballo-Ortiz MA, Sharma S, Pond SLK, Miura S.",
@@ -21,5 +23,7 @@
     "reproducibility": 1.1,
     "overall": 3.3
   },
-  "tier": "Flawed / Overstated"
+  "tier": "Flawed / Overstated",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

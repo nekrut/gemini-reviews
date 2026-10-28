@@ -1,0 +1,1022 @@
+[
+  {
+    "cohort_id": "A03",
+    "cohort": "A",
+    "domain": "Viral Evolution",
+    "title": "Phylogenetic network analysis of SARS-CoV-2 genomes.",
+    "anon_id": "ANON_45",
+    "rep2_id": "REP2_12",
+    "rep3_id": "REP3_20",
+    "run1": {
+      "overall": 2.4,
+      "rigor": 0.6,
+      "claims": 0.4,
+      "biology": 0.5,
+      "reproducibility": 0.9
+    },
+    "run2": {
+      "overall": 2.4,
+      "rigor": 0.5,
+      "claims": 0.4,
+      "biology": 0.5,
+      "reproducibility": 1.0
+    },
+    "run3": {
+      "overall": 2.6,
+      "rigor": 0.6,
+      "claims": 0.4,
+      "biology": 0.6,
+      "reproducibility": 1.0
+    },
+    "mean_overall": 2.466666666666667,
+    "sd_overall": 0.11547005383792526,
+    "mad_pair": 0.13333333333333344,
+    "range": 0.20000000000000018
+  },
+  {
+    "cohort_id": "A26",
+    "cohort": "A",
+    "domain": "Viral Evolution",
+    "title": "An Evolutionary Portrait of the Progenitor SARS-CoV-2 and Its Dominant Offshoots in COVID-19 Pandemic.",
+    "anon_id": "ANON_26",
+    "rep2_id": "REP2_16",
+    "rep3_id": "REP3_14",
+    "run1": {
+      "overall": 3.3,
+      "rigor": 0.9,
+      "claims": 0.6,
+      "biology": 0.7,
+      "reproducibility": 1.1
+    },
+    "run2": {
+      "overall": 4.1,
+      "rigor": 1.1,
+      "claims": 0.7,
+      "biology": 0.9,
+      "reproducibility": 1.4
+    },
+    "run3": {
+      "overall": 5.3,
+      "rigor": 1.5,
+      "claims": 1.1,
+      "biology": 1.2,
+      "reproducibility": 1.5
+    },
+    "mean_overall": 4.233333333333333,
+    "sd_overall": 1.0066445913694333,
+    "mad_pair": 1.3333333333333333,
+    "range": 2.0
+  },
+  {
+    "cohort_id": "A45",
+    "cohort": "A",
+    "domain": "Statistical Genetics",
+    "title": "Assessing the Causal Association Between COVID-19 and Graves Disease: Mendelian Randomization Study.",
+    "anon_id": "ANON_91",
+    "rep2_id": "REP2_19",
+    "rep3_id": "REP3_18",
+    "run1": {
+      "overall": 2.8,
+      "rigor": 0.7,
+      "claims": 0.7,
+      "biology": 0.8,
+      "reproducibility": 0.6
+    },
+    "run2": {
+      "overall": 3.2,
+      "rigor": 0.8,
+      "claims": 0.7,
+      "biology": 0.8,
+      "reproducibility": 0.9
+    },
+    "run3": {
+      "overall": 3.0,
+      "rigor": 0.8,
+      "claims": 0.8,
+      "biology": 0.7,
+      "reproducibility": 0.7
+    },
+    "mean_overall": 3.0,
+    "sd_overall": 0.20000000000000018,
+    "mad_pair": 0.2666666666666669,
+    "range": 0.40000000000000036
+  },
+  {
+    "cohort_id": "A20",
+    "cohort": "A",
+    "domain": "Statistical Genetics",
+    "title": "Identification of individuals by trait prediction using whole-genome sequencing data.",
+    "anon_id": "ANON_21",
+    "rep2_id": "REP2_15",
+    "rep3_id": "REP3_08",
+    "run1": {
+      "overall": 4.4,
+      "rigor": 1.5,
+      "claims": 0.9,
+      "biology": 1.1,
+      "reproducibility": 0.9
+    },
+    "run2": {
+      "overall": 4.3,
+      "rigor": 1.4,
+      "claims": 0.9,
+      "biology": 1.1,
+      "reproducibility": 0.9
+    },
+    "run3": {
+      "overall": 4.7,
+      "rigor": 1.4,
+      "claims": 1.1,
+      "biology": 1.2,
+      "reproducibility": 1.0
+    },
+    "mean_overall": 4.466666666666667,
+    "sd_overall": 0.20816659994661338,
+    "mad_pair": 0.2666666666666669,
+    "range": 0.40000000000000036
+  },
+  {
+    "cohort_id": "A28",
+    "cohort": "A",
+    "domain": "Cancer & Microbiome",
+    "title": "Microbial exposure during early human development primes fetal immune cells.",
+    "anon_id": "ANON_128",
+    "rep2_id": "REP2_26",
+    "rep3_id": "REP3_13",
+    "run1": {
+      "overall": 4.0,
+      "rigor": 1.2,
+      "claims": 0.8,
+      "biology": 0.8,
+      "reproducibility": 1.2
+    },
+    "run2": {
+      "overall": 4.3,
+      "rigor": 1.1,
+      "claims": 0.8,
+      "biology": 0.9,
+      "reproducibility": 1.5
+    },
+    "run3": {
+      "overall": 4.4,
+      "rigor": 1.4,
+      "claims": 0.9,
+      "biology": 0.8,
+      "reproducibility": 1.3
+    },
+    "mean_overall": 4.233333333333333,
+    "sd_overall": 0.20816659994661338,
+    "mad_pair": 0.2666666666666669,
+    "range": 0.40000000000000036
+  },
+  {
+    "cohort_id": "A27",
+    "cohort": "A",
+    "domain": "Cancer & Microbiome",
+    "title": "The placenta harbors a unique microbiome.",
+    "anon_id": "ANON_99",
+    "rep2_id": "REP2_03",
+    "rep3_id": "REP3_12",
+    "run1": {
+      "overall": 4.0,
+      "rigor": 1.0,
+      "claims": 0.9,
+      "biology": 0.8,
+      "reproducibility": 1.3
+    },
+    "run2": {
+      "overall": 2.6,
+      "rigor": 0.6,
+      "claims": 0.4,
+      "biology": 0.4,
+      "reproducibility": 1.2
+    },
+    "run3": {
+      "overall": 3.8,
+      "rigor": 1.1,
+      "claims": 0.8,
+      "biology": 0.7,
+      "reproducibility": 1.2
+    },
+    "mean_overall": 3.466666666666667,
+    "sd_overall": 0.7571877794400365,
+    "mad_pair": 0.9333333333333332,
+    "range": 1.4
+  },
+  {
+    "cohort_id": "A30",
+    "cohort": "A",
+    "domain": "Molecular Evolution",
+    "title": "More genes underwent positive selection in chimpanzee evolution than in human evolution.",
+    "anon_id": "ANON_109",
+    "rep2_id": "REP2_11",
+    "rep3_id": "REP3_05",
+    "run1": {
+      "overall": 7.4,
+      "rigor": 2.5,
+      "claims": 1.7,
+      "biology": 1.7,
+      "reproducibility": 1.5
+    },
+    "run2": {
+      "overall": 7.7,
+      "rigor": 2.6,
+      "claims": 2.0,
+      "biology": 1.7,
+      "reproducibility": 1.4
+    },
+    "run3": {
+      "overall": 8.4,
+      "rigor": 2.8,
+      "claims": 2.1,
+      "biology": 1.8,
+      "reproducibility": 1.7
+    },
+    "mean_overall": 7.833333333333334,
+    "sd_overall": 0.5131601439446885,
+    "mad_pair": 0.6666666666666666,
+    "range": 1.0
+  },
+  {
+    "cohort_id": "A05",
+    "cohort": "A",
+    "domain": "Molecular Evolution",
+    "title": "Cross-species transmission of the newly identified coronavirus 2019-nCoV.",
+    "anon_id": "ANON_01",
+    "rep2_id": "REP2_27",
+    "rep3_id": "REP3_27",
+    "run1": {
+      "overall": 2.2,
+      "rigor": 0.4,
+      "claims": 0.5,
+      "biology": 0.5,
+      "reproducibility": 0.8
+    },
+    "run2": {
+      "overall": 2.0,
+      "rigor": 0.4,
+      "claims": 0.3,
+      "biology": 0.3,
+      "reproducibility": 1.0
+    },
+    "run3": {
+      "overall": 2.2,
+      "rigor": 0.4,
+      "claims": 0.4,
+      "biology": 0.4,
+      "reproducibility": 1.0
+    },
+    "mean_overall": 2.1333333333333333,
+    "sd_overall": 0.11547005383792526,
+    "mad_pair": 0.13333333333333344,
+    "range": 0.20000000000000018
+  },
+  {
+    "cohort_id": "A47",
+    "cohort": "A",
+    "domain": "Transcriptomics & CompBio",
+    "title": "Identification of Prognostic Signature of Necroptosis-Related lncRNAs and Molecular Subtypes in Glioma.",
+    "anon_id": "ANON_187",
+    "rep2_id": "REP2_24",
+    "rep3_id": "REP3_15",
+    "run1": {
+      "overall": 3.0,
+      "rigor": 0.8,
+      "claims": 0.7,
+      "biology": 0.8,
+      "reproducibility": 0.7
+    },
+    "run2": {
+      "overall": 3.8,
+      "rigor": 0.9,
+      "claims": 0.8,
+      "biology": 1.0,
+      "reproducibility": 1.1
+    },
+    "run3": {
+      "overall": 3.2,
+      "rigor": 0.9,
+      "claims": 0.7,
+      "biology": 0.8,
+      "reproducibility": 0.8
+    },
+    "mean_overall": 3.3333333333333335,
+    "sd_overall": 0.4163331998932264,
+    "mad_pair": 0.5333333333333332,
+    "range": 0.7999999999999998
+  },
+  {
+    "cohort_id": "A46",
+    "cohort": "A",
+    "domain": "Transcriptomics & CompBio",
+    "title": "Gene expression profiling analysis of the putamen for the investigation of compensatory mechanisms in Parkinson's disease.",
+    "anon_id": "ANON_77",
+    "rep2_id": "REP2_01",
+    "rep3_id": "REP3_11",
+    "run1": {
+      "overall": 2.6,
+      "rigor": 0.6,
+      "claims": 0.5,
+      "biology": 0.7,
+      "reproducibility": 0.8
+    },
+    "run2": {
+      "overall": 2.5,
+      "rigor": 0.5,
+      "claims": 0.5,
+      "biology": 0.7,
+      "reproducibility": 0.8
+    },
+    "run3": {
+      "overall": 3.0,
+      "rigor": 0.7,
+      "claims": 0.6,
+      "biology": 0.8,
+      "reproducibility": 0.9
+    },
+    "mean_overall": 2.7,
+    "sd_overall": 0.264575131106459,
+    "mad_pair": 0.3333333333333333,
+    "range": 0.5
+  },
+  {
+    "cohort_id": "B03",
+    "cohort": "B",
+    "domain": "Viral Evolution",
+    "title": "Natural selection in the evolution of SARS-CoV-2 in bats created a generalist virus and highly capable human pathogen.",
+    "anon_id": "ANON_07",
+    "rep2_id": "REP2_07",
+    "rep3_id": "REP3_19",
+    "run1": {
+      "overall": 8.4,
+      "rigor": 2.9,
+      "claims": 2.0,
+      "biology": 1.8,
+      "reproducibility": 1.7
+    },
+    "run2": {
+      "overall": 9.0,
+      "rigor": 3.1,
+      "claims": 2.2,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.3,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "mean_overall": 8.9,
+    "sd_overall": 0.4582575694955841,
+    "mad_pair": 0.6000000000000002,
+    "range": 0.9000000000000004
+  },
+  {
+    "cohort_id": "B05",
+    "cohort": "B",
+    "domain": "Viral Evolution",
+    "title": "The emergence of SARS-CoV-2 in Europe and North America.",
+    "anon_id": "ANON_36",
+    "rep2_id": "REP2_10",
+    "rep3_id": "REP3_28",
+    "run1": {
+      "overall": 9.0,
+      "rigor": 3.3,
+      "claims": 2.2,
+      "biology": 1.9,
+      "reproducibility": 1.6
+    },
+    "run2": {
+      "overall": 9.5,
+      "rigor": 3.4,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.2,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.9,
+      "reproducibility": 1.7
+    },
+    "mean_overall": 9.233333333333333,
+    "sd_overall": 0.2516611478423584,
+    "mad_pair": 0.3333333333333333,
+    "range": 0.5
+  },
+  {
+    "cohort_id": "B39",
+    "cohort": "B",
+    "domain": "Statistical Genetics",
+    "title": "LD Score regression distinguishes confounding from polygenicity in genome-wide association studies.",
+    "anon_id": "ANON_79",
+    "rep2_id": "REP2_13",
+    "rep3_id": "REP3_21",
+    "run1": {
+      "overall": 9.4,
+      "rigor": 3.3,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run2": {
+      "overall": 9.4,
+      "rigor": 3.3,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.1,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.9,
+      "reproducibility": 1.6
+    },
+    "mean_overall": 9.3,
+    "sd_overall": 0.17320508075688815,
+    "mad_pair": 0.20000000000000048,
+    "range": 0.3000000000000007
+  },
+  {
+    "cohort_id": "B38",
+    "cohort": "B",
+    "domain": "Statistical Genetics",
+    "title": "Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations.",
+    "anon_id": "ANON_103",
+    "rep2_id": "REP2_28",
+    "rep3_id": "REP3_03",
+    "run1": {
+      "overall": 8.5,
+      "rigor": 2.9,
+      "claims": 2.0,
+      "biology": 1.8,
+      "reproducibility": 1.8
+    },
+    "run2": {
+      "overall": 8.9,
+      "rigor": 3.1,
+      "claims": 2.2,
+      "biology": 1.8,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 8.8,
+      "rigor": 3.0,
+      "claims": 2.1,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "mean_overall": 8.733333333333334,
+    "sd_overall": 0.20816659994661352,
+    "mad_pair": 0.2666666666666669,
+    "range": 0.40000000000000036
+  },
+  {
+    "cohort_id": "B33",
+    "cohort": "B",
+    "domain": "Cancer & Microbiome",
+    "title": "Reagent and laboratory contamination can critically impact sequence-based microbiome analyses.",
+    "anon_id": "ANON_150",
+    "rep2_id": "REP2_14",
+    "rep3_id": "REP3_25",
+    "run1": {
+      "overall": 9.1,
+      "rigor": 3.1,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.7
+    },
+    "run2": {
+      "overall": 9.2,
+      "rigor": 3.1,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.2,
+      "rigor": 3.2,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.7
+    },
+    "mean_overall": 9.166666666666666,
+    "sd_overall": 0.05773502691896237,
+    "mad_pair": 0.06666666666666643,
+    "range": 0.09999999999999964
+  },
+  {
+    "cohort_id": "B30",
+    "cohort": "B",
+    "domain": "Cancer & Microbiome",
+    "title": "Gut microbiome modulates response to anti-PD-1 immunotherapy in melanoma patients.",
+    "anon_id": "ANON_178",
+    "rep2_id": "REP2_23",
+    "rep3_id": "REP3_30",
+    "run1": {
+      "overall": 6.5,
+      "rigor": 2.0,
+      "claims": 1.5,
+      "biology": 1.6,
+      "reproducibility": 1.4
+    },
+    "run2": {
+      "overall": 6.8,
+      "rigor": 2.0,
+      "claims": 1.5,
+      "biology": 1.6,
+      "reproducibility": 1.7
+    },
+    "run3": {
+      "overall": 7.5,
+      "rigor": 2.3,
+      "claims": 1.9,
+      "biology": 1.7,
+      "reproducibility": 1.6
+    },
+    "mean_overall": 6.933333333333334,
+    "sd_overall": 0.5131601439446885,
+    "mad_pair": 0.6666666666666666,
+    "range": 1.0
+  },
+  {
+    "cohort_id": "B19",
+    "cohort": "B",
+    "domain": "Molecular Evolution",
+    "title": "Detecting individual sites subject to episodic diversifying selection.",
+    "anon_id": "ANON_08",
+    "rep2_id": "REP2_30",
+    "rep3_id": "REP3_10",
+    "run1": {
+      "overall": 9.1,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.8,
+      "reproducibility": 1.7
+    },
+    "run2": {
+      "overall": 9.5,
+      "rigor": 3.4,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.5,
+      "rigor": 3.4,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.8
+    },
+    "mean_overall": 9.366666666666667,
+    "sd_overall": 0.23094010767585052,
+    "mad_pair": 0.2666666666666669,
+    "range": 0.40000000000000036
+  },
+  {
+    "cohort_id": "B20",
+    "cohort": "B",
+    "domain": "Molecular Evolution",
+    "title": "Gene-wide identification of episodic selection.",
+    "anon_id": "ANON_48",
+    "rep2_id": "REP2_02",
+    "rep3_id": "REP3_29",
+    "run1": {
+      "overall": 8.6,
+      "rigor": 2.9,
+      "claims": 2.1,
+      "biology": 1.8,
+      "reproducibility": 1.8
+    },
+    "run2": {
+      "overall": 9.1,
+      "rigor": 3.2,
+      "claims": 2.3,
+      "biology": 1.8,
+      "reproducibility": 1.8
+    },
+    "run3": {
+      "overall": 9.1,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.8,
+      "reproducibility": 1.7
+    },
+    "mean_overall": 8.933333333333334,
+    "sd_overall": 0.28867513459481287,
+    "mad_pair": 0.3333333333333333,
+    "range": 0.5
+  },
+  {
+    "cohort_id": "B43",
+    "cohort": "B",
+    "domain": "Transcriptomics & CompBio",
+    "title": "How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use?",
+    "anon_id": "ANON_159",
+    "rep2_id": "REP2_20",
+    "rep3_id": "REP3_04",
+    "run1": {
+      "overall": 9.1,
+      "rigor": 3.1,
+      "claims": 2.2,
+      "biology": 1.9,
+      "reproducibility": 1.9
+    },
+    "run2": {
+      "overall": 9.4,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.9,
+      "reproducibility": 1.9
+    },
+    "run3": {
+      "overall": 8.9,
+      "rigor": 2.9,
+      "claims": 2.2,
+      "biology": 1.9,
+      "reproducibility": 1.9
+    },
+    "mean_overall": 9.133333333333333,
+    "sd_overall": 0.2516611478423584,
+    "mad_pair": 0.3333333333333333,
+    "range": 0.5
+  },
+  {
+    "cohort_id": "B44",
+    "cohort": "B",
+    "domain": "Transcriptomics & CompBio",
+    "title": "Confronting false discoveries in single-cell differential expression.",
+    "anon_id": "ANON_98",
+    "rep2_id": "REP2_29",
+    "rep3_id": "REP3_09",
+    "run1": {
+      "overall": 9.5,
+      "rigor": 3.3,
+      "claims": 2.4,
+      "biology": 1.9,
+      "reproducibility": 1.9
+    },
+    "run2": {
+      "overall": 9.4,
+      "rigor": 3.3,
+      "claims": 2.3,
+      "biology": 1.9,
+      "reproducibility": 1.9
+    },
+    "run3": {
+      "overall": 9.6,
+      "rigor": 3.3,
+      "claims": 2.4,
+      "biology": 2.0,
+      "reproducibility": 1.9
+    },
+    "mean_overall": 9.5,
+    "sd_overall": 0.09999999999999964,
+    "mad_pair": 0.13333333333333286,
+    "range": 0.1999999999999993
+  },
+  {
+    "cohort_id": "C38",
+    "cohort": "C",
+    "domain": "Viral Evolution",
+    "title": "Increasing spillover of highly pathogenic avian influenza A (H5N1) virus to mammals.",
+    "anon_id": "ANON_161",
+    "rep2_id": "REP2_21",
+    "rep3_id": "REP3_06",
+    "run1": {
+      "overall": 3.2,
+      "rigor": 0.5,
+      "claims": 0.8,
+      "biology": 1.1,
+      "reproducibility": 0.8
+    },
+    "run2": {
+      "overall": 3.3,
+      "rigor": 0.6,
+      "claims": 0.7,
+      "biology": 1.0,
+      "reproducibility": 1.0
+    },
+    "run3": {
+      "overall": 2.6,
+      "rigor": 0.5,
+      "claims": 0.6,
+      "biology": 0.8,
+      "reproducibility": 0.7
+    },
+    "mean_overall": 3.033333333333333,
+    "sd_overall": 0.3785938897200182,
+    "mad_pair": 0.4666666666666665,
+    "range": 0.6999999999999997
+  },
+  {
+    "cohort_id": "C32",
+    "cohort": "C",
+    "domain": "Viral Evolution",
+    "title": "Exploring utility of genomic epidemiology to trace origins of highly pathogenic influenza A/H7N9 in Guangdong.",
+    "anon_id": "ANON_120",
+    "rep2_id": "REP2_06",
+    "rep3_id": "REP3_16",
+    "run1": {
+      "overall": 6.3,
+      "rigor": 1.9,
+      "claims": 1.6,
+      "biology": 1.5,
+      "reproducibility": 1.3
+    },
+    "run2": {
+      "overall": 6.3,
+      "rigor": 1.9,
+      "claims": 1.6,
+      "biology": 1.5,
+      "reproducibility": 1.3
+    },
+    "run3": {
+      "overall": 7.6,
+      "rigor": 2.5,
+      "claims": 1.9,
+      "biology": 1.7,
+      "reproducibility": 1.5
+    },
+    "mean_overall": 6.733333333333333,
+    "sd_overall": 0.7505553499465134,
+    "mad_pair": 0.8666666666666666,
+    "range": 1.2999999999999998
+  },
+  {
+    "cohort_id": "C81",
+    "cohort": "C",
+    "domain": "Statistical Genetics",
+    "title": "Association of circulating metabolites and polygenic risk score with incident type 2 diabetes: a prospective community-based cohort study.",
+    "anon_id": "ANON_107",
+    "rep2_id": "REP2_05",
+    "rep3_id": "REP3_01",
+    "run1": {
+      "overall": 5.2,
+      "rigor": 1.5,
+      "claims": 1.3,
+      "biology": 1.3,
+      "reproducibility": 1.1
+    },
+    "run2": {
+      "overall": 4.2,
+      "rigor": 1.2,
+      "claims": 1.0,
+      "biology": 1.0,
+      "reproducibility": 1.0
+    },
+    "run3": {
+      "overall": 4.5,
+      "rigor": 1.4,
+      "claims": 1.1,
+      "biology": 1.1,
+      "reproducibility": 0.9
+    },
+    "mean_overall": 4.633333333333334,
+    "sd_overall": 0.5131601439446885,
+    "mad_pair": 0.6666666666666666,
+    "range": 1.0
+  },
+  {
+    "cohort_id": "C85",
+    "cohort": "C",
+    "domain": "Statistical Genetics",
+    "title": "Systemic inflammation, polygenic risk score, and risk of incident abdominal aortic aneurysm in the UK biobank.",
+    "anon_id": "ANON_135",
+    "rep2_id": "REP2_09",
+    "rep3_id": "REP3_26",
+    "run1": {
+      "overall": 6.2,
+      "rigor": 1.9,
+      "claims": 1.5,
+      "biology": 1.5,
+      "reproducibility": 1.3
+    },
+    "run2": {
+      "overall": 6.7,
+      "rigor": 2.1,
+      "claims": 1.8,
+      "biology": 1.5,
+      "reproducibility": 1.3
+    },
+    "run3": {
+      "overall": 7.4,
+      "rigor": 2.6,
+      "claims": 1.9,
+      "biology": 1.5,
+      "reproducibility": 1.4
+    },
+    "mean_overall": 6.766666666666667,
+    "sd_overall": 0.602771377334171,
+    "mad_pair": 0.8000000000000002,
+    "range": 1.2000000000000002
+  },
+  {
+    "cohort_id": "C61",
+    "cohort": "C",
+    "domain": "Cancer & Microbiome",
+    "title": "Distinct enterotypes and dysbiosis: unraveling gut microbiota in pulmonary and critical care medicine inpatients.",
+    "anon_id": "ANON_171",
+    "rep2_id": "REP2_22",
+    "rep3_id": "REP3_24",
+    "run1": {
+      "overall": 4.8,
+      "rigor": 1.3,
+      "claims": 1.1,
+      "biology": 1.2,
+      "reproducibility": 1.2
+    },
+    "run2": {
+      "overall": 4.4,
+      "rigor": 1.1,
+      "claims": 1.0,
+      "biology": 1.1,
+      "reproducibility": 1.2
+    },
+    "run3": {
+      "overall": 4.8,
+      "rigor": 1.4,
+      "claims": 1.1,
+      "biology": 0.9,
+      "reproducibility": 1.4
+    },
+    "mean_overall": 4.666666666666667,
+    "sd_overall": 0.23094010767585,
+    "mad_pair": 0.26666666666666633,
+    "range": 0.39999999999999947
+  },
+  {
+    "cohort_id": "C13",
+    "cohort": "C",
+    "domain": "Cancer & Microbiome",
+    "title": "The Relevance of Host Gut Microbiome Signature Alterations on de novo Fatty Acids Synthesis in Patients with Multi-Drug Resistant Tuberculosis.",
+    "anon_id": "ANON_63",
+    "rep2_id": "REP2_25",
+    "rep3_id": "REP3_22",
+    "run1": {
+      "overall": 2.1,
+      "rigor": 0.5,
+      "claims": 0.5,
+      "biology": 0.6,
+      "reproducibility": 0.5
+    },
+    "run2": {
+      "overall": 1.8,
+      "rigor": 0.3,
+      "claims": 0.3,
+      "biology": 0.5,
+      "reproducibility": 0.7
+    },
+    "run3": {
+      "overall": 2.1,
+      "rigor": 0.4,
+      "claims": 0.5,
+      "biology": 0.6,
+      "reproducibility": 0.6
+    },
+    "mean_overall": 2.0,
+    "sd_overall": 0.17320508075688776,
+    "mad_pair": 0.20000000000000004,
+    "range": 0.30000000000000004
+  },
+  {
+    "cohort_id": "C53",
+    "cohort": "C",
+    "domain": "Molecular Evolution",
+    "title": "Impact of the chemical modification of tRNAs anticodon loop on the variability and evolution of codon usage in proteobacteria.",
+    "anon_id": "ANON_129",
+    "rep2_id": "REP2_04",
+    "rep3_id": "REP3_02",
+    "run1": {
+      "overall": 5.4,
+      "rigor": 1.5,
+      "claims": 1.2,
+      "biology": 1.2,
+      "reproducibility": 1.5
+    },
+    "run2": {
+      "overall": 5.5,
+      "rigor": 1.5,
+      "claims": 1.2,
+      "biology": 1.2,
+      "reproducibility": 1.6
+    },
+    "run3": {
+      "overall": 5.5,
+      "rigor": 1.5,
+      "claims": 1.2,
+      "biology": 1.3,
+      "reproducibility": 1.5
+    },
+    "mean_overall": 5.466666666666667,
+    "sd_overall": 0.05773502691896237,
+    "mad_pair": 0.06666666666666643,
+    "range": 0.09999999999999964
+  },
+  {
+    "cohort_id": "C45",
+    "cohort": "C",
+    "domain": "Molecular Evolution",
+    "title": "Comparative pangenome analysis of Enterococcus faecium and Enterococcus lactis provides new insights into the adaptive evolution by horizontal gene acquisitions.",
+    "anon_id": "ANON_118",
+    "rep2_id": "REP2_18",
+    "rep3_id": "REP3_07",
+    "run1": {
+      "overall": 5.8,
+      "rigor": 1.8,
+      "claims": 1.5,
+      "biology": 1.2,
+      "reproducibility": 1.3
+    },
+    "run2": {
+      "overall": 7.1,
+      "rigor": 2.3,
+      "claims": 1.8,
+      "biology": 1.5,
+      "reproducibility": 1.5
+    },
+    "run3": {
+      "overall": 5.2,
+      "rigor": 1.5,
+      "claims": 1.3,
+      "biology": 1.2,
+      "reproducibility": 1.2
+    },
+    "mean_overall": 6.033333333333333,
+    "sd_overall": 0.9712534856222308,
+    "mad_pair": 1.2666666666666664,
+    "range": 1.8999999999999995
+  },
+  {
+    "cohort_id": "C98",
+    "cohort": "C",
+    "domain": "Transcriptomics & CompBio",
+    "title": "Integration of bulk and single-cell RNA-seq reveals prognostic gene signatures in patients with bladder cancer treated with immune checkpoint inhibitors.",
+    "anon_id": "ANON_183",
+    "rep2_id": "REP2_08",
+    "rep3_id": "REP3_23",
+    "run1": {
+      "overall": 6.4,
+      "rigor": 1.8,
+      "claims": 1.5,
+      "biology": 1.5,
+      "reproducibility": 1.6
+    },
+    "run2": {
+      "overall": 5.6,
+      "rigor": 1.5,
+      "claims": 1.3,
+      "biology": 1.3,
+      "reproducibility": 1.5
+    },
+    "run3": {
+      "overall": 5.5,
+      "rigor": 1.7,
+      "claims": 1.3,
+      "biology": 1.1,
+      "reproducibility": 1.4
+    },
+    "mean_overall": 5.833333333333333,
+    "sd_overall": 0.493288286231625,
+    "mad_pair": 0.6000000000000002,
+    "range": 0.9000000000000004
+  },
+  {
+    "cohort_id": "C86",
+    "cohort": "C",
+    "domain": "Transcriptomics & CompBio",
+    "title": "Integrating machine learning and single-cell analysis to uncover lung adenocarcinoma progression and prognostic biomarkers.",
+    "anon_id": "ANON_167",
+    "rep2_id": "REP2_17",
+    "rep3_id": "REP3_17",
+    "run1": {
+      "overall": 4.4,
+      "rigor": 1.3,
+      "claims": 1.0,
+      "biology": 1.2,
+      "reproducibility": 0.9
+    },
+    "run2": {
+      "overall": 3.5,
+      "rigor": 1.0,
+      "claims": 0.8,
+      "biology": 1.0,
+      "reproducibility": 0.7
+    },
+    "run3": {
+      "overall": 5.6,
+      "rigor": 1.7,
+      "claims": 1.4,
+      "biology": 1.3,
+      "reproducibility": 1.2
+    },
+    "mean_overall": 4.5,
+    "sd_overall": 1.0535653752852738,
+    "mad_pair": 1.3999999999999997,
+    "range": 2.0999999999999996
+  }
+]

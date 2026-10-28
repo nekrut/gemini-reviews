@@ -17,7 +17,7 @@ All 200 manuscripts were retrieved as full-text JATS XML / HTML (including all m
    Every manuscript in Cohort A has an independent, citable post-publication documentary record (`retraction` or peer-reviewed `refutation`) establishing that its headline quantitative claim failed:
    * **Category A-I (Analytical / Data / Contamination Retractions):** Papers formally retracted in PMC due to methodological errors, batch/genotyping artifacts, train-test data leakage, or sequence contamination (excluding pure image-duplication fraud).
    * **Category A-II (Peer-Reviewed Forensic Refutations):** Named targets of peer-reviewed rebuttals ("Matters Arising", "Technical Comments", or forensic re-analyses) across low-biomass microbiomes (*Poore et al. 2020*, *Aykut et al. 2019*, *Aagaard et al. 2014*, *Mishra et al. 2021*, *Rackaityte et al. 2020*), viral origin/clock/recombination claims (*Amendola et al. 2022*, *Tang et al. 2020*, *Forster et al. 2020*, *Kumar et al. 2021*, *Xia 2020*, *Ji et al. 2020*, *Desingu et al. 2022*), alignment/sequencing-error positive selection scans (*Bakewell et al. 2007*, *Hughes et al. 2008*), and GWAS/ecological confounding (*Turchin et al. 2012*, *Berg & Coop 2014*, *Field et al. 2016*, *Lippert et al. 2017*, *Escobar et al. 2020*).
-   * **Internal ($N=45$) vs. Upstream ($N=5$) Defect Locus:** Cohort A papers are stratified a priori into **Internal Flaws** ($N=45$, where the defect resides in the paper's own design, equations, statistical tests, or tables) vs. **Upstream Consortium / Mathematical Congruence Flaws** ($N=5$, e.g., where the paper's estimator is mathematically sound, but an external summary-statistic dataset it consumed—such as GIANT height GWAS—had unadjusted stratification only provable years later with individual-level UK Biobank genotypes).
+   * **Internal vs. Upstream / Mathematical-Congruence Defect Locus ($N=50$ total; $N=47$ excluding GIANT GWAS; $N=45$ excluding Phase-1 upstream/congruence):** Motivated by the 5 Phase-1 Cohort A papers that scored $\ge 7.0$, Cohort A papers are evaluated both across all 50 manuscripts (**All Cohort A**, $N=50$) and stratified by whether the fatal flaw resides internally in the manuscript's own study design, equations, statistical tests, or tables vs. in an external consortium summary-statistic dataset it consumed (such as GIANT height GWAS in `A11`, `A23`, `A24`, $N=47$ internal) or cross-lab database / mathematical equivalence-class properties (`A07`, `A11`, `A19`, `A24`, `A25`, $N=45$ internal; or $N=44$ also excluding `A23`). Full side-by-side sensitivity across all definitions is reported in **Section 7.3**.
 
 2. **Cohort B — Subfield- & Genre-Matched Validated Controls ($N = 50$):**
    To prevent genre confounding (e.g., comparing noisy empirical biology papers in Cohort A against pure software/algorithm papers in Cohort B), Cohort B was matched by subfield and paper genre:
@@ -552,4 +552,126 @@ $^{\dagger}$ Percentile-bootstrap 95% intervals (5000 reps; Cohorts A, B and C r
 | `C98` | `ANON_183` | `PMC11663206` | *Cancer Immunol Immunother* (2024) | Transcriptomics & CompBio | 1.8/3.5 | 1.5/2.5 | 1.5/2.0 | 1.6/2.0 | **6.4** | Mixed / Salvageable | [Review](calibration/reviews_anon/ANON_183.md) |
 | `C99` | `ANON_168` | `PMC12603141` | *Sci Rep* (2025) | Transcriptomics & CompBio | 1.4/3.5 | 1.5/2.5 | 1.4/2.0 | 1.6/2.0 | **5.9** | Mixed / Salvageable | [Review](calibration/reviews_anon/ANON_168.md) |
 | `C100` | `ANON_85` | `PMC12623444` | *Commun Biol* (2025) | Transcriptomics & CompBio | 0.9/3.5 | 0.8/2.5 | 0.9/2.0 | 1.2/2.0 | **3.8** | Flawed / Overstated | [Review](calibration/reviews_anon/ANON_85.md) |
+
+---
+
+## 7. Complete Sensitivity, Held-Out Validation, Control-Composition & Provenance Audit
+
+All sensitivity tables below are deterministically computed from [`calibration/results_200.json`](calibration/results_200.json) and [`calibration/cohorts_200.json`](calibration/cohorts_200.json) via [`scripts/verify_repeatability_and_calibration.py`](scripts/verify_repeatability_and_calibration.py).
+
+### 7.1 Pilot ($N = 75$) vs. Strictly Held-Out Expansion ($N = 125$) Validation Matrix
+
+Because the Phase-1 pilot (`ANON_01`–`ANON_75`: `A01–A25`, `B01–B25`, `C01–C25`) motivated the exploratory thresholds ($<5.5, <6.0, <6.5$), the `B02` $\to$ `A26` reclassification, and the internal/upstream distinction, the **125 manuscripts added in Phase 2 (`ANON_76`–`ANON_200`: `A26–A50`, `B26–B50`, `C26–C100`)** provide a **strictly held-out confirmatory validation set** where all thresholds were already fixed prior to scoring:
+
+| Evaluation Split | $N_A / N_B / N_C$ | Mean A / B / C | ROC-AUC | $\widehat{\text{Se}}_{<5.0}$ | $\widehat{\text{Sp}}_{<5.0}$ | Wild $\hat{p}_{<5.0}$ ($\text{RG}$) | $\widehat{\text{Se}}_{<6.0}$ | $\widehat{\text{Sp}}_{<6.0}$ | Wild $\hat{p}_{<6.0}$ ($\text{RG}$) | $\widehat{\text{Se}}_{<6.5}$ | $\widehat{\text{Sp}}_{<6.5}$ | Wild $\hat{p}_{<6.5}$ ($\text{RG}$) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Phase-1 Pilot (`ANON_01–75`, orig. labels)** | `25 / 25 / 25` | `4.26 / 8.25 / 5.44` | **0.9272** | `68.0%` (`17/25`) | `96.0%` (`24/25`) | **40.0%** (`56.2%`) | `76.0%` (`19/25`) | `92.0%` (`23/25`) | **64.0%** (`82.4%`) | `80.0%` (`20/25`) | `92.0%` (`23/25`) | **72.0%** (`88.9%`) |
+| **Held-Out Expansion by ID (`A26–50, B26–50, C26–100`)** | `25 / 25 / 75` | `4.59 / 8.78 / 5.48` | **0.9824** | `64.0%` (`16/25`) | **100.0%** (`25/25`) | **44.0%** (`68.7%`) | `76.0%` (`19/25`) | **100.0%** (`25/25`) | **60.0%** (`78.9%`) | `80.0%` (`20/25`) | `96.0%` (`24/25`) | **69.3%** (`86.0%`) |
+| **Strictly Held-Out Wave (`ANON_76–200` only)** | `24 / 26 / 75` | `4.64 / 8.80 / 5.48` | **0.9824** | `62.5%` (`15/24`) | **100.0%** (`26/26`) | **44.0%** (`70.4%`) | `75.0%` (`18/24`) | **100.0%** (`26/26`) | **60.0%** (`80.0%`) | `79.2%` (`19/24`) | `96.2%` (`25/26`) | **69.3%** (`86.9%`) |
+| **Full 200-Paper Study (Combined)** | `50 / 50 / 100` | `4.42 / 8.64 / 5.47` | **0.9688** | `66.0%` (`33/50`) | **100.0%** (`50/50`) | **43.0%** (`65.2%`) | `76.0%` (`38/50`) | `98.0%` (`49/50`) | **61.0%** (`79.7%`) | `80.0%` (`40/50`) | `96.0%` (`48/50`) | **70.0%** (`86.8%`) |
+
+* **Key Finding:** Diagnostic discrimination is actually **higher** on the strictly held-out expansion wave ($\text{ROC-AUC} = 0.9824$, $\widehat{\text{Sp}}_{<5.0} = 100.0\%$, $\widehat{\text{Sp}}_{<6.0} = 100.0\%$) than on the Phase-1 pilot ($\text{ROC-AUC} = 0.9272$), and the held-out wild failure rate on `C26–C100` ($n=75$: $44.0\%$ at $<5.0$, $60.0\%$ at $<6.0$, $69.3\%$ at $<6.5$) replicates the pilot `C01–C25` failure rate ($40.0\%$ at $<5.0$, $64.0\%$ at $<6.0$, $72.0\%$ at $<6.5$) within $\pm 4$ percentage points.
+
+---
+
+### 7.2 `PMC8135569` (`proCoV2`, Kumar et al. 2021) Label Sensitivity (`A26` vs. Original `B02`)
+
+In Phase 1, `PMC8135569` (*An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic*, Kumar et al., *Mol Biol Evol* 2021, co-authored by S.L.K. Pond) was initially placed in Cohort B (`B02`), where the unblinded review (`reviews_identified/PMC8135569.md`) inadvertently evaluated the 2020 bioRxiv preprint text (`PMC7523107`, scoring `7.5/10`), whereas the blinded review (`ANON_26`) evaluated the published *MBE* full text (`PMC8135569`, scoring `3.3/10`). Because Pekar, Worobey et al. (*Science* 2022) formally refuted the `proCoV2` mutational-order rooting (showing that coding RaTG13-matching bases as ancestral `0` in `SCITE` inverted APOBEC `C->U` reversions in North American Lineage A.1 into a false pre-Wuhan progenitor root), `PMC8135569` met the Cohort A inclusion criteria (`A26`). To ensure complete transparency, we report all calibration and prevalence metrics under all three treatments of `PMC8135569`:
+
+| Treatment of `PMC8135569` (Kumar et al. 2021) | $N_A / N_B$ | ROC-AUC | $\widehat{\text{Se}}_{<5.0}$ | $\widehat{\text{Sp}}_{<5.0}$ | $\text{RG}_{<5.0}$ | $\widehat{\text{Se}}_{<6.0}$ | $\widehat{\text{Sp}}_{<6.0}$ | $\text{RG}_{<6.0}$ | $\widehat{\text{Se}}_{<6.5}$ | $\widehat{\text{Sp}}_{<6.5}$ | $\text{RG}_{<6.5}$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1. As Published (`PMC8135569` = `A26`, Starr = `B02`)** | `50 / 50` | **0.9688** | `66.0%` (`33/50`) | **100.0%** (`50/50`) | **65.2%** | `76.0%` (`38/50`) | `98.0%` (`49/50`) | **79.7%** | `80.0%` (`40/50`) | `96.0%` (`48/50`) | **86.8%** |
+| **2. Original Pilot Label (`PMC8135569` as `B02`, Starr excl.)** | `49 / 50` | **0.9553** | `65.3%` (`32/49`) | **98.0%** (`49/50`) | **64.8%** | `75.5%` (`37/49`) | `96.0%` (`48/50`) | **79.7%** | `79.6%` (`39/49`) | `94.0%` (`47/50`) | **87.0%** |
+| **3. Original Pilot Label (`PMC8135569` in B + Starr in B)** | `49 / 51` | **0.9562** | `65.3%` (`32/49`) | **98.0%** (`50/51`) | **64.8%** | `75.5%` (`37/49`) | `96.1%` (`49/51`) | **79.7%** | `79.6%` (`39/49`) | `94.1%` (`48/51`) | **87.0%** |
+| **4. `PMC8135569` Excluded Entirely** | `49 / 50` | **0.9682** | `65.3%` (`32/49`) | **100.0%** (`50/50`) | **65.8%** | `75.5%` (`37/49`) | `98.0%` (`49/50`) | **80.3%** | `79.6%` (`39/49`) | `96.0%` (`48/50`) | **87.3%** |
+
+* **Independent Confirmation in the 164-Paper Blinded Pond Self-Audit ([`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md)):** In our exhaustive blinded audit of all 164 Open-Access Pond papers (`2004–2026`), `PMC8135569` (`SP_ANON_003`) was independently re-extracted and re-reviewed blind by a fresh subagent alongside 163 other Pond papers and scored **`4.2 / 10.0` (`Reject`)** (and scored `3.3`, `4.1`, `5.3` [mean `4.23`] across the 3 independent repeatability waves in `REPEATABILITY.md`), whereas the 42 First/Senior-author Pond papers scored **`8.22 ± 1.11` (`0.0% < 5.0`)**.
+* **Paired Prestige-Halo Sensitivity Without `ANON_26`:** Excluding the version-mismatched `ANON_26` pair (`PMC7523107` preprint vs. `PMC8135569` published text, $\Delta = -4.20$), the overall paired shift across $N = 74$ pairs is **$\Delta = -0.150$** ($r = 0.928$), with Cohort A $\Delta = -0.360$ ($n=25$) and Cohort B $\Delta = -0.167$ ($n=24$).
+
+---
+
+### 7.3 Internal vs. Upstream Artifact Split Sensitivity
+
+In Section 6, `Internal A` ($N=45$) excluded the 5 Phase-1 Cohort A papers that scored $\ge 7.0$ (`A07, A11, A19, A24, A25`). However, `A23` (Turchin et al. 2012 *Nat Genet*, score `7.4`) shares the exact same upstream GIANT consortium height-GWAS stratification flaw and refutation (*Sohail et al. 2019*; *Berg et al. 2019*) as `A11` (Field et al. 2016) and `A24` (Berg & Coop 2014). Below we report all four definitions side by side:
+
+| Cohort A Defect-Locus Definition | Excluded IDs | $N_A$ | Mean A ($\pm\text{SD}$) | ROC-AUC vs. B | $\widehat{\text{Se}}_{<5.0}$ | $\text{RG}_{<5.0}$ | $\widehat{\text{Se}}_{<6.0}$ | $\text{RG}_{<6.0}$ | $\widehat{\text{Se}}_{<6.5}$ | $\text{RG}_{<6.5}$ |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1. All Cohort A (Primary Unfiltered)** | None | `50` | `4.42 ± 1.97` | **0.9688** | **66.0%** (`33/50`) | **65.2%** | **76.0%** (`38/50`) | **79.7%** | **80.0%** (`40/50`) | **86.8%** |
+| **2. Strict GIANT-Consortium-Only Exclusion** | `A11, A23, A24` | `47` | `4.18 ± 1.77` | **0.9857** | **70.2%** (`33/47`) | **61.2%** | **80.9%** (`38/47`) | **74.8%** | **85.1%** (`40/47`) | **81.4%** |
+| **3. Phase-1 Upstream/Congruence Exclusion** | `A07, A11, A19, A24, A25` | `45` | `4.09 ± 1.75` | **0.9867** | **73.3%** (`33/45`) | **58.6%** | **84.4%** (`38/45`) | **71.6%** | **86.7%** (`39/45`) | **79.8%** |
+| **4. Broad Upstream/Congruence Exclusion** | `A07, A11, A19, A23, A24, A25` | `44` | `4.01 ± 1.70` | **0.9882** | **75.0%** (`33/44`) | **57.3%** | **86.4%** (`38/44`) | **69.9%** | **88.6%** (`39/44`) | **78.0%** |
+| **5. Excluding Peer-Review-Sweep Retractions** | `A44, A45, A46, A47, A50` | `45` | `4.63 ± 1.97` | **0.9653** | **62.2%** (`28/45`) | **69.1%** | **73.3%** (`33/45`) | **82.7%** | **77.8%** (`35/45`) | **89.5%** |
+
+---
+
+### 7.4 Retraction Notices (`A44–A50`) & Ground-Truth Defect Recall Across Cohort A
+
+In [`calibration/cohorts_200.json`](calibration/cohorts_200.json), entries `A44` through `A50` now record their exact retraction notice DOIs, PMIDs, PMCIDs, and the specific internal mathematical/statistical defects verified in their blinded reviews:
+
+| ID | Anon ID | PMCID | Retraction Notice DOI & PMID | Notice Category | Internal Analytical / Mathematical Flaw Independently Caught by Blinded Reviewer | Score |
+| :---: | :---: | :---: | :--- | :--- | :--- | :---: |
+| `A44` | `ANON_78` | `PMC8759701` | `10.1371/journal.pone.0286776` (`PMID: 37314997`) | Compromised peer review / authorship sweep | Non-positive-semidefinite correlation matrix in Table 1 ($\det(R) = -0.729 < 0$), $P \le 10^{-3}$ threshold ($\sim 514$ expected FPs vs. $320$ MTAs), and GAPIT total CMLM $R^2$ reported as single-SNP PVE (summing to $300\text{--}800\%$). | **2.3** |
+| `A45` | `ANON_91` | `PMC11999383` | `10.2196/101185` (`PMID: 42284586`) | Compromised peer review / reviewer COI | European COVID-19 HGI exposure vs. East Asian BioBank Japan (`bbj-a-123`) Graves outcome ancestry mismatch + mathematically impossible Table 2 MR-Egger 95% CI ($0.786\text{--}1.245$, $4\times$ narrower than IVW $0.405\text{--}2.851$). | **2.8** |
+| `A46` | `ANON_77` | `PMC4225573` | `10.1186/s12883-015-0307-3` (`PMID: 25884429`) | Compromised peer-review manipulation | 12,688 unadjusted Student's $t$-tests at $p < 0.05$ yielding $\sim 634$ expected false positives out of 715 reported DEGs (`expected FDR ~89%`) + misattributing public US GEO ethics approval to the authors' hospital. | **2.6** |
+| `A47` | `ANON_187` | `PMC9468935` | `10.1155/2023/9838096` (`PMID: 38094385`) | Systematic peer-review manipulation | Direct validation survival leakage (filtering 43 candidate lncRNAs by requiring univariate Cox $P < 0.001$ in the `CGGA` test set before `LASSO` training), feeding `removeBatchEffect` outputs into `DESeq2`, and self-contradictory ICI claims. | **3.0** |
+| `A48` | `ANON_119` | `PMC12471436` | `10.3390/jpm16020083` (`PMID: 41627288`) | **Direct analytical retraction** (information leakage & validation flaws) | Predicts survival from CRPC diagnosis using post-diagnosis time to 1st-line therapy and 1st/2nd/3rd-line treatment durations (immortal-time lookahead), pre-split `IterativeImputer` leakage, and counting right-censored patients as dead (`17.7%` 2-yr OS vs. `73.4%` total mortality). | **3.7** |
+| `A49` | `ANON_102` | `PMC12609430` | `10.3390/ijms27135656` (`PMID: 42340316`) | **Direct analytical retraction** (docking inconsistencies & methodological flaws) | Docks pSTAT3 (`6QHD`) at the coiled-coil domain (`176–207`) vs. STAT3 (`6NJS`) at the SH2 domain (`591–639`), uses JAK1/2 inhibitor Ruxolitinib as a direct STAT3 binder, inverts DEG filter ($-\log_{10} p < 0.05$), and mixes `mm39` BAMs with `mm10` GTFs. | **3.2** |
+| `A50` | `ANON_173` | `PMC13107010` | `10.3724/abbs.2026153` (`PMID: 42743020`) | Formal retraction | Merges chicken (`Gallus_gallus-6.0`) and mouse (`GRCm39`) scRNA-seq across 4 timepoints into one UMAP annotated with human PBMC/pig `SingleR`, claims avian neutrophils (birds have heterophils) and human `HLA-DR`/`IL8`, and attributes Fig. 1C to chickens in Results and mammals in Discussion. | **2.2** |
+
+* **Ground-Truth Defect Recall ($38 / 40 = 95.0\%$ on flagged Cohort A manuscripts; $38 / 50 = 76.0\%$ overall):** Across the 40 Cohort A manuscripts that scored $< 6.5$ in the blinded audit, **38 out of 40 (`95.0%`)** explicitly recovered the exact primary analytical, statistical, or contamination defect cited in the published refutation or retraction notice directly in Section 1 or Section 2 of the review (with only 2 borderline papers, `A32` [score `6.0`] and `A40` [score `5.7`], flagged for secondary statistical/sampling flaws rather than the specific post-publication laboratory/database critique).
+
+---
+
+### 7.5 Spectrum Bias & Cohort B Control Composition Sensitivity (`Issue #4`)
+
+To test whether Cohort B's high specificity ($\widehat{\text{Sp}}_{<5.0} = 100\%$, $\widehat{\text{Sp}}_{<6.0} = 98\%$) is an artifact of (a) the 13 forensic/refutation papers included in Cohort B, (b) the 7 papers co-authored by S.L.K. Pond (`B01, B03, B08, B12, B19, B20, B21`), or (c) high-impact flagship venues (*Nature*, *Science*, *Cell*), we computed diagnostic performance across every restricted subset of Cohort B:
+
+| Cohort B Control Subset | $n_B$ | Mean ($\pm\text{SD}$) | Median | $\widehat{\text{Sp}}_{<5.0}$ | $\widehat{\text{Sp}}_{<6.0}$ | $\widehat{\text{Sp}}_{<6.5}$ | ROC-AUC vs. Cohort A ($N=50$) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1. Full Cohort B (All Controls)** | `50` | **8.64 ± 0.84** | **8.85** | **100.0%** (`50/50`) | **98.0%** (`49/50`) | **96.0%** (`48/50`) | **0.9688** |
+| **2. Excluding All 13 Refutation / Forensic Papers (Primary Discovery/Methods Only)** | `37` | **8.54 ± 0.92** | **8.80** | **100.0%** (`37/37`) | **97.3%** (`36/37`) | **94.6%** (`35/37`) | **0.9619** |
+| **3. 13 Refutation / Forensic Papers Alone** | `13` | **8.92 ± 0.48** | **9.10** | **100.0%** (`13/13`) | **100.0%** (`13/13`) | **100.0%** (`13/13`) | **0.9885** |
+| **4. Excluding All 7 Pond-Affiliated Papers** | `43` | **8.68 ± 0.89** | **9.00** | **100.0%** (`43/43`) | **97.7%** (`42/43`) | **95.3%** (`41/43`) | **0.9674** |
+| **5. Excluding BOTH Refutation AND Pond-Affiliated Papers (Independent Primary Controls)** | `31` | **8.56 ± 0.99** | **8.90** | **100.0%** (`31/31`) | **96.8%** (`30/31`) | **93.5%** (`29/31`) | **0.9590** |
+| **6. Flagship Generalist / Nature-Portfolio Subset of Cohort B** | `42` | **8.60 ± 0.88** | **8.80** | **100.0%** (`42/42`) | **97.6%** (`41/42`) | **95.2%** (`40/42`) | **0.9659** |
+| **7. Non-Flagship / Specialist Society Journals (`Virus Evol, mBio, Bioinfo, Mol Syst Biol, Microbiome, BMC Biol, RNA, Genome Res`)** | `8` | **8.85 ± 0.56** | **9.10** | **100.0%** (`8/8`) | **100.0%** (`8/8`) | **100.0%** (`8/8`) | **0.9844** |
+| **8. All Non-*Nature/Science/Cell* Papers in Cohort B (Society / Specialist / Open Journals)** | `19` | **8.64 ± 0.89** | **9.10** | **100.0%** (`19/19`) | **94.7%** (`18/19`) | **94.7%** (`18/19`) | **0.9695** |
+
+* **Two Large-Scale External Controls Directly Refute Venue/Genre Spectrum Bias:**
+  1. **164-Paper Blinded Self-Audit Across Specialist Society Journals ([`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md)):** Across S.L.K. Pond's entire 22-year open-access corpus ($N = 164$, published overwhelmingly in specialist society journals such as *Mol Biol Evol*, *Bioinformatics*, *PLOS Comput Biol*, *J Virol*, and *Virus Evolution* rather than *Nature/Science*), the **42 First/Senior-author papers scored `8.22 ± 1.11` (`Median = 8.50`, `0.0% < 5.0`, `7.1% < 6.0`, `76.2% >= 8.0`)**. Simultaneously, the blinded reviewer did not hesitate to fail Pond co-authored papers with methodological flaws (`A01` *Amendola et al. 2022* scored `2.5` in `CALIBRATION.md` and `2.2` in `SPOND_SELF_AUDIT.md`; `A26` *Kumar et al. 2021* scored `3.3` and `4.2`; `C10` scored `5.2`), proving that high scores reflect mathematical/statistical rigor rather than author identity or journal prestige.
+  2. **231-Paper Multivariable Covariate Decomposition ([`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md)):** In our pooled analysis of $N = 231$ wild manuscripts (`1991–2025`), we modeled **Venue Tier**, **Publication Decade**, **Experimental Modality** (`Wet-Lab Primary Experimental` vs. `Dry-Lab Secondary Database Re-Analysis`), **Technology Maturity**, **Epistemic Stage** (`Basic/Mechanistic Discovery` vs. `Translational/Biomarker`), and **Team Size** in a joint OLS regression ($R^2 = 0.246, p = 2.4 \times 10^{-12}$). Even within **Wet-Lab Primary Experimental studies (`6.10 ± 2.02`, `<6.0 = 49.2%`)**, **Basic/Mechanistic Discovery (`5.87 ± 2.03`, `<6.0 = 56.0%`)**, and **1990s pre-megajournal literature (`7.14 ± 2.33`, `<5.0 = 25.0%`, `<6.0 = 31.2%`)**, wild methodological failure rates remain substantial (`25%–56%`).
+* **Rogan-Gladen Transportability Sensitivity (`Sp` from `0.85` to `1.00`):** At the primary cutoff $S < 5.0$ ($\hat{p}_{\text{obs}} = 43.0\%$, $\widehat{\text{Se}} = 66.0\%$), if true wild specificity were $\text{Sp} = 0.95$ instead of $1.00$, the Rogan-Gladen estimate moves from $65.2\%$ to $\hat{\pi}_{\text{true}} = (0.43 - 0.05)/(0.66 - 0.05) = \mathbf{62.3\%}$; even under an extreme lower-bound $\text{Sp} = 0.90$, $\hat{\pi}_{\text{true}} = (0.43 - 0.10)/(0.66 - 0.10) = \mathbf{58.9\%}$ (and $\mathbf{50.0\%}$ at $\text{Sp} = 0.85$).
+
+---
+
+### 7.6 Design Weighting vs. Europe PMC Corpus Volume Weighting & Citations-per-Year
+
+1. **Equal-Allocation Design ($20$ per domain) vs. Europe PMC Corpus-Volume Reweighting:**
+   Because Cohort C was sampled as a stratified equal-allocation design ($20$ papers in each of the 5 domains, $w_h = 0.20$), our primary `43.0%` (`< 5.0`), `61.0%` (`< 6.0`), and `70.0%` (`< 6.5`) figures estimate the equal-weighted domain mean. In the underlying `2020–2025` Europe PMC Open-Access corpus, high-volume associative/clinical-bioinformatics domains (`Transcriptomics & CompBio ML` $\approx 36\%$, `Cancer & Microbiome` $\approx 28\%$, `Statistical Genetics / GWAS` $\approx 18\%$) vastly outnumber `Viral Evolution` ($\approx 10\%$) and `Molecular Evolution` ($\approx 8\%$). Reweighting Cohort C by Europe PMC domain publication volume yields an **even higher corpus-weighted failure rate**:
+   * **Equal-Weighted Stratified Cohort C ($w_h = 0.20$):** Mean = **`5.47`**, `< 5.0` = **`43.0%`**, `< 6.0` = **`61.0%`**, `< 6.5` = **`70.0%`**.
+   * **Europe PMC Volume-Weighted Cohort C:** Mean = **`5.01`**, `< 5.0` = **`54.9%`**, `< 6.0` = **`71.5%`**, `< 6.5` = **`78.8%`**.
+   Thus, equal allocation across the 5 subfields is *conservative* relative to raw biomedical publication volume because it over-samples rigorous molecular/viral evolution papers relative to high-volume transcriptomic/microbiome biomarker papers.
+2. **Age-Normalized Citation Velocity (`Citations / Year`) and Within-Year Correlations:**
+   To eliminate publication-age confounding (`seed = 20261027` drew the Phase-1 pilot `C01–C25`; `seed = 20261030` drew the Phase-2 expansion `C26–C100`), we computed Spearman rank correlations between blinded quality scores and **Citations per Year (`citedByCount / max(1, 2026 - year)`)** as well as strictly within single publication years:
+   * **Overall Cohort C ($N = 100$):** $\rho(\text{Raw Citations}, S) = \mathbf{+0.497}$, and $\rho(\text{Citations/Year}, S) = \mathbf{+0.494}$ ($p < 10^{-6}$).
+   * **Within-2024 Cohort C ($n = 30$):** $\rho(\text{Citations}, S) = \mathbf{+0.369}$ ($p = 0.045$).
+   * **Within-2025 Cohort C ($n = 45$):** $\rho(\text{Citations}, S) = \mathbf{+0.468}$ ($p = 0.0012$).
+
+---
+
+### 7.7 Provenance & $t_0$ Independence Audit of `ANON_140` (`A43`) and `ANON_17` (`A21`)
+
+1. **`ANON_140` (`A43`, `PMC7267326`, Miyasaka *EMBO Mol Med* May 2020; Blinded Score `4.2 / 10`):**
+   * **Audit of $t_0$ Critiques vs. Line 43 Mention:** While Section 3.1 (line 43 of `ANON_140.md`) included a passing parenthetical reference to subsequent 2020–2021 waves when discussing multivariable adjustment, **100% of the score deductions in Section 1 and Section 2 (`Claim 2 [Methodologically Flawed]`, `Claim 3 [Overstated]`, and `Claim 4 [Methodologically Flawed]`) rest on internal $t_0$ defects visible directly in the May 2020 text and Table 1**:
+     1. *Cherry-picked 17-country ecological table with zero statistical test:* The text on page 4 defines `BCG Brazil (Moreau)` as a quintessential "early" strain alongside `BCG Japan` and `BCG Russia`, yet Table 1 omits Brazil, Peru, Ecuador, and Mexico while presenting 17 hand-picked countries with no regression, no $p$-value, and no age/testing standardization.
+     2. *Internal contradiction in Table 1:* Finland (`44/million`) and Australia (`4/million`) discontinued universal BCG decades ago yet had much lower mortality than Western Europe.
+     3. *Misrepresentation of an unrefereed BLAST preprint (`Ref. 4`, Lyons-Weiler 2020):* Page 3 claims *"laboratory analyses found that BCG vaccination induces specific immunity against the envelope protein of SARS-CoV-2 [4]"* when Ref. 4 contained zero wet-lab experiments.
+     4. *Factual date & arithmetic error on Page 6 (`March 4, 2020` vs. `May 6, 2020`):* Page 6 attributes May 6, 2020 Worldometer cumulative incidence numbers (`5,285`, `3,485`, and `2,584` per million in Spain, Italy, and France) to `March 4, 2020` (when Spain and France had $\sim 4$ cases per million).
+2. **`ANON_17` (`A21`, `PMC6613792`, Wei & Nielsen *Nat Med* 2019; Blinded Score `2.1 / 10` vs. Identified `5.7 / 10`):**
+   * **Audit of Internal Mathematical & Missingness Defects in the Source Text:** Even setting aside knowledge of the physical overlap between Affymetrix probe `rs62625034` and the `rs333` deletion, `ANON_17.md` independently identified **four severe internal mathematical and statistical errors directly from the manuscript's own equations and sample numbers**:
+     1. *Massive differential genotype missingness in reported sample sizes:* Out of $409,693$ British-ancestry participants, `rs62625034` genotypes are present for only $395,714$ individuals (**$13,979$ missing calls = $3.41\%$ missingness**, vs. $1.04\%$ mean missingness for the 5,932 control SNPs in Fig. 1b), where just $\sim 98$ missing $\Delta 32/\Delta 32$ calls ($0.70\%$ of the $13,979$ uncalled individuals) completely account for the claimed $-1.85\%$ HWE deficit.
+     2. *Mathematically wrong Kaplan–Meier survival formula in Methods (`Estimation of death rate`):* The text writes $S_i = \prod_{n=1}^{n=i} h_n$ (multiplying annual hazard rates $h_n \approx 10^{-3}$ instead of survival probabilities $1 - h_n$, which yields $S_i \approx 10^{-105}$).
+     3. *10-fold error in Figure 1b caption and non-standard $F$ formula:* Figure 1b caption reports $F_{\Delta 32/\Delta 32} = -0.19$ instead of $-0.0185$ (a value of $-0.19$ lies 10-fold off the left edge of the Figure 1b axis at $-0.02$), and the Methods equation defines relative homozygote deficit $(O-E)/E$ rather than Wright's inbreeding coefficient $F$.
+     4. *Autocorrelated cumulative-product correlation in Extended Data Figure 1:* Computing a standard i.i.d. Pearson correlation $t$-test ($r = 0.67, P = 1.4 \times 10^{-4}$) between two monotonically accumulated survival/HWE products over age violates serial independence.
+
 

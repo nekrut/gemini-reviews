@@ -21,5 +21,7 @@
     "reproducibility": 1.2,
     "overall": 4.5
   },
-  "tier": "Flawed / Overstated"
+  "tier": "Flawed / Overstated",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

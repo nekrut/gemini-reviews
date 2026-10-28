@@ -8,36 +8,67 @@ To test whether the high methodological failure rates observed in our original 5
 3. **Structural Bioinformatics, Chemical Biology & AI Drug Discovery (`Structural Bioinfo & AI Drug Discovery`, $n = 20$):** Graph neural network (GNN) and quantum-kernel drug–target interaction (`DTI`) / binding affinity prediction, structure-based virtual screening, molecular docking, QSAR, and molecular dynamics (`MD`) simulations.
 
 ### Two-Stage Adaptive Blinded Audit (`88` Total Reviews)
-Following the protocol validated in [`REPEATABILITY.md`](REPEATABILITY.md) ($\text{ICC}(2,1) = 0.967$, $\text{ICC}(2,3) = 0.989$):
-* **Stage 1 ($N = 60$ Blinded Reviews):** All 60 manuscripts were stripped of titles, author names, affiliations, venues, publication years, DOIs, and PMCIDs (`OOD_ANON_01`–`OOD_ANON_60`, shuffled across all 3 domains) and audited by 6 parallel isolated `anon-reviewer` subagents.
-* **Stage 2 ($14 \times 2 = 28$ Independent Re-Anonymized Replicate Reviews):** The **14 manuscripts (`23.3%`)** whose Stage 1 scores fell inside the borderline zone (`5.2 <= S <= 6.8`) were independently re-shuffled into two fresh waves (`OOD_REP2_01`–`OOD_REP2_14` and `OOD_REP3_01`–`OOD_REP3_14`) and audited by 4 isolated `anon-reviewer` subagents. Their final adjudicated scores are the **3-run ensemble means**.
+Following the protocol validated in [`REPEATABILITY.md`](REPEATABILITY.md) (uncurated wild `Cohort C` $\text{ICC}(2,1) = 0.858$, $\text{ICC}(2,3) = 0.948$; pooled $\text{ICC}(2,1) = 0.967$, $\text{ICC}(2,3) = 0.989$):
+* **Stage 1 ($N = 60$ Blinded Reviews, [`ood/reviews_stage1/`](ood/reviews_stage1/)):** All 60 manuscripts were stripped of titles, author names, affiliations, venues, publication years, DOIs, and PMCIDs (`OOD_ANON_01`–`OOD_ANON_60`, shuffled across all 3 domains) and audited by 6 parallel isolated `anon-reviewer` subagents.
+* **Stage 2 ($14 \times 2 = 28$ Independent Re-Anonymized Replicate Reviews, [`ood/stage2_run2_reviews/`](ood/stage2_run2_reviews/) & [`ood/stage2_run3_reviews/`](ood/stage2_run3_reviews/)):** The **14 manuscripts (`23.3%`)** whose Stage 1 scores fell inside the borderline zone (`5.2 <= S <= 6.8`) were independently re-shuffled into two fresh waves (`OOD_REP2_01`–`OOD_REP2_14` and `OOD_REP3_01`–`OOD_REP3_14`, mapped in [`ood/stage2_map.json`](ood/stage2_map.json)) and audited by 4 isolated `anon-reviewer` subagents. All per-run scores are committed in [`ood/ood_results_60.json`](ood/ood_results_60.json) (with sampling metadata in [`ood/manifest.json`](ood/manifest.json)).
 
 ---
 
-## 2. Synthesis Across All 8 Quantitative Domains ($N = 160$ Wild Manuscripts)
+## 2. Synthesis Across All 8 Quantitative Domains: Stage-1 Single-Pass vs. Stage-1+2 Consensus
 
-Combining the 60 Out-of-Domain (`OOD`) wild manuscripts with the 100 original Cohort C wild manuscripts provides a **160-paper cross-disciplinary map across 8 quantitative domains** ($20$ wild manuscripts per domain):
+Because re-reviewing only the `5.2–6.8` borderline window in Stage 2 cannot move papers with $S_1 < 5.2$ upward and exhibited a downward mean shift of $-0.73$ pts across the 14 borderline papers (`Mean S1 = 5.93` $\to$ `Run 2 = 5.39`, `Run 3 = 5.01`; moving 4 papers [`D24, D25, D41, D60`] below `5.0` and 3 net papers below `6.0`), **we report both Stage-1 Single-Pass ($N=60$) and Stage-1+2 Consensus ($N=60$) side-by-side as co-primary unadjusted estimators**:
 
-| Domain ($n = 20$ Wild Papers Each) | Cohort | Mean Score (`/10`) | Median | Strict Failure (`< 5.0`) | Calibrated Failure (`< 6.0`) | Major Flaw (`< 6.5`) | Primary Domain-Specific Failure Modes |
+### A. Side-by-Side Stage-1 (Single-Pass) vs. Stage-1+2 (Consensus) Summary in the 3 OOD Domains ($N = 60$)
+
+| OOD Stratum | Stage-1 Mean $\pm$ SD (Med) | Stage-1 `< 5.0` | Stage-1 `< 6.0` | Stage-1 `< 6.5` | Stage-1+2 Mean $\pm$ SD (Med) | Stage-1+2 `< 5.0` | Stage-1+2 `< 6.0` | Stage-1+2 `< 6.5` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Ecology & Macroevolution ($n = 20$, all)** | **5.33 ± 1.72** (`5.05`) | **40.0%** (`8/20`) | **75.0%** (`15/20`) | **75.0%** (`15/20`) | **5.19 ± 1.73** (`4.80`) | **55.0%** (`11/20`) | **75.0%** (`15/20`) | **75.0%** (`15/20`) |
+| ↳ *Ecology & Macroevolution excl. `D20` ($n = 19$)* | **5.16 ± 1.58** (`5.00`) | **42.1%** (`8/19`) | **78.9%** (`15/19`) | **78.9%** (`15/19`) | **5.01 ± 1.57** (`4.80`) | **57.9%** (`11/19`) | **78.9%** (`15/19`) | **78.9%** (`15/19`) |
+| **Neuroscience & Neuroimaging ($n = 20$)** | **4.99 ± 2.00** (`4.80`) | **50.0%** (`10/20`) | **70.0%** (`14/20`) | **75.0%** (`15/20`) | **4.88 ± 1.94** (`4.80`) | **50.0%** (`10/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) |
+| **Structural Bioinfo & AI Drug Discovery ($n = 20$)** | **4.65 ± 2.06** (`4.75`) | **55.0%** (`11/20`) | **75.0%** (`15/20`) | **80.0%** (`16/20`) | **4.56 ± 2.01** (`4.67`) | **60.0%** (`12/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) |
+| **All OOD Combined ($N = 60$, Headline)** | **4.99 ± 1.92** (`5.00`) | **48.3%** (`29/60`) | **73.3%** (`44/60`) | **76.7%** (`46/60`) | **4.88 ± 1.88** (`4.80`) | **55.0%** (`33/60`) | **78.3%** (`47/60`) | **81.7%** (`49/60`) |
+
+### B. Full 8-Domain Cross-Disciplinary Map ($N = 160$ Wild Manuscripts)
+
+| Domain ($n = 20$ Wild Papers Each) | Cohort | Mean Score (`/10`) [Stage-1] | Median | Strict Failure (`< 5.0`) [Stage-1] | Calibrated Failure (`< 6.0`) [Stage-1] | Major Flaw (`< 6.5`) [Stage-1] | Primary Domain-Specific Failure Modes |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **1. Molecular Evolution** | Orig C | **6.90** | **6.50** | **5.0%** (`1/20`) | **35.0%** (`7/20`) | **45.0%** (`9/20`) | Phylogenetic non-independence, uncalibrated dN/dS on low divergence |
 | **2. Viral Evolution & Phylodynamics** | Orig C | **5.97** | **6.35** | **35.0%** (`7/20`) | **45.0%** (`9/20`) | **55.0%** (`11/20`) | Unpartitioned recombination clocks, sampling skew, egg-passaging artifacts |
 | **3. Statistical Genetics / GWAS** | Orig C | **5.37** | **5.40** | **40.0%** (`8/20`) | **65.0%** (`13/20`) | **75.0%** (`15/20`) | In-sample GWAS feature leakage before CV, two-sample MR ancestry/pleiotropy errors |
-| **4. Ecology & Macroevolution** | **OOD** | **5.19** | **4.80** | **55.0%** (`11/20`) | **75.0%** (`15/20`) | **75.0%** (`15/20`) | `MaxEnt` overfitting ($p > n$), roadside bias, static altitude in warming projections, area arithmetic errors |
-| **5. Neuroscience & Neuroimaging** | **OOD** | **4.88** | **4.80** | **50.0%** (`10/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
+| **4. Ecology & Macroevolution** | **OOD** | **5.19** [`5.33`] *(excl. `D20`: `5.01` [`5.16`])* | **4.80** [`5.05`] | **55.0%** [`40.0%`] (`11/20` [`8/20`]) | **75.0%** [`75.0%`] (`15/20`) | **75.0%** [`75.0%`] (`15/20`) | `MaxEnt` overfitting ($p > n$), roadside bias, static altitude in warming projections, area arithmetic errors |
+| **5. Neuroscience & Neuroimaging** | **OOD** | **4.88** [`4.99`] | **4.80** [`4.80`] | **50.0%** [`50.0%`] (`10/20`) | **80.0%** [`70.0%`] (`16/20` [`14/20`]) | **85.0%** [`75.0%`] (`17/20` [`15/20`]) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
 | **6. Cancer & Microbiome** | Orig C | **4.78** | **4.60** | **60.0%** (`12/20`) | **75.0%** (`15/20`) | **85.0%** (`17/20`) | Low-biomass kitome contamination, cross-BioProject batch & antibiotic confounding, stool pooling |
-| **7. Structural Bioinfo & AI Drug Discovery** | **OOD** | **4.57** | **4.67** | **60.0%** (`12/20`) | **80.0%** (`16/20`) | **85.0%** (`17/20`) | PDBbind–CASF pocket homology leakage, transductive DTI kernel leakage, docking to wrong PDB target |
+| **7. Structural Bioinfo & AI Drug Discovery** | **OOD** | **4.56** [`4.65`] | **4.67** [`4.75`] | **60.0%** [`55.0%`] (`12/20` [`11/20`]) | **80.0%** [`75.0%`] (`16/20` [`15/20`]) | **85.0%** [`80.0%`] (`17/20` [`16/20`]) | PDBbind–CASF pocket homology leakage, transductive DTI kernel leakage, docking to wrong PDB target |
 | **8. Transcriptomics & CompBio ML** | Orig C | **4.33** | **4.20** | **75.0%** (`15/20`) | **85.0%** (`17/20`) | **90.0%** (`18/20`) | Validation cohort leakage into LASSO screening, cell-level scRNA pseudoreplication, text-table sign flips |
-| **OOD Subtotal ($N = 60$, 3 New Domains)** | **OOD** | **4.88** | **4.80** | **55.0%** (`33/60`) | **78.3%** (`47/60`) | **81.7%** (`49/60`) | Rogan-Gladen $\hat{\pi}_{\text{true}} = 75.0\%$ (`<5.0`), $92.6\%$ (`<6.0`); RG = (p_obs + Sp − 1)/(Se + Sp − 1), using in-domain Se_int and Sp from CALIBRATION.md §6B (<5.0: Se 73.3%, Sp 100%; <6.0: Se 84.4%, Sp 98%) applied to p_obs = 33/60 and 47/60; this assumes calibration Se/Sp transfer to these untested domains. |
-| **All 8 Domains Combined ($N = 160$)** | **All Wild** | **5.25** | **5.02** | **47.5%** (`76/160`) | **67.5%** (`108/160`) | **74.4%** (`119/160`) | Monotonic split between mechanistic/model-based vs. template ML/associative fields |
+| **OOD Subtotal ($N = 60$, 3 New Domains)** | **OOD** | **4.88** [`4.99`] | **4.80** [`5.00`] | **55.0%** [`48.3%`] (`33/60` [`29/60`]) | **78.3%** [`73.3%`] (`47/60` [`44/60`]) | **81.7%** [`76.7%`] (`49/60` [`46/60`]) | **Primary:** Unadjusted Stage-1 (`48.3% <5.0`, `73.3% <6.0`) and Stage-1+2 (`55.0% <5.0`, `78.3% <6.0`) rates. *Exploratory transport projection assuming in-domain $Se_{\text{int}}/Sp$:* RG = `65.9%` (Stage-1) / `75.0%` (Stage-1+2) at `<5.0`, and `86.6%` (Stage-1) / `92.6%` (Stage-1+2) at `<6.0`. |
+| **All 8 Domains Combined ($N = 160$)** | **All Wild** | **5.25** [`5.29`] | **5.02** [`5.10`] | **47.5%** [`45.0%`] (`76/160` [`72/160`]) | **67.5%** [`65.6%`] (`108/160` [`105/160`]) | **74.4%** [`72.5%`] (`119/160` [`116/160`]) | Monotonic split between mechanistic/model-based vs. template ML/associative fields |
 
-### Citation-Tier Stratification in the Out-of-Domain Cohort ($N = 60$)
+### C. Citation-Tier, Age-Normalized Citation Velocity (`Citations/Year`), and Within-Year Correlations ($N = 60$)
 
-| Citation Stratum | $n$ | Mean Score (`/10`) | Median | Strict Failure (`< 5.0`) | Calibrated Failure (`< 6.0`) |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **High (`>= 25` citations)** | 16 | **6.21** | **6.05** | **18.8%** (`3/16`) | **43.8%** (`7/16`) |
-| **Mid (`5 – 24` citations)** | 23 | **4.68** | **4.80** | **60.9%** (`14/23`) | **87.0%** (`20/23`) |
-| **Low (`0 – 4` citations)** | 21 | **4.08** | **3.80** | **76.2%** (`16/21`) | **95.2%** (`20/21`) |
+1. **Raw Citation Stratum (Both Stage-1 and Stage-1+2):**
+
+| Citation Stratum | $n$ | Stage-1 Mean | Stage-1 `< 5.0` | Stage-1 `< 6.0` | Stage-1+2 Mean | Stage-1+2 Median | Stage-1+2 `< 5.0` | Stage-1+2 `< 6.0` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **High (`>= 25` citations)** | 16 | **6.34** | **12.5%** (`2/16`) | **37.5%** (`6/16`) | **6.21** | **6.05** | **18.8%** (`3/16`) | **43.8%** (`7/16`) |
+| **Mid (`5 – 24` citations)** | 23 | **4.81** | **52.2%** (`12/23`) | **82.6%** (`19/23`) | **4.68** | **4.80** | **60.9%** (`14/23`) | **87.0%** (`20/23`) |
+| **Low (`0 – 4` citations)** | 21 | **4.15** | **71.4%** (`15/21`) | **90.5%** (`19/21`) | **4.08** | **3.80** | **76.2%** (`16/21`) | **95.2%** (`20/21`) |
+
+2. **Age-Normalized Citation Velocity (`Citations / max(1, 2026 - Year)`) & Within-Year Spearman Correlations:**
+   Because raw citation counts correlate negatively with publication year ($\rho(\text{Year}, \text{Cites}) = -0.58$), we verified that the citation–quality gradient holds both when normalized by **Citations per Year** and **within individual publication years (`2024` and `2025`, comprising `51/60` OOD papers)**:
+   * **Overall Spearman Rank Correlations ($N = 60$):**
+     * $\rho(\text{Raw Citations}, S_{\text{Stage-1}}) = \mathbf{+0.481}$, $\rho(\text{Raw Citations}, S_{\text{Final}}) = \mathbf{+0.456}$ ($p = 0.00024$).
+     * $\rho(\text{Citations/Year}, S_{\text{Stage-1}}) = \mathbf{+0.407}$ ($p = 0.0013$), $\rho(\text{Citations/Year}, S_{\text{Final}}) = \mathbf{+0.398}$ ($p = 0.0016$).
+   * **Within-Year Spearman Correlations:**
+     * **Within `2024` ($n = 22$):** $\rho(\text{Citations}, S_{\text{Stage-1}}) = \mathbf{+0.273}$, $\rho(\text{Citations}, S_{\text{Final}}) = \mathbf{+0.269}$.
+     * **Within `2025` ($n = 29$):** $\rho(\text{Citations}, S_{\text{Stage-1}}) = \mathbf{+0.389}$ ($p = 0.037$), $\rho(\text{Citations}, S_{\text{Final}}) = \mathbf{+0.345}$.
+   * **Stratified by Citations per Year (`High >=10/yr` [$n=21$], `Mid 2.5–9.9/yr` [$n=22$], `Low <2.5/yr` [$n=17$]):**
+     * **High Velocity ($\ge 10\text{ cites/yr}, n = 21$):** Stage-1 Mean = **`5.80`** (`28.6% <5.0`, `52.4% <6.0`) | Stage-1+2 Mean = **`5.71`** (`38.1% <5.0`, `52.4% <6.0`).
+     * **Mid Velocity ($2.5\text{--}9.9\text{ cites/yr}, n = 22$):** Stage-1 Mean = **`4.71`** (`50.0% <5.0`, `81.8% <6.0`) | Stage-1+2 Mean = **`4.58`** (`59.1% <5.0`, `90.9% <6.0`).
+     * **Low Velocity ($< 2.5\text{ cites/yr}, n = 17$):** Stage-1 Mean = **`4.35`** (`70.6% <5.0`, `88.2% <6.0`) | Stage-1+2 Mean = **`4.23`** (`70.6% <5.0`, `94.1% <6.0`).
+
+3. **Domain Assignment & Replacement ID Provenance (`D20`, `D58–D60`):**
+   * **`D20` (`PMC7314097`, Touchon et al. *PLoS Genet* 2020, score `8.60`):** Sampled under the `Ecology & Macroevolution` query (`"ecological niche"` / commensal habitat evolution across 1,294 Australian *E. coli* isolates from wild/livestock/human hosts). Because comparative bacterial pangenomics bridges microbial ecology and molecular evolution, we report `Ecology & Macroevolution` both including `D20` ($n=20$: Stage-1 mean `5.33`, Final mean `5.19`) and excluding `D20` ($n=19$: Stage-1 mean `5.16`, Final mean `5.01`).
+   * **Non-Contiguous IDs `D58` (`Neuro`), `D59` (`Ecology`), `D60` (`Ecology`):** During initial full-text JATS XML extraction, 3 candidate PMCIDs in the initial 60-paper draw (`1 Neuro`, `2 Ecology`) returned abstract-only or scanned PDF shells without full-text XML bodies and were replaced at the end of the ID sequence (`D58`, `D59`, `D60`) prior to de-identification (`OOD_ANON_01`–`OOD_ANON_60`). All 60 records and full per-run scores are committed in [`ood/manifest.json`](ood/manifest.json) and [`ood/ood_results_60.json`](ood/ood_results_60.json).
 
 ---
 

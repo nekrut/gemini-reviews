@@ -21,5 +21,7 @@
     "reproducibility": 1.6,
     "overall": 5.9
   },
-  "tier": "Mixed / Salvageable"
+  "tier": "Mixed / Salvageable",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

@@ -1,0 +1,34 @@
+{
+  "run2_map": {
+    "OOD_REP2_01": "OOD_ANON_09",
+    "OOD_REP2_02": "OOD_ANON_14",
+    "OOD_REP2_03": "OOD_ANON_60",
+    "OOD_REP2_04": "OOD_ANON_45",
+    "OOD_REP2_05": "OOD_ANON_58",
+    "OOD_REP2_06": "OOD_ANON_23",
+    "OOD_REP2_07": "OOD_ANON_08",
+    "OOD_REP2_08": "OOD_ANON_10",
+    "OOD_REP2_09": "OOD_ANON_05",
+    "OOD_REP2_10": "OOD_ANON_32",
+    "OOD_REP2_11": "OOD_ANON_11",
+    "OOD_REP2_12": "OOD_ANON_29",
+    "OOD_REP2_13": "OOD_ANON_03",
+    "OOD_REP2_14": "OOD_ANON_55"
+  },
+  "run3_map": {
+    "OOD_REP3_01": "OOD_ANON_58",
+    "OOD_REP3_02": "OOD_ANON_08",
+    "OOD_REP3_03": "OOD_ANON_45",
+    "OOD_REP3_04": "OOD_ANON_60",
+    "OOD_REP3_05": "OOD_ANON_03",
+    "OOD_REP3_06": "OOD_ANON_11",
+    "OOD_REP3_07": "OOD_ANON_23",
+    "OOD_REP3_08": "OOD_ANON_14",
+    "OOD_REP3_09": "OOD_ANON_32",
+    "OOD_REP3_10": "OOD_ANON_10",
+    "OOD_REP3_11": "OOD_ANON_09",
+    "OOD_REP3_12": "OOD_ANON_29",
+    "OOD_REP3_13": "OOD_ANON_55",
+    "OOD_REP3_14": "OOD_ANON_05"
+  }
+}

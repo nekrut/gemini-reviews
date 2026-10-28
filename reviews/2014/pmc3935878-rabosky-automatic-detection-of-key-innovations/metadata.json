@@ -11,7 +11,7 @@
   "cohort": "A",
   "cohort_id": "A25",
   "anon_id": "ANON_24",
-  "domain": "Macroevolution / Stats",
+  "domain": "Molecular Evolution",
   "reviewed_at": "2026-10-27T21:35:00-04:00",
   "issue_number": null,
   "scores": {
@@ -21,5 +21,7 @@
     "reproducibility": 1.1,
     "overall": 6.2
   },
-  "tier": "Mixed / Salvageable"
+  "tier": "Mixed / Salvageable",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

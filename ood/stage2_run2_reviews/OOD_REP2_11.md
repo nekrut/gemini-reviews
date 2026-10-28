@@ -1,0 +1,56 @@
+# Review of OOD_REP2_11
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **5.8 / 10.0** (Mixed / Salvageable)  
+* **Score Breakdown:** Rigor: 1.8/3.5 | Claims: 1.4/2.5 | Biology: 1.4/2.0 | Reproducibility: 1.2/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This prospective single-arm neuroimaging study investigates whether baseline resting-state functional connectivity (rsFC) of the right subgenual anterior cingulate cortex (sgACC; MNI $5, 25, -10$) predicts 12-week clinical remission in patients with major depressive disorder (MDD) treated with escitalopram. From 110 recruited outpatients, 97 completed 12 weeks of treatment and 87 passed head-motion quality control ($\text{mean FD}$ and $\ge 100$ volumes with $\text{FD} \le 0.2\text{ mm}$). Patients were stratified into remission depression (RD, $n = 42$, week-12 $\text{HAMD-17} \le 7$) and non-remission depression (NRD, $n = 45$). A whole-brain two-sample $t$-test (controlling for age, sex, education, and mean FD; voxel $p < 0.001$, cluster FWE $p < 0.05$) identified significantly higher baseline right sgACC rsFC with four clusters in the fronto-parietal network (FPN)—bilateral dorsolateral prefrontal cortex (DLPFC) and bilateral inferior parietal lobule (IPL)—in the RD group. In parallel, a 10-fold cross-validated PCA + L2-penalized logistic regression classifier trained on whole-brain right sgACC rsFC predicted remission with a reported mean accuracy of $72.64\%$ ($p < 0.001$), mean $\text{AUC} = 0.74 \pm 0.21$, sensitivity of $0.70$, and specificity of $0.82$, with Haufe-transformed top $1\%$ predictive voxels overlapping $82.78\%$ with the group-difference FPN clusters.
+
+The study addresses a clinically relevant question using a medication-free baseline cohort treated with a single SSRI (escitalopram), applies standard motion scrubbing, and uses the Haufe transformation to interpret linear classifier weights. However, several statistical and design limitations weaken the strength of the conclusions: (1) correlating the mean rsFC of clusters identified via an RD-versus-NRD group contrast against continuous HAMD-17 percent improvement in the exact same sample (Fig. 2) is a textbook circular analysis ("double dipping"); (2) the reported 10-fold cross-validation metrics contain an internal mathematical contradiction (a sensitivity of $0.70$ and specificity of $0.82$ on $n = 42$ RD and $n = 45$ NRD cannot yield an accuracy of $72.64\%$ at the same decision threshold), and model hyperparameters were selected by maximizing 10-fold CV accuracy without nested cross-validation; (3) baseline depression severity (HAMD-17) was borderline lower in the RD group ($19.86 \pm 3.71$ vs. $21.53 \pm 4.13$, $p = 0.050$) and was not controlled for when predicting a binary cutoff ($\text{HAMD-17} \le 7$); and (4) the Limitations section discloses post-hoc exclusion of patients "intolerant or unresponsive to escitalopram" not mentioned in the Methods. Re-analyzing the classifier with nested cross-validation Controlling for baseline HAMD-17, removing the circular ROI correlation test, and clarifying patient exclusions are straightforward computational and editorial fixes.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **MDD patients achieving remission at week 12 exhibit higher baseline rsFC between the right sgACC and bilateral DLPFC and IPL (FPN nodes) than non-remitters (Table 2, Fig. 1): [Moderately Supported].**  
+  The voxel-wise two-sample $t$-test is properly thresholded (voxel $p < 0.001$, cluster FWE $p < 0.05$) and controls for age, sex, education, and mean FD. However, baseline HAMD-17 score differs at the boundary of significance between RD ($19.86 \pm 3.71$) and NRD ($21.53 \pm 4.13$, $t = -1.99, p = 0.050$; Table 1). Because remission is defined by an absolute threshold ($\text{week-12 HAMD-17} \le 7$) rather than relative change, patients starting with lower baseline HAMD-17 are closer to the remission threshold prior to treatment. Baseline HAMD-17 was not included as a covariate in the group GLM.
+
+* **Baseline sgACC–DLPFC and sgACC–IPL rsFC values correlate positively with continuous HAMD-17 percent improvement across the 87 MDD patients ($r = 0.321\text{–}0.453, p \le 0.002$; Fig. 2): [Methodologically Flawed].**  
+  The four ROIs (left/right DLPFC, left/right IPL) were defined by thresholding the whole-brain voxel-wise $t$-test comparing RD ($\text{week-12 HAMD-17} \le 7$) and NRD ($\text{week-12 HAMD-17} > 7$) in the same 87 patients. Because the RD/NRD group split is a direct function of week-12 HAMD-17 score, extracting the mean rsFC from clusters selected for differentiating RD from NRD and correlating those values with HAMD-17 percent improvement in the same sample is non-independent circular inference (double dipping), which inflates $r$ and invalidates the reported $p$-values.
+
+* **A PCA + L2 logistic regression model predicts 12-week escitalopram remission from baseline whole-brain sgACC rsFC with $72.64\%$ accuracy, $0.70$ sensitivity, $0.82$ specificity, and $\text{AUC} = 0.74 \pm 0.21$ in 10-fold cross-validation: [Fragile].**  
+  First, the reported metrics are arithmetically incompatible at a fixed classification threshold: with $n = 42$ remitters (positives) and $n = 45$ non-remitters (negatives), a sensitivity of $0.70$ ($29.4/42$) and specificity of $0.82$ ($36.9/45$) correspond to an accuracy of $(29.4 + 36.9)/87 = 76.2\%$ (or an unweighted balanced accuracy of $76.0\%$), not $72.64\%$ ($63.2/87$). Second, Methods line 61 states that *"the optimal model parameters were determined based on the average prediction accuracy"* across the 10-fold CV rather than inside an inner loop of a nested cross-validation, which causes upward tuning bias in small samples ($N = 87$, $\sim 8\text{–}9$ test subjects per fold, reflected in the large fold-to-fold $\text{AUC SD} = 0.21$). Third, the top $1\%$ Haufe-transformed voxels (1,367 voxels: 1,005 in cluster 1 + 362 in cluster 2) were computed across the whole dataset and compared via Venn diagram to the full-sample $t$-test clusters (Fig. 4D); because both the L2 classifier and the $t$-test are linear contrast estimators fit to the exact same $N = 87$ subjects and binary labels, their $82.78\%$ overlap is a mathematical tautology of linear models rather than independent validation.
+
+* **Baseline sgACC–FPN connectivity is a biomarker of escitalopram treatment efficacy: [Overstated].**  
+  Because the trial is a single-arm open-label study without a placebo or active comparator arm, the design cannot distinguish a treatment-specific pharmacodynamic predictor of escitalopram from a general prognostic marker of spontaneous symptom remission or natural disease course. Moreover, the Limitations section (line 181) states that *"Stringent criteria were applied in this study to exclude individuals intolerant or unresponsive to escitalopram, as well as those deviating from monotherapy guidelines or experiencing severe adverse effects during treatment"*—an exclusion criterion absent from the Methods (lines 32–37) that introduces survivorship bias if treatment non-responders were selectively excluded before analysis.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Control for Baseline HAMD-17 Severity in Both Group Contrasts and Predictive Models
+* **WHY:** The RD group had a lower baseline HAMD-17 score than the NRD group ($19.86$ vs. $21.53$, $p = 0.050$). Because remission ($\text{HAMD-17} \le 7$) is easier to reach from a lower starting score, baseline symptom severity is a direct confounder.
+* **WHAT:** Re-run the SPM12 two-sample $t$-test including baseline HAMD-17 as a fifth covariate (alongside age, sex, education, and mean FD), and benchmark the neuroimaging L2 logistic regression model against a clinical-only baseline logistic regression model (containing baseline HAMD-17, age, sex, and illness duration).
+* **HOW:** Add the baseline HAMD-17 vector to the SPM12 design matrix and report the updated cluster table (Table 2). In `scikit-learn`, evaluate (a) clinical variables alone, (b) sgACC rsFC PCA features alone, and (c) combined features, reporting DeLong's test or permutation $p$-values for the incremental $\Delta\text{AUC}$ over baseline clinical severity.
+
+#### 2. Eliminate Circular ROI Correlations and Implement Nested Cross-Validation
+* **WHY:** Computing Pearson correlations with HAMD-17 percent improvement inside clusters selected for RD-vs.-NRD differences (Fig. 2) is circular double-dipping. Likewise, tuning the number of PCA components and L2 penalty $C$ on the 10-fold CV average accuracy leaks test-fold information into hyperparameter selection.
+* **WHAT:** Replace the circular post-hoc ROI correlation in Fig. 2 with either a whole-brain voxel-wise regression against HAMD-17 percent improvement (controlling for baseline HAMD-17) or an independent atlas-defined FPN ROI analysis (using the Yeo 7-network FPN parcellation cited in Fig. 4). Re-run the L2 logistic regression inside a nested cross-validation (e.g., 10 outer folds $\times$ 5 inner folds) and reconcile the accuracy/sensitivity/specificity arithmetic.
+* **HOW:** Use `sklearn.model_selection.GridSearchCV` inside the training split of each outer fold to select the PCA component count and L2 parameter $C$. Compute accuracy, sensitivity, and specificity from the exact same out-of-fold probability threshold ($p = 0.50$) across all 87 pooled out-of-fold predictions so that $\text{Accuracy} = (\text{TP} + \text{TN})/87$ matches $\text{Sensitivity} = \text{TP}/42$ and $\text{Specificity} = \text{TN}/45$.
+
+#### 3. Clarify Patient Exclusion Criteria and Consort Flow
+* **WHY:** The Methods section (line 36) states that 110 patients were recruited, 13 were lost to follow-up, and 10 were excluded for head motion ($110 - 13 - 10 = 87$). However, the Limitations section (line 181) states that patients *"intolerant or unresponsive to escitalopram, as well as those deviating from monotherapy guidelines or experiencing severe adverse effects"* were excluded. Excluding patients who were "unresponsive to escitalopram" would directly bias a study of escitalopram response.
+* **WHAT:** Provide an explicit participant flow diagram (CONSORT-style) accounting for all screened and enrolled patients, and clarify whether "unresponsive" in line 181 is a phrasing error referring to treatment non-adherence/dropouts among the 13 lost-to-follow-up patients.
+* **HOW:** Revise Methods Section "Patients and treatment" (lines 34–37) and Limitations (line 181) to list the exact reason for each of the 23 excluded participants ($110 \to 87$).
+
+#### 4. Technical and Reproducibility Improvements
+* **WHY:** Sharing group-level statistical maps and analysis scripts allows independent verification and meta-analytic integration.
+* **WHAT & HOW:**
+  1. Deposit the unthresholded group $t$-statistic map (RD vs. NRD) and the Haufe weight map on NeuroVault or Figshare, and share the Python 3.10.6 `scikit-learn` classification and K-means clustering script in a public repository.
+  2. Report the exact number of PCA components retained in each fold and the variance explained in the Results section.

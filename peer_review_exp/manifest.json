@@ -21,7 +21,53 @@
       "preprint_bytes": 44000,
       "published_anon_id": "PR_W2_12",
       "published_wave": 2,
-      "published_bytes": 62115
+      "published_bytes": 62115,
+      "ppr_posted_date": "2025-12-16",
+      "ppr_version": 1,
+      "journal_received_date": "2026-01-01",
+      "journal_accepted_date": "2026-06-02",
+      "journal_published_date": "2026-06-16",
+      "days_ppr_minus_received": -16,
+      "preprint_timing_class": "pre_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "PRJEB98222",
+        "PRJEB104941",
+        "PRJEB105217",
+        "github.com/DepledgeLab/polyAtails"
+      ],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "ENA BioProjects PRJEB98222, PRJEB104941, PRJEB105217 and GitHub URL were in preprint XML <back> (omitted by body-only parser).",
+      "sub_tier": "Tier 2 (Selective Society)",
+      "preprint_scores": {
+        "total_10": 6.8,
+        "core_8": 5.5,
+        "core_scaled_10": 6.875,
+        "rigor": 2.1,
+        "claims": 1.8,
+        "biology": 1.6,
+        "reproducibility": 1.3
+      },
+      "published_scores": {
+        "total_10": 7.4,
+        "core_8": 5.8,
+        "core_scaled_10": 7.25,
+        "rigor": 2.3,
+        "claims": 1.9,
+        "biology": 1.6,
+        "reproducibility": 1.6
+      },
+      "deltas": {
+        "total_10": 0.6,
+        "core_8": 0.3,
+        "core_scaled_10": 0.375,
+        "rigor": 0.2,
+        "claims": 0.1,
+        "biology": 0.0,
+        "reproducibility": 0.3,
+        "total_with_zero_back_repro": 0.3,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR963780",
@@ -44,7 +90,51 @@
       "published_bytes": 121830,
       "preprint_anon_id": "PR_W2_15",
       "preprint_wave": 2,
-      "preprint_bytes": 69257
+      "preprint_bytes": 69257,
+      "ppr_posted_date": "2025-01-08",
+      "ppr_version": 1,
+      "journal_received_date": "2025-01-07",
+      "journal_accepted_date": "2026-04-17",
+      "journal_published_date": "2026-05-19",
+      "days_ppr_minus_received": 1,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [
+        "PRJNA1034001",
+        "PRJNA1037558"
+      ],
+      "back_da_note": "No Data Availability section in preprint XML <back>; NCBI BioProjects PRJNA1034001 and PRJNA1037558 were genuinely added at publication.",
+      "sub_tier": "Tier 2 (Selective Society)",
+      "preprint_scores": {
+        "total_10": 7.9,
+        "core_8": 6.4,
+        "core_scaled_10": 8.0,
+        "rigor": 2.6,
+        "claims": 2.0,
+        "biology": 1.8,
+        "reproducibility": 1.5
+      },
+      "published_scores": {
+        "total_10": 8.3,
+        "core_8": 6.6,
+        "core_scaled_10": 8.25,
+        "rigor": 2.7,
+        "claims": 2.1,
+        "biology": 1.8,
+        "reproducibility": 1.7
+      },
+      "deltas": {
+        "total_10": 0.4,
+        "core_8": 0.2,
+        "core_scaled_10": 0.25,
+        "rigor": 0.1,
+        "claims": 0.1,
+        "biology": 0.0,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 0.4,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1047658",
@@ -67,7 +157,50 @@
       "published_bytes": 115850,
       "preprint_anon_id": "PR_W1_13",
       "preprint_wave": 1,
-      "preprint_bytes": 74405
+      "preprint_bytes": 74405,
+      "ppr_posted_date": "2025-07-11",
+      "ppr_version": 1,
+      "journal_received_date": "2025-06-20",
+      "journal_accepted_date": "2026-02-26",
+      "journal_published_date": "2026-04-01",
+      "days_ppr_minus_received": 21,
+      "preprint_timing_class": "short_post_submission_lag",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [
+        "Zenodo 10.5281/zenodo.18481154"
+      ],
+      "back_da_note": "No Data Availability section in preprint XML <back>; \u0394Repro = 0.0.",
+      "sub_tier": "Tier 1 (Flagship)",
+      "preprint_scores": {
+        "total_10": 8.5,
+        "core_8": 7.0,
+        "core_scaled_10": 8.75,
+        "rigor": 3.0,
+        "claims": 2.2,
+        "biology": 1.8,
+        "reproducibility": 1.5
+      },
+      "published_scores": {
+        "total_10": 8.5,
+        "core_8": 7.0,
+        "core_scaled_10": 8.75,
+        "rigor": 3.0,
+        "claims": 2.2,
+        "biology": 1.8,
+        "reproducibility": 1.5
+      },
+      "deltas": {
+        "total_10": 0.0,
+        "core_8": 0.0,
+        "core_scaled_10": 0.0,
+        "rigor": 0.0,
+        "claims": 0.0,
+        "biology": 0.0,
+        "reproducibility": 0.0,
+        "total_with_zero_back_repro": 0.0,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1230660",
@@ -90,7 +223,54 @@
       "published_bytes": 49645,
       "preprint_anon_id": "PR_W2_13",
       "preprint_wave": 2,
-      "preprint_bytes": 32114
+      "preprint_bytes": 32114,
+      "ppr_posted_date": "2025-12-22",
+      "ppr_version": 1,
+      "journal_received_date": "2026-01-13",
+      "journal_accepted_date": "2026-07-29",
+      "journal_published_date": "2026-08-07",
+      "days_ppr_minus_received": -22,
+      "preprint_timing_class": "pre_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "zenodo.org/records/17456178",
+        "PXD070029",
+        "github.com/andrenmateus/SpeciesSpeciesInteractions"
+      ],
+      "genuinely_added_accessions_in_pub": [
+        "MassIVE MSV000102556"
+      ],
+      "back_da_note": "Zenodo 17456178, PRIDE PXD070029, and GitHub URL were in preprint XML <back>; published paper also genuinely added new metabolomics dataset MassIVE MSV000102556 generated during revision.",
+      "sub_tier": "Tier 1 (Flagship)",
+      "preprint_scores": {
+        "total_10": 6.8,
+        "core_8": 5.6,
+        "core_scaled_10": 7.0,
+        "rigor": 2.2,
+        "claims": 1.8,
+        "biology": 1.6,
+        "reproducibility": 1.2
+      },
+      "published_scores": {
+        "total_10": 8.3,
+        "core_8": 6.7,
+        "core_scaled_10": 8.375,
+        "rigor": 2.8,
+        "claims": 2.1,
+        "biology": 1.8,
+        "reproducibility": 1.6
+      },
+      "deltas": {
+        "total_10": 1.5,
+        "core_8": 1.1,
+        "core_scaled_10": 1.375,
+        "rigor": 0.6,
+        "claims": 0.3,
+        "biology": 0.2,
+        "reproducibility": 0.4,
+        "total_with_zero_back_repro": 1.1,
+        "exceeds_single_run_mdc95_total": true
+      }
     },
     {
       "ppr_id": "PPR1231604",
@@ -113,7 +293,54 @@
       "preprint_bytes": 74542,
       "published_anon_id": "PR_W2_05",
       "published_wave": 2,
-      "published_bytes": 106742
+      "published_bytes": 106742,
+      "ppr_posted_date": "2025-12-14",
+      "ppr_version": 1,
+      "journal_received_date": "2024-09-10",
+      "journal_accepted_date": "2026-04-15",
+      "journal_published_date": "2026-06-02",
+      "days_ppr_minus_received": 460,
+      "preprint_timing_class": "post_round1_revision",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "GSE277366",
+        "PRJEB74933",
+        "PXD024337"
+      ],
+      "genuinely_added_accessions_in_pub": [
+        "BioImage Archive S-BIAD3162"
+      ],
+      "back_da_note": "PXD071389 was in preprint <body>; GSE277366 and PRJEB74933 were in preprint <back>; published paper genuinely added BioImage Archive S-BIAD3162 and Reporting Summary. Preprint posted 15 months after initial submission (at Round 1 revision NCB-A55402A stage, 4 months before acceptance).",
+      "sub_tier": "Tier 1 (Flagship)",
+      "preprint_scores": {
+        "total_10": 7.1,
+        "core_8": 5.7,
+        "core_scaled_10": 7.125,
+        "rigor": 2.3,
+        "claims": 1.7,
+        "biology": 1.7,
+        "reproducibility": 1.4
+      },
+      "published_scores": {
+        "total_10": 7.4,
+        "core_8": 5.8,
+        "core_scaled_10": 7.25,
+        "rigor": 2.3,
+        "claims": 1.8,
+        "biology": 1.7,
+        "reproducibility": 1.6
+      },
+      "deltas": {
+        "total_10": 0.3,
+        "core_8": 0.1,
+        "core_scaled_10": 0.125,
+        "rigor": 0.0,
+        "claims": 0.1,
+        "biology": 0.0,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 0.1,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1216740",
@@ -136,7 +363,52 @@
       "published_bytes": 95281,
       "preprint_anon_id": "PR_W2_06",
       "preprint_wave": 2,
-      "preprint_bytes": 81634
+      "preprint_bytes": 81634,
+      "ppr_posted_date": "2025-12-22",
+      "ppr_version": 1,
+      "journal_received_date": "2025-12-21",
+      "journal_accepted_date": "2026-07-30",
+      "journal_published_date": "2026-09-09",
+      "days_ppr_minus_received": 1,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "github.com/FrancoisDernoncourt/Motor_unit_synchronization"
+      ],
+      "genuinely_added_accessions_in_pub": [
+        "Dryad 10.5061/dryad.5hqbzkhmj"
+      ],
+      "back_da_note": "GitHub link was in preprint <back>, but \u0394Repro = 0.0 (1.9 -> 1.9, no penalty).",
+      "sub_tier": "Tier 1 (Flagship)",
+      "preprint_scores": {
+        "total_10": 9.0,
+        "core_8": 7.1,
+        "core_scaled_10": 8.875,
+        "rigor": 3.2,
+        "claims": 2.2,
+        "biology": 1.7,
+        "reproducibility": 1.9
+      },
+      "published_scores": {
+        "total_10": 9.1,
+        "core_8": 7.2,
+        "core_scaled_10": 9.0,
+        "rigor": 3.1,
+        "claims": 2.3,
+        "biology": 1.8,
+        "reproducibility": 1.9
+      },
+      "deltas": {
+        "total_10": 0.1,
+        "core_8": 0.1,
+        "core_scaled_10": 0.125,
+        "rigor": -0.1,
+        "claims": 0.1,
+        "biology": 0.1,
+        "reproducibility": 0.0,
+        "total_with_zero_back_repro": 0.1,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1214248",
@@ -159,7 +431,54 @@
       "preprint_bytes": 24188,
       "published_anon_id": "PR_W2_18",
       "published_wave": 2,
-      "published_bytes": 28859
+      "published_bytes": 28859,
+      "ppr_posted_date": "2025-12-02",
+      "ppr_version": 1,
+      "journal_received_date": "2025-11-28",
+      "journal_accepted_date": "2026-05-08",
+      "journal_published_date": "2026-06-03",
+      "days_ppr_minus_received": 4,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "10.5281/zenodo.19205710",
+        "ERR15285694",
+        "ERR15289675",
+        "ERR15289757",
+        "ERR15289804"
+      ],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "GitHub URL and SRR17913199 were in preprint <body>; Zenodo 10.5281/zenodo.19205710 and ENA ERR15285694-804 were in preprint <back>.",
+      "sub_tier": "Tier 2 (Selective Society)",
+      "preprint_scores": {
+        "total_10": 5.2,
+        "core_8": 3.7,
+        "core_scaled_10": 4.625,
+        "rigor": 1.4,
+        "claims": 1.2,
+        "biology": 1.1,
+        "reproducibility": 1.5
+      },
+      "published_scores": {
+        "total_10": 7.3,
+        "core_8": 5.6,
+        "core_scaled_10": 7.0,
+        "rigor": 2.3,
+        "claims": 1.8,
+        "biology": 1.5,
+        "reproducibility": 1.7
+      },
+      "deltas": {
+        "total_10": 2.1,
+        "core_8": 1.9,
+        "core_scaled_10": 2.375,
+        "rigor": 0.9,
+        "claims": 0.6,
+        "biology": 0.4,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 1.9,
+        "exceeds_single_run_mdc95_total": true
+      }
     },
     {
       "ppr_id": "PPR1229728",
@@ -182,7 +501,48 @@
       "preprint_bytes": 50870,
       "published_anon_id": "PR_W1_15",
       "published_wave": 1,
-      "published_bytes": 68814
+      "published_bytes": 68814,
+      "ppr_posted_date": "2025-12-19",
+      "ppr_version": 1,
+      "journal_received_date": "2026-02-14",
+      "journal_accepted_date": "2026-08-10",
+      "journal_published_date": "2026-08-24",
+      "days_ppr_minus_received": -57,
+      "preprint_timing_class": "pre_submission",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "No Data Availability section in preprint <back> (Zenodo links were in reference list).",
+      "sub_tier": "Tier 2 (Selective Society)",
+      "preprint_scores": {
+        "total_10": 6.4,
+        "core_8": 4.7,
+        "core_scaled_10": 5.875,
+        "rigor": 2.0,
+        "claims": 1.5,
+        "biology": 1.2,
+        "reproducibility": 1.7
+      },
+      "published_scores": {
+        "total_10": 7.2,
+        "core_8": 5.3,
+        "core_scaled_10": 6.625,
+        "rigor": 2.2,
+        "claims": 1.8,
+        "biology": 1.3,
+        "reproducibility": 1.9
+      },
+      "deltas": {
+        "total_10": 0.8,
+        "core_8": 0.6,
+        "core_scaled_10": 0.75,
+        "rigor": 0.2,
+        "claims": 0.3,
+        "biology": 0.1,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 0.8,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1231346",
@@ -205,7 +565,57 @@
       "preprint_bytes": 21801,
       "published_anon_id": "PR_W2_02",
       "published_wave": 2,
-      "published_bytes": 45212
+      "published_bytes": 45212,
+      "ppr_posted_date": "2025-12-16",
+      "ppr_version": 1,
+      "journal_received_date": "2026-01-06",
+      "journal_accepted_date": "2026-08-20",
+      "journal_published_date": "2026-09-23",
+      "days_ppr_minus_received": -21,
+      "preprint_timing_class": "pre_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "PDB 9TFO",
+        "9TFP",
+        "9TFQ",
+        "9TFR",
+        "9TFS",
+        "9TFT"
+      ],
+      "genuinely_added_accessions_in_pub": [
+        "Full inline Materials and Methods (missing from short-format preprint body)"
+      ],
+      "back_da_note": "PDB codes 9TFO-9TFT were in preprint <back>; however, the preprint also omitted the entire Materials and Methods section (citing an external supplementary PDF), whereas the published version included full inline Materials and Methods.",
+      "sub_tier": "Tier 1 (Flagship)",
+      "preprint_scores": {
+        "total_10": 7.6,
+        "core_8": 6.3,
+        "core_scaled_10": 7.875,
+        "rigor": 2.5,
+        "claims": 2.0,
+        "biology": 1.8,
+        "reproducibility": 1.3
+      },
+      "published_scores": {
+        "total_10": 8.5,
+        "core_8": 6.8,
+        "core_scaled_10": 8.5,
+        "rigor": 2.9,
+        "claims": 2.1,
+        "biology": 1.8,
+        "reproducibility": 1.7
+      },
+      "deltas": {
+        "total_10": 0.9,
+        "core_8": 0.5,
+        "core_scaled_10": 0.625,
+        "rigor": 0.4,
+        "claims": 0.1,
+        "biology": 0.0,
+        "reproducibility": 0.4,
+        "total_with_zero_back_repro": 0.5,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1231554",
@@ -228,7 +638,51 @@
       "preprint_bytes": 29165,
       "published_anon_id": "PR_W1_03",
       "published_wave": 1,
-      "published_bytes": 39098
+      "published_bytes": 39098,
+      "ppr_posted_date": "2025-12-17",
+      "ppr_version": 1,
+      "journal_received_date": null,
+      "journal_accepted_date": "2026-06-12",
+      "journal_published_date": "2026-07-30",
+      "days_ppr_minus_received": null,
+      "preprint_timing_class": "pre_acceptance_no_received_date",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "PRJEB104497",
+        "ERR15999986-ERR16000285"
+      ],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "ENA BioProject PRJEB104497 and run accessions ERR15999986-ERR16000285 were in preprint <back>; Oxford University Press (GBE) records Accepted date (2026-06-12, 6 months after preprint) but does not deposit a Received date.",
+      "sub_tier": "Tier 2 (Selective Society)",
+      "preprint_scores": {
+        "total_10": 6.0,
+        "core_8": 5.0,
+        "core_scaled_10": 6.25,
+        "rigor": 1.9,
+        "claims": 1.6,
+        "biology": 1.5,
+        "reproducibility": 1.0
+      },
+      "published_scores": {
+        "total_10": 7.8,
+        "core_8": 6.1,
+        "core_scaled_10": 7.625,
+        "rigor": 2.6,
+        "claims": 2.0,
+        "biology": 1.5,
+        "reproducibility": 1.7
+      },
+      "deltas": {
+        "total_10": 1.8,
+        "core_8": 1.1,
+        "core_scaled_10": 1.375,
+        "rigor": 0.7,
+        "claims": 0.4,
+        "biology": 0.0,
+        "reproducibility": 0.7,
+        "total_with_zero_back_repro": 1.1,
+        "exceeds_single_run_mdc95_total": true
+      }
     },
     {
       "ppr_id": "PPR1032999",
@@ -251,7 +705,52 @@
       "preprint_bytes": 27215,
       "published_anon_id": "PR_W2_11",
       "published_wave": 2,
-      "published_bytes": 36333
+      "published_bytes": 36333,
+      "ppr_posted_date": "2025-06-09",
+      "ppr_version": 1,
+      "journal_received_date": "2025-05-27",
+      "journal_accepted_date": "2025-10-24",
+      "journal_published_date": "2025-11-11",
+      "days_ppr_minus_received": 13,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "PRJNA1240209",
+        "10.5281/zenodo.15350947",
+        "10.5281/zenodo.15489638"
+      ],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "NCBI BioProject PRJNA1240209 and Zenodo DOIs were in preprint <back>.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 7.9,
+        "core_8": 6.5,
+        "core_scaled_10": 8.125,
+        "rigor": 2.7,
+        "claims": 2.1,
+        "biology": 1.7,
+        "reproducibility": 1.4
+      },
+      "published_scores": {
+        "total_10": 8.7,
+        "core_8": 6.9,
+        "core_scaled_10": 8.625,
+        "rigor": 3.0,
+        "claims": 2.2,
+        "biology": 1.7,
+        "reproducibility": 1.8
+      },
+      "deltas": {
+        "total_10": 0.8,
+        "core_8": 0.4,
+        "core_scaled_10": 0.5,
+        "rigor": 0.3,
+        "claims": 0.1,
+        "biology": 0.0,
+        "reproducibility": 0.4,
+        "total_with_zero_back_repro": 0.4,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1035572",
@@ -274,7 +773,52 @@
       "published_bytes": 63426,
       "preprint_anon_id": "PR_W2_19",
       "preprint_wave": 2,
-      "preprint_bytes": 47043
+      "preprint_bytes": 47043,
+      "ppr_posted_date": "2025-06-12",
+      "ppr_version": 1,
+      "journal_received_date": "2025-06-09",
+      "journal_accepted_date": "2026-01-26",
+      "journal_published_date": "2026-02-03",
+      "days_ppr_minus_received": 3,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": true,
+      "back_only_accessions": [
+        "PRJNA1270041"
+      ],
+      "genuinely_added_accessions_in_pub": [
+        "GitHub scripts repository"
+      ],
+      "back_da_note": "SRA PRJNA1270041 was in preprint <back>; published paper also added GitHub analysis scripts.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 7.2,
+        "core_8": 5.9,
+        "core_scaled_10": 7.375,
+        "rigor": 2.3,
+        "claims": 1.9,
+        "biology": 1.7,
+        "reproducibility": 1.3
+      },
+      "published_scores": {
+        "total_10": 7.6,
+        "core_8": 6.1,
+        "core_scaled_10": 7.625,
+        "rigor": 2.5,
+        "claims": 2.0,
+        "biology": 1.6,
+        "reproducibility": 1.5
+      },
+      "deltas": {
+        "total_10": 0.4,
+        "core_8": 0.2,
+        "core_scaled_10": 0.25,
+        "rigor": 0.2,
+        "claims": 0.1,
+        "biology": -0.1,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 0.2,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1231029",
@@ -297,7 +841,48 @@
       "preprint_bytes": 27272,
       "published_anon_id": "PR_W2_09",
       "published_wave": 2,
-      "published_bytes": 35460
+      "published_bytes": 35460,
+      "ppr_posted_date": "2025-12-18",
+      "ppr_version": 1,
+      "journal_received_date": "2026-01-05",
+      "journal_accepted_date": "2026-03-10",
+      "journal_published_date": "2026-03-17",
+      "days_ppr_minus_received": -18,
+      "preprint_timing_class": "pre_submission",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "GEO accession GSE313744 was already present in preprint <body> (lines 118-120 of PR_W1_01.md) as well as <back>.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 6.1,
+        "core_8": 4.8,
+        "core_scaled_10": 6.0,
+        "rigor": 1.9,
+        "claims": 1.5,
+        "biology": 1.4,
+        "reproducibility": 1.3
+      },
+      "published_scores": {
+        "total_10": 5.8,
+        "core_8": 4.3,
+        "core_scaled_10": 5.375,
+        "rigor": 1.6,
+        "claims": 1.4,
+        "biology": 1.3,
+        "reproducibility": 1.5
+      },
+      "deltas": {
+        "total_10": -0.3,
+        "core_8": -0.5,
+        "core_scaled_10": -0.625,
+        "rigor": -0.3,
+        "claims": -0.1,
+        "biology": -0.1,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": -0.3,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1229977",
@@ -320,7 +905,48 @@
       "published_bytes": 35422,
       "preprint_anon_id": "PR_W2_20",
       "preprint_wave": 2,
-      "preprint_bytes": 25704
+      "preprint_bytes": 25704,
+      "ppr_posted_date": "2025-12-26",
+      "ppr_version": 1,
+      "journal_received_date": "2025-11-26",
+      "journal_accepted_date": "2026-04-09",
+      "journal_published_date": "2026-04-22",
+      "days_ppr_minus_received": 30,
+      "preprint_timing_class": "short_post_submission_lag",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "Preprint <back> only stated data were proprietary (Cherry Valley Ltd, available upon NDA request); \u0394Repro = 0.0.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 4.4,
+        "core_8": 3.6,
+        "core_scaled_10": 4.5,
+        "rigor": 1.2,
+        "claims": 1.2,
+        "biology": 1.2,
+        "reproducibility": 0.8
+      },
+      "published_scores": {
+        "total_10": 4.3,
+        "core_8": 3.5,
+        "core_scaled_10": 4.375,
+        "rigor": 1.2,
+        "claims": 1.1,
+        "biology": 1.2,
+        "reproducibility": 0.8
+      },
+      "deltas": {
+        "total_10": -0.1,
+        "core_8": -0.1,
+        "core_scaled_10": -0.125,
+        "rigor": 0.0,
+        "claims": -0.1,
+        "biology": 0.0,
+        "reproducibility": 0.0,
+        "total_with_zero_back_repro": -0.1,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1230802",
@@ -343,7 +969,48 @@
       "preprint_bytes": 29627,
       "published_anon_id": "PR_W2_16",
       "published_wave": 2,
-      "published_bytes": 40070
+      "published_bytes": 40070,
+      "ppr_posted_date": "2025-12-19",
+      "ppr_version": 1,
+      "journal_received_date": null,
+      "journal_accepted_date": "2026-03-09",
+      "journal_published_date": "2026-03-17",
+      "days_ppr_minus_received": null,
+      "preprint_timing_class": "pre_acceptance_no_received_date",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "PRIDE PXD065257 was already in preprint <body>; preprint <back> only stated 'All the data are available upon request'. Crossref records Revised 2026-03-04 and Accepted 2026-03-09 (2.7 months after preprint).",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 5.8,
+        "core_8": 4.4,
+        "core_scaled_10": 5.5,
+        "rigor": 1.7,
+        "claims": 1.4,
+        "biology": 1.3,
+        "reproducibility": 1.4
+      },
+      "published_scores": {
+        "total_10": 5.5,
+        "core_8": 4.3,
+        "core_scaled_10": 5.375,
+        "rigor": 1.7,
+        "claims": 1.4,
+        "biology": 1.2,
+        "reproducibility": 1.2
+      },
+      "deltas": {
+        "total_10": -0.3,
+        "core_8": -0.1,
+        "core_scaled_10": -0.125,
+        "rigor": 0.0,
+        "claims": 0.0,
+        "biology": -0.1,
+        "reproducibility": -0.2,
+        "total_with_zero_back_repro": -0.3,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1229707",
@@ -366,18 +1033,61 @@
       "published_bytes": 55851,
       "preprint_anon_id": "PR_W2_10",
       "preprint_wave": 2,
-      "preprint_bytes": 38702
+      "preprint_bytes": 38702,
+      "ppr_posted_date": "2025-12-25",
+      "ppr_version": 1,
+      "journal_received_date": "2025-11-17",
+      "journal_accepted_date": "2026-03-24",
+      "journal_published_date": "2026-05-07",
+      "days_ppr_minus_received": 38,
+      "preprint_timing_class": "short_post_submission_lag",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [
+        "Zenodo 10.5281/zenodo.18862597"
+      ],
+      "back_da_note": "Preprint <back> only stated 'Data will be made available on request'; published paper deposited raw data on Zenodo (10.5281/zenodo.18862597).",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 6.4,
+        "core_8": 5.4,
+        "core_scaled_10": 6.75,
+        "rigor": 2.1,
+        "claims": 1.8,
+        "biology": 1.5,
+        "reproducibility": 1.0
+      },
+      "published_scores": {
+        "total_10": 7.4,
+        "core_8": 6.0,
+        "core_scaled_10": 7.5,
+        "rigor": 2.4,
+        "claims": 2.0,
+        "biology": 1.6,
+        "reproducibility": 1.4
+      },
+      "deltas": {
+        "total_10": 1.0,
+        "core_8": 0.6,
+        "core_scaled_10": 0.75,
+        "rigor": 0.3,
+        "claims": 0.2,
+        "biology": 0.1,
+        "reproducibility": 0.4,
+        "total_with_zero_back_repro": 1.0,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1171629",
       "ppr_doi": "",
       "ppr_year": 2025,
-      "pmid": "42289653",
+      "pmid": "40987853",
       "pmcid": "PMC13495268",
       "title": "Evolutionary dynamics and molecular adaptation of Rift Valley fever virus across human and non-human outbreaks in Africa",
       "journal": "BMC genomics",
-      "year": 2026,
-      "doi": "10.1186/s12864-026-13002-4",
+      "year": 2025,
+      "doi": "",
       "authors": "",
       "citedByCount": 0,
       "pair_id": "PAIR_17",
@@ -389,18 +1099,61 @@
       "preprint_bytes": 38544,
       "published_anon_id": "PR_W2_03",
       "published_wave": 2,
-      "published_bytes": 52566
+      "published_bytes": 52566,
+      "ppr_posted_date": "2026-03-30",
+      "ppr_version": 1,
+      "journal_received_date": "2026-03-10",
+      "journal_accepted_date": "2026-05-27",
+      "journal_published_date": "2026-06-15",
+      "days_ppr_minus_received": 20,
+      "preprint_timing_class": "short_post_submission_lag",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [
+        "Supplementary sequence accession tables"
+      ],
+      "back_da_note": "Preprint <back> only cited generic NCBI Virus taxid:11588 search link; Research Square v1 posted 20 days after BMC Genomics receipt.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 2.9,
+        "core_8": 2.1,
+        "core_scaled_10": 2.625,
+        "rigor": 0.7,
+        "claims": 0.6,
+        "biology": 0.8,
+        "reproducibility": 0.8
+      },
+      "published_scores": {
+        "total_10": 4.5,
+        "core_8": 3.0,
+        "core_scaled_10": 3.75,
+        "rigor": 1.1,
+        "claims": 1.0,
+        "biology": 0.9,
+        "reproducibility": 1.5
+      },
+      "deltas": {
+        "total_10": 1.6,
+        "core_8": 0.9,
+        "core_scaled_10": 1.125,
+        "rigor": 0.4,
+        "claims": 0.4,
+        "biology": 0.1,
+        "reproducibility": 0.7,
+        "total_with_zero_back_repro": 1.6,
+        "exceeds_single_run_mdc95_total": true
+      }
     },
     {
       "ppr_id": "PPR1219406",
       "ppr_doi": "",
       "ppr_year": 2025,
-      "pmid": "42454934",
+      "pmid": "40971510",
       "pmcid": "PMC13483317",
       "title": "MATRIX: Rapid Quantification of Total and Active Microbial Cells with Single-Cell Phenotypes for Environmental Microbiomes",
       "journal": "mSystems",
-      "year": 2026,
-      "doi": "10.1128/msystems.00308-26",
+      "year": 2025,
+      "doi": "",
       "authors": "",
       "citedByCount": 0,
       "pair_id": "PAIR_18",
@@ -412,18 +1165,59 @@
       "published_bytes": 52267,
       "preprint_anon_id": "PR_W2_17",
       "preprint_wave": 2,
-      "preprint_bytes": 36583
+      "preprint_bytes": 36583,
+      "ppr_posted_date": "2026-03-18",
+      "ppr_version": 1,
+      "journal_received_date": "2026-03-13",
+      "journal_accepted_date": "2026-06-22",
+      "journal_published_date": "2026-07-15",
+      "days_ppr_minus_received": 5,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "No Data Availability section in preprint <back> (SRR accessions in <back> were inside reference list citations); \u0394Repro = 0.0.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 7.8,
+        "core_8": 6.0,
+        "core_scaled_10": 7.5,
+        "rigor": 2.5,
+        "claims": 2.0,
+        "biology": 1.5,
+        "reproducibility": 1.8
+      },
+      "published_scores": {
+        "total_10": 7.9,
+        "core_8": 6.1,
+        "core_scaled_10": 7.625,
+        "rigor": 2.6,
+        "claims": 2.0,
+        "biology": 1.5,
+        "reproducibility": 1.8
+      },
+      "deltas": {
+        "total_10": 0.1,
+        "core_8": 0.1,
+        "core_scaled_10": 0.125,
+        "rigor": 0.1,
+        "claims": 0.0,
+        "biology": 0.0,
+        "reproducibility": 0.0,
+        "total_with_zero_back_repro": 0.1,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1230726",
       "ppr_doi": "",
       "ppr_year": 2025,
-      "pmid": "42564585",
+      "pmid": "40893512",
       "pmcid": "PMC13444607",
       "title": "A single-cell transcriptomic atlas of peripheral blood immune cells spanning progressive canine leishmaniosis",
       "journal": "iScience",
-      "year": 2026,
-      "doi": "10.1016/j.isci.2026.116870",
+      "year": 2025,
+      "doi": "",
       "authors": "",
       "citedByCount": 0,
       "pair_id": "PAIR_19",
@@ -435,18 +1229,61 @@
       "preprint_bytes": 57558,
       "published_anon_id": "PR_W2_07",
       "published_wave": 2,
-      "published_bytes": 69431
+      "published_bytes": 69431,
+      "ppr_posted_date": "2025-12-21",
+      "ppr_version": 1,
+      "journal_received_date": "2025-12-18",
+      "journal_accepted_date": "2026-07-05",
+      "journal_published_date": "2026-07-24",
+      "days_ppr_minus_received": 3,
+      "preprint_timing_class": "co_submission",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [
+        "Public release of previously private GitHub repository and GEO GSE313451"
+      ],
+      "back_da_note": "Correction to Issue #2: GSE313451 and Resource Availability WERE in preprint <body> (STAR Methods) and preserved in wave1_papers/PR_W1_16.md (lines 255-270) and cited in review PR_W1_16.md (line 74). Preprint <back> had zero Data Availability section; \u0394Repro (+0.5) reflected public release of a private GitHub repo at publication.",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 5.8,
+        "core_8": 4.5,
+        "core_scaled_10": 5.625,
+        "rigor": 1.5,
+        "claims": 1.5,
+        "biology": 1.5,
+        "reproducibility": 1.3
+      },
+      "published_scores": {
+        "total_10": 6.5,
+        "core_8": 4.7,
+        "core_scaled_10": 5.875,
+        "rigor": 1.7,
+        "claims": 1.5,
+        "biology": 1.5,
+        "reproducibility": 1.8
+      },
+      "deltas": {
+        "total_10": 0.7,
+        "core_8": 0.2,
+        "core_scaled_10": 0.25,
+        "rigor": 0.2,
+        "claims": 0.0,
+        "biology": 0.0,
+        "reproducibility": 0.5,
+        "total_with_zero_back_repro": 0.7,
+        "exceeds_single_run_mdc95_total": false
+      }
     },
     {
       "ppr_id": "PPR1231219",
       "ppr_doi": "",
       "ppr_year": 2025,
-      "pmid": "41526985",
+      "pmid": "39934812",
       "pmcid": "PMC12888548",
       "title": "Microsatellite Analysis of Genetic Differentiation Among Populations of the Malaria Vector, Anopheles funestus , across Mainland Tanzania Reveals Contrasted Patterns of Geographic Isolation and Gene Flow",
       "journal": "Parasites & vectors",
-      "year": 2026,
-      "doi": "10.1186/s13071-025-07080-8",
+      "year": 2025,
+      "doi": "",
       "authors": "",
       "citedByCount": 0,
       "pair_id": "PAIR_20",
@@ -458,7 +1295,48 @@
       "published_bytes": 37787,
       "preprint_anon_id": "PR_W2_01",
       "preprint_wave": 2,
-      "preprint_bytes": 31540
+      "preprint_bytes": 31540,
+      "ppr_posted_date": "2025-12-16",
+      "ppr_version": 1,
+      "journal_received_date": "2025-03-06",
+      "journal_accepted_date": "2025-09-24",
+      "journal_published_date": "2026-01-12",
+      "days_ppr_minus_received": 285,
+      "preprint_timing_class": "post_acceptance",
+      "has_back_only_accessions": false,
+      "back_only_accessions": [],
+      "genuinely_added_accessions_in_pub": [],
+      "back_da_note": "Preprint <back> only stated 'All data supporting the conclusions of this article are provided within the text'. Preprint (DOI 10.64898/2025.12.12.693860) was posted on 2025-12-16, after journal acceptance (2025-09-24) and before publication (2026-01-12); \u0394Total = +0.7 (within single-run MDC95 = 1.28).",
+      "sub_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_scores": {
+        "total_10": 4.9,
+        "core_8": 4.0,
+        "core_scaled_10": 5.0,
+        "rigor": 1.5,
+        "claims": 1.3,
+        "biology": 1.2,
+        "reproducibility": 0.9
+      },
+      "published_scores": {
+        "total_10": 5.6,
+        "core_8": 4.5,
+        "core_scaled_10": 5.625,
+        "rigor": 1.6,
+        "claims": 1.5,
+        "biology": 1.4,
+        "reproducibility": 1.1
+      },
+      "deltas": {
+        "total_10": 0.7,
+        "core_8": 0.5,
+        "core_scaled_10": 0.625,
+        "rigor": 0.1,
+        "claims": 0.2,
+        "biology": 0.2,
+        "reproducibility": 0.2,
+        "total_with_zero_back_repro": 0.7,
+        "exceeds_single_run_mdc95_total": false
+      }
     }
   ],
   "wave1_map": {

@@ -8,25 +8,38 @@ To quantify how much of an agentic forensic peer review's quantitative score ($S
    * **Cohort B (Validated Benchmark Controls, $n = 10$):** 2 manuscripts randomly sampled from each of the 5 domains.
    * **Cohort C (Random Wild Literature, $n = 10$):** 2 manuscripts randomly sampled from each of the 5 domains.
 2. **Independent Re-Anonymization & Context Isolation ($K = 3$ Replicates per Manuscript):**
-   * **Run 1 (`ANON_XX`):** Original blinded audit from the 200-paper study.
-   * **Run 2 (`REP2_01`–`REP2_30`):** Freshly shuffled manuscript IDs (`seed = 1002`), audited by 3 isolated `anon-reviewer` subagents with zero access to Run 1 or external metadata.
-   * **Run 3 (`REP3_01`–`REP3_30`):** Independently re-shuffled manuscript IDs (`seed = 1003`), audited by 3 new isolated `anon-reviewer` subagents.
+   * **Run 1 ([`calibration/reviews_anon/`](calibration/reviews_anon/)):** Original blinded audit from the 200-paper study.
+   * **Run 2 ([`repeatability/run2_reviews/REP2_01.md`–`REP2_30.md`](repeatability/run2_reviews/)):** Freshly shuffled manuscript IDs (`seed = 1002`), audited by 3 isolated `anon-reviewer` subagents with zero access to Run 1 or external metadata.
+   * **Run 3 ([`repeatability/run3_reviews/REP3_01.md`–`REP3_30.md`](repeatability/run3_reviews/)):** Independently re-shuffled manuscript IDs (`seed = 1003`), audited by 3 new isolated `anon-reviewer` subagents.
+   * **Committed Data & Verification:** Full per-run overall and sub-scores are committed in [`repeatability/repeatability_results.json`](repeatability/repeatability_results.json) (with mapping in [`repeatability/manifest.json`](repeatability/manifest.json) and input SHA-256 hashes in [`repeatability/scrubbed_inputs_sha256.json`](repeatability/scrubbed_inputs_sha256.json)), and are deterministically verified by [`scripts/verify_repeatability_and_calibration.py`](scripts/verify_repeatability_and_calibration.py).
 
 ---
 
-## 2. Quantitative Repeatability Metrics ($\text{ICC}$, Pairwise $r$, and Deviation)
+## 2. Per-Cohort & Pooled Quantitative Repeatability ($\text{ICC}$, $\kappa$, and $\text{SD}_w$)
 
-| Metric | Single-Run $\text{ICC}(2,1)$ (Absolute Agreement) | Single-Run $\text{ICC}(3,1)$ (Consistency) | 3-Run Ensemble $\text{ICC}(2,3)$ | Residual $\text{SD}_w = \sqrt{\text{MS}_E}$ | Mean Pairwise $\|\Delta S\|$ | Pairwise Pearson $r_{12} / r_{13} / r_{23}$ |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Overall Score (`/10.0`)** | **0.9671** | **0.9691** | **0.9888** | **0.46 pts** | **0.49 pts** | `0.979 / 0.968 / 0.964` |
-| **Rigor (`/3.5`)** | **0.9692** | **0.9727** | **0.9895** | **0.17 pts** | **0.18 pts** | `0.986 / 0.973 / 0.965` |
-| **Claims (`/2.5`)** | **0.9585** | **0.9616** | **0.9858** | **0.14 pts** | **0.15 pts** | `0.975 / 0.959 / 0.964` |
-| **Biology (`/2.0`)** | **0.9544** | **0.9538** | **0.9843** | **0.11 pts** | **0.10 pts** | `0.962 / 0.946 / 0.957` |
-| **Reproducibility (`/2.0`)** | **0.9139** | **0.9221** | **0.9696** | **0.11 pts** | **0.13 pts** | `0.934 / 0.937 / 0.897` |
+Because pooling extreme ground-truth cohorts (`Cohort A` mean `3.79` vs. `Cohort B` mean `8.92`) increases total between-paper variance ($\text{MS}_B = 20.14$ pooled vs. $7.15$ in `Cohort C`), **within-cohort reliability in uncurated `Cohort C` ($\text{ICC}(2,1) = 0.858$, $\text{ICC}(2,3) = 0.948$) is the appropriate headline reliability metric for wild-literature screening**:
 
-### Key Takeaways on Continuous Scores
-* **High Single-Run Reliability ($\text{ICC}(2,1) = 0.967$):** By comparison, human peer review inter-rater reliability in biomedical and computer science venues (e.g., NeurIPS consistency experiments, NIH study section audits, and *BMJ*/*JAMA* multi-reviewer studies) typically ranges from $\text{ICC} = 0.20$ to $0.45$. A single blinded `anon-reviewer` pass achieves $\text{ICC}(2,1) = 0.967$ with a within-paper standard deviation of **$0.46$ points** on a 10-point scale.
-* **Sub-Score Stability:** `Methodological & Statistical Rigor` ($\text{ICC}(2,1) = 0.969$) and `Claim-to-Evidence Alignment` ($\text{ICC}(2,1) = 0.959$) are the most repeatable sub-scores.
+| Cohort Stratum | $n \times K$ | Between-Paper $\text{MS}_B$ | Single-Run $\text{ICC}(2,1)$ | Single-Run $\text{ICC}(3,1)$ | 3-Run Ensemble $\text{ICC}(2,3)$ | Residual $\text{SD}_e$ ($\text{Mean SD}_i$) | `< 5.0` Unanimous (`Fleiss' κ`) | `< 6.0` Unanimous (`Fleiss' κ`) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Cohort C (Uncurated Wild Literature — Headline for Wild Screening)** | `10 × 3` | `7.15` | **0.8583** | **0.8502** | **0.9479** | `0.63 pts` (`0.52 pts`) | **80.0%** (`8/10`, $\kappa = 0.729$) | **80.0%** (`8/10`, $\kappa = 0.659$) |
+| **Cohort A (Known Flawed / Retracted)** | `10 × 3` | `7.94` | **0.9200** | **0.9330** | **0.9718** | `0.43 pts` (`0.38 pts`) | **90.0%** (`9/10`, $\kappa = 0.712$) | **100.0%** (`10/10`, $\kappa = 1.000$) |
+| **Cohort B (Validated Controls)** | `10 × 3` | `1.62` | **0.8636** | **0.8997** | **0.9500** | `0.24 pts` (`0.25 pts`) | **100.0%** (`10/10`, $\kappa = 1.000$) | **100.0%** (`10/10`, $\kappa = 1.000$) |
+| **Pooled Stratified Sample ($N = 30$)** | `30 × 3` | `20.14` | **0.9671** | **0.9691** | **0.9888** | `0.46 pts` (`0.38 pts`) | **90.0%** (`27/30`, $\kappa = 0.864$) | **93.3%** (`28/30`, $\kappa = 0.910$) |
+
+### Sub-Score Repeatability (Pooled $N=30$ vs. Uncurated Cohort C $n=10$)
+
+| Sub-Score Dimension | Pooled $\text{ICC}(2,1)$ | Pooled $\text{ICC}(3,1)$ | Pooled $\text{ICC}(2,3)$ | Pooled $\text{SD}_e$ (`Mean \|ΔS\|`) | Cohort C $\text{ICC}(2,1)$ | Cohort C $\text{ICC}(2,3)$ | Cohort C $\text{SD}_e$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Overall Score (`/10.0`)** | **0.9671** | **0.9691** | **0.9888** | **0.46 pts** (`0.49 pts`) | **0.8583** | **0.9479** | **0.63 pts** |
+| **Rigor (`/3.5`)** | **0.9692** | **0.9727** | **0.9895** | **0.17 pts** (`0.18 pts`) | **0.8439** | **0.9419** | **0.25 pts** |
+| **Claims (`/2.5`)** | **0.9585** | **0.9616** | **0.9858** | **0.14 pts** (`0.15 pts`) | **0.8467** | **0.9431** | **0.18 pts** |
+| **Biology (`/2.0`)** | **0.9544** | **0.9538** | **0.9843** | **0.11 pts** (`0.10 pts`) | **0.8014** | **0.9237** | **0.14 pts** |
+| **Reproducibility (`/2.0`)** | **0.9139** | **0.9221** | **0.9696** | **0.11 pts** (`0.13 pts`) | **0.8383** | **0.9396** | **0.14 pts** |
+
+### Key Takeaways on Continuous Scores & Construct Interpretation
+* **Within-Cohort Wild Reliability ($\text{ICC}(2,1) = 0.858$, $\text{ICC}(2,3) = 0.948$) vs. Pooled Reliability ($\text{ICC}(2,1) = 0.967$):** Within uncurated wild papers (`Cohort C`), a single blinded pass achieves $\text{ICC}(2,1) = 0.858$ and a 3-run ensemble achieves $\text{ICC}(2,3) = 0.948$. Note that our $\text{ICC}(2,1)$ measures **intra-model test–retest reliability across independently shuffled, context-isolated agentic executions** (quantifying LLM decoding and reasoning-path variance), which is a different construct from **human inter-rater reliability across distinct human referees** ($\text{ICC} \approx 0.20\text{--}0.45$ in NeurIPS, NIH study section, and biomedical multi-reviewer studies). Even within Cohort C ($\text{ICC}(2,1) = 0.858$), single-pass score variance ($\text{SD}_e = 0.63\text{ pts}$ on a 10-point scale; mean per-paper $\text{SD} = 0.52\text{ pts}$) is small relative to the $\sim 4.2$-point separation between valid and invalid cohorts.
+* **Wave-Effect ANOVA Audit:** Two-way ANOVA across the 3 waves shows a modest borderline wave shift pooled across all 30 papers (`Run 1 = 5.77`, `Run 2 = 5.85`, `Run 3 = 6.05`; $F(2,58) = 3.02, p = 0.057$), driven by Cohort B controls shifting from `8.72` in Run 1 to `9.02` in Runs 2–3 ($F(2,18) = 5.16, p = 0.017$), whereas **Cohort C shows zero wave effect** (`4.98`, `4.84`, `5.08`; $F(2,18) = 0.37, p = 0.69$).
+* **Sub-Score Stability:** `Methodological & Statistical Rigor` ($\text{ICC}(2,1) = 0.969$ pooled, $0.844$ in Cohort C) and `Claim-to-Evidence Alignment` ($\text{ICC}(2,1) = 0.959$ pooled, $0.847$ in Cohort C) are the most repeatable sub-scores.
 
 ---
 

@@ -11,7 +11,7 @@
   "cohort": "A",
   "cohort_id": "A09",
   "anon_id": "ANON_13",
-  "domain": "Viral Epidemiology",
+  "domain": "Viral Evolution",
   "reviewed_at": "2026-10-27T21:35:00-04:00",
   "issue_number": null,
   "scores": {
@@ -21,5 +21,7 @@
     "reproducibility": 0.6,
     "overall": 1.6
   },
-  "tier": "Fundamentally Invalid"
+  "tier": "Fundamentally Invalid",
+  "model": "gemini-3.1-pro",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
 }

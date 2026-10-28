@@ -3,8 +3,11 @@
 **Manuscript Title:** Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy  
 **Authors:** Antonella Amendola, Marta Canuti, Silvia Bianchi, Sudhir Kumar, Clara Fappani, Maria Gori, Daniela Colzani, Sergei L. Kosakovsky Pond, Sayaka Miura, Melissa Baggieri, Antonella Marchi, Elisa Borghi, Gianvincenzo Zuccotti, Mario C. Raviglione, Fabio Magurano, Elisabetta Tanzi  
 **Journal / Preprint:** *Environmental Research* (2022, Vol. 215, Pt 1, 113979; `PMID:36029839` / `PMC9404229` / `10.1016/j.envres.2022.113979`)  
-**Overall Score:** **4.1 / 10.0** (Flawed / Overstated)  
-* **Score Breakdown:** Rigor: 1.2/3.5 | Claims: 0.8/2.5 | Biology: 0.7/2.0 | Reproducibility: 1.4/2.0
+**Calibration Study Cohort:** Cohort A — Known Invalid / Refuted (`A01` | Double-Blinded as `ANON_37`)  
+**Overall Score:** **2.5 / 10.0** (Fundamentally Invalid — Blinded Calibration Score; Initial Unblinded Pilot Score: **4.1 / 10.0**, Flawed / Overstated)  
+* **Blinded Score Breakdown (`ANON_37`):** Rigor: 0.5/3.5 | Claims: 0.4/2.5 | Biology: 0.5/2.0 | Reproducibility: 1.1/2.0  
+* **Initial Unblinded Pilot Score Breakdown:** Rigor: 1.2/3.5 | Claims: 0.8/2.5 | Biology: 0.7/2.0 | Reproducibility: 1.4/2.0  
+> **Provenance Note ([Issue #9](https://github.com/spond/gemini-reviews/issues/9)):** This entry was one of the two initial pre-protocol unblinded pilot reviews (`4.1 / 10.0`) before the $N=200$ double-blinded calibration study (`calibration/reviews_anon/ANON_37.md`, where it scored `2.5 / 10.0`). To maintain a single canonical score source across `index.json` and `calibration/results_200.json`, the metadata and header now report the blinded calibration score (`2.5 / 10.0`) alongside the initial unblinded pilot score (`4.1 / 10.0`).
 
 ---
 

@@ -23,6 +23,8 @@
       "overall": 9.8
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6697540-de-human-placenta-has-no-microbiome/review.md"
   },
   {
@@ -49,6 +51,8 @@
       "overall": 9.5
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8479118-squair-confronting-false-discoveries-in-single/review.md"
   },
   {
@@ -75,6 +79,8 @@
       "overall": 9.4
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2015/pmc4495769-bulik-ld-score-regression-distinguishes-confounding/review.md"
   },
   {
@@ -101,6 +107,8 @@
       "overall": 9.4
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2015/pmc4636487-guinney-the-consensus-molecular-subtypes-of/review.md"
   },
   {
@@ -127,6 +135,8 @@
       "overall": 9.4
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7418704-starr-deep-mutational-scanning-of-sars/review.md"
   },
   {
@@ -153,6 +163,8 @@
       "overall": 9.4
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9110300-howe-within-sibship-genome-wide-association/review.md"
   },
   {
@@ -168,7 +180,7 @@
     "cohort": "B",
     "cohort_id": "B16",
     "anon_id": "ANON_15",
-    "domain": "Cancer Microbiome",
+    "domain": "Cancer & Microbiome",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -179,6 +191,8 @@
       "overall": 9.4
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10653788-gihawi-major-data-analysis-errors-invalidate/review.md"
   },
   {
@@ -205,6 +219,8 @@
       "overall": 9.3
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2016/pmc4917942-lauder-comparison-of-placenta-samples-with/review.md"
   },
   {
@@ -231,6 +247,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4431643-gire-genomic-surveillance-elucidates-ebola-virus/review.md"
   },
   {
@@ -257,6 +275,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2016/pmc4869911-enard-viruses-are-a-dominant-driver/review.md"
   },
   {
@@ -272,7 +292,7 @@
     "cohort": "B",
     "cohort_id": "B18",
     "anon_id": "ANON_34",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -283,6 +303,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6428572-berg-reduced-signal-for-polygenic-adaptation/review.md"
   },
   {
@@ -309,6 +331,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9314448-dukler-extreme-purifying-selection-against-point/review.md"
   },
   {
@@ -335,6 +359,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9605867-yengo-a-saturated-map-of-common/review.md"
   },
   {
@@ -361,6 +387,8 @@
       "overall": 9.2
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10506532-bloom-fitness-effects-of-mutations-to/review.md"
   },
   {
@@ -387,6 +415,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2012/pmc3395634-murrell-detecting-individual-sites-subject-to/review.md"
   },
   {
@@ -402,7 +432,7 @@
     "cohort": "A",
     "cohort_id": "A24",
     "anon_id": "ANON_20",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -413,6 +443,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4125079-berg-a-population-genetic-signal-of/review.md"
   },
   {
@@ -439,6 +471,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4228153-salter-reagent-and-laboratory-contamination-can/review.md"
   },
   {
@@ -465,6 +499,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2015/pmc4499780-bedford-global-circulation-patterns-of-seasonal/review.md"
   },
   {
@@ -491,6 +527,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2016/pmc4878611-schurch-how-many-biological-replicates-are/review.md"
   },
   {
@@ -506,7 +544,7 @@
     "cohort": "B",
     "cohort_id": "B17",
     "anon_id": "ANON_33",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -517,6 +555,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6428571-sohail-polygenic-adaptation-on-height-is/review.md"
   },
   {
@@ -543,6 +583,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc7984229-wirbel-meta-analysis-of-fecal-metagenomes/review.md"
   },
   {
@@ -569,6 +611,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc9533319-thomas-metagenomic-analysis-of-colorectal-cancer/review.md"
   },
   {
@@ -584,7 +628,7 @@
     "cohort": "B",
     "cohort_id": "B10",
     "anon_id": "ANON_40",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -595,6 +639,8 @@
       "overall": 9.1
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7721162-turakhia-stability-of-sars-cov-2/review.md"
   },
   {
@@ -621,6 +667,8 @@
       "overall": 9.0
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2017/pmc5536180-grubaugh-genomic-epidemiology-reveals-multiple-introductions/review.md"
   },
   {
@@ -647,6 +695,8 @@
       "overall": 9.0
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2017/pmc5878932-puram-single-cell-transcriptomic-analysis-of/review.md"
   },
   {
@@ -673,6 +723,8 @@
       "overall": 9.0
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7810038-worobey-the-emergence-of-sars-cov/review.md"
   },
   {
@@ -699,6 +751,8 @@
       "overall": 9.0
     },
     "tier": "Exemplary",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc10431346-neher-contributions-of-adaptation-and-purifying/review.md"
   },
   {
@@ -714,7 +768,7 @@
     "cohort": "B",
     "cohort_id": "B11",
     "anon_id": "ANON_49",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -725,6 +779,8 @@
       "overall": 8.9
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8128288-davies-estimated-transmissibility-and-impact-of/review.md"
   },
   {
@@ -751,6 +807,8 @@
       "overall": 8.9
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc12129310-kistler-an-atlas-of-continuous-adaptive/review.md"
   },
   {
@@ -766,7 +824,7 @@
     "cohort": "B",
     "cohort_id": "B24",
     "anon_id": "ANON_23",
-    "domain": "Transcriptomics / Stats",
+    "domain": "Transcriptomics & CompBio",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -777,6 +835,8 @@
       "overall": 8.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4302049-love-moderated-estimation-of-fold-change/review.md"
   },
   {
@@ -792,7 +852,7 @@
     "cohort": "B",
     "cohort_id": "B37",
     "anon_id": "ANON_145",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -803,6 +863,8 @@
       "overall": 8.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2015/pmc4918750-mathieson-genome-wide-patterns-of-selection/review.md"
   },
   {
@@ -829,6 +891,8 @@
       "overall": 8.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2017/pmc5712493-dudas-virus-genomes-reveal-factors-that/review.md"
   },
   {
@@ -855,6 +919,8 @@
       "overall": 8.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10513199-le-adaptive-evolution-in-virulence-effectors/review.md"
   },
   {
@@ -881,6 +947,8 @@
       "overall": 8.6
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4299606-zeller-potential-of-fecal-microbiota-for/review.md"
   },
   {
@@ -907,6 +975,8 @@
       "overall": 8.6
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2015/pmc4408417-murrell-gene-wide-identification-of-episodic/review.md"
   },
   {
@@ -933,6 +1003,8 @@
       "overall": 8.6
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2016/pmc4944528-tirosh-dissecting-the-multicellular-ecosystem-of/review.md"
   },
   {
@@ -959,29 +1031,9 @@
       "overall": 8.6
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7332439-korber-tracking-changes-in-sars-cov/review.md"
-  },
-  {
-    "id": "PMC8421097",
-    "pmid": "34537136",
-    "doi": "10.1016/j.cell.2021.09.003",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8421097/",
-    "title": "The emergence and ongoing convergent evolution of the SARS-CoV-2 N501Y lineages",
-    "authors": "Darren P. Martin, Steven Weaver, Houriiyah Tegally, James Emmanuel San, Stephen D. Shank, Eduan Wilkinson, Alexander G. Lucaci, Jennifer Giandhari, Sureshnee Naidoo, Yeshnee Pillay, Lavanya Singh, Richard J. Lessells, Ravindra K. Gupta, Joel O. Wertheim, Anton Nekrutenko, Ben Murrell, Gordon W. Harkins, Philippe Lemey, Oscar A. MacLean, David L. Robertson, Tulio de Oliveira, Sergei L. Kosakovsky Pond",
-    "authors_short": "Martin, Weaver et al. (de Oliveira, Pond)",
-    "venue": "Cell (2021)",
-    "year": 2021,
-    "reviewed_at": "2026-10-25T20:35:00-04:00",
-    "issue_number": null,
-    "scores": {
-      "rigor": 3.1,
-      "claims": 2.0,
-      "biology": 1.7,
-      "reproducibility": 1.8,
-      "overall": 8.6
-    },
-    "tier": "Strong / Sound",
-    "review_path": "reviews/2021/pmc8421097-martin-n501y-convergent-evolution/review.md"
   },
   {
     "id": "PMC6128408",
@@ -1007,6 +1059,8 @@
       "overall": 8.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2018/pmc6128408-khera-genome-wide-polygenic-scores-for/review.md"
   },
   {
@@ -1022,7 +1076,7 @@
     "cohort": "B",
     "cohort_id": "B07",
     "anon_id": "ANON_41",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1033,6 +1087,8 @@
       "overall": 8.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9348750-worobey-the-huanan-seafood-wholesale-market/review.md"
   },
   {
@@ -1059,6 +1115,8 @@
       "overall": 8.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9348752-pekar-the-molecular-epidemiology-of-multiple/review.md"
   },
   {
@@ -1085,6 +1143,8 @@
       "overall": 8.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11040004-afonin-blastocrithidia-nonstop-mitochondrial-genome-and/review.md"
   },
   {
@@ -1100,7 +1160,7 @@
     "cohort": "B",
     "cohort_id": "B09",
     "anon_id": "ANON_29",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1111,6 +1171,8 @@
       "overall": 8.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7610519-rambaut-a-dynamic-nomenclature-proposal-for/review.md"
   },
   {
@@ -1137,6 +1199,8 @@
       "overall": 8.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7990310-maclean-natural-selection-in-the-evolution/review.md"
   },
   {
@@ -1163,6 +1227,8 @@
       "overall": 8.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2011/pmc3106319-markova-high-sensitivity-to-aligner-and/review.md"
   },
   {
@@ -1189,6 +1255,8 @@
       "overall": 8.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7182206-minh-iq-tree-2-new-models/review.md"
   },
   {
@@ -1204,7 +1272,7 @@
     "cohort": "B",
     "cohort_id": "B12",
     "anon_id": "ANON_32",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1215,7 +1283,48 @@
       "overall": 8.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8139423-faria-genomics-and-epidemiology-of-the/review.md"
+  },
+  {
+    "id": "PMC8421097",
+    "pmid": "34537136",
+    "pmcid": "PMC8421097",
+    "doi": "10.1016/j.cell.2021.09.003",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8421097/",
+    "title": "The emergence and ongoing convergent evolution of the SARS-CoV-2 N501Y lineages",
+    "authors": "Darren P. Martin, Steven Weaver, Houriiyah Tegally, James Emmanuel San, Stephen D. Shank, Eduan Wilkinson, Alexander G. Lucaci, Jennifer Giandhari, Sureshnee Naidoo, Yeshnee Pillay, Lavanya Singh, Richard J. Lessells, Ravindra K. Gupta, Joel O. Wertheim, Anton Nekrutenko, Ben Murrell, Gordon W. Harkins, Philippe Lemey, Oscar A. MacLean, David L. Robertson, Tulio de Oliveira, Sergei L. Kosakovsky Pond",
+    "authors_short": "Martin, Weaver et al. (de Oliveira, Pond)",
+    "venue": "Cell (2021)",
+    "year": 2021,
+    "cohort": "B",
+    "cohort_id": "B01",
+    "anon_id": "ANON_18",
+    "domain": "Viral Evolution",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
+    "reviewed_at": "2026-10-27T21:35:00-04:00",
+    "issue_number": null,
+    "blinded_score": 8.3,
+    "identified_score": 8.6,
+    "score": 8.3,
+    "scores": {
+      "rigor": 2.7,
+      "claims": 2.0,
+      "biology": 1.8,
+      "reproducibility": 1.8,
+      "overall": 8.3
+    },
+    "identified_scores": {
+      "rigor": 3.1,
+      "claims": 2.0,
+      "biology": 1.7,
+      "reproducibility": 1.8,
+      "overall": 8.6
+    },
+    "tier": "Strong / Sound",
+    "review_path": "reviews/2021/pmc8421097-martin-n501y-convergent-evolution/review.md"
   },
   {
     "id": "PMC11333990",
@@ -1241,6 +1350,8 @@
       "overall": 8.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc11333990-kennedy-questioning-the-fetal-microbiome-illustrates/review.md"
   },
   {
@@ -1267,6 +1378,8 @@
       "overall": 8.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12120081-jee-genome-wide-association-studies-in/review.md"
   },
   {
@@ -1293,6 +1406,8 @@
       "overall": 8.2
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12313522-jian-viral-evolution-prediction-identifies-broadly/review.md"
   },
   {
@@ -1308,7 +1423,7 @@
     "cohort": "A",
     "cohort_id": "A11",
     "anon_id": "ANON_14",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1319,6 +1434,8 @@
       "overall": 8.1
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2016/pmc5182071-field-detection-of-human-adaptation-during/review.md"
   },
   {
@@ -1345,6 +1462,8 @@
       "overall": 8.1
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc8204705-kosakovsky-hyphy-2-5-a-customizable/review.md"
   },
   {
@@ -1371,6 +1490,8 @@
       "overall": 8.1
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11783303-nandakumar-positive-selection-on-mammalian-immune/review.md"
   },
   {
@@ -1397,6 +1518,8 @@
       "overall": 8.0
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11291933-essex-gut-microbiota-dysbiosis-is-associated/review.md"
   },
   {
@@ -1423,6 +1546,8 @@
       "overall": 8.0
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11410272-thompson-a-systematic-evaluation-of-the/review.md"
   },
   {
@@ -1449,6 +1574,8 @@
       "overall": 8.0
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12260425-cope-macroevolutionary-changes-in-natural-selection/review.md"
   },
   {
@@ -1475,6 +1602,8 @@
       "overall": 7.9
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc8942855-viana-rapid-epidemic-expansion-of-the/review.md"
   },
   {
@@ -1501,6 +1630,8 @@
       "overall": 7.9
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11974051-ivich-missing-cell-types-in-single/review.md"
   },
   {
@@ -1516,7 +1647,7 @@
     "cohort": "B",
     "cohort_id": "B23",
     "anon_id": "ANON_42",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1527,6 +1658,8 @@
       "overall": 7.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2018/pmc6247931-hadfield-nextstrain-real-time-tracking-of/review.md"
   },
   {
@@ -1553,6 +1686,8 @@
       "overall": 7.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6852897-black-genomic-epidemiology-supports-multiple-introductions/review.md"
   },
   {
@@ -1579,6 +1714,8 @@
       "overall": 7.8
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7859469-sallard-tracing-the-origins-of-sars/review.md"
   },
   {
@@ -1605,6 +1742,8 @@
       "overall": 7.7
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7542952-chu-the-seattle-flu-study-a/review.md"
   },
   {
@@ -1631,6 +1770,8 @@
       "overall": 7.7
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11305400-erdelyan-multiple-transatlantic-incursions-of-highly/review.md"
   },
   {
@@ -1657,6 +1798,8 @@
       "overall": 7.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7682340-epstein-nipah-virus-dynamics-in-bats/review.md"
   },
   {
@@ -1683,6 +1826,8 @@
       "overall": 7.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7854630-zimmerman-a-practical-solution-to-pseudoreplication/review.md"
   },
   {
@@ -1709,6 +1854,8 @@
       "overall": 7.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10448532-sandberg-adaptive-evolution-of-a-minimal/review.md"
   },
   {
@@ -1735,18 +1882,26 @@
       "overall": 7.5
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc10730209-abu-opioid-induced-dysbiosis-of-maternal/review.md"
   },
   {
     "id": "PMC7523107",
+    "pmcid": "PMC7523107",
     "doi": "10.1101/2020.09.24.311845",
     "published_doi": "10.1093/molbev/msab118",
+    "published_pmcid": "PMC8135569",
+    "related_cohort_id": "A26",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7523107/",
     "title": "An evolutionary portrait of the progenitor SARS-CoV-2 and its dominant offshoots in COVID-19 pandemic",
     "authors": "Sudhir Kumar, Qiqing Tao, Steven Weaver, Maxwell Sanderford, Marcos A. Caraballo-Ortiz, Sudip Sharma, Sergei L. K. Pond, Sayaka Miura",
     "authors_short": "Kumar et al. (Pond, Miura)",
     "venue": "bioRxiv / Mol Biol Evol (2021)",
     "year": 2021,
+    "domain": "Viral Evolution",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "reviewed_at": "2026-10-25T20:34:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1783,6 +1938,8 @@
       "overall": 7.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2007/pmc1863478-bakewell-more-genes-underwent-positive-selection/review.md"
   },
   {
@@ -1798,7 +1955,7 @@
     "cohort": "A",
     "cohort_id": "A23",
     "anon_id": "ANON_03",
-    "domain": "Population Genomics",
+    "domain": "Statistical Genetics",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1809,6 +1966,8 @@
       "overall": 7.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2012/pmc3480734-turchin-evidence-of-widespread-selection-on/review.md"
   },
   {
@@ -1835,6 +1994,8 @@
       "overall": 7.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7815831-alteri-genomic-epidemiology-of-sars-cov/review.md"
   },
   {
@@ -1861,6 +2022,8 @@
       "overall": 7.4
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11545642-lyu-deciphering-the-complex-organelle-genomes/review.md"
   },
   {
@@ -1887,6 +2050,8 @@
       "overall": 7.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc8110246-rackaityte-viable-bacterial-colonization-is-highly/review.md"
   },
   {
@@ -1902,7 +2067,7 @@
     "cohort": "A",
     "cohort_id": "A42",
     "anon_id": "ANON_139",
-    "domain": "Epidemiology / Stats",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1913,6 +2078,8 @@
       "overall": 7.3
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9488757-ledesma-spurious-early-ecological-association-suggesting/review.md"
   },
   {
@@ -1928,7 +2095,7 @@
     "cohort": "A",
     "cohort_id": "A19",
     "anon_id": "ANON_06",
-    "domain": "Cancer Microbiome",
+    "domain": "Cancer & Microbiome",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -1939,6 +2106,8 @@
       "overall": 7.2
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7757858-nejman-the-human-tumor-microbiome-is/review.md"
   },
   {
@@ -1965,6 +2134,8 @@
       "overall": 7.2
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9161372-obermeyer-analysis-of-6-4-million/review.md"
   },
   {
@@ -1991,6 +2162,8 @@
       "overall": 7.2
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc7617604-mchugh-assessment-of-a-polygenic-risk/review.md"
   },
   {
@@ -2017,6 +2190,8 @@
       "overall": 7.1
     },
     "tier": "Strong / Sound",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10617345-amman-micro-global-positioning-systems-for/review.md"
   },
   {
@@ -2043,6 +2218,8 @@
       "overall": 6.8
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7857414-popa-genomic-epidemiology-of-superspreading-events/review.md"
   },
   {
@@ -2069,6 +2246,8 @@
       "overall": 6.8
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12625292-cherian-modelling-a-potential-zoonotic-spillover/review.md"
   },
   {
@@ -2095,6 +2274,8 @@
       "overall": 6.7
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7077245-gralinski-return-of-the-coronavirus-2019/review.md"
   },
   {
@@ -2121,6 +2302,8 @@
       "overall": 6.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7199730-van-emergence-of-genomic-diversity-and/review.md"
   },
   {
@@ -2147,6 +2330,8 @@
       "overall": 6.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc10864389-jung-integration-of-risk-factor-polygenic/review.md"
   },
   {
@@ -2173,6 +2358,8 @@
       "overall": 6.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12647882-wang-single-cell-and-spatial-transcriptomics/review.md"
   },
   {
@@ -2199,6 +2386,8 @@
       "overall": 6.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2018/pmc5827966-gopalakrishnan-gut-microbiome-modulates-response-to/review.md"
   },
   {
@@ -2225,6 +2414,8 @@
       "overall": 6.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc9829393-hu-the-complex-genome-and-adaptive/review.md"
   },
   {
@@ -2251,6 +2442,8 @@
       "overall": 6.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11431564-forni-positive-selection-drives-the-evolution/review.md"
   },
   {
@@ -2277,6 +2470,8 @@
       "overall": 6.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12128320-baneh-genome-wide-association-studies-and/review.md"
   },
   {
@@ -2303,6 +2498,8 @@
       "overall": 6.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12413070-margiotta-gut-microbiota-dysbiosis-affects-intestinal/review.md"
   },
   {
@@ -2329,6 +2526,8 @@
       "overall": 6.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2018/pmc6707353-matson-the-commensal-microbiome-is-associated/review.md"
   },
   {
@@ -2355,6 +2554,8 @@
       "overall": 6.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10871168-scotch-genomic-epidemiology-reveals-the-dominance/review.md"
   },
   {
@@ -2381,6 +2582,8 @@
       "overall": 6.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11663206-cho-integration-of-bulk-and-single/review.md"
   },
   {
@@ -2407,6 +2610,8 @@
       "overall": 6.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12122422-chen-chromosome-level-genome-assembly-of/review.md"
   },
   {
@@ -2433,6 +2638,8 @@
       "overall": 6.3
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7105384-williams-measuring-the-distribution-of-fitness/review.md"
   },
   {
@@ -2459,6 +2666,8 @@
       "overall": 6.3
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7758296-bai-exploring-utility-of-genomic-epidemiology/review.md"
   },
   {
@@ -2474,7 +2683,7 @@
     "cohort": "A",
     "cohort_id": "A25",
     "anon_id": "ANON_24",
-    "domain": "Macroevolution / Stats",
+    "domain": "Molecular Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2485,6 +2694,8 @@
       "overall": 6.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc3935878-rabosky-automatic-detection-of-key-innovations/review.md"
   },
   {
@@ -2511,6 +2722,8 @@
       "overall": 6.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11379490-samani-polygenic-risk-score-adds-to/review.md"
   },
   {
@@ -2537,6 +2750,8 @@
       "overall": 6.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12729862-pu-systemic-inflammation-polygenic-risk-score/review.md"
   },
   {
@@ -2563,6 +2778,8 @@
       "overall": 6.1
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2026/pmid42749808-miao-reimagining-research-papers-as-interactive/review.md"
   },
   {
@@ -2589,6 +2806,8 @@
       "overall": 6.1
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11682804-damdinjav-evidence-of-influenza-a-h5n1/review.md"
   },
   {
@@ -2604,7 +2823,7 @@
     "cohort": "A",
     "cohort_id": "A32",
     "anon_id": "ANON_193",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2615,6 +2834,8 @@
       "overall": 6.0
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc8264168-fongaro-sars-cov-2-in-human/review.md"
   },
   {
@@ -2641,6 +2862,8 @@
       "overall": 6.0
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11668851-jia-gut-microbiota-dysbiosis-promotes-cognitive/review.md"
   },
   {
@@ -2656,7 +2879,7 @@
     "cohort": "A",
     "cohort_id": "A33",
     "anon_id": "ANON_95",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2667,6 +2890,8 @@
       "overall": 5.9
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7196402-deslandes-sars-cov-2-was-already/review.md"
   },
   {
@@ -2693,6 +2918,8 @@
       "overall": 5.9
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc10901987-novielli-explainable-artificial-intelligence-for-microbiome/review.md"
   },
   {
@@ -2719,6 +2946,8 @@
       "overall": 5.9
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12603141-itai-investigating-prognostic-features-in-high/review.md"
   },
   {
@@ -2745,6 +2974,8 @@
       "overall": 5.8
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2026/pmc13522585-alnaji-longitudinal-analysis-of-influenza-a/review.md"
   },
   {
@@ -2771,6 +3002,8 @@
       "overall": 5.8
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7458444-li-emergence-of-sars-cov-2/review.md"
   },
   {
@@ -2786,9 +3019,14 @@
     "cohort": "A",
     "cohort_id": "A18",
     "anon_id": "ANON_11",
-    "domain": "Cancer Microbiome",
+    "domain": "Cancer & Microbiome",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
+    "blinded_score": 2.2,
+    "identified_score": 5.8,
+    "score": 5.8,
     "scores": {
       "rigor": 1.6,
       "claims": 1.3,
@@ -2823,6 +3061,8 @@
       "overall": 5.8
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc10765913-choi-comparative-pangenome-analysis-of-enterococcus/review.md"
   },
   {
@@ -2838,7 +3078,7 @@
     "cohort": "A",
     "cohort_id": "A40",
     "anon_id": "ANON_186",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2849,6 +3089,8 @@
       "overall": 5.7
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7375210-koyama-variant-analysis-of-sars-cov/review.md"
   },
   {
@@ -2875,6 +3117,8 @@
       "overall": 5.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11367857-moreno-polygenic-risk-score-portability-for/review.md"
   },
   {
@@ -2901,6 +3145,8 @@
       "overall": 5.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12189426-hong-genome-selection-and-genome-wide/review.md"
   },
   {
@@ -2927,6 +3173,8 @@
       "overall": 5.6
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12409340-wen-cross-trait-genome-wide-association/review.md"
   },
   {
@@ -2942,7 +3190,7 @@
     "cohort": "A",
     "cohort_id": "A08",
     "anon_id": "ANON_05",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2953,6 +3201,8 @@
       "overall": 5.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7428442-la-sars-cov-2-has-been/review.md"
   },
   {
@@ -2968,7 +3218,7 @@
     "cohort": "B",
     "cohort_id": "B25",
     "anon_id": "ANON_30",
-    "domain": "Transcriptomics / Stats",
+    "domain": "Transcriptomics & CompBio",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -2979,6 +3229,8 @@
       "overall": 5.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc8922736-li-exaggerated-false-positives-by-popular/review.md"
   },
   {
@@ -3005,6 +3257,8 @@
       "overall": 5.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9008261-wang-gut-microbiome-signature-are-correlated/review.md"
   },
   {
@@ -3031,6 +3285,8 @@
       "overall": 5.5
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11191305-zhou-gut-microbiota-dysbiosis-in-hyperuricaemia/review.md"
   },
   {
@@ -3057,6 +3313,8 @@
       "overall": 5.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11332805-delgado-impact-of-the-chemical-modification/review.md"
   },
   {
@@ -3083,6 +3341,8 @@
       "overall": 5.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12291316-xie-interpretable-machine-learning-guided-single/review.md"
   },
   {
@@ -3109,6 +3369,8 @@
       "overall": 5.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12354945-skupa-gut-microbiome-profiling-in-e/review.md"
   },
   {
@@ -3135,6 +3397,8 @@
       "overall": 5.4
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12732342-jing-characterization-of-the-mitochondrial-genome/review.md"
   },
   {
@@ -3161,6 +3425,8 @@
       "overall": 5.3
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8011692-inizan-viral-evolution-sustains-a-dengue/review.md"
   },
   {
@@ -3187,6 +3453,8 @@
       "overall": 5.3
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11939762-meng-genome-wide-analysis-reveals-expansion/review.md"
   },
   {
@@ -3213,6 +3481,8 @@
       "overall": 5.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11220366-mai-genome-wide-association-and-polygenic/review.md"
   },
   {
@@ -3239,6 +3509,8 @@
       "overall": 5.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11228553-lucaci-the-evolution-of-mammalian-rem2/review.md"
   },
   {
@@ -3265,6 +3537,8 @@
       "overall": 5.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12351922-takase-association-of-circulating-metabolites-and/review.md"
   },
   {
@@ -3291,6 +3565,8 @@
       "overall": 5.2
     },
     "tier": "Mixed / Salvageable",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12473017-rampai-adaptive-evolution-of-lt-i/review.md"
   },
   {
@@ -3317,6 +3593,8 @@
       "overall": 4.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7106301-paraskevis-full-genome-evolutionary-analysis-of/review.md"
   },
   {
@@ -3343,6 +3621,8 @@
       "overall": 4.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11316369-li-distinct-enterotypes-and-dysbiosis-unraveling/review.md"
   },
   {
@@ -3369,6 +3649,8 @@
       "overall": 4.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11663015-yuan-scrgcl-a-cell-type-annotation/review.md"
   },
   {
@@ -3395,6 +3677,8 @@
       "overall": 4.7
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11755556-luque-impact-of-ex-vivo-bisphenol/review.md"
   },
   {
@@ -3410,7 +3694,7 @@
     "cohort": "A",
     "cohort_id": "A16",
     "anon_id": "ANON_16",
-    "domain": "Cancer Microbiome",
+    "domain": "Cancer & Microbiome",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -3421,6 +3705,8 @@
       "overall": 4.6
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7500457-poore-microbiome-analyses-of-blood-and/review.md"
   },
   {
@@ -3447,6 +3733,8 @@
       "overall": 4.6
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11727194-cruz-adaptive-evolution-of-stress-response/review.md"
   },
   {
@@ -3473,6 +3761,8 @@
       "overall": 4.6
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11786572-amadu-genome-wide-association-mapping-and/review.md"
   },
   {
@@ -3499,6 +3789,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2008/pmc2837078-hughes-codon-based-tests-of-positive/review.md"
   },
   {
@@ -3525,6 +3817,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11161523-bhatt-a-genome-wide-association-study/review.md"
   },
   {
@@ -3551,6 +3845,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11281702-yang-suspected-human-to-cat-spillover/review.md"
   },
   {
@@ -3577,6 +3873,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12329429-sayseng-integrating-citizen-science-and-remote/review.md"
   },
   {
@@ -3603,6 +3901,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12361393-guo-genomic-selection-with-gwas-identified/review.md"
   },
   {
@@ -3629,6 +3929,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12499553-zhang-machine-learning-integration-of-single/review.md"
   },
   {
@@ -3655,6 +3957,8 @@
       "overall": 4.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12647101-wang-microbiome-metabolome-dysbiosis-of-bronchoalveolar/review.md"
   },
   {
@@ -3681,6 +3985,8 @@
       "overall": 4.4
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2017/pmc5617305-lippert-identification-of-individuals-by-trait/review.md"
   },
   {
@@ -3707,6 +4013,8 @@
       "overall": 4.4
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11165082-yang-genome-wide-association-studies-of/review.md"
   },
   {
@@ -3733,6 +4041,8 @@
       "overall": 4.4
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11221317-zhang-integrating-machine-learning-and-single/review.md"
   },
   {
@@ -3759,6 +4069,8 @@
       "overall": 4.4
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12622556-young-cellphenox-an-explainable-machine-learning/review.md"
   },
   {
@@ -3785,6 +4097,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7276232-chaw-the-origin-and-underlying-driving/review.md"
   },
   {
@@ -3800,7 +4114,7 @@
     "cohort": "A",
     "cohort_id": "A34",
     "anon_id": "ANON_93",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -3811,6 +4125,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc7864798-carrat-evidence-of-early-circulation-of/review.md"
   },
   {
@@ -3837,6 +4153,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8076962-esper-genomic-epidemiology-of-sars-cov/review.md"
   },
   {
@@ -3863,6 +4181,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10256650-li-gut-microbiome-dysbiosis-in-patients/review.md"
   },
   {
@@ -3889,6 +4209,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11928979-shi-bgmdb-a-curated-database-linking/review.md"
   },
   {
@@ -3915,6 +4237,8 @@
       "overall": 4.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12070606-magwebu-the-impact-of-dietary-salt/review.md"
   },
   {
@@ -3930,7 +4254,7 @@
     "cohort": "A",
     "cohort_id": "A17",
     "anon_id": "ANON_38",
-    "domain": "Cancer Microbiome",
+    "domain": "Cancer & Microbiome",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -3941,6 +4265,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6858566-aykut-the-fungal-mycobiome-promotes-pancreatic/review.md"
   },
   {
@@ -3956,7 +4282,7 @@
     "cohort": "A",
     "cohort_id": "A43",
     "anon_id": "ANON_140",
-    "domain": "Epidemiology / Stats",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -3967,6 +4293,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7267326-miyasaka-is-bcg-vaccination-causally-related/review.md"
   },
   {
@@ -3993,6 +4321,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9227414-cui-the-evolution-genomic-epidemiology-and/review.md"
   },
   {
@@ -4019,6 +4349,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10676521-ran-enhanced-annotation-of-cd45ra-to/review.md"
   },
   {
@@ -4045,6 +4377,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11537008-wang-gut-microbiota-dysbiosis-and-neurological/review.md"
   },
   {
@@ -4071,6 +4405,8 @@
       "overall": 4.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12467303-liu-a-transformer-based-deep-diffusion/review.md"
   },
   {
@@ -4097,29 +4433,9 @@
       "overall": 4.1
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11610249-xu-genome-wide-association-analysis-and/review.md"
-  },
-  {
-    "id": "PMID:36029839",
-    "pmcid": "PMC9404229",
-    "doi": "10.1016/j.envres.2022.113979",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36029839/",
-    "title": "Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy",
-    "authors": "Antonella Amendola, Marta Canuti, Silvia Bianchi, Sudhir Kumar, Clara Fappani, Maria Gori, Daniela Colzani, Sergei L. Kosakovsky Pond, Sayaka Miura, Melissa Baggieri, Antonella Marchi, Elisa Borghi, Gianvincenzo Zuccotti, Mario C. Raviglione, Fabio Magurano, Elisabetta Tanzi",
-    "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
-    "venue": "Environmental Research (2022)",
-    "year": 2022,
-    "reviewed_at": "2026-10-25T20:34:30-04:00",
-    "issue_number": null,
-    "scores": {
-      "rigor": 1.2,
-      "claims": 0.8,
-      "biology": 0.7,
-      "reproducibility": 1.4,
-      "overall": 4.1
-    },
-    "tier": "Flawed / Overstated",
-    "review_path": "reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md"
   },
   {
     "id": "PMC4929217",
@@ -4145,6 +4461,8 @@
       "overall": 4.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2014/pmc4929217-aagaard-the-placenta-harbors-a-unique/review.md"
   },
   {
@@ -4171,6 +4489,8 @@
       "overall": 4.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8240556-mishra-microbial-exposure-during-early-human/review.md"
   },
   {
@@ -4197,6 +4517,8 @@
       "overall": 4.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11711298-peng-integration-of-machine-learning-and/review.md"
   },
   {
@@ -4223,6 +4545,8 @@
       "overall": 4.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12185455-huang-construction-of-a-novel-inflammatory/review.md"
   },
   {
@@ -4249,6 +4573,8 @@
       "overall": 4.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12383627-zeng-gut-microbiota-dysbiosis-remodels-the/review.md"
   },
   {
@@ -4275,6 +4601,8 @@
       "overall": 3.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7107875-tang-on-the-origin-and-continuing/review.md"
   },
   {
@@ -4301,6 +4629,8 @@
       "overall": 3.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8697821-sivasubramanian-phylodynamic-pattern-of-genetic-clusters/review.md"
   },
   {
@@ -4327,6 +4657,8 @@
       "overall": 3.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2023/pmc10491582-misra-genomic-epidemiology-of-sars-cov/review.md"
   },
   {
@@ -4353,6 +4685,8 @@
       "overall": 3.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11700820-jiang-identification-and-experimental-validation-of/review.md"
   },
   {
@@ -4379,6 +4713,8 @@
       "overall": 3.8
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12623444-wu-single-cell-copy-number-alteration/review.md"
   },
   {
@@ -4405,6 +4741,8 @@
       "overall": 3.7
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12471436-lee-retracted-machine-learning-based-survival/review.md"
   },
   {
@@ -4420,7 +4758,7 @@
     "cohort": "A",
     "cohort_id": "A39",
     "anon_id": "ANON_136",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -4431,6 +4769,8 @@
       "overall": 3.6
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7174922-pachetti-emerging-sars-cov-2-mutation/review.md"
   },
   {
@@ -4457,6 +4797,8 @@
       "overall": 3.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11988464-wu-identification-of-a-cancer-stem/review.md"
   },
   {
@@ -4483,6 +4825,8 @@
       "overall": 3.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12174135-hong-identifying-a-prognostic-signature-for/review.md"
   },
   {
@@ -4509,6 +4853,8 @@
       "overall": 3.5
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12234824-liu-multi-omics-study-reveals-gut/review.md"
   },
   {
@@ -4524,7 +4870,7 @@
     "cohort": "A",
     "cohort_id": "A13",
     "anon_id": "ANON_02",
-    "domain": "Viral Genomics",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -4535,12 +4881,16 @@
       "overall": 3.4
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7375454-toyoshima-sars-cov-2-genomic-variations/review.md"
   },
   {
     "id": "PMC8135569",
     "pmid": "33942847",
     "doi": "10.1093/molbev/msab118",
+    "preprint_pmcid": "PMC7523107",
+    "preprint_doi": "10.1101/2020.09.24.311845",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8135569/",
     "title": "An Evolutionary Portrait of the Progenitor SARS-CoV-2 and Its Dominant Offshoots in COVID-19 Pandemic",
     "authors": "Kumar S, Tao Q, Weaver S, Sanderford M, Caraballo-Ortiz MA, Sharma S, Pond SLK, Miura S.",
@@ -4561,6 +4911,8 @@
       "overall": 3.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8135569-kumar-an-evolutionary-portrait-of-the/review.md"
   },
   {
@@ -4587,6 +4939,8 @@
       "overall": 3.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9349972-desingu-the-emergence-of-omicron-lineages/review.md"
   },
   {
@@ -4613,6 +4967,8 @@
       "overall": 3.3
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11238174-yan-mendelian-randomization-based-on-genome/review.md"
   },
   {
@@ -4628,7 +4984,7 @@
     "cohort": "A",
     "cohort_id": "A15",
     "anon_id": "ANON_35",
-    "domain": "Epidemiology / Stats",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -4639,6 +4995,8 @@
       "overall": 3.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7395502-escobar-bcg-vaccine-protection-from-severe/review.md"
   },
   {
@@ -4665,6 +5023,8 @@
       "overall": 3.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11382104-zhai-increasing-spillover-of-highly-pathogenic/review.md"
   },
   {
@@ -4691,6 +5051,8 @@
       "overall": 3.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12043589-zhang-comprehensive-transcriptomic-analysis-integrating-bulk/review.md"
   },
   {
@@ -4717,6 +5079,8 @@
       "overall": 3.2
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12609430-abdi-retracted-duloxetine-an-snri-targets/review.md"
   },
   {
@@ -4743,6 +5107,8 @@
       "overall": 3.0
     },
     "tier": "Flawed / Overstated",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9468935-zhang-identification-of-prognostic-signature-of/review.md"
   },
   {
@@ -4769,6 +5135,8 @@
       "overall": 2.8
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2024/pmc11662780-chen-integrating-single-cell-rna-seq/review.md"
   },
   {
@@ -4795,6 +5163,8 @@
       "overall": 2.8
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc11999383-nian-assessing-the-causal-association-between/review.md"
   },
   {
@@ -4821,6 +5191,8 @@
       "overall": 2.6
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2013/pmc4225573-gao-gene-expression-profiling-analysis-of/review.md"
   },
   {
@@ -4847,7 +5219,48 @@
       "overall": 2.5
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6680985-walter-insights-into-the-potential-of/review.md"
+  },
+  {
+    "id": "PMC9404229",
+    "pmid": "36029839",
+    "pmcid": "PMC9404229",
+    "doi": "10.1016/j.envres.2022.113979",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9404229/",
+    "title": "Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy",
+    "authors": "Antonella Amendola, Marta Canuti, Silvia Bianchi, Sudhir Kumar, Clara Fappani, Maria Gori, Daniela Colzani, Sergei L. Kosakovsky Pond, Sayaka Miura, Melissa Baggieri, Antonella Marchi, Elisa Borghi, Gianvincenzo Zuccotti, Mario C. Raviglione, Fabio Magurano, Elisabetta Tanzi",
+    "authors_short": "Amendola et al. (Pond, Kumar, Tanzi)",
+    "venue": "Environmental Research (2022)",
+    "year": 2022,
+    "cohort": "A",
+    "cohort_id": "A01",
+    "anon_id": "ANON_37",
+    "domain": "Viral Evolution",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
+    "reviewed_at": "2026-10-27T21:35:00-04:00",
+    "issue_number": null,
+    "blinded_score": 2.5,
+    "identified_score": 4.1,
+    "score": 2.5,
+    "scores": {
+      "rigor": 0.5,
+      "claims": 0.4,
+      "biology": 0.5,
+      "reproducibility": 1.1,
+      "overall": 2.5
+    },
+    "identified_scores": {
+      "rigor": 1.2,
+      "claims": 0.8,
+      "biology": 0.7,
+      "reproducibility": 1.4,
+      "overall": 4.1
+    },
+    "tier": "Fundamentally Invalid",
+    "review_path": "reviews/2022/pmc9404229-amendola-lombardy-late-2019/review.md"
   },
   {
     "id": "PMC3261167",
@@ -4873,6 +5286,8 @@
       "overall": 2.4
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2012/pmc3261167-sebastiani-genetic-signatures-of-exceptional-longevity/review.md"
   },
   {
@@ -4899,6 +5314,8 @@
       "overall": 2.4
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7196762-forster-phylogenetic-network-analysis-of-sars/review.md"
   },
   {
@@ -4925,6 +5342,8 @@
       "overall": 2.3
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7166400-benvenuto-the-2019-new-coronavirus-epidemic/review.md"
   },
   {
@@ -4951,6 +5370,8 @@
       "overall": 2.3
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7184484-xia-extreme-genomic-cpg-deficiency-in/review.md"
   },
   {
@@ -4977,6 +5398,8 @@
       "overall": 2.3
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc8759701-ahmed-genome-wide-association-mapping-for/review.md"
   },
   {
@@ -5003,6 +5426,8 @@
       "overall": 2.2
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7138088-ji-cross-species-transmission-of-the/review.md"
   },
   {
@@ -5029,6 +5454,8 @@
       "overall": 2.2
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12133857-li-toward-precision-oncology-in-luad/review.md"
   },
   {
@@ -5055,6 +5482,8 @@
       "overall": 2.2
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc13107010-zhou-single-cell-dissection-of-avian/review.md"
   },
   {
@@ -5081,6 +5510,8 @@
       "overall": 2.1
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2019/pmc6613792-wei-ccr5-32-is-deleterious-in/review.md"
   },
   {
@@ -5096,7 +5527,7 @@
     "cohort": "A",
     "cohort_id": "A14",
     "anon_id": "ANON_43",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -5107,6 +5538,8 @@
       "overall": 2.1
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7247990-eaaswarkhanth-could-the-d614g-substitution-in/review.md"
   },
   {
@@ -5133,6 +5566,8 @@
       "overall": 2.1
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2022/pmc9509681-shi-the-relevance-of-host-gut/review.md"
   },
   {
@@ -5159,6 +5594,8 @@
       "overall": 2.1
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12697481-singh-association-of-gut-microbiota-dysbiosis/review.md"
   },
   {
@@ -5174,7 +5611,7 @@
     "cohort": "A",
     "cohort_id": "A12",
     "anon_id": "ANON_28",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -5185,6 +5622,8 @@
       "overall": 1.8
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2020/pmc7267315-becerra-sars-cov-2-viral-spike/review.md"
   },
   {
@@ -5211,6 +5650,8 @@
       "overall": 1.8
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12290206-yazdanparast-unraveling-the-genetic-architecture-of/review.md"
   },
   {
@@ -5226,7 +5667,7 @@
     "cohort": "A",
     "cohort_id": "A09",
     "anon_id": "ANON_13",
-    "domain": "Viral Epidemiology",
+    "domain": "Viral Evolution",
     "reviewed_at": "2026-10-27T21:35:00-04:00",
     "issue_number": null,
     "scores": {
@@ -5237,6 +5678,8 @@
       "overall": 1.6
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2021/pmc8529295-apolone-unexpected-detection-of-sars-cov/review.md"
   },
   {
@@ -5263,6 +5706,8 @@
       "overall": 1.2
     },
     "tier": "Fundamentally Invalid",
+    "model": "gemini-3.1-pro",
+    "rubric_version": "REVIEW_TEMPLATE v1.1",
     "review_path": "reviews/2025/pmc12241668-xu-integrated-analysis-of-single-cell/review.md"
   }
 ]
