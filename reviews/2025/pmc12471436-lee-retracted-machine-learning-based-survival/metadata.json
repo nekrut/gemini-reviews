@@ -1,0 +1,25 @@
+{
+  "id": "PMC12471436",
+  "pmid": "41003135",
+  "doi": "10.3390/jpm15090432",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12471436/",
+  "title": "RETRACTED: Machine-Learning-Based Survival Prediction in Castration-Resistant Prostate Cancer: A Multi-Model Analysis Using a Comprehensive Clinical Dataset",
+  "authors": "Lee JH, Jeong J, Ahn YJ, Lee KS, Lee JS, Lee SH, Ham WS, Chung BH, Koo KC.",
+  "authors_short": "Lee JH et al. (Koo KC.)",
+  "venue": "J Pers Med (2025)",
+  "year": 2025,
+  "cohort": "A",
+  "cohort_id": "A48",
+  "anon_id": "ANON_119",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.9,
+    "claims": 1.0,
+    "biology": 1.0,
+    "reproducibility": 0.8,
+    "overall": 3.7
+  },
+  "tier": "Flawed / Overstated"
+}

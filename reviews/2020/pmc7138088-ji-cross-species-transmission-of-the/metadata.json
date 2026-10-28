@@ -1,0 +1,25 @@
+{
+  "id": "PMC7138088",
+  "pmid": "31967321",
+  "doi": "10.1002/jmv.25682",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7138088/",
+  "title": "Cross-species transmission of the newly identified coronavirus 2019-nCoV",
+  "authors": "Ji W, Wang W, Zhao X, Zai J, Li X.",
+  "authors_short": "Ji W et al. (Li X.)",
+  "venue": "J Med Virol (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A05",
+  "anon_id": "ANON_01",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.4,
+    "claims": 0.5,
+    "biology": 0.5,
+    "reproducibility": 0.8,
+    "overall": 2.2
+  },
+  "tier": "Fundamentally Invalid"
+}

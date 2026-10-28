@@ -1,0 +1,25 @@
+{
+  "id": "PMC12351922",
+  "pmid": "40813662",
+  "doi": "10.1186/s12933-025-02849-8",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12351922/",
+  "title": "Association of circulating metabolites and polygenic risk score with incident type 2 diabetes: a prospective community-based cohort study",
+  "authors": "Takase M, Nakaya N, Kogure M, Hatanaka R, Nakaya K, Chiba I, Tokioka S, Nochioka K, Nakamura T, Tsuchiya N, Hirata T, Koshiba S, Kumada K, Motoike I, Hishinuma E, Narita A, Obara T, Ishikuro M, Ohseto H, Takahashi I, Kobayashi T, Kodama EN, Hamanaka Y, Orui M, Ogishima S, Nagaie S, Fuse N, Sugawara J, Kuriyama S, Matsuda K, Izumi Y, Ohneda K, Kinoshita K, Hozawa A, Yamamoto M, Biobank Japan Project, ToMMo investigators.",
+  "authors_short": "Takase M et al. (ToMMo investigators.)",
+  "venue": "Cardiovasc Diabetol (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C81",
+  "anon_id": "ANON_107",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.5,
+    "claims": 1.3,
+    "biology": 1.3,
+    "reproducibility": 1.1,
+    "overall": 5.2
+  },
+  "tier": "Mixed / Salvageable"
+}

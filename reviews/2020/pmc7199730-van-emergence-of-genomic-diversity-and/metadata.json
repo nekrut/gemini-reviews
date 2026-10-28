@@ -1,0 +1,25 @@
+{
+  "id": "PMC7199730",
+  "pmid": "32387564",
+  "doi": "10.1016/j.meegid.2020.104351",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7199730/",
+  "title": "Emergence of genomic diversity and recurrent mutations in SARS-CoV-2",
+  "authors": "van Dorp L, Acman M, Richard D, Shaw LP, Ford CE, Ormond L, Owen CJ, Pang J, Tan CCS, Boshier FAT, Ortiz AT, Balloux F.",
+  "authors_short": "van Dorp L et al. (Balloux F.)",
+  "venue": "Infect Genet Evol (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A07",
+  "anon_id": "ANON_31",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.0,
+    "claims": 1.6,
+    "biology": 1.5,
+    "reproducibility": 1.5,
+    "overall": 6.6
+  },
+  "tier": "Mixed / Salvageable"
+}

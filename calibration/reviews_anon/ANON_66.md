@@ -1,0 +1,56 @@
+# Review of ANON_66
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **5.5 / 10.0** (Mixed / Salvageable)  
+* **Score Breakdown:** Rigor: 1.5/3.5 | Claims: 1.3/2.5 | Biology: 1.3/2.0 | Reproducibility: 1.4/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This cross-sectional study investigates the relationship between bone mineral density (BMD), serum bone turnover markers (`25(OH)D`, `ALP`, `P1NP`, `CTX`), and gut microbiome (GM) taxonomic and functional profiles in older Chinese adults. From an epidemiological survey of 455 participants evaluated by dual-energy X-ray absorptiometry (DXA) and serum biochemistry at Honghui Hospital (Xi'an, China), the authors selected 113 older adults (58 postmenopausal women and 55 men aged $\ge 50$ years) stratified into normal bone mass (`NC`, $T \ge -1.0$), osteopenia (`ON`, $-2.5 < T < -1.0$), and osteoporosis (`OP`, $T \le -2.5$) for fecal 16S rRNA V3–V4 amplicon sequencing, and further selected a subset of 57 participants (29 women and 28 men) for shotgun metagenomic sequencing. The authors report widespread vitamin D insufficiency/deficiency (especially in women), higher $\alpha$-diversity in women than men, positive correlations between *Firmicutes* ($r = 0.27$) and *Clostridiales* ($r = 0.40$) relative abundance and BMD in women, sex-specific nominal correlations between KEGG metabolic pathways and BMD, and ROC curves ($\text{AUC} > 0.70$) for distinguishing OP from non-OP using KEGG pathway abundances. Raw sequencing data are publicly deposited in NCBI BioProject under accessions `PRJNA565497` and `PRJNA565546`.
+
+The availability of paired DXA, serum bone turnover markers, 16S rRNA profiles ($n = 113$), and shotgun metagenomes ($n = 57$) with open NCBI sequence accessions is a notable strength. However, the statistical analysis and biomarker claims suffer from several methodological weaknesses: (1) all taxon, KEGG pathway, and network associations (Figures 4–6, Table S5) rely on unadjusted parametric Pearson correlations and Wilcoxon tests across hundreds of compositional features without false discovery rate (FDR) control; (2) group-wise comparisons across `NC`, `ON`, and `OP` are largely non-significant for $\alpha$-diversity (Figure 3E–F), $\beta$-diversity (Figure 3H–I, K–L), *Firmicutes* abundance (Figure 4E), and KEGG pathway abundances (Figure S5A–D); (3) the ROC diagnostic analysis (Table S4) selects KEGG pathways based on in-sample correlation and evaluates them on the same $n = 29$ females or $n = 28$ males ($\sim 9\text{–}10$ OP cases per sex) without cross-validation, while also including the diagnostic `T-score` itself ($\text{AUC} = 1.00$) as a comparator; and (4) recent antibiotic/probiotic exposure was not listed among the exclusion criteria, and the anatomical site used for the single reported continuous `BMD` and `T-score` values (`L1–4` vs. proximal femur) is never specified. These issues can be addressed through rigorous compositional and FDR-corrected statistical reanalysis and tempered diagnostic framing.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Older Chinese adults in the survey exhibit high prevalence of osteopenia/osteoporosis and severe vitamin D deficiency/insufficiency, particularly among postmenopausal women: [Well Supported].**  
+  The clinical and biochemical characterization of the 455 participants (Table 1, Figure 2G–L) clearly documents lower BMD and lower serum 25-hydroxyvitamin D in postmenopausal women ($18.08 \pm 6.29\text{ ng/mL}$, with only 3.6% sufficient) compared to older men ($25.63 \pm 9.55\text{ ng/mL}$, $P < 0.0001$), alongside expected positive correlations between BMI and BMD and negative correlations between years since menopause and BMD.
+
+* **Gut microbial diversity and taxonomic composition (`Firmicutes`, `Clostridiales`, `Peptostreptococcaceae`, `Megamonas`) are significantly associated with BMD loss in postmenopausal women but not in older men: [Fragile].**  
+  While 16S rRNA $\alpha$-diversity (Shannon and Simpson, $P < 0.01$) and unweighted UniFrac PCoA differ between women ($n = 58$) and men ($n = 55$), diversity does not differ significantly across the `NC`, `ON`, and `OP` bone-density subgroups within either sex (Figure 3B–C, E–F, H–I, K–L). The reported associations with BMD in women (*Firmicutes* $r = 0.2746, P < 0.05$; *Clostridiales* $r = 0.4017, P < 0.01$) were computed using parametric Pearson correlation on bounded, right-skewed compositional relative abundances (where several taxa in Results Section 3 have $\text{SD} > \text{Mean}$, e.g., *Lactobacillales* $7.38\% \pm 14.66\%$) without Benjamini–Hochberg FDR correction across all tested phyla, orders, and genera. Moreover, antibiotic, probiotic, or calcium/vitamin D supplement use prior to stool collection was not excluded in the Methods.
+
+* **Metagenomic KEGG functional pathways (carbohydrate, amino acid, purine/pyrimidine, and starch/sucrose metabolism, and oxidative phosphorylation) correlate with BMD in a sex-specific manner: [Fragile].**  
+  In the metagenomic subset ($n = 29$ women and $n = 28$ men), subgroup comparisons across `NC`, `ON`, and `OP` were statistically non-significant for all highlighted KEGG level 2 and level 3 pathways in both sexes (Figure S5A–D). The claimed relationships (Figure 5A–D) rest entirely on nominal ($P < 0.05$), unadjusted Pearson correlations across dozens of KEGG hierarchy levels in small sample sizes ($n = 29$ and $n = 28$). Because KEGG relative abundances sum to unity, an expansion of one dominant metabolic category mechanically induces negative correlations with other categories.
+
+* **GM gene functional signatures serve as effective diagnostic classifiers ($\text{AUC} > 0.70$) for distinguishing osteoporosis from non-osteoporosis, outperforming serum bone turnover markers `P1NP` and `CTX`: [Overstated].**  
+  Three methodological flaws undermine the ROC analysis in Section 3.5 and Table S4. First, the candidate KEGG pathways were selected after observing their correlations with BMD in the exact same 29 women and 28 men, and ROC curves were evaluated in-sample without train/test splitting or cross-validation; with only $\sim 9\text{–}10$ OP cases per sex, in-sample feature selection guarantees optimistic $\text{AUC} > 0.70$ estimates by chance. Second, evaluating the DXA `T-score` via ROC ($\text{AUC} = 1.00, P < 0.001$) is tautological because the `OP` vs. `non-OP` binary label was defined by cutting the `T-score` at $\le -2.5$. Third, international guidelines recommend `P1NP` and `CTX` for monitoring bone remodeling rates and treatment response rather than static cross-sectional diagnosis of DXA-defined osteoporosis.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Apply Compositional Transformations, Non-Parametric Tests, and Multiple-Testing (FDR) Control
+* **WHY:** Relative abundances of microbial taxa and KEGG pathways are compositional and heavily skewed (as evidenced by $\text{SD} > \text{Mean}$ for multiple taxa in Section 3.3). Running hundreds of unadjusted parametric Pearson correlations across taxonomic levels, KEGG pathways, and network edges (Figures 4–6, Table S5) inflates Type I error and produces spurious compositional correlations.
+* **WHAT:** Re-analyze the 16S taxonomic and metagenomic KEGG associations using centered log-ratio (CLR) transformation (or Spearman rank correlation) and apply Benjamini–Hochberg FDR correction across all features tested at each taxonomic/functional level.
+* **HOW:**
+  1. For 16S OTU/taxon counts ($n = 113$) and metagenomic KEGG pathway abundances ($n = 57$), apply a pseudocount and compute CLR-transformed abundances (`compositions::clr` or `ALDEx2` / `ANCOM-BC` in R).
+  2. Compute Spearman rank correlations ($\rho$) and partial Spearman correlations adjusted for age, BMI, and serum `25(OH)D` (`ppcor::pcor.test`) between each taxon/pathway and BMD.
+  3. Apply `p.adjust(p_values, method = "BH")` within each taxonomic rank (phylum, order, genus) and KEGG level (Levels 1, 2, 3), and report both raw $P$-values and FDR $q$-values in Figures 4–6 and Table S5.
+  4. Perform a formal `PERMANOVA` (`vegan::adonis2` with 9,999 permutations) on the weighted and unweighted UniFrac distance matrices in Figure 3G–L to report exact $R^2$ and $P$-values for sex and BMD subgroup effects.
+
+#### 2. Correct Circularity and Overfitting in the ROC Diagnostic Analysis
+* **WHY:** Evaluating ROC AUC on the same $n = 29$ females and $n = 28$ males used to discover the correlated KEGG pathways leaks test data into feature selection, and reporting $\text{AUC} = 1.00$ for `T-score` tests a variable against a binary threshold of itself.
+* **WHAT:** Remove `T-score` from Table S4 (stating simply that $T \le -2.5$ defines the reference standard), compute cross-validated AUCs with 95% confidence intervals for the KEGG pathways, and reframe the results as exploratory associations rather than validated diagnostic classifiers.
+* **HOW:** In R (`pROC` and `caret`), perform repeated 5-fold cross-validation (or leave-one-out cross-validation given $n = 29$ and $n = 28$) where feature selection is restricted to the training folds, and report the out-of-fold $\text{AUC}$ and DeLong/bootstrap 95% confidence intervals in Table S4.
+
+#### 3. Clarify Anatomical DXA Site Definitions, Cohort Provenance, and Antibiotic Exclusion Criteria
+* **WHY:** The Methods state that DXA was measured at both the lumbar spine (`L1–4`) and proximal femur and that OP was defined by $T \le -2.5$ "at any site," yet Table 1 and Figures 2, 4, 5, and 6 plot a single continuous `BMD (g/cm2)` and `T-score` without specifying which skeletal site is shown. In addition, the Methods say participants were residents near Xi'an examined at Honghui Hospital, whereas the Discussion states all samples were collected from "a small mountain village with a relatively poor socioeconomic status," and antibiotic exclusion criteria are not mentioned.
+* **WHAT & HOW:**
+  1. **Specify the Skeletal Site for Continuous BMD and T-Score:** State explicitly in Section 2.2 (*BMD Measurements*), Table 1, and Figure 2/4/5/6 captions whether the reported continuous `BMD (g/cm2)` and `T-score` correspond to Lumbar Spine `L1–4`, Femoral Neck, Total Hip, or the lowest T-score site per subject. (Note that if different anatomical sites were mixed into a single continuous `BMD g/cm2` vector, the correlation analyses must be re-run separately for `L1–4 BMD` and `Total Hip / Femoral Neck BMD` because absolute $\text{g/cm}^2$ values are not directly comparable across skeletal sites.)
+  2. **Document Antibiotic and Medication Exclusions:** State in Section 2.1 (*Study Design and Population*) whether participants who had taken oral antibiotics, probiotics, laxatives, bisphosphonates, or calcium/vitamin D supplements within 1–3 months prior to stool collection were excluded from the 113-subject microbiome cohort.
+  3. **Reconcile Recruitment Setting (Section 2.1 vs. Section 4):** Clarify in Section 2.1 how the 455 participants from the rural mountain village near Xi'an were recruited and transported to Honghui Hospital for DXA scanning.

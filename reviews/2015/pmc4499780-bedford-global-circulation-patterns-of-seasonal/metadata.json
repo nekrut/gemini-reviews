@@ -1,0 +1,25 @@
+{
+  "id": "PMC4499780",
+  "pmid": "26053121",
+  "doi": "10.1038/nature14460",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4499780/",
+  "title": "Global circulation patterns of seasonal influenza viruses vary with antigenic drift",
+  "authors": "Bedford T, Riley S, Barr IG, Broor S, Chadha M, Cox NJ, Daniels RS, Gunasekaran CP, Hurt AC, Kelso A, Klimov A, Lewis NS, Li X, McCauley JW, Odagiri T, Potdar V, Rambaut A, Shu Y, Skepner E, Smith DJ, Suchard MA, Tashiro M, Wang D, Xu X, Lemey P, Russell CA.",
+  "authors_short": "Bedford T et al. (Russell CA.)",
+  "venue": "Nature (2015)",
+  "year": 2015,
+  "cohort": "B",
+  "cohort_id": "B47",
+  "anon_id": "ANON_170",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.3,
+    "biology": 1.9,
+    "reproducibility": 1.8,
+    "overall": 9.1
+  },
+  "tier": "Exemplary"
+}

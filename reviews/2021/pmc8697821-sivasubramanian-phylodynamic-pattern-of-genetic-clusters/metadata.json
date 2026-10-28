@@ -1,0 +1,25 @@
+{
+  "id": "PMC8697821",
+  "pmid": "35017872",
+  "doi": "10.4103/jgid.jgid_97_21",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8697821/",
+  "title": "Phylodynamic Pattern of Genetic Clusters, Paradigm Shift on Spatio-Temporal Distribution of Clades, and Impact of Spike Glycoprotein Mutations of SARS-CoV-2 Isolates from India",
+  "authors": "Sivasubramanian S, Gopalan V, Ramesh K, Padmanabhan P, Mone K, Govindan K, Velladurai S, Dhandapani P, Krishnasamy K, Kitambi SS.",
+  "authors_short": "Sivasubramanian S et al. (Kitambi SS.)",
+  "venue": "J Glob Infect Dis (2021)",
+  "year": 2021,
+  "cohort": "C",
+  "cohort_id": "C37",
+  "anon_id": "ANON_110",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.0,
+    "claims": 0.9,
+    "biology": 1.0,
+    "reproducibility": 0.9,
+    "overall": 3.8
+  },
+  "tier": "Flawed / Overstated"
+}

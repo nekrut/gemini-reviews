@@ -1,0 +1,25 @@
+{
+  "id": "PMC4944528",
+  "pmid": "27124452",
+  "doi": "10.1126/science.aad0501",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4944528/",
+  "title": "Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq",
+  "authors": "Tirosh I, Izar B, Prakadan SM, Wadsworth MH, Treacy D, Trombetta JJ, Rotem A, Rodman C, Lian C, Murphy G, Fallahi-Sichani M, Dutton-Regester K, Lin JR, Cohen O, Shah P, Lu D, Genshaft AS, Hughes TK, Ziegler CG, Kazer SW, Gaillard A, Kolb KE, Villani AC, Johannessen CM, Andreev AY, Van Allen EM, Bertagnolli M, Sorger PK, Sullivan RJ, Flaherty KT, Frederick DT, Jané-Valbuena J, Yoon CH, Rozenblatt-Rosen O, Shalek AK, Regev A, Garraway LA.",
+  "authors_short": "Tirosh I et al. (Garraway LA.)",
+  "venue": "Science (2016)",
+  "year": 2016,
+  "cohort": "B",
+  "cohort_id": "B41",
+  "anon_id": "ANON_126",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.6,
+    "overall": 8.6
+  },
+  "tier": "Strong / Sound"
+}

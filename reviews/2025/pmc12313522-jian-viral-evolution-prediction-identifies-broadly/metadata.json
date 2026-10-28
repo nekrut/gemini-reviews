@@ -1,0 +1,25 @@
+{
+  "id": "PMC12313522",
+  "pmid": "40494884",
+  "doi": "10.1038/s41564-025-02030-7",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12313522/",
+  "title": "Viral evolution prediction identifies broadly neutralizing antibodies to existing and prospective SARS-CoV-2 variants",
+  "authors": "Jian F, Wec AZ, Feng L, Yu Y, Wang L, Wang P, Yu L, Wang J, Hou J, Berrueta DM, Lee D, Speidel T, Ma L, Kim T, Yisimayi A, Song W, Wang J, Liu L, Yang S, Niu X, Xiao T, An R, Wang Y, Shao F, Wang Y, Pecetta S, Wang X, Walker LM, Cao Y.",
+  "authors_short": "Jian F et al. (Cao Y.)",
+  "venue": "Nat Microbiol (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C02",
+  "anon_id": "ANON_64",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.8,
+    "claims": 2.0,
+    "biology": 1.8,
+    "reproducibility": 1.6,
+    "overall": 8.2
+  },
+  "tier": "Strong / Sound"
+}

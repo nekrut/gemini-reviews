@@ -1,0 +1,25 @@
+{
+  "id": "PMC5536180",
+  "pmid": "28538723",
+  "doi": "10.1038/nature22400",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5536180/",
+  "title": "Genomic epidemiology reveals multiple introductions of Zika virus into the United States",
+  "authors": "Grubaugh ND, Ladner JT, Kraemer MUG, Dudas G, Tan AL, Gangavarapu K, Wiley MR, White S, Thézé J, Magnani DM, Prieto K, Reyes D, Bingham AM, Paul LM, Robles-Sikisaka R, Oliveira G, Pronty D, Barcellona CM, Metsky HC, Baniecki ML, Barnes KG, Chak B, Freije CA, Gladden-Young A, Gnirke A, Luo C, MacInnis B, Matranga CB, Park DJ, Qu J, Schaffner SF, Tomkins-Tinch C, West KL, Winnicki SM, Wohl S, Yozwiak NL, Quick J, Fauver JR, Khan K, Brent SE, Reiner RC, Lichtenberger PN, Ricciardi MJ, Bailey VK, Watkins DI, Cone MR, Kopp EW, Hogan KN, Cannons AC, Jean R, Monaghan AJ, Garry RF, Loman NJ, Faria NR, Porcelli MC, Vasquez C, Nagle ER, Cummings DAT, Stanek D, Rambaut A, Sanchez-Lockhart M, Sabeti PC, Gillis LD, Michael SF, Bedford T, Pybus OG, Isern S, Palacios G, Andersen KG.",
+  "authors_short": "Grubaugh ND et al. (Andersen KG.)",
+  "venue": "Nature (2017)",
+  "year": 2017,
+  "cohort": "B",
+  "cohort_id": "B48",
+  "anon_id": "ANON_155",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.3,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 9.0
+  },
+  "tier": "Exemplary"
+}

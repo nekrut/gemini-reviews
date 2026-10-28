@@ -1,0 +1,25 @@
+{
+  "id": "PMC4225573",
+  "pmid": "24256571",
+  "doi": "10.1186/1471-2377-13-181",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4225573/",
+  "title": "Gene expression profiling analysis of the putamen for the investigation of compensatory mechanisms in Parkinson's disease",
+  "authors": "Gao L, Gao H, Zhou H, Xu Y.",
+  "authors_short": "Gao L et al. (Xu Y.)",
+  "venue": "BMC Neurol (2013)",
+  "year": 2013,
+  "cohort": "A",
+  "cohort_id": "A46",
+  "anon_id": "ANON_77",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.6,
+    "claims": 0.5,
+    "biology": 0.7,
+    "reproducibility": 0.8,
+    "overall": 2.6
+  },
+  "tier": "Fundamentally Invalid"
+}

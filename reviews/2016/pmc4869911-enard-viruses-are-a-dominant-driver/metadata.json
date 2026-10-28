@@ -1,0 +1,25 @@
+{
+  "id": "PMC4869911",
+  "pmid": "27187613",
+  "doi": "10.7554/elife.12469",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4869911/",
+  "title": "Viruses are a dominant driver of protein adaptation in mammals",
+  "authors": "Enard D, Cai L, Gwennap C, Petrov DA.",
+  "authors_short": "Enard D et al. (Petrov DA.)",
+  "venue": "Elife (2016)",
+  "year": 2016,
+  "cohort": "B",
+  "cohort_id": "B49",
+  "anon_id": "ANON_196",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.3,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.2
+  },
+  "tier": "Exemplary"
+}

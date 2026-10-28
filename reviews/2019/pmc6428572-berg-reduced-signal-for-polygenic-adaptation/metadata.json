@@ -1,0 +1,25 @@
+{
+  "id": "PMC6428572",
+  "pmid": "30895923",
+  "doi": "10.7554/elife.39725",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6428572/",
+  "title": "Reduced signal for polygenic adaptation of height in UK Biobank",
+  "authors": "Berg JJ, Harpak A, Sinnott-Armstrong N, Joergensen AM, Mostafavi H, Field Y, Boyle EA, Zhang X, Racimo F, Pritchard JK, Coop G.",
+  "authors_short": "Berg JJ et al. (Coop G.)",
+  "venue": "Elife (2019)",
+  "year": 2019,
+  "cohort": "B",
+  "cohort_id": "B18",
+  "anon_id": "ANON_34",
+  "domain": "Population Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.3,
+    "biology": 1.9,
+    "reproducibility": 1.7,
+    "overall": 9.2
+  },
+  "tier": "Exemplary"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC3106319",
+  "pmid": "21393387",
+  "doi": "10.1101/gr.115949.110",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3106319/",
+  "title": "High sensitivity to aligner and high rate of false positives in the estimates of positive selection in the 12 Drosophila genomes",
+  "authors": "Markova-Raina P, Petrov D.",
+  "authors_short": "Markova-Raina P & Petrov D.",
+  "venue": "Genome Res (2011)",
+  "year": 2011,
+  "cohort": "B",
+  "cohort_id": "B50",
+  "anon_id": "ANON_156",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.1,
+    "biology": 1.8,
+    "reproducibility": 1.5,
+    "overall": 8.3
+  },
+  "tier": "Strong / Sound"
+}

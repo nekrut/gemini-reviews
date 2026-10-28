@@ -1,0 +1,25 @@
+{
+  "id": "PMC9468935",
+  "pmid": "36110575",
+  "doi": "10.1155/2022/3440586",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9468935/",
+  "title": "Identification of Prognostic Signature of Necroptosis-Related lncRNAs and Molecular Subtypes in Glioma",
+  "authors": "Zhang G, Chen R, Zhu L, Ma H, Tang H, Shang C, Wang J, Zhang D, Li Q, Liu J, Liu J.",
+  "authors_short": "Zhang G et al. (Liu J.)",
+  "venue": "Comput Math Methods Med (2022)",
+  "year": 2022,
+  "cohort": "A",
+  "cohort_id": "A47",
+  "anon_id": "ANON_187",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.8,
+    "claims": 0.7,
+    "biology": 0.8,
+    "reproducibility": 0.7,
+    "overall": 3.0
+  },
+  "tier": "Flawed / Overstated"
+}

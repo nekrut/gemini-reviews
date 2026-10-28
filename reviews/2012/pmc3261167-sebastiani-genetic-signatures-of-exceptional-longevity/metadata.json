@@ -1,0 +1,25 @@
+{
+  "id": "PMC3261167",
+  "pmid": "22279548",
+  "doi": "10.1371/journal.pone.0029848",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3261167/",
+  "title": "Genetic signatures of exceptional longevity in humans",
+  "authors": "Sebastiani P, Solovieff N, Dewan AT, Walsh KM, Puca A, Hartley SW, Melista E, Andersen S, Dworkis DA, Wilk JB, Myers RH, Steinberg MH, Montano M, Baldwin CT, Hoh J, Perls TT.",
+  "authors_short": "Sebastiani P et al. (Perls TT.)",
+  "venue": "PLoS One (2012)",
+  "year": 2012,
+  "cohort": "A",
+  "cohort_id": "A22",
+  "anon_id": "ANON_27",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.7,
+    "claims": 0.5,
+    "biology": 0.5,
+    "reproducibility": 0.7,
+    "overall": 2.4
+  },
+  "tier": "Fundamentally Invalid"
+}

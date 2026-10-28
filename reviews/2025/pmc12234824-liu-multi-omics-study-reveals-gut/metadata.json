@@ -1,0 +1,25 @@
+{
+  "id": "PMC12234824",
+  "pmid": "40624207",
+  "doi": "10.1038/s41598-025-07812-x",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12234824/",
+  "title": "Multi-omics study reveals gut microbiota dysbiosis and tryptophan metabolism alterations in GH-PitNET progression",
+  "authors": "Liu J, Ye Z, Zhang Y, You S, Sun S, Lu L, Su W, Liu J, Pu J, Pan H, Zhu H, Deng K, Yao Y, Hu X, Zhang S.",
+  "authors_short": "Liu J et al. (Zhang S.)",
+  "venue": "Sci Rep (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C65",
+  "anon_id": "ANON_132",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.0,
+    "claims": 0.7,
+    "biology": 0.8,
+    "reproducibility": 1.0,
+    "overall": 3.5
+  },
+  "tier": "Flawed / Overstated"
+}

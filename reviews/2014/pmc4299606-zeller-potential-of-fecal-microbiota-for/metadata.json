@@ -1,0 +1,25 @@
+{
+  "id": "PMC4299606",
+  "pmid": "25432777",
+  "doi": "10.15252/msb.20145645",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4299606/",
+  "title": "Potential of fecal microbiota for early-stage detection of colorectal cancer",
+  "authors": "Zeller G, Tap J, Voigt AY, Sunagawa S, Kultima JR, Costea PI, Amiot A, Böhm J, Brunetti F, Habermann N, Hercog R, Koch M, Luciani A, Mende DR, Schneider MA, Schrotz-King P, Tournigand C, Tran Van Nhieu J, Yamada T, Zimmermann J, Benes V, Kloor M, Ulrich CM, von Knebel Doeberitz M, Sobhani I, Bork P.",
+  "authors_short": "Zeller G et al. (Bork P.)",
+  "venue": "Mol Syst Biol (2014)",
+  "year": 2014,
+  "cohort": "B",
+  "cohort_id": "B28",
+  "anon_id": "ANON_80",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.1,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 8.6
+  },
+  "tier": "Strong / Sound"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC8759701",
+  "pmid": "35030233",
+  "doi": "10.1371/journal.pone.0262569",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8759701/",
+  "title": "Genome-wide association mapping for high temperature tolerance in wheat through 90k SNP array using physiological and yield traits",
+  "authors": "Ahmed HGM, Naeem M, Zeng Y, Rashid MAR, Ullah A, Saeed A, Qadeer A.",
+  "authors_short": "Ahmed HGM et al. (Qadeer A.)",
+  "venue": "PLoS One (2022)",
+  "year": 2022,
+  "cohort": "A",
+  "cohort_id": "A44",
+  "anon_id": "ANON_78",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.5,
+    "claims": 0.6,
+    "biology": 0.6,
+    "reproducibility": 0.6,
+    "overall": 2.3
+  },
+  "tier": "Fundamentally Invalid"
+}

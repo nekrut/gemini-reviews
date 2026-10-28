@@ -1,0 +1,25 @@
+{
+  "id": "PMC5878932",
+  "pmid": "29198524",
+  "doi": "10.1016/j.cell.2017.10.044",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5878932/",
+  "title": "Single-Cell Transcriptomic Analysis of Primary and Metastatic Tumor Ecosystems in Head and Neck Cancer",
+  "authors": "Puram SV, Tirosh I, Parikh AS, Patel AP, Yizhak K, Gillespie S, Rodman C, Luo CL, Mroz EA, Emerick KS, Deschler DG, Varvares MA, Mylvaganam R, Rozenblatt-Rosen O, Rocco JW, Faquin WC, Lin DT, Regev A, Bernstein BE.",
+  "authors_short": "Puram SV et al. (Bernstein BE.)",
+  "venue": "Cell (2017)",
+  "year": 2017,
+  "cohort": "B",
+  "cohort_id": "B42",
+  "anon_id": "ANON_81",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.0,
+    "claims": 2.3,
+    "biology": 1.9,
+    "reproducibility": 1.8,
+    "overall": 9.0
+  },
+  "tier": "Exemplary"
+}

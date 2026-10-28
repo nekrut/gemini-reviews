@@ -1,0 +1,25 @@
+{
+  "id": "PMC6613792",
+  "pmid": "31160814",
+  "doi": "10.1038/s41591-019-0459-6",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6613792/",
+  "title": "CCR5-∆32 is deleterious in the homozygous state in humans",
+  "authors": "Wei X, Nielsen R.",
+  "authors_short": "Wei X & Nielsen R.",
+  "venue": "Nat Med (2019)",
+  "year": 2019,
+  "cohort": "A",
+  "cohort_id": "A21",
+  "anon_id": "ANON_17",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.4,
+    "claims": 0.3,
+    "biology": 0.5,
+    "reproducibility": 0.9,
+    "overall": 2.1
+  },
+  "tier": "Fundamentally Invalid"
+}

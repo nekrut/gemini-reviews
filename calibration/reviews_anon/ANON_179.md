@@ -1,0 +1,57 @@
+# Review of ANON_179
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **9.4 / 10.0** (Exemplary)  
+* **Score Breakdown:** Rigor: 3.3/3.5 | Claims: 2.3/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.9/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript presents a large-scale within-sibship genome-wide association study (GWAS) meta-analysis across 25 phenotypes using 178,076 siblings from 77,832 sibships across 19 cohorts (18 European-ancestry cohorts with up to $N = 149,174$ for height, plus $N = 13,856$ from the China Kadoorie Biobank analyzed separately). By fitting matched population (between-family) and within-sibship (family-mean-centered genotype $G_{ij}^C = G_{ij} - G_i^F$ controlling for mean family genotype $G_i^F$) linear regression models with sibship-clustered standard errors, the authors quantify within-sibship shrinkage of SNP association estimates and propagate these summary statistics through LD score regression (`LDSC`), `SumHer` (`LDAK-Thin`), cross-phenotype genetic correlation ($r_g$), within-sibship Mendelian randomization (`WS-MR`), and Singleton Density Score (`tSDS`) tests of polygenic adaptation. They demonstrate substantial within-sibship shrinkage for behavioral, reproductive, and anthropometric traits—including number of children (67%), age at first birth (52%), depressive symptoms (50%), educational attainment (47%), cognitive ability (22%), ever smoking (19%), and height (10%)—accompanied by marked attenuations in `LDSC` SNP heritability, educational attainment genetic correlations with BMI/smoking/CRP, and MR estimates of height and BMI on educational attainment. Conversely, molecular and cardiometabolic traits (e.g., LDL/HDL cholesterol, triglycerides, eGFR, SBP) show minimal divergence between population and within-sibship models. Full meta-analysis summary statistics are deposited on OpenGWAS (`ieu-b-4813` to `ieu-b-4860`), and both the cohort GWAS pipeline and downstream analysis scripts are publicly available on GitHub.
+
+This is a methodologically rigorous, well-calibrated study that sets a high standard for consortium-scale statistical genetics. The authors anticipate and address major statistical pitfalls: they eliminate winner's curse in shrinkage estimation by selecting independent discovery instruments from non-sibling UK Biobank participants ($N = 422,730$), account for the statistical covariance between population and within-sibship estimates taken from the same individuals via leave-one-out jackknifing and seemingly unrelated regression (SUR), derive effective sample sizes ($N_{\text{eff}}$) to make `LDSC` and `SumHer` comparable across designs, and thoroughly investigate unexpected `LDSC` intercept inflation via simulations of Scandinavian LD mismatch and cryptic relatedness. The minor limitations—reliance on nominal $p < 0.05$ thresholds across several multi-trait comparisons in the main text, use of hard-called imputed genotypes (`INFO > 0.3`) rather than dosages, and inability of sibship designs to separate indirect sibling effects or distinguish assortative mating from parental indirect effects—are transparently discussed and can be refined with straightforward reporting adjustments.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Within-sibship GWAS effect estimates are substantially smaller than population estimates for behavioral, reproductive, and anthropometric traits (educational attainment, cognitive ability, reproductive timing/fertility, depressive symptoms, smoking, height), but largely unchanged for molecular/clinical biomarkers: [Well Supported].**  
+  Using independent discovery weights from the non-sibling UK Biobank cohort avoids selection bias (winner's curse), and leave-one-out jackknife standard errors (validated against SUR on individual-level UK Biobank data) properly account for the positive covariance between population and within-sibship estimators. The shrinkage for educational attainment (47%, 95% CI: 41%–52%) and height (10%, 95% CI: 8%–12%) replicates consistently across 18 European cohorts (heterogeneity $P = 0.40$ and $P = 0.89$, Extended Data Figs. 1–2).
+
+* **Within-sibship SNP heritability ($h^2_{\text{SNP}}$) attenuates in proportion to squared effect shrinkage $(1-k)^2$ for educational attainment (76% reduction), cognitive ability (44%), smoking (25%), and height (17%): [Well Supported].**  
+  The authors derive the theoretical scaling $h^2_{\text{WS}} = (1-k)^2 h^2_{\text{Pop}}$ under uniform shrinkage, calibrate `LDSC` using empirical effective sample sizes $N_{\text{eff}}$ derived from regression residual variance and variant standard errors, account for cross-estimator covariance via bivariate `LDSC` intercepts, and replicate the attenuation using `SumHer` (`LDAK-Thin`, Extended Data Fig. 4).
+
+* **Population-based genetic correlations ($r_g$) and Mendelian randomization (MR) estimates linking BMI and height to educational attainment are heavily inflated by demographic and/or indirect parental effects and attenuate toward zero in within-sibship analyses: [Well Supported].**  
+  In `LDSC`, the negative genetic correlation between educational attainment and BMI drops from $r_g = -0.32$ ($-0.37, -0.26$) in population data to $r_g = -0.05$ ($-0.22, 0.12$; difference $P = 5.3 \times 10^{-4}$) within sibships. Consistently, `WS-MR` shows that the putative causal effects of height ($0.06 \to 0.02$ s.d., difference $P = 1.2 \times 10^{-3}$) and BMI ($-0.19 \to -0.05$ s.d., difference $P = 2.8 \times 10^{-7}$) on educational attainment attenuate sharply when controlling for family-level confounding, even though BMI itself exhibits minimal same-trait shrinkage.
+
+* **Within-sibship GWAS confirms polygenic adaptation on taller height in European populations independent of population stratification: [Well Supported].**  
+  Stratification-free within-sibship $Z$-scores exhibit a positive Spearman correlation with `tSDS` ($r = 0.012$, 95% CI: $0.003, 0.020$), corroborated by block-jackknife standard errors, mean `tSDS` enrichment across 310 independent within-sibship height loci ($\text{mean} = 0.18$, $P = 0.003$), positive `LDSC` $r_g$ with `tSDS`, and fixed-effect meta-analysis of study-specific `tSDS` correlations ($r = 0.004$, 95% CI: $0.002, 0.007$, Fig. 7).
+
+* **Secondary claims of within-sibship CRP amplification ($-9\%$), China Kadoorie Biobank smoking shrinkage ($134\%$), and polygenic adaptation on number of children ($P = 0.024$) and HDL cholesterol ($P = 0.024$): [Fragile].**  
+  These findings only reach nominal significance ($0.01 < P < 0.05$) across 25 tested phenotypes without multiple-testing correction, and in the case of China Kadoorie Biobank smoking ($134\%$, 95% CI: $10\%, 258\%$), rely on European-discovery UK Biobank variants applied to $N = 13,856$ East Asian siblings with very wide uncertainty bounds.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Report False Discovery Rate (FDR) or Family-Wise Error Rate Thresholds Alongside Nominal $P$-Values Across the 25-Phenotype Scans
+* **WHY:** Throughout the Results (shrinkage across 25 traits, $h^2_{\text{Diff}}$ across 25 traits, $r_{g,\text{Diff}}$ across 20 traits, `WS-MR` across $2 \times 23 = 46$ exposure-outcome pairs, and `tSDS` across 25 traits), the main text highlights differences reaching nominal $P < 0.05$. While primary signals (educational attainment, height, age at first birth, BMI-education MR) have $P < 10^{-3}$ and easily survive Bonferroni correction, borderline findings such as CRP negative shrinkage ($P \approx 0.01$), smoking/CRP $r_{g,\text{Diff}}$ ($P = 0.040, 0.039$), and `tSDS` correlations for fertility and HDL ($P = 0.024$) are likely compatible with multiple-testing noise.
+* **WHAT:** Add Benjamini–Hochberg FDR $q$-values (or explicit Bonferroni thresholds, $\alpha = 0.05/25 = 0.002$) to Table 1 and Supplementary Tables 3–8, and distinguish in the main text between associations that pass multiple-testing correction and those that are only nominally suggestive.
+* **HOW:** Apply `p.adjust(..., method = "BH")` across each family of 20–25 phenotype tests in the existing R post-processing scripts (`SiblingGWASPost`) and annotate Fig. 4–6 and Table 1 with an indicator for FDR $< 0.05$.
+
+#### 2. Quantify Potential Attenuation Bias from Using Best-Guess Hard-Called Genotypes (`INFO > 0.3`)
+* **WHY:** The cohort analysis pipeline converts imputed dosages to hard-called "best-guess" genotypes with a relatively permissive imputation quality cutoff (`INFO > 0.3`). Differential error in best-guess calls is amplified when taking within-sibship differences ($G_{ij} - G_i^F$), because non-differential genotyping error attenuates within-family difference estimators more severely than between-family estimators (classic measurement-error attenuation in fixed-effects / within-group estimators).
+* **WHAT:** Verify that the observed within-sibship shrinkage is not partly driven by imputation noise in lower-`INFO` variants.
+* **HOW:** Re-compute the summary-based weighted shrinkage scores ($\delta$) restricting the clumped instrument sets to high-confidence variants (`INFO > 0.9` across all cohorts or directly genotyped HapMap3 SNPs), and compare these estimates to the baseline `INFO > 0.3` shrinkage estimates.
+
+#### 3. Clarify the Algebraic Formulation of the Variant-Level Shrinkage Heterogeneity Test
+* **WHY:** In the Methods section *"Heterogeneity of shrinkage across variants within a phenotype"*, the inverse-variance weight for Cochran's $Q$ statistic is written as $w_k = \frac{S^2}{\sigma_{W,k}^2 + S^2 \sigma_S^2}$ where $s_k = \beta_{P,k} / \beta_{W,k}$ (or $\beta_{W,k} / \beta_{P,k}$). Because $s_k$ is a ratio of two random variables ($\beta_{W,k}$ and $\beta_{P,k}$), its first-order Taylor series variance depends on both $\sigma_{W,k}^2$ and $\sigma_{P,k}^2$ (and their covariance), whereas the printed formula omits $\sigma_{P,k}^2$ and writes $\sigma_S^2$ (the variance of the pooled score $S$).
+* **WHAT:** Check and correct the printed equation for $s_k$ and $w_k$ so that it matches the exact delta-method variance implemented in the `SiblingGWASPost` codebase.
+* **HOW:** Update the equations in the Methods section to explicitly define $s_k = \beta_{W,k} / \beta_{P,k}$ (to match the direction of $S_W / S_P$ in $\delta = 1 - S_W / S_P$) and write out the exact per-SNP variance $\text{Var}(s_k)$ used in the heterogeneity $Q$ statistic.
+
+#### 4. Reconcile Minor Sample Size Discrepancies Between Abstract and Main Text
+* **WHY:** The Abstract line 8 states *"We combined data from 178,086 siblings from 19 cohorts"*, whereas Abstract line 12, Main text line 33, and Results line 47 state *"178,076 siblings"*.
+* **WHAT & HOW:** Reconcile the total sibling count (`178,086` vs. `178,076`) across the Abstract, Main text, and Supplementary Table 1 so that the exact same number appears everywhere.

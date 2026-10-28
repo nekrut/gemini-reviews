@@ -1,0 +1,25 @@
+{
+  "id": "PMC7247990",
+  "pmid": "32464271",
+  "doi": "10.1016/j.ijid.2020.05.071",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7247990/",
+  "title": "Could the D614G substitution in the SARS-CoV-2 spike (S) protein be associated with higher COVID-19 mortality?",
+  "authors": "Eaaswarkhanth M, Al Madhoun A, Al-Mulla F.",
+  "authors_short": "Eaaswarkhanth M et al. (Al-Mulla F.)",
+  "venue": "Int J Infect Dis (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A14",
+  "anon_id": "ANON_43",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.4,
+    "claims": 0.6,
+    "biology": 0.6,
+    "reproducibility": 0.5,
+    "overall": 2.1
+  },
+  "tier": "Fundamentally Invalid"
+}

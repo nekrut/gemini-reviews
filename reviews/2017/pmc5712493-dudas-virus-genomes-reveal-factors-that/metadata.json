@@ -1,0 +1,25 @@
+{
+  "id": "PMC5712493",
+  "pmid": "28405027",
+  "doi": "10.1038/nature22040",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5712493/",
+  "title": "Virus genomes reveal factors that spread and sustained the Ebola epidemic",
+  "authors": "Dudas G, Carvalho LM, Bedford T, Tatem AJ, Baele G, Faria NR, Park DJ, Ladner JT, Arias A, Asogun D, Bielejec F, Caddy SL, Cotten M, D'Ambrozio J, Dellicour S, Di Caro A, Diclaro JW, Duraffour S, Elmore MJ, Fakoli LS, Faye O, Gilbert ML, Gevao SM, Gire S, Gladden-Young A, Gnirke A, Goba A, Grant DS, Haagmans BL, Hiscox JA, Jah U, Kugelman JR, Liu D, Lu J, Malboeuf CM, Mate S, Matthews DA, Matranga CB, Meredith LW, Qu J, Quick J, Pas SD, Phan MVT, Pollakis G, Reusken CB, Sanchez-Lockhart M, Schaffner SF, Schieffelin JS, Sealfon RS, Simon-Loriere E, Smits SL, Stoecker K, Thorne L, Tobin EA, Vandi MA, Watson SJ, West K, Whitmer S, Wiley MR, Winnicki SM, Wohl S, Wölfel R, Yozwiak NL, Andersen KG, Blyden SO, Bolay F, Carroll MW, Dahn B, Diallo B, Formenty P, Fraser C, Gao GF, Garry RF, Goodfellow I, Günther S, Happi CT, Holmes EC, Kargbo B, Keïta S, Kellam P, Koopmans MPG, Kuhn JH, Loman NJ, Magassouba N, Naidoo D, Nichol ST, Nyenswah T, Palacios G, Pybus OG, Sabeti PC, Sall A, Ströher U, Wurie I, Suchard MA, Lemey P, Rambaut A.",
+  "authors_short": "Dudas G et al. (Rambaut A.)",
+  "venue": "Nature (2017)",
+  "year": 2017,
+  "cohort": "B",
+  "cohort_id": "B15",
+  "anon_id": "ANON_50",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.0,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.7,
+    "overall": 8.8
+  },
+  "tier": "Strong / Sound"
+}

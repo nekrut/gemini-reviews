@@ -1,0 +1,25 @@
+{
+  "id": "PMC12361393",
+  "pmid": "40826273",
+  "doi": "10.1038/s42003-025-08700-w",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12361393/",
+  "title": "Genomic selection with GWAS-identified QTL markers enhances prediction accuracy for quantitative traits in poplar (Populus deltoides)",
+  "authors": "Guo C, Yin T, Wu H, Dai X, Chen Y, Wei S.",
+  "authors_short": "Guo C et al. (Wei S.)",
+  "venue": "Commun Biol (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C79",
+  "anon_id": "ANON_117",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 1.1,
+    "biology": 1.2,
+    "reproducibility": 1.0,
+    "overall": 4.5
+  },
+  "tier": "Flawed / Overstated"
+}

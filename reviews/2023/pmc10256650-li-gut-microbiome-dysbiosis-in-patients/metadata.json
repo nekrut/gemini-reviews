@@ -1,0 +1,25 @@
+{
+  "id": "PMC10256650",
+  "pmid": "37294364",
+  "doi": "10.1007/s00284-023-03361-6",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10256650/",
+  "title": "Gut Microbiome Dysbiosis in Patients with Endometrial Cancer vs. Healthy Controls Based on 16S rRNA Gene Sequencing",
+  "authors": "Li Y, Liu G, Gong R, Xi Y.",
+  "authors_short": "Li Y et al. (Xi Y.)",
+  "venue": "Curr Microbiol (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C60",
+  "anon_id": "ANON_101",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.1,
+    "claims": 1.0,
+    "biology": 1.0,
+    "reproducibility": 1.2,
+    "overall": 4.3
+  },
+  "tier": "Flawed / Overstated"
+}

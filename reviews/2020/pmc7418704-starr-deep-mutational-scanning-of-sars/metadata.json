@@ -1,0 +1,25 @@
+{
+  "id": "PMC7418704",
+  "pmid": "32841599",
+  "doi": "10.1016/j.cell.2020.08.012",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7418704/",
+  "title": "Deep Mutational Scanning of SARS-CoV-2 Receptor Binding Domain Reveals Constraints on Folding and ACE2 Binding",
+  "authors": "Starr TN, Greaney AJ, Hilton SK, Ellis D, Crawford KHD, Dingens AS, Navarro MJ, Bowen JE, Tortorici MA, Walls AC, King NP, Veesler D, Bloom JD.",
+  "authors_short": "Starr TN et al. (Bloom JD.)",
+  "venue": "Cell (2020)",
+  "year": 2020,
+  "cohort": "B",
+  "cohort_id": "B02",
+  "anon_id": "ANON_141",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.4,
+    "biology": 1.8,
+    "reproducibility": 1.9,
+    "overall": 9.4
+  },
+  "tier": "Exemplary"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC7428442",
+  "pmid": "32835962",
+  "doi": "10.1016/j.scitotenv.2020.141711",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7428442/",
+  "title": "SARS-CoV-2 has been circulating in northern Italy since December 2019: Evidence from environmental monitoring",
+  "authors": "La Rosa G, Mancini P, Bonanno Ferraro G, Veneri C, Iaconelli M, Bonadonna L, Lucentini L, Suffredini E.",
+  "authors_short": "La Rosa G et al. (Suffredini E.)",
+  "venue": "Sci Total Environ (2021)",
+  "year": 2021,
+  "cohort": "A",
+  "cohort_id": "A08",
+  "anon_id": "ANON_05",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.8,
+    "claims": 1.4,
+    "biology": 1.2,
+    "reproducibility": 1.1,
+    "overall": 5.5
+  },
+  "tier": "Mixed / Salvageable"
+}

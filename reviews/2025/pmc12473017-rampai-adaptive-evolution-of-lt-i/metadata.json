@@ -1,0 +1,25 @@
+{
+  "id": "PMC12473017",
+  "pmid": "41011352",
+  "doi": "10.3390/microorganisms13092022",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12473017/",
+  "title": "Adaptive Evolution of &lt;i&gt;Aurantiochytrium limacinum&lt;/i&gt; for Efficient Production of Docosahexaenoic Acid Under Acidic and High-Temperature Conditions",
+  "authors": "Rampai T, Nopgasorn R, Laoteng K, Wannawilai S.",
+  "authors_short": "Rampai T et al. (Wannawilai S.)",
+  "venue": "Microorganisms (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C52",
+  "anon_id": "ANON_143",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.4,
+    "claims": 1.4,
+    "biology": 1.3,
+    "reproducibility": 1.1,
+    "overall": 5.2
+  },
+  "tier": "Mixed / Salvageable"
+}

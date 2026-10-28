@@ -1,0 +1,25 @@
+{
+  "id": "PMC7332439",
+  "pmid": "32697968",
+  "doi": "10.1016/j.cell.2020.06.043",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7332439/",
+  "title": "Tracking Changes in SARS-CoV-2 Spike: Evidence that D614G Increases Infectivity of the COVID-19 Virus",
+  "authors": "Korber B, Fischer WM, Gnanakaran S, Yoon H, Theiler J, Abfalterer W, Hengartner N, Giorgi EE, Bhattacharya T, Foley B, Hastie KM, Parker MD, Partridge DG, Evans CM, Freeman TM, de Silva TI, Sheffield COVID-19 Genomics Group, McDanal C, Perez LG, Tang H, Moon-Walker A, Whelan SP, LaBranche CC, Saphire EO, Montefiori DC.",
+  "authors_short": "Korber B et al. (Montefiori DC.)",
+  "venue": "Cell (2020)",
+  "year": 2020,
+  "cohort": "B",
+  "cohort_id": "B04",
+  "anon_id": "ANON_10",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.2,
+    "biology": 1.8,
+    "reproducibility": 1.7,
+    "overall": 8.6
+  },
+  "tier": "Strong / Sound"
+}

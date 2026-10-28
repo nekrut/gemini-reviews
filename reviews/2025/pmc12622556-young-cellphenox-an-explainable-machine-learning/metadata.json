@@ -1,0 +1,25 @@
+{
+  "id": "PMC12622556",
+  "pmid": "40985689",
+  "doi": "10.1002/advs.202503289",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12622556/",
+  "title": "CellPhenoX: An Explainable Machine Learning Method for Identifying Cell Phenotypes To Predict Clinical Outcomes from Single-Cell Multi-Omics",
+  "authors": "Young J, Inamo J, Caterer Z, Krishna R, Zhang F.",
+  "authors_short": "Young J et al. (Zhang F.)",
+  "venue": "Adv Sci (Weinh) (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C22",
+  "anon_id": "ANON_61",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 1.1,
+    "biology": 1.2,
+    "reproducibility": 0.9,
+    "overall": 4.4
+  },
+  "tier": "Flawed / Overstated"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC7267315",
+  "pmid": "32374903",
+  "doi": "10.1111/ijcp.13525",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7267315/",
+  "title": "SARS-CoV-2 viral spike G614 mutation exhibits higher case fatality rate",
+  "authors": "Becerra-Flores M, Cardozo T.",
+  "authors_short": "Becerra-Flores M & Cardozo T.",
+  "venue": "Int J Clin Pract (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A12",
+  "anon_id": "ANON_28",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.4,
+    "claims": 0.3,
+    "biology": 0.5,
+    "reproducibility": 0.6,
+    "overall": 1.8
+  },
+  "tier": "Fundamentally Invalid"
+}

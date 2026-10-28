@@ -1,0 +1,25 @@
+{
+  "id": "PMC9348750",
+  "pmid": "35881010",
+  "doi": "10.1126/science.abp8715",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9348750/",
+  "title": "The Huanan Seafood Wholesale Market in Wuhan was the early epicenter of the COVID-19 pandemic",
+  "authors": "Worobey M, Levy JI, Malpica Serrano L, Crits-Christoph A, Pekar JE, Goldstein SA, Rasmussen AL, Kraemer MUG, Newman C, Koopmans MPG, Suchard MA, Wertheim JO, Lemey P, Robertson DL, Garry RF, Holmes EC, Rambaut A, Andersen KG.",
+  "authors_short": "Worobey M et al. (Andersen KG.)",
+  "venue": "Science (2022)",
+  "year": 2022,
+  "cohort": "B",
+  "cohort_id": "B07",
+  "anon_id": "ANON_41",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.0,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 8.5
+  },
+  "tier": "Strong / Sound"
+}

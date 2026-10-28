@@ -1,0 +1,25 @@
+{
+  "id": "PMC12241668",
+  "pmid": "40642071",
+  "doi": "10.3389/fimmu.2025.1601533",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12241668/",
+  "title": "Integrated analysis of single-cell RNA-seq and spatial transcriptomics to identify the lactylation-related protein TUBB2A as a potential biomarker for glioblastoma in cancer cells by machine learning",
+  "authors": "Xu Y, Zhang C, Wu J, Guo P, Jiang N, Wang C, Feng Y.",
+  "authors_short": "Xu Y et al. (Feng Y.)",
+  "venue": "Front Immunol (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C92",
+  "anon_id": "ANON_108",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.2,
+    "claims": 0.2,
+    "biology": 0.4,
+    "reproducibility": 0.4,
+    "overall": 1.2
+  },
+  "tier": "Critical Failure"
+}

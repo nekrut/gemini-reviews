@@ -1,0 +1,25 @@
+{
+  "id": "PMC12122422",
+  "pmid": "40443099",
+  "doi": "10.1093/gigascience/giaf056",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12122422/",
+  "title": "Chromosome-level genome assembly of Pinus massoniana provides insights into conifer adaptive evolution",
+  "authors": "Chen H, Qin X, Chen Y, Zhang H, Feng Y, Tan J, Chen X, Hu, Xie J, Xie J, Yang Z.",
+  "authors_short": "Chen H et al. (Yang Z.)",
+  "venue": "Gigascience (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C48",
+  "anon_id": "ANON_175",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.5,
+    "biology": 1.5,
+    "reproducibility": 1.5,
+    "overall": 6.4
+  },
+  "tier": "Mixed / Salvageable"
+}

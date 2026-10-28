@@ -1,0 +1,25 @@
+{
+  "id": "PMC12354945",
+  "pmid": "40742099",
+  "doi": "10.1158/2767-9764.crc-25-0022",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12354945/",
+  "title": "Gut Microbiome Profiling in Eμ-TCL1 Mice Reveals Intestinal Changes and a Dysbiotic Signature Specific to Chronic Lymphocytic Leukemia",
+  "authors": "Skupa SA, Cooper KM, Smith AL, Drengler EM, Eiken AP, Schmitz E, Waldron GM, Mathew G, Primeaux M, Dhawan P, Talmon GA, D'Angelo CR, El-Gamal D.",
+  "authors_short": "Skupa SA et al. (El-Gamal D.)",
+  "venue": "Cancer Res Commun (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C15",
+  "anon_id": "ANON_74",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.5,
+    "claims": 1.2,
+    "biology": 1.3,
+    "reproducibility": 1.4,
+    "overall": 5.4
+  },
+  "tier": "Mixed / Salvageable"
+}

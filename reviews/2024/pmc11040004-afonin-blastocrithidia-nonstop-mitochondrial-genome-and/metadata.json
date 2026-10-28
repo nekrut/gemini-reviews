@@ -1,0 +1,25 @@
+{
+  "id": "PMC11040004",
+  "pmid": "38452217",
+  "doi": "10.1093/nar/gkae168",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11040004/",
+  "title": "Blastocrithidia nonstop mitochondrial genome and its expression are remarkably insulated from nuclear codon reassignment",
+  "authors": "Afonin DA, Gerasimov ES, Škodová-Sveráková I, Záhonová K, Gahura O, Albanaz ATS, Myšková E, Bykova A, Paris Z, Lukeš J, Opperdoes FR, Horváth A, Zimmer SL, Yurchenko V.",
+  "authors_short": "Afonin DA et al. (Yurchenko V.)",
+  "venue": "Nucleic Acids Res (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C08",
+  "anon_id": "ANON_73",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.8,
+    "claims": 2.1,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 8.5
+  },
+  "tier": "Strong / Sound"
+}

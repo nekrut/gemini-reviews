@@ -1,0 +1,25 @@
+{
+  "id": "PMC7500457",
+  "pmid": "32214244",
+  "doi": "10.1038/s41586-020-2095-1",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7500457/",
+  "title": "Microbiome analyses of blood and tissues suggest cancer diagnostic approach",
+  "authors": "Poore GD, Kopylova E, Zhu Q, Carpenter C, Fraraccio S, Wandro S, Kosciolek T, Janssen S, Metcalf J, Song SJ, Kanbar J, Miller-Montgomery S, Heaton R, Mckay R, Patel SP, Swafford AD, Knight R.",
+  "authors_short": "Poore GD et al. (Knight R.)",
+  "venue": "Nature (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A16",
+  "anon_id": "ANON_16",
+  "domain": "Cancer Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.1,
+    "claims": 0.9,
+    "biology": 1.0,
+    "reproducibility": 1.6,
+    "overall": 4.6
+  },
+  "tier": "Flawed / Overstated"
+}

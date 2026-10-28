@@ -1,0 +1,25 @@
+{
+  "id": "PMC12603141",
+  "pmid": "41214061",
+  "doi": "10.1038/s41598-025-22937-9",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12603141/",
+  "title": "Investigating prognostic features in high-grade serous ovarian cancer through gene regulatory network inference with single-cell transcriptomic profiles",
+  "authors": "Itai T, Dai Y, Liu W, Lee DF, Zhao Z.",
+  "authors_short": "Itai T et al. (Zhao Z.)",
+  "venue": "Sci Rep (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C99",
+  "anon_id": "ANON_168",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.4,
+    "claims": 1.5,
+    "biology": 1.4,
+    "reproducibility": 1.6,
+    "overall": 5.9
+  },
+  "tier": "Mixed / Salvageable"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC4228153",
+  "pmid": "25387460",
+  "doi": "10.1186/s12915-014-0087-z",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4228153/",
+  "title": "Reagent and laboratory contamination can critically impact sequence-based microbiome analyses",
+  "authors": "Salter SJ, Cox MJ, Turek EM, Calus ST, Cookson WO, Moffatt MF, Turner P, Parkhill J, Loman NJ, Walker AW.",
+  "authors_short": "Salter SJ et al. (Walker AW.)",
+  "venue": "BMC Biol (2014)",
+  "year": 2014,
+  "cohort": "B",
+  "cohort_id": "B33",
+  "anon_id": "ANON_150",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.4,
+    "biology": 1.9,
+    "reproducibility": 1.7,
+    "overall": 9.1
+  },
+  "tier": "Exemplary"
+}

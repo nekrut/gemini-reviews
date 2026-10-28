@@ -1,0 +1,25 @@
+{
+  "id": "PMC7864798",
+  "pmid": "33548003",
+  "doi": "10.1007/s10654-020-00716-2",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7864798/",
+  "title": "Evidence of early circulation of SARS-CoV-2 in France: findings from the population-based \"CONSTANCES\" cohort",
+  "authors": "Carrat F, Figoni J, Henny J, Desenclos JC, Kab S, de Lamballerie X, Zins M.",
+  "authors_short": "Carrat F et al. (Zins M.)",
+  "venue": "Eur J Epidemiol (2021)",
+  "year": 2021,
+  "cohort": "A",
+  "cohort_id": "A34",
+  "anon_id": "ANON_93",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 1.1,
+    "biology": 0.9,
+    "reproducibility": 1.1,
+    "overall": 4.3
+  },
+  "tier": "Flawed / Overstated"
+}

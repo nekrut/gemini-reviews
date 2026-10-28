@@ -1,0 +1,25 @@
+{
+  "id": "PMC7375454",
+  "pmid": "32699345",
+  "doi": "10.1038/s10038-020-0808-9",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7375454/",
+  "title": "SARS-CoV-2 genomic variations associated with mortality rate of COVID-19",
+  "authors": "Toyoshima Y, Nemoto K, Matsumoto S, Nakamura Y, Kiyotani K.",
+  "authors_short": "Toyoshima Y et al. (Kiyotani K.)",
+  "venue": "J Hum Genet (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A13",
+  "anon_id": "ANON_02",
+  "domain": "Viral Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.9,
+    "claims": 0.8,
+    "biology": 0.7,
+    "reproducibility": 1.0,
+    "overall": 3.4
+  },
+  "tier": "Flawed / Overstated"
+}

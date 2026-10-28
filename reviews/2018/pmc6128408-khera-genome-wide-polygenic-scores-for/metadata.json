@@ -1,0 +1,25 @@
+{
+  "id": "PMC6128408",
+  "pmid": "30104762",
+  "doi": "10.1038/s41588-018-0183-z",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6128408/",
+  "title": "Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations",
+  "authors": "Khera AV, Chaffin M, Aragam KG, Haas ME, Roselli C, Choi SH, Natarajan P, Lander ES, Lubitz SA, Ellinor PT, Kathiresan S.",
+  "authors_short": "Khera AV et al. (Kathiresan S.)",
+  "venue": "Nat Genet (2018)",
+  "year": 2018,
+  "cohort": "B",
+  "cohort_id": "B38",
+  "anon_id": "ANON_103",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.0,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 8.5
+  },
+  "tier": "Strong / Sound"
+}

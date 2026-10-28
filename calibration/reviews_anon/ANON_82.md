@@ -1,0 +1,51 @@
+# Review of ANON_82
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **4.2 / 10.0** (Flawed / Overstated)  
+* **Score Breakdown:** Rigor: 1.0/3.5 | Claims: 1.0/2.5 | Biology: 1.0/2.0 | Reproducibility: 1.2/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript investigates gut microbiome alterations and 30-day neurological outcomes in patients undergoing surgical hematoma evacuation for spontaneous intracerebral hemorrhage (ICH) across two clinical cohorts in Henan Province, China. In Cohort 1, fecal samples or rectal swabs from 30 ICH patients collected at T1 ($<24\text{ h}$ of admission), T2 (3 days post-surgery), and T3 (7 days post-surgery) were compared with single stool samples from 30 healthy volunteers using 16S rRNA V3–V4 amplicon sequencing. In Cohort 2, preoperative ($<24\text{ h}$) samples from 51 surgical ICH patients were stratified by 30-day Extended Glasgow Outcome Scale (GOS-E) scores into GOOD ($\ge 5$, $n=23$) and POOR ($<5$, $n=28$) recovery groups, followed by LEfSe and univariate/multivariate logistic regression. The authors report progressive postoperative enrichment of *Enterococcus* and depletion of *Bacteroides* from T1 to T3, and conclude from Cohort 2 that the Original ICH (OICH) score and *Lachnospiraceae* abundance are independent risk factors for poor neurological prognosis. Raw 16S sequencing data are deposited in ArrayExpress (E-MTAB-14351).
+
+While longitudinal profiling of acute neurosurgical ICH patients addresses a clinically relevant question, the study's main conclusions are undermined by severe clinical confounding and statistical errors: (1) in Cohort 1, the progressive T1 $\to$ T3 bloom of nosocomial/skin/water taxa (*Enterococcus*, *Staphylococcus*, *Corynebacterium*, *Ralstonia*) and collapse of *Bacteroides* and $\alpha$-diversity are attributed to the natural course of ICH without recording or controlling for perioperative broad-spectrum intravenous antibiotics, ICU mechanical ventilation/enteral nutrition, or the switch between passed stool and rectal swabs; (2) longitudinal samples (T1, T2, T3) from the same 30 patients are analyzed as independent groups via one-way ANOVA and unpaired PERMANOVA; and (3) in Cohort 2, the logistic regression outcome coding ($Y=1$ for GOOD vs. POOR outcome) is inverted relative to the text—reporting an odds ratio of $0.16$ for OICH score and $65.56$ ($95\%\text{ CI}: 2.57\text{--}1,673.13$) for *Lachnospiraceae* while simultaneously calling *Lachnospiraceae* both an "independent risk factor for poor prognosis" and "protective." Thorough re-analysis accounting for antibiotic/ICU confounders, paired longitudinal structure, and properly scaled and oriented logistic regression models is required.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Gut microbiota diversity and composition in ICH patients differ from healthy controls and change dynamically from T1 to T3 with progressive enrichment of *Enterococcus* and depletion of *Bacteroides* (Abstract, Results lines 150–170, Figures 1–3): [Fragile].**  
+  While taxonomic shifts from T1 to T3 are large, patients in Cohort 1 underwent craniotomy/hematoma evacuation and spent a median of 8 days (IQR 5–18) in the ICU on mechanical ventilation (Table 3). Neurosurgical ICU patients routinely receive perioperative prophylactic and therapeutic intravenous antibiotics and nasogastric enteral nutrition, yet postoperative antibiotic exposure was neither documented nor adjusted for. Furthermore, T3 is enriched for *Staphylococcus*, *Corynebacterium* (skin/perianal flora enriched on rectal swabs when post-operative ileus prevents defecation, line 37), and *Ralstonia* (a well-known DNA extraction kit/reagent contaminant in low-biomass swabs). Baseline T1 vs. Control comparisons are also confounded by hypertension (73% in ICH vs. 30% in Controls, $P = 0.002$, Table 3), and repeated measures across T1, T2, and T3 were analyzed with unpaired one-way ANOVA and unpaired PERMANOVA (line 108).
+
+* **Preoperative *Enterococcus* and *Prevotella* abundances correlate with postoperative NIHSS scores, ICU length of stay, and 30-day GOS-E scores (Results lines 179–188, Figure 4): [Fragile].**  
+  Spearman correlations were computed across 15 LEfSe-selected genera and multiple clinical indicators without false discovery rate (FDR) correction. In addition, the admission NIHSS score in Table 3 (`median 29, IQR 29–29`) and Table 4 POOR group (`median 29, IQR 29–29`) exhibits an artificial ceiling at 29, distorting rank correlations with baseline NIHSS.
+
+* **The Original ICH (OICH) score and *Lachnospiraceae* abundance are independent risk factors for poor neurological prognosis in ICH (Abstract lines 8 and 13, Results line 252, Discussion line 275, Figure 6): [Methodologically Flawed].**  
+  In the Discussion (line 275) and Figure 6B, the multivariate logistic regression reports $\text{OR} = 0.16$ ($95\%\text{ CI}: 0.04\text{--}0.75, P = 0.01$) for OICH score and $\text{OR} = 65.56$ ($95\%\text{ CI}: 2.57\text{--}1,673.13, P = 0.02$) for *Lachnospiraceae*. Because higher OICH scores predict *worse* outcome (Table 4: median OICH is 2 in POOR vs. 1 in GOOD, $P=0.001$) and higher *Lachnospiraceae* abundance occurs in the *GOOD* group (Figure 5C,D), an $\text{OR} < 1$ for OICH and $\text{OR} > 1$ for *Lachnospiraceae* means the binary dependent variable was coded as $1 = \text{GOOD}$ outcome and $0 = \text{POOR}$ outcome in SPSS. Consequently, *Lachnospiraceae* is positively associated with *good* outcome (protective), directly contradicting the Abstract ("Lachnospiraceae were the independent risk factors for poor prognosis"), Results (line 252), and Figure 6 title. Moreover, the confidence interval for *Lachnospiraceae* ($[2.57, 1,673.13]$) spans nearly three orders of magnitude, reflecting severe small-sample overfitting ($N=51$ total, 23 GOOD / 28 POOR, with too many covariates entered into the multivariate model) and unscaled relative abundance ($0 \le x \le 1$) used as a linear logit predictor.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Correct Outcome Coding, Rescale Predictors, and Prevent Overfitting in Logistic Regression
+* **WHY:** Coding $Y=1$ as GOOD recovery while labeling the regression as predicting "poor prognosis" inverted all odds ratios (OICH $\text{OR} = 0.16$, *Lachnospiraceae* $\text{OR} = 65.56$) and produced self-contradictory statements throughout the Abstract, Results, and Discussion. Entering unscaled fractional abundance ($0\text{--}1$) with multiple correlated severity scores (GCS, NIHSS, OICH, HDL-C, creatinine) in $N=51$ patients caused quasi-complete separation ($\text{CI}: 2.57\text{--}1,673.13$).
+* **WHAT:** Recode the dependent variable as $Y=1$ for POOR outcome ($\text{GOS-E} < 5$) and $Y=0$ for GOOD outcome ($\text{GOS-E} \ge 5$), standardize microbial abundance (e.g., $\log_{10}$-transformed $Z$-score or per-SD change), and restrict the multivariate model to at most 2–3 pre-specified predictors (given 23 events in the smaller class) with Firth's penalized likelihood.
+* **HOW:** In R (`logistf` package) or SPSS, set `POOR = 1` as the target event, standardize *Lachnospiraceae* relative abundance to mean $0$ and SD $1$, and fit `POOR ~ OICH + z_Lachnospiraceae` (noting that GCS is already a component of the OICH score in Table 1 and should not be entered collinearly alongside OICH). Update Figure 6 and rewrite lines 8, 13, 252, and 275 to accurately state that higher OICH score increases the odds of poor outcome ($\text{OR} > 1$) whereas higher baseline *Lachnospiraceae* is associated with lower odds of poor outcome ($\text{OR} < 1$).
+
+#### 2. Account for Repeated Measures, Rectal Swab vs. Stool Modality, and Postoperative Antibiotic Exposure
+* **WHY:** Analyzing T1, T2, and T3 samples from the same 30 patients with unpaired ANOVA/PERMANOVA violates independence, and attributing T2/T3 *Enterococcus*, *Staphylococcus*, and *Ralstonia* blooms to ICH progression ignores perioperative broad-spectrum antibiotics and low-biomass rectal swab sampling.
+* **WHAT:** Re-analyze longitudinal α- and β-diversity across T1–T3 using paired/repeated-measures tests, stratify or adjust for rectal swab vs. fecal specimen collection and postoperative antibiotic classes, and adjust T1 vs. Control comparisons for hypertension.
+* **HOW:** Use Friedman's test (with Wilcoxon signed-rank post-hoc tests and Benjamini–Hochberg FDR correction) for longitudinal α-diversity and taxon changes across T1, T2, and T3, and use `vegan::adonis2(..., strata = Patient_ID)` for longitudinal PERMANOVA. Add a row to Table 3 and Table 4 reporting the exact number of rectal swabs vs. passed stool samples at each time point and the postoperative antibiotic regimens administered between T1 and T3. Discuss postoperative antibiotic administration and enteral feeding as primary drivers of the T1 $\to$ T3 *Enterococcus* expansion and *Bacteroides* depletion.
+
+#### 3. Technical, Statistical, and Editorial Corrections
+* **WHY:** Several numerical values, software versions, and biological terms in the manuscript are erroneous.
+* **WHAT & HOW:** Fix the following specific items:
+  * **Table 3 (line 129):** For Weight (`70.0 (13.4)` vs. `65.9 (11.9)`, $n=30$ per group), the two-sample $t$-test yields $t = 1.25, P = 0.22$, not `P = 0.74`. Re-check the raw weight data and $P$-value.
+  * **Table 3 (line 140) and Table 4 (line 227):** Explain why admission NIHSS has a median (IQR) of `29 (29, 29)` (e.g., whether comatose intubated patients were assigned a default score of 29).
+  * **Methods (line 103):** Remove `"and fungal OTU representative sequences... and UNITE fungal ITS database, respectively"`, as only bacterial 16S V3–V4 primers (341F/805R) were amplified and no fungal ITS data exist in the paper.
+  * **Methods (line 108):** Correct `"Mothur software (version 3.8.31)"` to the actual Mothur version used (e.g., `v1.38.1`).
+  * **Discussion (lines 269, 277):** Change `"Klebsiella and Pruisnia"` (line 269) to `"Klebsiella and Prevotella"` (per ref. 25, Li et al. 2017 *Microbiome*), and change `"Lachnospiraceae (genus)"` (line 277) to `"Lachnospiraceae (family)"`.

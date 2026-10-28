@@ -1,0 +1,25 @@
+{
+  "id": "PMC12070606",
+  "pmid": "40361148",
+  "doi": "10.1186/s12917-025-04795-9",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12070606/",
+  "title": "The impact of dietary salt on the development of hypertension and gut microbiome dysbiosis in captive-bred vervet monkeys (Chlorocebus aethiops)",
+  "authors": "Magwebu ZE, Khoza S, Mazinu M, Jordaan E, Ghai M, Chauke CG.",
+  "authors_short": "Magwebu ZE et al. (Chauke CG.)",
+  "venue": "BMC Vet Res (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C68",
+  "anon_id": "ANON_142",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.1,
+    "claims": 1.2,
+    "biology": 1.1,
+    "reproducibility": 0.9,
+    "overall": 4.3
+  },
+  "tier": "Flawed / Overstated"
+}

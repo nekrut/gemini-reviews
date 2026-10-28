@@ -1,0 +1,25 @@
+{
+  "id": "PMC10653788",
+  "pmid": "37811944",
+  "doi": "10.1128/mbio.01607-23",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10653788/",
+  "title": "Major data analysis errors invalidate cancer microbiome findings",
+  "authors": "Gihawi A, Ge Y, Lu J, Puiu D, Xu A, Cooper CS, Brewer DS, Pertea M, Salzberg SL.",
+  "authors_short": "Gihawi A et al. (Salzberg SL.)",
+  "venue": "mBio (2023)",
+  "year": 2023,
+  "cohort": "B",
+  "cohort_id": "B16",
+  "anon_id": "ANON_15",
+  "domain": "Cancer Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.3,
+    "biology": 2.0,
+    "reproducibility": 1.8,
+    "overall": 9.4
+  },
+  "tier": "Exemplary"
+}

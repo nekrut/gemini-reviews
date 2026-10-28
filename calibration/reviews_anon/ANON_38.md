@@ -1,0 +1,57 @@
+# Review of ANON_38
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **4.2 / 10.0** (Flawed / Overstated)  
+* **Score Breakdown:** Rigor: 1.1/3.5 | Claims: 1.0/2.5 | Biology: 1.1/2.0 | Reproducibility: 1.0/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript investigates the role of the fungal microbiome (mycobiome) in pancreatic ductal adenocarcinoma (PDA) progression in mouse models (`KC` spontaneous neoplasia and `FC1242` KPC orthotopic implantation) and human patients. Using 28S rRNA fluorescence in situ hybridization (FISH), fungal qPCR, flow cytometry of orally gavaged GFP-labeled *Saccharomyces cerevisiae*, and Illumina MiSeq ITS1 amplicon sequencing, the authors report a ~3,000-fold increase in intrapancreatic fungal DNA in PDA compared to healthy pancreas and an enrichment of *Malassezia* in both murine and human PDA tumors. They further report that oral antifungal treatment (Amphotericin B or Fluconazole) reduces PDA growth, oral repopulation with *Malassezia globosa* (but not *Candida*, *Saccharomyces*, or *Aspergillus*) accelerates tumor growth, and genetic deletion of mannose-binding lectin (`MBL-null`), complement `C3` (`C3-/-`), or tumor-cell `C3aR` knockdown abrogates fungal-driven tumor progression.
+
+While the mechanistic link between complement activation (`MBL`–`C3`–`C3aR`) and orthotopic KPC tumor growth is supported by multiple genetic and knockdown experiments in mice, the manuscript's foundational mycobiome sequencing and antifungal claims suffer from severe methodological and statistical flaws: (1) catastrophic low-biomass sequencing yield in human pancreatic tissues, where 93.57% of quality-filtered reads failed to align to fungi and all human tissue samples combined yielded only **636 total fungal reads across 311 OTUs** (~35 reads per tissue sample, ~2 reads per OTU), rendering alpha/beta diversity and genus-level enrichment analyses dominated by background reagent/environmental noise that is never quantitatively subtracted; (2) unacknowledged reuse of the exact same $n = 11$ control `KC` mouse cohort across independent experiments (Figure 3A and Figure 4A); (3) pervasive application of uncorrected pairwise two-tailed Student's $t$-tests across multi-arm experiments and $n = 3$ groups without multiple-testing correction; and (4) off-target pharmacological and antibacterial/immunomodulatory effects of high-dose oral Amphotericin B.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Human and murine PDA tumors harbor a distinct intrapancreatic mycobiome markedly enriched for *Malassezia*: [Methodologically Flawed].**  
+  According to the Bioinformatics and Statistical analyses section (line 56), out of 1,989,618 quality-filtered reads across $n = 166$ samples, 1,856,993 reads (93.57%) failed to align to fungi and were discarded. In the remaining reads, all human pancreatic tissue samples combined ($n = 13$ PDA and $n = 5$ healthy in Figure 2E) yielded a grand total of **636 fungal reads assigned to 311 OTUs**—an average of ~35 reads per human pancreas specimen and 2.0 reads per OTU. Computing richness estimators (Chao1, ACE, Observed OTUs), Shannon/Simpson diversity, Bray–Curtis PERMANOVA, and genus-level relative abundance cladograms (Figure 2A–E) on ~35 reads per sample without reporting or computationally subtracting the read counts and *Malassezia* (a ubiquitous human skin/laboratory dust commensal) abundance of the sequenced reagent-only negative controls is statistically invalid. Furthermore, the text states (line 56) that *"samples identified as outliers were removed"* without disclosing criteria or numbers of excluded samples.
+
+* **Fungal ablation with oral Amphotericin B or Fluconazole protects against PDA solely by depleting the mycobiome, and *Malassezia globosa* repopulation specifically accelerates oncogenesis: [Fragile].**  
+  Oral Amphotericin B (1 mg/ml daily gavage for 5 days plus $0.5\ \mu\text{g/ml}$ in drinking water for 3+ weeks) is poorly absorbed across the intact gut epithelium, causes substantial gastrointestinal mucosal and renal/innate immune perturbation (directly engaging host TLR2/TLR4 and altering bacterial community structure), and is not verified by intrapancreatic fungal qPCR after treatment or after species-specific oral gavage repopulation to confirm that gavaged *M. globosa* (a lipid-dependent skin yeast) actually colonized the murine pancreas at physiological levels. In the 5-arm repopulation experiment (Figure 3D), pairwise Student's $t$-tests were run without a one-way ANOVA or Dunnett's post-hoc correction.
+
+* **Fungi translocate from the gut lumen to the pancreas within 30 minutes of oral gavage: [Fragile].**  
+  In Figure 1E, mice were orally gavaged with $10^8\text{ CFU}$ of GFP-labeled *S. cerevisiae* and pancreata were harvested 30 minutes later for flow cytometry of "GFP+ foci". Detecting intact yeast cells in the parenchyma of the pancreas just 30 minutes after bolus esophageal gavage—when gastric emptying and small-intestinal transit to the ampulla of Vater require longer physiological timescales, and when gavage trauma or mesenteric/peritoneal harvesting contamination during necropsy can transfer luminal GFP+ yeast to the exterior of the pancreas—requires histological/microscopic proof of intraluminal/intraductal localization rather than dissociated tissue homogenate flow cytometry alone.
+
+* **The MBL–C3–C3aR complement cascade promotes KPC tumor growth in mice, and high *MBL2*/*C3* expression correlates with poorer human PDA survival: [Moderately Supported].**  
+  Orthotopic KPC tumor growth is reduced in `MBL-null` ($n = 22\text{/arm}$, Figure 4B) and `C3-/-` ($n = 9\text{–}10$, Figure 4E) hosts and upon tumor-cell `C3aR` shRNA knockdown (Figure 4F–G), and recombinant C3a increases KPC proliferation in vitro and in vivo (Figure 4D, Extended Data Figure 4F). However: (1) in the spontaneous `KC` vs. `KC;MBL-null` experiment (Figure 4A), the authors reused the same $n = 11$ control `KC` mice from the Amphotericin B vehicle arm of Figure 3A rather than contemporary littermate controls; (2) the critical epistasis experiments testing Amphotericin B or *M. globosa* repopulation in `MBL-null` and `C3-/-` mice (Extended Data Figure 4B–C, Figure 4H) are severely underpowered ($n = 3$ vs. $n = 4$ or $n = 4$ vs. $n = 5$), where failing to reject the null hypothesis ($p > 0.05$) due to tiny sample size is conflated with proof of no effect; and (3) the TCGA survival analyses (Extended Data Figure 4A,D) use inconsistent and arbitrary sample subsets ($n = 83$ split into 4 quartiles for MBL vs. only $n = 33$ total patients split into high [$n = 18$] and low [$n = 15$] for C3) out of the ~178 TCGA-PAAD patients without explanation.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Disclose Negative Control Sequencing Profiles, Apply Decontamination Filtering, and Establish Minimum Read-Depth Cutoffs
+* **WHY:** With 93.57% non-fungal reads and only 636 total fungal reads across all human pancreatic tissue samples (~35 reads/sample), diversity metrics and *Malassezia* relative abundances in human tissue are indistinguishable from reagent/skin contamination ("kitome") unless negative controls are transparently analyzed.
+* **WHAT:** Report the read depth and taxonomic composition (specifically *Malassezia* counts) of all reagent-only negative controls and mock community controls sequenced alongside the tissue samples, run formal statistical decontamination (`decontam` R package), and apply a minimum sequencing depth threshold (e.g., $\ge 500\text{–}1,000$ fungal reads/sample) before computing alpha/beta diversity.
+* **HOW:** Publish the full OTU count table including all negative/reagent blank controls, run `isContaminant(method = "prevalence")` in `decontam`, and re-evaluate whether human pancreatic tissue samples retain sufficient non-contaminant fungal reads to support Figure 2A–E.
+
+#### 2. Replace Uncorrected Pairwise $t$-Tests with Multi-Group Parametric/Non-Parametric Tests and Power the Epistasis Controls
+* **WHY:** Applying uncorrected two-tailed Student's $t$-tests across 3- to 5-group experiments (Figures 1E, 3C, 3D, 4G, 4H, Extended Data Figures 3E, 4A) inflates the family-wise Type I error rate, while using $n = 3\text{–}4$ mice in `MBL-null` and `C3-/-` antifungal/repopulation arms (Extended Data Figure 4B–C, Figure 4H) has <20% statistical power to detect a 50% tumor reduction and does not test the `Genotype × Treatment` interaction.
+* **WHAT:** Re-analyze all multi-group comparisons using one-way ANOVA with Dunnett's or Tukey's post-hoc test (or Kruskal–Wallis with Dunn's test for skewed/small-$n$ data), and test the epistasis claim in Figure 4H and Extended Data Figure 4B–C using a two-way ANOVA (`Genotype × Antifungal/Repopulation` interaction term) on pooled replicates rather than selecting a single $n = 3\text{–}4$ representative run.
+* **HOW:** Since the captions for Extended Data Figure 4B–C and Figure 4H state that *"Data are representative of 3 separate experiments"* or *"repeated twice"*, pool all biological replicates across the independent experimental runs (including `Experiment` as a blocking factor in a two-way linear model) and report the `Genotype × Treatment` interaction $P$-value.
+
+#### 3. Separate Reused `KC` Control Data and Clarify TCGA Sample Selection
+* **WHY:** Reusing the $n = 11$ vehicle-gavaged `KC` control mice from Figure 3A as the comparison group for untreated genetic `KC;MBL-null` mice in Figure 4A violates experimental independence (vehicle oral gavage + antibiotic water protocol vs. unmanipulated genetic cross littermates), and analyzing only $n = 33$ TCGA patients for *C3* expression vs. $n = 83$ for *MBL2* raises cherry-picking concerns.
+* **WHAT:** Compare `KC;MBL-null` mice against their own true contemporary `KC;MBL+/+` littermates (as stated in Methods line 16: *"Littermates were used as controls"*), and re-run the TCGA-PAAD Kaplan–Meier log-rank tests across the full curated TCGA-PAAD cohort ($n \approx 150\text{–}178$) using a uniform median or quartile split (and continuous Cox proportional hazards regression) for both *MBL2* and *C3*.
+* **HOW:** Plot the actual `KC` littermates of the `KC;MBL-null` cross in Figure 4A, and report Cox regression hazard ratios and log-rank $P$-values for *MBL2*, *C3*, and *C3AR1* across all primary PDA tumors in TCGA-PAAD.
+
+#### 4. Technical and Terminology Corrections
+* **WHY:** Several molecular biology definitions and undocumented data exclusions in the Methods are inaccurate.
+* **WHAT & HOW:**
+  1. **Methods ("Fungal DNA extraction and sequencing", line 51) & Figure Captions (lines 73, 76, 77):** Correct the phrase `"the ITS1 region of the 18S rRNA gene"` and `"18S ITS sequencing"`. The Internal Transcribed Spacer 1 (ITS1) is the non-coding spacer region located *between* the 18S and 5.8S rRNA genes, not a subregion of the 18S rRNA gene.
+  2. **Methods ("Bioinformatics and Statistical analyses", line 56):** Document the exact statistical definition and number of samples removed under *"samples identified as outliers were removed"*.
+  3. **Methods ("C3aR Knockdown", line 26):** Correct the puromycin selection concentration from `2 μg/ul` (which is $2,000\ \mu\text{g/ml}$, a 1,000-fold lethal overdose for mammalian cells) to `2 μg/ml`.

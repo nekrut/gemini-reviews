@@ -1,0 +1,25 @@
+{
+  "id": "PMC10513199",
+  "pmid": "37695773",
+  "doi": "10.1371/journal.ppat.1011294",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10513199/",
+  "title": "Adaptive evolution in virulence effectors of the rice blast fungus Pyricularia oryzae",
+  "authors": "Le Naour-Vernet M, Charriat F, Gracy J, Cros-Arteil S, Ravel S, Veillet F, Meusnier I, Padilla A, Kroj T, Cesari S, Gladieux P.",
+  "authors_short": "Le Naour-Vernet M et al. (Gladieux P.)",
+  "venue": "PLoS Pathog (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C41",
+  "anon_id": "ANON_194",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.9,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.8,
+    "overall": 8.8
+  },
+  "tier": "Strong / Sound"
+}

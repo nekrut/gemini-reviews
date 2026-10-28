@@ -1,0 +1,25 @@
+{
+  "id": "PMC8479118",
+  "pmid": "34584091",
+  "doi": "10.1038/s41467-021-25960-2",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8479118/",
+  "title": "Confronting false discoveries in single-cell differential expression",
+  "authors": "Squair JW, Gautier M, Kathe C, Anderson MA, James ND, Hutson TH, Hudelle R, Qaiser T, Matson KJE, Barraud Q, Levine AJ, La Manno G, Skinnider MA, Courtine G.",
+  "authors_short": "Squair JW et al. (Courtine G.)",
+  "venue": "Nat Commun (2021)",
+  "year": 2021,
+  "cohort": "B",
+  "cohort_id": "B44",
+  "anon_id": "ANON_98",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.4,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.5
+  },
+  "tier": "Exemplary"
+}

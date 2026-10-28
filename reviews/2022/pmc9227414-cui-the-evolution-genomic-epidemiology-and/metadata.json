@@ -1,0 +1,25 @@
+{
+  "id": "PMC9227414",
+  "pmid": "35746707",
+  "doi": "10.3390/v14061236",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9227414/",
+  "title": "The Evolution, Genomic Epidemiology, and Transmission Dynamics of Tembusu Virus",
+  "authors": "Cui Y, Pan Y, Guo J, Wang D, Tong X, Wang Y, Li J, Zhao J, Ji Y, Wu Z, Zeng P, Zhou J, Feng X, Hou L, Liu J.",
+  "authors_short": "Cui Y et al. (Liu J.)",
+  "venue": "Viruses (2022)",
+  "year": 2022,
+  "cohort": "C",
+  "cohort_id": "C34",
+  "anon_id": "ANON_158",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.1,
+    "claims": 1.0,
+    "biology": 1.1,
+    "reproducibility": 1.0,
+    "overall": 4.2
+  },
+  "tier": "Flawed / Overstated"
+}

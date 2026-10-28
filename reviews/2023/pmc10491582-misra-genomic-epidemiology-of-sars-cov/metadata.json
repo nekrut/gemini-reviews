@@ -1,0 +1,25 @@
+{
+  "id": "PMC10491582",
+  "pmid": "37684328",
+  "doi": "10.1038/s41598-023-42065-6",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10491582/",
+  "title": "Genomic epidemiology of SARS-CoV-2 from Uttar Pradesh, India",
+  "authors": "Misra G, Manzoor A, Chopra M, Upadhyay A, Katiyar A, Bhushan B, Anvikar A.",
+  "authors_short": "Misra G et al. (Anvikar A.)",
+  "venue": "Sci Rep (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C31",
+  "anon_id": "ANON_147",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.9,
+    "claims": 1.0,
+    "biology": 1.0,
+    "reproducibility": 0.9,
+    "overall": 3.8
+  },
+  "tier": "Flawed / Overstated"
+}

@@ -1,0 +1,54 @@
+# Review of ANON_159
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **9.1 / 10.0** (Exemplary)  
+* **Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.2/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.9/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript presents a purpose-built, highly replicated RNA-seq benchmarking experiment in *Saccharomyces cerevisiae* comparing 48 wild-type (WT) and 48 $\Delta snf2$ mutant biological replicates prepared in a randomized balanced block design with ERCC spike-in controls across seven Illumina HiSeq 2000 lanes (yielding 42 WT and 44 $\Delta snf2$ clean replicates and ~889 million aligned reads after quality control). Using this dataset, the authors evaluate the statistical power (true positive rate, TPR) and Type I error control of 11 widely used differential gene expression (DGE) tools (`baySeq`, `cuffdiff`, `DEGSeq`, `DESeq`, `DESeq2`, `EBSeq`, `edgeR` in exact and GLM modes, `limma`, `NOISeq`, `PoissonSeq`, and `SAMSeq`) alongside five standard statistical tests ($t$-test, log-ratio $t$-test, Mann–Whitney, permutation, and Studentized bootstrap) across replicate numbers $n_r = 2\dots 40$ and $\log_2$ fold-change thresholds $T \in \{0, 0.3, 0.5, 1, 2\}$. They show that at $n_r = 3$, nine of the 11 tools detect only 20%–40% of all differentially expressed genes identified in the full 42/44-replicate dataset (though $>85\%$ of genes with $\ge 4$-fold change), and recommend at least 6 biological replicates per condition in general (and $\ge 12$ when detecting small fold changes is required), favoring `edgeR` (exact) or `DESeq2` for $n_r < 12$ and `DESeq` for $n_r > 12$.
+
+This is a landmark empirical dataset and benchmarking study executed with high experimental and computational rigor, complete open-data deposition (ENA `PRJEB5348`), and open-source reproducibility (`github.com/bartongroup/profDGE48`). There are three methodological caveats that should be clarified to strengthen the statistical precision of the paper: (1) throughout the Abstract and Figure 1D, the authors conflate the False Discovery Rate ($\text{FDR} = \text{FP}/(\text{FP}+\text{TP})$) with the False Positive Rate ($\text{FPR} = \text{FP}/(\text{FP}+\text{TN})$, Equation 2); (2) in the $\Delta snf2$ vs. WT comparison, 60%–75% of all 7,126 yeast genes are called significantly differentially expressed at full replication, which violates the core assumption of default endogenous read-count normalizations (that the majority of genes are non-DE), yet the ERCC spike-ins included in the libraries were not used to validate the gold-standard normalization; and (3) subsampling without replacement from a finite pool of 42/44 replicates means that for large $n_r$ ($n_r \ge 20$), bootstrap subsamples share a large fraction of replicates with one another and with the full-dataset gold standard.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **With $n_r = 3$ biological replicates, properly calibrated DGE tools capture $>85\%$ of genes changing by $>4$-fold ($T = 2$) but only 20%–40% of all SDE genes ($T = 0$), requiring $\ge 12\text{--}20$ replicates to recover the majority of small-fold-change genes: [Well Supported].**  
+  Across 100 random subsamples per $n_r$, sensitivity curves consistently demonstrate that power is high at $n_r = 3$ for large effect sizes ($|\log_2\text{FC}| \ge 2$) across nine tools, whereas detecting smaller effect sizes ($|\log_2\text{FC}| < 0.5$) requires substantially higher replication (Figures 1B–C, 2A–F). Because biological replicate correlation in batch-grown yeast is exceptionally high ($R > 0.97$), the authors rightly note that these replicate numbers represent a lower bound (best-case scenario) for outbred or clinical studies.
+
+* **In null WT-versus-WT resampling tests, `DESeq`, `DESeq2`, `EBSeq`, `edgeR`, `limma`, and `baySeq` adequately control false positives across replicate numbers, whereas `DEGSeq`, `NOISeq`, and `SAMSeq` exhibit inflated false positive rates: [Well Supported].**  
+  Drawing disjoint pairs of replicate sets of size $n_r = 3\dots 20$ from the 42 clean WT samples provides a clean, model-free empirical null distribution (Figure 4). Under this true null, `DEGSeq` flags a median of ~50% of all genes as false positives across all $n_r$, and `NOISeq` and `SAMSeq` frequently exceed the 5% threshold, whereas `DESeq`, `EBSeq`, `baySeq`, `edgeR`, `DESeq2`, and `limma` remain well-controlled.
+
+* **At full replication ($n_r = 42\text{ vs. }44$), `DESeq2`, `edgeR` (exact), `limma`, `DESeq`, `EBSeq`, and `cuffdiff` converge with nonparametric permutation/bootstrap/Mann–Whitney tests on a common set of differentially expressed genes: [Moderately Supported].**  
+  Hierarchical clustering of binary SDE vectors with `pvclust` (Figure 3) shows strong agreement between parametric negative-binomial/log-normal tools (`DESeq2`, `edgeR` exact, `limma`) and distribution-free rank/resampling tests (`Mann–Whitney`, `permutation`, `bootstrap`). However, because 60%–75% of the entire yeast transcriptome is called SDE in the $\Delta snf2$ mutant (a global chromatin remodeler knockout) and all tools/tests were run on endogenous count-normalized data, part of this high SDE fraction may reflect global normalization shift rather than true absolute per-cell mRNA changes. Furthermore, it is notable in Figure 3 that `edgeR (GLM)` clusters far away in Cluster 2 (with `DEGSeq` and `NOISeq`) rather than with `edgeR (exact)` in Cluster 3; this unexpected divergence between `edgeR`'s two modes on a simple two-group design warrants direct explanation.
+
+* **Nine of the 11 evaluated tools control their False Discovery Rate (FDR) at $\lesssim 5\%$ across all replicate numbers and fold-change thresholds: [Overstated].**  
+  In the Abstract (line 8) and Figure 1D caption (line 53), the authors state that the tools control their "false discovery rate (FDR)" at $\lesssim 5\%$, citing the dashed blue curve in Figure 1B,C and the bar plots in Figure 2. However, the quantity plotted in Figures 1 and 2 is defined in Equation 2 (line 165) as $\text{FPR}(n_r, T) = \text{FP} / (\text{FP} + \text{TN})$—the **False Positive Rate** (specificity complement), not the **False Discovery Rate** ($\text{FDR} = \text{FP} / (\text{FP} + \text{TP})$). Furthermore, in the null WT vs. WT test (Figure 4), all positives are false positives ($\text{TP} = 0$, so $\text{FDR} = 100\%$ whenever at least one gene is called SDE), and Figure 4 plots the fraction of total genes called SDE ($\text{FP} / 7126$, which is the family-wise false positive proportion).
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Distinguish False Positive Rate (FPR) from False Discovery Rate (FDR) and Report Empirical FDR
+* **WHY:** Equation 2 defines $\text{FPR}(n_r, T) = \text{FP}(n_r, T) / [\text{FP}(n_r, T) + \text{TN}(n_r, T)]$, yet the Abstract (line 8) and Figure 1D caption refer to this metric as the "false discovery rate (FDR)." When $n_r = 3$ and $T = 0$, $\text{TP}$ is small (20%–40% of gold-standard positives), so the actual empirical FDR ($\text{FP} / [\text{FP} + \text{TP}]$) against the tool's gold standard is larger than the FPR ($\text{FP} / [\text{FP} + \text{TN}]$).
+* **WHAT & HOW:**
+  1. Revise the Abstract (line 8) and Figure 1D caption to state "false positive rate (FPR)" where Equation 2 is referenced.
+  2. Using the existing SQLite database of bootstrap TP and FP counts, compute the empirical false discovery proportion $\text{FDP}(n_r, T) = \text{FP}(n_r, T) / [\text{FP}(n_r, T) + \text{TP}(n_r, T)]$ against each tool's 42/44-replicate gold standard, and report whether empirical FDP is controlled at the nominal $\alpha = 0.05$ Benjamini–Hochberg level across $n_r$.
+
+#### 2. Use the ERCC Spike-In Controls to Audit the 60%–75% SDE Gold-Standard Call Rate
+* **WHY:** In the Methods ("Library preparation, spike-in addition, and sequencing", line 136), the authors added ERCC spike-in mixes 1 and 2 to every library specifically *"to allow external calibration of the RNA concentrations in each sample and of the measured fold changes,"* and in "Tool details" (line 146) they warn that default normalizations fail if $>50\%$ of genes change expression. Since 60%–75% of all yeast genes are called SDE in $\Delta snf2$, endogenous normalization (TMM / DESeq median-of-ratios) may be skewed by global transcriptional dampening in the chromatin-remodeler mutant.
+* **WHAT:** Compare the endogenous DESeq normalization factors against size factors derived from the ERCC spike-in reads (or known ERCC fold changes) to verify whether the 60%–75% SDE rate in the gold standard is affected by normalization bias.
+* **HOW:** Compute library size factors from the ERCC spike-in counts, re-run `DESeq2` and `edgeR` on the full 42 vs. 44 dataset using spike-in size factors, and report the resulting fraction of SDE genes and concordance with the default-normalized gold standard.
+
+#### 3. Investigate and Explain Why `edgeR (GLM)` Clusters Away from `edgeR (exact)` in Figure 3
+* **WHY:** For a simple two-condition design without covariates, `edgeR (exact)` and `edgeR (GLM)` fit the same negative binomial model and typically produce nearly identical gene rankings. Yet in Figure 3 (line 68), `edgeR (exact)` clusters tightly with `DESeq2` and `limma` (Cluster 3), whereas `edgeR (GLM)` clusters as an outlier with `DEGSeq`, `NOISeq`, and `baySeq` (Cluster 2).
+* **WHAT & HOW:** Inspect the pipeline script in `profDGE48` to check how dispersion estimation (`estimateCommonDisp` / `estimateTagwiseDisp` vs. `estimateGLMCommonDisp` / `estimateGLMTrendedDisp` / `estimateGLMTagwiseDisp`) and likelihood ratio testing (`glmLRT` vs. `glmQLFTest`) were invoked for `edgeR (GLM)` on the full dataset, and explain in the section "Tool consistency with high replicate data" why `edgeR (GLM)` diverged from `edgeR (exact)`.
+
+#### 4. Clarify Bootstrap Aggregation and Finite-Pool Subsampling Overlap
+* **WHY:** Two descriptions of the bootstrap TPR/FPR calculation conflict: Results (line 42) states that each gene's *median adjusted P-value across the 100 iterations* was compared to 0.05 to call SDE genes, whereas Methods (line 155) states that TP, TN, FP, and FN were counted *within each individual bootstrap run* and then averaged across the 100 runs. Additionally, sampling $n_r$ replicates without replacement from $N = 42$ means that for $n_r > 21$, every subsample shares at least $2n_r - 42$ replicates with every other subsample.
+* **WHAT & HOW:** Reconcile line 42 with line 155 so the text accurately describes the calculation in Equations 1–4, and add a brief note in the Methods noting that variance bands (1 SD) narrow mechanically as $n_r \to 40$ due to finite-population sampling overlap with the 42-replicate pool.

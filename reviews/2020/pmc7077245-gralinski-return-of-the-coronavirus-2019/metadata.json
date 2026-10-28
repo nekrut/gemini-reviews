@@ -1,0 +1,25 @@
+{
+  "id": "PMC7077245",
+  "pmid": "31991541",
+  "doi": "10.3390/v12020135",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7077245/",
+  "title": "Return of the Coronavirus: 2019-nCoV",
+  "authors": "Gralinski LE, Menachery VD.",
+  "authors_short": "Gralinski LE & Menachery VD.",
+  "venue": "Viruses (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A36",
+  "anon_id": "ANON_195",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.1,
+    "claims": 1.7,
+    "biology": 1.6,
+    "reproducibility": 1.3,
+    "overall": 6.7
+  },
+  "tier": "Mixed / Salvageable"
+}

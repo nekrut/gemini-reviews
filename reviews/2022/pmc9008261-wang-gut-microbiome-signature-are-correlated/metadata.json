@@ -1,0 +1,25 @@
+{
+  "id": "PMC9008261",
+  "pmid": "35433497",
+  "doi": "10.3389/fcimb.2022.827575",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9008261/",
+  "title": "Gut Microbiome Signature Are Correlated With Bone Mineral Density Alterations in the Chinese Elders",
+  "authors": "Wang Y, Gao X, Lv J, Zeng Y, Li Q, Wang L, Zhang Y, Gao W, Wang J.",
+  "authors_short": "Wang Y et al. (Wang J.)",
+  "venue": "Front Cell Infect Microbiol (2022)",
+  "year": 2022,
+  "cohort": "C",
+  "cohort_id": "C14",
+  "anon_id": "ANON_66",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.5,
+    "claims": 1.3,
+    "biology": 1.3,
+    "reproducibility": 1.4,
+    "overall": 5.5
+  },
+  "tier": "Mixed / Salvageable"
+}

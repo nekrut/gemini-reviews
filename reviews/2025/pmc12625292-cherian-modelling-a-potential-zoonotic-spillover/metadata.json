@@ -1,0 +1,25 @@
+{
+  "id": "PMC12625292",
+  "pmid": "41250131",
+  "doi": "10.1186/s12889-025-25358-5",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12625292/",
+  "title": "Modelling a potential zoonotic spillover event of H5N1 influenza",
+  "authors": "Cherian P, Menon GI.",
+  "authors_short": "Cherian P & Menon GI.",
+  "venue": "BMC Public Health (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C39",
+  "anon_id": "ANON_131",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.1,
+    "claims": 1.7,
+    "biology": 1.2,
+    "reproducibility": 1.8,
+    "overall": 6.8
+  },
+  "tier": "Mixed / Salvageable"
+}

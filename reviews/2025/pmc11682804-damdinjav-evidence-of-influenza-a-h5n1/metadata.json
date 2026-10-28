@@ -1,0 +1,25 @@
+{
+  "id": "PMC11682804",
+  "pmid": "39661025",
+  "doi": "10.3201/eid3101.241266",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11682804/",
+  "title": "Evidence of Influenza A(H5N1) Spillover Infections in Horses, Mongolia",
+  "authors": "Damdinjav B, Raveendran S, Mojsiejczuk L, Ankhanbaatar U, Yang J, Sadeyen JR, Iqbal M, Perez DR, Rajao DS, Park A, Viana M, Murcia PR.",
+  "authors_short": "Damdinjav B et al. (Murcia PR.)",
+  "venue": "Emerg Infect Dis (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C04",
+  "anon_id": "ANON_58",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.5,
+    "biology": 1.6,
+    "reproducibility": 1.1,
+    "overall": 6.1
+  },
+  "tier": "Mixed / Salvageable"
+}

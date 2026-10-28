@@ -1,0 +1,25 @@
+{
+  "id": "PMC8240556",
+  "pmid": "34077752",
+  "doi": "10.1016/j.cell.2021.04.039",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8240556/",
+  "title": "Microbial exposure during early human development primes fetal immune cells",
+  "authors": "Mishra A, Lai GC, Yao LJ, Aung TT, Shental N, Rotter-Maskowitz A, Shepherdson E, Singh GSN, Pai R, Shanti A, Wong RMM, Lee A, Khyriem C, Dutertre CA, Chakarov S, Srinivasan KG, Shadan NB, Zhang XM, Khalilnezhad S, Cottier F, Tan ASM, Low G, Chen P, Fan Y, Hor PX, Lee AKM, Choolani M, Vermijlen D, Sharma A, Fuks G, Straussman R, Pavelka N, Malleret B, McGovern N, Albani S, Chan JKY, Ginhoux F.",
+  "authors_short": "Mishra A et al. (Ginhoux F.)",
+  "venue": "Cell (2021)",
+  "year": 2021,
+  "cohort": "A",
+  "cohort_id": "A28",
+  "anon_id": "ANON_128",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 0.8,
+    "biology": 0.8,
+    "reproducibility": 1.2,
+    "overall": 4.0
+  },
+  "tier": "Flawed / Overstated"
+}

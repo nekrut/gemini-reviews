@@ -1,0 +1,25 @@
+{
+  "id": "PMC7196762",
+  "pmid": "32269081",
+  "doi": "10.1073/pnas.2004999117",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7196762/",
+  "title": "Phylogenetic network analysis of SARS-CoV-2 genomes",
+  "authors": "Forster P, Forster L, Renfrew C, Forster M.",
+  "authors_short": "Forster P et al. (Forster M.)",
+  "venue": "Proc Natl Acad Sci U S A (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A03",
+  "anon_id": "ANON_45",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.6,
+    "claims": 0.4,
+    "biology": 0.5,
+    "reproducibility": 0.9,
+    "overall": 2.4
+  },
+  "tier": "Fundamentally Invalid"
+}

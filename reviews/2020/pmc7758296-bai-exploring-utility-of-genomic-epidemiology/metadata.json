@@ -1,0 +1,25 @@
+{
+  "id": "PMC7758296",
+  "pmid": "33391821",
+  "doi": "10.1093/ve/veaa097",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7758296/",
+  "title": "Exploring utility of genomic epidemiology to trace origins of highly pathogenic influenza A/H7N9 in Guangdong",
+  "authors": "Bai R, Sikkema RS, Munnink BBO, Li CR, Wu J, Zou L, Jing Y, Lu J, Yuan RY, Liao M, Koopmans M, Ke CW.",
+  "authors_short": "Bai R et al. (Ke CW.)",
+  "venue": "Virus Evol (2020)",
+  "year": 2020,
+  "cohort": "C",
+  "cohort_id": "C32",
+  "anon_id": "ANON_120",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.6,
+    "biology": 1.5,
+    "reproducibility": 1.3,
+    "overall": 6.3
+  },
+  "tier": "Mixed / Salvageable"
+}

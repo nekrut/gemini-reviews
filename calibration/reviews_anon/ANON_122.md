@@ -1,0 +1,62 @@
+# Review of ANON_122
+
+**Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
+**Authors:** [REDACTED FOR BLINDED REVIEW]  
+**Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
+**Overall Score:** **6.2 / 10.0** (Mixed / Salvageable)  
+* **Score Breakdown:** Rigor: 1.9/3.5 | Claims: 1.5/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.2/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This study evaluates whether adding a polygenic risk score for cardiovascular disease (CVD-PRS, comprising 2,829,817 non-zero SNP weights derived via LDpred) in the form of an integrated risk tool (IRT) to standard clinical risk scores (QRISK2, ASCVD-PCE, and SCORE2) increases the proportion of future major CVD cases identified as high risk ($\ge 10\%$ 10-year QRISK2 risk) at a primary-care UK National Health Service Health Check (NHSHC). Within the GENVASC cohort (44,141 individuals aged 40–74 recruited across 147 general practices between 2012 and 2020), the authors conducted a nested case-control analysis when 195 incident major CVD events had accrued, matching 396 controls (2:1) via propensity scores on age, sex, ethnicity, smoking, BMI, and baseline QRISK2 score. They report that standardized CVD-PRS was higher in cases than controls ($0.32$ vs. $-0.18$, $P = 8.28 \times 10^{-9}$) and that classifying individuals as high risk if *either* QRISK2 *or* IRT was $\ge 10\%$ increased case sensitivity from $61.5\%$ to $68.7\%$ overall ($+7.2\%$ absolute, $+11.7\%$ relative, $P = 1 \times 10^{-4}$) and from $26.0\%$ to $38.4\%$ ($+47.7\%$ relative, $P = 0.001$) in individuals aged 40–54 years. Underlying data are available only upon request, and the PRS/IRT weights are proprietary.
+
+Embedding genetic evaluation within an operational primary-care prevention program (NHSHC) is an important practical step beyond research biobanks. However, the study design and headline framing suffer from two core methodological issues that distort the apparent clinical gain: (1) **asymmetric one-way reclassification ("QRISK2 OR IRT"):** the headline $+7.2\%$ ($+11.7\%$ relative) sensitivity increase is obtained by using the IRT strictly to *up-classify* individuals while ignoring all IRT *down-classifications*; when the IRT is evaluated symmetrically on its own (both up- and down-classifying cases, reported deep in the Results on page 10), it down-classifies $6.1\%$ of cases, reducing the net case reclassification improvement (case-NRI) from $+7.2\%$ to just **$+1.1\%$** ($+2.1$ net cases out of 195); and (2) **collider/propensity-matching bias in controls:** matching event-free controls to cases on high baseline QRISK2 scores ($\text{mean } 11.6\%$, with $52.8\%$ of controls at $\ge 10\%$ risk) selects controls who remained disease-free despite high clinical risk factors, depressing the control mean standardized PRS to $-0.18$ (and $-0.26$ in ages 55+) well below the population mean of $0.0$ and biasing case–control odds ratios. Because no unselected cohort sample was genotyped to directly estimate false-positive up-classification in GENVASC, reframing the abstract/conclusions around symmetric reclassification and correcting for matching-induced selection bias are essential.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Combining QRISK2 with the IRT ("high risk by either QRISK2 or IRT") increases the sensitivity of identifying future CVD cases from 61.5% to 68.7% (+11.7% relative) overall and from 26.0% to 38.4% (+47.7% relative) in 40–54-year-olds: [Overstated].**  
+  While the arithmetic for the one-way logical `OR` rule ($\max(\text{QRISK2}, \text{IRT}) \ge 10\%$) is accurate (14 of 75 cases with QRISK2 $<10\%$ are up-classified), any compound `OR` rule is mathematically guaranteed to have a sensitivity greater than or equal to QRISK2 alone ($p$-values from `DTComPair` test whether $\Pr(\text{IRT} \ge 10\% \mid \text{QRISK2} < 10\%, \text{Case}) > 0$) while monotonically decreasing specificity. Crucially, the Abstract and Conclusions omit the fact—reported only at the end of the Results—that the IRT simultaneously down-classified $6.1\%$ of cases (12 cases) who had QRISK2 $\ge 10\%$, yielding a true symmetric case-NRI for the IRT of only **$+1.1\%$** overall (just 2 net additional cases out of 195) and $+9.7\%$ in ages 40–54. Furthermore, as noted in the Discussion, simply lowering the clinical QRISK2 threshold from $10.0\%$ to $8.3\%$ without genetic testing captures the exact same $+7.2\%$ of cases.
+
+* **The standardised CVD-PRS distribution is significantly higher in cases ($0.32$) than in propensity-matched controls ($-0.18$, $P = 8.28 \times 10^{-9}$), and cases have 2.41-fold higher odds of up-classification than controls ($P = 0.031$): [Fragile].**  
+  The CVD-PRS was standardized to zero mean and unit variance against an external population reference (1000 Genomes). Why, then, do the 396 GENVASC controls have a mean PRS of **$-0.18$** overall and **$-0.26$** among those aged 55+ (Figure 1A, 1D)? Because controls were propensity-matched to CVD cases on baseline clinical risk (mean QRISK2 $= 11.6\%$, $34\%$ current/ex-smokers, $61\%$ male) yet were required to remain event-free during follow-up. Conditioning on the absence of a CVD event ($Y = 0$) at fixed high clinical risk ($C$) induces negative collider bias between clinical risk and genetic risk ($G$), depleting high-PRS individuals from the matched control pool. Consequently, roughly $36\%$ of the $0.50\text{ SD}$ case–control difference ($0.32 - (-0.18) = 0.50\text{ SD}$) comes from the depressed control mean ($-0.18\text{ SD}$), which also inflates the case-vs-control up-classification odds ratio ($\text{OR} = 2.41$, $95\%\text{ CI } 1.03\text{--}5.64$).
+
+* **The CVD-PRS and IRT perform equally well in non-white ethnicities ($n = 44$ cases) compared with white ethnicity ($n = 151$ cases, $P = 0.59$): [Fragile].**  
+  Concluding that there is "no significant difference in the performance of our CVD-PRS in non-white ethnicities" based on $P = 0.59$ with only 44 non-white cases (and an up-classification OR of $7.97$ with a $95\%$ CI spanning $1.18$ to $90.88$) conflates low statistical power in a small subgroup with evidence of cross-ancestry equivalence.
+
+* **Applying the QRISK2 + IRT one-way up-classification rule in GENVASC outpaces random population up-classification estimated from the external HEART study (7.2% vs. 2.5% expected): [Moderately Supported].**  
+  Because the nested case-control design matched controls on QRISK2, the authors could not estimate the population false-positive up-classification rate directly within GENVASC and instead imported an up-classification rate of $6.4\%$ ($43/671$) from a separate study (HEART, $N = 832$). While this comparison is informative, differences in age, ethnicity, and deprivation distributions between GENVASC and HEART introduce unpropagated external transportability uncertainty, and the non-case NRI (specificity loss) within GENVASC itself remains unmeasured.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Report Both Symmetric IRT Performance (Case-NRI) and Matched-Control Non-Case NRI in the Abstract and Main Tables
+* **WHY:** Highlighting only the one-way upward reclassification ($+7.2\%$ absolute / $+11.7\%$ relative) in the Abstract while relegating the $6.1\%$ downward reclassification of cases (which reduces net case-NRI to $+1.1\%$) to the end of the Results gives readers an incomplete picture of the IRT's calibration and discrimination.
+* **WHAT:** Explicitly report the symmetric IRT sensitivity ($62.6\%$, case-NRI $= +1.1\%$) alongside the one-way "QRISK2 OR IRT" sensitivity ($68.7\%$) in the Abstract, Results, and Figure 3, and report the exact up- and down-classification counts for both the 195 cases and the 396 matched controls in a $2 \times 2$ reclassification table.
+* **HOW:** Add a formal Reclassification Table (Table 2) stratified by Cases ($N = 195$) and Propensity-Matched Controls ($N = 396$) showing the exact numbers of individuals moving from $<10\%$ to $\ge 10\%$ and from $\ge 10\%$ to $<10\%$ under the IRT across all ages and in ages 40–54, together with the matched-control specificity cost under the one-way `OR` rule.
+
+#### 2. Quantify and Correct for Propensity-Matching Collider Bias in the Control PRS Distribution
+* **WHY:** Matching event-free controls to cases on baseline QRISK2 (which includes lipids, blood pressure, smoking, diabetes, age, and sex—several of which partially mediate or correlate with polygenic risk) shifts the control mean PRS down to $-0.18\text{ SD}$ ($P < 0.001$ vs. the population reference mean of $0.0$).
+* **WHAT:** Test the case–control PRS distribution against the population-standardized reference mean ($0.0$) and re-weight the 396 controls back to the baseline QRISK2 distribution of the full 44,141 GENVASC cohort using inverse probability of sampling weights (IPSW).
+* **HOW:** Since baseline QRISK2, age, sex, and ethnicity are known electronically for all 44,141 GENVASC participants, compute sampling weights $w_i = \Pr(\text{QRISK2}_i, \text{Age}_i, \text{Sex}_i \text{ in full GENVASC non-cases}) / \Pr(\text{sampled into matched controls})$ for the 396 controls. Use these weights to estimate the population-representative control mean PRS, the population false-positive up-classification rate (eliminating the need to rely solely on the external HEART study), and the weighted net reclassification index (NRI).
+
+#### 3. Benchmark the One-Way "QRISK2 OR IRT" Rule Against an Optimally Lowered QRISK2 Threshold at Matched Specificity
+* **WHY:** Because the one-way `OR` rule increases sensitivity by expanding the total number of individuals flagged as high risk (by $\sim 5.2\%$ of the population), a symmetric baseline comparison requires evaluating QRISK2 alone at the threshold ($8.3\%$) that flags the same total number of individuals or achieves the same sensitivity.
+* **WHAT:** Compare the positive predictive value / odds ratio of up-classification under `QRISK2 >= 10% OR IRT >= 10%` directly against `QRISK2 >= 8.3%` within the 75 cases and 187 controls who had baseline QRISK2 $<10\%$.
+* **HOW:** Among the 75 cases and 187 controls with baseline QRISK2 $<10\%$, tabulate how many cases and controls have QRISK2 $\in [8.3\%, 10.0\%)$ versus IRT $\ge 10\%$, and test whether the IRT up-classifies significantly fewer controls (false positives) than simply lowering the QRISK2 cutoff to $8.3\%$ when fixed at 14 up-classified cases.
+
+#### 4. Temper Cross-Ethnicity Equivalence Claims and Exclude Prevalent Statin Users from the Primary Prevention Headline
+* **WHY:** With only 44 non-white cases, the study is underpowered to detect moderate cross-ancestry attenuation ($P = 0.59$), and $11.3\%$ of cases ($22/195$) and $10.1\%$ of controls ($40/396$) were already taking statins prior to their NHSHC (meaning they were already receiving pharmacotherapy despite the NHSHC aiming to identify untreated high-risk individuals).
+* **WHAT:** Frame the non-white subgroup analysis as exploratory with wide confidence intervals, and present the statin-naive subgroup ($n = 173$ cases, $n = 356$ controls) alongside the full cohort in Table 1 and Figure 3.
+* **HOW:** Report the minimal detectable difference (at $80\%$ power, $\alpha = 0.05$) between white ($n = 151$) and non-white ($n = 44$) case–control PRS effect sizes in the Results, and add the statin-free sensitivity bars directly to Figure 3.
+
+#### 5. Technical, Mathematical, and Editorial Cleanup
+* **WHY:** Minor inconsistencies in percentages and typographical errors appear in the text.
+* **WHAT & HOW:**
+  1. **Results — Incremental value section (Paragraph 3, line 155):** The text states *"due to up classification of an additional 9/54 (18.7%) cases who had a QRISK2 score of <10%"*; However, $9 / 54 = 16.7\%$, not $18.7\%$ ($18.7\%$ was copy-pasted from $14 / 75 = 18.7\%$ in Paragraph 1!). Correct `(18.7%)` to `(16.7%)`.
+  2. **Results — Subjects (Paragraph 1, line 79) vs. Table 1 (lines 91–94):** The text states *"62% were male and 76.5% were of white ethnicity"*, whereas Table 1 reports $64.6\%$ male in cases and $60.6\%$ in controls (pooled $366/591 = 61.9\%$) and $77.4\%$ white in cases and $76.3\%$ in controls (pooled $453/591 = 76.6\%$). Ensure consistent decimal rounding.
+  3. **Methods — Genotyping (line 64):** Fix typo *"polymoprhisms"* $\to$ *"polymorphisms"*, and remove the stray space in *"92, 618 227 variants"* (line 66).

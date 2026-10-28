@@ -1,0 +1,25 @@
+{
+  "id": "PMC5827966",
+  "pmid": "29097493",
+  "doi": "10.1126/science.aan4236",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5827966/",
+  "title": "Gut microbiome modulates response to anti-PD-1 immunotherapy in melanoma patients",
+  "authors": "Gopalakrishnan V, Spencer CN, Nezi L, Reuben A, Andrews MC, Karpinets TV, Prieto PA, Vicente D, Hoffman K, Wei SC, Cogdill AP, Zhao L, Hudgens CW, Hutchinson DS, Manzo T, Petaccia de Macedo M, Cotechini T, Kumar T, Chen WS, Reddy SM, Szczepaniak Sloane R, Galloway-Pena J, Jiang H, Chen PL, Shpall EJ, Rezvani K, Alousi AM, Chemaly RF, Shelburne S, Vence LM, Okhuysen PC, Jensen VB, Swennes AG, McAllister F, Marcelo Riquelme Sanchez E, Zhang Y, Le Chatelier E, Zitvogel L, Pons N, Austin-Breneman JL, Haydu LE, Burton EM, Gardner JM, Sirmans E, Hu J, Lazar AJ, Tsujikawa T, Diab A, Tawbi H, Glitza IC, Hwu WJ, Patel SP, Woodman SE, Amaria RN, Davies MA, Gershenwald JE, Hwu P, Lee JE, Zhang J, Coussens LM, Cooper ZA, Futreal PA, Daniel CR, Ajami NJ, Petrosino JF, Tetzlaff MT, Sharma P, Allison JP, Jenq RR, Wargo JA.",
+  "authors_short": "Gopalakrishnan V et al. (Wargo JA.)",
+  "venue": "Science (2018)",
+  "year": 2018,
+  "cohort": "B",
+  "cohort_id": "B30",
+  "anon_id": "ANON_178",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.0,
+    "claims": 1.5,
+    "biology": 1.6,
+    "reproducibility": 1.4,
+    "overall": 6.5
+  },
+  "tier": "Mixed / Salvageable"
+}

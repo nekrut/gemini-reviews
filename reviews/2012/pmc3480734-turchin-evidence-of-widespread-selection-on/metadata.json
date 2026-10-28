@@ -1,0 +1,25 @@
+{
+  "id": "PMC3480734",
+  "pmid": "22902787",
+  "doi": "10.1038/ng.2368",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3480734/",
+  "title": "Evidence of widespread selection on standing variation in Europe at height-associated SNPs",
+  "authors": "Turchin MC, Chiang CW, Palmer CD, Sankararaman S, Reich D, Genetic Investigation of ANthropometric Traits (GIANT) Consortium, Hirschhorn JN.",
+  "authors_short": "Turchin MC et al. (Hirschhorn JN.)",
+  "venue": "Nat Genet (2012)",
+  "year": 2012,
+  "cohort": "A",
+  "cohort_id": "A23",
+  "anon_id": "ANON_03",
+  "domain": "Population Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.6,
+    "claims": 1.9,
+    "biology": 1.5,
+    "reproducibility": 1.4,
+    "overall": 7.4
+  },
+  "tier": "Strong / Sound"
+}

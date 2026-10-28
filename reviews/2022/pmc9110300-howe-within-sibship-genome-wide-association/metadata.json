@@ -1,0 +1,25 @@
+{
+  "id": "PMC9110300",
+  "pmid": "35534559",
+  "doi": "10.1038/s41588-022-01062-7",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9110300/",
+  "title": "Within-sibship genome-wide association analyses decrease bias in estimates of direct genetic effects",
+  "authors": "Howe LJ, Nivard MG, Morris TT, Hansen AF, Rasheed H, Cho Y, Chittoor G, Ahlskog R, Lind PA, Palviainen T, van der Zee MD, Cheesman R, Mangino M, Wang Y, Li S, Klaric L, Ratliff SM, Bielak LF, Nygaard M, Giannelis A, Willoughby EA, Reynolds CA, Balbona JV, Andreassen OA, Ask H, Baras A, Bauer CR, Boomsma DI, Campbell A, Campbell H, Chen Z, Christofidou P, Corfield E, Dahm CC, Dokuru DR, Evans LM, de Geus EJC, Giddaluru S, Gordon SD, Harden KP, Hill WD, Hughes A, Kerr SM, Kim Y, Kweon H, Latvala A, Lawlor DA, Li L, Lin K, Magnus P, Magnusson PKE, Mallard TT, Martikainen P, Mills MC, Njølstad PR, Overton JD, Pedersen NL, Porteous DJ, Reid J, Silventoinen K, Southey MC, Stoltenberg C, Tucker-Drob EM, Wright MJ, Social Science Genetic Association Consortium, Within Family Consortium, Hewitt JK, Keller MC, Stallings MC, Lee JJ, Christensen K, Kardia SLR, Peyser PA, Smith JA, Wilson JF, Hopper JL, Hägg S, Spector TD, Pingault JB, Plomin R, Havdahl A, Bartels M, Martin NG, Oskarsson S, Justice AE, Millwood IY, Hveem K, Naess Ø, Willer CJ, Åsvold BO, Koellinger PD, Kaprio J, Medland SE, Walters RG, Benjamin DJ, Turley P, Evans DM, Davey Smith G, Hayward C, Brumpton B, Hemani G, Davies NM.",
+  "authors_short": "Howe LJ et al. (Davies NM.)",
+  "venue": "Nat Genet (2022)",
+  "year": 2022,
+  "cohort": "B",
+  "cohort_id": "B35",
+  "anon_id": "ANON_179",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.3,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.4
+  },
+  "tier": "Exemplary"
+}

@@ -1,0 +1,64 @@
+# Review of PMC12043589 (PMID:40313716)
+
+**Manuscript Title:** Comprehensive transcriptomic analysis integrating bulk and single-cell RNA-seq with machine learning to identify and validate mitochondrial unfolded protein response biomarkers in patients with ischemic stroke  
+**Authors:** Zhang L, Yue L, Jia P, Cheng Z, Liu J.  
+**Journal / Preprint:** *Front Cell Dev Biol* (2025; `PMC12043589` / `PMID:40313716` / `10.3389/fcell.2025.1582252`)  
+**Calibration Study Cohort:** Cohort C — Wild Literature Sample (`C24` | Double-Blinded as `ANON_70`)  
+**Overall Score:** **3.2 / 10.0** (Flawed / Overstated)  
+* **Score Breakdown:** Rigor: 0.8/3.5 | Claims: 0.7/2.5 | Biology: 0.9/2.0 | Reproducibility: 0.8/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript seeks to identify blood biomarkers and regulatory mechanisms linking the mitochondrial unfolded protein response ($\text{UPR}^{\text{mt}}$) to ischemic stroke (IS). Using bulk whole-blood microarray profiles from `GSE58294` (69 IS samples and 23 controls) and `GSE16561` (39 IS and 24 controls), the authors compute ssGSEA scores for 35 $\text{UPR}^{\text{mt}}$-related genes ($\text{UPR}^{\text{mt}}$-RGs), run WGCNA to extract a 1,243-gene module correlated with the $\text{UPR}^{\text{mt}}$ score, and intersect that module with 42 differentially expressed genes (DEGs) in `GSE58294` to obtain 17 candidates. Applying LASSO and Random Forest models identifies *MCEMP1*, *CACNA1E*, and *CLEC4D*, which are used to build a diagnostic nomogram ($\text{AUC} = 0.989$ in `GSE58294`) and evaluated by RT-qPCR in peripheral blood from 21 IS patients and 26 healthy controls, as well as in mouse middle cerebral artery occlusion (MCAO) single-cell RNA-seq datasets (`GSE225948` and `GSE154396`) using intercellular communication and `scTenifoldKnk` (`scTenifoldpy`) virtual knockout analyses. No analysis scripts or code repositories are provided.
+
+While the RT-qPCR cohort and mouse scRNA-seq analyses confirm that *CLEC4D* transcript levels increase in peripheral blood and brain-infiltrating neutrophils after stroke, the study's core methodological pipeline and mechanistic claims suffer from fundamental flaws: (1) `GSE58294` contains 69 longitudinal blood samples drawn from only 23 cardioembolic stroke patients at three time points (3h, 5h, and 24h), so treating them as 69 independent subjects violates statistical independence across `limma`, WGCNA, LASSO, Random Forest, ROC, and nomogram analyses; (2) performing DEG discovery, WGCNA module selection, LASSO, Random Forest, and nomogram evaluation on the exact same dataset (`GSE58294`) without cross-validation or an independent test split constitutes severe data leakage and circular overfitting; (3) two of the three biomarkers (*CACNA1E* and *MCEMP1*) failed RT-qPCR validation ($P > 0.05$), yet are retained in the clinical nomogram; and (4) the putative link between *CLEC4D* and $\text{UPR}^{\text{mt}}$ is an artifact of unadjusted leukocyte composition confounding in bulk blood (post-stroke neutrophilia simultaneously increases neutrophil-specific transcripts like *CLEC4D*/*CD177*/*MCEMP1* and lowers bulk mitochondrial ssGSEA scores because neutrophils are mitochondria-poor relative to lymphocytes). Major re-analysis controlling for repeated measures, cell-type proportions, and train-test separation is required.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* ***CLEC4D*, *MCEMP1*, and *CACNA1E* are $\text{UPR}^{\text{mt}}$-related biomarkers in ischemic stroke: [Methodologically Flawed].**  
+  None of the 17 candidate genes (Line 148: *LILRA5*, *ARG1*, *CLEC4D*, *CD177*, *MCEMP1*, *FCAR*, etc.) are mitochondrial unfolded protein response genes; they are canonical myeloid and neutrophil surface/granule markers. In bulk whole blood (`GSE58294`), acute ischemic stroke induces a rapid surge in circulating neutrophils and a drop in lymphocytes. Because neutrophils contain far fewer mitochondria than lymphocytes, bulk whole-blood $\text{UPR}^{\text{mt}}$ ssGSEA scores drop in stroke samples (Figure 1B), and WGCNA simply groups all neutrophil-abundant transcripts into the 1,243-gene turquoise module negatively/positively tracking leukocyte shift. Equating co-expression driven by bulk cell-count shifts with intracellular $\text{UPR}^{\text{mt}}$ regulation is a classic ecological fallacy.
+
+* **The 3-gene nomogram (*CLEC4D*, *MCEMP1*, *CACNA1E*) achieves high clinical diagnostic accuracy ($\text{AUC} = 0.989$) and net clinical benefit: [Methodologically Flawed].**  
+  First, the candidate genes were filtered by differential expression and WGCNA across all 92 arrays in `GSE58294`, selected via LASSO and Random Forest on `GSE58294`, and then combined into a logistic regression nomogram evaluated on the exact same `GSE58294` samples (Section 3.5, Figure 6). Evaluating ROC ($\text{AUC} = 0.989$), calibration, and decision curves on the training set after multi-step feature selection on the same data produces severely overfitted performance metrics. Second, `GSE58294` comprises 23 patients sampled at 3h, 5h, and 24h ($23 \times 3 = 69$ arrays); treating repeated measures from the same individuals as independent observations invalidates the standard errors, $p$-values, and ROC curves. Third, in the authors' own human RT-qPCR cohort (Figure 5B–C), neither *CACNA1E* nor *MCEMP1* differed significantly between stroke and control subjects ($P > 0.05$).
+
+* ***CLEC4D* is upregulated in peripheral blood of human IS patients and enriched in neutrophils in mouse MCAO blood and brain scRNA-seq: [Moderately Supported].**  
+  The independent human RT-qPCR experiment ($n = 21$ IS vs. $n = 26$ controls, Figure 5A, $P < 0.01$) and the external validation in `GSE16561` ($\text{AUC} = 0.831$) support higher whole-blood *CLEC4D* mRNA in acute IS. Likewise, the mouse scRNA-seq datasets (`GSE225948` and `GSE154396`) confirm that *Clec4d* expression is concentrated in neutrophils, which increase in proportion after MCAO (Figures 9B–C, 10B–C). However, whether bulk blood *CLEC4D* upregulation reflects per-cell transcriptional induction or simply an elevated peripheral neutrophil count (neutrophil-to-lymphocyte ratio) is not tested in the human cohort.
+
+* **Virtual knockout of *CLEC4D* demonstrates that it functions as a causal regulator of neutrophil-mediated inflammation and $\text{UPR}^{\text{mt}}$ via the ubiquitin-proteasome system: [Overstated].**  
+  `scTenifoldpy` (`scTenifoldKnk`) constructs a single-cell gene co-expression network and perturbs a node's edge weights in silico; it measures co-expression centrality within neutrophils, not causal genetic perturbation. Furthermore, the GSEA pathways reported for the brain virtual knockout (chromosome segregation, spindle elongation, Fc$\gamma$R phagocytosis; Section 3.10) do not include $\text{UPR}^{\text{mt}}$ pathways, and the bulk GSEA correlation with "chronic myeloid leukemia" and "ubiquitin-mediated proteolysis" (Section 3.6) reflects general myeloid transcript abundance across whole-blood samples rather than CLEC4D-mediated regulation of mitochondrial proteostasis.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Account for Longitudinal Repeated Measures in `GSE58294` and Adjust for Leukocyte Composition
+* **WHY:** The 69 IS arrays in `GSE58294` represent 23 patients measured at 3h, 5h, and 24h post-stroke. Analyzing all 69 arrays as independent patients inflates the effective sample size threefold and biases `limma`, WGCNA, and machine-learning classifiers. Moreover, unadjusted bulk blood comparisons confound cell-intrinsic gene regulation with post-stroke neutrophilia.
+* **WHAT:** Restrict `GSE58294` primary discovery to a single time point per patient (e.g., 24h, $n = 23$ IS vs. $n = 23$ control) or use a linear mixed-effects model (`duplicateCorrelation` in `limma` blocking on patient ID), and include estimated neutrophil proportion as a covariate.
+* **HOW:** Extract the time-point and subject metadata from `GSE58294`, either subset to one time point per patient or pass `block = patient_id` to `limma::duplicateCorrelation`, and include the ssGSEA/CIBERSORT neutrophil score in the design matrix (`~ neutrophil_score + group`) to test whether $\text{UPR}^{\text{mt}}$-RG scores and *CLEC4D* remain differentially expressed independent of neutrophil counts.
+
+#### 2. Eliminate Data Leakage by Performing Out-of-Sample Validation for Machine Learning and the Nomogram
+* **WHY:** Selecting DEGs, WGCNA modules, LASSO features, and Random Forest features on `GSE58294` and then reporting the nomogram ROC ($\text{AUC} = 0.989$), calibration curve, and DCA on `GSE58294` is circular and overstates diagnostic performance. In addition, retaining *CACNA1E* and *MCEMP1* in the nomogram contradicts the negative RT-qPCR results (Figure 5B–C).
+* **WHAT:** Train the feature selection and regression model strictly on `GSE58294` (using nested cross-validation) and evaluate the locked nomogram coefficients on the completely held-out external dataset `GSE16561` and the 47-subject RT-qPCR cohort.
+* **HOW:** Fit the logistic regression model on `GSE58294` (both for the 3-gene model and for *CLEC4D* alone), freeze the model weights, and apply `predict()` to `GSE16561` and the RT-qPCR $\Delta C_t$ data to generate honest out-of-sample ROC AUCs, calibration curves, and DCA plots.
+
+#### 3. Test Mitochondrial $\text{UPR}^{\text{mt}}$ Scores Directly Within Single-Cell Neutrophil Populations
+* **WHY:** To determine whether $\text{UPR}^{\text{mt}}$ is genuinely altered during stroke rather than reflecting bulk blood cell-type shifts, $\text{UPR}^{\text{mt}}$-RG expression must be evaluated within matched cell types at single-cell resolution.
+* **WHAT:** Compute the 35-gene $\text{UPR}^{\text{mt}}$ module score (`Seurat::AddModuleScore` or `UCell`) across individual cell types in the mouse blood (`GSE225948`) and brain (`GSE154396`) scRNA-seq datasets, and test its correlation with *Clec4d* expression within neutrophils.
+* **HOW:** Map the 35 human MSigDB $\text{UPR}^{\text{mt}}$-RGs to mouse orthologs, score each cell in `GSE225948` and `GSE154396`, compare MCAO vs. sham $\text{UPR}^{\text{mt}}$ scores per cluster using pseudobulk aggregation by biological replicate ($n = 4$ MCAO vs. $n = 4$ sham in blood; $n = 4$ vs. $n = 2$ in brain, rather than cell-level Wilcoxon tests that inflate $N$ to 43,269 cells), and report the within-neutrophil correlation between *Clec4d* and $\text{UPR}^{\text{mt}}$ score.
+
+#### 4. Reframe Mechanistic Claims Around Myeloid/Neutrophil Activation Rather Than $\text{UPR}^{\text{mt}}$ Regulation
+* **WHY:** Neither the WGCNA correlation in bulk blood nor the `scTenifoldpy` co-expression perturbation establishes a functional or biochemical link between the plasma-membrane receptor CLEC4D and mitochondrial protein folding ($\text{UPR}^{\text{mt}}$).
+* **WHAT:** Revise the Title, Abstract, Results, and Discussion to frame *CLEC4D* as a neutrophil-enriched innate immune marker upregulated in acute ischemic stroke, and explicitly state that its statistical association with bulk $\text{UPR}^{\text{mt}}$ scores is mediated by leukocyte subset shifts.
+* **HOW:** Replace claims in the Abstract (lines 21–26) and Conclusion (line 289) that *CLEC4D* is "the most sensitive biomarker for IS related to $\text{UPR}^{\text{mt}}$-RGs" and "regulates the balance between inflammation activation and $\text{UPR}^{\text{mt}}$" with language reflecting observational co-expression and neutrophil expansion.
+
+#### 5. Technical, Mathematical, and Editorial Cleanup
+* **WHY:** Inconsistencies in experimental methods, software attribution, and gene symbols impede reproducibility.
+* **WHAT & HOW:**
+  1. **Section 2.8 & 3.9 (Lines 90, 248; Figures 9F–H, 10F–H):** The text states that intercellular communication was analyzed using `CellPhoneDB`, but the plots ("Interaction weights", "Number of interactions", "Outgoing signaling patterns") and pathway names (`ANNEXIN`, `CSF`, `VISFATIN`, `CXCL`, `VEGF`) are standard outputs of the `CellChat` R package (which natively supports mouse ligand-receptor databases, unlike default human `CellPhoneDB`). Correct the software citation and version in Section 2.8.
+  2. **Section 2.10 (Line 127):** The RT-qPCR methods paragraph lists two different cDNA synthesis kits for the same experiment ("TUREscript 1st Strand cDNA Synthesis Kit (Aidelai, China)" and "SureScript First-strand cDNA Synthesis Kit"). Specify which kit was actually used, and report the cycling conditions, reaction volumes, and $2^{-\Delta\Delta C_t}$ normalization formula.
+  3. **Line 148:** Fix the gene symbol typo `CACNAIE` to `CACNA1E`.
+  4. **Data and Code Availability (Line 299):** Deposit the R and Python scripts used for WGCNA, LASSO/RF, scRNA-seq clustering, and `scTenifoldpy` in a public repository (e.g., GitHub/Zenodo).

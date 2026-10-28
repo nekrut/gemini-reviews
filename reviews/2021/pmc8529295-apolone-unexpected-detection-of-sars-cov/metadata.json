@@ -1,0 +1,25 @@
+{
+  "id": "PMC8529295",
+  "pmid": "33176598",
+  "doi": "10.1177/0300891620974755",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8529295/",
+  "title": "Unexpected detection of SARS-CoV-2 antibodies in the prepandemic period in Italy",
+  "authors": "Apolone G, Montomoli E, Manenti A, Boeri M, Sabia F, Hyseni I, Mazzini L, Martinuzzi D, Cantone L, Milanese G, Sestini S, Suatoni P, Marchianò A, Bollati V, Sozzi G, Pastorino U.",
+  "authors_short": "Apolone G et al. (Pastorino U.)",
+  "venue": "Tumori (2021)",
+  "year": 2021,
+  "cohort": "A",
+  "cohort_id": "A09",
+  "anon_id": "ANON_13",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.4,
+    "claims": 0.3,
+    "biology": 0.3,
+    "reproducibility": 0.6,
+    "overall": 1.6
+  },
+  "tier": "Fundamentally Invalid"
+}

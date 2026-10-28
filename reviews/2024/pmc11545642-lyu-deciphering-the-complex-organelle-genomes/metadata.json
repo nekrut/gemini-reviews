@@ -1,0 +1,25 @@
+{
+  "id": "PMC11545642",
+  "pmid": "39511517",
+  "doi": "10.1186/s12870-024-05761-7",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11545642/",
+  "title": "Deciphering the complex organelle genomes of two Rhododendron species and insights into adaptive evolution patterns in high-altitude",
+  "authors": "Lyu ZY, Yang GM, Zhou XL, Wang SQ, Zhang R, Shen SK.",
+  "authors_short": "Lyu ZY et al. (Shen SK.)",
+  "venue": "BMC Plant Biol (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C49",
+  "anon_id": "ANON_184",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.1,
+    "claims": 1.8,
+    "biology": 1.6,
+    "reproducibility": 1.9,
+    "overall": 7.4
+  },
+  "tier": "Strong / Sound"
+}

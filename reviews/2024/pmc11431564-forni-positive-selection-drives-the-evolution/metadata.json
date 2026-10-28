@@ -1,0 +1,25 @@
+{
+  "id": "PMC11431564",
+  "pmid": "39336750",
+  "doi": "10.3390/genes15091159",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11431564/",
+  "title": "Positive Selection Drives the Evolution of the Structural Maintenance of Chromosomes (SMC) Complexes",
+  "authors": "Forni D, Mozzi A, Sironi M, Cagliani R.",
+  "authors_short": "Forni D et al. (Cagliani R.)",
+  "venue": "Genes (Basel) (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C09",
+  "anon_id": "ANON_54",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.1,
+    "claims": 1.6,
+    "biology": 1.5,
+    "reproducibility": 1.3,
+    "overall": 6.5
+  },
+  "tier": "Mixed / Salvageable"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC7815831",
+  "pmid": "33469026",
+  "doi": "10.1038/s41467-020-20688-x",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7815831/",
+  "title": "Genomic epidemiology of SARS-CoV-2 reveals multiple lineages and early spread of SARS-CoV-2 infections in Lombardy, Italy",
+  "authors": "Alteri C, Cento V, Piralla A, Costabile V, Tallarita M, Colagrossi L, Renica S, Giardina F, Novazzi F, Gaiarsa S, Matarazzo E, Antonello M, Vismara C, Fumagalli R, Epis OM, Puoti M, Perno CF, Baldanti F.",
+  "authors_short": "Alteri C et al. (Baldanti F.)",
+  "venue": "Nat Commun (2021)",
+  "year": 2021,
+  "cohort": "C",
+  "cohort_id": "C27",
+  "anon_id": "ANON_88",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.4,
+    "claims": 1.7,
+    "biology": 1.5,
+    "reproducibility": 1.8,
+    "overall": 7.4
+  },
+  "tier": "Strong / Sound"
+}

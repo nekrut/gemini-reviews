@@ -1,0 +1,25 @@
+{
+  "id": "PMC5182071",
+  "pmid": "27738015",
+  "doi": "10.1126/science.aag0776",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5182071/",
+  "title": "Detection of human adaptation during the past 2000 years",
+  "authors": "Field Y, Boyle EA, Telis N, Gao Z, Gaulton KJ, Golan D, Yengo L, Rocheleau G, Froguel P, McCarthy MI, Pritchard JK.",
+  "authors_short": "Field Y et al. (Pritchard JK.)",
+  "venue": "Science (2016)",
+  "year": 2016,
+  "cohort": "A",
+  "cohort_id": "A11",
+  "anon_id": "ANON_14",
+  "domain": "Population Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.6,
+    "claims": 2.0,
+    "biology": 1.8,
+    "reproducibility": 1.7,
+    "overall": 8.1
+  },
+  "tier": "Strong / Sound"
+}

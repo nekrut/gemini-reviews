@@ -1,0 +1,25 @@
+{
+  "id": "PMC8264168",
+  "pmid": "34236606",
+  "doi": "10.1007/s12560-021-09487-9",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8264168/",
+  "title": "SARS-CoV-2 in Human Sewage and River Water from a Remote and Vulnerable Area as a Surveillance Tool in Brazil",
+  "authors": "Fongaro G, Rogovski P, Savi BP, Cadamuro RD, Pereira JVF, Anna IHS, Rodrigues IH, Souza DSM, Saravia EGT, Rodríguez-Lázaro D, da Silva Lanna MC.",
+  "authors_short": "Fongaro G et al. (da Silva Lanna MC.)",
+  "venue": "Food Environ Virol (2022)",
+  "year": 2022,
+  "cohort": "A",
+  "cohort_id": "A32",
+  "anon_id": "ANON_193",
+  "domain": "Viral Epidemiology",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.8,
+    "claims": 1.7,
+    "biology": 1.5,
+    "reproducibility": 1.0,
+    "overall": 6.0
+  },
+  "tier": "Mixed / Salvageable"
+}

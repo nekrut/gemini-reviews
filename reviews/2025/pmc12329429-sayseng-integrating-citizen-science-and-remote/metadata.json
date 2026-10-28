@@ -1,0 +1,25 @@
+{
+  "id": "PMC12329429",
+  "pmid": "40777847",
+  "doi": "10.1029/2025gh001405",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12329429/",
+  "title": "Integrating Citizen Science and Remote Sensing Data to Identify Key Environmental Factors Influencing H5N1 Avian Influenza Virus Potential Spillover Risk in the Philippines",
+  "authors": "Sayseng JO, Chuang TW.",
+  "authors_short": "Sayseng JO & Chuang TW.",
+  "venue": "Geohealth (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C36",
+  "anon_id": "ANON_190",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 1.1,
+    "biology": 1.0,
+    "reproducibility": 1.2,
+    "overall": 4.5
+  },
+  "tier": "Flawed / Overstated"
+}

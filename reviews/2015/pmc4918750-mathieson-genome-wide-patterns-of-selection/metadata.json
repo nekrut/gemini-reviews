@@ -1,0 +1,25 @@
+{
+  "id": "PMC4918750",
+  "pmid": "26595274",
+  "doi": "10.1038/nature16152",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4918750/",
+  "title": "Genome-wide patterns of selection in 230 ancient Eurasians",
+  "authors": "Mathieson I, Lazaridis I, Rohland N, Mallick S, Patterson N, Roodenberg SA, Harney E, Stewardson K, Fernandes D, Novak M, Sirak K, Gamba C, Jones ER, Llamas B, Dryomov S, Pickrell J, Arsuaga JL, de Castro JM, Carbonell E, Gerritsen F, Khokhlov A, Kuznetsov P, Lozano M, Meller H, Mochalov O, Moiseyev V, Guerra MA, Roodenberg J, Vergès JM, Krause J, Cooper A, Alt KW, Brown D, Anthony D, Lalueza-Fox C, Haak W, Pinhasi R, Reich D.",
+  "authors_short": "Mathieson I et al. (Reich D.)",
+  "venue": "Nature (2015)",
+  "year": 2015,
+  "cohort": "B",
+  "cohort_id": "B37",
+  "anon_id": "ANON_145",
+  "domain": "Population Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.0,
+    "claims": 2.2,
+    "biology": 1.8,
+    "reproducibility": 1.8,
+    "overall": 8.8
+  },
+  "tier": "Strong / Sound"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC8204705",
+  "pmid": "31504749",
+  "doi": "10.1093/molbev/msz197",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8204705/",
+  "title": "HyPhy 2.5-A Customizable Platform for Evolutionary Hypothesis Testing Using Phylogenies",
+  "authors": "Kosakovsky Pond SL, Poon AFY, Velazquez R, Weaver S, Hepler NL, Murrell B, Shank SD, Magalis BR, Bouvier D, Nekrutenko A, Wisotsky S, Spielman SJ, Frost SDW, Muse SV.",
+  "authors_short": "Kosakovsky Pond SL et al. (Muse SV.)",
+  "venue": "Mol Biol Evol (2020)",
+  "year": 2020,
+  "cohort": "B",
+  "cohort_id": "B21",
+  "anon_id": "ANON_44",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.5,
+    "claims": 1.9,
+    "biology": 1.8,
+    "reproducibility": 1.9,
+    "overall": 8.1
+  },
+  "tier": "Strong / Sound"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC4878611",
+  "pmid": "27022035",
+  "doi": "10.1261/rna.053959.115",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4878611/",
+  "title": "How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use?",
+  "authors": "Schurch NJ, Schofield P, Gierliński M, Cole C, Sherstnev A, Singh V, Wrobel N, Gharbi K, Simpson GG, Owen-Hughes T, Blaxter M, Barton GJ.",
+  "authors_short": "Schurch NJ et al. (Barton GJ.)",
+  "venue": "RNA (2016)",
+  "year": 2016,
+  "cohort": "B",
+  "cohort_id": "B43",
+  "anon_id": "ANON_159",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.1
+  },
+  "tier": "Exemplary"
+}

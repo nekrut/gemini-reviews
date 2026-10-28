@@ -1,0 +1,25 @@
+{
+  "id": "PMC12189426",
+  "pmid": "40564276",
+  "doi": "10.3390/ani15121724",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12189426/",
+  "title": "Genome Selection and Genome-Wide Association Analyses for Litter Size Traits in Large White Pigs",
+  "authors": "Hong Y, He X, Wu D, Ye J, Zhang Y, Wu Z, Tan C.",
+  "authors_short": "Hong Y et al. (Tan C.)",
+  "venue": "Animals (Basel) (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C77",
+  "anon_id": "ANON_134",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.6,
+    "claims": 1.3,
+    "biology": 1.3,
+    "reproducibility": 1.4,
+    "overall": 5.6
+  },
+  "tier": "Mixed / Salvageable"
+}

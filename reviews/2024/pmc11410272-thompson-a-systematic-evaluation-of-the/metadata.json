@@ -1,0 +1,25 @@
+{
+  "id": "PMC11410272",
+  "pmid": "39292644",
+  "doi": "10.1371/journal.pone.0307270",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11410272/",
+  "title": "A systematic evaluation of the performance and properties of the UK Biobank Polygenic Risk Score (PRS) Release",
+  "authors": "Thompson DJ, Wells D, Selzam S, Peneva I, Moore R, Sharp K, Tarran WA, Beard EJ, Riveros-Mckay F, Giner-Delgado C, Palmer D, Seth P, Harrison J, Futema M, Genomics England Research Consortium, McVean G, Plagnol V, Donnelly P, Weale ME.",
+  "authors_short": "Thompson DJ et al. (Weale ME.)",
+  "venue": "PLoS One (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C74",
+  "anon_id": "ANON_116",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.8,
+    "claims": 2.1,
+    "biology": 1.7,
+    "reproducibility": 1.4,
+    "overall": 8.0
+  },
+  "tier": "Strong / Sound"
+}

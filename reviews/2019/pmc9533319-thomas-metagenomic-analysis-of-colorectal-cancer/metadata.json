@@ -1,0 +1,25 @@
+{
+  "id": "PMC9533319",
+  "pmid": "30936548",
+  "doi": "10.1038/s41591-019-0405-7",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9533319/",
+  "title": "Metagenomic analysis of colorectal cancer datasets identifies cross-cohort microbial diagnostic signatures and a link with choline degradation",
+  "authors": "Thomas AM, Manghi P, Asnicar F, Pasolli E, Armanini F, Zolfo M, Beghini F, Manara S, Karcher N, Pozzi C, Gandini S, Serrano D, Tarallo S, Francavilla A, Gallo G, Trompetto M, Ferrero G, Mizutani S, Shiroma H, Shiba S, Shibata T, Yachida S, Yamada T, Wirbel J, Schrotz-King P, Ulrich CM, Brenner H, Arumugam M, Bork P, Zeller G, Cordero F, Dias-Neto E, Setubal JC, Tett A, Pardini B, Rescigno M, Waldron L, Naccarati A, Segata N.",
+  "authors_short": "Thomas AM et al. (Segata N.)",
+  "venue": "Nat Med (2019)",
+  "year": 2019,
+  "cohort": "B",
+  "cohort_id": "B27",
+  "anon_id": "ANON_192",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.1,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.1
+  },
+  "tier": "Exemplary"
+}

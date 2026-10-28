@@ -1,0 +1,25 @@
+{
+  "id": "PMC10871168",
+  "pmid": "37882516",
+  "doi": "10.1128/msphere.00232-23",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10871168/",
+  "title": "Genomic epidemiology reveals the dominance of Hennepin County in the transmission of SARS-CoV-2 in Minnesota from 2020 to 2022",
+  "authors": "Scotch M, Lauer K, Wieben ED, Cherukuri Y, Cunningham JM, Klee EW, Harrington JJ, Lau JS, McDonough SJ, Mutawe M, O'Horo JC, Rentmeester CE, Schlicher NR, White VT, Schneider SK, Vedell PT, Wang X, Yao JD, Pritt BS, Norgan AP.",
+  "authors_short": "Scotch M et al. (Norgan AP.)",
+  "venue": "mSphere (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C40",
+  "anon_id": "ANON_92",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.0,
+    "claims": 1.5,
+    "biology": 1.5,
+    "reproducibility": 1.4,
+    "overall": 6.4
+  },
+  "tier": "Mixed / Salvageable"
+}

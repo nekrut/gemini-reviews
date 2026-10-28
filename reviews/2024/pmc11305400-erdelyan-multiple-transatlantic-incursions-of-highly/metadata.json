@@ -1,0 +1,25 @@
+{
+  "id": "PMC11305400",
+  "pmid": "39003741",
+  "doi": "10.1016/j.celrep.2024.114479",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11305400/",
+  "title": "Multiple transatlantic incursions of highly pathogenic avian influenza clade 2.3.4.4b A(H5N5) virus into North America and spillover to mammals",
+  "authors": "Erdelyan CNG, Kandeil A, Signore AV, Jones MEB, Vogel P, Andreev K, Bøe CA, Gjerset B, Alkie TN, Yason C, Hisanaga T, Sullivan D, Lung O, Bourque L, Ayilara I, Pama L, Jeevan T, Franks J, Jones JC, Seiler JP, Miller L, Mubareka S, Webby RJ, Berhane Y.",
+  "authors_short": "Erdelyan CNG et al. (Berhane Y.)",
+  "venue": "Cell Rep (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C01",
+  "anon_id": "ANON_52",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.5,
+    "claims": 1.9,
+    "biology": 1.7,
+    "reproducibility": 1.6,
+    "overall": 7.7
+  },
+  "tier": "Strong / Sound"
+}

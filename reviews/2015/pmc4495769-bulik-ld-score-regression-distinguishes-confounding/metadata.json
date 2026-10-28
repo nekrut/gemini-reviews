@@ -1,0 +1,25 @@
+{
+  "id": "PMC4495769",
+  "pmid": "25642630",
+  "doi": "10.1038/ng.3211",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4495769/",
+  "title": "LD Score regression distinguishes confounding from polygenicity in genome-wide association studies",
+  "authors": "Bulik-Sullivan BK, Loh PR, Finucane HK, Ripke S, Yang J, Schizophrenia Working Group of the Psychiatric Genomics Consortium, Patterson N, Daly MJ, Price AL, Neale BM.",
+  "authors_short": "Bulik-Sullivan BK et al. (Neale BM.)",
+  "venue": "Nat Genet (2015)",
+  "year": 2015,
+  "cohort": "B",
+  "cohort_id": "B39",
+  "anon_id": "ANON_79",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.4,
+    "biology": 1.9,
+    "reproducibility": 1.8,
+    "overall": 9.4
+  },
+  "tier": "Exemplary"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC7105384",
+  "pmid": "32223898",
+  "doi": "10.7554/elife.48714",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7105384/",
+  "title": "Measuring the distribution of fitness effects in somatic evolution by combining clonal dynamics with dN/dS ratios",
+  "authors": "Williams MJ, Zapata L, Werner B, Barnes CP, Sottoriva A, Graham TA.",
+  "authors_short": "Williams MJ et al. (Graham TA.)",
+  "venue": "Elife (2020)",
+  "year": 2020,
+  "cohort": "C",
+  "cohort_id": "C06",
+  "anon_id": "ANON_68",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.5,
+    "biology": 1.5,
+    "reproducibility": 1.4,
+    "overall": 6.3
+  },
+  "tier": "Mixed / Salvageable"
+}

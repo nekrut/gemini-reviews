@@ -1,0 +1,25 @@
+{
+  "id": "PMC11928979",
+  "pmid": "40123802",
+  "doi": "10.1016/j.csbj.2025.02.034",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11928979/",
+  "title": "BGMDB: A curated database linking gut microbiota dysbiosis to brain disorders",
+  "authors": "Shi K, He Q, Zhao P, Li L, Liu Q, Wu Z, Wang Y, Dong H, Yu J.",
+  "authors_short": "Shi K et al. (Yu J.)",
+  "venue": "Comput Struct Biotechnol J (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C67",
+  "anon_id": "ANON_115",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 1.1,
+    "biology": 1.1,
+    "reproducibility": 0.9,
+    "overall": 4.3
+  },
+  "tier": "Flawed / Overstated"
+}

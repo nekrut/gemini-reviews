@@ -1,0 +1,57 @@
+# Review of PMC11367857 (PMID:39218908)
+
+**Manuscript Title:** Polygenic risk score portability for common diseases across genetically diverse populations  
+**Authors:** Moreno-Grau S, Vernekar M, Lopez-Pineda A, Mas-Montserrat D, Barrabés M, Quinto-Cortés CD, Moatamed B, Lee MTM, Yu Z, Numakura K, Matsuda Y, Wall JD, Ioannidis AG, Katsanis N, Takano T, Bustamante CD.  
+**Journal / Preprint:** *Hum Genomics* (2024; `PMC11367857` / `PMID:39218908` / `10.1186/s40246-024-00664-y`)  
+**Calibration Study Cohort:** Cohort C — Wild Literature Sample (`C73` | Double-Blinded as `ANON_198`)  
+**Overall Score:** **5.6 / 10.0** (Mixed / Salvageable)  
+* **Score Breakdown:** Rigor: 1.4/3.5 | Claims: 1.3/2.5 | Biology: 1.4/2.0 | Reproducibility: 1.5/2.0
+
+---
+
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+
+This manuscript evaluates the cross-ancestry portability and optimization of polygenic risk scores (PRS) across 14 medical conditions and laboratory traits (AF, CAD, celiac disease [CD], gout, HDL-C, hemorrhoids, hypertension, hypothyroidism, LDL-C, T1D, T2D, triglycerides [TG], ulcerative colitis [UC], and vitamin D) in four continental ancestry groups (European [EUR], African [AFR], East Asian [EAS], and South Asian [SAS]) in the UK Biobank (UKBB), alongside an external validation in 8,394 (or 8,417) European-ancestry participants from the Biobank of the Americas–GenomeLink (BbofA-GL) cohort. Combining up to 402 existing scores from the PGS Catalog with newly trained models (LDpred2, PRS-CSx, and SNPnet trained on 285,900 UKBB Europeans and/or FinnGen and Biobank Japan summary statistics), the authors confirm that the single best PRS selected in Europeans loses 48.7% to 60.6% of its explained phenotypic variance when applied to SAS, EAS, and AFR populations. They then select the best-performing PRS model separately within each non-European ancestry group ("Best_Model_per_Ancestry", Table 2), reporting mean variance-explained gains of 1.62%, 1.40%, and 0.96% in AFR, SAS, and EAS, respectively, and conduct a cross-trait PRS-PheWAS. Analysis scripts are available on GitHub (`GalateaBio/PRS-manuscript2024`).
+
+While benchmarking PGS Catalog models alongside multi-ancestry methods (`PRS-CSx`) across 14 traits addresses an important translational question, the non-European analyses suffer from two critical methodological flaws: (1) **in-sample selection bias (winner's curse) without external validation in non-Europeans**—the "Best_Model_per_Ancestry" in Table 2 was chosen by evaluating up to 400 candidate models directly on the UKBB AFR, EAS, and SAS test cohorts and picking the model with the maximum variance explained on that exact test set, with no held-out validation split or external non-European validation cohort (BbofA-GL validation was restricted to Europeans); and (2) **training-to-test data leakage in the PGS Catalog models tested on UKBB non-Europeans**—in Methods (line 89), the authors excluded UKBB-trained PGS Catalog models when testing on UKBB Europeans (leaving 97 models), but *retained* UKBB-EUR-trained (and UKBB multi-ancestry-trained) PGS Catalog models when testing on 100% of UKBB non-Europeans (testing 400 models, many of which—such as `PGS000711`, `PGS000712`, `PGS000965`, `PGS001954`, and `PGS002058`—were trained on UK Biobank participants including non-British/non-European subsets). In addition, sample sizes for AFR and SAS are swapped between the Methods and Results sections, and the "%Variance explained" metric is mathematically undefined in Methods and inconsistent across tables. Re-analysis with strict sample-overlap exclusion and a split validation design in non-Europeans is essential.
+
+---
+
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
+
+* **Selecting the best PRS model conditional on ancestry ("Best_Model_per_Ancestry") significantly improves PRS accuracy across AFR, SAS, and EAS populations (Table 2, Fig. 3): [Methodologically Flawed].**  
+  First, in Table 2, the "Best_Model_per_Ancestry" for each trait and non-European population was chosen by testing ~400 candidate models on 100% of the UKBB non-European cohort and selecting the model with the highest observed `%Var` on that same dataset. Selecting the maximum of 400 correlated estimators in small samples (e.g., $N = 2,365$ EAS) guarantees upward bias (winner's curse) when evaluated on the same data used to pick the winner. Second, because line 89 states that for non-Europeans the authors only excluded PGS Catalog models *"specifically using summary statistics or training with the UKBB non-European set"* (retaining 400 of 402 models, vs. 97 for Europeans), several "winning" PGS Catalog scores in Table 2 (`PGS000711`, `PGS000712`, `PGS000965` from Sinnott-Armstrong/Tanigawa et al.; `PGS001933`, `PGS001954`, `PGS001979`, `PGS002030`, `PGS002047`, `PGS002058` from Privé et al.) were actually trained on UK Biobank data (including pan-ancestry or white/non-white UKBB splits), creating direct sample overlap and LD/batch overfitting with the UKBB non-European test sets.
+
+* **European-selected PRS models replicate across 12 of 14 phenotypes in the independent BbofA-GL European cohort (Table 1, Fig. 2): [Well Supported].**  
+  In Europeans, UKBB-trained PGS Catalog models were properly excluded, de-novo models were trained on a separate 75% UKBB split ($n = 285,900$), selected on the 25% UKBB test split ($n = 95,300$), and then validated out-of-sample in BbofA-GL ($n = 8,394$). Twelve of 14 traits replicated significantly, with the attenuation in HDL-C and UC plausibly explained by self-reported survey phenotyping vs. clinical ICD-10/laboratory records.
+
+* **Quantitative "%Variance explained" (`%Var`) and incremental AUC values reported across traits (Tables 1 and 2): [Fragile].**  
+  First, Methods (line 105) states that *"AUC per each model was estimated... for models including (a) covariables only and (b) a full model with covariables and the PRS"* and *"The %Variance explained by the PRS was calculated as the difference between the Full model and the covariates only"*, but never specifies what $R^2$ estimator was used for binary logistic regression (e.g., Nagelkerke pseudo-$R^2$, Cox-Snell $R^2$, McFadden $R^2$, or liability-scale $R^2$). Second, the AUC reported in Tables 1 and 2 is the **full model AUC (age + sex + 4 PCs + PRS)** rather than the **PRS-only AUC** or **incremental $\Delta\text{AUC}$**; consequently, traits strongly driven by age and sex (like AF and gout in EAS, Table 2) display high AUCs (`0.83`) even when the PRS explains almost no variance (`%Var = 0.12%` and `0.56%`, $P = 0.68$ and $0.13$). Third, continuously measured biomarkers (HDL-C, LDL-C, TG, Vitamin D) were dichotomized at arbitrary clinical cutoffs (line 57), discarding continuous information and distorting variance-explained comparisons.
+
+* **PRS-PheWAS identifies pleiotropic clustering within cardiometabolic traits and within autoimmune traits (Fig. 4, Supplementary Table 11): [Well Supported].**  
+  The cross-trait associations in the European testing set (e.g., CAD, T2D, hypertension, and lipid PRSs cross-predicting cardiometabolic diagnoses; T1D PRS predicting celiac disease, UC, and hypothyroidism but not T2D) are Bonferroni-corrected ($P < 2.74 \times 10^{-4}$) and biologically consistent with known shared genetic architecture.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Audit and Remove All PGS Catalog Models with UKBB Sample Overlap and Implement Split-Sample Validation in Non-Europeans
+* **WHY:** Evaluating 400 PGS Catalog models on 100% of UKBB AFR, EAS, and SAS participants without a held-out validation split conflates model selection with model evaluation (winner's curse), and many of the 400 PGS Catalog models (e.g., Privé et al. 2022 `PGS001841`–`PGS002066` and Tanigawa et al. 2022 `PGS000688`–`PGS001248`) used UK Biobank individuals—including non-European UKBB test/validation subsets—during training or hyperparameter tuning.
+* **WHAT:**
+  1. Audit every PGS Catalog ID in Table 2 against its PGS Catalog metadata (`pgscatalog.org`) and exclude any score whose training or tuning cohort included UKBB AFR, EAS, or SAS participants (and report a sensitivity analysis excluding *all* UKBB-derived PGS Catalog scores, using the same 97-score UKBB-free catalog set across all ancestries).
+  2. Split the UKBB AFR, EAS, and SAS cohorts 50%/50% (or use 5-fold cross-validation): select the optimal PRS model on the tuning half and report the unbiased `%Var`, $\Delta\text{AUC}$, and OR on the held-out validation half (and validate in non-European participants of BbofA-GL if available).
+* **HOW:** Using the existing individual-level score matrices in `GalateaBio/PRS-manuscript2024`, partition AFR, EAS, and SAS into stratified 50/50 tuning and validation subsets, select the top model per trait in the tuning subset, and update Table 2 and the Abstract with the out-of-sample validation metrics.
+
+#### 2. Report Incremental $\Delta\text{AUC}$ (Full Model Minus Covariates-Only) and Define the Exact Pseudo-$R^2$ / Liability-$R^2$ Formula
+* **WHY:** Reporting only the full-model AUC (which includes age and sex) in Tables 1 and 2 misleads readers when a non-significant PRS ($P = 0.68$, `%Var = 0.12%` for EAS AF in Table 2) is listed with `AUC = 0.81`. Furthermore, the manuscript never states how `%Var` was computed from a binomial `glm` (nor why SAS Hemorrhoids has a negative variance explained of `-0.07%` in Table 2, line 207, which is impossible for nested maximum-likelihood models fit on the same complete cases unless adjusted-$R^2$ or mismatched missing-data subsets were used).
+* **WHAT & HOW:**
+  * In Methods (line 105), write out the exact mathematical formula or R function used to compute `%Var` (preferably liability-scale $R^2$ via Lee et al. 2012 or Nagelkerke $R^2$ on identical complete-case rows so $\Delta R^2 \ge 0$).
+  * In Tables 1 and 2, add a column for **Covariate-only AUC** or **$\Delta\text{AUC}$ (Full minus Covariates)** alongside the Full AUC.
+
+#### 3. Reconcile Contradictory Sample Sizes and Threshold Numbers Between Methods, Results, and Tables
+* **WHY:** Multiple numbers conflict across different paragraphs of the manuscript.
+* **WHAT & HOW:**
+  * **Line 74 vs. Line 115 (Swapped AFR and SAS sample sizes):** Methods (line 74) states *"European (n = 381,199 individuals), African (8,111), East Asian (2,365), and South Asian (SAS, 6,596)"*, whereas Results (line 115) states *"6,595 individuals of African ancestry, 2,473 of East Asian ancestry, 95,300 of European ancestry, and 8,111 of South Asian ancestry"*. Reconcile the exact AFR, EAS, and SAS counts with Supplementary Table 2.
+  * **Line 16 & 115 vs. Line 79 (BbofA-GL sample size):** Abstract (line 16) and Results (line 115) report `8,417` individuals in BbofA-GL, whereas Methods (line 79) reports `8,394` individuals. Reconcile the exact post-QC count.
+  * **Line 89 vs. Line 44 & 126 (Number of tested models):** Line 44 and 126 state `166 PRS models` were evaluated in Europeans, whereas Line 89 states `97` public PGS Catalog models remained after excluding UKBB-derived scores (clarify explicitly that $97\text{ public} + 69\text{ de-novo trained} = 166\text{ models}$). Similarly, reconcile the Bonferroni threshold in Line 105 (`2.95 × 10^-4 (0.05/166)`) vs. Line 126 (`2.74 × 10^-4`).
+  * **Line 89:** Fix typo `"d owlnoad_scorefiles.py"` to `"download_scorefiles.py"`.

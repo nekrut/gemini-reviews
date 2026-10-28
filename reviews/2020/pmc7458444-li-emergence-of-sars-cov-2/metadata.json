@@ -1,0 +1,25 @@
+{
+  "id": "PMC7458444",
+  "pmid": "32937441",
+  "doi": "10.1126/sciadv.abb9153",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7458444/",
+  "title": "Emergence of SARS-CoV-2 through recombination and strong purifying selection",
+  "authors": "Li X, Giorgi EE, Marichannegowda MH, Foley B, Xiao C, Kong XP, Chen Y, Gnanakaran S, Korber B, Gao F.",
+  "authors_short": "Li X et al. (Gao F.)",
+  "venue": "Sci Adv (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A41",
+  "anon_id": "ANON_152",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.7,
+    "claims": 1.3,
+    "biology": 1.5,
+    "reproducibility": 1.3,
+    "overall": 5.8
+  },
+  "tier": "Mixed / Salvageable"
+}

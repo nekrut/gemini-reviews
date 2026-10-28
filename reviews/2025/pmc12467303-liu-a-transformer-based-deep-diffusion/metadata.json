@@ -1,0 +1,25 @@
+{
+  "id": "PMC12467303",
+  "pmid": "41007295",
+  "doi": "10.3390/biology14091150",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12467303/",
+  "title": "A Transformer-Based Deep Diffusion Model for Bulk RNA-Seq Deconvolution",
+  "authors": "Liu Y, Sun J, Li H, Zhang W, Sheng J, Wang G, Wu J.",
+  "authors_short": "Liu Y et al. (Wu J.)",
+  "venue": "Biology (Basel) (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C96",
+  "anon_id": "ANON_172",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.1,
+    "claims": 1.0,
+    "biology": 0.9,
+    "reproducibility": 1.2,
+    "overall": 4.2
+  },
+  "tier": "Flawed / Overstated"
+}

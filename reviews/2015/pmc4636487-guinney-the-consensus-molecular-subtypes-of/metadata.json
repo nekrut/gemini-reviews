@@ -1,0 +1,25 @@
+{
+  "id": "PMC4636487",
+  "pmid": "26457759",
+  "doi": "10.1038/nm.3967",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4636487/",
+  "title": "The consensus molecular subtypes of colorectal cancer",
+  "authors": "Guinney J, Dienstmann R, Wang X, de Reyniès A, Schlicker A, Soneson C, Marisa L, Roepman P, Nyamundanda G, Angelino P, Bot BM, Morris JS, Simon IM, Gerster S, Fessler E, De Sousa E Melo F, Missiaglia E, Ramay H, Barras D, Homicsko K, Maru D, Manyam GC, Broom B, Boige V, Perez-Villamil B, Laderas T, Salazar R, Gray JW, Hanahan D, Tabernero J, Bernards R, Friend SH, Laurent-Puig P, Medema JP, Sadanandam A, Wessels L, Delorenzi M, Kopetz S, Vermeulen L, Tejpar S.",
+  "authors_short": "Guinney J et al. (Tejpar S.)",
+  "venue": "Nat Med (2015)",
+  "year": 2015,
+  "cohort": "B",
+  "cohort_id": "B40",
+  "anon_id": "ANON_200",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.2,
+    "claims": 2.4,
+    "biology": 1.9,
+    "reproducibility": 1.9,
+    "overall": 9.4
+  },
+  "tier": "Exemplary"
+}

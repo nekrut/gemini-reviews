@@ -1,0 +1,25 @@
+{
+  "id": "PMC6247931",
+  "pmid": "29790939",
+  "doi": "10.1093/bioinformatics/bty407",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247931/",
+  "title": "Nextstrain: real-time tracking of pathogen evolution",
+  "authors": "Hadfield J, Megill C, Bell SM, Huddleston J, Potter B, Callender C, Sagulenko P, Bedford T, Neher RA.",
+  "authors_short": "Hadfield J et al. (Neher RA.)",
+  "venue": "Bioinformatics (2018)",
+  "year": 2018,
+  "cohort": "B",
+  "cohort_id": "B23",
+  "anon_id": "ANON_42",
+  "domain": "Viral Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.5,
+    "claims": 1.9,
+    "biology": 1.7,
+    "reproducibility": 1.7,
+    "overall": 7.8
+  },
+  "tier": "Strong / Sound"
+}

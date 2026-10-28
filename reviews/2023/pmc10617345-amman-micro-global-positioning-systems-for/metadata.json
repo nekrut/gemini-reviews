@@ -1,0 +1,25 @@
+{
+  "id": "PMC10617345",
+  "pmid": "37877537",
+  "doi": "10.3201/eid2911.230362",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10617345/",
+  "title": "Micro‒Global Positioning Systems for Identifying Nightly Opportunities for Marburg Virus Spillover to Humans by Egyptian Rousette Bats",
+  "authors": "Amman BR, Schuh AJ, Akurut G, Kamugisha K, Namanya D, Sealy TK, Graziano JC, Enyel E, Wright EA, Balinandi S, Lutwama JJ, Kading RC, Atimnedi P, Towner JS.",
+  "authors_short": "Amman BR et al. (Towner JS.)",
+  "venue": "Emerg Infect Dis (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C35",
+  "anon_id": "ANON_130",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.3,
+    "claims": 2.0,
+    "biology": 1.6,
+    "reproducibility": 1.2,
+    "overall": 7.1
+  },
+  "tier": "Strong / Sound"
+}

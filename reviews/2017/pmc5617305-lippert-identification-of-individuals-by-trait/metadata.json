@@ -1,0 +1,25 @@
+{
+  "id": "PMC5617305",
+  "pmid": "28874526",
+  "doi": "10.1073/pnas.1711125114",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5617305/",
+  "title": "Identification of individuals by trait prediction using whole-genome sequencing data",
+  "authors": "Lippert C, Sabatini R, Maher MC, Kang EY, Lee S, Arikan O, Harley A, Bernal A, Garst P, Lavrenko V, Yocum K, Wong T, Zhu M, Yang WY, Chang C, Lu T, Lee CWH, Hicks B, Ramakrishnan S, Tang H, Xie C, Piper J, Brewerton S, Turpaz Y, Telenti A, Roby RK, Och FJ, Venter JC.",
+  "authors_short": "Lippert C et al. (Venter JC.)",
+  "venue": "Proc Natl Acad Sci U S A (2017)",
+  "year": 2017,
+  "cohort": "A",
+  "cohort_id": "A20",
+  "anon_id": "ANON_21",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.5,
+    "claims": 0.9,
+    "biology": 1.1,
+    "reproducibility": 0.9,
+    "overall": 4.4
+  },
+  "tier": "Flawed / Overstated"
+}

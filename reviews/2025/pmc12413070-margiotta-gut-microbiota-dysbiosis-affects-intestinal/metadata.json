@@ -1,0 +1,25 @@
+{
+  "id": "PMC12413070",
+  "pmid": "40903878",
+  "doi": "10.1080/19490976.2025.2547029",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12413070/",
+  "title": "Gut microbiota dysbiosis affects intestinal sensitivity through epithelium-to-neuron signaling: novel insights from a colon organoid-based model to improve visceral pain therapy",
+  "authors": "Margiotta F, Lucarini E, Toti A, Curti L, Masi A, Mello T, Le Gall G, Mattei G, Magi A, Vauzour D, Mannaioni G, Di Cesare Mannelli L, Ghelardini C.",
+  "authors_short": "Margiotta F et al. (Ghelardini C.)",
+  "venue": "Gut Microbes (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C63",
+  "anon_id": "ANON_76",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.5,
+    "biology": 1.4,
+    "reproducibility": 1.7,
+    "overall": 6.5
+  },
+  "tier": "Mixed / Salvageable"
+}

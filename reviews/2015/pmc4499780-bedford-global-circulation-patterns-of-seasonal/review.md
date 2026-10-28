@@ -1,0 +1,56 @@
+# Review of PMC4499780 (PMID:26053121)
+
+**Manuscript Title:** Global circulation patterns of seasonal influenza viruses vary with antigenic drift  
+**Authors:** Bedford T, Riley S, Barr IG, Broor S, Chadha M, Cox NJ, Daniels RS, Gunasekaran CP, Hurt AC, Kelso A, Klimov A, Lewis NS, Li X, McCauley JW, Odagiri T, Potdar V, Rambaut A, Shu Y, Skepner E, Smith DJ, Suchard MA, Tashiro M, Wang D, Xu X, Lemey P, Russell CA.  
+**Journal / Preprint:** *Nature* (2015; `PMC4499780` / `PMID:26053121` / `10.1038/nature14460`)  
+**Calibration Study Cohort:** Cohort B — Validated Control (`B47` | Double-Blinded as `ANON_170`)  
+**Overall Score:** **9.1 / 10.0** (Exemplary)
+* **Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.3/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.8/2.0
+
+---
+
+## 1. Executive Summary & Synthesis
+
+This manuscript presents a comparative phylogeographic and epidemiological analysis of the four human seasonal influenza viruses—influenza A subtypes H3N2 and H1N1, and influenza B lineages Victoria (Vic) and Yamagata (Yam)—using 9,604 hemagglutinin (HA) sequences collected globally between 2000 and 2012. Combining Bayesian discrete-trait phylogeographic inference (BEAST with BSSVS), trunk-ancestry reconstruction (PACT), age-stratified virological surveillance data from Australia (VIDRL) and the United States (CDC), UK Civil Aviation Authority air passenger age distributions (102.5 million passengers), and a multi-patch individual-based antigenic-evolution simulation model, the authors link differential rates of antigenic drift to differences in the age distribution of infection, long-distance air travel seeding, and regional lineage persistence.
+
+The study is an exemplary piece of quantitative evolutionary epidemiology. Its primary strength lies in integrating three orthogonal lines of evidence—phylogeographic migration rates and trunk persistence across four co-circulating viral lineages, empirical age distributions of infection versus air travel, and mechanistic forward simulations—to explain why rapidly drifting H3N2 seeds global epidemics from an East/Southeast Asian and Indian network whereas slower-drifting H1N1, Vic, and Yam exhibit prolonged regional persistence, higher proportions of pediatric infection, and lower global migration rates. Furthermore, the authors conduct explicit geographic subsampling sensitivity analyses (primary 9-region dataset, smaller equalized secondary dataset, and a 10-region parameterization separating North and South China; Extended Data Table 2) and release their complete source code and sequence alignments openly. Only minor methodological caveats—including sequential two-stage discrete-trait phylogeography under a constant-size coalescent tree prior and minor numerical rounding discrepancies between the main text and Extended Data Table 1—temper the technical score.
+
+---
+
+## 2. Claim-by-Claim Evaluation
+
+* **Claim 1:** *Influenza A/H3N2 migrates between geographic regions at substantially higher rates (~1.96–1.99 migration events per lineage per year) and exhibits lower within-region persistence (~0.50–0.51 years) than A/H1N1 (1.37 events/year; 0.72 years), B/Victoria (1.16 events/year; 0.87 years), and B/Yamagata (0.97–0.98 events/year; 1.07 years).* — **[Well Supported]**
+  * **Evidence & Critique:** The comparative phylogeographic estimates across 9,604 HA sequences (4,006 H3N2, 2,144 H1N1, 1,999 Vic, and 1,455 Yam) show clear separation of 95% highest posterior density (HPD) credible intervals between H3N2 and the three slower-drifting lineages (Fig. 2a–d; Extended Data Table 1). Crucially, because discrete-trait continuous-time Markov chain (CTMC) rates can be sensitive to sample counts and uneven regional representation, the authors validate these rankings in a downsampled secondary dataset (`n = 1,499` H3N2, `n = 1,284` H1N1, `n = 1,274` Vic, `n = 1,262` Yam; up to 25 sequences per region per year) and an alternative 10-region partitioning (Extended Data Table 2). Across all three subsampling schemes, the rank ordering of overall migration rates ($\text{H3N2} > \text{H1N1} > \text{Vic} > \text{Yam}$) and mean regional waiting times ($\text{H3N2} < \text{H1N1} < \text{Vic} < \text{Yam}$) remains invariant.
+
+* **Claim 2:** *While the genealogical trunk of H3N2 is predominantly maintained by an interconnected network of East/Southeast Asia and India, the trunks of H1N1, B/Victoria, and B/Yamagata persist across multiple global regions (especially India, Southeast Asia, and China) with prolonged co-circulation of geographically segregated clades.* — **[Well Supported]**
+  * **Evidence & Critique:** Trunk reconstruction using PACT (Fig. 1a–d; Extended Data Fig. 2) and multi-year persistence tracking across biennial windows from 2000 to 2012 (Fig. 3a–f; Extended Data Figs. 5–7) demonstrate that H1N1 and influenza B lineages frequently maintain region-specific clades in India and China for 3–5 years before seeding other temperate or tropical regions. By including 645 newly sequenced HA isolates from India across 28 cities (2004–2011; Extended Data Fig. 1), the study resolves a major geographic blind spot in prior global phylogeographic analyses and shows that India contributes substantially to the genealogical trunk of both H1N1 (33% trunk proportion in primary dataset; Extended Data Table 2) and influenza B lineages.
+
+* **Claim 3:** *Faster antigenic drift shifts the age distribution of infection toward adults (who travel by air at much higher frequencies than children), providing a parsimonious mechanistic explanation for the higher global migration rate and lower regional persistence of H3N2 relative to H1N1 and influenza B.* — **[Well Supported]**
+  * **Evidence & Critique:** Empirical age-of-infection distributions from 9,953 laboratory-confirmed outpatient specimens in Victoria, Australia (2001–2013; Fig. 4a, b; Extended Data Fig. 9b) and US CDC surveillance (Extended Data Fig. 9a) confirm that H3N2 infects a significantly higher proportion of adults aged $\ge 15$ years than H1N1 or influenza B ($P < 0.001$, $\chi^2$ test), whereas H1N1, Vic, and Yam concentrate in children aged 5–14 years. Cross-referencing this age profile against 102.5 million air passenger interviews from five UK airports (Extended Data Fig. 9c) shows that children aged 5–14 years account for only 4.4% of air travelers despite representing ~11% of the population. Incorporating age-assortative mixing (from POLYMOD contact matrices) and differential rates of antigenic drift into a 3-patch individual-based SEIR model (Fig. 4c–e; Extended Data Fig. 10) quantitatively reproduces the empirical relationships among drift rate, adult fraction of cases, global migration rate, and epidemic synchrony.
+
+---
+
+## 3. Technical & Methodological Critique
+
+### Major Methodological Considerations (Minor Impact on Conclusions)
+
+1. **Sequential Two-Stage Phylogeographic Inference and Constant Population Size Prior:**
+   * In the BEAST pipeline (`Methods: Sequence analysis`), tree topologies and branch lengths were first sampled under a nucleotide substitution model (`HKY85` or `GTR` with $\Gamma_4$ rate heterogeneity) and a *constant effective population size coalescent prior*, after which 100 empirical trees were subsampled to fit the asymmetric discrete-trait geographic CTMC with BSSVS. Because seasonal influenza experiences extreme seasonal bottlenecks in temperate regions (`North America`, `Europe`, `North China`, `Japan/Korea`, `Oceania`, `South America`), a constant population size prior can modestly distort terminal and internal branch lengths during epidemic troughs compared to a skygrid or skyline coalescent prior. While the authors' use of 100 empirical trees and PACT trunk-proportion metrics is standard and computationally necessary for datasets of 1,455–4,006 sequences, discussing the robustness of branch-length-dependent CTMC rates to the coalescent tree prior would strengthen the methods.
+
+2. **Minor Numerical Discrepancies Between Main Text, Extended Data Table 1, and Extended Data Table 2:**
+   * There are small internal discrepancies between the primary dataset summary statistics cited in the main text / Extended Data Table 2 and those tabulated in Extended Data Table 1:
+     * For H3N2 overall migration rate: Main text (`Global phylogeny and movement of viruses`, line 30) and Extended Data Table 2 report `1.96 (1.84–2.08)` events per lineage per year, whereas Extended Data Table 1 reports `1.99 (1.87–2.10)`.
+     * For Yam overall migration rate: Main text (line 30) and Extended Data Table 2 report `0.97 (0.89–1.05)`, whereas Extended Data Table 1 reports `0.98 (0.90–1.05)`.
+     * For H3N2 persistence: Extended Data Table 1 reports `0.50 (0.48–0.54)` years, whereas Extended Data Table 2 (Primary dataset column) reports `0.51 (0.48–0.54)` years.
+     * Similarly, the 95% credible intervals in Extended Data Table 1 for H1N1 persistence (`0.72 [0.68–0.77]` vs. `0.72 [0.67–0.77]` in Table 2), Vic migration rate (`1.16 [1.08–1.25]` vs. `1.16 [1.08–1.23]` in Table 2), and Yam persistence (`1.07 [0.99–1.17]` vs. `1.07 [0.98–1.16]` in Table 2) differ slightly between the two tables. These appear to reflect summaries computed from slightly different post-burn-in MCMC chain thinnings and should be harmonized.
+
+3. **Geographic Generalizability of Surveillance Age Profiles and Air Travel Parametrization:**
+   * The empirical age-of-infection distributions in Fig. 4a, b rely on sentinel general practice surveillance in Victoria, Australia (excluding children aged $<5$ years due to hospital-based sampling bias) and aggregate US CDC age buckets (`0–4`, `5–24`, `25–64`, `65+`), while air travel age profiles come from UK Civil Aviation Authority surveys. In tropical and lower-middle-income regions with younger demographic pyramids (such as India and Southeast Asia, which act as major trunk reservoirs in Figs. 1 and 3), both the household/school contact matrix and the age structure of domestic versus international travelers may differ from UK/Australian norms. While this does not invalidate the general mechanism linking immunosenescence/antigenic drift to adult infection and mobility, explicitly noting demographic differences in tropical source populations is warranted.
+
+---
+
+## 4. Constructive Recommendations
+
+1. **Harmonize Extended Data Tables 1 and 2:** Reconcile the primary dataset posterior means and 95% credible intervals between the main text, Extended Data Table 1, and the "Primary dataset" column of Extended Data Table 2 so that identical MCMC summary statistics are reported across all three locations.
+2. **Clarify PACT Tip-to-Trunk Distance Metric:** In Fig. 3e (`average time in years for sampled viruses to coalesce with the trunk`), specify whether tips sampled in the final 1–2 years of the sampling window (2011–2012)—where trunk definition is inherently less certain—were excluded when computing the mean and interquartile range of coalescence times to the trunk.
+3. **Contextualize Demographic Structure in the Mechanistic Model:** Briefly note in `Epidemiological simulations` how differences in demographic age pyramids between tropical Asian source populations and temperate regions could modulate the quantitative ratio of adult-to-child air travel seeding.

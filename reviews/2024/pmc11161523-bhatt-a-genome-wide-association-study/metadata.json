@@ -1,0 +1,25 @@
+{
+  "id": "PMC11161523",
+  "pmid": "38849415",
+  "doi": "10.1038/s41598-024-63972-2",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161523/",
+  "title": "A genome-wide association study reveals a polygenic architecture of speech-in-noise deficits in individuals with self-reported normal hearing",
+  "authors": "Bhatt IS, Garay JAR, Bhagavan SG, Ingalls V, Dias R, Torkamani A.",
+  "authors_short": "Bhatt IS et al. (Torkamani A.)",
+  "venue": "Sci Rep (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C80",
+  "anon_id": "ANON_87",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.3,
+    "claims": 1.0,
+    "biology": 1.1,
+    "reproducibility": 1.1,
+    "overall": 4.5
+  },
+  "tier": "Flawed / Overstated"
+}

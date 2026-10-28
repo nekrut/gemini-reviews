@@ -1,0 +1,25 @@
+{
+  "id": "PMC7106301",
+  "pmid": "32004758",
+  "doi": "10.1016/j.meegid.2020.104212",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7106301/",
+  "title": "Full-genome evolutionary analysis of the novel corona virus (2019-nCoV) rejects the hypothesis of emergence as a result of a recent recombination event",
+  "authors": "Paraskevis D, Kostaki EG, Magiorkinis G, Panayiotakopoulos G, Sourvinos G, Tsiodras S.",
+  "authors_short": "Paraskevis D et al. (Tsiodras S.)",
+  "venue": "Infect Genet Evol (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A37",
+  "anon_id": "ANON_177",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.5,
+    "claims": 1.2,
+    "biology": 1.2,
+    "reproducibility": 0.9,
+    "overall": 4.8
+  },
+  "tier": "Flawed / Overstated"
+}

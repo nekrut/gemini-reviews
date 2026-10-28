@@ -1,0 +1,25 @@
+{
+  "id": "PMC11333990",
+  "pmid": "36697862",
+  "doi": "10.1038/s41586-022-05546-8",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11333990/",
+  "title": "Questioning the fetal microbiome illustrates pitfalls of low-biomass microbial studies",
+  "authors": "Kennedy KM, de Goffau MC, Perez-Muñoz ME, Arrieta MC, Bäckhed F, Bork P, Braun T, Bushman FD, Dore J, de Vos WM, Earl AM, Eisen JA, Elovitz MA, Ganal-Vonarburg SC, Gänzle MG, Garrett WS, Hall LJ, Hornef MW, Huttenhower C, Konnikova L, Lebeer S, Macpherson AJ, Massey RC, McHardy AC, Koren O, Lawley TD, Ley RE, O'Mahony L, O'Toole PW, Pamer EG, Parkhill J, Raes J, Rattei T, Salonen A, Segal E, Segata N, Shanahan F, Sloboda DM, Smith GCS, Sokol H, Spector TD, Surette MG, Tannock GW, Walker AW, Yassour M, Walter J.",
+  "authors_short": "Kennedy KM et al. (Walter J.)",
+  "venue": "Nature (2023)",
+  "year": 2023,
+  "cohort": "B",
+  "cohort_id": "B34",
+  "anon_id": "ANON_123",
+  "domain": "Cancer & Microbiome",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.7,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.5,
+    "overall": 8.3
+  },
+  "tier": "Strong / Sound"
+}

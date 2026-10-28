@@ -1,0 +1,25 @@
+{
+  "id": "PMC11238174",
+  "pmid": "38994346",
+  "doi": "10.3389/fmed.2024.1409439",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11238174/",
+  "title": "Mendelian randomization based on genome-wide association studies and expression quantitative trait loci, predicting gene targets for the complexity of osteoarthritis as well as the clinical prognosis of the condition",
+  "authors": "Yan Y, He J, Xu Z, Wang C, Hu Z, Zhang C, Cheng W.",
+  "authors_short": "Yan Y et al. (Cheng W.)",
+  "venue": "Front Med (Lausanne) (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C83",
+  "anon_id": "ANON_182",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.9,
+    "claims": 0.7,
+    "biology": 0.9,
+    "reproducibility": 0.8,
+    "overall": 3.3
+  },
+  "tier": "Flawed / Overstated"
+}

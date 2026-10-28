@@ -1,0 +1,25 @@
+{
+  "id": "PMC9829393",
+  "pmid": "36117410",
+  "doi": "10.1111/pbi.13926",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9829393/",
+  "title": "The complex genome and adaptive evolution of polyploid Chinese pepper (Zanthoxylum armatum and Zanthoxylum bungeanum)",
+  "authors": "Hu L, Xu Z, Fan R, Wang G, Wang F, Qin X, Yan L, Ji X, Meng M, Sim S, Chen W, Hao C, Wang Q, Zhu H, Zhu S, Xu P, Zhao H, Lindsey K, Daniell H, Wendel JF, Jin S.",
+  "authors_short": "Hu L et al. (Jin S.)",
+  "venue": "Plant Biotechnol J (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C44",
+  "anon_id": "ANON_160",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.0,
+    "claims": 1.4,
+    "biology": 1.5,
+    "reproducibility": 1.6,
+    "overall": 6.5
+  },
+  "tier": "Mixed / Salvageable"
+}

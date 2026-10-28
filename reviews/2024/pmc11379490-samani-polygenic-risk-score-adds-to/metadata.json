@@ -1,0 +1,25 @@
+{
+  "id": "PMC11379490",
+  "pmid": "38848106",
+  "doi": "10.1093/eurheartj/ehae342",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379490/",
+  "title": "Polygenic risk score adds to a clinical risk score in the prediction of cardiovascular disease in a clinical setting",
+  "authors": "Samani NJ, Beeston E, Greengrass C, Riveros-McKay F, Debiec R, Lawday D, Wang Q, Budgeon CA, Braund PS, Bramley R, Kharodia S, Newton M, Marshall A, Krzeminski A, Zafar A, Chahal A, Heer A, Khunti K, Joshi N, Lakhani M, Farooqi A, Plagnol V, Donnelly P, Weale ME, Nelson CP.",
+  "authors_short": "Samani NJ et al. (Nelson CP.)",
+  "venue": "Eur Heart J (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C71",
+  "anon_id": "ANON_122",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.9,
+    "claims": 1.5,
+    "biology": 1.6,
+    "reproducibility": 1.2,
+    "overall": 6.2
+  },
+  "tier": "Mixed / Salvageable"
+}

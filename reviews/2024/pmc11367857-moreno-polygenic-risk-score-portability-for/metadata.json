@@ -1,0 +1,25 @@
+{
+  "id": "PMC11367857",
+  "pmid": "39218908",
+  "doi": "10.1186/s40246-024-00664-y",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11367857/",
+  "title": "Polygenic risk score portability for common diseases across genetically diverse populations",
+  "authors": "Moreno-Grau S, Vernekar M, Lopez-Pineda A, Mas-Montserrat D, Barrabés M, Quinto-Cortés CD, Moatamed B, Lee MTM, Yu Z, Numakura K, Matsuda Y, Wall JD, Ioannidis AG, Katsanis N, Takano T, Bustamante CD.",
+  "authors_short": "Moreno-Grau S et al. (Bustamante CD.)",
+  "venue": "Hum Genomics (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C73",
+  "anon_id": "ANON_198",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.4,
+    "claims": 1.3,
+    "biology": 1.4,
+    "reproducibility": 1.5,
+    "overall": 5.6
+  },
+  "tier": "Mixed / Salvageable"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC10676521",
+  "pmid": "38023329",
+  "doi": "10.1093/bioadv/vbad159",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10676521/",
+  "title": "Enhanced annotation of CD45RA to distinguish T cell subsets in single-cell RNA-seq via machine learning",
+  "authors": "Ran R, Brubaker DK.",
+  "authors_short": "Ran R & Brubaker DK.",
+  "venue": "Bioinform Adv (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C23",
+  "anon_id": "ANON_53",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.2,
+    "claims": 0.9,
+    "biology": 1.2,
+    "reproducibility": 0.9,
+    "overall": 4.2
+  },
+  "tier": "Flawed / Overstated"
+}

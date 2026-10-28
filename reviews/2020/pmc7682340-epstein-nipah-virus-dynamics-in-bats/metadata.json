@@ -1,0 +1,25 @@
+{
+  "id": "PMC7682340",
+  "pmid": "33139552",
+  "doi": "10.1073/pnas.2000429117",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7682340/",
+  "title": "Nipah virus dynamics in bats and implications for spillover to humans",
+  "authors": "Epstein JH, Anthony SJ, Islam A, Kilpatrick AM, Ali Khan S, Balkey MD, Ross N, Smith I, Zambrana-Torrelio C, Tao Y, Islam A, Quan PL, Olival KJ, Khan MSU, Gurley ES, Hossein MJ, Field HE, Fielder MD, Briese T, Rahman M, Broder CC, Crameri G, Wang LF, Luby SP, Lipkin WI, Daszak P.",
+  "authors_short": "Epstein JH et al. (Daszak P.)",
+  "venue": "Proc Natl Acad Sci U S A (2020)",
+  "year": 2020,
+  "cohort": "C",
+  "cohort_id": "C26",
+  "anon_id": "ANON_154",
+  "domain": "Viral Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.5,
+    "claims": 2.0,
+    "biology": 1.8,
+    "reproducibility": 1.2,
+    "overall": 7.5
+  },
+  "tier": "Strong / Sound"
+}

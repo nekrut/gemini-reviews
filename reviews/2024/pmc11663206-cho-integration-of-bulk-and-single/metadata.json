@@ -1,0 +1,25 @@
+{
+  "id": "PMC11663206",
+  "pmid": "39708127",
+  "doi": "10.1007/s00262-024-03839-7",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11663206/",
+  "title": "Integration of bulk and single-cell RNA-seq reveals prognostic gene signatures in patients with bladder cancer treated with immune checkpoint inhibitors",
+  "authors": "Cho M, Chang H, Kim JH.",
+  "authors_short": "Cho M et al. (Kim JH.)",
+  "venue": "Cancer Immunol Immunother (2024)",
+  "year": 2024,
+  "cohort": "C",
+  "cohort_id": "C98",
+  "anon_id": "ANON_183",
+  "domain": "Transcriptomics & CompBio",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 1.8,
+    "claims": 1.5,
+    "biology": 1.5,
+    "reproducibility": 1.6,
+    "overall": 6.4
+  },
+  "tier": "Mixed / Salvageable"
+}

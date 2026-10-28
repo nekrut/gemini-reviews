@@ -1,0 +1,25 @@
+{
+  "id": "PMC12129310",
+  "pmid": "37883977",
+  "doi": "10.1016/j.chom.2023.09.012",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12129310/",
+  "title": "An atlas of continuous adaptive evolution in endemic human viruses",
+  "authors": "Kistler KE, Bedford T.",
+  "authors_short": "Kistler KE & Bedford T.",
+  "venue": "Cell Host Microbe (2023)",
+  "year": 2023,
+  "cohort": "C",
+  "cohort_id": "C43",
+  "anon_id": "ANON_121",
+  "domain": "Molecular Evolution",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.0,
+    "claims": 2.2,
+    "biology": 1.9,
+    "reproducibility": 1.8,
+    "overall": 8.9
+  },
+  "tier": "Strong / Sound"
+}

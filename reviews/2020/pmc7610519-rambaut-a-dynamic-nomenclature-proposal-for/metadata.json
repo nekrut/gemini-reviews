@@ -1,0 +1,25 @@
+{
+  "id": "PMC7610519",
+  "pmid": "32669681",
+  "doi": "10.1038/s41564-020-0770-5",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7610519/",
+  "title": "A dynamic nomenclature proposal for SARS-CoV-2 lineages to assist genomic epidemiology",
+  "authors": "Rambaut A, Holmes EC, O'Toole Á, Hill V, McCrone JT, Ruis C, du Plessis L, Pybus OG.",
+  "authors_short": "Rambaut A et al. (Pybus OG.)",
+  "venue": "Nat Microbiol (2020)",
+  "year": 2020,
+  "cohort": "B",
+  "cohort_id": "B09",
+  "anon_id": "ANON_29",
+  "domain": "Viral Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.8,
+    "claims": 2.3,
+    "biology": 1.7,
+    "reproducibility": 1.6,
+    "overall": 8.4
+  },
+  "tier": "Strong / Sound"
+}

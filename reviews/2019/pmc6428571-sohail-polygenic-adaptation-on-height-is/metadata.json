@@ -1,0 +1,25 @@
+{
+  "id": "PMC6428571",
+  "pmid": "30895926",
+  "doi": "10.7554/elife.39702",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6428571/",
+  "title": "Polygenic adaptation on height is overestimated due to uncorrected stratification in genome-wide association studies",
+  "authors": "Sohail M, Maier RM, Ganna A, Bloemendal A, Martin AR, Turchin MC, Chiang CW, Hirschhorn J, Daly MJ, Patterson N, Neale B, Mathieson I, Reich D, Sunyaev SR.",
+  "authors_short": "Sohail M et al. (Sunyaev SR.)",
+  "venue": "Elife (2019)",
+  "year": 2019,
+  "cohort": "B",
+  "cohort_id": "B17",
+  "anon_id": "ANON_33",
+  "domain": "Population Genomics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 3.3,
+    "claims": 2.3,
+    "biology": 1.8,
+    "reproducibility": 1.7,
+    "overall": 9.1
+  },
+  "tier": "Exemplary"
+}

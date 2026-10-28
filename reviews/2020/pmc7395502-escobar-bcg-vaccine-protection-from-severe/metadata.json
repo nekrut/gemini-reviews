@@ -1,0 +1,25 @@
+{
+  "id": "PMC7395502",
+  "pmid": "32647056",
+  "doi": "10.1073/pnas.2008410117",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7395502/",
+  "title": "BCG vaccine protection from severe coronavirus disease 2019 (COVID-19)",
+  "authors": "Escobar LE, Molina-Cruz A, Barillas-Mury C.",
+  "authors_short": "Escobar LE et al. (Barillas-Mury C.)",
+  "venue": "Proc Natl Acad Sci U S A (2020)",
+  "year": 2020,
+  "cohort": "A",
+  "cohort_id": "A15",
+  "anon_id": "ANON_35",
+  "domain": "Epidemiology / Stats",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 0.7,
+    "claims": 0.7,
+    "biology": 0.8,
+    "reproducibility": 1.0,
+    "overall": 3.2
+  },
+  "tier": "Flawed / Overstated"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PMC12120081",
+  "pmid": "40436827",
+  "doi": "10.1038/s41467-025-59950-5",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12120081/",
+  "title": "Genome-wide association studies in a large Korean cohort identify quantitative trait loci for 36 traits and illuminate their genetic architectures",
+  "authors": "Jee YH, Wang Y, Jung KJ, Lee JY, Kimm H, Duan R, Price AL, Martin AR, Kraft P.",
+  "authors_short": "Jee YH et al. (Kraft P.)",
+  "venue": "Nat Commun (2025)",
+  "year": 2025,
+  "cohort": "C",
+  "cohort_id": "C17",
+  "anon_id": "ANON_65",
+  "domain": "Statistical Genetics",
+  "reviewed_at": "2026-10-27T21:35:00-04:00",
+  "issue_number": null,
+  "scores": {
+    "rigor": 2.7,
+    "claims": 2.1,
+    "biology": 1.7,
+    "reproducibility": 1.8,
+    "overall": 8.3
+  },
+  "tier": "Strong / Sound"
+}
