@@ -4480,7 +4480,7 @@
       "anon_id": "ANON_108",
       "scrubbed_bytes": 45844,
       "overall": 1.2,
-      "tier": "Critical Failure",
+      "tier": "Fundamentally Invalid",
       "rigor": 0.2,
       "claims": 0.2,
       "biology": 0.4,

@@ -5262,7 +5262,7 @@
       "reproducibility": 0.4,
       "overall": 1.2
     },
-    "tier": "Critical Failure",
+    "tier": "Fundamentally Invalid",
     "review_path": "reviews/2025/pmc12241668-xu-integrated-analysis-of-single-cell/review.md"
   }
 ]

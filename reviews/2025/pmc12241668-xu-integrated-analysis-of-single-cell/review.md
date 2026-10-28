@@ -4,7 +4,7 @@
 **Authors:** Xu Y, Zhang C, Wu J, Guo P, Jiang N, Wang C, Feng Y.  
 **Journal / Preprint:** *Front Immunol* (2025; `PMC12241668` / `PMID:40642071` / `10.3389/fimmu.2025.1601533`)  
 **Calibration Study Cohort:** Cohort C — Wild Literature Sample (`C92` | Double-Blinded as `ANON_108`)  
-**Overall Score:** **1.2 / 10.0** (Critical Failure)
+**Overall Score:** **1.2 / 10.0** (Fundamentally Invalid)
 * **Score Breakdown:** Rigor: 0.2/3.5 | Claims: 0.2/2.5 | Biology: 0.4/2.0 | Reproducibility: 0.4/2.0
 
 ---
