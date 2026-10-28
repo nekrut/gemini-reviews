@@ -1,6 +1,6 @@
 # Peer Review of ANON_108
 
-**Overall Score:** **1.2 / 10.0** (Critical Failure)
+**Overall Score:** **1.2 / 10.0** (Fundamentally Invalid)
 * **Score Breakdown:** Rigor: 0.2/3.5 | Claims: 0.2/2.5 | Biology: 0.4/2.0 | Reproducibility: 0.4/2.0
 
 ---
