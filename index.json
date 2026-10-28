@@ -2696,6 +2696,32 @@
     "review_path": "reviews/2025/pmc12603141-itai-investigating-prognostic-features-in-high/review.md"
   },
   {
+    "id": "PMC13522585",
+    "pmid": "42303613",
+    "doi": "10.1038/s41467-026-74526-7",
+    "url": "https://www.nature.com/articles/s41467-026-74526-7",
+    "title": "Longitudinal analysis of influenza A virus deletion-containing viral genomes reveals key determinants of co-evolutionary dynamics and interference",
+    "authors": "Alnaji FG, Farjo M, Goh SL, Aw DZH, Lorenzini PA, Liu T, Chan RLZ, Lee C, Vignuzzi M, Brooke CB.",
+    "authors_short": "Alnaji FG et al. (Brooke CB.)",
+    "venue": "Nat Commun (2026)",
+    "year": 2026,
+    "cohort": "Issue",
+    "cohort_id": "ISSUE_1",
+    "anon_id": "ISSUE_1_BLINDED",
+    "domain": "Viral Evolution",
+    "reviewed_at": "2026-10-27T22:00:00-04:00",
+    "issue_number": 1,
+    "scores": {
+      "rigor": 1.6,
+      "claims": 1.5,
+      "biology": 1.5,
+      "reproducibility": 1.2,
+      "overall": 5.8
+    },
+    "tier": "Mixed / Salvageable",
+    "review_path": "reviews/2026/pmc13522585-alnaji-longitudinal-analysis-of-influenza-a/review.md"
+  },
+  {
     "id": "PMC7458444",
     "pmid": "32937441",
     "doi": "10.1126/sciadv.abb9153",
