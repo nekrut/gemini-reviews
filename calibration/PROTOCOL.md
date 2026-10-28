@@ -3,7 +3,7 @@
 ## 1. Objective
 
 Estimate:
-1. **Diagnostic Power of Standardized Agentic Forensic Review:** Given only the manuscript and supplementary materials available at publication ($t_0$), what are the sensitivity ($\text{Se}$) and specificity ($\text{Sp}$) of a standardized 7-Pillar agentic review protocol ([`REVIEW_TEMPLATE.md`](/Users/sergei/Development/gemini-reviews/REVIEW_TEMPLATE.md)) in detecting fatal methodological, statistical, consistency, or code/data failures?
+1. **Diagnostic Power of Standardized Agentic Forensic Review:** Given only the manuscript and supplementary materials available at publication ($t_0$), what are the sensitivity ($\text{Se}$) and specificity ($\text{Sp}$) of a standardized 7-Pillar agentic review protocol ([`REVIEW_TEMPLATE.md`](../REVIEW_TEMPLATE.md)) in detecting fatal methodological, statistical, consistency, or code/data failures?
 2. **Prevalence of Flawed Research in the Wild ($\hat{\pi}_{\text{true}}$):** Applying the calibrated reviewer to a stratified random sample of unscrutinized papers in quantitative biology, viral/molecular evolution, genomics, bioinformatics, and biostatistics, what fraction of published papers exhibit smoking-gun methodological or statistical failures?
 
 ---
@@ -42,7 +42,7 @@ A manuscript is classified as **Failed / Invalidated** when the review identifie
 
 ## 4. Standardized Execution & Blinding Protocol
 
-1. **Rubric & Template:** All reviews follow the 7-Pillar Audit and 1–10 Quantitative Scoring Rubric defined in [`/Users/sergei/Development/gemini-reviews/REVIEW_TEMPLATE.md`](/Users/sergei/Development/gemini-reviews/REVIEW_TEMPLATE.md).
+1. **Rubric & Template:** All reviews follow the 7-Pillar Audit and 1–10 Quantitative Scoring Rubric defined in [`REVIEW_TEMPLATE.md`](../REVIEW_TEMPLATE.md).
 2. **Information Boundary ($t_0$ Isolation):**
    * The reviewer receives only the manuscript text, figures, tables, and original supplementary materials/code.
    * Web search for subsequent citing papers, PubPeer commentary, retraction notices, or refutations is strictly prohibited.
@@ -64,3 +64,16 @@ A manuscript is classified as **Failed / Invalidated** when the review identifie
    * **Rogan-Gladen Prevalence Estimator:**
      $$\hat{\pi}_{\text{true}} = \text{clip}_{[0,1]}\left(\frac{\hat{p}_{\text{obs}} - (1 - \widehat{\text{Sp}})}{\widehat{\text{Se}} - (1 - \widehat{\text{Sp}})}\right)$$
    * **Direct Verified Defect Rate ($\hat{\pi}_{\text{verified}}$):** Every Cohort C paper flagged as $< 5.0$ (or with a fatal claim defect) undergoes direct human domain audit to confirm whether the flagged defect is an undeniable smoking gun ($FP_{\text{verified}} = 0 \implies \hat{p}_{\text{verified}}$ is a strict lower bound on $\pi_{\text{true}}$).
+
+---
+
+## 6. Protocol Amendments (post hoc, undated)
+
+The study as executed and reported in [`CALIBRATION.md`](../CALIBRATION.md) deviates from the protocol above as follows:
+
+1. **Sample size:** $N$ expanded from 25/25/25 (phase 1, Results Sections 2–5 of `CALIBRATION.md`) to 50/50/100 (Cohorts A/B/C; Section 6 of `CALIBRATION.md`, `cohorts_200.json`, `results_200.json`).
+2. **Cutoffs:** Only $S < 5.0$ and the claim-based rule (Section 4, item 3) were pre-specified. Cutoffs $S < 5.5$, $< 6.0$ and $< 6.5$ were added and should be treated as exploratory.
+3. **Internal ($N=45$) vs. Upstream ($N=5$) Cohort A split:** Not specified in this protocol; defined after phase 1, where the 5 Cohort A papers scoring $\ge 7.0$ motivated the internal/upstream distinction. `CALIBRATION.md` Section 1.1 describes this stratification as a priori.
+4. **Cohort reassignment:** `PMC8135569` (Kumar et al. 2021, *Mol Biol Evol*) moved from Cohort B (`B02`) to Cohort A (`A26`) after phase 1; `B02` was reassigned to `PMC7418704` (Starr et al. 2020, *Cell*).
+5. **Review reuse:** All 75 phase-1 de-identified reviews (`ANON_01`–`ANON_75`) were reused unchanged in the $N = 200$ analysis (same anon IDs, scores and review files in `deidentified_results.json` and `results_200.json`).
+6. **Not yet performed:** the claim-based binary failure rule ($\ge 50\%$ of headline claims `Methodologically Flawed` / `Overstated`), Ground-Truth Defect Recall, Bayesian prevalence estimation, and the human domain audit of flagged Cohort C papers ($\hat{\pi}_{\text{verified}}$).
