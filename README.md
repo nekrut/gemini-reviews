@@ -62,6 +62,16 @@ Across **$N = 70$ temporally and metadata-blinded full-text manuscripts (`TIME_A
 * **Technology Maturity & Epistemic Stage ($N = 231$):** `Mature/Classical` technologies ($n = 97$, **`5.90 ± 2.13`**, `< 6.0` = `54.6%`) and `Mid-Stage High-Throughput` ($n = 76$, **`5.61 ± 1.88`**, `< 6.0` = `56.6%`) substantially outperform `Commodity/Hype-Cycle Template` pipelines ($n = 58$, **`4.57 ± 1.56`**, `< 6.0` = **`82.8%`**; **`3.75 ± 0.95`**, `< 6.0` = **`100.0%`** in the longitudinal cohort). Similarly, `Basic/Mechanistic Discovery` ($n = 116$, **`5.87 ± 2.03`**, `< 6.0` = `56.0%`) outperforms `Clinical/Observational` ($n = 53$, **`5.30 ± 1.84`**) and `Translational/Biomarker` ($n = 62$, **`4.86 ± 1.86`**, `< 6.0` = **`75.8%`**).
 * **Multivariable Decomposition ($N = 231$, $R^2 = 0.246, p = 2.4 \times 10^{-12}$):** Controlling simultaneously for Megajournals ($\beta = -0.951, p = 0.00014$), Commodity Template Tech ($\beta = -0.798, p = 0.0049$), Translational/Clinical Stage ($\beta = -0.740, p = 0.0019$), Secondary Database Modality ($\beta = -0.395$), and Team Size ($\beta = +0.374, p = 0.0023$) accounts for **~31% of the secular decline**, while **~69% ($\beta = -0.464 \pm 0.155$ pts/decade, $p = 0.0030$) reflects pure within-category erosion**.
 
+### Blinded Self-Audit: All Full-Text PubMed Central Papers by Sergei Kosakovsky Pond ([`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md))
+To maintain complete transparency and self-critical symmetry, we ran all **$N = 164$ Open-Access full-text PubMed Central articles matching `kosakovsky pond[au] OR pond sl[au] OR pond sk[au]` (`2004–2026`)** through the de-identification preprocessor (`SP_ANON_001`–`SP_ANON_164`, scrubbing titles, author names, affiliations, journals, and identifiers):
+* **Overall ($N = 164$):** Mean **`7.53 ± 1.38 / 10.0`** (`Median = 7.85`, `IQR = 6.70–8.53`, `Scientific Core = 5.98 / 8.0`), with **`4.9%` (`8/164`) scoring `< 5.0`**, **`14.0%` (`23/164`) `< 6.0`**, and **`47.0%` (`77/164`) `>= 8.0`**.
+* **First/Senior Author ($n = 42$) vs. Middle Co-Author ($n = 122$):**
+  * **First or Senior Author ($n = 42$: `10` First, `32` Senior):** Mean **`8.22 ± 1.11 / 10.0`** (`Median = 8.50`, `IQR = 8.12–9.00`; First Author `8.33 ± 1.25`, Senior Author `8.19 ± 1.08`), **`0.0%` (`0/42`) `< 5.0`**, **`7.1%` (`3/42`) `< 6.0`**, and **`76.2%` (`32/42`) `>= 8.0`**.
+  * **Middle Co-Author ($n = 122$):** Mean **`7.29 ± 1.39 / 10.0`** (`Median = 7.70`, `IQR = 6.50–8.38`, `< 5.0` = `6.6%` [`8/122`], `< 6.0` = `16.4%` [`20/122`], `>= 8.0` = `36.9%` [`45/122`]).
+  * **Role Gap:** First/Senior-author papers score **`+0.93` points higher** than middle co-author papers (Welch's $t = 4.40, p = 3.05 \times 10^{-5}$; Mann–Whitney $p = 6.69 \times 10^{-6}$).
+* **Zero Secular Decline (`2004–2026`):** `2000s` Mean `7.70` (First/Senior `8.14`, Med `8.90`), `2010s` Mean `7.46` (First/Senior `8.30`, Med `8.50`), `2020s` Mean `7.54` (First/Senior `8.16`, Med `8.95`; overall $r = -0.021, p = 0.79$; First/Senior $r = +0.039, p = 0.81$).
+* **Unsparing Blinded Calibration on Self-Authored & Co-Authored Flaws:** The blinded reviewer flagged 8 middle co-author papers below `5.0` (including `SP_ANON_103` *Amendola et al. 2022* at **`2.2`**, `SP_ANON_034` *de Oliveira et al. 2015* at **`3.8`**, `SP_ANON_135` *Canuti et al. 2022* at **`3.8`**, `SP_ANON_109` *Lorenzo-Redondo et al. 2016* at **`4.1`**, and `SP_ANON_003` *Kumar et al. 2021* at **`4.2`**) as well as 4 First/Senior-author papers below `6.5` (`SP_ANON_044` *AUTO-TUNE* 2024 at **`5.0`**, `SP_ANON_028` *PLoS Comput Biol* 2006 at **`5.2`**, `SP_ANON_162` *Mammalian Rem2* 2024 at **`5.4`**, and `SP_ANON_012` *RASCL* 2022 at **`6.4`**—whose Omicron BA.5 amplicon-dropout reversion artifact was subsequently investigated and refuted in `SP_ANON_007` *Martin et al. 2023*, which scored **`8.9 / 10.0`**).
+
 ---
 
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)
@@ -306,6 +316,7 @@ gemini-reviews/
 ├── OOD_GENERALIZATION.md            # Experiment 3: out-of-domain generalization (3 new fields)
 ├── PEER_REVIEW_VALUE_ADDED.md       # Experiment 4: preprint-vs-published & human peer review files
 ├── SECULAR_TRENDS_AND_COVARIATES.md # Experiment 5: 1991-2025 secular trends & N=231 covariate decomposition
+├── SPOND_SELF_AUDIT.md              # Blinded self-audit of all N=164 full-text Kosakovsky Pond PMC papers
 ├── index.json                       # Machine-readable ledger of all reviewed papers & scores
 ├── .github/
 │   ├── ISSUE_TEMPLATE/

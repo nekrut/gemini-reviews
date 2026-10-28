@@ -1,0 +1,35 @@
+# Blinded Review: SP_ANON_050
+**Composite Score:** 9.1 / 10.0 (Rigor: 3.1/3.5 | Claims: 2.3/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.8/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Accept
+**Study Modality:** Dry-Lab Theory/Methods/Simulation
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This manuscript develops, benchmarks, and applies an integrated codon-substitution modeling framework (`BUSTED+S+MH`) that simultaneously accounts for two pervasive biological confounders in gene-wide tests of episodic diversifying selection (EDS): site-to-site synonymous rate variation (`+S`) and instantaneous double- and triple-nucleotide substitutions within a codon (`+MH`). Evaluating a four-model hierarchy (`BUSTED`, `+S`, `+MH`, `+S+MH`) alongside an Akaike-weight model-averaged $p$-value ($p_{\text{MA}}$) across 21 classic benchmark alignments, 4-taxon and empirical-parameterized simulations, and 9,861 mammalian orthologous protein alignments from Enard et al. (2016) (including 5,000 simulated replicates), the authors demonstrate that unmodeled multinucleotide substitutions occurring on short branches are absorbed into inflated $\omega_3$ estimates under standard and `+S` models, driving high false-positive rates (reaching 50–100% in simulations). Incorporating `+MH` and model averaging reduces positive selection calls on the mammalian proteome from 28.4% (`BUSTED`) and 26.4% (`+S`) to 10.0% (`+S+MH`) and 19.3% ($p_{\text{MA}}$), while preserving statistical power when true adaptive evolution is present.
+
+This is a thorough, statistically insightful, and well-validated methodological study. By pairing large-scale simulations with site- and branch-level Empirical Bayes Factor (EBF) and Evidence Ratio (ER) diagnostics on discordant empirical genes (such as showing that the entire gene-wide selection signal in HIV-1 *vif* under `BUSTED+S` stems from a single triple-nucleotide change `CAG -> GCA` at codon 6 on a short terminal branch), the authors provide compelling mechanistic proof of how unmodeled multiple hits distort $d_N/d_S$ inference. Only minor statistical and editorial points warrant clarification.
+
+---
+
+### 2. Methodological & Statistical Audit
+* **Mechanistic Dissection of Short-Branch Multinucleotide Confounding:** The theoretical and empirical explanation of why branch length modulates MH-induced false positives (line 170; Fig. 1–2) is crystal clear: along long branches, consecutive single-nucleotide substitutions can readily produce two- or three-nucleotide differences under standard Markov models, whereas along short branches ($t \approx 0.01\text{--}0.05$), forcing a 2-hit or 3-hit nonsynonymous change through single-step transitions requires an extreme local spike in $\omega_{bs}$, which triggers false rejection of the $\omega_3 = 1$ null hypothesis.
+* **Statistical Properties of the Akaike-Weighted $P$-Value ($p_{\text{MA}}$, line 160):** The proposed model-averaged statistic $p_{\text{MA}} = \sum_{m=1}^M w_m p_m$ weights the frequentist LRT $p$-values $p_m$ (computed from the $50:50$ $\chi^2_0 + \chi^2_2$ boundary mixture within each model $m$) by the unconstrained alternative-model Akaike weights $w_m \propto \exp(-\Delta \text{AIC}_c / 2)$. Strictly speaking, a weighted average of frequentist $p$-values across nested and non-nested nuisance parameterizations is a pragmatic decision heuristic rather than a true Bayesian posterior probability or a guaranteed uniform $U(0,1)$ pivotal quantity under the composite null. Nevertheless, the authors thoroughly validate its empirical Type I error and power across both 4-taxon and 5,000 mammalian-parameterized simulations (Figs. 2, 3, 5), showing that it successfully suppresses false positives when $\delta, \psi > 0$ while avoiding the power loss of fitting `+S+MH` when $\delta = \psi = 0$.
+* **Misinterpretation of Benjamini-Hochberg FDR Behavior in Table 6 (offset lines 27–38):** In Table 6, the authors compare the fraction of the 9,861 mammalian genes called significant at raw $P \le 0.05$ versus Benjamini-Hochberg (BH) FDR $q \le 0.20$. They note that for `BUSTED` (`0.284` at $P \le 0.05$ vs. `0.2985` at $q \le 0.20$) and `+S` (`0.264` vs. `0.272`), the detection rate is unchanged (in fact, slightly *higher* under $q \le 0.20$), whereas for `+MH` (`0.0838` to `0.0271`) and `+S+MH` (`0.0998` to `0.0348`), FDR reduces detections ~3-fold. This difference is a mechanical arithmetic consequence of comparing a loose FDR threshold ($q = 0.20$) against a stricter raw $p$-value threshold ($P = 0.05$): under the BH step-up rule $p_{(k)} \le \frac{k}{m} q$, if a method rejects $\hat{\pi} = k/m \approx 30\%$ of all hypotheses, the effective $p$-value cutoff for $q \le 0.20$ is $p^* = 0.30 \times 0.20 = 0.060 > 0.05$ (increasing calls relative to $P \le 0.05$), whereas if a conservative method rejects $\hat{\pi} \approx 3.5\%$ of hypotheses, the effective cutoff is $p^* = 0.035 \times 0.20 = 0.007 \ll 0.05$. Comparing all methods at matched $q \le 0.05$ and $q \le 0.10$ would avoid conflating the BH step-up threshold formula with model stability.
+
+---
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+* **Single-Site Fragility in Gene-Wide Selection Scans:** A major practical insight of this paper is that across nearly 10,000 mammalian genes, a median of only ~3 codons per gene drive $>80\%$ of the gene-wide likelihood ratio signal, and in 5–10% of positive calls a single codon dominates (offset line 41). The authors' recommendation to inspect site-level evidence ratios and EBF heatmaps (to distinguish genuine adaptive bursts from local alignment/assembly errors or polymerase ζ multinucleotide mutations) is well-founded and directly actionable for comparative genomics.
+* **Explicit Discussion of Unmodeled Complexities:** The Discussion candidly notes remaining model simplifications, including transversion enrichment in multinucleotide mutations, amino-acid exchangeability preferences, and dinucleotide/trinucleotide hits spanning adjacent codon boundaries (which break site independence).
+
+---
+
+### 4. Reproducibility & Data Completeness
+* **Open Code, Pipelines, and Simulation Archives:** `BUSTED+MH` and `BUSTED+S+MH` are integrated into open-source HyPhy ($\ge 2.5.42$), an automated Snakemake workflow for multi-model fitting and model averaging is provided at `https://github.com/veg/BUSTED_ModelTest`, and all empirical and simulated alignments are archived on Dryad and `https://data.hyphy.org/web/busteds-mh/`.
+* **Minor Editorial Corrections:**
+  1. On line 16, the Enard et al. dataset size is written as *"9,181 of proteins"* (a transposition typo for **9,861** alignments, which is used throughout the rest of the paper).
+  2. On line 164, the final sentence of the paragraph is truncated mid-clause (*"For example, among the seven datasets where the maximum likelihood estimate $\hat{\psi} > 0$ in table 1 ."*) and cites Table 1 instead of Table 3.
