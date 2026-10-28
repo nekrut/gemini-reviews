@@ -20,6 +20,8 @@ def fetch_pending_issues() -> list[dict]:
         REPO,
         "--state",
         "open",
+        "--limit",
+        "1000",
         "--json",
         "number,title,body,labels,createdAt,url",
     ]

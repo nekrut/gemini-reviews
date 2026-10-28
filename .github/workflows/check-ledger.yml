@@ -1,0 +1,16 @@
+name: Check ledger
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regenerate index.json and README.md; fail on diff
+        run: python3 scripts/update_leaderboard.py && git diff --exit-code index.json README.md

@@ -5,7 +5,9 @@ Direct, technically rigorous peer reviews of published manuscripts and preprints
 ## How to Request a Review
 
 1. Open a new [**Manuscript Review Request Issue**](../../issues/new?template=review_request.yml) with the paper's title, DOI/URL, or preprint identifier.
-2. A scheduled watcher detects open `pending-review` issues, audits the manuscript against the **7-Pillar Checklist** (using the **De-Identification / Anti-Prestige-Halo Protocol**), generates a structured **3-Section Review**, assigns a calibrated **1–10 score**, commits the review to `reviews/YYYY/<slug>/review.md`, updates the leaderboard below, and posts the review back to the issue.
+2. A maintainer periodically runs `scripts/watch_issues.py` to list open `pending-review` issues, runs the LLM reviewer against REVIEW_TEMPLATE.md, commits `reviews/YYYY/<slug>/{review.md,metadata.json}`, runs `scripts/update_leaderboard.py`, posts the review as an issue comment and labels the issue `reviewed`. No CI automation runs reviews; the de-identification preprocessor is not yet in this repo.
+
+Requirements: Python ≥ 3.9; GitHub CLI (`gh`) authenticated (for watch_issues.py).
 
 ---
 
@@ -289,15 +291,34 @@ Across **$N = 20$ version-blinded Preprint (`v1`) $\rightarrow$ Final Published 
 gemini-reviews/
 ├── README.md                        # Overview + Auto-updated Leaderboard Table
 ├── REVIEW_TEMPLATE.md               # 7-Pillar Audit, Anti-LLM Style Rules, 1-10 Rubric & 3-Section Template
+├── CALIBRATION.md                   # N=200 calibration protocol & results
+├── REPEATABILITY.md                 # Experiment 1: 3-wave test-retest repeatability
+├── OOD_GENERALIZATION.md            # Experiment 3: out-of-domain generalization (3 new fields)
+├── PEER_REVIEW_VALUE_ADDED.md       # Experiment 4: preprint-vs-published & human peer review files
 ├── index.json                       # Machine-readable ledger of all reviewed papers & scores
 ├── .github/
-│   └── ISSUE_TEMPLATE/
-│       └── review_request.yml       # Structured Issue form for submitting papers to review
+│   ├── ISSUE_TEMPLATE/
+│   │   └── review_request.yml       # Structured Issue form for submitting papers to review
+│   └── workflows/
+│       └── check-ledger.yml         # CI: index.json & README.md must regenerate cleanly
+├── calibration/
+│   ├── PROTOCOL.md                  # Calibration protocol
+│   ├── SUMMARY_FOR_COLLEAGUES.txt   # Plain-text results summary
+│   ├── cohorts_200.json             # Cohort A/B/C manuscript lists
+│   ├── results_200.json             # Per-paper calibration scores
+│   ├── deidentified_results.json    # De-identification experiment results
+│   ├── reviews_anon/ANON_*.md       # Blinded reviews (200)
+│   └── reviews_identified/PMC*.md   # Identified reviews (75)
+├── peer_review_exp/
+│   ├── manifest.json                # Preprint/published pair manifest
+│   ├── human_reviews/               # Verbatim human peer review files
+│   ├── wave1_reviews/               # Wave 1 blinded reviews
+│   └── wave2_reviews/               # Wave 2 blinded reviews
 ├── reviews/
 │   └── YYYY/                        # Grouped by publication/preprint year
 │       └── <slug>/
 │           ├── review.md            # Generated Markdown peer review
-│           └── metadata.json        # Structured scores, DOI, issue #, timestamp
+│           └── metadata.json        # Scores, tier, DOI/PMID, cohort/anon IDs, issue #, timestamp
 └── scripts/
     ├── watch_issues.py              # Polls GitHub Issues for pending review requests
     └── update_leaderboard.py        # Rebuilds index.json and README.md table
