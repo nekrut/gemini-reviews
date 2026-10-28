@@ -12,7 +12,7 @@
   "venue": "bioRxiv / Mol Biol Evol (2021)",
   "year": 2021,
   "domain": "Viral Evolution",
-  "model": "gemini-3.1-pro",
+  "model": "gemini-4-argon",
   "rubric_version": "REVIEW_TEMPLATE v1.1",
   "reviewed_at": "2026-10-25T20:34:00-04:00",
   "issue_number": null,

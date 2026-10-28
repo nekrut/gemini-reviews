@@ -12,7 +12,7 @@
   "cohort_id": "A18",
   "anon_id": "ANON_11",
   "domain": "Cancer & Microbiome",
-  "model": "gemini-3.1-pro",
+  "model": "gemini-4-argon",
   "rubric_version": "REVIEW_TEMPLATE v1.1",
   "reviewed_at": "2026-10-27T21:35:00-04:00",
   "issue_number": null,
