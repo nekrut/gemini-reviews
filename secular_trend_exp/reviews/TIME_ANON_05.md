@@ -1,0 +1,43 @@
+# Blinded Review: TIME_ANON_05
+**Composite Score:** 7.7 / 10.0 (Rigor: 2.3/3.5 | Claims: 2.0/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.8/2.0)
+**Bias Category:** Single-Host Sampling & Editorial/Morphometric Text Contradictions
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This study describes a new species of oxyurid nematode (pinworm), *Skrjabinema longicaudatum* n. sp., recovered from the caecum and colon of a naturally deceased Tibetan antelope (*Pantholops hodgsonii*) in the Hohxil National Nature Reserve, China. Out of 124 worms collected from this single host, the authors performed light microscopy and scanning electron microscopy (SEM) morphometrics on 3 mature males and 10 mature females, and amplified and sequenced four genetic markers—nuclear `18S` rDNA (678 bp), `28S` rDNA (819 bp), `ITS` (1,079 bp), and mitochondrial `cox1` (360 bp)—from 3 female specimens. Maximum likelihood (ML) phylogenies constructed in MEGA X using `28S` alone (`K2+G`) and concatenated `18S + 28S + cox1` (`HKY+G+I`) placed *S. longicaudatum* n. sp. within a monophyletic genus *Skrjabinema* sister to *Oxyuris*, supporting the placement of *Skrjabinema* in the subfamily Oxyurinae rather than Syphaciinae or Skrjabinemiinae.
+
+The integrative taxonomic approach—combining high-resolution cephalic/caudal SEM ultrastructure with four nuclear and mitochondrial loci, full GenBank depositions, museum type-specimen vouchers, and ZooBank registration—provides convincing evidence that these specimens represent a distinct species characterized by an unusually long female tail ($2.63\text{--}3.13\text{ mm}$, $23.0\text{--}27.7\%$ of body length) and distinct male spicule/gubernaculum proportions. However, the manuscript contains three factual/editorial errors in the Results and Discussion text (a mislabeled locus in the `28S` section, a mislabeled subfamily in the phylogenetic results, and an inverted gubernaculum measurement in the morphological comparison with *S. parva*), relies on a single host individual ($n=1$ antelope, $n=3$ sequenced worms) to claim "no intraspecific nucleotide variation," and uses an unpartitioned substitution model across a concatenated nuclear-mitochondrial alignment with substantial missing locus data in reference taxa.
+
+---
+
+### 2. Methodological & Statistical Audit
+
+* **Internal Textual and Numerical Contradictions (Lines 135, 150, and 160):**
+  1. **Mislabeled Genetic Marker (Section "Partial 28S region", line 135):** Under the heading *Partial 28S region*, the authors write: *"Pairwise comparison of ITS sequences between S. longicaudatum n. sp. and S. ovis displayed 8.36% nucleotide divergence."* This is a copy-paste error where `ITS` was written instead of `28S` (consistent with the Abstract and Discussion, which correctly report $8.36\%$ divergence for `28S` and $20.3\text{--}23.7\%$ for `ITS`).
+  2. **Contradictory Subfamily Assignment in the Concatenated Phylogeny (Section "Phylogenetic analyses", line 150):** In describing the `18S + 28S + cox1` tree (Fig. 5), the text states: *"Species of Trypanoxyuris and Enterobius formed clade I, representing the subfamily Enterobiinae. The members of Syphabulea and Syphacia grouped together (clade II), belonging the subfamily Enterobiinae."* Assigning *Syphabulea* and *Syphacia* to *Enterobiinae* is an error that directly contradicts the preceding paragraph (line 145), where *Syphacia* and *Syphabulea* are correctly identified as representing the subfamily *Syphaciinae*.
+  3. **Self-Contradictory Gubernaculum Measurement in Discussion (line 160):** In the first sentence of the comparison with *S. ovis*, the authors correctly state that *S. longicaudatum* n. sp. has a *"longer gubernaculum (0.048 mm long in S. longicaudatum n. sp. vs 0.019–0.025 mm long in the latter)"*, matching the Male description (`about 48 long` $\mu\text{m}$ = $0.048\text{ mm}$). In the very next sentence comparing *S. longicaudatum* with *S. parva*, the authors write: *"Skrjabinema longicaudatum n. sp. has the spicule without a dilated proximal end, longer gubernaculum (0.019–0.025 mm long)... which is different from that of S. parva (...the gubernaculum 0.01–0.016 mm long)."* Here, the authors accidentally pasted the gubernaculum range of *S. ovis* (`0.019–0.025 mm`) as the measurement for *S. longicaudatum* n. sp.
+* **Single-Host Sampling and "Zero Intraspecific Variation" Claim:**
+  All 124 worms were collected from a single dead Tibetan antelope, and only 3 female worms from this single infrapopulation were sequenced. Because oxyurid pinworms have a direct fecal-oral lifecycle with high rates of autoinfection and sibling transmission within an individual host, 3 worms from one host caecum may be clonal or full-sibling progeny. Claiming that *"There was no intraspecific nucleotide variation between different individuals of S. longicaudatum n. sp."* should be explicitly qualified as reflecting a single host infrapopulation ($n=3$ worms from $1$ host) rather than species-wide genetic monomorphism. Similarly, male morphometrics are based on $n = 3$ specimens, with gubernaculum ($48\ \mu\text{m}$) and tail ($33\ \mu\text{m}$) reported as single point values without a range or standard deviation.
+* **Unpartitioned Concatenated Supermatrix with Incomplete Taxon-Locus Coverage:**
+  The authors concatenated nuclear ribosomal RNA genes (`18S` and `28S`) with a mitochondrial protein-coding gene (`cox1`) and analyzed the combined matrix under a single unpartitioned nucleotide model (`HKY+G+I`). Nuclear stem-loop rDNA and mitochondrial 1st/2nd/3rd codon positions evolve under markedly different substitution rates and base compositions, warranting partitioned model selection. Furthermore, as the authors note in the text, no other *Skrjabinema* species in GenBank had a `cox1` sequence, *S. ovis* had only `28S` (`KY990019`), and *S. kamosika* had `18S` (`AB699690`) and `ITS` (`AB699691`) but no `28S` or `cox1`. Consequently, *S. longicaudatum* groups with *S. ovis* in the `28S` tree (Fig. 4) and with *S. kamosika* in the `18S + 28S + cox1` tree (Fig. 5) simply because each congener is missing from the other marker dataset.
+
+---
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+
+* **Claim 1 — *Skrjabinema longicaudatum* n. sp. is a morphologically and genetically distinct new species of pinworm: `[Well Supported]`.**  
+  The morphological diagnosis is anchored by non-overlapping characters across all 10 known congeners—most notably the female tail length ($2.63\text{--}3.13\text{ mm}$, representing $23.0\text{--}27.7\%$ of body length vs. $\le 1.60\text{ mm}$ and $6.68\text{--}20.6\%$ in all other *Skrjabinema* species), the absence of a female cephalic vesicle and male sub-interlabial projections, and a $48\ \mu\text{m}$ gubernaculum—corroborated by $8.36\%$ divergence in `28S` from *S. ovis* and $20.3\text{--}23.7\%$ divergence in `ITS` from *S. kamosika* and *Skrjabinema* sp.
+* **Claim 2 — The genus *Skrjabinema* belongs to the subfamily Oxyurinae (sister to *Oxyuris*) rather than Syphaciinae: `[Well Supported]`.**  
+  Both the `28S` and multi-locus ML trees resolve *Skrjabinema* in a strongly supported clade with *Oxyuris* (Clade II in Fig. 4, Clade III in Fig. 5), well separated from *Syphacia*, *Passalurus*, and *Enterobius*.
+* **Claim 3 — Absence of intraspecific genetic variation in *S. longicaudatum* n. sp.: `[Overstated]`.**  
+  True for the 3 female worms sequenced from a single dead antelope, but sample size ($n=3$ from $1$ host) is insufficient to characterize species-level nucleotide diversity across the Tibetan antelope population.
+
+---
+
+### 4. Reproducibility & Data Completeness
+Data availability and taxonomic reproducibility are strong: all 12 newly generated sequences are deposited in GenBank (`MW020179–MW020181` for `18S`, `MW020057–MW020059` for `ITS`, `MW020098–MW020100` for `28S`, and `MW021552–MW021554` for `cox1`), all 10 PCR primer sequences are explicitly listed in the Methods, ZooBank LSIDs are registered, and holotype/allotype/paratype specimens are deposited in two public museum collections (`HBNU-N-2020M001-3L` and `KLAEPB No.019001`). The authors should also provide a table of GenBank accession numbers for all ingroup and outgroup taxa included in Figures 4 and 5, fill in the blank "Site in host" subheading in the taxonomic summary (which was left empty on line 75, though caecum and colon are mentioned in the Methods), and fix the three text errors noted above.

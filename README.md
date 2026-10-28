@@ -54,6 +54,14 @@ Across **$N = 20$ version-blinded Preprint (`v1`) $\rightarrow$ Final Published 
 
   > Note: the itemized matrix sums to 22/23, PAIR_05 lists 4 critiques against a denominator of 5, and the C101 matches are under re-evaluation (spond/gemini-reviews#2). Treat this figure as provisional.
 
+### Secular Quality Trends (`1991–2025`) & Structural Covariate Decomposition ([`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md))
+Across **$N = 70$ temporally and metadata-blinded full-text manuscripts (`TIME_ANON_01`–`TIME_ANON_70`)** sampled across **seven 5-year windows (`1991–1995` to `2021–2025`, $n = 10$ per window)** in four continuous core tracks, and pooled with our `101` Cohort C and `60` OOD wild papers (**$N = 231$ Wild Manuscripts total**):
+* **Secular Decline (`1991–2025`, $N = 70$):** Mean Composite Score declined from **`7.14 ± 2.33`** (`Median = 8.20`, `< 5.0` = `25.0%`, `< 6.0` = `31.2%`) in the **1990s (`1991–1999`)** to **`4.81 ± 1.96`** (`Median = 4.15`, `< 5.0` = `65.0%`, `< 6.0` = `75.0%`) in the **2020s (`2020–2025`)** ($r = -0.315, p = 0.0079$, slope = **`-0.67` pts/decade**). Evaluated strictly on the **8.0-Point Scientific Core (`Rigor /3.5 + Claims /2.5 + Biology /2.0`, excluding `Reproducibility /2.0`)**, the decline is even stronger ($r = -0.327, p = 0.0058$, **`5.74 / 8.0` $\rightarrow$ `3.69 / 8.0`**, or **`-0.74` scaled pts/decade**).
+* **Publication Volume Explosion vs. Team Size (`# of papers` vs. `# of authors`):** Annual core-domain PubMed volume expanded **11.2-fold** (`57,850`/yr in 1991 $\rightarrow$ `648,325`/yr in 2025) and Open-Access volume expanded **295-fold** (`3,124` $\rightarrow$ `921,565`), anti-correlating with quality ($r = -0.318, p = 0.0072$; **`-2.20` pts per 10-fold volume increase**). Conversely, **team size ($\log_2 N_{\text{authors}}$) correlates positively with quality** ($\beta = +0.374 \pm 0.122$ pts per doubling of authors, $p = 0.0023$): multi-lab collaborations outperform solo/pair dry-lab template papers.
+* **Physical/Functional Outcome vs. Secondary Cohort/Database Re-Analysis ($N = 231$):** `Wet-Lab Primary Experimental` studies ($n = 61$) average **`6.10 ± 2.02`** (`< 6.0` = `49.2%`), compared to **`5.51 ± 2.00`** for `Hybrid Computational + Wet-Lab Validation` ($n = 51$), **`5.40 ± 2.68`** for `Dry-Lab Theory/Methods/Simulation` ($n = 12$), and **`5.10 ± 1.80`** (`< 6.0` = **`72.9%`**) for `Dry-Lab Secondary Cohort/Database Re-Analysis Only` ($n = 107$, $\Delta = -1.00$ pt vs. Wet-Lab, $p = 0.0012$).
+* **Technology Maturity & Epistemic Stage ($N = 231$):** `Mature/Classical` technologies ($n = 97$, **`5.90 ± 2.13`**, `< 6.0` = `54.6%`) and `Mid-Stage High-Throughput` ($n = 76$, **`5.61 ± 1.88`**, `< 6.0` = `56.6%`) substantially outperform `Commodity/Hype-Cycle Template` pipelines ($n = 58$, **`4.57 ± 1.56`**, `< 6.0` = **`82.8%`**; **`3.75 ± 0.95`**, `< 6.0` = **`100.0%`** in the longitudinal cohort). Similarly, `Basic/Mechanistic Discovery` ($n = 116$, **`5.87 ± 2.03`**, `< 6.0` = `56.0%`) outperforms `Clinical/Observational` ($n = 53$, **`5.30 ± 1.84`**) and `Translational/Biomarker` ($n = 62$, **`4.86 ± 1.86`**, `< 6.0` = **`75.8%`**).
+* **Multivariable Decomposition ($N = 231$, $R^2 = 0.246, p = 2.4 \times 10^{-12}$):** Controlling simultaneously for Megajournals ($\beta = -0.951, p = 0.00014$), Commodity Template Tech ($\beta = -0.798, p = 0.0049$), Translational/Clinical Stage ($\beta = -0.740, p = 0.0019$), Secondary Database Modality ($\beta = -0.395$), and Team Size ($\beta = +0.374, p = 0.0023$) accounts for **~31% of the secular decline**, while **~69% ($\beta = -0.464 \pm 0.155$ pts/decade, $p = 0.0030$) reflects pure within-category erosion**.
+
 ---
 
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)
@@ -297,6 +305,7 @@ gemini-reviews/
 ├── REPEATABILITY.md                 # Experiment 1: 3-wave test-retest repeatability
 ├── OOD_GENERALIZATION.md            # Experiment 3: out-of-domain generalization (3 new fields)
 ├── PEER_REVIEW_VALUE_ADDED.md       # Experiment 4: preprint-vs-published & human peer review files
+├── SECULAR_TRENDS_AND_COVARIATES.md # Experiment 5: 1991-2025 secular trends & N=231 covariate decomposition
 ├── index.json                       # Machine-readable ledger of all reviewed papers & scores
 ├── .github/
 │   ├── ISSUE_TEMPLATE/

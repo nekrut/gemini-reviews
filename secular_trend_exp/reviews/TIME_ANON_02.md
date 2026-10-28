@@ -1,0 +1,50 @@
+# Blinded Review: TIME_ANON_02
+**Composite Score:** 3.6 / 10.0 (Rigor: 0.8/3.5 | Claims: 0.8/2.5 | Biology: 0.9/2.0 | Reproducibility: 1.1/2.0)
+**Bias Category:** Template Gene-Family Pipeline with Internal Statistical Contradictions & Unsubstantiated Functional Claims
+**Verdict:** Reject
+**Study Modality:** Dry-Lab Secondary Cohort/Database Re-Analysis
+**Technology Maturity:** Commodity/Hype-Cycle Template
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This manuscript presents a comparative bioinformatics survey of the *Gretchen Hagen 3* (*GH3*) auxin-responsive gene family across *Arabidopsis thaliana* (19 genes), *Oryza sativa* (13 genes), and *Salvia miltiorrhiza* (8 newly identified genes; 40 genes total). The authors perform sequence similarity searches, Bayesian phylogenetics (MrBayes, JTT+I+G), exon-intron structure and MEME motif mapping, PlantCARE promoter *cis*-element prediction, pairwise paralog $K_a/K_s$ estimation (PAL2NAL), codon-level positive selection tests (PAML `codeml` site and branch-site models), functional divergence estimation (`DIVERGE` 3.0 Type-I and Type-II), and tissue expression profiling using public EST counts and *S. miltiorrhiza* RNA-seq RPKM data.
+
+Despite its breadth of standard bioinformatic outputs, the manuscript suffers from severe methodological flaws, mathematical contradictions between the main text and tables, misapplication of evolutionary models across deep angiosperm divergence, and unsupported biochemical claims in the Discussion. Specifically: (1) the authors directly contradict their own Table 1 regarding the M8 vs. M7 site-model likelihood ratio test, (2) the PAML branch-site model analysis hits numerical boundary artifacts ($\omega_2 = 999.0$) and absurdly claims that "570 positively selected sites were found" in Group I while simultaneously stating in the next sentence that zero sites were significant at the 95% level, (3) the `DIVERGE` analysis conflates site-specific evolutionary rate shifts ($\theta_I$) with Darwinian positive selection and sets an impossible posterior probability cutoff of $Q_k > 1.0$ for Type-II divergence, and (4) the Discussion states as an established fact that *SMil_00017300* biochemically catalyzes JA-to-JA-Ile conjugation without any experimental evidence.
+
+---
+
+### 2. Methodological & Statistical Audit
+
+* **Direct Contradictions and Convergence Failures in PAML Site Models (Table 1 vs. Text):**
+  1. In the comparison of site models M7 ($\ln L = -53553.845867$) and M8 ($\ln L = -53550.001494$), twice the log-likelihood difference is $2\Delta\ln L = 2 \times 3.844373 = 7.688746$ (reported in Table 1 as `7.392934*`, where the asterisk denotes statistical significance at $p < 0.05$ for $\text{df} = 2$, $p = 0.0248$), and Table 1 lists site `584 A` under positive selection. Yet the main text states the exact opposite: *"Thus, in both comparisons, there was no statistical significance, and no site was detected under positive selection at the level of 95% (Table 1)."*
+  2. In the comparison of M1a ($\ln L = -54101.460731$, $\text{np}=81$) vs. M2a ($\ln L = -54101.460957$, $\text{np}=83$), the more parameter-rich model M2a has a *lower* log-likelihood than the nested null model M1a ($\Delta\ln L < 0$), with $p_2 = 0.00000$ and $\omega_2 = 318.98328$, indicating an unaddressed local optimum or numerical convergence failure.
+* **Severe Misinterpretation and Boundary Failure of PAML Branch-Site Models (Table 2 & Abstract):**
+  1. In Table 2, setting Group I as the foreground branch yields $\omega_2 = 999.00000$ in the Alternative model. In PAML `codeml`, $\omega = 999$ is the hardcoded upper boundary when foreground synonymous substitutions ($d_S$) are zero or saturated, not a valid biological estimate of $d_N/d_S$.
+  2. The authors report in Table 2 and the text that *"when the foreground branch was assigned to group I, a total of 570 positively selected sites were found"*, followed immediately by *"However, no site was positively selected at a level of 95% (Table 2)"* and in the Discussion by *"although most positive sites were identified during the branch-site model analysis, none achieved statistical significance ($p < 0.05$)."* Given that full-length GH3 proteins are only 406–672 amino acids long (and even shorter after `Gblocks` trimming), claiming 570 positively selected sites in Group I while 0 sites pass the 95% Bayes Empirical Bayes (BEB) threshold shows that the authors misread the `codeml` output (likely reporting the total number of alignment sites or all sites with posterior probability $> 0.50$).
+  3. In the Abstract, the authors write the self-contradictory statement: *"Positive selection analysis with the site and branch-site models further suggested that SmGH3 AtGH3 and OsGH3 genes had gone through purifying selective pressure for adaptive evolution."*
+* **Mathematical Impossibility ($Q_k > 1.0$) and Conceptual Conflation in `DIVERGE` Analysis:**
+  1. In the section "Functional divergence analysis", the authors repeatedly refer to sites identified by `DIVERGE` posterior probabilities ($Q_k$) as *"positive selection sites that influencing functional divergence"* and *"positive selection sites associated with functional divergence."* Gu's `DIVERGE` method measures Type-I ($\theta_I$, shift in site-specific evolutionary rate/conservation between paralogous clades) and Type-II ($\theta_II$, shift in amino acid physicochemical properties) functional divergence—it does **not** test for Darwinian positive selection ($d_N/d_S > 1$).
+  2. For Type-II functional divergence, the authors state: *"we established $Q_k > 0.8$ and $1.0$ as the threshold for identifying the Type-I and Type-II functional divergence-related positive selection sites between groups, respectively... for Type-II functional divergence, there was no group pair contained positive selection sites, when $Q_k > 1.0$ (Figure 7)."* Because $Q_k$ is a posterior probability bounded on $[0, 1]$, a threshold of $Q_k > 1.0$ is mathematically impossible to exceed under any dataset.
+  3. In the text for Type-II divergence, the authors state that $\theta_{II}$ was *"not statistically significant among the three group pairs ($p = 0.2514$, $p = 0.02275$ and $p = 0.08691$, respectively)"*, ignoring that $p = 0.02275 < 0.05$, while also failing to explain why all three $\theta_{II}$ estimates are negative ($-0.137, -0.637, -0.283$), which violates the definition $\theta_{II} > 0$ given in the Methods.
+* **Sequence Alignment Trimming vs. Codon Alignment & Deep-Time $K_s$ Saturation:**
+  The Methods state that `Gblocks_0.91b` was used on the amino acid sequences before alignment in `DNAMAN`, and that Bayesian inference in `MrBayes` was used for the tree, yet Figure 1 and the text refer to *"high bootstrap values"* (MrBayes produces Bayesian posterior probabilities, not bootstrap percentages). Moreover, applying codon models (`codeml`) across all 40 genes spanning monocots (*O. sativa*) and dicots (*A. thaliana*, *S. miltiorrhiza*)—which diverged ~150 million years ago—suffers from severe synonymous substitution ($K_s$) saturation that is never evaluated or controlled for.
+
+---
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+
+* **Claim 1 — Identification of 8 *SmGH3* genes in the *S. miltiorrhiza* genome and classification of the 40 *GH3* genes into three phylogenetic subgroups (I, II, III): `[Moderately Supported]`.**  
+  The homology search and clustering into the three canonical GH3 clades agree with established plant GH3 literature, although support values on the MrBayes tree are misdescribed as "bootstrap values."
+* **Claim 2 — All 11 paralogous gene pairs evolved primarily under purifying selection ($K_a/K_s < 1$), with localized sliding-window peaks ($K_a/K_s > 1$) in two pairs: `[Moderately Supported]`.**  
+  Gene-wide $K_a/K_s < 1$ across paralogs is plausible for conserved acyl-adenylate/thioester-forming enzymes, though 20-codon sliding-window $K_a/K_s$ ratios are noisy and prone to stochastic division-by-small-$K_s$ spikes without formal significance testing.
+* **Claim 3 — All three GH3 lineage groups (and 570 sites in Group I) experienced significant Darwinian positive selection according to branch-site models and `DIVERGE`: `[Methodologically Flawed]`.**  
+  As detailed above, this claim rests on boundary-locked parameter estimates ($\omega_2 = 999$), zero sites passing the 95% BEB threshold, direct contradictions between text and tables, and a fundamental confusion between `DIVERGE` rate shifts ($\theta_I$) and positive selection ($\omega > 1$).
+* **Claim 4 — *SMil_00017300* catalyzes the conversion of JA to JA-Ile and *SmGH3* genes regulate the accumulation of tanshinones and salvianolic acids: `[Overstated]`.**  
+  In the Discussion, the authors assert: *"Indeed, SMil_00017300 catalyzes the conversion of JA to JA-Ile, a biosynthetic step analogous to JAR1 activity"*, citing literature from other species. No enzymatic assays, hormone metabolite profiling, or gene knockdown/overexpression experiments were performed in *S. miltiorrhiza*; inferring specific substrate catalysis and secondary metabolite regulation solely from phylogenetic clustering and baseline organ RPKMs is speculative overreach.
+
+---
+
+### 4. Reproducibility & Data Completeness
+While NCBI SRA accessions (`SRP051524`, `SRP051564`, `SRP028388`) and gene locus IDs (`AT...`, `Os...`, `SMil_...`) are cited, all core quantitative data supporting the gene inventory, pairwise identities, motif sequences, promoter elements, $K_a/K_s$ values, `DIVERGE` statistics, EST counts, and RPKM expression matrices are relegated to Supplementary Tables 1–11 and Supplementary Figures 1–4, which are not included in the manuscript text. Furthermore, the exact codon alignments passed to `codeml` and the specific tree branches labeled as foreground in Table 2 (whether crown clades or stem branches of Groups I–III) are not sufficiently specified to reproduce the likelihood values.

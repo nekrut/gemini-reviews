@@ -1,0 +1,177 @@
+{
+  "1991": {
+    "total_indexed": 473541,
+    "open_access": 3124,
+    "core_domain_volume": 57850
+  },
+  "1992": {
+    "total_indexed": 482011,
+    "open_access": 3179,
+    "core_domain_volume": 64409
+  },
+  "1993": {
+    "total_indexed": 493417,
+    "open_access": 4534,
+    "core_domain_volume": 69804
+  },
+  "1994": {
+    "total_indexed": 507233,
+    "open_access": 4771,
+    "core_domain_volume": 77111
+  },
+  "1995": {
+    "total_indexed": 521172,
+    "open_access": 3907,
+    "core_domain_volume": 84144
+  },
+  "1996": {
+    "total_indexed": 538061,
+    "open_access": 4063,
+    "core_domain_volume": 89195
+  },
+  "1997": {
+    "total_indexed": 542215,
+    "open_access": 4399,
+    "core_domain_volume": 95615
+  },
+  "1998": {
+    "total_indexed": 572606,
+    "open_access": 4553,
+    "core_domain_volume": 102309
+  },
+  "1999": {
+    "total_indexed": 597140,
+    "open_access": 4939,
+    "core_domain_volume": 108607
+  },
+  "2000": {
+    "total_indexed": 644945,
+    "open_access": 5714,
+    "core_domain_volume": 118835
+  },
+  "2001": {
+    "total_indexed": 674026,
+    "open_access": 7084,
+    "core_domain_volume": 125746
+  },
+  "2002": {
+    "total_indexed": 722904,
+    "open_access": 7726,
+    "core_domain_volume": 133941
+  },
+  "2003": {
+    "total_indexed": 752658,
+    "open_access": 8969,
+    "core_domain_volume": 143209
+  },
+  "2004": {
+    "total_indexed": 1056182,
+    "open_access": 13297,
+    "core_domain_volume": 162176
+  },
+  "2005": {
+    "total_indexed": 1092685,
+    "open_access": 17197,
+    "core_domain_volume": 168253
+  },
+  "2006": {
+    "total_indexed": 1110931,
+    "open_access": 23941,
+    "core_domain_volume": 174169
+  },
+  "2007": {
+    "total_indexed": 1136513,
+    "open_access": 28729,
+    "core_domain_volume": 185526
+  },
+  "2008": {
+    "total_indexed": 1166543,
+    "open_access": 44759,
+    "core_domain_volume": 205973
+  },
+  "2009": {
+    "total_indexed": 1202723,
+    "open_access": 60260,
+    "core_domain_volume": 224996
+  },
+  "2010": {
+    "total_indexed": 1213085,
+    "open_access": 81269,
+    "core_domain_volume": 239988
+  },
+  "2011": {
+    "total_indexed": 1288684,
+    "open_access": 110710,
+    "core_domain_volume": 257858
+  },
+  "2012": {
+    "total_indexed": 1108522,
+    "open_access": 150493,
+    "core_domain_volume": 279851
+  },
+  "2013": {
+    "total_indexed": 1036666,
+    "open_access": 186509,
+    "core_domain_volume": 295576
+  },
+  "2014": {
+    "total_indexed": 1091653,
+    "open_access": 223837,
+    "core_domain_volume": 315659
+  },
+  "2015": {
+    "total_indexed": 1136675,
+    "open_access": 252201,
+    "core_domain_volume": 331906
+  },
+  "2016": {
+    "total_indexed": 1162790,
+    "open_access": 276043,
+    "core_domain_volume": 343887
+  },
+  "2017": {
+    "total_indexed": 1190328,
+    "open_access": 315099,
+    "core_domain_volume": 361090
+  },
+  "2018": {
+    "total_indexed": 1252933,
+    "open_access": 355929,
+    "core_domain_volume": 382141
+  },
+  "2019": {
+    "total_indexed": 1334247,
+    "open_access": 415083,
+    "core_domain_volume": 413618
+  },
+  "2020": {
+    "total_indexed": 1593772,
+    "open_access": 598427,
+    "core_domain_volume": 545726
+  },
+  "2021": {
+    "total_indexed": 1781979,
+    "open_access": 751451,
+    "core_domain_volume": 626783
+  },
+  "2022": {
+    "total_indexed": 1794794,
+    "open_access": 850776,
+    "core_domain_volume": 636029
+  },
+  "2023": {
+    "total_indexed": 1738775,
+    "open_access": 775019,
+    "core_domain_volume": 577886
+  },
+  "2024": {
+    "total_indexed": 1797545,
+    "open_access": 774158,
+    "core_domain_volume": 577611
+  },
+  "2025": {
+    "total_indexed": 1965335,
+    "open_access": 921565,
+    "core_domain_volume": 648325
+  }
+}
