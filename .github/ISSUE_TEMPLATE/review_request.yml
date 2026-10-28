@@ -38,7 +38,7 @@ body:
     id: notes
     attributes:
       label: Specific Focus or Context (Optional)
-      description: Any specific claims, figures, supplemental files, or local file paths to include in the audit
+      description: Any specific claims, figures, or public supplemental-file URLs to include in the audit
       placeholder: "Optional notes or links to PDF/Supplementary Material..."
     validations:
       required: false
