@@ -30,6 +30,17 @@ Across **$N = 30$ stratified manuscripts** (10 Cohort A, 10 Cohort B, 10 Cohort 
 * **Sub-Score Reliability ($\text{ICC}(2,1)$):** Rigor = **`0.9692`** | Claims = **`0.9585`** | Biology = **`0.9544`** | Reproducibility = **`0.9139`**.
 * **Binary Classification Agreement (`< 6.0` Failure Threshold):** **Fleiss' $\kappa = 0.9104$** (`95.6%` pairwise agreement; **`28 / 30` [`93.3%`] unanimous 3/3 agreement**, including **`20 / 20` [`100%`] unanimous agreement across all Cohort A and Cohort B benchmarks**). Disagreements occurred only on 2 Cohort C papers sitting directly on the `6.0` boundary (`mean = 6.03` and `5.83`).
 
+### Out-of-Domain Generalization Across 3 Untested Fields ([`OOD_GENERALIZATION.md`](OOD_GENERALIZATION.md))
+Applying our Two-Stage Adaptive Blinded Protocol (`88` reviews total: Stage 1 on all 60 papers + Stage 2 3-run ensemble resolution on the 14 borderline papers with $5.2 \le S_1 \le 6.8$) to **$N = 60$ random wild manuscripts (`20` per field)** from three adjacent fields outside our calibration benchmark extends the wild sample to **$N = 160$ manuscripts across 8 quantitative domains**:
+
+| Out-of-Domain Stratum ($n = 20$ Each) | Mean Score (/10) | Median | Strict Failure ($<5.0$) | Calibrated Failure ($<6.0$) | Major Flaw ($<6.5$) | Dominant Domain-Specific Failure Modes |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Ecology & Macroevolution** | **5.19** | **4.80** | **55.0%** ($11/20$) | **75.0%** ($15/20$) | **75.0%** ($15/20$) | `MaxEnt` overfitting ($p>n$), roadside bias, static altitude in warming projections, area arithmetic errors |
+| **Neuroscience & Neuroimaging** | **4.88** | **4.80** | **50.0%** ($10/20$) | **75.0%** ($15/20$) | **85.0%** ($17/20$) | Circular ROI double-dipping ("voodoo correlations"), unnested CV leakage, copy-pasted HC follow-up tables |
+| **Structural Bioinfo & AI Drug Discovery** | **4.57** | **4.67** | **60.0%** ($12/20$) | **80.0%** ($16/20$) | **85.0%** ($17/20$) | PDBbind–CASF pocket homology leakage, transductive DTI kernel leakage, docking to wrong PDB target |
+| **All OOD Combined ($N = 60$)** | **4.88** | **4.80** | **55.0%** ($33/60$) | **76.7%** ($46/60$) | **81.7%** ($49/60$) | Citation gradient: High ($\ge 25$): `6.21` (`18.8% <5.0`) vs. Mid: `4.68` (`60.9%`) vs. Low: `4.08` (`76.2%`) |
+| **All 8 Domains Combined ($N = 160$)** | **5.25** | **5.02** | **47.5%** ($76/160$) | **66.9%** ($107/160$) | **74.4%** ($119/160$) | Consistent split between mechanistic models vs. formulaic template pipelines (`MaxEnt`, LASSO, docking, rs-fMRI) |
+
 ---
 
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)
