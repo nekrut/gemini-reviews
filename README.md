@@ -26,7 +26,7 @@ Full protocol, ground-truth selection criteria, double-blinded de-identification
 
 ### Intra-Agent Test–Retest Repeatability ([`REPEATABILITY.md`](REPEATABILITY.md))
 Across **$N = 30$ stratified manuscripts** (10 Cohort A, 10 Cohort B, 10 Cohort C across all 5 domains) evaluated in **$K = 3$ independent, freshly re-anonymized blinded waves (`90` reviews total)**:
-* **Single-Run Intraclass Correlation ($\text{ICC}(2,1)$):** **`0.9671`** ($\text{ICC}(3,1) = 0.9691$; 3-run ensemble $\text{ICC}(2,3) = 0.9888$), with pairwise Pearson correlations $r_{12} = 0.979$, $r_{13} = 0.968$, $r_{23} = 0.964$ and within-paper $\text{SD}_w = 0.46$ points on a 10-point scale (`Mean |ΔS| = 0.49`).
+* **Single-Run Intraclass Correlation ($\text{ICC}(2,1)$):** **`0.9671`** ($\text{ICC}(3,1) = 0.9691$; 3-run ensemble $\text{ICC}(2,3) = 0.9888$), with pairwise Pearson correlations $r_{12} = 0.979$, $r_{13} = 0.968$, $r_{23} = 0.964$ and residual $\text{SD}_w = 0.46$ points on a 10-point scale (`Mean |ΔS| = 0.49`).
 * **Sub-Score Reliability ($\text{ICC}(2,1)$):** Rigor = **`0.9692`** | Claims = **`0.9585`** | Biology = **`0.9544`** | Reproducibility = **`0.9139`**.
 * **Binary Classification Agreement (`< 6.0` Failure Threshold):** **Fleiss' $\kappa = 0.9104$** (`95.6%` pairwise agreement; **`28 / 30` [`93.3%`] unanimous 3/3 agreement**, including **`20 / 20` [`100%`] unanimous agreement across all Cohort A and Cohort B benchmarks**). Disagreements occurred only on 2 Cohort C papers sitting directly on the `6.0` boundary (`mean = 6.03` and `5.83`).
 
