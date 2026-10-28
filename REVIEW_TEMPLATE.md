@@ -10,7 +10,7 @@ The goal is to produce **human-scale, direct, technically rigorous reviews** tha
 
 Empirical calibration across 75 paired Identified vs. De-Identified manuscripts ([`CALIBRATION.md`](CALIBRATION.md)) demonstrated that visible author names, institutional affiliations, and elite journal labels (*Nature*, *Science*, *Cell*, *PNAS*, *Nature Medicine*) induce a **+$0.35$-point "prestige halo"** that softens critiques of methodologically flawed papers, while megajournal labels (*Frontiers*, *MDPI*) induce a slight negative penalty.
 
-To eliminate prestige and venue bias while preserving **$r = 0.91$** score concordance and **$100\%$ specificity** on validated controls:
+To eliminate prestige and venue bias while preserving **$r = 0.91$** score concordance and specificity of 100% (50/50) in the N=200 de-identified run and 96% (24/25) in the paired pilot, at S < 5.0:
 1. **Pre-Audit De-Identification:** Strip the manuscript Title, Author Names, Affiliations, Correspondence headers, Journal Name, Publication Year, DOI, and PMCID/PMID before running the 7-Pillar Audit (`[REDACTED FOR BLINDED REVIEW]`).
 2. **$t_0$ Information Isolation:** Evaluate the manuscript strictly on its internal mathematical, statistical, methodological, biological, and table/data merits as published at $t_0$. Do not query external commentary, PubPeer threads, retraction notices, or subsequent citing papers during the audit.
 3. **Post-Audit Header Restoration:** Re-attach the bibliographic metadata (`Title`, `Authors`, `Journal`, `DOI`/`PMCID`) only after the sub-scores, overall score, and 3-section critique have been locked.
@@ -129,7 +129,7 @@ Every reviewed manuscript receives an **Overall Score (1.0 – 10.0)** computed 
 ## PART 5: EMPIRICAL CALIBRATION & OPERATING CHARACTERISTICS ($N = 200$ STUDY)
 
 The 1–10 scoring rubric was calibrated across **200 double-blinded full-text manuscripts** ([`CALIBRATION.md`](CALIBRATION.md)):
-* **Cohort A ($N = 50$ Known Invalid / Refuted):** Mean **4.42** ($\pm 1.97$), Median **4.10** (Internal-flaw subset $N=45$: Mean **4.08**, Median **3.80**).
+* **Cohort A ($N = 50$ Known Invalid / Refuted):** Mean **4.42** ($\pm 1.97$), Median **4.10** (Internal-flaw subset $N=45$: Mean **4.09**, Median **3.80**).
 * **Cohort B ($N = 50$ Genre-Matched Validated Controls):** Mean **8.64** ($\pm 0.84$), Median **8.85** (43 replicated empirical studies: Mean **8.64**, Median **9.00**; 7 methods benchmarks: Mean **8.59**, Median **8.60**).
 * **Cohort C ($N = 100$ Stratified Wild Sample across 5 Subfields):** Mean **5.47** ($\pm 1.78$), Median **5.40**.
 * **Classifier Separation:** **ROC-AUC = $0.9688$** ($0.9672$ against empirical controls alone).
@@ -139,4 +139,4 @@ The 1–10 scoring rubric was calibrated across **200 double-blinded full-text m
 | **Strict Fatal Invalidation ($S < 5.0$)** | $66.0\%$ / $73.3\%$ | **$100.0\%$** ($50/50$) | **$43.0\%$** ($\pm 8.5\%$) | **$58.6\% \text{ -- } 65.2\%$** |
 | **Substantive Failure ($S < 5.5$)** | $66.0\%$ / $73.3\%$ | **$100.0\%$** ($50/50$) | **$53.0\%$** ($\pm 9.1\%$) | **$72.3\% \text{ -- } 80.3\%$** |
 | **Major Methodological Flaw ($S < 6.0$)** | $76.0\%$ / $84.4\%$ | **$98.0\%$** ($49/50$) | **$61.0\%$** ($\pm 8.7\%$) | **$71.6\% \text{ -- } 79.7\%$** |
-| **Any Major Pillar Violation ($S < 6.5$)** | $80.0\%$ / $86.7\%$ | **$96.0\%$** ($48/50$) | **$70.0\%$** ($\pm 8.3\%$) | **$79.9\% \text{ -- } 86.8\%$** |
+| **Any Major Pillar Violation ($S < 6.5$)** | $80.0\%$ / $86.7\%$ | **$96.0\%$** ($48/50$) | **$70.0\%$** ($\pm 8.3\%$) | **$79.8\% \text{ -- } 86.8\%$** |

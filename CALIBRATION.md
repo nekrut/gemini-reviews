@@ -2,9 +2,9 @@
 
 > **Executive Two-Paragraph Summary**
 >
-> Can an automated AI forensic reviewer detect fatal scientific flaws at the time of publication—and if we calibrate its sensitivity and specificity on ground-truth papers, what fraction of the broader computational biology and genomics literature is actually broken? To test this, we conducted a double-blinded forensic audit of 200 full-text manuscripts (stripped of titles, author names, affiliations, journals, and dates, and isolated from any post-publication commentary) across three cohorts: (A) 50 studies later retracted or formally refuted under post-publication scrutiny (e.g., contaminated cancer/placental/fetal microbiomes, flawed SARS-CoV-2 origin/clock claims, alignment-artifact selection scans, and confounded GWAS/clinical models), (B) 50 subfield- and genre-matched validated controls (43 replicated empirical discovery studies plus 7 foundational methods benchmarks), and (C) a stratified random "wild" sample of 100 unscrutinized papers across five subfields (20 each in molecular evolution, viral evolution, statistical genetics/GWAS, cancer/microbiome, and transcriptomics/ML). Using a standardized 7-pillar forensic rubric on a 1–10 scale, the double-blinded reviewer separated validated controls (Cohort B: mean 8.64, median 8.85; empirical controls alone: mean 8.64, median 9.00; 100% specificity at <5.5 and 96% at <6.5) from known invalid studies (Cohort A: mean 4.42, median 4.10) with an ROC-AUC of 0.969 (0.967 against empirical controls alone). On the 45 Cohort A papers whose flaws were internal to the manuscript's own methods, data, or tables (rather than hidden inside external consortium summary statistics like GIANT GWAS), the reviewer achieved 73.3% sensitivity (33/45) at a strict failure threshold (<5.0) and 86.7% sensitivity (39/45) for major flaws (<6.5), while paired comparison against unblinded reviews (r = 0.91) revealed a +0.35-point "prestige halo" when author and journal names are left visible.
+> Can an automated AI forensic reviewer detect fatal scientific flaws at the time of publication—and if we calibrate its sensitivity and specificity on ground-truth papers, what fraction of the broader computational biology and genomics literature is actually broken? To test this, we conducted a double-blinded forensic audit of 200 full-text manuscripts (stripped of titles, author names, affiliations, journals, and dates, and isolated from any post-publication commentary) across three cohorts: (A) 50 studies later retracted or formally refuted under post-publication scrutiny (e.g., contaminated cancer/placental/fetal microbiomes, flawed SARS-CoV-2 origin/clock claims, alignment-artifact selection scans, and confounded GWAS/clinical models), (B) 50 subfield- and genre-matched validated controls (43 replicated empirical discovery studies plus 7 foundational methods benchmarks), and (C) a stratified random "wild" sample of 100 unscrutinized papers across five subfields (20 each in molecular evolution, viral evolution, statistical genetics/GWAS, cancer/microbiome, and transcriptomics/ML). Using a standardized 7-pillar forensic rubric on a 1–10 scale, the double-blinded reviewer separated validated controls (Cohort B: mean 8.64, median 8.85; empirical controls alone: mean 8.64, median 9.00; 100% specificity at <5.5 and 96% at <6.5) from known invalid studies (Cohort A: mean 4.42, median 4.10) with an ROC-AUC of 0.969 (0.967 against empirical controls alone). On the 45 Cohort A papers whose flaws were internal to the manuscript's own methods, data, or tables (rather than hidden inside external consortium summary statistics like GIANT GWAS), the reviewer achieved 73.3% sensitivity (33/45) at a strict failure threshold (<5.0) and 86.7% sensitivity (39/45) for major flaws (<6.5), while paired comparison against unblinded reviews (r = 0.91) showed a mean +0.20-point shift when identifying metadata were visible (N=75 pairs; mean |Δ| = 0.70); the shift is +0.36 in low-prestige Cohort A and +0.33 in high-prestige Cohort B, so it is not prestige-specific (+0.15 excluding the version-mismatched ANON_26 pair).
 >
-> Applying this calibrated double-blinded reviewer to the 100 unscrutinized "wild" papers (Cohort C: mean 5.47, median 5.40) yielded a direct smoking-gun failure rate of 43.0% (±8.5% stratified 95% CI) at <5.0, 53.0% (±9.1%) at <5.5, and a major methodological flaw rate of 70.0% (±8.3%) at <6.5—corresponding to Rogan-Gladen sensitivity-adjusted prevalence estimates of 58.6%–65.2% for fatal invalidation and 79.9%–86.8% for major methodological flaws. Every wild paper flagged as failing contained concrete, human-verifiable defects directly in its text, equations, or tables: examples included main-text claims that reversed the sign of the survival and knockdown figures in the Results section, paper-mill templates that forgot to edit "Gastric cancer (GC)" out of a lung cancer study while discussing genes absent from their own formula, circular GWAS feature selection prior to cross-validation on the same individuals, omitted subject random intercepts `(1 | Subject_ID)` in repeated-measures `lme4` models producing pseudoreplicated p-values of 1e-17, and misreading HyPhy output table row indices (`1..11`) as amino acid coordinates. Failure rates in the wild literature followed a stark monotonic gradient across both discipline and citation tier: mechanistic, model-based fields (molecular evolution: mean 6.90, 5% fatal failure; viral evolution: mean 5.97, 35% failure) were substantially more rigorous than associative high-dimensional pipelines (statistical genetics: mean 5.37, 40% failure; cancer/microbiome: mean 4.78, 60% failure; transcriptomics/ML: mean 4.33, 75% fatal failure and 90% major flaws), while fatal failure rates tripled from highly cited papers (19.4% for ≥25 citations) to mid-cited (48.6% for 5–24 citations) and low-cited/uncited papers (58.8% fatal failure and 94.1% major flaws for 0–4 citations).
+> Applying this calibrated double-blinded reviewer to the 100 unscrutinized "wild" papers (Cohort C: mean 5.47, median 5.40) yielded a direct smoking-gun failure rate of 43.0% (±8.5% stratified 95% CI) at <5.0, 53.0% (±9.1%) at <5.5, and a major methodological flaw rate of 70.0% (±8.3%) at <6.5—corresponding to Rogan-Gladen sensitivity-adjusted prevalence estimates of 58.6%–65.2% for fatal invalidation and 79.8%–86.8% for major methodological flaws. Every wild paper flagged as failing contained concrete, human-verifiable defects directly in its text, equations, or tables: examples included main-text claims that reversed the sign of the survival and knockdown figures in the Results section, paper-mill templates that forgot to edit "Gastric cancer (GC)" out of a lung cancer study while discussing genes absent from their own formula, circular GWAS feature selection prior to cross-validation on the same individuals, omitted subject random intercepts `(1 | Subject_ID)` in repeated-measures `lme4` models producing pseudoreplicated p-values of 1e-17, and misreading HyPhy output table row indices (`1..11`) as amino acid coordinates. Failure rates in the wild literature followed a stark monotonic gradient across both discipline and citation tier: mechanistic, model-based fields (molecular evolution: mean 6.90, 5% fatal failure; viral evolution: mean 5.97, 35% failure) were substantially more rigorous than associative high-dimensional pipelines (statistical genetics: mean 5.37, 40% failure; cancer/microbiome: mean 4.78, 60% failure; transcriptomics/ML: mean 4.33, 75% fatal failure and 90% major flaws), while fatal failure rates tripled from highly cited papers (19.4% for ≥25 citations) to mid-cited (48.6% for 5–24 citations) and low-cited/uncited papers (58.8% fatal failure and 94.1% major flaws for 0–4 citations).
 
 ---
 
@@ -43,12 +43,12 @@ All 200 manuscripts were retrieved as full-text JATS XML / HTML (including all m
 
 ## 1. Executive Summary
 
-Across **75 full-text manuscripts** evaluated under cohort-blinded conditions (`papers_blind/<PMCID>.md`) using the standardized 7-Pillar Forensic Review Protocol ([`REVIEW_TEMPLATE.md`](REVIEW_TEMPLATE.md)):
+Across **75 full-text manuscripts** evaluated with identifying metadata visible (`reviews_identified/`) using the standardized 7-Pillar Forensic Review Protocol ([`REVIEW_TEMPLATE.md`](REVIEW_TEMPLATE.md)):
 
 | Metric / Estimator | Cohort A: Known Invalid / Refuted ($N=25$) | Cohort B: Validated Controls ($N=25$) | Cohort C: Stratified Wild Sample ($N=25$) |
 | :--- | :---: | :---: | :---: |
 | **Mean Overall Score (/10.0)** | **4.62** ($\pm 2.07$) | **8.58** ($\pm 0.63$) | **5.36** ($\pm 2.02$) |
-| **Median Score (IQR)** | **4.1** ($3.1\text{--}5.2$) | **8.6** ($8.1\text{--}9.0$) | **5.3** ($3.8\text{--}7.5$) |
+| **Median Score (IQR)** | **4.1** ($3.1\text{--}5.7$) | **8.6** ($8.1\text{--}9.0$) | **5.3** ($3.8\text{--}7.5$) |
 | **Score Range** | $1.8 \text{ -- } 8.3$ | $7.4 \text{ -- } 9.5$ | $1.8 \text{ -- } 8.8$ |
 | **Mean Methodological Rigor (/3.5)** | 1.32 | 2.96 | 1.61 |
 | **Mean Claim Support (/2.5)** | 1.06 | 2.17 | 1.30 |
@@ -61,7 +61,7 @@ Across **75 full-text manuscripts** evaluated under cohort-blinded conditions (`
 
 ## 2. Diagnostic Classifier Calibration (Cohort A vs. Cohort B)
 
-* **ROC-AUC (Cohort B > Cohort A):** **$0.9560$** (Mann-Whitney $U = 597.5 / 625$, two-sided $p = 2.8 \times 10^{-8}$).
+* **ROC-AUC (Cohort B > Cohort A):** **$0.9560$** (Mann-Whitney $U = 597.5 / 625$, two-sided $p = 2.8 \times 10^{-8}$) (de-identified phase-1 reviews: ROC-AUC = 0.927).
 * **Zero False-Positive Rate on Validated Controls ($\widehat{\text{Sp}} = 100\%$):** Every single paper in Cohort B ($25/25$) scored $\ge 7.4/10.0$ (`Strong / Sound` or `Exemplary`). Even though the reviewer identifies constructive methodological caveats in every paper, it never misclassifies a sound, validated paper as `Flawed / Overstated` ($<5.0$) or `Mixed / Salvageable` ($<7.0$).
 * **What $t_0$ Single-Paper Forensic Review Catches vs. Misses in Cohort A:**
   * **Internally Detectable Flaws ($20/20 = 100\%$ caught as $<6.5$; $17/20 = 85\%$ scored $<5.0$):** Whenever the flaw resides in the manuscript's own study design, equations, statistical tests, ecological/batch confounding, circular feature selection, or table inconsistencies (`A01`–`A06`, `A08`–`A10`, `A12`–`A18`, `A20`–`A23`), the blinded agentic review independently flags the exact fatal defect from the $t_0$ text and tables alone.
@@ -74,7 +74,7 @@ Across **75 full-text manuscripts** evaluated under cohort-blinded conditions (`
 
 ## 3. Sample Estimators of Flawed Research in the Wild (Cohort C)
 
-Because $\widehat{\text{Sp}} = 1.000$ ($25/25$) across all cutoffs up to $7.0$, the Rogan-Gladen prevalence estimator simplifies to $\hat{\pi}_{\text{true}} = \min(1, \hat{p}_{\text{obs}} / \widehat{\text{Se}})$, and the raw observed rate $\hat{p}_{\text{obs}}$ serves as a **strict lower bound** on the true error rate:
+Because $\widehat{\text{Sp}} = 1.000$ ($25/25$) across all cutoffs up to $7.0$, the Rogan-Gladen prevalence estimator simplifies to $\hat{\pi}_{\text{true}} = \min(1, \hat{p}_{\text{obs}} / \widehat{\text{Se}})$, and the raw observed rate $\hat{p}_{\text{obs}}$ is a lower bound only if true Sp = 1 (exact 95% CI for Sp with 25/25: [86.3%, 100%]):
 
 | Failure Threshold Definition | Calibration Sensitivity ($\widehat{\text{Se}}$) | Calibration Specificity ($\widehat{\text{Sp}}$) | Wild Observed Failure Rate ($\hat{p}_{\text{obs}}$) | Rogan-Gladen True Prevalence ($\hat{\pi}_{\text{true}}$) |
 | :--- | :---: | :---: | :---: | :---: |
@@ -204,8 +204,8 @@ All 75 manuscripts across Cohorts A, B, and C were stripped of Titles, Author Na
 
 | Metric | Cohort A: Invalid ($N=25$) | Cohort B: Validated ($N=25$) | Cohort C: Wild Sample ($N=25$) | All 75 Papers Combined |
 | :--- | :---: | :---: | :---: | :---: |
-| **Identified Mean / Median** | **4.62** / **4.10** | **8.58** / **8.60** | **5.36** / **5.30** | **6.19** / **6.00** |
-| **De-Identified Mean / Median** | **4.26** / **3.80** | **8.25** / **8.50** | **5.44** / **5.40** | **5.98** / **5.80** |
+| **Identified Mean / Median** | **4.62** / **4.10** | **8.58** / **8.60** | **5.36** / **5.30** | **6.19** / **6.40** |
+| **De-Identified Mean / Median** | **4.26** / **3.80** | **8.25** / **8.50** | **5.44** / **5.40** | **5.98** / **6.10** |
 | **Mean Paired Shift ($\Delta = S_{\text{anon}} - S_{\text{id}}$)** | **$-0.36$** | **$-0.33$** | **$+0.08$** | **$-0.20$** (Mean $|\Delta| = 0.70$) |
 | **Paired Correlation ($r$)** | $r = 0.8156$ | $r = 0.7019$ | **$r = 0.9256$** | **$r = 0.9104$** |
 | **De-Identified Rate $< 5.0$** | **68.0%** ($17/25$) | **4.0%** ($1/25$, `B02`) | **40.0%** ($10/25$) | — |
@@ -311,7 +311,7 @@ Scaling the double-blinded (`ANON_01`–`ANON_200`) cohort design to **200 full-
 
 | Metric / Estimator | Cohort A: Known Invalid ($N=50$) | Cohort A: Internal Flaws ($N=45$) | Cohort B: All Validated ($N=50$) | Cohort B: Empirical Only ($N=43$) | Cohort C: Wild Sample ($N=100$) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Mean Score (/10.0)** | **4.42** ($\pm 1.97$) | **4.08** ($\pm 1.78$) | **8.64** ($\pm 0.84$) | **8.64** ($\pm 0.87$) | **5.47** ($\pm 1.78$) |
+| **Mean Score (/10.0)** | **4.42** ($\pm 1.97$) | **4.09** ($\pm 1.75$) | **8.64** ($\pm 0.84$) | **8.64** ($\pm 0.87$) | **5.47** ($\pm 1.78$) |
 | **Median Score** | **4.10** | **3.80** | **8.85** | **9.00** | **5.40** |
 | **ROC-AUC vs. Cohort A** | — | — | **0.9688** | **0.9672** | — |
 | **Strict Failure ($S < 5.0$)** | **66.0%** ($33/50$) | **73.3%** ($33/45$) | **0.0%** ($0/50$) | **0.0%** ($0/43$) | **43.0%** ($43/100$) |
@@ -321,12 +321,14 @@ Scaling the double-blinded (`ANON_01`–`ANON_200`) cohort design to **200 full-
 
 ### B. Prevalence Estimators & 95% Confidence Intervals ($N = 200$)
 
-| Failure Threshold | Sensitivity ($\widehat{\text{Se}}_{\text{all}}$ / $\widehat{\text{Se}}_{\text{int}}$) | Specificity ($\widehat{\text{Sp}}$) | Wild Observed Rate $\hat{p}_{\text{obs}}$ (Stratified 95% CI) | Rogan-Gladen $\hat{\pi}_{\text{true}}$ (All A / Internal A) |
+| Failure Threshold | Sensitivity ($\widehat{\text{Se}}_{\text{all}}$ / $\widehat{\text{Se}}_{\text{int}}$) | Specificity ($\widehat{\text{Sp}}$) | Wild Observed Rate $\hat{p}_{\text{obs}}$ (Stratified 95% CI) | Rogan-Gladen $\hat{\pi}_{\text{true}}$ (All A [bootstrap 95% CI]$^{\dagger}$ / Internal A) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Strict Fatal Invalidation ($S < 5.0$)** | $66.0\%$ / $73.3\%$ | $100.0\%$ ($50/50$) | **43.0%** ($\pm 8.5\% \implies [34.5\%, 51.5\%]$) | **65.2%** ($\pm 18.3\%$) / **58.6%** |
-| **Substantive Failure ($S < 5.5$)** | $66.0\%$ / $73.3\%$ | $100.0\%$ ($50/50$) | **53.0%** ($\pm 9.1\% \implies [43.9\%, 62.1\%]$) | **80.3%** ($\pm 21.1\%$) / **72.3%** |
-| **Major Methodological Flaw ($S < 6.0$)** | $76.0\%$ / $84.4\%$ | $98.0\%$ ($49/50$) | **61.0%** ($\pm 8.7\% \implies [52.3\%, 69.7\%]$) | **79.7%** ($\pm 17.4\%$) / **71.6%** |
-| **Any Major Pillar Violation ($S < 6.5$)** | $80.0\%$ / $86.7\%$ | $96.0\%$ ($48/50$) | **70.0%** ($\pm 8.3\% \implies [61.7\%, 78.3\%]$) | **86.8%** ($\pm 16.8\%$) / **79.9%** |
+| **Strict Fatal Invalidation ($S < 5.0$)** | $66.0\%$ / $73.3\%$ | $100.0\%$ ($50/50$) | **43.0%** ($\pm 8.5\% \implies [34.5\%, 51.5\%]$) | **65.2%** ($[47.3\%, 87.9\%]$) / **58.6%** |
+| **Substantive Failure ($S < 5.5$)** | $66.0\%$ / $73.3\%$ | $100.0\%$ ($50/50$) | **53.0%** ($\pm 9.1\% \implies [43.9\%, 62.1\%]$) | **80.3%** ($[61.3\%, 100\%]$) / **72.3%** |
+| **Major Methodological Flaw ($S < 6.0$)** | $76.0\%$ / $84.4\%$ | $98.0\%$ ($49/50$) | **61.0%** ($\pm 8.7\% \implies [52.3\%, 69.7\%]$) | **79.7%** ($[63.1\%, 100\%]$) / **71.6%** |
+| **Any Major Pillar Violation ($S < 6.5$)** | $80.0\%$ / $86.7\%$ | $96.0\%$ ($48/50$) | **70.0%** ($\pm 8.3\% \implies [61.7\%, 78.3\%]$) | **86.8%** ($[70.7\%, 100\%]$) / **79.8%** |
+
+$^{\dagger}$ Percentile-bootstrap 95% intervals (5000 reps; Cohorts A, B and C resampled jointly; clipped to $[0, 1]$; `python3 -I scripts/rg_bootstrap.py`, seed 20261028). Intervals include Sp uncertainty (exact 95% CI for Sp with 50/50: [92.9%, 100%]).
 
 ### C. Stratified Breakdown of the 100 Wild Papers (`Cohort C`)
 

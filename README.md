@@ -17,7 +17,7 @@ Full protocol, ground-truth selection criteria, double-blinded de-identification
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cohort A: Known Invalid / Refuted** | $50$ | **4.42** | **4.10** | **66.0%** (*73.3% internal*) | **80.0%** (*86.7% internal*) | Retracted or formally refuted studies ($\text{ROC-AUC} = 0.969$) |
 | **Cohort B: Validated Controls** | $50$ | **8.64** | **8.85** | **0.0%** ($\text{Sp} = 100\%$) | **4.0%** ($\text{Sp} = 96\%$) | 43 replicated empirical studies (mean $8.64$) + 7 methods ($8.59$) |
-| **Cohort C: Stratified Wild Sample** | $100$ | **5.47** | **5.40** | **43.0%** ($\pm 8.5\%$) | **70.0%** ($\pm 8.3\%$) | Rogan-Gladen $\hat{\pi}_{\text{true}} = 58.6\%\text{--}65.2\%$ ($<5.0$), $79.9\%\text{--}86.8\%$ ($<6.5$) |
+| **Cohort C: Stratified Wild Sample** | $100$ | **5.47** | **5.40** | **43.0%** ($\pm 8.5\%$) | **70.0%** ($\pm 8.3\%$) | Rogan-Gladen $\hat{\pi}_{\text{true}} = 58.6\%\text{--}65.2\%$ ($<5.0$), $79.8\%\text{--}86.8\%$ ($<6.5$) |
 | ↳ *Molecular Evolution (Wild)* | $20$ | **6.90** | **6.50** | **5.0%** ($1/20$) | **45.0%** ($9/20$) | Highest methodological rigor in wild sample |
 | ↳ *Viral Evolution (Wild)* | $20$ | **5.97** | **6.35** | **35.0%** ($7/20$) | **55.0%** ($11/20$) | Moderate rigor; clock/recombination & power flaws in lower tail |
 | ↳ *Statistical Genetics / GWAS (Wild)* | $20$ | **5.37** | **5.40** | **40.0%** ($8/20$) | **75.0%** ($15/20$) | Frequent in-sample GWAS feature-selection leakage & MR violations |
