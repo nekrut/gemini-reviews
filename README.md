@@ -323,5 +323,6 @@ gemini-reviews/
 │           └── metadata.json        # Scores, tier, DOI/PMID, cohort/anon IDs, issue #, timestamp
 └── scripts/
     ├── watch_issues.py              # Polls GitHub Issues for pending review requests
-    └── update_leaderboard.py        # Rebuilds index.json and README.md table
+    ├── update_leaderboard.py        # Rebuilds index.json and README.md table
+    └── lint_reviews.py              # Warning-only lint: banned phrases, headers, score consistency
 ```

@@ -34,7 +34,7 @@ Before writing, audit the manuscript against these seven diagnostic pillars:
 ## PART 2: PROSE & STYLE RULES (ANTI-LLM TROPE MANDATE)
 
 * **Direct and proportional:** Keep total length proportional to the manuscript's substance. State strengths and flaws plainly without theatrical adjectives (*"groundbreaking," "tour de force," "pivotal," "crucial," "compelling"*).
-* **No LLM filler or syntactic cliches:** Avoid *"delve into," "tapestry," "landscape," "it is worth noting," "importantly," "not only... but also," "serves as a testament,"* and formulaic compliment sandwiches.
+* **No LLM filler or syntactic cliches:** Avoid *"delve into," "tapestry," "landscape," "it is worth noting," "importantly," "not only... but also," "serves as a testament," "crucially," "landmark,"* and formulaic compliment sandwiches.
 * **Concrete and verifiable:** Anchor every critique to specific sections, equations, tables, figures, or parameter values in the manuscript.
 
 ---
