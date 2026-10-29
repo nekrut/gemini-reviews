@@ -1,0 +1,31 @@
+<Blinded Review: TIME_ANON_0187>
+**Composite Score:** 5.4 / 10.0 (Rigor: 1.5/3.5 | Claims: 1.5/2.5 | Biology: 1.3/2.0 | Reproducibility: 1.1/2.0)
+**Bias Category:** Technical/Assay
+**Verdict:** Major Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Translational/Preclinical/Biomarker
+
+---
+
+### 1. Executive Summary
+This study characterizes the immunoglobulin heavy (`VH`) and light (`VL`) chain variable-region germline usage and somatic hypermutation (`SHM`) profiles of 19 cross-neutralizing anti-dengue virus (`DENV`) human monoclonal antibodies (`HuMAbs`) previously generated via hybridoma fusion from PBMCs of 3 acute secondary DENV-2 patients. Using 26 primer pairs and `IMGT/V-QUEST` alignment, the authors report that `IGHV1-69` (5/19) and `IGHV3-23` (5/19) are the predominant heavy-chain germlines and `IGLV7-43` (4/19) is the most frequent light-chain germline. They subsequently subclone the `VH` and `VL` regions of the 3 most potent HuMAbs (`1A10H7`, `1B3B9`, and `1G7C2`) into mammalian IgG expression vectors (`pQCXIP-CH` and `pQCXIH-CL`), transiently express recombinant IgG (`rIgG`) in HEK293T cells, and confirm by indirect immunofluorescence (`IFA`) and focus reduction neutralization tests (`FRNT`) that the recombinant IgGs retain parental cross-neutralizing activity only when paired with their native cognate `VH`/`VL` partner. While the functional verification of recombinant IgG conversion and chain-shuffling specificity is useful, the manuscript suffers from multiple arithmetic and counting errors in Table 2 and the text, an unrendered/empty Table 3, failure to account for clonal sibling relationships among hybridomas from the 3 donors, and missing accession numbers.
+
+### 2. Methodological & Statistical Audit
+- **Internal Contradictions in Germline Counts and Group Totals:**
+  1. **Contradictory `VL` Germline Count Between Abstract and Text/Table 2:** The Abstract (lines 7 and 13) states that *"10 VH and **10 VL** germlines were used by our 19 HuMAbs"*, whereas the Results text (line 106) states *"10 germline HCs and **11 germline LCs** was used (Table 2)."* Counting the unique `IGKV`/`IGLV` alleles listed in Table 2 confirms **11** distinct light-chain germlines (`KV1-NL1*01`, `LV2-23*01`, `KV3-11*01`, `LV2-11*01`, `LV1-47*02`, `KV1-12*01`, `KV4-1*01`, `LV7-43*01`, `KV1-33*01`, `LV1-40*01`, and `KV1-39*01`).
+  2. **Arithmetic Error in Hybridoma Group Sums (Line 144):** The authors state that the 3 major `HC` germline groups (`IGHV1-69`, `IGHV3-23`, and `IGHV7-4`) encompass **13** HuMAbs ($5 + 5 + 3 = 13$), and then write *"The other **7** HuMAbs have unique HC germline as shown in Table 2."* However, $13 + 7 = 20$, whereas there are only **19** HuMAbs in the study (leaving **6** other HuMAbs, not 7).
+- **Arithmetic and Annotation Errors in Table 2:**
+  1. **Miscalculated `% variation` in Table 2:** In Table 2 (`No. of aa mutations / Identity (% variation)`), for `5G2D2` `VL` (line 134), the entry reads `6 / 88 (11.7)`. Six amino acid mutations out of $88 + 6 = 94$ residues (or 88 total residues) is **$6.4\%$** (or **$6.8\%$**), not `11.7%` (which would require ~11 mutations). Furthermore, across all rows of Table 2, the denominator used to calculate `% variation` equals `Identity + 10` rather than `Identity + No. of aa mutations` (e.g., for `1G7C2` `VH`: `17 / 80 (19.5)`, where $17 / 87 = 19.54\%$, leaving it unclear whether `80` is percent identity or amino acid count).
+  2. **Misannotated Framework 3 Residues Included in `HCDR3` of `5G8E3` (Line 129):** In Table 2, the `HCDR3` sequence of `5G8E3` is listed as `AVYYCARRGDYSSSAENFQH (20)`. However, `AVYYC` is the conserved C-terminal motif of Framework Region 3 (`FR3`) preceding the `CDR3` junction (`AR...`); the actual `HCDR3` is 15 aa (`ARRGDYSSSAENFQH`), not 20 aa.
+- **Unaccounted Clonal Relatedness Among Hybridomas from 3 Donors:** The 19 hybridomas were derived from only 3 patients, and donor IDs are never assigned to the 19 clones in Table 2. Notably, all 3 clones in Group 3 (`1B3B9`, `4H12C8`, `5E6B1`) share the exact same heavy chain (`IGHV7-4*02F`), light chain (`IGLV7-43*01F`), and identical 14-aa `HCDR3` (`TTLSGYSADWPEDY`), and two clones in Group 2 (`1H5A11` and `3A10G12`) share `IGHV3-23*01F`, `IGLV1-47*02F`, and a 10-aa `HCDR3` differing by one residue (`ATGSQWPGDY` vs `AAGSQWPGDY`). Treating clonally expanded B-cell siblings from a single patient as independent repertoire events inflates germline frequency claims.
+- **Missing Table 3 Content:** In the manuscript text (lines 147–149), `Table 3` (which contains the `FRNT50` neutralization titers and VH alignments discussed extensively in lines 144–152) is completely empty.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** *Recombinant human IgGs (`1A10H7`, `1B3B9`, `1G7C2`) expressed in HEK293T cells retain the cross-reactive DENV1–4 binding and neutralization profiles of their parental hybridoma antibodies and require their native cognate `VH`/`VL` pairing.* `[Well Supported]` — Directly supported by comparative IFA, FRNT titration curves (Figs. 2–3), and the $3 \times 3$ chain-shuffling matrix.
+- **Claim 2:** *`IGHV1-69` and `IGHV3-23` are the dominant heavy-chain germlines in secondary DENV infection memory responses, and lower SHM (`4H12C8` vs `1B3B9`/`5E6B1`) reduces neutralization potency ~2-fold.* `[Moderately Supported]` — The intraclonal comparison among the 3 `IGHV7-4*02F`/`IGLV7-43*01F` sibling clones sharing an identical HCDR3 (`1B3B9`, `5E6B1`, `4H12C8`) is biologically informative, but broader repertoire frequency claims from $N = 19$ hybridomas across 3 donors are underpowered and confounded by clonal siblings.
+
+### 4. Reproducibility & Data Completeness
+- **Positive:** All 20 degenerate/family-specific PCR amplification primers (`Table 1`), cloning vectors, transfection stoichiometry, and FRNT protocols are reported in detail.
+- **Missing:** Although line 104 states that `VH` and `VL` sequences of 17 clones were submitted to DDBJ, no DDBJ accession numbers are provided in the manuscript (and 2 of the 19 clones were omitted), and the tabular body of Table 3 (`NT50` values and sequence alignments) is missing from the text.
+</Blinded Review: TIME_ANON_0187>

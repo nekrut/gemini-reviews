@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemini Scientific Peer Reviews — Interactive Explorer & Audit Ledger</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --primary: #1d4ed8;
+      --primary-light: #dbeafe;
+      --emerald: #047857;
+      --emerald-bg: #d1fae5;
+      --blue: #1e40af;
+      --blue-bg: #dbeafe;
+      --amber: #b45309;
+      --amber-bg: #fef3c7;
+      --orange: #c2410c;
+      --orange-bg: #ffedd5;
+      --red: #b91c1c;
+      --red-bg: #fee2e2;
+      --purple: #6d28d9;
+      --purple-bg: #ede9fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Top Header */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid #334155;
+    }
+    .header-inner {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand h1 {
+      margin: 0 0 0.35rem 0;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .brand p {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      max-width: 880px;
+    }
+    .header-links {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .btn-header {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 0.48rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .btn-header:hover {
+      background: rgba(255,255,255,0.2);
+      text-decoration: none;
+    }
+    .btn-header.primary {
+      background: #2563eb;
+      border-color: #3b82f6;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem 3rem;
+    }
+
+    /* KPI Strip */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.95rem 1.1rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .kpi-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .kpi-val {
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin: 0.2rem 0;
+      color: var(--text);
+    }
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Graphical Tabs */
+    .tabs-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      background: var(--surface-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 0.35rem 0.75rem 0;
+      gap: 0.35rem;
+    }
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      border-bottom: none;
+      padding: 0.6rem 1rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 7px 7px 0 0;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      border-color: var(--border);
+      margin-bottom: -1px;
+      padding-bottom: 0.65rem;
+    }
+    .tab-panel {
+      display: none;
+      padding: 1.25rem;
+    }
+    .tab-panel.active { display: block; }
+    .charts-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .chart-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fff;
+    }
+    .chart-box h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.96rem;
+    }
+    .chart-box p.chart-caption {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .chart-canvas-wrap {
+      position: relative;
+      height: 270px;
+      width: 100%;
+    }
+
+    /* Filter Bar */
+    .filter-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .filter-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
+    .search-input {
+      flex: 1 1 320px;
+      padding: 0.58rem 0.9rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 7px;
+      font-size: 0.92rem;
+    }
+    .preset-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .pill-btn {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.38rem 0.72rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+    .pill-btn:hover { border-color: #94a3b8; }
+    .pill-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .filter-selects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 0.65rem;
+    }
+    .filter-group label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.22rem;
+    }
+    .filter-group select {
+      width: 100%;
+      padding: 0.45rem 0.6rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      background: #fff;
+    }
+
+    /* Filtered Stats Banner */
+    .active-summary-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.85rem;
+      gap: 0.75rem;
+    }
+    .active-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+    }
+    .active-metrics span strong { color: #1e3a8a; }
+
+    /* Table */
+    .table-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .table-scroll {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th {
+      background: var(--surface-alt);
+      color: var(--text-muted);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.7rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+    th:hover { color: var(--text); background: #e2e8f0; }
+    td {
+      padding: 0.68rem 0.75rem;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    tr.data-row {
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    tr.data-row:hover {
+      background: #f8fafc;
+    }
+    .score-badge {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 0.22rem 0.48rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+    .tier-Exemplary { background: var(--emerald-bg); color: var(--emerald); }
+    .tier-Strong { background: var(--blue-bg); color: var(--blue); }
+    .tier-Mixed { background: var(--amber-bg); color: var(--amber); }
+    .tier-Flawed { background: var(--orange-bg); color: var(--orange); }
+    .tier-Invalid { background: var(--red-bg); color: var(--red); }
+
+    .tag-chip {
+      display: inline-block;
+      padding: 0.14rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #334155;
+      margin-right: 0.25rem;
+      margin-top: 0.18rem;
+    }
+    .tag-chip.human {
+      background: var(--purple-bg);
+      color: var(--purple);
+    }
+    .tag-chip.mega {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .tag-chip.sel {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .pagination-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: var(--surface-alt);
+      border-top: 1px solid var(--border);
+      font-size: 0.84rem;
+    }
+    .page-btns { display: flex; gap: 0.4rem; }
+    .page-btns button {
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .page-btns button:disabled { opacity: 0.45; cursor: default; }
+
+    /* Slide-over Dossier Modal */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      z-index: 999;
+      display: none;
+      justify-content: flex-end;
+    }
+    .drawer-backdrop.open { display: flex; }
+    .drawer {
+      width: min(980px, 95vw);
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -8px 0 28px rgba(0,0,0,0.22);
+    }
+    .drawer-header {
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: #f8fafc;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .drawer-title {
+      margin: 0 0 0.35rem 0;
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+    .drawer-close {
+      background: #e2e8f0;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .drawer-subbar {
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .subscore-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      font-size: 0.82rem;
+    }
+    .subscore-pill {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      font-weight: 600;
+    }
+    .drawer-tabs {
+      display: flex;
+      gap: 0.4rem;
+    }
+    .dtab-btn {
+      padding: 0.38rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .dtab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .drawer-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+    .drawer-body h1, .drawer-body h2, .drawer-body h3 {
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    .drawer-body pre, .drawer-body code {
+      background: #f1f5f9;
+      border-radius: 4px;
+      padding: 0.12rem 0.32rem;
+      font-size: 0.86em;
+    }
+    .drawer-body pre { padding: 0.85rem; overflow-x: auto; }
+    .drawer-body table {
+      border: 1px solid var(--border);
+      margin: 0.85rem 0;
+    }
+    .Archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .arch-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.95rem;
+      background: #fff;
+    }
+    .arch-card h4 { margin: 0 0 0.35rem 0; font-size: 0.92rem; color: #1e293b; }
+    .arch-card p { margin: 0 0 0.5rem 0; font-size: 0.82rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Gemini Scientific Peer Reviews — Interactive Audit Explorer</h1>
+      <p>Empirical Calibration, 35-Year Longitudinal Secular Trends (1991–2025), Human-vs.-AI Open-Review Concordance, and Structural Error Estimation across Quantitative Biology &amp; Biomedicine</p>
+    </div>
+    <div class="header-links">
+      <a class="btn-header primary" href="https://github.com/spond/gemini-reviews/issues/new?template=review_request.yml" target="_blank">Request a Review</a>
+      <a class="btn-header" href="https://github.com/spond/gemini-reviews" target="_blank">GitHub Repository</a>
+      <a class="btn-header" href="CALIBRATION.md" target="_blank">Calibration</a>
+      <a class="btn-header" href="SECULAR_TRENDS_AND_COVARIATES.md" target="_blank">35-Yr Secular Study</a>
+      <a class="btn-header" href="PEER_REVIEW_VALUE_ADDED.md" target="_blank">Human vs. AI Review</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- KPI Strip -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Audited Manuscripts</div>
+      <div class="kpi-val" id="kpi-total">—</div>
+      <div class="kpi-sub">Blinded full-text reviews across 8 cohorts (1991–2026)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Ground-Truth Calibration</div>
+      <div class="kpi-val">0.969 AUC</div>
+      <div class="kpi-sub">Held-Out AUC = 0.982 (Sp = 100% at &lt;5.0; N = 200)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Test–Retest Repeatability</div>
+      <div class="kpi-val">0.967 ICC</div>
+      <div class="kpi-sub">Wild Cohort C ICC(2,1) = 0.858, ICC(2,3) = 0.948</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Established Journal Stability</div>
+      <div class="kpi-val">-0.01 / dec</div>
+      <div class="kpi-sub">Within-journal slope p = 0.96; 88% ecosystem dilution</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Open-Review Dossiers</div>
+      <div class="kpi-val" id="kpi-open">100+ Pairs</div>
+      <div class="kpi-sub">Blinded AI review vs. verbatim human referee reports</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Extramural NIH R01/P01 Gap</div>
+      <div class="kpi-val">+1.51 pts</div>
+      <div class="kpi-sub">NIH R01/U01/P01 (6.95) vs. Unfunded (5.44; p &lt; 10⁻⁹)</div>
+    </div>
+  </div>
+
+  <!-- Interactive Graphical Summaries -->
+  <div class="tabs-card">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('overview', this)">1. Cohort Overview &amp; Active Filter Distribution</button>
+      <button class="tab-btn" onclick="switchTab('secular', this)">2. 35-Year Secular Trajectory &amp; Dilution (N = 1,000)</button>
+      <button class="tab-btn" onclick="switchTab('human', this)">3. Human vs. AI Peer Review Concordance (N = 100 + 20 Pairs)</button>
+      <button class="tab-btn" onclick="switchTab('failures', this)">4. Highly Cited Failure Papers (&lt;5.0, Non-Training)</button>
+      <button class="tab-btn" onclick="switchTab('selfaudit', this)">5. Blinded Career Self-Audit (N = 164)</button>
+    </div>
+
+    <!-- Tab 1: Overview -->
+    <div id="tab-overview" class="tab-panel active">
+      <div class="charts-row">
+        <div class="chart-box">
+          <h3>Mean Composite Score &amp; Failure Rate by Experiment / Cohort</h3>
+          <p class="chart-caption">Click any bar to filter the table below to that cohort. Strict Failure (&lt;5.0) and Major Flaw (&lt;6.5) rates shown on right axis.</p>
+          <div class="chart-canvas-wrap"><canvas id="chartCohorts"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <h3>Live Score Histogram of Currently Filtered Manuscripts (<span id="histCountLabel">All</span>)</h3>
+          <p class="chart-caption">Updates dynamically as you search or filter by Cohort, Subfield, Venue Tier, Decade, or Modality below.</p>
+          <div class="chart-canvas-wrap"><canvas id="chartLiveHist"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Secular -->
+    <div id="tab-secular" class="tab-panel">
+      <div class="charts-row">
+        <div class="chart-box">
+          <h3>35-Year Trajectory (1991–2025, N = 1,000): Within-Journal Stability vs. Megajournal Dilution</h3>
+          <p class="chart-caption">Established selective/society journals held their standards (-0.01 pts/decade, p = 0.96), while Open-Access Megajournals expanded from 0% to 51.4% of volume (88% Oaxaca–Blinder compositional dilution).</p>
+          <div class="chart-canvas-wrap"><canvas id="chartSecular"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <h3>Structural Covariates &amp; Research Economics (N = 1,161 Wild Corpus)</h3>
+          <p class="chart-caption">Mean Composite Score by Study Modality, Technology Maturity, and Funding Tier (NIH R01/U01/P01 vs. Unfunded).</p>
+          <div class="chart-canvas-wrap"><canvas id="chartCovariates"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Human vs AI -->
+    <div id="tab-human" class="tab-panel">
+      <div class="charts-row">
+        <div class="chart-box">
+          <h3>Open-Review Cohort (N = 100) &amp; Preprint-to-Published Pairs (N = 20 Pairs)</h3>
+          <p class="chart-caption">Selective Flagship/Society Journals (eLife, PLOS Biol/Genet/Pathog/CompBiol) vs. Open-Review Megajournals (PLOS ONE, PeerJ, BMJ Open, RSOS).</p>
+          <div class="chart-canvas-wrap"><canvas id="chartOpenReview"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <h3>Human Referee Rigor vs. Blinded AI Forensic Audit</h3>
+          <p class="chart-caption">Every paper in the Open-Review Cohort includes both our blinded Gemini 4 Argon review and the verbatim published human referee reports. Click "Has Human Peer Review" below to inspect any pair side-by-side.</p>
+          <div class="Archetype-grid">
+            <div class="arch-card">
+              <h4>Selective Flagship / Society Open-Review (n = 50: 7.49 ± 1.38 / 10)</h4>
+              <p>Multi-reviewer technical scrutiny (135 human reviewers, median 3,977 words; 72% Thorough Technical, 0% Superficial) yields high published quality (7.49/10, 8.0% &lt;5.0). Blinded AI recalls 97.7% (42/43) of unresolved human critiques while catching 172 additional quantitative/design flaws (3.4/paper).</p>
+              <button class="pill-btn" onclick="applyQuickFilter({experiment:'Open-Review Concordance (N=100)', venue:'Selective / Established'})">Filter Selective Open-Review (50)</button>
+            </div>
+            <div class="arch-card">
+              <h4>Open-Review Megajournals (n = 50: 5.01 ± 1.69 / 10)</h4>
+              <p>Despite open peer review (126 human reviewers, median 2,462 words; 48.0% strict failure &lt;5.0), 38% of human review records are Superficial/Boilerplate and 58% (29/50) exhibit anomalies: generic/LLM-leaked boilerplate (19), coercive citation demands (6; e.g., <code>OPEN_ANON_001</code>, <code>OPEN_ANON_011</code>), or single-reviewer acceptances (4; e.g., <code>OPEN_ANON_036</code>), missing 213 critical flaws (4.3/paper).</p>
+              <button class="pill-btn" onclick="applyQuickFilter({experiment:'Open-Review Concordance (N=100)', venue:'Megajournal'})">Filter Megajournal Open-Review (50)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Highly Cited Failures -->
+    <div id="tab-failures" class="tab-panel">
+      <div class="Archetype-grid">
+        <div class="arch-card">
+          <h4>1. First-Wave Pandemic Gold-Rush Papers (100–156 Cites)</h4>
+          <p><strong>Example:</strong> <code>TIME_ANON_0224</code> (<em>Pathogens</em> 2020, <strong>3.7/10</strong>, 156 cites) claimed SARS-CoV-2 is a MERS-CoV recombinant from a 7-taxon ClustalW alignment; <code>TIME_ANON_0922</code> (<strong>2.2/10</strong>, 139 cites) docked Lopinavir+Ritonavir simultaneously as a single 1,300 Da molecule.</p>
+          <button class="pill-btn" onclick="openDossierByAnon('TIME_ANON_0224')">View TIME_ANON_0224 (156 cites)</button>
+          <button class="pill-btn" onclick="openDossierByAnon('TIME_ANON_0922')">View TIME_ANON_0922 (139 cites)</button>
+        </div>
+        <div class="arch-card">
+          <h4>2. Useful Gene Catalog + Broken Downstream Math (73–158 Cites)</h4>
+          <p><strong>Example:</strong> <code>TIME_ANON_08</code> (<em>BMC Evol Biol</em> 2005, <strong>4.8/10</strong>, 158 cites) curated relaxin genes but plotted PAML's <code>dN/dS = 99</code> division-by-zero code (`dS = 0`) as real ω = 99 positive selection; <code>TIME_ANON_0605</code> (<strong>4.9/10</strong>, 73 cites) cataloged 209 millet MYB genes with a copy-pasted "MAPK" conclusion.</p>
+          <button class="pill-btn" onclick="openDossierByAnon('TIME_ANON_08')">View TIME_ANON_08 (158 cites)</button>
+          <button class="pill-btn" onclick="openDossierByAnon('TIME_ANON_0605')">View TIME_ANON_0605 (73 cites)</button>
+        </div>
+        <div class="arch-card">
+          <h4>3. Prestige-Halo Provocative Claims (62–556 Cites)</h4>
+          <p><strong>Example:</strong> <code>SP_ANON_109</code> (<em>Nature</em> 2016, <strong>4.1/10</strong>, 556 cites) inferred ongoing HIV replication under ART from the first 6 months of viral decay in 3 patients; <code>TIME_ANON_0867</code> (<em>Mol Cancer</em> 2004, <strong>4.5/10</strong>, 111 cites) claimed cisplatin induces de novo methylation despite 0/18 genes methylated in vitro.</p>
+          <button class="pill-btn" onclick="openDossierByAnon('SP_ANON_109')">View SP_ANON_109 (556 cites)</button>
+          <button class="pill-btn" onclick="openDossierByAnon('TIME_ANON_0867')">View TIME_ANON_0867 (111 cites)</button>
+        </div>
+        <div class="arch-card">
+          <h4>4. Modern Buzzword-Combo Templates (15–39 Cites/Yr)</h4>
+          <p><strong>Example:</strong> 2024–2025 papers combining scRNA-seq + Mendelian randomization + LASSO Cox + molecular docking (e.g., <code>C21</code> at <strong>2.8/10</strong>, 39 cites; <code>C86</code> at <strong>4.4/10</strong>, 36 cites) cited rapidly as introduction filler by other template papers.</p>
+          <button class="pill-btn" onclick="applyQuickFilter({preset:'highcite_fail'})">Show All Highly Cited Failing Papers (&ge;50 Cites &amp; &lt;5.0)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5: Self-Audit -->
+    <div id="tab-selfaudit" class="tab-panel">
+      <div class="charts-row">
+        <div class="chart-box">
+          <h3>Blinded Career Self-Audit (S. L. Kosakovsky Pond, N = 164, 2004–2026)</h3>
+          <p class="chart-caption">First/Senior Author (n = 42: Mean 8.22 ± 1.11, Median 8.50, 0% &lt;5.0) vs. Middle Co-Author (n = 122: Mean 7.29 ± 1.39, 6.6% &lt;5.0; p = 3.1 × 10⁻⁵).</p>
+          <div class="chart-canvas-wrap"><canvas id="chartSelfAudit"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <h3>Self-Critical Calibration &amp; Refutation Symmetry</h3>
+          <p class="chart-caption">All 164 PMC papers were scrubbed of author names, titles, journals, and identifiers before blinded review.</p>
+          <div class="Archetype-grid">
+            <div class="arch-card">
+              <h4>First/Senior Author Stability (2004–2026)</h4>
+              <p>Zero secular decline over 22 years (2000s Mean 8.14, 2010s Mean 8.30, 2020s Mean 8.16; r = +0.039, p = 0.81). 76.2% (32/42) score &ge;8.0/10.</p>
+              <button class="pill-btn" onclick="applyQuickFilter({experiment:'Career Self-Audit: S. Pond (N=164)'})">Explore All 164 Self-Audit Reviews</button>
+            </div>
+            <div class="arch-card">
+              <h4>Unsparing Detection of Co-Authored Flaws</h4>
+              <p>Flagged 8 middle co-author papers below 5.0 (including <code>SP_ANON_103</code> at 2.2 and <code>SP_ANON_109</code> at 4.1) and caught the BA.5 amplicon-dropout artifact in <code>SP_ANON_012</code> (6.4) that was subsequently refuted in <code>SP_ANON_007</code> (8.9).</p>
+              <button class="pill-btn" onclick="openDossierByAnon('SP_ANON_012')">View SP_ANON_012 (6.4)</button>
+              <button class="pill-btn" onclick="openDossierByAnon('SP_ANON_007')">View SP_ANON_007 (8.9)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search & Multi-Facet Filter Controls -->
+  <div class="filter-card">
+    <div class="filter-top">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, journal, PMCID (e.g. PMC7157669), code (e.g. TIME_ANON_0224, OPEN_ANON_011), or keyword..." oninput="onFilterChange()" />
+      <div class="preset-pills">
+        <button class="pill-btn active" id="preset-all" onclick="setPreset('all')">All Manuscripts</button>
+        <button class="pill-btn" id="preset-wild" onclick="setPreset('wild')">Wild Literature Only</button>
+        <button class="pill-btn" id="preset-human" onclick="setPreset('human')">Has Human Peer Review</button>
+        <button class="pill-btn" id="preset-exemplary" onclick="setPreset('exemplary')">Exemplary (&ge;9.0)</button>
+        <button class="pill-btn" id="preset-failed" onclick="setPreset('failed')">Failed (&lt;5.0)</button>
+        <button class="pill-btn" id="preset-highcite_fail" onclick="setPreset('highcite_fail')">Highly Cited Failures (&ge;50 Cites &amp; &lt;5.0)</button>
+        <button class="pill-btn" onclick="resetFilters()">Reset</button>
+      </div>
+    </div>
+    <div class="filter-selects">
+      <div class="filter-group">
+        <label>Experiment / Cohort</label>
+        <select id="filterExperiment" onchange="onFilterChange()">
+          <option value="">All Experiments / Cohorts</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Subfield / Track</label>
+        <select id="filterSubfield" onchange="onFilterChange()">
+          <option value="">All Subfields / Tracks</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Venue Tier</label>
+        <select id="filterVenueTier" onchange="onFilterChange()">
+          <option value="">All Venue Tiers</option>
+          <option value="Selective / Established">Selective / Established Journal</option>
+          <option value="Megajournal">Open-Access Megajournal</option>
+          <option value="Preprint">Preprint (v1)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Decade</label>
+        <select id="filterDecade" onchange="onFilterChange()">
+          <option value="">All Decades (1991–2026)</option>
+          <option value="1990s">1990s (1991–1999)</option>
+          <option value="2000s">2000s (2000–2009)</option>
+          <option value="2010s">2010s (2010–2019)</option>
+          <option value="2020s">2020s (2020–2026)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Study Modality</label>
+        <select id="filterModality" onchange="onFilterChange()">
+          <option value="">All Study Modalities</option>
+          <option value="Wet-Lab Primary Experimental">Wet-Lab Primary Experimental</option>
+          <option value="Hybrid Computational + Wet-Lab">Hybrid Computational + Wet-Lab</option>
+          <option value="Dry-Lab Theory/Methods/Simulation">Dry-Lab Theory / Methods / Simulation</option>
+          <option value="Dry-Lab Secondary Cohort/Database">Dry-Lab Secondary Cohort / Database</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sort By</label>
+        <select id="sortSelect" onchange="onFilterChange()">
+          <option value="overall_desc">Score: High to Low</option>
+          <option value="overall_asc">Score: Low to High</option>
+          <option value="cites_desc">Citations: High to Low</option>
+          <option value="year_desc">Year: Newest First</option>
+          <option value="year_asc">Year: Oldest First</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Active Filter Summary Bar -->
+  <div class="active-summary-bar">
+    <div class="active-metrics">
+      <span>Showing: <strong id="statCount">0</strong> manuscripts</span>
+      <span>Mean Score: <strong id="statMean">—</strong> / 10</span>
+      <span>Median: <strong id="statMedian">—</strong></span>
+      <span>Strict Failure (&lt;5.0): <strong id="statFail50">—</strong></span>
+      <span>Major Flaw (&lt;6.5): <strong id="statFlaw65">—</strong></span>
+    </div>
+    <div>Click any row to open the full blinded review dossier &amp; human referee report</div>
+  </div>
+
+  <!-- Results Table -->
+  <div class="table-card">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="setSort('code')">ID / Code</th>
+            <th onclick="setSort('title')">Manuscript Title &amp; Authors</th>
+            <th onclick="setSort('journal')">Venue &amp; Year</th>
+            <th onclick="setSort('experiment')">Cohort / Subfield</th>
+            <th onclick="setSort('cites')">Cites</th>
+            <th onclick="setSort('rigor')">Rigor<br><small>/3.5</small></th>
+            <th onclick="setSort('claims')">Claims<br><small>/2.5</small></th>
+            <th onclick="setSort('biology')">Bio<br><small>/2.0</small></th>
+            <th onclick="setSort('repro')">Repro<br><small>/2.0</small></th>
+            <th onclick="setSort('overall')">Composite<br><small>/10.0</small></th>
+            <th>Dossier</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="11" style="text-align:center;padding:2rem;">Loading catalog.json...</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination-bar">
+      <div id="pageInfo">Showing 0–0 of 0</div>
+      <div class="page-btns">
+        <button id="btnPrev" onclick="changePage(-1)">Previous</button>
+        <button id="btnNext" onclick="changePage(1)">Next</button>
+        <button onclick="showAllRows()">Show All</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide-Over Review Dossier Modal -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="if(event.target===this) closeDrawer()">
+  <div class="drawer">
+    <div class="drawer-header">
+      <div>
+        <div id="drawerBadges" style="margin-bottom:0.35rem;"></div>
+        <h2 class="drawer-title" id="drawerTitle">Manuscript Title</h2>
+        <div id="drawerMeta" style="font-size:0.84rem;color:var(--text-muted);"></div>
+      </div>
+      <button class="drawer-close" onclick="closeDrawer()">✕ Close</button>
+    </div>
+    <div class="drawer-subbar">
+      <div class="subscore-pills" id="drawerScores"></div>
+      <div class="drawer-tabs" id="drawerTabs"></div>
+    </div>
+    <div class="drawer-body" id="drawerBody">Loading review dossier...</div>
+  </div>
+</div>
+
+<script>
+let ALL_RECORDS = [];
+let COHORT_SUMMARIES = [];
+let FILTERED = [];
+let CURRENT_PAGE = 1;
+let PAGE_SIZE = 50;
+let CURRENT_PRESET = 'all';
+let CURRENT_RECORD = null;
+let chartCohortsInst = null;
+let chartLiveHistInst = null;
+let chartSecularInst = null;
+let chartCovariatesInst = null;
+let chartOpenReviewInst = null;
+let chartSelfAuditInst = null;
+
+function tierClass(tier) {
+  if (!tier) return 'tier-Mixed';
+  if (tier.includes('Exemplary')) return 'tier-Exemplary';
+  if (tier.includes('Strong')) return 'tier-Strong';
+  if (tier.includes('Mixed')) return 'tier-Mixed';
+  if (tier.includes('Flawed')) return 'tier-Flawed';
+  return 'tier-Invalid';
+}
+
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function initApp() {
+  try {
+    const res = await fetch('catalog.json');
+    const data = await res.json();
+    ALL_RECORDS = data.records || [];
+    COHORT_SUMMARIES = data.cohort_summaries || [];
+
+    document.getElementById('kpi-total').textContent = ALL_RECORDS.length.toLocaleString();
+    const humanCount = ALL_RECORDS.filter(r => r.has_human_review).length;
+    document.getElementById('kpi-open').textContent = `${humanCount} Dossiers`;
+
+    populateDropdowns();
+    initStaticCharts();
+    applyUrlHash();
+    onFilterChange();
+  } catch (err) {
+    document.getElementById('tableBody').innerHTML =
+      `<tr><td colspan="11" style="color:red;padding:2rem;">Failed to load catalog.json: ${escapeHtml(err.message)}</td></tr>`;
+  }
+}
+
+function populateDropdowns() {
+  const expSel = document.getElementById('filterExperiment');
+  const exps = [...new Set(ALL_RECORDS.map(r => r.experiment))].filter(Boolean);
+  exps.forEach(e => {
+    const opt = document.createElement('option');
+    opt.value = e;
+    opt.textContent = `${e} (${ALL_RECORDS.filter(r => r.experiment === e).length})`;
+    expSel.appendChild(opt);
+  });
+
+  const subSel = document.getElementById('filterSubfield');
+  const subs = [...new Set(ALL_RECORDS.map(r => r.subfield))].filter(Boolean).sort();
+  subs.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = `${s} (${ALL_RECORDS.filter(r => r.subfield === s).length})`;
+    subSel.appendChild(opt);
+  });
+}
+
+function setPreset(preset) {
+  CURRENT_PRESET = preset;
+  document.querySelectorAll('.preset-pills .pill-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('preset-' + preset);
+  if (btn) btn.classList.add('active');
+  CURRENT_PAGE = 1;
+  onFilterChange();
+}
+
+function resetFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('filterExperiment').value = '';
+  document.getElementById('filterSubfield').value = '';
+  document.getElementById('filterVenueTier').value = '';
+  document.getElementById('filterDecade').value = '';
+  document.getElementById('filterModality').value = '';
+  document.getElementById('sortSelect').value = 'overall_desc';
+  setPreset('all');
+}
+
+function applyQuickFilter(opts) {
+  resetFilters();
+  if (opts.experiment) document.getElementById('filterExperiment').value = opts.experiment;
+  if (opts.venue) document.getElementById('filterVenueTier').value = opts.venue;
+  if (opts.preset) setPreset(opts.preset);
+  else onFilterChange();
+  document.querySelector('.filter-card').scrollIntoView({ behavior: 'smooth' });
+}
+
+function onFilterChange() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const exp = document.getElementById('filterExperiment').value;
+  const sub = document.getElementById('filterSubfield').value;
+  const vt = document.getElementById('filterVenueTier').value;
+  const dec = document.getElementById('filterDecade').value;
+  const mod = document.getElementById('filterModality').value;
+  const sortMode = document.getElementById('sortSelect').value;
+
+  FILTERED = ALL_RECORDS.filter(r => {
+    if (CURRENT_PRESET === 'wild' && !r.is_wild) return false;
+    if (CURRENT_PRESET === 'human' && !r.has_human_review) return false;
+    if (CURRENT_PRESET === 'exemplary' && r.overall < 9.0) return false;
+    if (CURRENT_PRESET === 'failed' && r.overall >= 5.0) return false;
+    if (CURRENT_PRESET === 'highcite_fail') {
+      if (r.overall >= 5.0 || (r.citedByCount || 0) < 50 || r.experiment.includes('Cohort A')) return false;
+    }
+    if (exp && r.experiment !== exp) return false;
+    if (sub && r.subfield !== sub) return false;
+    if (vt && r.venue_tier !== vt) return false;
+    if (dec && r.decade !== dec) return false;
+    if (mod && !(r.study_modality || '').includes(mod)) return false;
+    if (q) {
+      const hay = `${r.code} ${r.anon_id} ${r.pmcid} ${r.pmid} ${r.doi} ${r.title} ${r.authors} ${r.journal} ${r.subfield} ${r.bias_category}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  FILTERED.sort((a, b) => {
+    if (sortMode === 'overall_asc') return a.overall - b.overall;
+    if (sortMode === 'cites_desc') return (b.citedByCount || 0) - (a.citedByCount || 0);
+    if (sortMode === 'year_desc') return (b.year || 0) - (a.year || 0);
+    if (sortMode === 'year_asc') return (a.year || 0) - (b.year || 0);
+    return b.overall - a.overall || (b.citedByCount || 0) - (a.citedByCount || 0);
+  });
+
+  CURRENT_PAGE = 1;
+  updateSummaryBar();
+  updateLiveHistogram();
+  renderTable();
+}
+
+function setSort(col) {
+  const sel = document.getElementById('sortSelect');
+  if (col === 'overall') sel.value = sel.value === 'overall_desc' ? 'overall_asc' : 'overall_desc';
+  else if (col === 'cites') sel.value = 'cites_desc';
+  else if (col === 'journal') sel.value = sel.value === 'year_desc' ? 'year_asc' : 'year_desc';
+  onFilterChange();
+}
+
+function updateSummaryBar() {
+  const n = FILTERED.length;
+  document.getElementById('statCount').textContent = n.toLocaleString();
+  document.getElementById('histCountLabel').textContent = `n = ${n.toLocaleString()}`;
+  if (!n) {
+    document.getElementById('statMean').textContent = '—';
+    document.getElementById('statMedian').textContent = '—';
+    document.getElementById('statFail50').textContent = '—';
+    document.getElementById('statFlaw65').textContent = '—';
+    return;
+  }
+  const scores = FILTERED.map(r => r.overall).sort((a, b) => a - b);
+  const mean = scores.reduce((a, b) => a + b, 0) / n;
+  const med = n % 2 === 1 ? scores[(n - 1) / 2] : 0.5 * (scores[n / 2 - 1] + scores[n / 2]);
+  const f50 = (scores.filter(s => s < 5.0).length / n) * 100;
+  const f65 = (scores.filter(s => s < 6.5).length / n) * 100;
+
+  document.getElementById('statMean').textContent = mean.toFixed(2);
+  document.getElementById('statMedian').textContent = med.toFixed(2);
+  document.getElementById('statFail50').textContent = `${f50.toFixed(1)}%`;
+  document.getElementById('statFlaw65').textContent = `${f65.toFixed(1)}%`;
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tableBody');
+  const total = FILTERED.length;
+  if (!total) {
+    tbody.innerHTML = `<tr><td colspan="11" style="text-align:center;padding:2rem;color:var(--text-muted);">No manuscripts match the current filters.</td></tr>`;
+    document.getElementById('pageInfo').textContent = 'Showing 0 of 0';
+    return;
+  }
+  const start = (CURRENT_PAGE - 1) * PAGE_SIZE;
+  const end = Math.min(start + PAGE_SIZE, total);
+  const slice = FILTERED.slice(start, end);
+
+  tbody.innerHTML = slice.map(r => {
+    const tClass = tierClass(r.tier);
+    const vtBadge = r.venue_tier === 'Megajournal'
+      ? `<span class="tag-chip mega">Megajournal</span>`
+      : r.venue_tier === 'Preprint'
+        ? `<span class="tag-chip">Preprint</span>`
+        : `<span class="tag-chip sel">Selective</span>`;
+    const humBadge = r.has_human_review
+      ? `<span class="tag-chip human">Human Peer Review Available</span>`
+      : '';
+    const modBadge = r.study_modality && !r.study_modality.includes('Not Annotated')
+      ? `<span class="tag-chip">${escapeHtml(r.study_modality.replace('Dry-Lab ', '').replace('Wet-Lab ', ''))}</span>`
+      : '';
+
+    return `<tr class="data-row" onclick="openDossier('${escapeHtml(r.uid)}')">
+      <td>
+        <strong>${escapeHtml(r.code)}</strong>
+        <div style="font-size:0.74rem;color:var(--text-muted);">${escapeHtml(r.anon_id)}</div>
+        ${r.pmcid ? `<div style="font-size:0.73rem;"><a href="${escapeHtml(r.url)}" target="_blank" onclick="event.stopPropagation()">${escapeHtml(r.pmcid)}</a></div>` : ''}
+      </td>
+      <td style="max-width:410px;">
+        <div style="font-weight:600;color:#0f172a;margin-bottom:0.18rem;">${escapeHtml(r.title)}</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);">${escapeHtml(r.authors_short)}</div>
+        <div>${vtBadge}${humBadge}${modBadge}</div>
+      </td>
+      <td>
+        <div style="font-weight:600;">${escapeHtml(r.journal)}</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);">${r.year} (${escapeHtml(r.decade)})</div>
+      </td>
+      <td>
+        <div style="font-weight:600;font-size:0.8rem;">${escapeHtml(r.experiment)}</div>
+        <div style="font-size:0.76rem;color:var(--text-muted);">${escapeHtml(r.subfield)}</div>
+      </td>
+      <td style="text-align:right;font-weight:600;">${(r.citedByCount || 0).toLocaleString()}</td>
+      <td style="text-align:center;">${r.rigor.toFixed(1)}</td>
+      <td style="text-align:center;">${r.claims.toFixed(1)}</td>
+      <td style="text-align:center;">${r.biology.toFixed(1)}</td>
+      <td style="text-align:center;">${r.reproducibility.toFixed(1)}</td>
+      <td style="text-align:center;">
+        <span class="score-badge ${tClass}">${r.overall.toFixed(1)}</span>
+        <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.15rem;">${escapeHtml(r.tier)}</div>
+      </td>
+      <td style="text-align:center;">
+        <button class="pill-btn" onclick="event.stopPropagation(); openDossier('${escapeHtml(r.uid)}')">Read Review</button>
+      </td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('pageInfo').textContent = `Showing ${start + 1}–${end} of ${total.toLocaleString()}`;
+  document.getElementById('btnPrev').disabled = CURRENT_PAGE <= 1;
+  document.getElementById('btnNext').disabled = end >= total;
+}
+
+function changePage(delta) {
+  CURRENT_PAGE += delta;
+  renderTable();
+  document.querySelector('.table-card').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showAllRows() {
+  PAGE_SIZE = 2000;
+  CURRENT_PAGE = 1;
+  renderTable();
+}
+
+function switchTab(tabId, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+
+function updateLiveHistogram() {
+  const bins = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // 1-2, 2-3, ..., 9-10
+  FILTERED.forEach(r => {
+    const idx = Math.min(8, Math.max(0, Math.floor(r.overall) - 1));
+    bins[idx]++;
+  });
+  if (!chartLiveHistInst) {
+    const ctx = document.getElementById('chartLiveHist').getContext('2d');
+    chartLiveHistInst = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['1.0–1.9', '2.0–2.9', '3.0–3.9', '4.0–4.9', '5.0–5.9', '6.0–6.9', '7.0–7.9', '8.0–8.9', '9.0–10.0'],
+        datasets: [{
+          label: 'Manuscripts',
+          data: bins,
+          backgroundColor: ['#dc2626', '#dc2626', '#ea580c', '#f97316', '#f59e0b', '#eab308', '#3b82f6', '#2563eb', '#059669'],
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  } else {
+    chartLiveHistInst.data.datasets[0].data = bins;
+    chartLiveHistInst.update();
+  }
+}
+
+function initStaticCharts() {
+  // 1. Cohorts Bar Chart
+  const ctxC = document.getElementById('chartCohorts').getContext('2d');
+  const labels = COHORT_SUMMARIES.map(c => c.experiment.replace('Calibration: ', '').replace(' (N=1,000)', '').replace(' (N=100)', '').replace(' (N=164)', ''));
+  chartCohortsInst = new Chart(ctxC, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Mean Score (/10)',
+          data: COHORT_SUMMARIES.map(c => c.mean),
+          backgroundColor: '#2563eb',
+          borderRadius: 4,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Strict Failure <5.0 (%)',
+          data: COHORT_SUMMARIES.map(c => c.fail_50_pct),
+          backgroundColor: '#ef4444',
+          borderRadius: 4,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      onClick: (evt, elements) => {
+        if (elements.length > 0) {
+          const idx = elements[0].index;
+          document.getElementById('filterExperiment').value = COHORT_SUMMARIES[idx].experiment;
+          onFilterChange();
+        }
+      },
+      scales: {
+        y: { beginAtZero: true, max: 10, title: { display: true, text: 'Mean Score (/10)' } },
+        y1: { beginAtZero: true, max: 100, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: '% < 5.0' } }
+      }
+    }
+  });
+
+  // 2. Secular Trajectory Chart
+  const ctxS = document.getElementById('chartSecular').getContext('2d');
+  chartSecularInst = new Chart(ctxS, {
+    type: 'line',
+    data: {
+      labels: ['1991–1995', '1996–2000', '2001–2005', '2006–2010', '2011–2015', '2016–2020', '2021–2025'],
+      datasets: [
+        {
+          label: 'Established / Selective Journals (Slope -0.01/dec, p=0.96)',
+          data: [6.88, 7.05, 6.72, 6.76, 6.60, 6.46, 6.32],
+          borderColor: '#059669',
+          backgroundColor: '#059669',
+          tension: 0.25,
+          borderWidth: 2.5
+        },
+        {
+          label: 'All Sampled Literature (N = 1,000)',
+          data: [6.88, 7.05, 6.72, 6.68, 6.08, 5.79, 5.65],
+          borderColor: '#2563eb',
+          backgroundColor: '#2563eb',
+          tension: 0.25,
+          borderWidth: 2.5
+        },
+        {
+          label: 'Open-Access Megajournals (Mean 5.14/10)',
+          data: [null, null, null, 6.13, 5.12, 5.10, 5.02],
+          borderColor: '#dc2626',
+          backgroundColor: '#dc2626',
+          borderDash: [5, 4],
+          tension: 0.25,
+          borderWidth: 2.5
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { min: 4.0, max: 8.5, title: { display: true, text: 'Mean Composite Score (/10)' } } }
+    }
+  });
+
+  // 3. Structural Covariates Chart
+  const ctxCov = document.getElementById('chartCovariates').getContext('2d');
+  chartCovariatesInst = new Chart(ctxCov, {
+    type: 'bar',
+    data: {
+      labels: [
+        'NIH R01/U01/P01',
+        'Other Extramural',
+        'Unfunded / None',
+        'Wet-Lab Primary',
+        'Dry-Lab Theory',
+        'Secondary Database',
+        'Mature Tech',
+        'Commodity Template'
+      ],
+      datasets: [{
+        label: 'Mean Composite Score (/10)',
+        data: [6.95, 6.26, 5.44, 6.42, 6.31, 4.98, 6.53, 3.85],
+        backgroundColor: ['#059669', '#3b82f6', '#f97316', '#0ea5e9', '#6366f1', '#ef4444', '#10b981', '#dc2626'],
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, max: 8.5 } }
+    }
+  });
+
+  // 4. Open-Review Chart
+  const openRecs = ALL_RECORDS.filter(r => r.experiment === 'Open-Review Concordance (N=100)');
+  const selOpen = openRecs.filter(r => r.venue_tier === 'Selective / Established');
+  const megaOpen = openRecs.filter(r => r.venue_tier === 'Megajournal');
+  const meanOf = arr => arr.length ? +(arr.reduce((a, b) => a + b.overall, 0) / arr.length).toFixed(2) : 0;
+  const failOf = arr => arr.length ? +(arr.filter(r => r.overall < 5.0).length / arr.length * 100).toFixed(1) : 0;
+
+  const ctxOR = document.getElementById('chartOpenReview').getContext('2d');
+  chartOpenReviewInst = new Chart(ctxOR, {
+    type: 'bar',
+    data: {
+      labels: ['Selective Open-Review (n=50)', 'Megajournal Open-Review (n=50)', 'Preprint v1 (n=20)', 'Published vFinal (n=20)'],
+      datasets: [
+        {
+          label: 'Mean Score (/10)',
+          data: [meanOf(selOpen) || 7.42, meanOf(megaOpen) || 5.02, 6.53, 7.18],
+          backgroundColor: ['#059669', '#dc2626', '#94a3b8', '#2563eb'],
+          borderRadius: 4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, max: 9.0, title: { display: true, text: 'Mean Score (/10)' } } }
+    }
+  });
+
+  // 5. Self-Audit Chart
+  const ctxSA = document.getElementById('chartSelfAudit').getContext('2d');
+  chartSelfAuditInst = new Chart(ctxSA, {
+    type: 'bar',
+    data: {
+      labels: ['First Author (n=10)', 'Senior Author (n=32)', 'All First/Senior (n=42)', 'Middle Co-Author (n=122)', 'Wild Literature (N=1,161)'],
+      datasets: [{
+        label: 'Mean Composite Score (/10)',
+        data: [8.33, 8.19, 8.22, 7.29, 6.08],
+        backgroundColor: ['#059669', '#10b981', '#047857', '#3b82f6', '#94a3b8'],
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, max: 9.5 } }
+    }
+  });
+}
+
+async function openDossier(uid) {
+  const rec = ALL_RECORDS.find(r => r.uid === uid);
+  if (!rec) return;
+  CURRENT_RECORD = rec;
+
+  document.getElementById('drawerTitle').textContent = rec.title;
+  document.getElementById('drawerBadges').innerHTML = `
+    <span class="score-badge ${tierClass(rec.tier)}">${rec.overall.toFixed(1)} / 10</span>
+    <span class="tag-chip">${escapeHtml(rec.experiment)}</span>
+    <span class="tag-chip">${escapeHtml(rec.subfield)}</span>
+    <span class="tag-chip">${escapeHtml(rec.venue_tier)}</span>
+    ${rec.study_modality && !rec.study_modality.includes('Not Annotated') ? `<span class="tag-chip">${escapeHtml(rec.study_modality)}</span>` : ''}
+  `;
+  document.getElementById('drawerMeta').innerHTML = `
+    <strong>Authors:</strong> ${escapeHtml(rec.authors || rec.authors_short)} &nbsp;|&nbsp;
+    <strong>Venue:</strong> ${escapeHtml(rec.journal)} (${rec.year}) &nbsp;|&nbsp;
+    <strong>Citations:</strong> ${(rec.citedByCount || 0).toLocaleString()} &nbsp;|&nbsp;
+    <strong>Code:</strong> <code>${escapeHtml(rec.code)}</code> (<code>${escapeHtml(rec.anon_id)}</code>)
+    ${rec.url ? ` &nbsp;|&nbsp; <a href="${escapeHtml(rec.url)}" target="_blank">View Article on PubMed Central ↗</a>` : ''}
+    ${rec.review_path ? ` &nbsp;|&nbsp; <a href="${escapeHtml(rec.review_path)}" target="_blank">Raw Markdown ↗</a>` : ''}
+  `;
+
+  document.getElementById('drawerScores').innerHTML = `
+    <span class="subscore-pill">Rigor: ${rec.rigor.toFixed(1)} / 3.5</span>
+    <span class="subscore-pill">Claims: ${rec.claims.toFixed(1)} / 2.5</span>
+    <span class="subscore-pill">Biology: ${rec.biology.toFixed(1)} / 2.0</span>
+    <span class="subscore-pill">Reproducibility: ${rec.reproducibility.toFixed(1)} / 2.0</span>
+    <span class="subscore-pill">8-Pt Scientific Core: ${rec.sci_core_8.toFixed(1)} / 8.0</span>
+  `;
+
+  const tabsDiv = document.getElementById('drawerTabs');
+  if (rec.has_human_review && rec.human_review_path) {
+    tabsDiv.innerHTML = `
+      <button class="dtab-btn active" id="dtab-ai" onclick="loadDrawerContent('ai')">Blinded Gemini Review</button>
+      <button class="dtab-btn" id="dtab-human" onclick="loadDrawerContent('human')">Verbatim Human Peer Review</button>
+      ${rec.concordance ? `<button class="dtab-btn" id="dtab-concordance" onclick="loadDrawerContent('concordance')">Stage 2: Human vs. AI Concordance</button>` : ''}
+    `;
+  } else {
+    tabsDiv.innerHTML = `<button class="dtab-btn active" id="dtab-ai" onclick="loadDrawerContent('ai')">Blinded Gemini Review</button>`;
+  }
+
+  document.getElementById('drawerBackdrop').classList.add('open');
+  history.replaceState(null, '', `#review=${encodeURIComponent(rec.anon_id)}`);
+  await loadDrawerContent('ai');
+}
+
+function openDossierByAnon(anonId) {
+  const rec = ALL_RECORDS.find(r => r.anon_id === anonId || r.code === anonId);
+  if (rec) openDossier(rec.uid);
+}
+
+function renderConcordanceHtml(c) {
+  const crits = c.human_substantive_critiques || [];
+  const catches = c.ai_only_critical_catches || [];
+  const anom = Array.isArray(c.human_reviewer_anomalies) ? c.human_reviewer_anomalies.join('; ') : (c.human_reviewer_anomalies || 'None');
+  const rows = crits.map((hc, i) => `
+    <tr>
+      <td style="white-space:nowrap;font-weight:600;">${escapeHtml(hc.reviewer || ('Point ' + (i+1)))}</td>
+      <td>${escapeHtml(hc.issue || hc.point || '')}</td>
+      <td style="white-space:nowrap;">${hc.resolved_in_published_text ? 'Yes (Resolved Pre-Pub)' : '<strong>No (Visible in Pub)</strong>'}</td>
+      <td style="white-space:nowrap;font-weight:700;color:${String(hc.ai_recall).includes('Direct') ? '#047857' : String(hc.ai_recall).includes('Partial') ? '#b45309' : '#64748b'};">${escapeHtml(hc.ai_recall || '')}</td>
+      <td>${escapeHtml(hc.ai_matching_quote_or_note || '')}</td>
+    </tr>
+  `).join('');
+
+  const catchItems = catches.map(x => `<li style="margin-bottom:0.45rem;">${escapeHtml(x)}</li>`).join('');
+
+  return `
+    <h2>Stage 2 Audit: Verbatim Human Referees vs. Blinded Gemini 4 Argon Review</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.8rem 0 1.1rem;">
+      <span class="subscore-pill">Human Reviewers: ${escapeHtml(c.num_human_reviewers || '—')}</span>
+      <span class="subscore-pill">Human Review Depth: ${escapeHtml(c.human_review_depth || '—')}</span>
+      <span class="subscore-pill" style="background:${anom !== 'None' ? '#fee2e2' : '#d1fae5'};color:${anom !== 'None' ? '#991b1b' : '#065f46'};">Reviewer Anomalies: ${escapeHtml(anom)}</span>
+    </div>
+    ${c.human_anomaly_details && c.human_anomaly_details !== 'None' && c.human_anomaly_details !== 'None.' ? `
+      <div style="background:#fffbeb;border-left:4px solid #d97706;padding:0.75rem 1rem;margin-bottom:1.1rem;border-radius:4px;">
+        <strong>Human Referee Process / Anomaly Note:</strong> ${escapeHtml(c.human_anomaly_details)}
+      </div>
+    ` : ''}
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:0.85rem 1rem;margin-bottom:1.25rem;border-radius:6px;">
+      <strong>Overall Concordance Verdict:</strong> ${escapeHtml(c.concise_verdict || '')}
+    </div>
+    <h3>1. Substantive Human Referee Critiques &amp; Blinded AI Recall (${crits.length})</h3>
+    <div style="overflow-x:auto;margin-bottom:1.35rem;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.84rem;">
+        <thead>
+          <tr style="background:#f1f5f9;">
+            <th style="padding:0.5rem;border:1px solid #cbd5e1;">Reviewer</th>
+            <th style="padding:0.5rem;border:1px solid #cbd5e1;">Human Critique</th>
+            <th style="padding:0.5rem;border:1px solid #cbd5e1;">Resolved Pre-Pub?</th>
+            <th style="padding:0.5rem;border:1px solid #cbd5e1;">Blinded AI Recall</th>
+            <th style="padding:0.5rem;border:1px solid #cbd5e1;">Stage 1 AI Matching Evidence / Note</th>
+          </tr>
+        </thead>
+        <tbody>${rows || '<tr><td colspan="5" style="padding:0.75rem;">No substantive methodological critiques raised by human reviewers.</td></tr>'}</tbody>
+      </table>
+    </div>
+    <h3>2. Critical Flaws Caught Exclusively by Blinded AI Review (${catches.length})</h3>
+    <ul style="padding-left:1.3rem;">${catchItems || '<li>None</li>'}</ul>
+  `;
+}
+
+async function loadDrawerContent(mode) {
+  if (!CURRENT_RECORD) return;
+  document.querySelectorAll('.dtab-btn').forEach(b => b.classList.remove('active'));
+  const activeBtn = document.getElementById('dtab-' + mode);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  const body = document.getElementById('drawerBody');
+  if (mode === 'concordance' && CURRENT_RECORD.concordance) {
+    body.innerHTML = renderConcordanceHtml(CURRENT_RECORD.concordance);
+    return;
+  }
+  const path = mode === 'human' ? CURRENT_RECORD.human_review_path : CURRENT_RECORD.review_path;
+  if (!path) {
+    body.innerHTML = `<p>No file path recorded.</p>`;
+    return;
+  }
+  body.innerHTML = `<p style="color:var(--text-muted);">Loading <code>${escapeHtml(path)}</code>...</p>`;
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const md = await res.text();
+    body.innerHTML = marked.parse(md);
+  } catch (err) {
+    body.innerHTML = `<p style="color:red;">Could not load <code>${escapeHtml(path)}</code> (${escapeHtml(err.message)}). <a href="${escapeHtml(path)}" target="_blank">Open raw file</a></p>`;
+  }
+}
+
+function closeDrawer() {
+  document.getElementById('drawerBackdrop').classList.remove('open');
+  history.replaceState(null, '', window.location.pathname);
+}
+
+function applyUrlHash() {
+  const h = window.location.hash.replace(/^#/, '');
+  if (!h) return;
+  const params = new URLSearchParams(h);
+  if (params.get('experiment')) {
+    document.getElementById('filterExperiment').value = params.get('experiment');
+  }
+  if (params.get('preset')) {
+    setPreset(params.get('preset'));
+  }
+  if (params.get('review')) {
+    const target = params.get('review');
+    setTimeout(() => openDossierByAnon(target), 150);
+  }
+}
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDrawer();
+});
+
+initApp();
+</script>
+</body>
+</html>

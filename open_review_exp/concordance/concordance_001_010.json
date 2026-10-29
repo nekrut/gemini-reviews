@@ -1,0 +1,316 @@
+[
+  {
+    "anon_id": "OPEN_ANON_001",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Confounding of hatchery size-grading/feeding regime with higher stocking density/biomass in the single pooled tank housing the large-sized graded group.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Omission of sample sizes and statistical test names in the Abstract, geographical coordinates of the hatchery facility, and exact MS-222 euthanasia concentration.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe tank pseudoreplication: treating n1=615 and n2=556 individual fish as independent replicates instead of rearing tanks (only 3 control and 3 graded tanks, with n=1 unreplicated tank for the large graded group) and ad hoc mean-centering of tanks prior to pooling.",
+      "Mathematically impossible Fligner-Killeen test statistic for two-group family means (chi-squared = 40.51, P = 0.076 for n1=15, n2=15; at df=1, chi-squared = 40.51 yields P = 1.96e-10, whereas P = 0.076 corresponds to df = 29, proving a 30-group/continuous-vector coding error in R fligner.test).",
+      "Swapped Control and Graded Coefficient of Variation (CV) values in the Discussion ('CV = 7.98 and 8.97, and among families = 3.34 and 4.16 for control and graded, respectively', contradicting the Results and Abstract).",
+      "Unexplained 21.9% sample attrition of 329 fish (from 1,500 initial fish across 15 families down to 615 + 556 = 1,171 analyzed fish, plus 1 dropped family out of 16 spawned) despite claiming 'Mortality was negligible.'",
+      "Typographical omission of the inequality operator in the small size-class threshold ('small (97 mm FL)' instead of '< 97 mm FL' or '<= 97 mm FL')."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Reviewer #1 (Prof. Dr. Muhammad Naeem) demanded that the authors cite 6 unrelated papers by his own group on Pakistani warmwater fish proximate composition and length-weight relationships: 'For instance, O. mykiss is recognized as a nutritionally valuable fish species with high protein content (Naeem et al., 2016)... For example, fish growth may be influenced by a range of factors (Javed et al., 1992; Naeem et al., 2010; Naeem et al., 2011; Yousaf et al., 2011; Ismat et al., 2013).' The authors complied by inserting 5 of these citations [47-51] at Line 143 ('Fish growth can, of course, be influenced by a range of factors [47-51]')."
+  },
+  {
+    "anon_id": "OPEN_ANON_002",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "FACS sorting for THY1/integrin and validation by PLZF (ZBTB16) immunocytochemistry does not isolate pure spermatogonial stem cells (SSCs) but captures a heterogeneous mixture of undifferentiated and differentiating spermatogonia plus contaminating testicular somatic cells.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Bulk RNA-seq deconvolution via CIBERSORTx is an indirect approximation that yielded implausibly high SSC purity estimates (99% at PND8, 85% at PND15, 82% in adult) and cannot substitute for single-cell resolution across continuous spermatogonial state transitions.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Imprecise developmental terminology (initially using 'SC' which denotes Sertoli cells rather than 'SPG', conflating fetal/neonatal prospermatogonial stages, and omitting prior ATAC-seq studies on mouse spermatogonia).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Systemic experimental protocol confounding between the juvenile (PND8/PND15) and Adult stages across every assay: (a) different FACS surface antibodies used for pups (anti-alpha_v-integrin CD51, clone RMV-7, mislabeled as 'integrin a5' in the Key Resources Table) vs. adults (anti-alpha_6-integrin CD49f, clone GoH3); (b) different RNA-seq library preparation inputs (purified column-extracted heat-fragmented RNA for PND8/PND15 vs. direct lysis of 1,000 intact sorted cells at 85C without RNA extraction for adults); (c) a 5-fold difference in Omni-ATAC cell input (25,000 cells in PND15 vs. 5,000 cells in adults); and (d) different tissue dissociation protocols (trypsin only in pups vs. collagenase IV + trypsin + 30% Percoll gradient in adults).",
+      "Misattribution of meiotic/post-meiotic spermatocyte and spermatid contamination in adult FACS sorts as novel intrinsic 'adult SPG up-regulated' biology: the highlighted ciliogenesis/flagellar master regulator Rfx2 and GO terms 'cilium movement', 'sperm flagellum', and 'sperm motility' are canonical pachytene spermatocyte/spermatid markers.",
+      "Internal arithmetic error in reported adult DEG counts in the Results ('2483 DEGs between PND15 and adult stage (914 down-regulated and 1579 up-regulated)', where 914 + 1579 = 2493 != 2483).",
+      "Unbalanced BAM pooling prior to MACS2 peak calling (merging n=6 PND15 replicates of 25,000 cells each vs. n=5 adult replicates of 5,000 cells each without read downsampling) and omission of the explicit batch factor (B1 vs. B2) from the limma-voom and edgeR design matrices."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_003",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "SIDER is restricted to post-marketing package inserts of approved drugs (last updated in 2015), introducing survivorship and risk-benefit bias that limits direct generalizability to preclinical/clinical-stage drug discovery safety attrition.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Potential confounding by genetic support for the drug's primary indication, target pleiotropy (number of associated genetic traits), and sensitivity to the MeSH semantic similarity threshold.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of direction-of-effect concordance analysis (agonist vs. antagonist pharmacology relative to gain/loss-of-function human genetics) and breakdown by drug modality.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe statistical non-independence in all 2x2 Fisher's exact tests and binomial logistic regressions across the 1,187,298 drug-SE pairs: treating shared-target drug pairs (567 drugs mapped to only 275 target genes, e.g., 40 drugs sharing just 7 target genes for tachycardia) and ontologically correlated MeSH SE terms as independent Bernoulli trials, massively deflating p-values (e.g., P = 7.1e-93).",
+      "Methodological contradiction between the Results text (stating drug-SE pairs with Sim(Indication, SE) >= 0.9 were removed from the analysis universe) and the Methods text (stating Sim(Genetic Trait, Indication) < 0.9 was required for a target-indication-SE trio to count as having genetic support, leaving the pair in the non-genetically-supported denominator).",
+      "Case-only conditioning (Y = 1) in the SIDER side-effect frequency and placebo-status logistic regression models (glm(sim_assoc ~ frequency)).",
+      "Unreplaced template placeholder 'X' in Supporting Information S2 Fig caption ('driven by GWAS associations for X genes: CYP19A1..., ESR1..., FGFR2..., INSR..., and SRD5A2...') and unformatted dangling reference numbers '34,35' in Methods Line 108 where the reference list ends at [26]."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_004",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "High rejection rate during baseline population calibration (only 11,847 accepted out of 100,000 initial models) and lack of clarity on how 11,847 baseline models expanded into 60,599 drug intervention models.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Strong collinearity between Delta_RMP and Delta_APA (r = -0.88) potentially distorting SHAP feature importance rankings, prompting a request for PCA dimensionality reduction.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Overly simplistic binary classification framing (Class III vs. non-Class III rather than multi-class Vaughan Williams classification or proarrhythmic risk stratification) and limited methodological novelty.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Catastrophic data leakage in the ML train/test split: performing a random 70/30 row-wise split across 60,599 simulated (virtual_cell, drug) action potentials generated from only 12 deterministic drug pore-block profiles, so that all 12 drugs and identical baseline virtual cells appear in both training and test sets rather than splitting by drug (leave-one-drug-out).",
+      "Direct test-set leakage during hyperparameter tuning: Methods Section 5.6 explicitly states GridSearchCV was used 'to find the combination of hyperparameters that maximizes its AUC on the test data set.'",
+      "Mathematically impossible confusion-matrix metrics across Tables 1, 2, 3, 4, 5, and 7 where Accuracy (ACC) is strictly greater than both Sensitivity (SEN) and Specificity (SPE) (e.g., Table 1 Male LR ACC = 0.6553 while SEN = 0.6063 and SPE = 0.6198; Female LR ACC = 0.6707 while SEN = 0.5790 and SPE = 0.6225), forensically proven by F1 = 2*SEN*SPE/(SEN+SPE) to be a Python coding bug that substituted Precision (PPV) into the Specificity (SPE) column across every table.",
+      "Exact linear dependence among 3 of the 14 features (Delta_APD_tri = Delta_APD90 - Delta_APD50, Delta_CTD_tri = Delta_CTD90 - Delta_CTD50, Delta_CTA = Delta_CTmax - Delta_CTD), reducing the rank of the 14-feature matrix to 11 so that PCs 12-14 have zero variance and yield identical metrics to 4 decimal places in Table 4, which the authors falsely interpreted as PCA feature reduction improving accuracy.",
+      "Copy-pasted irrelevant epidemiological methods in Section 5.8 ('Hazard ratios and corresponding 95% confidence intervals were calculated using conditional logistic regression models') and hallucinated claims in Discussion Section 3.3 asserting that 'in vitro patch-clamp measurements' served as 'the foundational training set for our machine learning models' and that Delta_AREA improved 'classification AUC for drug-induced proarrhythmia by ~2.1%.'"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_005",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Need to directly test whether the embryo itself (prior to E12.5 fetal liver formation) possesses any HAAO enzymatic activity by assaying whole E11.5 embryos and E14.5 liver-excised embryos.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Lack of direct spatial/histological validation (in situ hybridization or immunohistochemistry) of scRNA-seq kynurenine pathway gene expression in the yolk sac endoderm.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Distinction between de novo NAD synthesis starting from L-tryptophan (requiring Tdo2, which is absent in mouse yolk sac endoderm) versus from maternal L-kynurenine.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Vague malformation terminology in Table S4 and need for clearer discussion of differential organ susceptibility to NAD deficiency.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Analyzing the 2x2 factorial experimental design (Diet NW15 vs. NW3.5 x Genotype Haao+/- vs. Haao-/-, nested within maternal litters) at E10.5 using a 4-group one-way ANOVA with Tukey's post-hoc test instead of a two-way linear mixed-effects model accounting for the Diet x Genotype interaction and litter-level random effects.",
+      "Measurement-error and sample-unit mismatch in the E10.5 correlation analyses (Fig 5I-K) caused by pairing pooled yolk sac metabolite measurements (2-3 yolk sacs per pool) against individual embryo NAD+ measurements.",
+      "Bioinformatics reference/annotation mismatch in Methods Line 107 stating that human bulk RNA-seq reads were aligned to human reference genome hg38 but quantified against the mouse GENCODE vM10 annotation."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_006",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Potential confounding by sex-chromosome linkage (X/Y vs. autosomal transcripts), which carries distinct evolutionary rate expectations under Faster-X or Y-degeneration models.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "High redundancy and potential transcript overestimation in the de novo Trinity transcriptome assembly (59,051 unitigs compared to typical diploid cucurbit genome gene counts).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Confusing and poorly supported argument linking codon usage bias (ENC), synonymous substitution rates (dS), and elevated dN/dS in sex-biased genes.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe methodological asymmetry in orthogroup construction: comparing de novo short-read Trinity RNA-seq assemblies (clustered at 95% identity) for the two focal dioecious species (T. pilosa and T. kirilowii) against reference genome CDS annotations for the two monoecious outgroups (T. anguina and L. cylindrica), which systematically inflates terminal-branch dN, dS, and frameshift/indel alignment artifacts on the focal T. pilosa branch.",
+      "Unacknowledged 2.35-fold spike in synonymous substitution rates (dS) in male-biased floral bud genes (median dS = 0.0728 vs. 0.0310 in unbiased genes, Wilcoxon P = 2.2e-16 in Free-Ratio and P = 6.215e-16 in Two-Ratio models, with extreme dS ~ 2.0 outliers), demonstrating that divergence in male-biased orthogroups is heavily driven by paralogous/allelic mis-assembly rather than positive selection on dN alone.",
+      "Misinterpretation of the HyPhy RELAX selection intensity parameter K > 1 (which tests for intensification of overall selection affecting both purifying omega < 1 and positive omega > 1 regimes) as a standalone test of 'positive selection', resulting in near-zero concordance with PAML Branch-Site Model A (only 1 overlapping gene between 98 Branch-Site and 39 RELAX candidates).",
+      "10-fold arithmetic error in the reported percentage of sex-linked male-biased genes in Discussion Line 141 ('3/343 = 0.087%' instead of 0.875%)—which was ironically introduced by Reviewer #3 in peer review and copied verbatim by the authors.",
+      "Uncontrolled tissue-composition confounding between multi-flower racemose male buds (containing mature pre-anthesis pollen/anthers) and solitary female buds, and absence of multiple-testing correction across the 18 pairwise tests in Table S7."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_007",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Potential selection/survival bias from retrospectively enrolling 50% (8/16) of the focal CD4 <200 group (alongside 8 participants with CD4 >=200) one year after primary vaccination.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Ambiguity regarding whether the primary longitudinal outcome model adjusted for booster doses and breakthrough infections, and differences in booster uptake between groups in Table 1.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unexplained missing data in Table 1 where category counts for vaccines received (n=403) and infection history do not sum to N=448, and unredeemed claim in Methods that comorbidity data were systematically collected.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Transposed 95% confidence intervals between the small CD4 <200 group (n=16) and the large CD4 >=200 group (n=432) throughout the Abstract, Results, and S3 Table: the manuscript reports a narrow 95% CI for n=16 (547 BAU/mL, 95% CI 499-595, half-width 48.0) and a 5.2-fold wider 95% CI for n=432 (1399 BAU/mL, 95% CI 1149-1648, half-width 249.5), where the ratio of half-widths (249.5 / 48.0 = 5.20) exactly matches sqrt(432 / 16) = 5.196, proving that the standard errors/CIs of the two groups were swapped during table transcription (and similarly for the slope CIs [-0.320 to -0.311] vs [-0.181 to -0.143]).",
+      "Mathematically impossible point estimate and interval in Table 1 for the CD4 <200 group's time since last COVID-19 vaccination ('65 (188-236)' days, where the median/mean point estimate 65 lies entirely outside the interval 188-236).",
+      "Inaccurate Table 1 footnote attributing column-percentage sums != 100% to 'Missing data was rounded to one decimal place', when Missing data is reported only as raw counts in footnotes and excluded from percentage denominators.",
+      "Unexplained structural specification change between the primary unadjusted mixed-effects model (which includes quadratic time Time^2) and the secondary multivariable mixed-effects model in Table 2 (which omits Time^2 and forces strictly linear time decay across 24 months of multi-wave booster peaks)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #3 provided a 3-sentence generic boilerplate endorsement containing zero substantive or technical critiques: 'Overall, I find this article interesting and valuable. The proposed study addresses an important and novel research question. The writing is easy to understand, and the flow of the text is good; the topic is clinically relevant and has ethics committee approval; there are some spelling and grammar errors that need revision.'"
+  },
+  {
+    "anon_id": "OPEN_ANON_008",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Confounding from cross-sectional study designs (sampling after disease onset or treatment initiation rather than prospectively prior to diagnosis) and variable antibiotic/insulin exposures.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Overinterpretation of statistically non-significant pooled diversity differences (such as in T1DM and asthma) as 'trends'.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of formal statistical validation for the qualitative clustering heatmap comparing disease-associated bacterial taxa against delivery mode and breastfeeding status.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Complete omission of quantitative between-study heterogeneity metrics (I^2, Cochran's Q p-value, and tau^2) across every primary and subgroup meta-analysis in the text, tables, and forest plots, violating PRISMA and Cochrane meta-analysis standards.",
+      "Severe small-k variance estimation instability in the metafor random-effects models, exemplified by the T1DM pre/at-diagnosis subgroup analysis (k=5 studies, Fig S4) producing an implausibly wide 95% CI of [-2.35, 2.10] (spanning 4.45 standard deviations) while individual study SMDs are tightly clustered near zero (0.01, -0.02, -0.11, -0.10, -0.74).",
+      "Direct internal contradiction in age eligibility criteria: Methods states 'We excluded studies where the microbiome was measured at <1 year of age to limit the impact of rapid changes in the infant gut microbiome', whereas the Results, Discussion, and forest plots heavily rely on infant cohorts sampled at <1 year of age (1 month, 3-6 months, and 1-11 months across eczema, food allergy, and asthma studies).",
+      "Unreported mathematical conversion of graphical medians and ranges/IQRs into means and standard deviations (citing Hozo et al. 2005 only in the supplement without sensitivity analysis) and pooling multiple arms from the same study (Chua 2018 a/b/c) without accounting for shared control groups or within-study correlation.",
+      "Non-systematic cherry-picking of only 4 comparator papers ([115-118]) outside the PRISMA search to construct the 'C-section' and 'no breastfeeding' reference profiles in the ComplexHeatmap clustering analysis, combined with unadjusted binary vote-counting (+1/-1/0) across studies of vastly different sample sizes."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Both Reviewer #1 and Reviewer #2 exhibit strong hallmarks of LLM-generated peer review reports. Reviewer #1 consists of 10 generic textbook bullet points—including falsely claiming 'Limiting the included studies to English-only publications may introduce language bias' when the manuscript explicitly stated 'without language restrictions'—and Reviewer #2 consists of 5 paragraphs of generic praise ('This manuscript offers an insightful and timely exploration... It’s clear that a lot of thought and effort went into this work...')."
+  },
+  {
+    "anon_id": "OPEN_ANON_009",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Small sample size (N=24 clones across 12 populations) and single summer sampling timepoint limiting statistical power for environmental association claims.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Potential batch effects from sampling the three common gardens in different years (2017 vs. 2019) confounding cross-site gene expression comparisons.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing DDBJ accession numbers ('Reads are under registration process') and unspecified bioinformatics parameters for hisat2, psiclass, and stringtie.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Apparent contradiction in discussing 24 disease-resistance genes in the grey60 module despite no statistically significant GO term enrichment.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Post-hoc abandonment of multiple-testing correction: after Benjamini-Hochberg FDR correction across the 38 WGCNA modules yielded zero significant associations at two of the three common gardens (MYG and IBR), the authors reverted to an unadjusted nominal p <= 0.001 threshold across ~2,736 module-trait correlation tests.",
+      "Severe internal inconsistencies in Table 2: (a) module MEgreenyellow is reported as containing 152 transcripts in the Genetic group section of Table 2 (matching Results Line 224) but 395 transcripts in the PC1_SNP section of the exact same table; and (b) reported Benjamini-Hochberg FDR values in Table 2 violate mathematical monotonicity with respect to raw p-values within the same test family (e.g., at KMT for Genetic group, p = 3.21e-4 has FDR = 0.0122 whereas a larger p = 5.42e-4 has a smaller FDR = 0.0103; in PC1_SNP, p = 2.04e-4 has FDR = 0.0026 whereas p = 9.07e-4 has FDR = 0.0005).",
+      "Incompatible correlation coefficient and p-value reported in Results Line 296 for hub transcript CJHT.16203.1 with climatic variable CTD ('r = 0.58, p = 0.0819'), where r = 0.58 at N = 24 yields p = 0.0030, whereas p = 0.0819 is not statistically significant even at nominal alpha = 0.05.",
+      "Severe false-positive inflation in the revision-added pcadapt outlier scan on N=24 individuals (flagging 1,277 out of 11,175 LD-pruned SNPs [11.4%] as selection outliers) followed by 1,277 x 21 = 26,817 unadjusted Kruskal-Wallis tests at nominal p < 0.01.",
+      "Complete confounding of the yaku-sugi genetic lineage with a single geographic source population (YKS, n=4 clones from one island stand), providing df = 0 at the population level to separate lineage genetics from local climate."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_010",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Drastic difference in taxonomic composition between PacBio full-length 16S and Illumina V3-V4 16S amplicon sequencing (~1% vs. ~30% Actinobacteria in watered control roots) requiring primer-bias validation.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Overstatement in claiming that the lack of correlation between single-strain gnotobiotic drought enrichment (DE) and seedling biomass challenges the ecological 'cry for help' framework.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of direct correlation analysis linking untargeted LC-MS/MS exometabolomic molecules to DE or plant growth promotion scores across the strain panel.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Need for expanded description of the genomic neighborhoods surrounding the 8 fabG and proP gene clusters and discussion of plant physiological drought responses beyond biomass.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Scale-dependent ad hoc PGLS filtering across 7,737 ortholog gene clusters using raw unstandardized regression slopes and standard errors (slope > 0.25 and SE < 0.25) instead of scale-invariant t-statistics (t = slope / SE) and genome-wide Benjamini-Hochberg FDR q-values, which biases discovery toward high-copy-number gene families with large variance (such as fabG, 6-21 copies) and omits raw/adjusted p-values for the 8 candidate gene families.",
+      "Internal discrepancy in the ortholog pre-filtering variance threshold between the Results text (Line 231, stating variance < 0.2 across the 24 genomes was excluded) and the Methods text (Line 508, stating variance < 0.25 was excluded).",
+      "Pseudoreplication in the gnotobiotic sorghum seedling mono-association growth assays: treating n=15 individual seedlings pooled across 3 sealed microboxes (5 seedlings sharing root space and inoculum per box) as independent biological replicates in one-way ANOVAs and Dunnett's tests rather than treating the microbox (n=3) as the experimental unit or fitting a mixed model with (1 | box).",
+      "Arbitrary constant zero-imputation (0.0001) for undetected negative-control qPCR values and multiplication of all 5 biological replicates within a treatment group by a single group-averaged qPCR copy number prior to running two-sided t-tests for the strain DE scores."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

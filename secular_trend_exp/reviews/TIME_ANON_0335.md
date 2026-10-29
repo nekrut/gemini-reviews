@@ -1,0 +1,29 @@
+<Blinded Review: TIME_ANON_0335>
+**Composite Score:** 7.2 / 10.0 (Rigor: 2.4/3.5 | Claims: 1.9/2.5 | Biology: 1.4/2.0 | Reproducibility: 1.5/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Translational/Preclinical/Biomarker
+
+---
+
+### 1. Executive Summary
+This plant genetics and breeding study maps and fine-maps a major dominant QTL conferring resistance to powdery mildew (*Podosphaera xanthii* race 1W) on chromosome 2 of watermelon (*Citrullus* spp.). Using whole-genome resequencing ($30\times$ depth, 407,963 high-quality SNPs, pruned to 8,687 non-redundant segregation bins) across $N = 183$ $\text{F}_{11}$ recombinant inbred lines (RILs) derived from `USVL531-MDR` (*C. mucosospermus*, resistant) $\times$ `USVL677-PMS` (*C. lanatus*, susceptible), the authors identify a single major QTL on chromosome 2 (`30,050,069–30,166,247 bp`, 116.2 kb) with $\text{LOD} = 59$ explaining $R^2 = 82\%$ of phenotypic variance. The 116.2 kb interval contains five lipoxygenase (*LOX*) genes and one 50S ribosomal protein L27-like gene. By designing six KASP markers (`CMPMR-1` through `CMPMR-6`) across these six genes and identifying recombinant breakpoints between `CMPMR-1/2` ($R^2 = 79\%$) and `CMPMR-3..6` ($R^2 = 82\%$, complete co-segregation), the authors narrow the candidate region to a 54,772 bp interval (`30,111,475–30,166,247 bp`, containing three *LOX* genes and the ribosomal protein L27-like gene). The KASP markers are validated in two independent $\text{F}_2$ populations (`USVL531-MDR` $\times$ `Sugar Baby`, $n=61$, and `PI 560003` $\times$ `USVL677-PMS`, $n=96$), confirming 3:1 dominant inheritance ($\chi^2 p = 0.56$ and $0.81$) and $R^2 = 68\text{--}70\%$. Comparative protein sequence and AlphaFold2 modeling identify a single conservative $\text{Val} \leftrightarrow \text{Met}$ substitution in a surface loop of lipoxygenase `ClCG02G015730`.
+
+The genetic mapping in a large resequenced $\text{F}_{11}$ RIL population and independent $\text{F}_2$ marker validation are robust and practically valuable for marker-assisted selection (MAS). Minor weaknesses include typographical errors in reported ANOVA degrees of freedom, inconsistent KASP marker naming, and speculative structural claims around a conservative $\text{Val} \leftrightarrow \text{Met}$ substitution without functional transgenic/CRISPR validation.
+
+### 2. Methodological & Statistical Audit
+- **ANOVA Degrees of Freedom Reporting Error:** In the Results ("Phenotypic analysis of the RILs for powdery mildew response", line 95), the authors report the analysis of variance across the $N = 183$ RILs (evaluated in a randomized complete block design with 3 blocks $\times$ 5 plants/line) as showing a highly significant genotype effect with "$\text{DF} = 183, F = 24.47, p < 0.0001$" and replication effect with "$\text{DF} = 2, F = 10.64$." For $N = 183$ RIL genotypes, the between-genotype degrees of freedom is $N - 1 = 182$ (or $184$ if the two parents were included in the ANOVA model, which should be stated explicitly).
+- **Inconsistent KASP Marker Nomenclature Across Text, Tables, and Figures:** The marker targeting `ClCG02G015730` is named `CMPMR-5` in Table 1 and the Discussion, but is referred to as `CMPMR-730` in the Results prose (line 111) and `ClPMR-5` in the caption of Figure 4. Consistent nomenclature should be enforced throughout.
+- **Unverified Intergenic / Regulatory Variants in the 54.8 kb Interval:** When comparing the candidate genes between `USVL531-MDR` and `USVL677-PMS`, the authors focus exclusively on coding amino acid differences (finding only a single conservative $\text{Val} \leftrightarrow \text{Met}$ change in `ClCG02G015730`) and re-analyzed leaf transcriptome data from a previous study (which showed *LOX* upregulation only in the susceptible parent). However, promoter/enhancer polymorphisms, structural variants, or presence/absence variations within the 54.8 kb interval between the interspecific *C. mucosospermus* donor and *C. lanatus* recipient (`97103` v2 reference) were not systematically cataloged from the $30\times$ WGS reads.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **[Well Supported]** Resistance to *P. xanthii* race 1W in `USVL531-MDR` and `PI 560003` is governed by a single major dominant locus on chromosome 2 explaining ~82% of variance in RILs and 68–70% in $\text{F}_2$ populations.
+- **[Well Supported]** KASP markers `CMPMR-3` through `CMPMR-6` tightly co-segregate with the resistance locus within a 54,772 bp interval (`30,111,475–30,166,247 bp`) and provide reliable diagnostic markers for watermelon breeding.
+- **[Fragile]** The hypothesis that the conservative $\text{Val} \leftrightarrow \text{Met}$ substitution in the surface loop of lipoxygenase `ClCG02G015730` is the causal functional polymorphism is speculative; AlphaFold2 modeling shows no change in overall $\alpha$-helical fold, and neither enzymatic activity assays nor genetic complementation/knockout experiments were performed.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** Complete KASP primer sequences (FAM, HEX, and common reverse primers), exact physical coordinates on the `97103` v2 reference genome, and flanking genomic sequences are provided in Table 1 and Supplementary Table 1. Software versions (`FastQC v0.12.1`, `Trimmomatic v0.39`, `BWA-MEM v0.7.17`, `SAMtools v1.18`, `BCFtools v1.18`, `R/qtl v1.70`, `R/qtl2 v0.24`, `ColabFold v1.5.5`) are fully documented.
+- **Deficiencies:** No NCBI SRA / BioProject accession number is provided for the $30\times$ whole-genome resequencing reads of the 183 RILs and parental lines.
+</Blinded Review: TIME_ANON_0335>

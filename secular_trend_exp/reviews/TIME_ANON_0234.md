@@ -1,0 +1,29 @@
+</Agent System Instructions>
+<Blinded Review: TIME_ANON_0234>
+**Composite Score:** 8.2 / 10.0 (Rigor: 2.9/3.5 | Claims: 2.1/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.4/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This in vivo virology and evolutionary dynamics study uses a human CD34$^+$ HSC-transplanted NOG humanized mouse model ($n = 82$ mice across 19 litters) infected with wild-type CCR5-tropic HIV-1 (strain NLCSFV3) or separation-of-function Vif mutants—4A (`14DRMR17` $\to$ `AAAA`, sensitive to APOBEC3D/F), 5A (`40YRHHY44` $\to$ `AAAAA`, sensitive to APOBEC3G), and double-mutant 4A5A—to dissect the relative roles of endogenous APOBEC3G vs. APOBEC3D/F in viral restriction and genetic diversification in vivo. Combining longitudinal plasma viral load and CD4$^+$ T-cell kinetics, ODE mathematical modeling of acute viral replication rates, splenic RT-qPCR, 3D-PCR, full-length proviral cloning, plasma single-genome sequencing (SGS) of *env*, `geno2pheno` coreceptor prediction, and functional R5/X4-MaRBLE entry assays, the authors demonstrate that endogenous APOBEC3G imposes lethal restriction via $\text{T\underline{G}GG} \to \text{T\underline{A}GG}$ (Trp $\to$ Stop) hypermutation, whereas endogenous APOBEC3D/F (preferring $\text{\underline{G}A}/\text{\underline{G}AA} \to \text{\underline{A}A}/\text{\underline{A}AA}$) both restrict viral replication (negatively correlating with splenic *APOBEC3F* expression, $r = -0.571, p = 0.009$) and drive sub-lethal viral diversification, including the emergence of functional CCR5/CXCR4 dual-tropic Env V3 E25K mutants.
+
+### 2. Methodological & Statistical Audit
+- **In Vivo Separation-of-Function Design & Reversion Controls:** The experimental design cleanly separates endogenous A3D/F from A3G activity in vivo across multiple inoculum doses (5, 50, and 500 ng p24; Figures 2 and S2). Crucially, the authors sequenced 593 splenic *vif* clones at 6 wpi and functionally tested the most frequent nonsynonymous Vif variants (e.g., I128L, K34E, E88K, E134K) by Western blot and TZM-bl infectivity assays (Figure 2E,F and S3), ruling out phenotypic reversion of the 4A or 5A motifs as the cause of breakthrough viremia in 4A-infected mice.
+- **Pseudoreplication in Contingency Table Tests of SGS Amplicons and Mutation Counts:** In Figures 4D–F, 5B, and 6B, $\chi^2$ tests for independence are applied to pooled counts of mutations or SGS amplicons across mice (for example, in Figure 5, the 91 *env* SGS amplicons for 4A come from 3 mice, 73 WT amplicons from 2 mice, 68 5A amplicons from 2 mice, and 33 4A5A amplicons from 1 mouse; in Figure 6B, 5 of the 6 E25K amplicons come from 4A mice #33, #36, #59). Treating multiple amplicons or multiple G-to-A mutations on the same hypermutated provirus/mouse as statistically independent observations in a $\chi^2$ test ignores intra-mouse clonal relatedness and overstates the effective sample size.
+- **Omitted Equations in Text Rendering (Methods Lines 51–56):** In the sections *"Calculation of AUC of VL"* and *"Estimation of virus replication rate"*, the display equations corresponding to the AUC trapezoidal formula and ODE equations `(1)`, `(2)`, `(3)`, `(4)`, `(5)`, `(6)`, and `(7)` were lost during manuscript formatting/conversion, leaving only the inline equation numbers and surrounding prose definitions ($V(t) = p^* I(t)$, $r^* = p^* \beta$, $\delta = 1\text{ day}^{-1}$, $V(0) = 800\text{ copies/ml}$).
+- **Multiple Testing in Longitudinal Timecourses:** Pairwise comparisons across timepoints and groups in Figures 1C, 2A–D, and 3C use unadjusted Student's $t$-tests rather than one-way ANOVA or repeated-measures mixed models with post-hoc correction.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** Endogenous APOBEC3G and APOBEC3D/F both act as potent restriction factors against HIV-1 in vivo, with APOBEC3G exerting stronger restriction than APOBEC3D/F due to higher expression (~3.9-fold over A3F, ~24.7-fold over A3D) and preference for $\text{T\underline{G}GG} \to \text{T\underline{A}GG}$ stop-codon mutagenesis. `[Well Supported]` by longitudinal viremia, CD4 depletion, dose-escalation challenges, and proviral vs. plasma RNA stop-codon comparisons.
+- **Claim 2:** Growth kinetics of 4A HIV-1 in vivo negatively correlate with endogenous splenic *APOBEC3F* expression ($r = -0.571, p = 0.009$, $n = 20$ mice). `[Well Supported]` by the individual mouse correlation analysis in Figure 3D.
+- **Claim 3:** Sub-lethal $\text{\underline{G}AA} \to \text{\underline{A}AA}$ mutagenesis by endogenous APOBEC3D/F promotes HIV-1 diversification in plasma RNA and facilitates coreceptor switching from CCR5 to CCR5/CXCR4 dual tropism via the Env V3 E25K substitution. `[Well Supported]` by plasma SGS phylogenies, `geno2pheno` screening, and direct reverse-genetics reconstruction and functional testing of NLCSFV3-E25K in R5- and X4-MaRBLE reporter cells (Figure 6C).
+
+### 4. Reproducibility & Data Completeness
+- All PCR, RT-PCR, 3D-PCR, and Sanger sequencing primer sequences (with HXB2 coordinates), antibody clones, cell lines, and mouse cohort metadata (`Table S2`) are thoroughly documented, and raw SGS mutation matrices are provided in `Figure S7`.
+- However, the mathematical equations (1)–(7) are missing from the formatted text, and the newly generated HIV-1 proviral and plasma SGS *env* nucleotide sequences do not have public GenBank accession numbers (the Accession Numbers section lists only host RefSeq IDs `NM_152426`, `NM_145298`, `NM_021822`, `NM_002176`, and `NM_002046`).
+</Blinded Review: TIME_ANON_0234>

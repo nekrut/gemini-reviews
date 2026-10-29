@@ -1,0 +1,31 @@
+<Blinded Review: TIME_ANON_0333>
+**Composite Score:** 7.1 / 10.0 (Rigor: 2.3/3.5 | Claims: 1.8/2.5 | Biology: 1.5/2.0 | Reproducibility: 1.5/2.0)
+**Bias Category:** Algorithmic/Model
+**Verdict:** Minor Revision
+**Study Modality:** Dry-Lab Secondary Cohort/Database
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This comparative evolutionary genomics study investigates the origin, coding sequence divergence, intramolecular coevolution, and non-coding regulatory conservation of the tandemly duplicated *Frequenin* genes (*frq1* and *frq2*, encoding Neuronal Calcium Sensor-1 [NCS-1] proteins that differ at 10 of 187 amino acid positions) across 12 *Drosophila* species and broader bilaterian/vertebrate NCS subfamilies. Remarkably, the authors find zero nonsynonymous substitutions within *frq1* orthologs ($d_N = 0, d_S = 0.58$) and zero nonsynonymous substitutions within *frq2* orthologs ($d_N = 0, d_S = 1.07$) across the entire *Drosophila* radiation (~62 My), indicating that all 10 amino acid differences fixed after the tandem duplication event (estimated at ~104 Mya via a BEAST relaxed clock on synonymous sites) but prior to the diversification of the *Drosophila* genus. Using the single-copy *frq* gene of the medfly *Ceratitis capitata* (`EU128529`, cloned and sequenced by the authors) as an outgroup, 9 of the 10 fixed replacements map to the ancestral proto-*frq1* branch. Applying Gu's Diverge 2.0 (Type I and Type II functional divergence) and CAPS/CTMP coevolution models across vertebrate NCS subfamilies, the authors show that the 10 Frq1/Frq2 divergent sites overlap structural sites of NCS subfamily functional divergence outside the EF-hand $\text{Ca}^{2+}$-binding loops.
+
+The empirical observation of complete amino acid stasis across 12 *Drosophila* species following an ancient burst of 10 replacements is striking, and the integration of structural mapping, coevolution, and non-coding conservation is thoughtful. However, the statistical inference of "positive selection" on the proto-*frq1* branch and the BEAST divergence time estimation on saturated synonymous sites have notable methodological limitations.
+
+### 2. Methodological & Statistical Audit
+- **Over-Interpretation of PAML Branch Models as Evidence of Positive Selection:** Using PAML `codeml` free-ratio and 2-/3-ratio branch models (`models 1, 2, 3`), the authors show that the $\omega$ ($d_N/d_S$) ratio on the proto-*frq1* branch is significantly elevated relative to the terminal *Drosophila* branches where $d_N = 0$ ($\text{LRT } p = 1.92 \times 10^{-7}$ and $p = 0.0002$). However, as the authors themselves acknowledge in the Results (line 108), $\omega$ on the proto-*frq1* branch is still **less than 1** (and even below the *Drosophila* genome-wide average $\omega$), and the branch-site test for episodic positive selection ($\omega > 1$) was only "marginally significant (results not shown)." Because terminal branches have $\omega = 0$, *any* branch with $>0$ nonsynonymous changes will reject a single-ratio model; this demonstrates relaxed purifying selection or a transient shift in selective regime after duplication, not statistically proven positive Darwinian selection ($\omega > 1$).
+- **Synonymous Site Saturation in Deep Molecular Clock Dating:** To date the *frq1*–*frq2* duplication, the authors run BEAST v1.4 on third-codon-position and fourfold-degenerate sites calibrated with the 62 Mya Sophophora–Drosophila split, obtaining a mean duplication age of 104 Mya (95% HPD: 78–135 Mya). Yet earlier in the Results (line 53), they report that pairwise $d_S$ between *frq1* and *frq2* reaches $1.78$, and $d_S$ to *A. gambiae* reaches $2.98$. At $d_S \approx 1.8\text{--}3.0$, synonymous sites are heavily saturated and subject to strong *Drosophila* codon usage bias, making nucleotide-level molecular clock extrapolations beyond 62 Mya highly sensitive to model misspecification.
+- **Multiple-Testing and Unreported Thresholds in Coevolution / Non-Coding Scans:** The CAPS coevolution test ($R = 0.31, p < 0.05$) and the TRANSFAC/JASPAR transcription factor binding site predictions across conserved PhastCons/Chai non-coding regions do not report false discovery rate control for scanning dozens of insect TF matrices across ~15 kb of intronic and intergenic DNA.
+- **Minor Table Typo:** In Table 1, row `GCAP2 (D)` under `Type II: Cluster-specific patch` lists position `161` twice (`161 , 161`).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **[Well Supported]** The *frq1*/*frq2* tandem duplication predates the divergence of the 12 *Drosophila* species; since that divergence, both paralogs have been maintained under extreme purifying selection ($d_N = 0$ across all 12 species), refuting simple redundancy.
+- **[Well Supported]** Asymmetric divergence occurred immediately post-duplication, with 9 of 10 amino acid replacements accumulating on the proto-*frq1* lineage while *frq2* retained the ancestral insect sequence shared with *Ceratitis capitata* and *Anopheles gambiae*.
+- **[Moderately Supported]** The 10 amino acid replacements between Frq1 and Frq2 map to solvent-exposed C-terminal and inter-EF-hand positions that repeatedly undergo Type I/Type II functional divergence across vertebrate NCS subfamilies, suggesting modulation of target-protein specificity rather than $\text{Ca}^{2+}$ binding affinity.
+- **[Overstated]** Claiming that the 9 replacements on the proto-*frq1* branch were driven by "positive selection" rather than post-duplication relaxation of constraint followed by subfunctionalization/neofunctionalization exceeds the statistical power of the PAML branch tests ($\omega < 1$, saturated $d_S$).
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** The newly sequenced *Ceratitis capitata* *frq* cDNA is deposited in GenBank (`EU128529`), RT-PCR primers are provided in Methods, and all multiple sequence alignments and sequence identifiers are included in the Supplementary/Additional files.
+- **Deficiencies:** Exact likelihood values ($\ln L$), parameter estimates ($\omega, d_N, d_S$ per branch), and test statistics for the PAML branch and branch-site models are stated only in prose rather than tabulated.
+</Blinded Review: TIME_ANON_0333>

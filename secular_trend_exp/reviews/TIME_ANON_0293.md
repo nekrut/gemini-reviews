@@ -1,0 +1,30 @@
+<Blinded Review: TIME_ANON_0293>
+**Composite Score:** 7.3 / 10.0 (Rigor: 2.5/3.5 | Claims: 2.0/2.5 | Biology: 1.4/2.0 | Reproducibility: 1.4/2.0)
+**Bias Category:** Algorithmic/Model
+**Verdict:** Minor Revision
+**Study Modality:** Dry-Lab Theory/Methods/Simulation
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This comparative genomics and algorithmic study investigates structural rearrangement evolution across eight complete mitochondrial genomes (535–740 kb) of maize (*Zea mays* ssp. *mays* cytotypes NA, NB, CMS-C, CMS-S, CMS-T) and three teosintes (*Z. mays* ssp. *parviglumis*, *Z. luxurians*, and *Z. perennis*). Because plant mitogenomes harbor extensive large duplications (3.4%–31.5% of total genome length) that violate the single-copy assumption of classical rearrangement algorithms (such as GRIMM and MGR), the authors propose a "Tandem Duplication with Partial Loss" (TDPL) evolutionary model and a four-step manual/graph-assisted procedure to collapse tandem duplicates, disambiguate distant paralogs via a neighborhood adjacency graph, and reconstruct both a BIONJ inversion-distance tree and an MGR parsimony scenario across 72 synteny anchors (187 common markers). They demonstrate that the rearrangement-based phylogeny is fully congruent with the 421 kb nucleotide backbone phylogeny, whereas simply deleting all duplicated synteny anchors (reducing the dataset from 72 to 28 blocks) destroys topological congruence.
+
+### 2. Methodological & Statistical Audit
+- **Coherent Algorithmic Treatment of Duplicated Synteny Blocks:** Rather than brute-forcing the >16 million exemplar combinations, the authors formalize a neighborhood graph clustering strategy (Additional file 4) to identify the boundaries of tandem duplications, collapse adjacent TDPLs into their pre-duplication ancestral block order, and distinguish non-adjacent paralogs (`20a/b`, `21a/b`, `22a/b`, `27a/b`, `24b`, `26b`, `67b`, `35b`) before running GRIMM and MGR. The jackknife sensitivity analysis (retaining 10% to 90% of synteny anchors over 1,000 replicates) demonstrates strong topological stability (79.6%–100% node support at 90% retention).
+- **Subjectivity / Manual Curation and Circularity Risks in Paralog Resolution:** The pipeline relies on manual intervention during steps (i) and (ii): 5 synteny anchors (`2`, `60`, `61`, `62`, `68`) had to be deleted entirely because paralogs and orthologs could not be distinguished from neighborhood context, and singleton non-tandem duplicates (`24`, `26`, `67`, `35`) were artificially inserted in tandem into the remaining seven genomes so that GRIMM/MGR could run on equal gene content. While adding a dummy block adjacent to its homolog preserves pairwise breakpoint/inversion distances for the unsplit pair, the manual choice of which copy (`a` vs. `b`) is ancestral vs. derived when duplicates are separated by subsequent inversions can subtly bias parsimony scenarios toward expected clade groupings.
+- **Master-Circle Assumption in Multipartite Plant Mitogenomes:** As the authors acknowledge in the Methods (line 169), all analyses treat the GenBank master circle conformation as the physical genome structure, whereas in vivo plant mitochondrial DNA exists as a dynamic equilibrium of subgenomic circles, linear molecules, and branched intermediates mediated by recombination across large repeats.
+- **Minor Table/Metadata Discrepancies:**
+  - In Table 1 (line 38), the genome length of `NA` is listed as `701.046 kbp`, whereas in Table 2 (line 60), `NA` mitogenome length is listed as `707.046 kbp` (a 6.0 kb discrepancy).
+  - In the Methods (line 167), both `NA` and `CMS-T` are listed with the identical GenBank accession `[GenBank: DQ490953]` (for `CMS-T`, the correct GenBank accession from Allen et al. is `DQ490952`).
+  - On line 23 (second chunk), the formula for "Substitution rate (for 10 kb) between two genomes was calculated as follows :" is missing from the text (blank line where the equation was dropped).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1: Incorporating duplicated synteny anchors via the TDPL model yields a structural rearrangement phylogeny congruent with nucleotide sequence phylogeny in *Zea* mitogenomes.** `[Well Supported]` — Supported by exact topological agreement between the 421 kb Mauve backbone ML/BIONJ tree and the 72-anchor GRIMM/BIONJ and MGR trees, together with the negative control showing that excluding duplicated anchors (28 blocks) fails to recover the sequence tree.
+- **Claim 2: Plant mitochondrial genomes evolve via a Tandem Duplication with Partial Loss (TDPL) mechanism analogous to animal TDRL, except that low nucleotide substitution rates allow duplicate copies to persist.** `[Moderately Supported]` — The structural signatures in `NA`, `CMS-C`, and `parviglumis` are consistent with tandem duplication followed by partial deletion and inversion, and MGR breakpoints align with sequence-level recombination breakpoints near *trnN*/*orf99*, *cob*, *nad2*, *rbcL*, and *cox1*. However, in plants with active homologous recombination across repeats, ectopic integration of subgenomic minicircles cannot be definitively distinguished from replication slippage (animal-type TDRL) by static master-circle parsimony alone.
+- **Claim 3: Need for automated tools to detect TDPL signatures across wider plant taxa.** `[Well Supported]` — The authors candidly recognize the limitations of their manual paralog-collapsing procedure and appropriately frame this work as a proof-of-concept requiring algorithmic automation.
+
+### 4. Reproducibility & Data Completeness
+- **Data & Parameter Completeness:** All eight GenBank accessions are cited (modulo the typo duplicating `DQ490953` for `CMS-T`), Mauve and YASS parameters (`match weight seed = 9`, `E-value < 1e-170` / `1e-26`, alignment length difference `< 8%`) are explicitly specified, and the 115 backbone fragments and 69/72 synteny anchor definitions are provided in Additional files 1–4.
+</Blinded Review: TIME_ANON_0293>

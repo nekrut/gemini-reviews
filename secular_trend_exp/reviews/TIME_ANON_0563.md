@@ -1,0 +1,37 @@
+<Blinded Review: TIME_ANON_0563>
+OVERALL_SCORE: 8.3/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2000s
+**Composite Score:** 8.3 / 10.0 (Rigor: 2.7/3.5 | Claims: 2.0/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.8/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary / SUMMARY
+This comparative immunogenomics and molecular evolution study characterizes the Novel Immune-Type Receptor (*NITR*) gene cluster in the European sea bass (*Dicentrarchus labrax*, order Perciformes). By shotgun sequencing and assembling two overlapping BAC clones (`bassbac-18k1` and `bassbac-79e10`, ~9–10$\times$ depth) into a `271,448-bp` contiguous scaffold (`GenBank GQ385066`) and validating all predicted coding sequences by head-kidney RT-PCR and 5'/3' RACE (`GenBank GQ385039–GQ385065`), the authors identify 27 functional *NITR* genes and 3 pseudogenes (`Dl7, Dl18, Dl27`) organized in a tandem array and classified into 18 V-domain families ($\ge 70\%$ amino acid identity) across three structural groups: Group I (15 genes with V and I domains fused in a single exon), Group II (3 genes with V and I domains in separate exons), and Group III (9 V-only genes, 4 of which acquired novel connecting-peptide exons between the V and transmembrane domains). Combining maximum-likelihood phylogenetics (`PhyML` and `TREEFINDER` across 8 teleost species), comparative synteny mapping (`RBM4, FXR2, TRAF2-binding protein`), homology modeling (`Modeller 9v4` based on channel catfish `NITR10`/`NITR11` crystal structures), multi-method codon selection analysis (`PAML` M1/M2 & M7/M8/M8a, HyPhy `FEL` & `REL`, and `Selecton` `MEC`), and tissue RT-PCR profiling across 8 organs in 4 juvenile fish, the authors show that teleost *NITR* clusters share conserved synteny (including a newly identified 24-gene cluster on stickleback linkage group VII) and evolve via a "birth-and-death" process of lineage-specific tandem duplication followed by strong diversifying selection on the complementarity-determining regions (`CDR1, CDR2, CDR3`) of the V domain.
+
+### 2. STRENGTHS
+- **Complete Genomic Contig Assembly Paired with Wet-Lab cDNA Validation:** Unlike purely *in silico* draft genome annotations of tandem immune receptor arrays (which are notoriously prone to assembly collapse and splice-prediction errors), this study combines ~9–10$\times$ capillary shotgun sequencing of two overlapping BAC clones with experimental RT-PCR sequencing of the complete coding regions of all 27 functional *NITR* genes and full-length RACE for 5 transcripts.
+- **Multi-Method Positive Selection Inference Anchored to 3D Structure:** To minimize method-specific false positives in small paralog alignments, the authors apply four distinct codon models (`PAML` M8 BEB, `FEL`, `REL`, and physicochemical `MEC`) with a 50%/75% majority consensus rule, demonstrating that 7 of the 8 high-confidence positively selected sites in Group III *NITRs* fall directly within the predicted antigen/ligand-recognition loops (`CDR1`, `CDR2`, `CDR3`) and that the 8th site (`pos 79`, supported by all 4 methods) borders a 4-amino-acid structural insertion adjacent to `CDR2` in `Dl28` (Figure 3 and Table 1).
+- **Evolutionary Hypothesis Testing & Synteny Discovery:** Using `TREEFINDER` topology tests, the authors statistically reject a single monophyletic origin for all intronless V+I *NITR* genes, demonstrating that loss of the V–I intervening intron occurred independently at least three times in acanthopterygian fishes. They also discover an unannotated ~250-kb, 24-gene *NITR* cluster on stickleback chromosome VII sharing conserved `RBM4–FXR2–TRAF2BP` synteny with sea bass, medaka chr 18, and zebrafish chr 7 (Figure 6).
+
+### 3. WEAKNESSES & METHODOLOGICAL AUDIT (Methodological & Statistical Audit)
+- **Unassessed Impact of Inter-Paralog Gene Conversion on Codon $d_N/d_S$ Tests:**
+  - Tandemly arrayed multi-gene immune families (`KIRs`, `MHC`, `NITRs`) frequently undergo ectopic recombination / gene conversion in addition to unequal crossing-over. Because phylogenetic maximum-likelihood $d_N/d_S$ methods (`PAML`, `FEL`, `REL`, `MEC`) assume a single tree topology across the entire V-domain alignment without intragenic recombination, undetected gene conversion tracts between paralogs can inflate likelihood ratio tests and site-specific $\omega$ estimates. Pre-screening the paralog alignments with a recombination detection tool (such as `GARD` on Datamonkey) would strengthen the selection inference, although the striking spatial concentration of inferred sites within `CDR1–3` provides strong orthogonal structural support.
+- **Terminology Error ("Real-Time PCR" vs. "End-Point RT-PCR") and Pseudoreplicated Binary Expression Correlations:**
+  - In Materials and Methods ("Expression of NITR mRNAs in *D. labrax*", Line 70), the authors write that expression was examined *"by **real-time polymerase chain reaction (RT-PCR)** for four individual fishes... Amplicons were then resolved by gel electrophoresis in 1.8% agarose"*. This is conventional **reverse-transcription end-point PCR** (as correctly stated in Results Line 161: *"using end-point RT-PCR"*), not quantitative real-time PCR (`qPCR`).
+  - Furthermore, in Line 70 and Line 163, presence/absence (`1/0`) gel calls across $4\text{ fish} \times 8\text{ tissues} = 32$ data points were analyzed by pairwise Spearman rank correlation across all 27 *NITR* genes (`Table S2`) without accounting for the non-independence of the 8 tissues within each fish or applying multiple-testing correction across the $\binom{24}{2} = 276$ gene-pair comparisons.
+
+### 4. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** *The European sea bass NITR cluster spans ~271 kb, shares conserved synteny (`RBM4, FXR2, TRAF2BP`) with zebrafish chr 7, medaka chr 18, and stickleback group VII, and encodes 27 functional inhibitory NITR genes and 3 pseudogenes across 18 V-domain families.* — `[Well Supported]` by BAC sequencing, cDNA validation, and comparative genomic mapping (Figures 1, 4, 6).
+- **Claim 2:** *Teleost NITRs evolve under a "birth-and-death" model featuring lineage-specific tandem duplications, independent intron loss/exon acquisition, and diversifying positive selection acting primarily on the V-domain CDR loops.* — `[Well Supported]` by phylogenetic reconstructions, topology tests, 3D homology modeling, and consensus codon selection analyses (Figures 3, 5; Table 1).
+- **Claim 3:** *Pairwise binary tissue expression correlations reveal diverged transcriptional regulation between recently duplicated paralogs (`Dl12` vs `Dl13`).* — `[Moderately Supported]`; qualitative tissue RT-PCR differences are informative, though non-quantitative 45-cycle end-point PCR in $n=4$ fish provides limited statistical power.
+
+### 5. Reproducibility & Data Completeness
+- **Accession Numbers:** The complete `271,448-bp` sea bass BAC scaffold (`GQ385066`) and all 27 validated sea bass *NITR* sequences (`GQ385039–GQ385065`) are publicly deposited in GenBank.
+- **Methodological Detail:** Evolutionary models (`JTT+I+G+F`, `GTR+I+G`), `PAML`/`Datamonkey`/`Selecton` configurations, and `Modeller 9v4` templates (`PDB` *I. punctatus* `NITR10`/`NITR11`) are thoroughly specified.
+</Blinded Review: TIME_ANON_0563>

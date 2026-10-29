@@ -1,0 +1,357 @@
+[
+  {
+    "anon_id": "OPEN_ANON_031",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Time-scaled phylogeny relies on a fixed external substitution rate from a prior study rather than estimating the evolutionary rate from the dataset itself.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Clarify whether root-to-tip temporal signal regression was performed prior to time-scaling and report 95% HPD intervals for node age estimates.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Claims regarding domestic Polish vs. cross-border Ukrainian HIV acquisition should be hedged given incomplete sampling of the epidemic inside Ukraine.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Recombination and subtype classification relied solely on the partial pol fragment, which cannot detect recombination breakpoints outside pol.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "BEAST MCMC chains were run for only 1,000,000 iterations; burn-in fraction and ESS convergence (>200) required justification.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Continuous phylogeographic diffusion (Relaxed Random Walk) assigned uniform random spatial coordinates anywhere within large first-level administrative regions (voivodeships), injecting synthetic spatial dispersion noise into inferred viral migration rates.",
+      "Internal numerical and denominator inconsistencies across the published text: male count n=1,437 (Abstract) vs. n=1,438 (Results); Ukrainian singleton/dyad percentage 69.5% (Abstract) vs. 69.4% (Results) due to conflating total S&D introductions (682) with Ukrainian sequences in S&D (670); and a unit-of-analysis error referring to 92 dyads as 'sequences' (498 singletons + 92 dyads = 682 sequences, 670 introductions).",
+      "Scope mismatch regarding cabotegravir/rilpivirine (CAB/RPV) resistance: the manuscript motivates and concludes with warnings about A6 integrase polymorphism L74I and CAB/RPV failure, but the sequenced fragment (HXB2 2253-3554) covers only protease and partial reverse transcriptase, completely excluding integrase and stripping 43 resistance-associated codons prior to alignment."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_032",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Inferred metabolite associations with CKD may reflect reverse causation or impaired renal clearance/metabolism of amino acids by the diseased kidney rather than true forward causation.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Multiple completely fabricated/irrelevant literature citations in the initial submission (e.g., a 1972 transaminase paper cited as 2023, C. elegans fat mutants, ferroptosis, and preeclampsia papers cited for CKD metabolomics, plus a dead GWAS URL).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Arbitrary filtering from 46 to 29 metabolites using a one-sided positive beta filter (beta_IVW > 0) and failure to apply multiple-testing correction (FDR/Bonferroni) across the 486 tested metabolites.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Leave-one-out sensitivity plots (Fig S4) show that putative causal estimates for key metabolites (including mannose via rs1260326 in GCKR) are driven by single influential pleiotropic SNPs.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Unclear and statistically underpowered metabolic pathway analysis input criteria and thresholds.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Direct self-contradiction introduced in the published text regarding FDR correction: Results (line 91) falsely claims 'we applied false discovery rate (FDR) correction to adjust for multiple comparisons, which further supported the robustness of these seven identified metabolites' while reporting unadjusted nominal p-values up to 0.028, whereas Discussion (line 145) admits FDR was not applied and recommends future studies apply FDR.",
+      "Statistically impossible instrumental variable counts and F-statistics in Results (line 80): claiming up to 479 independent SNPs for a single metabolite after stringent linkage disequilibrium clumping (r^2 < 0.01 in 500 kb windows) at P < 1e-5 in N=7,824, and reporting a minimum F-statistic of 17.411 that is mathematically below the P < 1e-5 selection threshold (chi^2 = 19.51).",
+      "Repeated misspelling of MetaboAnalyst 5.0 as 'Metaconfict 5.0' and direct contradiction between Results (stating metabolites with P_IVW < 0.05 were analyzed at a pathway cutoff of p < 0.10) and Discussion (stating pathway analysis 'included metabolites with P values > 0.10')."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_033",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Discrepancy between pseudovirus and live SARS-CoV-2 infection assays in LGMN-overexpressing cells due to CMV promoter silencing in the pLX304 lentiviral vector.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Clarify the cellular localization and proteolytic mechanism of LGMN (whether it compensates for TMPRSS2 or acts endolysosomally alongside CTSL) using catalytic and signal-peptide mutants.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Show data for the 3 individual sgRNAs per gene separately rather than only pooling all 3 sgRNAs into a single group in knockout validation figures.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Justify criteria for selecting top screen hits (LGMN, KCNA6) and compare screen results against previously published genome-wide SARS-CoV-2 CRISPRa screens.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Claiming confocal colocalization between SARS-CoV-2 Spike and LGMN (S10 Fig) is overstated without quantitative colocalization metrics or higher-resolution validation.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Missed (Unresolved)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Directional contradiction and severe confounding by indication in the retrospective Medicare Advantage claims analysis (line 136): the authors state they tested whether ion-channel-targeting drugs are associated with a 'decreased risk of COVID-19 hospitalization', but report Hazard Ratios > 1.2 (significantly increased hospitalization risk) for loop diuretics, SSRIs, and anticonvulsants—which is the exact opposite direction of their in vitro 3,4-DAP inhibition experiments and reflects unadjusted clinical comorbidity confounding.",
+      "Pseudoreplication in main Figures 3C-D and 4D, where 3 distinct sgRNAs across 2 experiments (n=6) were pooled as independent biological replicates in a single one-way ANOVA rather than using a nested/mixed-effects model."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_034",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Provide runtime and memory consumption benchmarks comparing SpaMI against competing spatial multi-omics integration methods.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Validate SpaMI on additional annotated real spatial multi-omics datasets, including human tissue.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Clarify the semi-supervised prior-guided variant (SpaMI-P) and ensure fair comparison against strictly unsupervised baseline methods.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Hyperparameter sensitivity and generalizability: loss weights [gamma_1, gamma_2, lambda_1, lambda_2, mu], learning rates, epochs, and spatial neighbor counts r were tuned separately for each dataset.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Perform an ablation study on real-world biological data in addition to simulated data.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Multiple mathematical and dimensional errors in the Methods equations: asymmetric degree normalization D^{-1/2} A_tilde D^{1/2} instead of symmetric D^{-1/2} A_tilde D^{-1/2} across all GCN layers (lines 171-187); a dimensionally invalid attention fusion formula Z = Z_concat x diag(alpha) that scales concatenated columns rather than computing the weighted sum alpha_1 Z_1 + alpha_2 Z_2 (line 226); and an undefined norm for the n x n cosine similarity difference matrix in L_corr (line 213).",
+      "Unvalidated gene-level 'denoising' claims (Figs 3E, 4E, 6D): the autoencoder only reconstructs 50-dimensional PCA/LSI vectors rather than raw count matrices, so projecting smoothed rank-50 representations back to gene space merely acts as a low-rank spatial low-pass filter with no quantitative dropout-recovery benchmark.",
+      "Figure 6F caption mislabels the mouse thymus Stereo-CITE-seq protein (ADT) modality as 'ATAC modality data alone'."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_035",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Provide demographic breakdown for Pathway A vs. B, statistical hypothesis tests (p-values) for withdrawal reasons (Table 2) and swab return rates, and clarify how many Pathway A sites switched to multiplex testing.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Acknowledge the limitation that the site research team evaluation workshop was conducted as an open group discussion without an anonymous/private feedback channel.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Discuss the low participant survey response rate (15.5%) and selection bias between opt-out onsite recruitment (Pathways A/B) and opt-in remote recruitment (Pathway C).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematically impossible negative p-value reported in Results (line 150: 'p = -0.006') when comparing withdrawal due to moving sites/leaving the healthcare workforce.",
+      "Internal discrepancy in Pathway C swab return rate between Results (line 186: 80.5%) and Discussion (line 285: 80.7%).",
+      "Unadjusted comparison of raw test counts per participant (median 6 vs. 4 vs. 5) across pathways without normalizing for unequal follow-up exposure windows (Pathways A/B started 28 Nov 2022, whereas Pathway C launched nearly a month later on 22 Dec 2022).",
+      "Incomplete/truncated participant quotation in Results (line 221: 'having the swabs sent out earlier and in bulk as [the] first samples were hit by a')."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_036",
+    "num_human_reviewers": 1,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Expand Figure 1 to display RNA-seq expression levels for additional CREB and GIPC gene family members.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Resolve discrepancy where Glucose-6-phosphate was highlighted in the initial Abstract but absent from the Results and Discussion.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Provide missing RT-qPCR primer sequences, reference gene details, and LC-MS metabolomics extraction and chromatography parameters.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Expand the biological interpretation of pathways and multi-omics integration in the Discussion.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Physically impossible breast muscle melanin concentrations (103.193 +/- 3.598 mg/mL and 121.731 +/- 3.69 mg/mL) exceeding 100% of total wet tissue mass (0.1 g tissue homogenized in 0.9 mL PBS = 100 mg/mL wet tissue), obtained by running an unvalidated commercial 'sandwich ELISA' on aqueous PBS supernatant for an insoluble non-protein polymer (eumelanin).",
+      "Uncontrolled bird sex confounding: sample sex was never recorded or balanced, and the #1 top upregulated gene in high-melanin muscle is MHM2 (Male Hypermethylated 2, log2FC = 3.03), a well-known female-specific non-coding locus on the chicken Z chromosome.",
+      "Threshold and fold-change contradictions: Methods states DEGs required FC >= 1.5 (|log2FC| >= 0.585), but Table 5 highlights FGF1 (log2FC = 0.06, a 4% change) and DUSP1 (log2FC = 0.34); the text claims CREB5 is upregulated 5-fold in RNA-seq when Tables 4 and 5 show log2FC = 1.37 (2.58-fold).",
+      "Flawed metabolomics stringency (100 ppm precursor mass tolerance on a high-resolution QTOF-MS and FC > 1, i.e., zero fold-change threshold), yielding implausible plant/fungal secondary metabolite annotations (glucoiberverin, m-trigallic acid, gossypol, semivioxanthin) and an Abstract claiming CDP-ethanolamine, glucoiberverin, and m-trigallic acid belong to Phe/Tyr/Trp biosynthesis while Discussion states the opposite.",
+      "Severely underpowered WGCNA co-expression networks constructed on N=10 transcriptomes and N=12 metabolomes (below the WGCNA minimum recommendation of N >= 15-20)."
+    ],
+    "human_reviewer_anomalies": "Single-Reviewer Acceptance",
+    "human_anomaly_details": "Academic Editor explicitly noted in Decision Letter 0: 'We were able to secure only one reviewer for your paper, even though we invited many experts on behalf of your paper.' The sole reviewer (Owais Iqbal) provided a brief 4-bullet review that missed physically impossible ELISA melanin concentrations (>100% of wet tissue mass), female-specific Z-chromosome sex confounding (MHM2), and 100 ppm mass tolerance artifacts."
+  },
+  {
+    "anon_id": "OPEN_ANON_037",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "High similarity in dataset (GSE63060), analytical workflow, and figure design to previously published Alzheimer's disease cuproptosis papers (Lai et al. 2022, Nie et al. 2023) without citation or comparison.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Missing machine learning methodological details (cross-validation scheme, train/test split sizes, R package versions, hyperparameters, and consensus cluster sample sizes).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Clarify drug candidate selection criteria (DGIdb interaction scores vs. docking scores), justify the -7.0 kcal/mol binding energy cutoff, and acknowledge limitations of rigid-body docking.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Reviewer 4 questioned whether the 5 hub genes were selected by PPI degree rather than machine learning feature importance.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Internal sample-size and class-label contradictions in Methods (lines 72-84): line 72 claims consensus clustering was performed on '310 patients with AD' (the sample size of the external brain dataset GSE33000) while reporting cluster sizes of n=90 and n=55 (which sum to the 145 AD patients in GSE63060), and line 84 states only the 145 AD cases (70% n=101 train, 30% n=44 test, with zero healthy controls) were used to train a binary AD-vs-Control classifier.",
+      "Direct directional contradiction across modalities: FDX1 and GLS are reported as significantly downregulated in AD blood (GSE63060) and clinical RT-qPCR (Fig 12), but are reported as significantly upregulated across AD peripheral blood immune cells in the scRNA-seq dataset (GSE181279) without acknowledging the sign reversal.",
+      "Gene-symbol conflation between two distinct kinases sharing the alias 'PDK1': mitochondrial pyruvate dehydrogenase kinase 1 (PDK1, targeted by their qPCR primers and dichloroacetic acid) vs. cytoplasmic 3-phosphoinositide-dependent protein kinase 1 (PDPK1, discussed in their T-cell/NK-cell immunology narrative).",
+      "Invalid drug-target pairing and physically impossible AutoDock Vina score: claiming the selective SYK inhibitor Lanraplenib targets mitochondrial ferredoxin FDX1, and reporting a Vina binding affinity of -7.7 kcal/mol for dichloroacetic acid (a 6-heavy-atom fragment whose theoretical maximum Vina score is ~ -3.5 kcal/mol).",
+      "Self-contradiction between Results line 299 (stating RT-qPCR validated PDK1, FDX1, and GLS, while MAP2K1 and SOD1 were non-significant) and Discussion line 310 (claiming RT-qPCR confirmed FDX1, PDK1, and MAP2K1)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_038",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Clarify experimental details of the dual-culture confrontation assay (how uniform 6 mm mycelial plugs were cut and how mycelia were separated from cellophane membranes).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Explain the bioinformatics methods used for PCA and secreted protein identification.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Fix typographical and formatting errors (e.g., 'figure 21' typo, moving the experimental setup diagram to S1 Fig, removing 'the' before genus names).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Reviewer 1 requested citing two specific Trichoderma harzianum papers in the Discussion.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Uncontrolled chronological colony-age confounding across interaction stages S1, S2, and S3: because slow-growing F. virguliforme was plated 3 days prior to Trichoderma and harvested at successive morphological stages, harvesting self-confrontation controls at a single time point (matching S2) explains why F. virguliforme DEGs reach a counterintuitive minimum at contact stage S2 (799 and 159 DEGs) and peak at S1 and S3.",
+      "Contradictory differential expression thresholds across the manuscript: Methods and Fig 3 specify |log2FC| > 1 (FC > 2) and FDR < 0.05, whereas Fig 8 caption specifies FC > 1 and S4 Fig specifies FDR < 0.1.",
+      "Remaining strain-name and formatting errors in the published text: strain 'Th19A' is repeatedly misprinted as 'Th9A' five times in the F. virguliforme DEG results (line 140), 'amidohydrolase' is misspelled as 'amidrohydrolase', and stray double/quadruple quotation marks appear in the STAR alignment Methods."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Reviewer #1 (who answered 'I Don't Know' to whether the statistical analysis was rigorous) explicitly demanded that the authors cite two papers co-authored by the handling Academic Editor (Vivek Sharma): 'Differential Response of Extracellular Proteases of Trichoderma Harzianum Against Fungal Phytopathogens' and 'Elucidation of biocontrol mechanisms of Trichoderma harzianum against different plant fungal pathogens: Universal yet host specific response', while Reviewer #2 (Rhydum Sharma) submitted a superficial grammar/formatting review."
+  },
+  {
+    "anon_id": "OPEN_ANON_039",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Perform orthogonal protein-level validation (e.g., immunohistochemistry) for candidate diagnostic genes rather than relying solely on transcriptomic datasets.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Examine whether sex-specific DEGs in females are located on the X chromosome.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Tone down claims of 'clear separation' of Progressing Nevi (PN) in PCA (Fig 5C) given substantial overlap and small PN sample size (n=17), and address anatomical site differences.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Specify the batch-effect correction algorithm (ComBat) used when merging the three RNA-seq discovery cohorts.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe partial batch-phenotype confounding during ComBat batch correction across the three discovery RNA-seq cohorts: all 17 Progressing Nevi (PN) samples originate exclusively from the Bastian FFPE dataset (phs001550), which contains zero Benign Nevi (BN) samples (17 PN + 20 CM), whereas the Badal (51 BN + 27 CM) and Schartl (23 BN + 57 CM) cohorts contain only BN and CM; centering the Bastian [PN+CM] batch to the global mean of [BN+CM] batches algebraically shifts the 17 PN samples toward the BN mean, creating an artificial intermediate cluster in Fig 5C.",
+      "Information leakage / optimism bias in reporting in-sample training AUCs (0.930, 0.998, 0.9997) on the exact same combined discovery dataset used for 1,000-iteration bootstrap feature selection, and refitting 23-predictor multivariable linear models de novo inside small external validation cohorts (N=28 in Krueger, N=52 in Scatolini) rather than applying locked training weights."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_040",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Incomplete taxon sampling (only 13 of ~50 valid Bryconidae species included) requires caution in phylogenetic, sister-species (e.g., Salminus affinis vs. S. brasiliensis), and biogeographic interpretations.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Inconsistent and confusing species vs. mitogenome counts across the text and table captions (11 species vs. 13 species vs. 19 mitogenomes, including Table 2 caption originally stating 19 species instead of 13).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Inaccurate taxonomic diversity citations (citing Lima 2004 instead of Lima 2017) and overgeneralization of Magdalena-Cauca basin grouping in the Abstract.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Internal table row omissions and duplications in the published Tables 3 and 4: both captions claim to present '19 mitogenomes of 13 Bryconidae species', but both tables contain only 18 rows because Brycon chagrensis 29B07 is silently omitted, and Table 4 merges both B. amazonicus samples into a single row label ('B. amazonicus 58483 /LBP-14082') while duplicating 'B. amazonicus LBP-14082' on the immediately following row.",
+      "Strand-orientation sign flip in AT skew for Brycon chagrensis 29B07: Table 2 reports an AT skew of -0.056 (whereas conspecific B. chagrensis 28B05 is +0.055), indicating the RNA-seq mitogenome contig for 29B07 was reverse-complemented on the opposite strand when calculating base composition, and was silently omitted when stating in the text that all AT skews ranged from +0.015 to +0.071.",
+      "Contradiction between the Results text (stating mt-rnr1 length ranged from 946 to 992 bp) and Table 3 (where all 18 reported mt-rnr1 lengths lie strictly between 946 and 957 bp).",
+      "Unspecified statistical test, silent exclusion of 5 mitogenomes (n=7 vs. n=7 inferred from .29 and .57 decimal means), and intraspecific pseudoreplication (treating multiple individuals of the same species as independent observations) in the regional mitogenome length comparison (p = 0.011).",
+      "Partitioning the 13 mitochondrial protein-coding genes only by gene rather than by codon position (1st/2nd vs. 3rd codon positions) in IQ-TREE 2, despite high 3rd-codon-position saturation across deep Characiformes divergences."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

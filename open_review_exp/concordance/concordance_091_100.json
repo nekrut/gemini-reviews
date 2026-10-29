@@ -1,0 +1,343 @@
+[
+  {
+    "anon_id": "OPEN_ANON_091",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Need for an ablation/dropout simulation experiment to prove that Dropout Augmentation (DA) directly addresses zero-inflation by artificially dropping out data points at varying proportions and comparing DAZZLE vs. DeepSEM stability (R1).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Non-stationarity of developmental mouse microglia scRNA-seq data across time points (E14, P4/P5, P30, P100) and lack of quantitative ground-truth TF-target validation (e.g., TRRUST v2 / TFLink) in the microglia case study (R1, R4).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unclear contribution and lack of ablation for the auxiliary DA noise classifier C_DA on final GRN inference accuracy (R2).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Mathematical formulation and notation defects in Equations 4-9, including what happens when a pre-existing natural zero is masked again by M_DA and improper matrix notation (I - M_DA) in Equation 9 (R1; R1 noted in Round 1 that their mathematical comments were ignored by the authors).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing PIDC baseline comparator and missing AUROC metric in the BEELINE single-cell GRN benchmark evaluation (R1, R2, R3).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Lack of concrete wall-clock runtime and parameter count comparisons between DeepSEM and DAZZLE (R4).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Inverted fraction in Equation 12 for AUPRC Ratio: the formula multiplies AUPRC by (Positives / Total Instances) instead of dividing by the random-predictor baseline prior, which is a 10^4- to 10^6-fold mathematical inversion.",
+      "Autoencoder objective mismatch in Equations 4-7 and hyperparameter symbol contradiction: the decoder likelihood p_theta(X'|Z') and L_recon are written as reconstructing the artificially corrupted matrix X' rather than the uncorrupted matrix X, and the L1 sparsity regularization weight is denoted chi in the text (lines 171, 200) but gamma in Equation 10.",
+      "Biological misattribution in the microglia case study (Fig 4b, lines 118-127): non-TF surface receptors, complement subunits, lysosomal enzymes, and iron-storage proteins (C1qc, Hexb, P2ry12, Ftl1, Tmsb4x, Ctsd) are presented as transcriptional regulators of Tmem119 and Apoe because the model does not constrain source nodes to transcription factors."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_092",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Insufficient methodological and theoretical explanation of how PaaSc selects and weights Multiple Correspondence Analysis (MCA) dimensions and why linear regression on MCA axes outperforms CelliD and GSDensity (R1, R3).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing mathematical definition of Spatial Mutual Information (SMI) in the Methods section and unclear interpretation of SMI values in spatial transcriptomics benchmarks (R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Inconsistent and arbitrary statistical significance thresholds (p or FDR cutoffs of 0.05, 0.001, and 0.0001) across different figures and analyses (R1).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Overstated claims of 'superior' performance when empirical AUC scores on several cell-type identification benchmarks are nearly indistinguishable from GSDensity and CelliD (R1, R3).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Direct mathematical contradiction between Results/Figure 1D and Methods Equation 7: Results (line 36) and Figure 1D explicitly state that MCA dimension weights combine the regression t-value (primary weight) and the proportion of variance explained (secondary weight), whereas Methods Equation 7 defines weights purely from normalized t-statistics without any variance-explained term.",
+      "Sign-cancellation and division-by-zero vulnerabilities in column weight normalization w_{ij}^* = w_{ij} / sum_i w_{ij} (Equation 7): because t-statistics from two-sided tests (p < 0.05) can have mixed signs across dimensions or all dimensions can fail to reach p < 0.05 under the null, the denominator sum_i w_{ij} can approach or equal zero.",
+      "Unadjusted multiple hypothesis testing across K in [20, 50] MCA dimensions per gene set: filtering dimensions at unadjusted p < 0.05 guarantees 1 to 2.5 false-positive MCA dimensions per random gene set.",
+      "Internal dataset count contradictions across text and figures: TISCH tumor immune datasets are reported as 136 in Abstract/Results line 70, 140 in Results line 74/Fig 3A, and 118 in Discussion line 153; bulk RNA-seq senescence datasets are reported as 41 in Results line 90/Methods line 219 but 50 in Fig 4A; and REAP-seq PBMC cell types are stated as nine in Results line 55 while only eight are listed."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_093",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Inappropriate application of unadjusted pairwise Student's t-tests across 3+ experimental groups (pipelines, sequencing depths, abundance profiles), inflating Type I error; Reviewer 2 required ANOVA with Tukey's post-hoc test or multiple-comparison adjustment (R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Missing public repository for the simulation and statistical analysis code (R1, R2, R3).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Taxonomic database mismatch artifact masquerading as biological 'False Positives': reads were simulated strictly from 42 NCBI RefSeq/GenBank genomes without contamination, but recovered MAGs were classified with GTDB-Tk v1.3 and compared by species name string against NCBI names. Reclassified taxa (e.g., NCBI Borrelia burgdorferi reclassified in GTDB as Borreliella burgdorferi) were scored simultaneously as 0% recovered False Negatives and high-coverage (up to 1,199x) 'False Positives'.",
+      "Misdefinition of Precision (TP / (TP + FP)) as 'Accuracy (%)' in Equation 3 while completely omitting False Negatives (which represent 55% to 75% of the 42 input species in the 42S cohorts).",
+      "Mathematically impossible standard deviation for 8K MAG recovery (reported as 42.24 +/- 122.35 MAGs per community across 69 communities totaling 2,915 MAGs) and 100-fold percentage conversion errors in species-pair recovery rates (0.11%, 0.31%, 0.26% reported instead of 11%, 31%, 26%).",
+      "Misapplication of the Multi-Metagenome (MM) differential-coverage binning algorithm across simulated libraries where relative species abundances were held identical and only sequencing depth varied.",
+      "Internal contradictions in simulated Illumina read length (2 x 150 bp in Design line 206 vs. 125 bp in Processing line 9) and Figure 5 caption falsely attributing taxonomic classification to the assembler IDBA-UD."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_094",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Potential confounding by viral entry inhibition: because cells and mice were pre-treated with GYY4137 prior to infection, reviewers requested ACE2/TMPRSS2 expression checks and a high-MOI (MOI 3-5) post-entry time-of-addition experiment (R1, R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Unexplained 500-fold discrepancy in GYY4137 concentration and infection conditions between Figure 3 (RNA-seq: 5 mM GYY4137, MOI 0.01, 48 h) and Figure 4 (LC-MS metabolomics and Seahorse: 10 uM GYY4137, MOI 0.1, 24 h) (R1 Point 8).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Need to explain why Nrf2 transcript (nfe2l2) was unchanged in RNA-seq despite reduced Nrf2 protein levels on Western blot (R1 Point 6).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Technical pseudoreplication in the untargeted LC-MS metabolomics experiment (Figure 4 caption explicitly states the data come from a single experiment performed in 3 technical replicates, yet parametric t-tests/ANOVA at p < 0.1 were applied as biological inference) and lack of public deposition of raw mass spectrometry data.",
+      "Anomalous double-infection protocol in the unrestrained whole-body plethysmography (uWBP) mouse cohort (infected with 10^5 PFU MA-10 at day 0 and re-challenged with a second viral dose 48 h later, unlike the single 5 x 10^4 PFU challenge used for viral load and histopathology) and reliance on Penh as a measure of airway mechanics.",
+      "Stoichiometrically confounded DTT co-treatment rescue assay (Figure 5H: 10 uM DTT co-incubated with a 500-fold molar excess of 5 mM GYY4137 in culture medium).",
+      "Under-specified human clinical cohort (reporting only 'n > 10' SARS-CoV-2 positive and negative nasopharyngeal swabs without exact sample sizes, CT thresholds, or patient demographics)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_095",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Need to distinguish systematic directional 'bias' from increased posterior variance/uncertainty when tip dates are rounded (Academic Editor).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Need to evaluate an additional rapidly evolving viral empirical dataset sampled over a multi-year timeframe to test whether longer sampling windows mitigate date-rounding artifacts (R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Need to justify why the coalescent exponential tree prior was omitted for bacterial datasets while included for densely sampled SARS-CoV-2 clusters where it violates model assumptions and yields flat/unreported tMRCA posteriors (R1, R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Failure to benchmark deterministic midpoint collapsing (setting all dates in a month to the 15th or in a year to July 15th, which introduces artificial synchronous sampling spikes into birth-death/coalescent priors) against BEAST2's native uniform tip-date uncertainty integration across the rounding interval.",
+      "Internal sample size contradiction for the empirical M. tuberculosis dataset (reported as n = 30 genomes in Methods line 66 vs. n = 36 genomes in Methods line 137).",
+      "Minor mathematical and typographical errors in Methods and Table 1: S. aureus expected time between substitutions is 1 / (2.9 x 10^6 x 10^-6) = 0.3448 years rather than 0.3458 years (Table 1); BEAST2 MCMC chain length is printed as '5 x 18^8' instead of '5 x 10^8' (line 95); and an untruncated Lognormal(0, 1) prior is listed for bounded birth-death sampling probability p in [0, 1] on H3N2.",
+      "Re-identification vulnerability in the proposed uniform random date-translation privacy scheme (which preserves exact inter-sample temporal spacing and can be inverted by cross-correlating sample count histograms against public surveillance case curves)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_096",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Questioned the prevalence of U09.9 patients without a documented prior positive SARS-CoV-2 test and potential exposure misclassification (R3 Point 6).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Requested multivariable adjustment for baseline hypertension, dyslipidemia, and baseline kidney function (eGFR) when modeling clinical outcomes including dialysis (R3 Point 7).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Requested converting weight change from pounds to international units (kilograms) across all tables and text (R1).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Questioned how variations in post-index follow-up duration were accounted for in logistic/Poisson models and how the random index date for unexposed controls was validated (R1, R3).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Challenged the unsubstantiated claim that outcomes 'do not appear to be mediated through effects on weight or glycemia' in the absence of formal mediation analysis, and noted confusion between less weight loss vs. weight gain (R1).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Typo in Abstract mortality odds ratio/CI (8.87 instead of 0.87) (R1, R3).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Lack of differentiation between Type 1 and Type 2 diabetes in the VHA cohort (R1).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematically impossible subcohort count introduced in Results line 58 during revision: the text states 'A total of 75,944 individuals (0.75%) had U09 without a prior positive test for SARS-CoV-2.\"' even though only 20,438 individuals in the entire cohort had U09.9 documentation.",
+      "Direct contradiction between Table 3 and the Discussion/Conclusions: Discussion (lines 185, 193) explicitly claims Long COVID was not significantly associated with mortality among baseline insulin users, whereas Table 3 reports a highly significant lower mortality odds ratio of 0.84 (95% CI: 0.78-0.90, interaction p < 0.001).",
+      "Abstract vs. Table 2 IRR percentage mismatch: Abstract line 21 reports '39% more primary care visits per year (IRR 1.36)' whereas an IRR of 1.36 corresponds to 36% (as reported in Results line 79).",
+      "Inclusion of 521,812 prevalent baseline insulin users in the Table 2 denominator (n = 1,896,080) for 'Initiated insulin', and failure to adjust for baseline HbA1c or competing risk of death (12-13% cohort mortality)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer 2 provided only 7 one-line generic bullet points ('1. Its inclusive of the objective, relevant methods and key findings. 1. The introduction is clearly written and straightforward... This is generally informative and well written manuscript.'), and in Round 1 Reviewers 1 and 3 signed off on the revision without noticing that the authors' new sentence in Results claimed 75,944 U09.9 cases without a positive test (exceeding the 20,438 total U09.9 cases), left Table 3 labeled as 'pounds' with kg values, and omitted baseline eGFR adjustment."
+  },
+  {
+    "anon_id": "OPEN_ANON_097",
+    "num_human_reviewers": 6,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Severe age confounding between young healthy controls (median 28.5 years) and older T2DM patients (median 55.9 years); Reviewer 5 recommended exploratory ANCOVA or age adjustment (R5 Point 1).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Small sample size (N = 89) and exploratory multiple testing in combined genotype analyses; reviewers requested exact subgroup n counts and hypothesis-generating framing (R2, R3, R4, R5).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Typo in Methods/Tables where both recessive and dominant genetic models for TRPV1 rs4790522 were written identically as 'AC/CC' (R6 Point 1).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Pervasive data-table corruption across Tables 1, 2, and 3 that escaped all 6 human reviewers and the Academic Editor: (a) Table 2 reports the 47 T2DM patients as 68% female while Table 3 reports the exact same 47 T2DM patients as 48% female (p = 0.064); (b) in Table 1 (TRPV1), combining CC (50% female) and AC (50% female) yields an impossible 19% female in *AC/CC; (c) in Table 2 (TRPV1), combining CC (83% female) and AC (62% female) yields an impossible 30% female in *AC/CC.",
+      "Extensive verbatim copy-paste errors across genotype columns in Tables 1 and 2: in both tables, the entire column of means and SDs for *AC/CC and +AA/AC are verbatim duplicates of the Total column; *TT/CT and +CT/CC share identical SDs across every variable; Table 2 reports a BMI SD of +/- 0.0 across 12 individuals (TRPV1 CC: 26.9 +/- 0.0); Table 2 swaps the combined genotype sample sizes for TRPV1 (listing n=35 for AC/CC instead of 12+21=33 and n=33 for AA/AC instead of 21+14=35); and Table 1 prints the sample size '42' inside the p-value column.",
+      "Contradictory allele definitions across the manuscript: the TT genotype of TAS1R3 rs307355 is defined as the 'wildtype' in Methods (line 72), Table 1, Table 2, and Figures 3 & 5, but is called the 'homozygous risk allele (TT/AA)' in the Abstract, Results (line 180), and Discussion.",
+      "Mathematically inconsistent subgroup counts added in Results line 180: a subgroup of n = 21 cannot have a categorical prevalence of 77.8% (7/9 = 77.8%, 16/21 = 76.2%) and a subgroup of n = 13 cannot have a prevalence of 35.3% (6/17 = 35.3%)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "In Round 0, Reviewer 2 wrote a 3-sentence superficial review ('The Manuscript sounds ok according to the number of participants. I think sample size is small. But its ok but you should add more case studies to prove the data and add more references and improve little bit your english.'), and in Round 1 the Academic Editor issued Decision Letter 1 with the raw PLOS editorial template placeholder 'ACADEMIC EDITOR: Please insert comments here and delete this placeholder text when finished.' left unedited inside the letter. Across 3 rounds and 6 reviewers, nobody audited the numbers in Tables 1-3."
+  },
+  {
+    "anon_id": "OPEN_ANON_098",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Experimental mass-spectrometry organelle proteomes are incomplete and biased toward abundant proteins in non-model species, so many algorithmically predicted proteins labeled as 'False Positives' may actually be true imported proteins missing from experimental reference catalogs (R2).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Existence of non-canonical / N-terminal targeting sequence (NTS)-independent import pathways means sequence predictors relying on NTS cannot reach 100% sensitivity (R1 Point 2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Need to evaluate or discuss additional subcellular localization predictors (SUBAcon, cropPAL, ATP, BaCelLo) and expand literature coverage on dual targeting (R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Need to include explicit mathematical definitions for sensitivity and precision in Methods and deposit all custom scripts and datasets in a public repository (R3).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Circularity and phylogenetic ascertainment bias in the 171-species OrthoFinder benchmark (Figure 3): defining ground-truth organelle proteomes across 171 species solely by sequence orthology to predominantly angiosperm experimental proteomes guarantees that lineage-specific organelle proteins ('pan-proteome') in distant bryophytes and algae are scored as False Positives, mechanically driving the negative correlation with evolutionary distance from Arabidopsis.",
+      "Terminological mismatch in Abstract (line 8) and Figure 2 caption (line 45), which claim to evaluate 'specificity' (TN / (TN + FP)) whereas the Methods equations and Figure 2C-D exclusively define and plot Sensitivity and Precision.",
+      "Exclusion of TargetP 2.0 'thylakoid' luminal predictions (~100 plastid proteins in Arabidopsis) from the primary plastid benchmark in Figure 2A/C (and mis-citation of Fig 1A instead of Fig 2A in Methods line 149).",
+      "Absence of formal regression/correlation test statistics (R^2, slope, p-value) or phylogenetic independent contrasts across the 171 species in Figure 3C."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_099",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Inappropriate application of Student's t-test to compositional relative abundance data, misnomer of 'non-parametric Student's t-test', and lack of multiple-testing correction in differential abundance testing (R1).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Unexplained mention of QIIME in the Abstract despite using Illumina BaseSpace throughout, and missing raw sequencing data repository accession and beta-diversity PCoA plots (R1, R2).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Extreme, unadjusted demographic confounding between cases and controls in Table 1: the UC cohort (N = 38) is 73.7% male (28/38) with a median age of 74 years, whereas the healthy control cohort (N = 20) is 80.0% female (16/20, only 4 men; Fisher's exact p = 0.0001) with a median age of 61 years, and smoking history is completely unrecorded.",
+      "Anatomical sampling site confounding in the oral microbiome protocol (Methods line 99): dentate subjects were sampled from subgingival periodontal pockets (an anaerobic niche enriched in Prevotellaceae) whereas edentulous subjects were sampled from the tongue dorsum.",
+      "Three contradictory sample sizes for the ICI-treated UC survival cohort across the manuscript: 27 patients in the Abstract (line 16), 38 patients in the Methods text (line 47), and 30 patients in Table 1 (38 total minus 8 'no IO' patients, alongside a misaligned '0: 1 (2.6%)' entry in the NORMAL column).",
+      "Unspecified High/Low abundance dichotomization cutoffs (median vs. outcome-driven cutpoint) and lack of multivariable Cox regression or multiple-testing correction across the 8 Kaplan-Meier log-rank tests in Figures 3 and 4, plus figure panel citation mismatches in Results line 159 (citing Fig 3a, b and Fig 3d for survival curves located in panels a, c and e, g).",
+      "Implausible 72 C PCR annealing temperature reported for 16S V3-V4 amplification (Methods line 109) and reliance on the obsolete 2013 GreenGenes taxonomy database."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_100",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Unvalidated claim that CDKN2A and CDKN2B are predictive biomarkers of CPI203 sensitivity without genetic knockdown/knockout validation or external cross-validation in DepMap (R1 Q1, Q3).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of discussion regarding clinical dose-limiting toxicities of pan-BET (BRD4) inhibitors in oncology trials (R1 Q2).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Missed (Unresolved)"
+      },
+      {
+        "issue": "Raw sequencing data (156 RNA-seq and 32 ATAC-seq datasets) not deposited in NCBI GEO, with the GitHub repository linking only to a private login-walled Illumina BaseSpace account (R1 Q4).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unclear cell passaging and vehicle normalization procedures in the 28-day vs. 3-day delta-AUC primary screen (R2 Point 1a).",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematically flawed delta-AUC metric and volcano-plot t-test in Figure 1: Day 3 viability was assayed at two high concentrations (1 uM and 10 uM) whereas Day 28 viability was assayed at only a single lower concentration (500 nM), confounding exposure duration with a 2-to-20-fold dose reduction and rendering a single-point 'AUC' geometrically undefined.",
+      "Unreplicated bulk RNA-seq design (N = 1 single library per cell line x drug condition across all 156 libraries) using an unadjusted >= 2-fold cutoff without biological replicate variance estimation, which conflates Poisson counting noise with cell-line-specific transcriptional responses in Figure 3A-C.",
+      "Severe confounding of PCA Cluster 1 vs. Cluster 2 (the basis for the CDKN2A/CDKN2B biomarker claim in Figure 2F-H) by IDH1 mutation status: 3 of the 4 drug-resistant lines in Cluster 2 (lines 301, 372, 412) are IDH1-mutant gliomas (which characteristically exhibit G-CIMP hypermethylation and intact CDKN2A/B) rather than IDH-wildtype glioblastomas.",
+      "Multiple internal errors in the published text: confusing the histone methyltransferase gene MLL5 for the HIF-activator drug ML228 (line 80), cell line ID typo '272' for '372' (line 86), duplicate panel label 'D.' in Figure 3 caption, 'H3K23M' typo for 'H3K27M' (line 31), and MTS vs. MTT assay contradiction between Results and Methods."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

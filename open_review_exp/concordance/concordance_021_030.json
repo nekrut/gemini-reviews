@@ -1,0 +1,384 @@
+[
+  {
+    "anon_id": "OPEN_ANON_021",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Interpretation of rs1801274 (FCGR2A) and PC1-TCR association as a trans-eQTL master regulatory effect under anti-CD3/CD28 stimulation",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Comparison and justification of the custom theta-metric colocalization/merging framework against established colocalization methods (e.g., coloc, SuSiE, SMR) and definition of genomic windows",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Mechanistic hypotheses for the three cRM scenarios (epigenetic marks H3K27ac/H3K4me3, chromatin accessibility) and RNA-seq batch randomization details",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Confounding by whole-blood cell-type composition heterogeneity across stimulation conditions and need for in silico cell deconvolution and blood cell trait GWAS cross-checks",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of formal genotype-by-environment (GxE) interaction statistical testing when defining response eQTLs via binary FDR thresholding across conditions with limited power, and quantifying the proportions of the three cRM scenarios",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Ambiguity in DESeq2 transcriptomic normalization (across all conditions jointly vs. within each condition separately) and covariate adjustment prior to eQTL mapping",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unbalanced post-QC sample sizes across conditions (n=290 in TCR vs. n=354 in CTRL, an 18% sample size reduction) directly confounding the binary FDR-thresholded claim that TCR stimulation causes a biological loss of cis-eQTLs (1,011 modules vs. 1,196–1,275)",
+      "Circular covariate optimization: selecting 29 to 38 expression principal components per condition specifically to maximize the number of discovered cis-eGenes without reporting the exact number of PCs removed per condition",
+      "Subjective manual tuning of GWAS locus window boundaries (_a, _b modified suffixes in S9 Data) and reliance on unadjusted nominal permutation p-values (p < 0.05) without multiple-testing correction across hundreds of tested locus-condition-gene pairs",
+      "Repeated immunological terminology error referring to activating anti-CD3/anti-CD28 antibodies as a 'TCR antagonist' instead of a TCR agonist throughout the Abstract, Introduction, Discussion, and Methods",
+      "Internal numerical contradictions: conflicting reQTL percentages (55.8% of 8,401 vs. 56% of 7,723 in Results vs. 72.9% in Discussion), the three scenario percentages summing to 91.9% (2.6% + 72.8% + 16.5%) instead of 100%, PHETA1 listed as a colocalized RA candidate in Table 1 despite a non-significant (NS) p-value, and S9 Fig caption mislabeling AJ009632.2 instead of PLCL1"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_022",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "The non-monotonic downturn in adaptation speed and the exponential fit of ancestral growth rate vs. mutation rate rely entirely on a single extreme outlier double-mutant strain (LQ, delta-mutL delta-dnaQ), whose severe baseline growth defect likely reflects synthetic DNA replication/MMR stress rather than mutation rate alone",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Confounding by distinct mutational spectra across DNA repair knockouts (e.g., AT->CG transversions in delta-mutT vs. transitions in MMR mutants) and request for whole-genome sequencing of evolved antibiotic-resistant lineages",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Exclusion of insertions and deletions (indels) from baseline mutation rate estimates",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unrealistic model assumption that log-MIC increases linearly and without bound with each mutation (b_i = b_0 + i*epsilon) without diminishing returns or saturation",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Speculative and biologically weakly grounded correlation between inferred mutational benefit epsilon and antibiotic molecular weight across only 5 drugs",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Misinterpretation of prior literature regarding MMR hyperactivation vs. Pol III processivity in delta-mutL growth defects",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Deterministic continuous ODE formulation (Eq. 1) allows fractional cells (M_i << 1 cell, OD620 < 1.5e-9) to instantaneously populate multi-mutant compartments at t > 0 and survive 100-fold serial dilutions, failing to capture stochastic waiting times for discrete beneficial mutations or finite-population Muller's ratchet in 2e5-cell bottlenecks",
+      "Unreported numerical value and structural non-identifiability of the beneficial mutation fraction parameter alpha (p_b = alpha * p), which is collinear with epsilon and beta in the deterministic ODE trajectory",
+      "Pseudoreplication in the Mann-Whitney U-test (p < 0.01) comparing strain LQ (n=4 technical replicates of 1 genotype) against 5 distinct genotypes pooled as n=20 independent observations, and underpowered classification of bacteriostatic (n=2 drugs) vs. bactericidal (n=3 drugs) classes"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_023",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Unexplained slight decreases in seroprotection rates between M3 and M13 for diphtheria/polio and slight increases in non-protected percentages in Table 3",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Impact of baseline/prior graft-versus-host disease (GvHD) and T-cell subsets (CD4+/CD8+) on vaccine response",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Confounding by unrecorded concomitant vaccinations and vaccine interference",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unstratified mixing of two different hexavalent vaccine formulations (Infanrix Hexa vs. Hexyon, which differ in acellular pertussis components and antigen content) within and across patients",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Omission of anti-pertussis antibody measurements despite administering a hexavalent vaccine containing pertussis",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Table 1 mathematical impossibility: for 'Time (days) between booster at month 12 and last antibody measure', the reported median (29) lies strictly outside its own interquartile range ([34 - 46])",
+      "Table 2 vs. Table 3 mathematical impossibility at baseline (M0): Table 2 shows 74.7% of patients were unprotected against Diphtheria, 67.4% unprotected against Hib, and 57.4% unprotected against HBV at inclusion, yet Table 3 ('At inclusion') claims only 29.0% were 'Not protected against at least 1 pathogen' and 0% were unprotected against >=2, 3, 4, or 5 pathogens (violating the pigeonhole principle)",
+      "Severe right-censoring ceiling distortion: truncating >50-75% of Hib (>9 ug/mL set to 9.1, median 9 [9-9]) and HBV (>1000 IU/L set to 1001, median 1000 [89-1000]) titers at the assay upper limit of quantification biases parametric geometric means downward and invalidates the ordinary least squares (OLS) multivariate linear regressions claiming an association between M13 anti-Hib levels and baseline CD8+ T cells / gammaglobulins",
+      "Unexplained selective attrition at M13 (only n=68 evaluated for HBV vs. n=81-82 for the other four valences) and uncentralized serology across 5 centers mixing incompatible poliovirus neutralization vs. ELISA units (1/8 dilution vs. 0.5 IU/mL)"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #3 (Inumarthi Vara Padmavathi) submitted a 3-sentence broken-English boilerplate endorsement ('Useful research and give good protection to the transplant patients . Excellent efforts .and choosing these type of research is really needed to the dither generation .'); Reviewer #2 answered 'I Don't Know' to whether statistical analysis was performed appropriately; and Reviewer #1 demanded citation of an MDPI Cancers review (doi: 10.3390/cancers13236140), which the authors refused to cite on grounds of MDPI being predatory."
+  },
+  {
+    "anon_id": "OPEN_ANON_024",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Additive MPL model ignores epistasis; suggested inferring pairwise epistatic interactions across Env",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Need for a negative-control fitness correlation comparison between unrelated viral strains (CH505 vs. CH848) to demonstrate that high human-macaque concordance is not a methodological artifact",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Assumption of time-constant selection coefficients when immune pressures (autologous neutralizing antibodies, bnAbs) are time-varying",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Potential bias in inferred selection coefficients in high-entropy hypervariable loops or due to finite sequence sampling depth",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Ambiguity in whether rapid early viral fitness gains genuinely precede bnAb lineage initiation vs. experimental bnAb neutralization detection thresholds",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Absence of a formal longitudinal statistical hypothesis test (e.g., Mann-Whitney U or permutation test on fitness slope d<f>/dt prior to week 16) and potential in-sample circularity from computing trajectories using joint RM selection coefficients (Eq. 20) rather than leave-one-host-out or human-only coefficients in Figure 6 (N=13 RMs, only 4 bnAb+)",
+      "Dominance of shared high-frequency consensus reversions and glycan shifts in sequence-level cross-species fitness correlations (r=0.96, 0.95, Eq. 21) while rare mutations are shrunk to ~0 by strong L2 regularization (gamma=10), warranting direct mutation-level correlation reporting excluding reversions",
+      "Five mathematical typographical errors in the Methods equations: Eq. (5) missing N! multinomial prefactor and index a instead of alpha; Eq. (11) sum over a instead of alpha; Eq. (20) stray 'a' in Delta a mu_int; Eq. (23) upper limit L instead of alphabet size q; and Eq. (25) unbound index d inside a sum over c"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_025",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Test robustness of bat rsIFITM antiviral restriction across multiple MOIs, multi-cycle infection kinetics, and plasmid dosages, and compare transfected transcript levels to endogenous poly(I:C)-stimulated RsKT.01 cells",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Demonstrate endogenous protein expression of both rsIFITMa and rsIFITMb isoforms in native RsKT.01 bat cells and perform loss-of-function/knockout validation",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Increase sample size of cells imaged for confocal surface FLAG quantification (originally only 3 cells) and add quantitative JACoP colocalization with endosomal marker CD63",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Evaluate SARS-CoV-2 variants of concern (Wuhan, Delta, Omicron) and test negative imprinting of progeny virions",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Discrepancy between transient transfection (Fig 3B, where rsIFITMb modestly restricts IAV) and stable transduction (S5B-C Fig, where rsIFITMb shows no restriction of IAV)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of a live/dead viability dye in flow cytometry gating (S4 and S6 Figs) and request to deposit custom comparative genomics code on GitHub",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Annotation depth and genome assembly quality confounding in the 206-mammal RefSeq comparative splicing analysis (Fig 7D-E): species with higher-contiguity assemblies and deeper multi-tissue RNA-seq annotation simultaneously have more resolved IFITM paralogs (duplication) and more annotated splice isoforms, confounding the 2x2 Fisher's exact test positive association",
+      "Cell-level and field-level pseudoreplication in confocal microscopy statistics: treating >=30 individual cells (Fig 4B-C) or 10 fields of view (Fig 5A-B) as independent observations in unpaired t-tests without biological batch blocking or multi-group ANOVA correction",
+      "Missing public repository accession (NCBI SRA / GEO) for the primary poly(I:C)-stimulated R. sinicus RsKT.01 RNA-seq dataset generated in Fig 1B-D, plus omission of the transcript/isoform quantifier used downstream of STAR and use of unadjusted nominal p < 0.05 in edgeR",
+      "Internal contradiction between the gene structure model (single 2-exon gene LOC109436297 spliced via alternative first exon with identical exon 2) and the Discussion claim (line 118) that codon 70 differs between rsIFITMa (proline) and rsIFITMb (threonine)"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_026",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Low consistency between qRT-PCR and RNA-seq expression patterns across abiotic stress treatments",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of functional genetic verification (e.g., VIGS) of candidate ZbbZIP genes",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing data analysis methods in Materials and Methods and missing justification/citations for 250 mmol/L NaCl concentration and sampling timepoints",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe time-scale, unit, and directional contradictions between Methods and Results: Drought stress is sampled at 0, 3, 9, and 15 days in Methods (line 62), but Results (line 158) states that qPCR expression increased at '9 h' (hours) after drought treatment while stating in the immediately preceding sentence that 'Both expression profiles demonstrated downregulated expression of core genes subjected to drought stress'; similarly, cold stress is sampled at 0, 1, 3, 6, 12, and 24 hours in Methods, but Results (line 142) reports peaks at '12-24 d' and '0-1 d' (days)",
+      "Inverted and circular Effective Number of Codons (Nc) optimal codon analysis: partitioning a single transcription factor family (275 genes) by its own top/bottom 10% Nc tails to define 'low-expression' and 'high-expression' groups (despite having empirical RNA-seq FPKM data) and concluding that natural selection favors T-ending optimal codons, which is directly contradicted by Fig 4B showing that CAI, CBI, and Fop correlate positively with C3s and negatively with T3s",
+      "Absence of any formal differential expression testing (DESeq2/edgeR, fold-change, or FDR-adjusted p-values) or cross-study batch normalization when comparing arbitrary raw FPKM > 10 gene counts across three independent public BioProjects (PRJNA597398, PRJNA1107841, PRJNA784034)",
+      "Multiple internal numerical contradictions: total ZbbZIP denominator shifting from 275 to 276 on line 82 ('63.4% (175/276)'), miscalculated nuclear localization percentage (252/275 = 91.64% reported as '92.63%'), and stating exon counts ranged from '2 to 12' while stating in the next sentence that Subfamily S had 'only one' exon"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #2 falsely stated that 'due to the large number of members, the authors did not do some common bioinformatics analyses such as gene structure, physicochemical properties and chromosomal localisation' even though all three analyses (gene structure in S2B Fig, physicochemical properties in S1 Table, and chromosomal localization in Fig 1) were already in the manuscript."
+  },
+  {
+    "anon_id": "OPEN_ANON_027",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Missing TCGA project identifier (TCGA-SKCM) and lack of details on data normalization and batch effect correction",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Unclear dependent/target survival variable in Cox regression, risk score formula definition, and rationale for median threshold categorization",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Questioned splitting the TCGA cohort 6:4 into training and internal validation sets when three external GEO validation cohorts were already available; requested fitting the model on the full TCGA dataset (n=351)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Complete omission of wet-lab experimental protocols (cell culture, siRNA transfection, qRT-PCR, migration/invasion, Western blot) and scRNA-seq (GSE189889) methods from the Materials and Methods, Abstract, and Discussion, and lack of rationale for selecting DOCK10",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Fatal algebraic sign contradiction at the core of the paper: in the multivariate Cox model (Risk Score = ... - 0.13036 * DOCK10), DOCK10 has a negative coefficient (beta = -0.13036, p = 0.003), meaning high DOCK10 expression lowers the risk score and predicts longer survival (protective factor), yet the authors claim DOCK10 is elevated in the high-risk group (Fig 8E) and acts as a pro-metastatic oncogene whose knockdown suppresses malignancy (even citing 'coefficient = -0.13036' in their rebuttal without noticing the negative sign!)",
+      "Test-set data leakage in TCGA (n=351): performing the univariate Cox survival screen (p < 0.05, unadjusted for multiple testing) across the entire TCGA cohort to select the 9 candidate genes prior to evaluating Kaplan-Meier survival curves on the 40% internal TCGA validation split (Fig 2B)",
+      "Contradiction between the 2-way Venn diagram in Fig 1A (887 DEGs intersected with 543 ADCP genes = 9 genes) and the Methods text claiming the 9 genes came from intersecting the 181 TCGA univariate Cox survival genes with the 543 ADCP genes, plus Fig 1B-C captions falsely claiming to display 'normal tissues' in GSE46517 and GSE7553",
+      "Wet-lab validation flaws: using only a single unvalidated siRNA duplex without a second independent siRNA, performing Western blots for Ki67, ITGB1, CDH5, and GAPDH (Fig 8L) while never blotting for DOCK10 protein itself to confirm protein knockdown, relying on Ki67 mRNA/blot instead of a functional proliferation assay, and omitting replicate counts (n) and statistical tests in Fig 8",
+      "Pervasive machine-paraphrased 'tortured phrases' throughout the published text ('antibody-arbitrated', 'persuading anti-tumor immune responses', 'developing resistance to these handlings', 'not been extensively deliberate', 'immunotherapy rejoinder', 'castoff to concept a prognostic model... as trails', 'beneficial possessions', 'we industrialized an ARG-grounded prognostic model')"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #3 (Benjamin Benzon) wrote a 3-sentence praise endorsement ('Very good in silico and in vitro study, statistical analysis and data visualization are superb. The paper is written in logically coherent manner.') despite the manuscript being riddled with machine-paraphrased tortured phrases ('castoff to concept', 'immunotherapy rejoinder', 'handlings') and missing the entire wet-lab and scRNA-seq Materials & Methods sections."
+  },
+  {
+    "anon_id": "OPEN_ANON_028",
+    "num_human_reviewers": 6,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Unclear diagnostic sensitivity/specificity, Ct 39 cutoff rationale, and caveat that the H5 RT-qPCR standard curve used synthetic dsDNA rather than viral RNA",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Discrepancies in positive carton counts between text (13), Table 2 (10), and Table S3 (18), plus erroneous Ct value of 68.48 for carton 28",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Rationale for the 20x coverage threshold and 10% sub-consensus variant calling cutoff, and interpretation of sub-consensus variants and phylogenetic placement from pooled milk samples",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Screening for known mammalian adaptation and virulence markers (e.g., PB2:M631L, E627K)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Request to perform a Spearman correlation test between input vRNA copy number and sequencing depth, and explanation of 250-bp amplicon dropouts in Figure 1",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical impossibility in reported sequencing depths (Results, line 140): the authors report an 'overall average sequencing depth of 8,176x across all samples (varying from 325x to 29,256x)', yet two sentences later state that the lowest segment average depth across all samples was 199x (NA) and the highest segment average depth was 419x (PB1)—mathematically, the overall mean across segments cannot be 8,176x (>20-fold higher than the maximum segment mean of 419x)",
+      "Sample-size / p-value impossibility in the Spearman correlation added during peer review (r_s = 0.946, p = 3e-7, line 140): Table 2 contains only n = 9 cartons with quantifiable vRNA copies/mL (Carton 33 was negative on re-test), and for n = 9 (or n = 10), r_s = 0.946 yields two-sided p = 1.1e-4 (or 3.5e-5), not 3e-7 (indicating pseudoreplication across 8 segments x 9 cartons or inclusion of negative controls)"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_029",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Suggestion to use multiple representative sequenced Xcm genomes rather than a single reference genome to assess tandem repeat loci",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Suggestion to add a technical route summary paragraph and a genomic collinearity diagram (Fig 1) mapping TR loci across representative Xcm chromosomes",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mean Nei's genetic diversity (H_T) denominator error in Table 1 and Results (line 126): the 16 polymorphic loci in MLVA-16 have H_T values summing to 5.386, yielding a true mean H_T of 5.386 / 16 = 0.337 (or 4.507 / 14 = 0.322 across the 14 minisatellites), whereas the authors reported 0.300 by inadvertently dividing the 16-locus sum by 18 (5.386 / 18 = 0.2992 ~ 0.300), treating the two excluded 'ND' ICE deletion loci (Xcm2532 and Xcm2555) as zeros",
+      "Candidate TR marker accounting discrepancies: line 67 reports 23 candidate TRF loci evaluated, of which 6 were monomorphic (line 117) and 16 were retained in Table 1 (6 + 16 = 22, leaving 1 locus unaccounted for); similarly, line 67 states that 10 loci with no amplification in Xca plus 3 loci with different-sized amplicons in Xca equals 'Fourteen TR markers' (10 + 3 = 13, while Table 1 lists 11 'No' loci)",
+      "Unreported Discriminant Analysis of Principal Components (adegenet DAPC) hyperparameters (number of principal components n.pca and discriminant functions n.da retained, and whether xvalDapc cross-validation or a-score optimization was used to prevent overfitting 46 haplotypes into >0.99 assignment probabilities)"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_030",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Need for direct experimental evidence of nucleolar stress beyond p53 activation and clarification of downstream mechanisms",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of cell-type specificity of RP knockdown on proliferation (affecting actinin-negative fibroblasts as well as cardiomyocytes)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Failure to show reduced RPS15A transcript expression in family 75H proband cells carrying the c.-95G>A promoter variant (authors admitted no reduction in day 25 CMs in rebuttal)",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Weak human genetic evidence in the 25 HLHS trios and family 75H: candidate RP variants (including RPS15A c.-95G>A with MAF = 0.662%, carried by 1 in 76 individuals) are too common and have mild CADD scores incompatible with rare HLHS prevalence without an independent validation cohort",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing methodological parameters for STRING and PANTHER network enrichment testing",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe expression-quartile ascertainment bias in the STRING/PANTHER enrichment analysis (5.24-fold, p = 0.0028) and lack of a matched control trio cohort: because the WGS filtering pipeline required candidate genes to sit in the upper quartile of embryonic/fetal heart expression, and all 80 ribosomal protein genes are ubiquitously in the top expression quartile, testing the 292 filtered genes against the unstratified whole proteome (instead of an expression-matched background or control trios) artificially inflates RP enrichment",
+      "Internal functional contradictions in Table 1: knockdown of RPL13A (201H) and RPL36A had no effect on hPSC-CM proliferation (RPL13A also had no fly phenotype), rps28 CRISPR mutants had no heart phenotype in zebrafish, and knockdown of RPL3L (96H, the muscle-specific RP paralog) actually elevated CM proliferation (opposite to the proposed disease mechanism), plus 3 rows in Table 1 omit the Proband ID",
+      "Clinical syndrome mismatch with Diamond-Blackfan Anemia (DBA): heterozygous loss-of-function in core RP genes (including RPS17, RPS15, RPL26, RPS28) causes DBA (bone marrow failure / macrocytic anemia), yet no hematological or DBA clinical evaluation is addressed for the HLHS probands",
+      "Inappropriate statistical test reporting in Figure 7 (caption reports Chi-square tests on continuous replicate-level percentage averages of % CDKN1A+ and % EdU+ cells across n=4 biological wells, contradicting the Student's t-test stated in Methods) and unadjusted multiple comparisons across the 80 RP and 292 candidate gene screens"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

@@ -1,0 +1,36 @@
+<Blinded Review: TIME_ANON_0775>
+**Composite Score:** 7.6 / 10.0 (Rigor: 2.6/3.5 | Claims: 2.0/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.4/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 7.6/10
+VERDICT: PASS
+ESTIMATED_DECADE: 1990s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This plant virology and protein engineering study investigates the biophysical determinants of successful foreign epitope display on the surface of tobacco mosaic tobamovirus (TMV) coat protein (CP, 17.5 kDa, predicted $\text{pI:charge} = 5.31:-2$). The authors fuse epitopes from rabies virus (RV) glycoprotein (`G5-24`, 23 aa, $\text{pI} = 4.40$), RV nucleoprotein (`31D`, 15 aa, $\text{pI} = 12.0$), and murine hepatitis virus (MHV) spike glycoprotein (`5B19`, 10 aa, $\text{pI} = 5.94$; `5B19L`, 15 aa, $\text{pI} = 3.84$; and `RB19`, which adds a single trypsin-cleavable Arg residue to `5B19`, $\text{pI} = 8.59$) near the C-terminus of TMV CP (between $\text{Ser154}$ and $\text{Gly155}$ or after $\text{Thr158}$). While acidic or neutral hybrid CPs (`TMV-G5.24`, $\text{pI:charge} = 4.92:-8$; `TMV-5B19`, $5.31:-2$; `TMV-5B19L`, $5.01:-4$) assemble into virions and establish systemic mosaic infections in *Nicotiana tabacum* Xanthi-nn, positively charged insertions fail: `TMV-RB19` ($\text{pI:charge} = 5.64:-1$) triggers a necrotic hypersensitive response (HR) with 20-fold induction of basic `PR2` and high acidic `PR2` mRNA in `N`-gene-lacking Xanthi-nn leaves and kills 65–80% of infected BY2 protoplasts by 48 h.p.i., while highly basic `TMV-31D` ($\text{pI:charge} = 9.14:+2$) replicates in protoplasts without assembling virions and fails to accumulate in leaves. Crucially, rational charge neutralization—inserting a single Glu residue in `TMV-RB19` to create `TMV-RB19E` ($\text{pI:charge} = 5.34:-2$) or four Asp residues in `TMV-31D` to create `TMV-4D:31D` ($\text{pI:charge} = 5.43:-2$)—restores virion assembly, abolishes protoplast lethality and host necrosis, and (for `TMV-RB19E`) rescues full systemic movement and surface epitope presentation verified by immunogold electron microscopy.
+
+### 2. Methodological & Statistical Audit (STRENGTHS & WEAKNESSES & METHODOLOGICAL AUDIT)
+**Strengths:**
+- **Clean Single-Residue Gain- and Loss-of-Function Charge Titration:** The comparison across `TMV-5B19` (`LLGCIGSTCA`, net charge $-2$, systemic mosaic), `TMV-RB19` (`+Arg` -> `RLLGCIGSTCA`, net charge $-1$, necrotic HR and protoplast death), and `TMV-RB19E` (`+Glu` -> `RLLGCIGSTCAE`, net charge $-2$, complete rescue of systemic mosaic infection and protoplast viability) is an elegant, minimally perturbative demonstration that net electrostatic charge—rather than peptide length or insertion site (verified by constructing `TMV-RB19-2` at $\text{Thr158}$)—drives the necrotic phenotype. Similarly, the step-wise titration of `CP-31D` ($+2$) -> `CP-2D:31D` ($0$) -> `CP-4D:31D` ($-2$) shows a monotonic recovery of protoplast CP accumulation and local leaf infection (Figure 3, Table 1).
+- **Multi-Scale Phenotypic Characterization:** Constructs are evaluated across whole-plant systemic (`Xanthi-nn`) and local lesion (`Xanthi-NN`) hosts, single-cell `BY2` protoplast viability kinetics at two temperatures ($24^\circ\text{C}$ and $31^\circ\text{C}$ via FDA live-cell staining, Figure 4c–d), SDS-PAGE/Western blots, PhosphorImager RNA dot blots of host defense genes (acidic and basic `PR2`, Figure 6), and immunogold transmission electron microscopy ($39,000\times$, Figures 2c and 5b).
+
+**Weaknesses & Methodological Audit:**
+- **Internal Sequence Discrepancy in Materials and Methods vs. Table 1 / Figure 1:** In Materials and Methods (line 126), the text states: *"The resulting clone TMV-RB19 contains an arginine residue followed by the nine amino acid residues of the 5B19 epitope between Ser154 and Gly155"*, and lists the forward primer as `5'tAGA TTA TTA GGA TGT ATA GGA TCT ACT TGT GC3'` (33 nt) and reverse complement as `3'gaTCT AAT AAT CCT ATA TAT CCT AGA TGA ACA C5'` (33 nt). Translating this oligonucleotide gives `R-L-L-G-C-I-G-S-T-C` (10 aa, missing the terminal `Ala` of the 10-aa `5B19` peptide `LLGCIGSTCA`), unless the `GC` 3' overhang pairs with `C` from the linearized `AhdI` site in `TMV` to reconstitute `GCA` (`Ala`), in which case `5B19` has **ten** amino acid residues (as correctly stated in line 103 and shown in Table 1: `RLLGCIGSTCA`, 11 aa total), not nine.
+- **Lack of Replicate Sample Sizes ($n$) and Error Bars Definition in Figures 4 and 6:** While Figure 4b (lesion diameter), Figure 4d (protoplast viability %), and Figure 6 (PhosphorImager relative `PR2` mRNA levels) plot quantitative comparisons, the text and figure legends do not state the number of independent biological replicates ($n$ leaves, $n$ protoplast electroporations, or total cells counted per hemocytometer field) or whether error bars represent SD or SEM.
+- **Incomplete Rescue of Systemic Movement in `TMV-4D:31D`:** While charge neutralization in `TMV-4D:31D` ($\text{pI:charge} = 5.43:-2$) rescues local leaf accumulation and VLP assembly, it still fails to move systemically in `Xanthi-nn` (Table 1), indicating that steric or structural constraints beyond simple net charge/pI limit long-distance vascular movement of certain 20-aa insertions.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** Display of `G5-24` (RV glycoprotein) and `5B19`/`RB19E` (MHV spike) on the C-terminal surface of TMV CP yields viable systemic chimeric viruses with surface-exposed antigenic peptides. `[Well Supported]` by SDS-PAGE, Western blotting, trypsin cleavage, and immunogold EM with monoclonal antibodies `MAb5` and `MAb5B19` (Figures 2 and 5).
+- **Claim 2:** Positively charged peptide insertions that raise the hybrid CP $\text{pI:charge}$ above wild-type ($5.31:-2$) either abolish leaf accumulation (`TMV-31D`, `TMV-2D:31D`) or trigger `N`-gene-independent necrotic HR, `PR2` defense gene activation, and protoplast death (`TMV-RB19`), which can be reversed by inserting compensating acidic residues (`Glu` or `Asp`). `[Well Supported]` by the `RB19 -> RB19E` and `31D -> 2D:31D -> 4D:31D` mutational series (Table 1, Figures 3–6).
+- **Claim 3:** Protoplast death in `TMV-RB19` may result from hydrophobic/electrostatic C-terminal domains anchoring insoluble virions to cellular membranes and destabilizing them. `[Moderately Supported]` — Appropriately presented in the Discussion as a working hypothesis supported by co-purification with membrane debris and EM observations.
+
+### 4. Reproducibility & Data Completeness
+- **Complete Primer & Construct Sequences:** All oligonucleotide primer sequences, restriction sites (`SpeI`, `PpuMI`, `AhdI`, `NcoI`, `KpnI`), vector maps (`pCPs/p`, `U3/12-4`), and exact peptide sequences/pI/charge/MW values (Table 1) are fully provided in the text.
+- **Purification & Bioassay Protocols:** Detailed step-by-step protocols for virion purification (including Triton X-100/diatomaceous earth solubilization for insoluble `TMV-RB19E`), BY2 electroporation, FDA viability staining, and immunogold EM are thoroughly documented.
+</Blinded Review: TIME_ANON_0775>

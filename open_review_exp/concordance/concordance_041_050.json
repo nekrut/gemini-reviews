@@ -1,0 +1,317 @@
+[
+  {
+    "anon_id": "OPEN_ANON_041",
+    "pmcid": "PMC12507277",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Unfair/circular ambiguity comparison between BLASTX/DIAMOND (defined at single-protein level with max_target_seqs = 1) and kMermaid (defined at protein cluster level)"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Unmotivated two-step CD-HIT clustering pipeline (65% identity on 43K proteins in Step 1 and 70% on 1.79M proteins in Step 2) and lack of comparison to established orthology resources (KEGG/eggNOG)"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for realistic benchmark on novel/unseen taxa absent from the underlying RefSeq reference database"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Clarification of k-mer frequency definition (whether frequencies can exceed 1 when a k-mer appears multiple times in a protein) and mathematical notation in the scoring formula"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Justification for the 2 GB RAM cap and comparison against DIAMOND's tunable memory-scaling parameters"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unnormalized additive scoring across all pooled non-stop six-frame translations, which injects out-of-frame translation noise and causes linear read-length score inflation (explaining why score cutoffs had to be raised from >3 to 6.3-8.0 in the unseen 2025 RefSeq benchmark and why accuracy degrades for reads >500 nt)",
+      "Severe selection bias in the unseen 2025 RefSeq AUROC calculation (0.93-0.96), which was conditioned exclusively on the ~12-14% intersection of reads classified by both BLASTX and kMermaid while excluding ~86% of simulated reads",
+      "Coarse step-function SLURM OOM job-crash method used to measure peak RAM usage and manual Linux date command used for runtime timing, plus failure to tune DIAMOND's --block-size parameter",
+      "Implausibility of 99.77% (1,793,361 / 1,797,426) of RefSeq microbial proteins clustering into just 32,308 representatives at 70% sequence identity"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_042",
+    "pmcid": "PMC10703400",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Overstated original title and framing ('A Model of Host Adaptive Evolution to Viral Pathogens') given that inter-species divergence and domestic pig patterns have alternative explanations"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Clarification of whether 'three independent replicates' in Fig 1 meant qPCR technical replicates or independent infection experiments/wells"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Missing PCR and Sanger sequencing validation figures for the CRISPR-Cas9 edited PK15 clones"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Omission of continuous European wild boar introgression into free-range Iberian pigs as a key explanation for high Hap2 frequency in Iberian pigs"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Fundamental population-genetic confounding in the domestic pig positive selection test (Tables 2-3): conditioning on homozygosity for a recently derived focal SNP (Cys/Cys, Hap1) within the same 675 bp non-recombining coding region trivially yields near-zero haplotype diversity even under neutrality, while pooling European and Asian breeds in the ancestral Arg/Arg group induces a strong Wahlund effect (G_is = 0.439)",
+      "Non-standard manual genotyping of 751 public ENA raw sequencing datasets by aligning reads to a 675 bp transcript via web NCBI BLAST and visually calling genotypes in a multi-sequence alignment viewer without read-depth or base-quality thresholds",
+      "Incomplete reporting of PAML CODEML M8 vs M7 parameters (omitting p1, omega_s > 1, and Bayes Empirical Bayes posterior probabilities in Table 4, plus overlapping species counts 22 + 16 + 10 = 48 > 40)",
+      "Missing GenBank accession number for the newly sequenced complete PCV2d isolate genome and lack of protein-level Western blot confirmation of SYNGR2 knockout"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_043",
+    "pmcid": "PMC11142483",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Arbitrary PRS p-value and LD r^2 thresholds, low MAF (<10%) of top SNPs in Table 2, low GWAS statistical power (only 1 genome-wide significant SNP after revision), and request for genomic inflation lambda, heritability estimates, Manhattan plot, and imputation details"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Lack of significant HLA mismatch signal in the GWAS and need to adjust for HLA mismatch"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Missing public code repository for the GWAS and PRS analysis scripts"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Biologically contradictory negative weights (beta < 0) in the IBS mismatch PRS (Table 2, e.g., rs12798364 beta = -0.887, rs190087598 beta = -1.068) combined with a symmetric |D_ij - R_ij| metric, meaning donor-recipient genetic mismatches at negative-weight loci actively subtract from the calculated acute rejection risk score",
+      "Unadjusted confounding by donor-recipient pedigree relatedness (kinship/pIBD) in living-donor kidney pairs (mixing first-degree relatives and unrelated pairs without adjusting for genome-wide kinship in the Cox model), plus the implausible claim that only 6 of 352 living-donor pairs in GEN-03 had kinship coefficient < 0.1",
+      "Invalid application of GCTA-GREML to pairwise |D_ij - R_ij| mismatch scores on a censored time-to-event outcome in a mixed-relatedness cohort to claim an acute rejection heritability of 0.53",
+      "LD clumping failure in Table 2, where two PIWIL2 SNPs on Chr 8 only 29.4 kb apart (rs6557986 and rs60263168) with identical MAF (0.084 vs 0.083) and mean IBS (0.051 vs 0.052) both survived a 200 kb / r^2 < 0.2 clumping step"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_044",
+    "pmcid": "PMC12005674",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Restriction of all experiments to the insect-vector epimastigote stage rather than mammalian infective stages (trypomastigotes/amastigotes)"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Missing experimental details in Methods (exact concentrations of Bz, Nfx, and resazurin/alamarBlue; whether drugs were pure standards or extracted from tablets; separation of G418/puromycin CRISPR selection vs Bz pressure; kit catalog numbers; justification of |log2FC| > 0.58)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Underpowered RNA-seq sample size (n = 2 biological replicates for 61R_cl4 vs n = 3 for 61S) and conflation of 5 paired-end biological libraries with 'Ten paired-end samples' (10 FASTQ files) in Methods Line 62",
+      "Poly-A selection technical artifact: libraries were prepared with a poly-A tail enrichment kit, yet non-polyadenylated structural ribosomal RNAs (LSU-srRNA1, LSU-srRNA2, LSU-alpha, LSU-beta) are highlighted as the top downregulated genes in Fig 2C",
+      "Absence of any internal housekeeping loading control or total protein stain normalization in the NTRI Western blot (Line 52, S3A Fig)",
+      "Confounding of differential expression (e.g., upregulation of DNA replication genes CDC45, RAD51, TOP3) by the much faster proliferation rate of 61R_cl4 (23 h vs 35 h doubling time) and potential chromosomal aneuploidy/CNVs in T. cruzi, with zero functional or RT-qPCR validation of candidate non-NTRI genes"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_045",
+    "pmcid": "PMC11996175",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Potential contribution of female-specific GI dysmotility to the 16S microbiome changes since male and female mice were pooled in the microbiome analysis"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of quantitative morphometrics for the Paneth cell granule abnormality in Fig 4A (UEA-1 staining) and Fig 4B (TEM)"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Inaccurate description of human scRNA-seq biopsy datasets from pediatric functional GI disorders and colorectal cancer margins as 'non-diseased'"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need to discuss the cellular source of colonic Lyz1 transcript upregulation and reconcile null individual DEGs with positive Paneth GSEA enrichment"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Statistical demonstration that the relaxed unadjusted p < 0.05 DiVenn regional DEGs (331, 516, and 916 genes in duodenum, ileum, and colon, with 16-29 pairwise overlaps and 2 three-way overlaps in Fig 2C) match the exact expected false-positive counts and intersections under the global null hypothesis (~750-1,000 genes per tissue and ~2.25 three-way overlaps by chance)",
+      "Potential cage-effect confounding in 16S rDNA microbiome analysis due to group-housing mice segregated by genotype (Cre+ vs Cre-) from weaning (Line 161)",
+      "Mislabeled statistical test in Fig 5E caption (attributing Bray-Curtis beta-diversity PERMANOVA R^2 = 0.25679, p = 0.003 to an 'unpaired parametric t-test')"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_046",
+    "pmcid": "PMC12591416",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Tiny biological sample size (n = 1 pooled library of 3 retinas per group in GSE178121) and single-cell pseudoreplication in differential expression testing"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Inappropriate use of human ligand-receptor database CellChatDB.human on mouse scRNA-seq data"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Speculative and biologically implausible claim that vascular endothelial cells (VECs) participate in 'visual perception / response to light stimulus' pathways"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of wet-lab validation for bioinformatically predicted genes and drugs"
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Failure to apply multiple-testing correction (FDR/BH) in limma and clusterProfiler analyses (authors admitted in rebuttal to using unadjusted P < 0.05 because FDR correction yielded no significant results)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unedited copy-paste template artifact in Methods Line 69 referring to 'the correlation between rules and IFN-I scores' in a study about glucocorticoid-related genes",
+      "Identification of photoreceptor ambient RNA / doublet contamination as the true technical cause of VEC 'State 3' enriching for 'visual perception / light stimulus' and expressing the photoreceptor homeobox TF Rax",
+      "Internal contradiction between Methods Line 94 (describing hTFtarget as a human ChIP-seq database) and Results Line 230 (claiming use of the 'hTFtarget mouse database' after converting mouse genes to human symbols)",
+      "Gross endocrine error in Discussion claiming that both estrogen and glucocorticoids are 'steroid hormones secreted by the adrenal cortex' to explain KEGG estrogen pathway enrichment (actually driven by shared HSP90/HSPA8 chaperones)",
+      "Pharmacological absurdity of DGIdb drug predictions (ETOPOSIDE targeting universal TATA-binding protein Tbp, MAGNESIUM SULFATE ANHYDROUS targeting Fos, HYDROXYUREA targeting Klf4)"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_047",
+    "pmcid": "PMC12193713",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of wet-lab experimental validation (e.g., qRT-PCR) for bioinformatically identified genes"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Descriptive presentation lacking discussion of why amino acid levels are higher in PzP, whether tryptophan relates to auxin/IAA, and practical breeding conclusions"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Statistically invalid execution of WGCNA (and OPLS-DA) on only N = 6 total samples (n = 3 PzP vs n = 3 PS), violating WGCNA's minimum sample size requirement (N >= 15) and collapsing modules into a trivial binary two-group split",
+      "Cross-species de novo Trinity/Corset transcriptome comparison between two distinct species (P. kingianum var. grandifolium vs P. sibiricum) using FPKM without orthology mapping or specifying any DEG statistical test/FDR threshold",
+      "Duplicate enantiomeric and isobaric MRM entries reported as distinct differential metabolites on an achiral reverse-phase C18 column in Table 1 (DL-Methionine vs L-Methionine both at 150.1 -> 61.0; L-Leucine, L-Isoleucine, and L-Norleucine at 132.1 -> 86.0; NG,NG-Dimethyl-L-arginine and SDMA at 203.15 -> 70.07), plus inappropriate use of multi-group Duncan's test for a two-group comparison",
+      "Pervasive internal inconsistencies: conflicting gene/enzyme counts across Abstract (271 genes / 37 enzymes), Results (271 unigenes / 47 enzymes), and a duplicated Results section at the end of the paper (272 genes / 47 enzymes); mislabeled figure calls (Fig 5B/5C instead of Fig 7B/7C in Line 140); backwards 3'->5' ubiquitin reverse primer; and failure to deposit raw RNA-seq reads or Trinity assemblies"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Both reviewers wrote superficial 4-sentence reviews overlooking that the authors admitted in the journal submission form that the original raw data had 'passed their validity period' and were lost, and failed to notice WGCNA on N=6 samples or duplicate Results sections."
+  },
+  {
+    "anon_id": "OPEN_ANON_048",
+    "pmcid": "PMC12425225",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match",
+        "issue": "Inconsistency between Table 3 caption ('GGDC') and column header ('DDH')"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Impossible genome sequencing and assembly pipeline in Methods Line 94: claiming 150 bp paired-end reads from an Illumina NovaSeq PE150 were basecalled with Oxford Nanopore's Guppy (v4.4.1) (filtering Phred < 7) and assembled with the long-read assembler Flye (v2.9)",
+      "Pervasive self-contradictions across the manuscript: flagellation described as peritrichous in Abstract (Line 8) vs monotrichous / single polar in Results, Fig 1 TEM, and Table 1; NaCl tolerance reported as 0-5% (Abstract), 0-4% and inhibited at 8% (Results/Description), and tolerant to 1%, 4%, and 8% NaCl (Supporting Info Line 308); pH range 6.0-10.0 (Abstract) vs 4.0-10.0 (Results/Description); temperature range 10-40 C vs 4-40 C; cell size 0.5 um vs 0.7-0.9 x 2.2-3.0 um",
+      "Chemotaxonomic self-contradiction: Line 283 claims the presence of minor fatty acid C19:0 w8c in JDE115 differentiates it from other strains, whereas Table 5 (Line 270) lists C19:0 w8c as ND (Not Detected) in JDE115; plus Abstract claims ubiquinone-9 (Q-9) was detected without any quinone method or result in the text",
+      "Improper use of the provisional rank 'Candidatus' (reserved for unculturable prokaryotes under ICNP rules) for a readily culturable isolate solely to withhold the strain from public culture collections for commercial biopesticide development (Line 288)",
+      "Table 1 missing all text symbols (+/-) because reactions were encoded solely as background cell colors, plus duplicate rows (l-Arabinose, Glucuronamide) and multiple misspelled Pseudomonas species names"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer 1 wrote 3 sentences ('The article is very well structured...') and Reviewer 2 wrote 3 sentences ('The manuscript demonstrates strong technical and do support for the results...'), completely missing the Illumina+Guppy+Flye pipeline impossibility, peritrichous vs monotrichous contradiction, and color-only blank Table 1."
+  },
+  {
+    "anon_id": "OPEN_ANON_049",
+    "pmcid": "PMC12312892",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Unclear rationale for sample selection and choice of SLAF-seq over other genotyping methods, and need for deeper discussion of conservation/breeding implications and study limitations"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical impossibility in SNP count vs SLAF tag count: claiming 5,182,931 population-wide SNPs across only 40,941 polymorphic SLAF tags sequenced at 2 x 50 bp (100 bp per tag), which would require 126.6 SNPs per 100 bp polymorphic tag (and 2.18M-3.02M SNPs across 154K-260K tags per sample in Table 2)",
+      "Data duplication and sample omission in Table 1: rows DLC (Line 32) and DLC1 (Line 38) have identical read counts (5,251,972), GC% (43.53%), and Q30% (93.16%), while sample SX (present in Tables 2 and 5) is omitted from Table 1",
+      "Fatal population-genetic design flaw in Tables 3-5: pooling two distinct species (Camellia taliensis and Camellia sinensis var. assamica) inside four of the five geographic 'populations' (DL, BS, PE each having n=2 C. taliensis + n=1 C. sinensis var. assamica, vs LC having n=7 C. taliensis + n=1 C. sinensis), which artificially inflates diversity in the 3-tree groups and manufactures the claimed 'genetic erosion' in LC",
+      "Mathematical contradiction between reported pairwise F_ST and gene flow N_m (claiming N_m = 0.18 for pair A-C where F_ST = 0.217 implies N_m = 0.902), and contradictory clade assignments for DXS3 in consecutive sentences of Line 98"
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Both reviewers wrote generic high-level prose comments (in Decision Letter 1, Reviewer 1 pasted raw AI prompt output addressed to the reviewer: 'However, further revisions are suggested to fully address your original concerns...') and missed the impossible 5.18M SNPs in 40,941 100-bp tags and the duplicate DLC/DLC1 row in Table 1."
+  },
+  {
+    "anon_id": "OPEN_ANON_050",
+    "pmcid": "PMC12393735",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Comparison with another adenoviral vector serotype (Ad5 nCoV-19) to test whether differential type I IFN induction explains vector-specific humoral immunogenicity"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Inclusion of flow cytometry gating strategies, total (non-specific) IgG measurements upon pDC depletion, and comparison of ChAdOx1 nCoV-19 vs ChAdOx1 GFP on CD4+ T cell activation to separate vector- vs spike-specific T cell responses"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Correlation of baseline pre-existing S1-specific B cell frequency with Day 14 anti-S1 IgG titers, and extended 27-day culture of pre-pandemic tonsils to test de novo priming"
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Ambiguity in the exact cellular source of IL-6 (B cells vs cDCs) due to altered cytokine consumption or cross-regulation in cell-depletion assays"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Swapped and erroneous monoclonal antibody clone names in Table 1: AF488 anti-SARS-CoV-2 spike (Line 78) is listed as clone 3G8 (which is the anti-CD16 clone on Line 82), and the clone names for PE-Cy7 CD19 (listed as M5E2 on Line 81) and BV650 CD14 (listed as HIB19 on Line 86) are swapped",
+      "Unaccounted donor counts in post-pandemic cohort screening (Line 139: 22 post-pandemic donors minus 4 excluded for spontaneous baseline anti-S1 IgG leaves 18 donors, yet the next sentence reports n = 13/16 responders without explaining the remaining 2 donors)",
+      "Lack of formal multiple-testing correction (FDR/Holm) across parallel Wilcoxon tests of 6-7 cell types and cytokines in Figs 2-4, plus a figure cross-reference typo in Line 209 (Fig 2G instead of Fig 3G)"
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

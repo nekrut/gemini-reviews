@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Regenerate index.json and README.md; fail on diff
-        run: python3 scripts/update_leaderboard.py && git diff --exit-code index.json README.md
+      - name: Regenerate index.json, catalog.json, and README.md; fail on diff
+        run: python3 scripts/update_leaderboard.py && git diff --exit-code index.json catalog.json README.md

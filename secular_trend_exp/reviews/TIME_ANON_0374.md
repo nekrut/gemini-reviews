@@ -1,0 +1,30 @@
+<Blinded Review: TIME_ANON_0374>
+**Composite Score:** 8.1 / 10.0 (Rigor: 2.7/3.5 | Claims: 2.1/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.6/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This study reports the cloning, genomic splice-site mapping, biochemical characterization, and developmental expression analysis of the *Drosophila melanogaster* homologue of the actin-severing and capping protein gelsolin (localized to chromosome `3R` at `81F–82A`). By screening embryonic cDNA libraries (`1–4 h` and `12–24 h`) with a degenerate RT-PCR product from conserved segment 1, the authors isolate two alternatively spliced transcript classes (`clone A`, `2,888 bp`, EMBL `X75630`; and `clone B`, `2,651 bp`, EMBL `X75629`) that share a common 3' coding region across all six canonical gelsolin repeat segments but differ at their 5' exons. They demonstrate that `clone A` encodes a secreted isoform with a functional N-terminal signal peptide (cleaved upon *in vitro* translation in rabbit reticulocyte lysate supplemented with canine microsomal membranes) and is transcribed specifically in the embryonic fat body and secreted into adult hemolymph, whereas `clone B` encodes a cytosolic isoform transcribed in the visceral musculature of the gut. Using affinity-purified polyclonal antibodies, they show that maternally supplied cytosolic gelsolin colocalizes with cortical F-actin caps and mitotic networks during syncytial blastoderm cycles 1–13, but is selectively depleted from the F-actin-rich contractile base (furrow canal) of invaginating cleavage furrows during interphase 14 cellularization. This is a well-executed, classic developmental cell biology study.
+
+### 2. Methodological & Statistical Audit
+- **Rigorous Demonstration of Alternative Splicing and Signal Peptide Processing:**
+  - The authors verify that `clone A` and `clone B` arise from alternative 5' exon splicing of a single gene by hybridizing 5'-specific probes to the same `2.6 kb EcoRI–HindIII` genomic/cosmid fragment and sequencing the genomic exon–intron junctions (`Figure 3b`).
+  - Functional validation of the putative signal peptide in `clone A` via canine microsomal membrane co-translation (`Figure 4b`) cleanly demonstrates selective processing of the `clone A` product to a faster-migrating mature polypeptide, while the `clone B` product is unaffected by microsomes.
+  - To prove that the gelsolin immunoreactivity in adult hemolymph (`Figure 4c`) represents bona fide extracellular secretion rather than cell lysis during thoracic centrifugation, the authors re-probe the same Western blot for cytoplasmic $\beta$-tubulin, confirming that $\beta$-tubulin is virtually undetectable in hemolymph from 3 or 50 flies compared to whole-fly extracts.
+- **Proteolytic Degradation Band (`63 kD` vs. `102 kD`) and Antibody Specificity:**
+  - On Western blots of embryonic and adult extracts (`Figures 4a, 4c, 5`), the affinity-purified anti-gelsolin antibody detects both the full-length `102 kD` polypeptide and a prominent `63 kD` species (and in adult hemolymph, *only* the lower band is visible in `Figure 4c`). The authors transparently address this issue, showing that antibodies affinity-purified against the `102 kD` band recognize the `63 kD` band and vice versa, that the `63 kD` band also appears in purified recombinant bacterial gelsolin, and that flash-freezing embryos in liquid nitrogen increases the `102 kD : 63 kD` ratio. While this supports rapid proteolytic cleavage of native gelsolin during extraction/hemolymph harvesting, inclusion of protease inhibitor cocktails during hemolymph collection would have strengthened the demonstration of intact secreted `102 kD` plasma gelsolin *in vivo*.
+  - Because the polyclonal antiserum was raised against the common `NsiI–HindIII` region (`nt 487–2503`), immunofluorescence in whole-mount embryos cannot distinguish between the secreted and cytosolic protein isoforms, although the authors complement this with isoform-specific 5' RNA *in situ* hybridization probes (`Figure 6`).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **`[Well Supported]` *Drosophila* produces both secreted (hemolymph/fat-body) and cytosolic (visceral muscle/maternal cortical) gelsolin isoforms via alternative 5' splicing:** Supported by complete cDNA and genomic splice-junction sequencing (`Figures 2–3`), microsomal cleavage assays (`Figure 4b`), $\beta$-tubulin-controlled hemolymph Western blots (`Figure 4c`), and non-overlapping isoform-specific *in situ* hybridizations (`Figure 6`).
+- **`[Well Supported]` Maternal/embryonic cytosolic gelsolin colocalizes with cortical F-actin networks during syncytial cleavage cycles 1–13 but is excluded from the advancing cleavage furrow canal during cellularization (`interphase 14`):** Double/triple labeling with rhodamine-phalloidin, affinity-purified anti-gelsolin, and DAPI (`Figures 7–9`) clearly documents the spatial uncoupling of gelsolin from the contractile actomyosin ring at the base of the cellularization furrow.
+- **`[Moderately Supported]` Functional conservation of Ca$^{2+}$, $\text{PIP}_2$, and F-actin severing/nucleating activities:** Deduced from sequence conservation of human segment 1 crystal-structure contact residues (`F72`, `I127`, `V130`, `F173`, `E121`, `D134`, `V169`); direct *in vitro* pyrene-actin severing/capping assays with purified *Drosophila* gelsolin were not performed in this study.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** Complete nucleotide and deduced amino acid sequences are printed in `Figure 2` and deposited in EMBL/GenBank/DDBJ under accession numbers `X75630` (secreted gelsolin) and `X75629` (cytoplasmic gelsolin). Degenerate PCR primers, splice-junction sequencing primers, restriction fragments for isoform-specific *in situ* probes, and staining/hybridization protocols are fully detailed.
+</Blinded Review: TIME_ANON_0374>

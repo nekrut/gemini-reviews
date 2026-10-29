@@ -1,0 +1,43 @@
+<Blinded Review: TIME_ANON_0499>
+**Composite Score:** 6.8 / 10.0 (Rigor: 2.3/3.5 | Claims: 1.6/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.3/2.0)
+**Bias Category:** Over-Interpretation/Clinical
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+OVERALL_SCORE: 6.8/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2000s
+
+### 1. Executive Summary / SUMMARY
+Motivated by the Women's Health Initiative (WHI) finding that combined estrogen plus medroxyprogesterone acetate (MPA) hormone replacement therapy (HRT)—unlike estrogen alone—increases invasive breast cancer risk, this study dissects the progestational (PR-mediated) versus androgenic (AR-mediated) transcriptional profiles of MPA in human breast cancer cells. Using `T47Dco` ($\text{PR-A}^+/\text{PR-B}^+$), PR-negative `T47D-Y`, isoform-specific `T47D-YA` / `T47D-YB`, `HeLa-A` / `HeLa-B`, and a newly engineered PR-negative, AR-positive `T47D-Y` subline (`Y-AR`, clone 17), the authors combine `PRE2/TATA-luciferase` and `MMTV-luciferase` reporter assays ($0.01\text{ nM}$ to $1\ \mu\text{M}$) with Affymetrix `HG-U133 Plus 2.0` (~47,000 transcripts) microarray expression profiling in triplicate after 6 hours of hormone treatment, plus RT-PCR confirmation of 5 target genes (`KLK3`/`PSA`, `F3`, `MAFB`, `KRT4`, `CDKN1C`/`p57`). They demonstrate that: (1) in $\text{PR}^+$ `T47Dco` cells, $10\text{ nM}$ MPA and $10\text{ nM}$ natural progesterone regulate largely overlapping sets of endogenous genes; (2) in $\text{PR}^-/\text{AR}^+$ `Y-AR` cells, $10\text{ nM}$ MPA acts as a potent androgen, regulating ~60% (143 genes) of the genes regulated by $10\text{ nM}$ dihydrotestosterone (DHT), whereas natural progesterone is inactive on AR; and (3) $10\text{ nM}$ ("physiologic") and $1\ \mu\text{M}$ ("pharmacologic") MPA regulate ~70% (165 genes) of the same transcripts in `Y-AR` cells. While the experimental dissection of PR versus AR signaling is well designed and biologically illuminating, the authors over-extrapolate from a 6-hour *in vitro* assay in a single engineered cell clone to argue that high-dose therapeutic MPA in oncology is clinically superfluous, omit multiple-testing (FDR) correction in their microarray analysis, and leave several typographical/accession errors in the text and tables.
+
+### 2. Methodological & Statistical Audit / WEAKNESSES & METHODOLOGICAL AUDIT
+- **Clinical Over-Interpretation of 6-Hour *In Vitro* Receptor Saturation in an Engineered Clone to Oncology Dosing:**
+  - Because $10\text{ nM}$ and $1\ \mu\text{M}$ MPA produced similar 6-hour transcriptional profiles in `Y-AR` cells (where CMV-driven AR is already saturated at $10\text{ nM}$ free hormone in charcoal-stripped medium), the authors state in the Abstract (line 11) that *"high-dose therapeutic MPA may be superfluous"* and go even further in the Discussion (Offset 46080, line 8): *"Based on this we would argue that there is no rationale for using high-dose MPA for any indication, and suggest that lower doses might suffice for treatment of endometrial and breast cancers."*
+  - This clinical claim is unsupported by the experimental system: *in vivo* high-dose MPA therapy in metastatic breast or endometrial cancer depends on serum protein binding (albumin/SHBG), intratumoral tissue penetration, central hypothalamic-pituitary-gonadal axis suppression, glucocorticoid receptor (GR) activation (which requires higher concentrations and was absent here because `T47D-Y` cells lack functional GR; line 105), and long-term cytostatic/pro-apoptotic effects, none of which are modeled by a 6-hour acute transcriptomic readout in a single GR-negative cell line without proliferation or *in vivo* efficacy assays.
+- **Lack of Multiple-Testing (FDR) Correction in Microarray Differential Expression Analysis:**
+  - In Methods (`Expression profiling`, line 47), Affymetrix `HuFL-U133 plus2` arrays interrogating ~47,000 human transcripts across triplicate experiments were analyzed in `GeneSpring v6.0` using a 2.0-fold change cutoff and an unadjusted one-way ANOVA $P < 0.05$, without Benjamini-Hochberg false discovery rate (FDR) or family-wise error rate adjustment across the 47,000 probe sets.
+- **Reliance on a Single Stably Transfected Clone (`Y-AR` Clone 17) Without Antagonist Rescue in Microarray Profiling:**
+  - Although 3 AR-positive clones were identified during G418 selection of electroporated `T47D-Y` cells, all microarray and RT-PCR experiments in the $\text{AR}^+$ background were conducted in a single clone (`clone 17`, renamed `Y-AR`) expressing AR from a viral `pCMV5` promoter. While the Discussion mentions (`data not shown`, Offset 46080 line 6) that bicalutamide ($10\ \mu\text{M}$) inhibited $0.1\text{ nM}$ DHT/MPA reporter activity by 80–90%, bicalutamide co-treatment was not included in the microarray or RT-PCR experiments, nor were findings cross-validated in a second `Y-AR` clone or an endogenous $\text{AR}^+/\text{PR}^-$ breast cancer line (e.g., MDA-MB-453).
+- **Typographical, Editorial, and Accession Errors in Text and Tables:**
+  - **Unedited editorial comment in text (line 27):** Line 27 reads: *"namely 5α-pregnan-3β, 6α-diol-20-one it's correct[ 34 ]."* — an internal author proofing note (`it's correct`) was inadvertently left in the published manuscript sentence.
+  - **Incorrect GenBank accession for `KLK3` (PSA) in Table 1 (line 68):** Table 1 lists `KLK3 [72] (GenBank: NM_001468 )`. However, `NM_001468` is the RefSeq accession for *CTAG1B* (*NY-ESO-1*, cancer/testis antigen 1B); the correct RefSeq accession for *KLK3* (prostate-specific antigen) is `NM_001648` (a digit transposition of `46` vs `64`).
+  - **Unit typo in Figure 6a legend (line 126):** The legend states *"Luciferase activity is shown as a percentage of 1 mmol/l DHT (which was set at 100%)"* instead of `1 μmol/l DHT` ($1,000\text{ nmol/l}$).
+  - **Table 2 row count and redundant probe sets (lines 145–180):** Table 2 is titled *"Top 33 dual regulated genes"*, but contains only 31 rows, and several entries are duplicate Affymetrix probe sets targeting the same gene (e.g., three rows for *FKBP5* [`NM_004117`, `W86302`, `AI753747`], two rows for *MAFB* [`NM_005461`, `AW135013`], and two rows for *KLF4* [`NM_004235`, `BF514079`]).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality / STRENGTHS
+- **Strengths:**
+  - **Smart Experimental Choice of the 6-Hour Timepoint and Isogenic Receptor Backgrounds:** By profiling `T47Dco` ($\text{PR-A/B}^+$), `T47D-Y` ($\text{PR}^-/\text{AR}^-$), and `Y-AR` ($\text{PR}^-/\text{AR}^+$) at 6 hours, the authors cleanly avoid the confounding rapid metabolism of natural progesterone ($t_{1/2} = 2\text{–}4\text{ h}$ in T47D cells) while isolating direct PR-dependent versus AR-dependent transcription on an isogenic cellular background.
+  - **Clear Demonstration of Dual PR/AR Agonism by Physiologic MPA:** The combination of dose-response reporter curves across PR-A, PR-B, GR, and AR (Figs. 2, 4, 5, 6), confocal AR nuclear translocation (Fig. 6b), endogenous `PSA`, `F3`, `MAFB`, `KRT4`, and `p57` RT-PCR (Figs. 6c, 7b), and global microarray profiling convincingly proves that $10\text{ nM}$ MPA is qualitatively similar to natural progesterone on PR but acts as a potent full agonist on AR (whereas progesterone and R5020 do not).
+- **Claim Proportionality:**
+  - `[Well Supported]` At $10\text{ nM}$ in breast cancer cells, MPA acts as a dual-function hormone: its transcriptional profile through PR closely mimics natural progesterone, whereas through AR it strongly mimics DHT and induces canonical androgen target genes (`KLK3`/PSA, `F3`, `MAFB`, `KRT4`).
+  - `[Moderately Supported]` A subset of ~55 endogenous genes (including `SGK1`, `SCNN1G`, `PDK4`, `FKBP5`, `MAFB`, `F3`, `KLF4`) can be transcriptionally upregulated either by progesterone/MPA via PR in `T47Dco` cells or by DHT/MPA via AR in `Y-AR` cells (Table 2).
+  - `[Overstated]` Claim that there is *"no rationale for using high-dose MPA for any indication"* in clinical oncology based solely on 6-hour *in vitro* microarray overlap between $10\text{ nM}$ and $1\ \mu\text{M}$ MPA in `Y-AR` cells.
+
+### 4. Reproducibility & Data Completeness
+- Cell line construction, hormone concentrations, Affymetrix `HG-U133 Plus 2.0` hybridization protocols, RT-PCR primer sequences (Table 1), and processed gene lists (`Additional files 1 and 2`) are well documented, though public microarray database accession numbers (e.g., NCBI GEO or ArrayExpress CEL files) are not provided.
+</Blinded Review: TIME_ANON_0499>

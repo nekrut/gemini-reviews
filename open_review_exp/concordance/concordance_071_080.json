@@ -1,0 +1,339 @@
+[
+  {
+    "anon_id": "OPEN_ANON_071",
+    "pmc_id": "PMC12571266",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Unadjusted multiple hypothesis testing across the six bacterial phyla tested in multivariable binary logistic regression (Firmicutes nominal p = 0.045)."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Binary visual read of amyloid PET has ~88% sensitivity/specificity and requires cross-validation against quantitative regional SUVR."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of genus-level taxonomic regression analyses and alpha/beta diversity comparisons between amyloid-positive and amyloid-negative groups."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Missing statistical comparisons across baseline demographic and cognitive characteristics (CDR >= 0.5, MMSE, education) in Table 1."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Missing public sequence repository deposition for raw 16S rRNA amplicon sequencing data."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Arbitrary median dichotomization of compositional 16S microbiome relative abundances ('above-median' vs. 'below-median') instead of standard compositional microbiome regression methods (CLR transformation, ANCOM-BC, ALDEx2, or MaAsLin2).",
+      "Omission of statistically significant measured confounders (education years, p = 0.006) and key unmeasured confounders (APOE e4 genotype, BMI, diet) from the multivariable logistic regression model, plus failure to report the number of participants with recent antibiotic use in Table 1.",
+      "Internal degrees-of-freedom error in the Shannon Index equal-variance Student's t-test (df = 125 reported for N = 136 total participants, where equal-variance df must be n1 + n2 - 2 = 134).",
+      "Opposite-direction nominal genus-level associations within Firmicutes (Clostridium OR = 2.34 vs. Dorea OR = 0.47) that contradict the claim of a coherent phylum-wide effect."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_072",
+    "pmc_id": "PMC12373286",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Mendelian inheritance expectations for presence-absence variation (PAV) genes and potential structural/recombination mechanisms driving deviations from Mendelian ratios in F1 progeny needed formal explanation."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Genomic context and transposable element enrichment flanking PAV loci, as well as evolutionary mechanisms generating PAVs (tandem duplication, horizontal viral integration), required analysis and discussion."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Two reference gonad samples in Branchiostoma belcheri skewed the coverage-vs.-dispensable-gene correlation in Fig 1b, and BelcheriHV-1 SNP frequency/read-depth plots (Fig 3b-d) needed clearer biological explanation."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Bioinformatics pipeline and figure-generation scripts were not deposited in a public code repository."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Systematic downward bias in observed F1 offspring gene absence rates relative to Mendelian expectations (39.6% vs. 50% for Class II; 17.7% vs. 25% for Class III) and 32.8% 'undetermined' parental genes caused by allowing multi-mapping reads in bwa mem combined with low (~7x) F1 sequencing depth.",
+      "Multiple internal numerical and species-label contradictions between text and tables: BelcheriHV-1 coding density reported as 72.7% in text vs. 70.4% in Table 2 (and genomic sub-blocks summing to 142.5 kb vs. 149.9 kb total length); BelcheriHV-2 ORF count reported as 72 in text vs. 74 in Table 2; big defensin absence rate reported as 77% in Results vs. 88% in Discussion; Class III F1 absence rate reported as 19% in text vs. 17.7% in Table 3; Discussion line 188 misattributing the B. floridae parent-offspring cross to B. belcheri; Fig 8 caption citing Table 2 instead of Table 3."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_073",
+    "pmc_id": "PMC11410224",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Retrospective Nextclade clade assignments benefit from hindsight compared to unstable lineage definitions during real-time variant emergence, requiring comparison against historical Nextclade versions."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Low 95% posterior prediction interval coverage in high-sequencing countries (USA and UK) due to multinomial over-dispersion and time-varying fitness requires uncertainty calibration analysis."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Evaluation needed to be extended to lower-income countries with sparser/pulsed sequencing effort and to multi-country hierarchical/pooled multinomial logistic regression models."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Synthetic downsampling assumptions regarding recent-week backfill and guidance on minimum sample counts in low-prevalence settings required clarification."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Missing cell entry in Table 1: the '30 Lead from date of estimation' column under 'Mean Absolute Error' for Brazil - GARW is completely blank.",
+      "Nextstrain clade nomenclature error in Methods line 191, which identifies the initial Omicron BA.1 reference strain as 'clade 21L' instead of 'clade 21K' (21L is BA.2).",
+      "Uncompiled BibTeX citation key in Discussion line 154 ('Susswein et al. susswein2023leveraging') and minor internal numerical discrepancies between Results and Discussion (0-day MLR MAE range 2.2-8.6% in text vs. 2.10-8.60% in Table 1; 30-day median sequence counts 173, 31, 44 in Results vs. 170, 30, 43 in Discussion)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_074",
+    "pmc_id": "PMC12377599",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Ambiguity in how subsequent SARS-CoV-2 infections (re-infections or control group cross-over infections) during the 3-year follow-up period were handled."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for stratification of cancer incidence by specific anatomical cancer types and by COVID-19 clinical severity."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Unmeasured confounding by COVID-19 vaccination status and pandemic-era disruptions to routine cancer screening and healthcare utilization."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for Cox proportional hazards model fit diagnostics (concordance index, Schoenfeld residuals) and explicit definition of 'active patient in the past 12 months'."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Pre-procedural diagnostic testing bias (reverse causation / ascertainment bias) in March-November 2020: patients undergoing endoscopies, biopsies, imaging, or surgeries for suspected malignancy were systematically required to take a pre-procedure SARS-CoV-2 test (mostly testing negative) and subsequently received a pathological cancer diagnosis shortly after the 30-day landmark.",
+      "Failure to account for the competing risk of death (16.9% 3-year mortality; 84,542 deaths) using Fine-Gray subdistribution hazard models, which explains why the apparent protective association is absent in ages 18-44 and monotonically increases in ages 75-99 (aHR = 0.63).",
+      "Severe internal arithmetic and sample-size contradictions: Abstract reports 88,590 COVID-19+ and 427,566 COVID-19- (summing to 516,156 != 499,396), contradicting Table 1 and Results (85,680 COVID-19+ and 413,716 COVID-19-); Table 1 COVID-19+ age group percentages (60.7% and 60.9%) sum to 121.6%; Table 1 mortality counts (69,520 + 14,890 = 84,410) do not sum to Total Mortality (84,542); Table 5 cancer events sum to 54,853 vs. 55,840 in Tables 2 and 3 (987 missing events).",
+      "Direct self-contradiction between Abstract/Discussion ('except in Asians') and Results/Table 4 ('reduction in new cancer diagnoses was similar between white, black, Asian, and Hispanic populations', where Asian aHR = 0.73 matches White aHR = 0.74)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #1 wrote only a single 88-word conversational paragraph ('Of course there are three possibilities--increase, decrease or no effect. This is an interesting correlational finding, and even when you pull the confounds out a 25% difference remains, which is large enough to justify publication, but it could just be a statistical fluke...')."
+  },
+  {
+    "anon_id": "OPEN_ANON_075",
+    "pmc_id": "PMC12697965",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Confounding between partner decision noise (beta) and partner reward performance, choice predictability, and cognitive effort in a stationary bandit environment."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Ambiguity in whether learning style (imitation vs. reward learning) is a stable trait driving partner choice or a state adaptation to the chosen partner's noise level, and whether mixture weights vary dynamically over trials."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for posterior predictive checks reproducing behavioral learning curves and GLMM effects, as well as parameter recovery stratified by partner choice group."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Deviations from the OSF preregistration (pooling pilot and main datasets for exploratory analyses, power calculation details) required explicit disclosure."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Non-independence in the GLMM specification: fitting three separate binary mixed-effects logistic regressions (logit P(choice = X), Y, Z) to mutually exclusive bandit arms on the same trials and pooling their fixed-effect slopes/SEs via inverse-variance weighting treats negatively correlated multinomial outcomes as independent and underestimates standard errors by ~sqrt(3).",
+      "Typographical error in the dependent variable definition of Equation (1) in Methods, which states 'coded as 1 if the partner's choice was X on trial t' instead of 'coded as 1 if the participant's choice was X on trial t'."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_076",
+    "pmc_id": "PMC12680216",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Severely underpowered sample size (N = 7 total; n = 3 vs. n = 4), inability to verify normality for Student's t-tests, and need for non-parametric Mann-Whitney U tests and effect size discussion."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Missing statistical comparisons for baseline characteristics in Table 1, where baseline BMI is significantly imbalanced between arms (p = 0.03)."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for within-group paired longitudinal statistical comparisons across baseline, Day 5, and Day 9."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of clinical justification for HOMA-IR as primary endpoint over a 4-day window, arbitrary glucose cutoff of 140 mg/dL, gut microbiome analysis, and unmeasured dietary protein intake."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical impossibility of achieving a two-sided exact Mann-Whitney U p < 0.05 with n1 = 3 and n2 = 4 (minimum possible two-sided exact p = 2 / C(7,3) = 2/35 = 0.0571 > 0.05), proving that the significant non-parametric p-values added in revision (e.g., p = 0.03) are artifacts of an invalid asymptotic normal approximation without continuity correction.",
+      "The headline between-group difference in plasma D-serine (+0.24 vs. -0.32 nmol/mL, p = 0.03) was driven by a significant within-group dietary-washout decrease in the unblinded control group (p = 0.02 after restricting fermented foods) rather than a significant within-group increase in the risperidone group (p > 0.07).",
+      "Mislabeling of a per-protocol/complete-case analysis (n = 3 vs. n = 4 after excluding 1 post-randomization dropout from the 8 randomized participants) as an 'intention-to-treat' analysis.",
+      "Unit errors in the Abstract and Results reporting urinary D-serine/creatinine and D-alanine/creatinine ratio changes in 'nmol/mL' instead of 'mmol/g Cr', plus baseline HOMA-IR inclusion criterion violation (1.6 +/- 0.6 in controls despite required baseline HOMA-IR >= 1.6)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_077",
+    "pmc_id": "PMC12165384",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Justification for thresholded step-function tumor diffusion D_T(u) ('go-or-grow') and whether high predicted efficacy against diffusive tumors is an artifact of density thresholding."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Motivation for the exhausted CAR T-cell compartment V_E(t), killing rate saturation D(x,t), and 20% solid-tumor parameter scaling, requiring global/local sensitivity analysis."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Justification for modeling intracavitary delivery as a uniform spherical shell of CAR T cells without explicit cavity fluid geometry and fitting to mean mouse BLI trajectories."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Typographical error in the governing CAR T-cell PDE (Equation 3): the diffusion term is written as div(D_C grad u) (the Laplacian of tumor cell density u) instead of div(D_C grad v).",
+      "Mathematical error in the 3D spherical volume integral for exhausted CAR T cells (Equation 7): the spherical shell Jacobian is written as 4*pi*r dr (which has dimensions of area, cm^2) instead of 4*pi*r^2 dr.",
+      "100-fold discrepancy in the reported CAR T-cell diffusion coefficient D_C between the Parameter Estimation section (D_C = 1.38 cm^2/day) and the Materials and Methods murine fitting section (D_C = 0.0138 cm^2/day), plus dimensional inconsistency in the time-step formula dt = min(a dr / D_C, dr / 5).",
+      "Radius-vs.-diameter confusion (1 cm radius / 2 cm diameter mislabeled as 'detectable tumor radius reached 2 cm' in Fig 6 caption and Results line 214) and copy-paste error in Fig 4 caption labeling intracavitary delivery simulations as 'intratumoral'."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_078",
+    "pmc_id": "PMC12633890",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Sensitivity analysis should include sensory impairments (hearing and vision) and separate brain-related conditions (stroke, psychiatric disorders) from non-brain chronic conditions."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Imprecise estimates in the smaller African ancestry sample should be reported with exact HRs/95% CIs and framed as inconclusive due to limited statistical power and cross-ancestry PRS transferability rather than 'comparable trends'."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Informative censoring / outcome ascertainment bias caused by excluding proxy respondents at every follow-up wave, which systematically drops HRS participants when they develop moderate-to-severe incident dementia and can no longer complete the self-respondent telephone cognitive battery.",
+      "Construction of the Alzheimer's polygenic score (pT = 0.01) without linkage disequilibrium (LD) pruning/clumping, resulting in a PGS-AD that fails to predict incident dementia even in the large European ancestry cohort (HR = 1.05, 95% CI: 0.95-1.16, p = 0.30).",
+      "Direct internal contradiction between the Abstract/Results (which report that PGS-AD was not associated with incident dementia, HR = 1.05) and the Conclusions section (which falsely claims that 'higher genetic risk for AD' was significantly associated with elevated dementia risk).",
+      "Outcome-dependent exclusion of N = 80 rapid progressors (who transitioned from normal cognition to dementia between biennial waves without an intermediate CIND wave) from the CIND risk set, plus truncated African ancestry rows in Table 2 and '2018 and 2010 wave' typos in Figs 1-2 captions."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_079",
+    "pmc_id": "PMC11486489",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Sensitivity of MCSM predictions to the single 33-exudate medium (where only 84 of 243 GSMMs grew) and need for benchmark validation on a known ground-truth trophic process."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Limitations of automated CarveMe reconstruction (overestimation of auxotrophies, missing secondary metabolism) and artificial thermodynamic loops in regular FVA vs. loopless FVA."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Combinatorial FVA assumption: FVA computes min/max flux bounds per reaction independently and does not guarantee that multiple secreted metabolites can be co-secreted in a single feasible flux state."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unbounded mass-balance violation in MCSM where any metabolite with a non-zero FVA secretion flux at 90% biomass optimality is converted into an unlimited uptake bound (1000 mmol/gDW/h) in the next iteration, combined with the ad-hoc manual injection of 31 organic phosphorus (carbon + phosphorus) compounds from CarveMe minimal_medium at Iteration 4 after root-exudate succession stalled at Iteration 3.",
+      "High rate of stoichiometric reconstruction failure: 152 of 395 high-quality MAGs (38.5%) failed the MEMOTE stoichiometric consistency check (score <= 90%) after CarveMe reconstruction and were discarded.",
+      "Application of parametric one-way ANOVA + Tukey HSD to heavily right-skewed, combinatorially multiplied 5-node PMM path counts (ranging from 398 to 50,628 paths per GSMM) across a small subset of primary consumers without reporting exact group sample sizes (n_H, n_S, n_NA) or non-parametric robustness checks."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_080",
+    "pmc_id": "PMC12711027",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Need for an explicit mathematical model of plasmid competition to generalize the parameter regimes under which horizontal and vertical transmission advantages allow streamlined plasmids to displace wild-type AMR plasmids."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Investigation of the faint ~1 kb deletion band in ancestral R1 colony PCR to distinguish pre-existing in vivo deletion variants from in vitro PCR template-switching across IS1 repeats."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Verification that plasmid segregation loss is negligible over 8 days so vertical competition is not confounded by plasmid-free cells, and inclusion of a full-length R1 TcR control in the barrier invasion assay."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Contextualization with prior literature on satellite plasmids (Zhang et al., 2019) and plasmid acquisition cost (Ahmad et al., 2023), and replacing 'stealth/deleted plasmids' terminology with 'streamlined plasmids'."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical discrepancy between the text description of the ODE model and the displayed ODE system (Methods lines 46-75): the text states that conjugation into a co-infected cell (N_WM) displaces the resident plasmid with probability 1/2 to preserve structural neutrality (citing Lipsitch et al. [59]), but the displayed equations for dN_W/dt, dN_M/dt, and dN_WM/dt omit all co-infection displacement terms (+/- 0.5*(1-k)*N_WM*lambda_i), violating structural neutrality in the printed equations (and omitting the definition of total cell density T = N_0 + N_W + N_M + N_WM).",
+      "Pseudoreplication in the exponential growth-rate statistical analysis (lm(growth_rate ~ strain * plasmid * rep_nb) with df = 518 and TukeyHSD), which treats 12 technical replicate wells on the same 96-well plate as independent error degrees of freedom rather than modeling the n = 3 independent biological cultures per strain as random effects."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

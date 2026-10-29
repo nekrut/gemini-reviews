@@ -1,0 +1,306 @@
+[
+  {
+    "anon_id": "OPEN_ANON_081",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Lack of formal statistical variance partitioning and pairwise comparisons quantifying inter-laboratory versus treatment variation across root microbiome and exometabolome profiles.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Apparent discrepancy between root inoculum (22 PCR cycles) and media inoculum (30 PCR cycles) 16S profiles, and unexplained 'Unknown' sequence reads.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Non-standardized root image segmentation across participating laboratories (automated RhizoNet in Labs B-E versus manual ImageJ/SmartRoot in Lab A due to condensation).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of a single-strain Paraburkholderia sp. OAS925 inoculation control and over-reliance on soft-agar motility to explain dominant root colonization.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unblocked pooling in Figure 2b plant shoot biomass one-way ANOVA: pooling 5 labs x 7 replicates = 35 observations per group while reporting 'n = 7' in the caption without modeling Laboratory as a fixed blocking or random effect despite major inter-lab chamber light (110 vs 150 umol/m2/s) and temperature differences.",
+      "Compositional closure artifact in Section 2.6: applying standard Gaussian two-way ANOVA directly to untransformed 16S relative abundances across treatments where Paraburkholderia sp. OAS925 accounts for ~98% of reads in SynCom17 and 0% in SynCom16 mathematically forces opposite treatment effects on all remaining taxa.",
+      "Internal discrepancy between Figure 2c caption (stating Lab A root segmentation used 'ImageJ') and Methods Section 4.3 (stating Lab A used 'SmartRoot V4.21'), plus a typographical error ('2 x 00 indexed run recipe') in Section 4.6."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_082",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Small single-cell RNA-seq sample size (n = 9 out of 10 TNBC cases in GSE176078) and complete absence of wet-lab experimental validation.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Methodological disconnect between deriving gene markers in single-cell immune subclusters and evaluating their prognostic value in unfractionated bulk tumor transcriptomes.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unclear selection of heatmap genes, missing time units on Kaplan-Meier survival axes, and lack of biological context for predicted drug sensitivities.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "The 23 genes in the LASSO prognostic signature (explicitly labeled '23 ferroptosis-related genes' in Figure 4a) are NOT ferroptosis regulators from FerrDb; they were selected from 8,371 general differentially expressed subcluster marker genes and consist of generic mitotic/cell-cycle genes (SPC25, CDC25B, PTTG1) and ribosomal/housekeeping genes.",
+      "Legacy Affymetrix microarray cohorts (GSE25066 on GPL96 and GSE86166) are repeatedly misidentified throughout the Abstract, Introduction, Methods, and Results as 'bulk RNA-seq data'.",
+      "Algebraic operator error in the published risk score equation (Section 2.4, line 71): '+ TNFRSF9 + (-0.0503)' uses an addition sign instead of multiplication.",
+      "Internal contradictions in cell and cluster counts: Section 2.1 reports '38,985 genes from 29,733 cells per sample' (which is the pooled total across all 9 samples, not per sample) and '9 major cell clusters' (Fig 1a) versus '12 major cell clusters' (Fig 1c).",
+      "Overclaiming tumor microenvironment and immunotherapy stratification when ESTIMATE (ImmuneScore, StromalScore, TumorPurity) and TIDE scores are completely null between high- and low-risk groups (all p > 0.05)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_083",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Lack of multiple hypothesis testing correction across exposure-outcome pairs.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Discordant effect directions between IVW, MR-Egger, and Weighted Median for several reported associations and negligible effect sizes.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing R2 and F-statistic equations and unclear SNP exclusion criteria.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Fatal chronological and causal impossibility: all 13 UK Biobank pain outcome GWAS datasets (ukb-b-* and ukb-a-477, published 2017-2018) were ascertained years BEFORE SARS-CoV-2/COVID-19 existed (0% exposure prevalence in the outcome cohort), making causal post-COVID pain pathways physically impossible and guaranteeing that any signal reflects horizontal pleiotropy.",
+      "Scale/unit miscalculation: UKB binary pain phenotypes were analyzed with BOLT-LMM linear probability models, and the authors exponentiated tiny linear probability slopes (beta ~ 0.001) and misreported them as Odds Ratios (e.g., OR = 1.0011).",
+      "Incomplete Bonferroni threshold: the authors divided alpha = 0.05 only by the 4 COVID-19 exposures (0.05 / 4 = 0.0125) while ignoring the 13 pain outcomes (4 x 13 = 52 tests, under which every association in the paper is null).",
+      "Algebraically degenerate R2 formula in Methods line 50 where 2 * EAF * (1 - EAF) appears identically in numerator and denominator and cancels out.",
+      "Direct contradiction between the Results/Discussion text (claiming no significant heterogeneity except Headache and no MR-PRESSO outliers) and Table 2, which reports significant heterogeneity (p = 0.0277) and a highly significant MR-PRESSO global pleiotropy test (p = 0.002) for Back pain, plus IVW heterogeneity for Knee pain (p = 0.0425)."
+    ],
+    "human_reviewer_anomalies": "Single-Reviewer Acceptance",
+    "human_anomaly_details": "Only Reviewer #1 (Yuankai Zhang) provided comments in Round 1 (6 brief bullets); Reviewer #2 provided zero comments in Round 1 and only wrote 'All comments have been addressed' in Round 2."
+  },
+  {
+    "anon_id": "OPEN_ANON_084",
+    "num_human_reviewers": 1,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Discrepancy between Abstract (-1.98) and original Results text (-2.30) for the Inverse Simpson index regression coefficient, and suggestion to include an additional diversity metric.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Lack of explanation for regression Models 1-5 in Table 2 and inconsistency between raw p-values and BH-adjusted q-values in figure captions.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Three-way numerical contradiction in the primary clinical outcome (multivariate virome score association with FEV1 % predicted): the Abstract reports -6.4% (95% CI -10.2, -2.6, p = 0.001), the Results text reports -5.7% (95% CI -9.87, -1.52, p = 0.008), and Table 2 reports -6.1% (Model 1), -5.6% (Model 3), and -3.8% (Model 5).",
+      "Direct contradiction between the Results narrative and Table 2 regarding covariate specifications: the text claims Model 3 adjusted for age, male sex, and modulator therapy and that CFRD status was only added in Model 5, whereas Table 2 includes CFRD status and Antibiotics in Model 3 and codes sex as 'Female sex'.",
+      "Severe in-sample data leakage and circularity: sPLS discriminant models for CFRD achieved near-random cross-validated AUCs (0.54 for bacteria, 0.61 for phages, with 0 differentially abundant phages at q < 0.2), yet the authors cherry-picked the 'best-performing repetition' and projected the in-sample scores back onto the same patients to predict FEV1.",
+      "Uncontrolled confounding by CFTR genotype severity / pancreatic insufficiency (100% pancreatic insufficiency in CFRD and IGT vs 50% in NGT, p < 0.001) and overstatement of a non-significant Pseudomonas aeruginosa trend (p = 0.056, q = 0.449)."
+    ],
+    "human_reviewer_anomalies": "Single-Reviewer Acceptance",
+    "human_anomaly_details": "Accepted at PLOS ONE after a single review by one referee (Ruchit Panchal) consisting of 5 brief formatting and clarification bullets."
+  },
+  {
+    "anon_id": "OPEN_ANON_085",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Unclear sample sizes, pooling of 4 rat hypothalami into a single snRNA-seq library per group without biological replication, and statistically non-significant testis histology (p = 0.15 across 8 testes from 4 rats).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Absence of female rats, absence of young drug-treated controls, and lack of histological/physiological proof of neuronal 'senescence'/'stress' or lifespan extension in rats.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Arbitrary 'supervised clustering' neuropeptide gene list and unclear definition of pathway score quartiles c1-c4.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Overinterpretation of non-significant endocrine ELISA p-values (p = 0.078, p = 0.096) and speculative human pQTL Mendelian Randomization analyses.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Statistical pseudoreplication in cell-level differential expression (FindMarkers with test.use = 'bimod') and Augur cell-type prioritization on N = 1 pooled snRNA-seq library per experimental group, where individual nuclei are treated as independent biological replicates.",
+      "Confounding of treatment effects with 10x library batch effects and subsequent over-correction via Harmony integration across unreplicated single-library conditions.",
+      "Non-mutually-exclusive single-UMI subsetting (CreateSeuratObject(..., Crh > 0)) that duplicates multi-peptidergic or ambient-RNA-contaminated nuclei across up to 35 neuronal subsets, plus circular correlation in Figure 2E (defining c1/c4 signatures from pathway quartiles and correlating them back against the same pathways in the same cells).",
+      "Unadjusted multiple hypothesis testing across 204 traits x 4 exposures (~816 MR tests at unadjusted p < 0.05) and trans-pQTL pleiotropy (relaxed P < 1e-5 cutoff without cis-locus colocalization) in the human Mendelian Randomization analysis."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_086",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Technical batch and platform bias from combining 38 paired-end Illumina MiSeq (2x300 bp) samples with 6 single-end NovaSeq 6000 (1x300 bp) samples.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Small sample size in Group B (n = 10 vs n = 34 in Group A) and unadjusted confounding by antihypertensive/antidiabetic medications, diet, and physical activity.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Need for a baseline demographic/clinical summary table (Table 1) and clarification of Benjamini-Hochberg FDR adjustment.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Denominator calculation error in Table 1 (added during revision): for Group B (n = 10), the authors divided medication counts by the total cohort size (N = 44) instead of Group B's sample size (n = 10), reporting 2/44 = 4.5% (true rate 20.0%), 1/44 = 2.2% (true rate 10.0%), and 3/44 = 6.82% (true rate 30.0%), while dividing Group A counts by n = 34, creating a false 10-fold disparity in reported medication rates.",
+      "Severe confounding by age at menopause: because Group A (54.74 yr) and Group B (57.30 yr) have nearly identical chronological ages (p = 0.254) while Group B is >=10 years post-menopause, Group B consists almost entirely of women with early/premature menopause (mean age at menopause 43.8 yr vs 50.6 yr in Group A).",
+      "Unequal sample-size rarefaction artifact in Table 3: comparing pooled taxon presence across n = 34 samples in Group A versus n = 10 samples in Group B without rarefaction guarantees ~3.4x higher rare-taxon discovery in Group A purely by sampling depth.",
+      "Multiple internal inconsistencies: SILVA v132 in Methods vs SILVA v138 in Figures 6-8 captions; Supporting Information captions labeling 'Spearman's correlation... Parametric data'; and sample collection dates stated as 'January 2020 and January 2025' vs 'March 2020 and January 2021'."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_087",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Missing dedicated Materials and Methods section, insufficient ChIP-seq peak annotation details, and limitation of using human fetal brain MEF2C ChIP-seq to define target genes in iPSC-derived NSCs and iNs.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Use of adult mouse brain scRNA-seq for EWCE cell-type enrichment and need for cell-type-expressed background gene sets in ClueGO pathway analysis.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Potential confounding by overlapping GWAS signals across schizophrenia, IQ, and educational attainment in sLDSC/PRS, need for PRS p-value threshold sensitivity analyses, and broader testing of mitochondrial genes in GTEx trans-eQTL analyses.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Gene-set size confounding in PRSice-2 (Table 3): permuting phenotypes 10,000 times tests a self-contained null (whether the 1,076-gene set explains >0% variance) rather than a competitive gene-set null (--perm-set) against size-matched sets of ~1,100 brain-expressed genes.",
+      "Unreported multiple-testing denominator (number of GTEx brain regions queried) in the BNIP3L trans-eQTL analysis and absence of cis-eQTL mediation evidence showing that rs6893807 alters MEF2C expression in the cerebellar hemisphere.",
+      "Trio sample size discrepancy between Methods Section 2.6 (3,447 SCZ trios and 4,851 ID/DD trios) and the Table 2 header (3,394 SCZ trios and 4,485 ID/DD trios), plus a BWA citation mismatched with a Bowtie2 URL in Section 2.3."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_088",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Pearson correlation alone is insufficient to assess cross-cell-line miRNA profile similarity; reviewers suggested adding an alternative distance metric such as Mean Squared Error (MSE).",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Need for a bootstrap resampling analysis to verify that the 98 shared miRNAs across the four neuronal models exceed random expectation.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Missing raw OpenArray Ct dataset, lack of pathway enrichment analysis for shared/unique miRNAs, and lack of comparison with neural progenitor cells.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Cross-species assay mismatch: human SH-SY5Y cells (Homo sapiens) were profiled using the TaqMan OpenArray Rodent microRNA Panel (Cat. No. 4461105, designed for 750 mouse and rat miRNAs), systematically penalizing human-specific or sequence-divergent human miRNAs.",
+      "Direct numerical contradiction introduced during revision between the Results text (Section 3.2, line 114: HT22 r = 0.735, SH-SY5Y r = 0.715) and the Figure 4 caption (line 117: HT22 r = 0.700, MSE = 8.515; SH-SY5Y r = 0.721, MSE = 8.443), where the caption values actually show SH-SY5Y outperforming HT22 in both r and MSE.",
+      "Invalid cross-platform differential expression pipeline (Section 2.4): linearly rescaling external human small RNA-seq logCPM values onto the [10, 35] qPCR Ct range and quantile-normalizing them with rodent OpenArray Ct values before running limma, compounded by artificial variance shrinkage from mean-imputing missing third biological replicates.",
+      "Multiple text and figure mislabelings: Figure 2C caption labels a Venn diagram as a 'Volcano Plot'; Section 3.3 misclassifies miR-27 as a member of the miR-17/92 cluster; and Section 3.3 text (miR-28, miR-29) contradicts the Figure 5 legend (miR-26, miR-29b)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_089",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Non-independence of f4 tests, absence of a domestication bottleneck in the rangewide mushi demographic inference, and question of whether fixed nonsynonymous differences in the MK test are shared ancestral fixations.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "High false-positive and false-negative rates in RAiSD composite sweep scans and confounding by shared ancestral sweeps between closely related populations.",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Application of rdmc to wide genomic sweep windows, bimodal standing-variation ages, and migration rate differences between maize and teosinte.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Algebraic error in the false-positive-adjusted hypergeometric sweep overlap test (Materials and Methods, lines 108-122): the authors define P as the false positive rate (~0.265 from Palmar Chico subsampling), but multiply N, n1, n2, and x by P instead of precision (1 - P), and scale all four hypergeometric parameters by the same factor, which fails to model independent false-positive sweep calls across population pairs.",
+      "In-sample hyperparameter optimization bias: tuning RAiSD window size (24 SNPs), outlier cutoff, and merging distance on Palmar Chico to maximize split-sample replicate concordance and applying that single error estimate across bottlenecked teosinte populations.",
+      "Typesetting/production corruptions in the published text: three command-line/filter equations in Materials and Methods (lines 26, 58, and 90) are completely blank/omitted after colons, and line 15 contains a citation manager auto-replacement glitch ('three lanes of Haines et al., 2000, rapid run' instead of 'Illumina HiSeq 2000 rapid run')."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_090",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Confounding between viral disease and anatomical specimen type: comparing nasopharyngeal swabs in COVID-19 against whole blood in dengue.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Absence of negative reagent/extraction blank controls and healthy control cohorts in low-biomass metatranscriptomic sequencing.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Missing clinical metadata on prior antibiotic administration and comorbidities, relaxed 30% ARG coverage cutoff, and limitations of Kraken2/Bracken on metatranscriptomic RNA-seq.",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe Table 1 header corruption: the authors pasted the median SpO2 oxygen saturation percentages (97, 95, 80, 91) into the Table 1 column headers as the COVID-19 group sample sizes ('Mild (n = 97)', 'Moderate (n = 95)', 'Severe (n = 80)', 'Mortality (n = 91)', summing to 363), contradicting the true group sizes in the text (128, 33, 24, 60, which themselves sum to 245 instead of 251).",
+      "Extreme false-positive taxonomic calls in human dengue blood caused by 8 GB minikraken2_v1_8GB k-mer collisions and un-subtracted kitome: claiming 5,805 active microbial species in human blood, including carp fish herpesvirus (Cyprinid herpesvirus 1), spruce-budworm parasitoid wasp virus (Glypta fumiferanae ichnovirus), soil Streptomyces, Burkholderia pseudomallei, and Mycobacterium tuberculosis, plus cloning-vector contaminant TEM-116 in 99% of samples.",
+      "Mathematically impossible Procrustes M2 statistics (Section 3.6 and Figure 6): reporting M2 = 4.441e-16 in COVID-19 and M2 = 8.882e-16 in dengue (exact multiples of 64-bit IEEE-754 machine epsilon, 2.2204e-16), which can only occur if an ordination matrix was compared against itself or a trivial linear rescaling of itself.",
+      "Compositional closure flaw in the GCPM normalization equation (Section 2.4): dividing each ARG's length-normalized count by the sum of mapped CARD ARGs in that sample forces every sample's total resistome abundance to sum to exactly 1,000,000 GCPM regardless of true resistome or bacterial load."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

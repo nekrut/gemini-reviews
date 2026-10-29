@@ -1,0 +1,35 @@
+<Blinded Review: TIME_ANON_0792>
+**Composite Score:** 8.9 / 10.0 (Rigor: 3.2/3.5 | Claims: 2.3/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.6/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 8.9/10
+VERDICT: PASS
+ESTIMATED_DECADE: 1990s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This landmark yeast cell biology and biochemistry study identifies the septin cytoskeleton (`Cdc3`, `Cdc11`, and `Shs1`/`Sep7`, but not `Cdc10` or `Cdc12`) as the major physiological substrates of SUMO (`Smt3`) conjugation during mitosis in *Saccharomyces cerevisiae*. Using tandem `His6-FLAG-Smt3` denaturing affinity chromatography and MALDI-TOF mass spectrometry, followed by genomic HA-tagging of all five mitotic septins, cell-cycle synchronization (`α-factor`, hydroxyurea, nocodazole, and `cdc15-2` arrest/release), and double-label immunofluorescence ($N = 424$ scored cells), the authors show that septin sumoylation is tightly restricted in both time (appearing just prior to anaphase onset and disappearing abruptly at cytokinesis) and space (modifying *only* the mother-cell side of the bud-neck septin double ring). By combining `SUMO(G98)` vs. `SUMO(A98)` mass-shift mapping ($\Delta m = 14\text{ Da}$), engineered TEV protease cleavage sites (`TEV-K2`, `K3`, `K4`, `K6`), and site-directed `Lys -> Arg` mutagenesis integrated at the endogenous genomic loci, they map the exact attachment sites to the consensus motif `(I/V/L)-K-X-(E/D)`: four N-terminal sites in `Cdc3` (`K4`, `K11`, `K30`, `K63`), one C-terminal site in `Cdc11` (`K412`), and two C-terminal sites in `Shs1` (`K426`, `K437`). Eliminating these seven lysines in a triple mutant (`cdc3-R4,11,30,63 cdc11-R412 shs1-R426,437`) abolishes nearly all bud-neck SUMO staining and the bulk of total cellular G2/M SUMO conjugates, reveals that `Cdc3` is modified by mono-SUMO moieties at multiple lysines rather than poly-SUMO chains, causes a striking failure of post-cytokinetic septin ring disassembly (leaving persistent septin rings at every previous division scar in both mother and daughter cells), and exhibits synthetic lethality with `cdc12-1`.
+
+### 2. Methodological & Statistical Audit (STRENGTHS & WEAKNESSES & METHODOLOGICAL AUDIT)
+**Strengths:**
+- **Denaturing Purification & Endogenous Chromosomal Allele Replacement:** The authors lyse cells in $1.85\text{ M NaOH} / 7.5\%\text{ }\beta\text{-mercaptoethanol}$ followed by $50\%\text{ TCA}$ precipitation and $6\text{ M guanidine-HCl} / 8\text{ M urea}$ chromatography (or $50\text{ mM NEM}$ in RIPA), completely preventing artifactual cleavage by rampant endogenous SUMO isopeptidases (`Ulp1`/`Ulp2`)—and thereby explaining the technical artifacts of a concurrent competing study (`Takahashi et al.`) that used native lysis and `Cdc3-GFP` overexpression. Moreover, all epitope tags and `Lys -> Arg` point mutations are integrated into the native chromosomal loci via overlapping assembly PCR (Table 1, 25 strains).
+- **Ingenious Biochemical Discrimination of Multi-Site Mono-SUMOylation vs. Poly-SUMO Chains:** By inserting TEV protease sites sequentially between the N-terminal lysines of `Cdc3-HA` (`TEV-K2`, `K3`, `K4`, `K6`, Figure 4) and cleaving bead-bound immunoprecipitates into N-terminal (unbound) and C-terminal (bound) fragments, the authors prove that each additional N-terminal lysine shifts exactly one major SUMO conjugate band from the C-terminal fragment to the N-terminal fragment, ruling out poly-SUMO chains.
+- **Orthogonal Mass Spectrometry Validation:** Identification of `K11` on `Cdc3` by comparing tryptic/Lys-C digests of `SUMO(G98)` vs. `SUMO(A98)` conjugates for the exact $14\text{ Da}$ mass shift (`2,327 Da` fragment) is an exceptionally rigorous biochemical proof of the isopeptide linkage site.
+
+**Weaknesses & Methodological Audit:**
+- **Toxicity of `CDC12-GFP` Reporter in the Triple Mutant Background:** In Materials and Methods (line 43), the authors candidly note that plasmid-borne `Cdc12-GFP` was toxic to the triple sumoylation mutant `EJY318`, and even when integrated at one endogenous allele in the diploid (`EJY320`), cultures contained a higher proportion of morphologically abnormal cells than the untagged triple mutant `EJY318` or wild-type `EJY319`. Importantly, however, the persistent septin ring phenotype was independently established by anti-HA immunofluorescence in `EJY318` (Figure 6c–h) without `Cdc12-GFP`, ensuring that the core biological discovery is not an artifact of the GFP tag.
+- **Unresolved Identity of the Secondary Mobility-Altering Factor on N-Terminal `Cdc3`:** As thoroughly analyzed in the Results (line 134), four attachment sites cannot alone explain seven SUMO-`Cdc3` bands (or doublet bands differing by $<10\text{ kDa}$ on N-terminal TEV fragments); while the authors deduce a secondary mobility-altering modification or branch-site conformational effect N-terminal to residue 27, its chemical nature (e.g., phosphorylation) is not tested (e.g., by phosphatase treatment).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** `Cdc3`, `Cdc11`, and `Shs1` are sumoylated specifically from just before anaphase to cytokinesis on the mother-cell side of the bud neck, and represent the most abundant SUMO conjugates in G2/M-arrested yeast. `[Well Supported]` by mass spectrometry, cell-cycle synchronization Western blots, quantitative immunofluorescence ($N = 424$), and triple-mutant depletion of total G2/M SUMO conjugates (Figures 1–3, 5c).
+- **Claim 2:** SUMO is attached as single moieties at consensus `(I/V/L)KX(E/D)` sites (`K4, K11, K30, K63` in `Cdc3`; `K412` in `Cdc11`; `K426, K437` in `Shs1`). `[Well Supported]` by `G98/A98` MALDI-TOF mass shift, TEV cleavage mapping, and `Lys -> Arg` mutagenesis (Figures 4–5).
+- **Claim 3:** Mutating the seven septin sumoylation sites does not cause the G2/M arrest seen in `ubc9`/`smt3`/`uba2` mutants, but impairs post-cytokinetic septin ring disassembly and is synthetically lethal with `cdc12-1`. `[Well Supported]` by growth kinetics, Calcofluor co-staining of bud scars, daughter-cell ring analysis, and `GAL-CDC3` shut-off in `cdc3-R4,11,30,63 cdc12-1` (Figures 6 and 9). Furthermore, the Discussion provides an exceptionally balanced analysis of why mother-side sumoylation affects both mother and daughter ring disassembly and carefully weighs direct SUMO-promoted disassembly against alternative functions of those lysine residues.
+
+### 4. Reproducibility & Data Completeness
+- **Exemplary Strain & Construct Documentation:** Table 1 lists complete genotypes for all 25 yeast strains (`DF5`, `YWO102`, `EJY251-11b`, `JD51/52`, `EJY300–EJY323`), exact peptide sequences for all TEV insertions (`pCDC3-TEV-K2` through `K6`), diagnostic restriction sites for every point mutation, and the 9 exact MALDI-TOF peptide masses matching `Cdc3`.
+</Blinded Review: TIME_ANON_0792>

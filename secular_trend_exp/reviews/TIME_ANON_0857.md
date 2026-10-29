@@ -1,0 +1,31 @@
+<Blinded Review: TIME_ANON_0857>
+**Composite Score:** 8.0 / 10.0 (Rigor: 2.7/3.5 | Claims: 2.1/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.5/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Dry-Lab Secondary Cohort/Database
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+OVERALL_SCORE: 8.0/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2010s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This comparative evolutionary genomics study investigates the origin of the vertebrate corticotropin-releasing hormone (CRH/urocortin) neuropeptide family in cyclostomes (the sea lamprey *Petromyzon marinus* germline genome, Arctic lamprey *Lethenteron camtschaticum*, and inshore hagfish *Eptatretus burgeri*) to test whether cyclostomes and gnathostomes share both rounds of early vertebrate whole-genome duplication (1R and 2R). Combining sequence-based phylogenetics (PhyML and MrBayes on both mature peptides and full-length precursors) with detailed chromosomal macrosynteny/paralogon reconstruction across 3 Mb windows encompassing 37 neighboring gene families (21 in the CRH1/CRH2/UCN1 opioid paralogon and 17 in the UCN2/UCN3 opsin paralogon, compared against spotted gar, chicken, coelacanth, elephant shark, and human), the authors identify five CRH-family genes in both lamprey species (three in the *CRH1/CRH2/UCN1* clade and two in the *UCN2/UCN3* clade) and two in the fragmentary hagfish assembly. Crucially, they note that three of the five sea lamprey CRH scaffolds (`scaffold_00003`, `00017`, `00057`) are eliminated from adult somatic tissues and were only recoverable from the germline genome assembly. While coding-sequence GC bias in lampreys prevents one-to-one sequence-tree orthology assignment, the fourfold paralogon symmetry across 13 multi-copy neighboring gene families provides strong parsimony evidence for shared chromosome quadruplications prior to the cyclostome–gnathostome split, while candidly acknowledging chromosomal "collisions" and alternative hexaploidization hypotheses.
+
+### 2. Methodological & Statistical Audit (WEAKNESSES & METHODOLOGICAL AUDIT)
+* **Integration of Germline Lamprey Assembly with Paralogon Synteny (Major Strength):** Recognizing that somatic programmed genome rearrangement in *P. marinus* deletes three of the five CRH-bearing scaffolds, the authors leverage the germline assembly and annotate 3 Mb windows ($\pm 1.5\text{ Mb}$) around each locus using AUGUSTUS and BLAST2GO, backed by individual maximum-likelihood phylogenies for all 37 neighboring gene families (Supplementary Figures S5–S6). This overcomes the well-known compositional attraction artifact (extreme coding GC bias in cyclostomes) that causes lamprey paralogs to self-cluster in single-gene sequence trees.
+* **Transparent Reporting of Syntenic "Collisions" and Orthology Ambiguity:** Rather than cherry-picking syntenic matches to force a neat 1-to-1 orthology table between the four gnathostome and four lamprey paralogon chromosomes, the authors explicitly document on line 192 that combining lamprey scaffolds to match spotted gar linkage groups (`LG5`, `LG8`) produces "collisions" in quartet families (`FOXP` and `LRRN`, where scaffolds `10`, `27`, and `49` all carry both families) and five-member families (`RSPO`, `VSNL1`). They appropriately discuss both post-WGD homeologous crossing-over/fission and the competing hypothesis of a shared 1R followed by lineage-specific cyclostome polyploidization (hexaploidization / independent 2R, Simakov et al.).
+* **Lack of Quantitative Statistical Testing for Macrosynteny Enrichment or Topology Hypotheses:** The inference of fourfold paralogon symmetry and shared 1R/2R is argued via qualitative visual parsimony across Figures 5–8 rather than a formal quantitative macrosynteny test (e.g., hypergeometric enrichment against random genomic windows or probabilistic gene-tree/species-tree reconciliation).
+* **Minor Residue Naming Typo (Line 116):** On line 116, the text refers to *"the asparagine (R) residue that is localized near the C-terminus"*, where single-letter code `R` is arginine (or `N` is asparagine). Also, the Abstract is duplicated verbatim at lines 7 and 9.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality (STRENGTHS)
+* **Strengths:** Thorough comparative curation across slow-evolving gnathostome reference genomes (spotted gar, coelacanth, elephant shark) and three cyclostome genomes; careful distinction between somatic and germline lamprey assemblies; and balanced, non-dogmatic discussion of vertebrate 1R/2R vs. cyclostome-specific polyploidization scenarios.
+* **Claim 1 (Both sea lamprey and Arctic lamprey possess exactly five CRH-family genes—three in the CRH1/CRH2/UCN1 subfamily and two in the UCN2/UCN3 subfamily—indicating that the two ancestral proto-CRH/UCN genes diverged prior to the cyclostome–gnathostome split):** `[Well Supported]` — Directly supported by germline genome scaffolds, cDNA cross-validation, conserved peptide motifs (`SLD`, `LTFH(L/I)LR`, `VPT`), single-coding-exon structure, and ML/BI phylogenetics.
+* **Claim 2 (Lamprey CRH-family genes reside in two distinct paralogons sharing 37 neighboring gene families with gnathostome opioid and opsin paralogons, exhibiting triplets and quartets indicative of large-scale chromosome duplications):** `[Well Supported]` — Comprehensively documented across 3 Mb scaffold annotations and 37 neighboring gene family phylogenies in Figures 5–8 and Supplementary Figures S5–S6.
+* **Claim 3 (Lampreys and gnathostomes most parsimoniously share both 1R and 2R WGD events, though independent post-1R duplications in cyclostomes cannot be strictly excluded due to unresolved sequence trees and syntenic collisions):** `[Well Supported]` — Framed with appropriate scientific caution that accounts for subsequent discoveries of cyclostome paleohexaploidy.
+
+### 4. Reproducibility & Data Completeness
+* **Data Completeness:** All scaffold IDs (`scaf_00017`, `00040`, `00003`, `00057`, `00082`; `KE993827–KE994103`; `FYBX02010500.1`, `FYBX02009844.1`), megabase coordinates, and sequence accession tables (Supplementary Tables S1–S4) are fully provided.
+</Blinded Review: TIME_ANON_0857>

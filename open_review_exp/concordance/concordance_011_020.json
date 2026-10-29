@@ -1,0 +1,284 @@
+[
+  {
+    "anon_id": "OPEN_ANON_011",
+    "num_human_reviewers": 5,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Lack of explicit cut-off definitions and scoring rationale for the Fear of COVID-19 Scale (FCS) and ARAB-VAX-CONF vaccine confidence categories (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Convenience/snowball sampling bias, non-proportionate representation across the 19 Arab countries, lack of validated mental health screening instruments, and cross-sectional design precluding causal inference (Reviewer #2, Academic Editor)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Multivariate logistic regression does not adjust for country-level differences/clustering across the 19 participating countries (Academic Editor)",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of information on whether participating healthcare workers worked directly in COVID-19 isolation/treatment units and discussion of declining disease severity across waves and short-lived booster protection (Reviewer #3, Academic Editor)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Inverted odds ratio for chronic diseases in Table 3: raw counts show 30.9% extreme fear in HCWs with chronic disease (418/1,354) vs. 48.5% in those without (2,179/4,489), which yields a true crude OR of 0.475 (95% CI: 0.418-0.540), but Table 3 reports COR = 2.1 and AOR = 1.2 for 'Yes' vs. 'No = 1', inverting the direction of the headline predictor.",
+      "Mathematically impossible and miscalculated 95% confidence intervals in Table 3 and Table 4: Chronic disease AOR = 1.2 (95% CI: 0.9-1.14) where the point estimate lies outside its own CI; EMR COR = 0.63 (95% CI: 0.53-1.15) where the true CI from the 2x2 counts is 0.53-0.76; Nursing COR = 1.29 (95% CI: 0.86-12.32) where the true CI is 1.00-1.66; Table 4 Family size = 4 vs. >=5 reported as COR = 1.02 and AOR = 0.78 when raw counts yield true COR = 1.65 (95% CI: 1.44-1.88).",
+      "Internal sample size and percentage contradictions between text and tables: line 87 reports that '45.7% reported having been infected with SARS-CoV-2 (n=3,291)', whereas 3,291/5,843 is 56.3% (and 43.7% is the uninfected proportion 2,552/5,843); line 74 reports 76.8% had chronic conditions while Table 3 shows 76.8% (4,489) did NOT have chronic disease.",
+      "Psychometrically invalid FCS dichotomization cutoff of 17.5 with cited AUC = 0.52 (sensitivity 55.1%, specificity 49.6%), which is indistinguishable from a random coin toss (AUC = 0.50).",
+      "Direct contradiction in eligibility criteria: line 31 states hard copies were used to reach HCWs without internet access, whereas line 36 lists 'ability to access the online survey using a smartphone or computer with internet access' as mandatory inclusion criterion (4)."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Reviewer #2 demanded that the authors add speculative neuroimaging discussion to this cross-sectional survey ('Include a brief discussion on the neural substrates underlying fear responses and vaccine confidence... Discuss how regions such as the amygdala, insula, and prefrontal cortex are implicated in processing fear and decision-making') and cited 3 specific papers (10.1038/s41398-020-01150-4, 10.1111/acps.13602, 10.3390/biomedicines12051083), forcing the authors to insert the exact unsubstantiated neurobiological speculation in the Discussion (line 266) that the blinded AI review flagged as [Overstated]. Reviewer #3 and the Academic Editor also requested citing Dumitra et al. (2024) and Savulescu et al. (2024)."
+  },
+  {
+    "anon_id": "OPEN_ANON_012",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "European-only GWAS ancestry limiting generalizability and potential residual confounding by unmeasured clinical/lifestyle factors (Reviewer #1, Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Clarify the significance of the Wald ratio in single-SNP analyses and explain Cochran's Q = 2.945 (P = 0.567) heterogeneity result (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Algebraic error in computing Higgins' I^2 in Table 3: for KOA -> PDRP (5 SNPs, df = 4, Q = 2.945) and PDRP -> KOA (4 SNPs, df = 3, Q = 2.773), since Q < df, standard Higgins' I^2 = max(0, (Q - df)/Q) is 0% for both, but the authors computed |Q - df|/Q without truncation at zero (|2.945 - 4|/2.945 = 35.82% and |2.773 - 3|/2.773 = 8.19%), reporting false heterogeneity of I^2 = 35.8% and 8.2%.",
+      "Inappropriate exponentiation of continuous-trait linear regression coefficients into meaningless 'Odds Ratios' in Table 4 (e.g., reporting OR = 3.846 = exp(1.347) for continuous PDRP expression in the forward analysis, and OR = 297.972 with a 95% CI spanning 56 orders of magnitude [1.80e-26 to 4.92e+30] for 3-SNP MR-Egger), while reporting SE(beta) alongside OR.",
+      "Severe weak-instrument and degrees-of-freedom collapse in Reverse MR (3 SNPs, where MR-Egger has df = 1) and Multivariable MR Tables 5-6 (where PDRP, KOA, and alcohol consumption are instrumented by only nSNP = 1 each, precluding multivariable identification).",
+      "Internal contradictions in SNP selection thresholds and counts: claiming p <= 5e-8 on line 57 while citing a 'less stringent statistical threshold' on line 90 and F = 29 (~p = 7e-8) on line 104, and stating 'all six instrumental SNPs' in PhenoScanner on line 117 when 5 + 3 = 8 SNPs were used.",
+      "Unaccounted UK Biobank sample overlap across KOA (ebi-a-GCST007090), BMI, and smoking GWAS in MVMR, plus complete omission of SNP-level instrument tables (rsIDs, effect alleles, betas, SEs)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #1 demonstrated unfamiliarity with GWAS and Mendelian Randomization by writing: 'The p-value was 5.00E-08. It does not make sense to me. Most of the readers could not find it interesting and problematic to get understand the results. Authors can simply use a regression tool to get more comprehensive and understood results.' Reviewer #2 wrote a 9-line superficial endorsement concluding 'The results of this study will be beneficial for all Health workers in their clinical practice. Hence, this study is recommended for publication.'"
+  },
+  {
+    "anon_id": "OPEN_ANON_013",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Small sample size (n = 9 early HIV-1 infection donors), lack of longitudinal tracking or healthy/chronic controls, and need for external validation in independent scRNA-seq cohorts (Reviewer #1, Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of analysis of non-CD4 immune cell subsets (monocytes, NK cells, CD8+ T cells) and intercellular communication networks (Reviewer #1, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Missing scRNA-seq/scATAC-seq quality control metrics (doublet removal, mitochondrial read thresholds), per-donor cell composition breakdown, and unclear Supplementary Table S1 sequencing modality annotations (Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Implausibly high HIV-1 RNA+ call rate in peripheral blood CD4+ T cells (985/4,435 = 22.2%, lines 52 & 93) potentially inflated by relaxing STARsolo minimum alignment length to 25% (--outFilterScoreMinOverLread 0.25, --outFilterMatchNminOverLread 0.25) and nested PCR chimera formation during ONT targeted sequencing without a stated UMI threshold or HIV-negative control benchmark.",
+      "Confounding between Th17 cell-type identity and HIV-1 DNA+ integration in Figure 5: comparing the entire Th17 cluster (containing 22 of the 39 HIV-1 DNA+ cells) against all other CD4+ T cells (naive, Treg, Th1, cytotoxic) inevitably identifies canonical Th17 lineage markers (RORC, RORA, STAT3, CCR6) rather than integration-induced chromatin/transcriptomic changes within Th17 cells.",
+      "Single-cell pseudoreplication in differential expression and accessibility testing (using cell-level Seurat FindMarkers across 4,435-9,135 cells from n = 8-9 donors without donor-level pseudobulk aggregation or mixed-effects random intercepts).",
+      "Internal discrepancy in scATAC-seq CD4+ T cell counts between Figure 5B caption (5,535 uninfected + 39 HIV-1 DNA+ = 5,574 cells) and Figure 5-figure supplement 1A caption (5,608 cells)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_014",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Simulations and empirical examples focus on a single shared amplification factor across two environments, whereas multiple contexts amplifying distinct gene modules simultaneously may confound top-hit enrichment and bias-variance trade-offs (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Mathematical equivalence between context-stratified OLS and a saturated GxE interaction model requires a context main-effect term (beta_E * e_i), clarification of why omega_A + omega_B need not equal 1, and discrepancy between 1.1x (text) and 1.4x (Figure 4 caption) amplification plus supplementary figure caption errors (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Conceptual bridge between single-variant MSE decision rule and polygenic trait discovery/PGS performance, and need for clearer explanation of Drosophila simulation parameters and PGS variant ascertainment (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Implicit context-demeaning assumption in the derivation of Equation 3 (Methods line 209 assumes sum_{i=1}^n y_i = 0 and sum_{i=n+1}^{n+m} y_i = 0 within each context separately, whereas Equation 2 includes only a single global intercept alpha_{A U B}; if context means and allele frequencies differ across contexts without a context main effect, an omitted cross-term biases beta_{A U B}, whereas including context-specific intercepts demeans g_i within each context so that omega_A + omega_B = 1 identically).",
+      "Unresolved numerical discrepancies between main text and Methods in simulation specifications: (a) Main text line 157 states 40% null / 60% non-null variants, whereas Methods line 310 specifies 60% null / 40% non-null and a mean shift ratio of -0.15 / -0.125 = 1.2x alongside an SD ratio of 1.4x; (b) Main text line 183 and Figure 5 caption state 1.4x environmental amplification in the PGS simulation, whereas the generative covariance matrix in Methods line 345 uses 1.5 * sigma (1.5x amplification).",
+      "Remaining caption error in Appendix 1-figure 3 caption (line 532), which states that 'Estimation is focused on females' when all three panels plot MSE in males."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_015",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Clarify the theoretical and algorithmic differences between the proposed GEM algorithm and standard EM, add a notation table and workflow diagram, and compare methods at a unified FDR threshold (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      },
+      {
+        "issue": "Validity of the Gaussian graphical model assumption on zero-inflated/compositional microbiome and gene expression datasets, comparison against Bayesian spike-and-slab and graphical horseshoe priors, and sensitivity/computational cost of tuning hyperparameters alpha and beta (Reviewer #2, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical mischaracterization of Algorithm 1 as a Generalized EM (GEM) algorithm for marginal posterior maximization: instead of taking expectations over latent variables to maximize the marginal posterior p(Omega | Y), Algorithm 1 maximizes the joint log-posterior log p(Omega, Phi, B | Y) coordinate-wise (Iterative Conditional Modes / block coordinate ascent), which converges to a different mode than marginal EM due to Wishart log-determinant Jacobian differences.",
+      "Algebraic simplification of the hyperparameter selection criterion in Equation 28 to F1_hat(gamma) = 2*(E_hat(gamma) - FP_hat(gamma)) / (E_hat(gamma) + p), revealing that setting K = p = 100 acts as a hidden oracle matched to the exact true edge count (p - 1 = 99) of the simulated scale-free spanning trees.",
+      "Ambiguous row-wise ('within each sample') permutation specification in Section 2.8 (line 387), which assumes identical marginal distributions across variables and induces negative equicorrelation (-1/(p-1)) rather than preserving variable-specific marginals as column-wise permutation does.",
+      "Conditional Wishart variance plug-in in Equation 22, Var_hat(omega_ij) = (nu + n)*(w_ij^2 + w_ii*w_jj), which treats point estimates Phi_hat and B_hat as fixed constants and omits the hierarchical posterior variance component Var_{Phi|Y}(E[omega_ij | Phi, Y])."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "In Round 2 (Decision Letter 1, lines 181-185), Reviewer #1 conditioned final acceptance on adding citations to two unrelated biomedical engineering/ML papers ('The background in introduction can be further strengthened by citing some related studies on advanced computational models and their biomedical applications, such as DOI:10.1038/s41551-024-01312-5, DOI: 10.1109/JBHI.2025.3585290'), prompting the journal editor to insert a formal warning note regarding reviewer citation demands."
+  },
+  {
+    "anon_id": "OPEN_ANON_016",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Complete confounding between sample preservation/sequencing modality (fresh scRNA-seq for SiNET1-3 vs. frozen snRNA-seq for SiNET4-10) and the proposed epithelial-like vs. neuronal-like subtype division and B/plasma cell enrichment (Reviewer #1, Reviewer #2, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Small sample size (8 patients / 10 samples), handling of paired primary-metastasis samples from the same patient (SiNET1/SiNET6 and SiNET3), and low neuroendocrine cell recovery in excluded samples (Reviewer #1, Reviewer #2, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Lack of formal cell-cell interaction modeling (e.g., CellChat/CellPhoneDB), reliance on non-standard batch correction (subtracting mean expression of non-NE reference cells), and lack of validation for MIF upregulation and the N=1 lung MiNEN putative progenitor population (Reviewer #1, Reviewer #2, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Discussion of prior somatostatin analogue (SSA) therapy effects on NE proliferation and comparison with published NET single-cell studies (Reviewer #1, Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Direct factual contradiction between Results line 31 ('single cells from three fresh surgical samples (SiNET1-3) and single nuclei from the remaining seven frozen samples (SiNET4-10)') and Methods line 172 ('Four samples (SiAdeno, SiNETs 1-3) underwent single nuclei sequencing, while the remaining samples (SiNETs 4-10 and the LCNEC sample) were subjected to scRNA-seq').",
+      "Flawed cross-tumor reference subtraction in Methods line 181: for SiNET7 and SiNET8, which lacked sufficient non-NE stromal cells, the authors subtracted reference cells sampled from a DIFFERENT tumor, which injects the donor/batch profile of the external tumor into SiNET7 and SiNET8 rather than removing sample-specific technical noise.",
+      "Identification of ubiquitous MIF upregulation across all 6 distinct non-malignant lineages in the 3 fresh scRNA-seq samples (tested at unadjusted p < 0.05 without FDR correction) as a classic signature of ambient cytoplasmic RNA soup in droplet scRNA-seq vs. nuclear snRNA-seq, and mucosal Peyer's patch lymphoid follicle inclusion in resected primary ileal tumors (SiNET1/2) driving the germinal center B-cell enrichment."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_017",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Clarify why 'Mann whiteny test' was listed in Statistical Analysis and specify Tukey's post-hoc test in figure legends (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unstated number of independent biological replicates (0.7 m^3 composting reactors per treatment group) vs. technical subsampling, and inappropriate application of ordinary (non-repeated-measures) two-way ANOVA to longitudinal time-series measurements from the same piles.",
+      "Arithmetic and unit errors in Table 1: sawdust Total Carbon (593.2 g/kg) / Total Nitrogen (2.6 g/kg) equals 228.15, but is misreported as 288.2; dimensionless C/N ratios are erroneously labeled with mass-fraction units '(g/kg)'.",
+      "Direct self-contradictions across the manuscript text: (a) Results line 115 contains two consecutive sentences stating opposite trends for Group C dehydrogenase activity in days 0-10; (b) Results lines 107 & 110 state Group B (cellulase) reached >60 C on day 2 and achieved the lowest organic matter (43.1%), whereas Abstract line 13 and Discussion line 179 claim Group C (xylanase) reached 60 C and had lower organic matter; (c) Results lines 144-146 report a late-stage rebound in total ARGs (days 20-30, especially in Group C via sul1/sul2/tetX), whereas Abstract and Discussion claim enzyme addition consistently reduced ARGs.",
+      "Missing HT-qPCR normalization formula (whether 16S rRNA copies or dry-weight mass was used to define 'absolute abundance'), contradictory SparCC co-occurrence network input descriptions on line 97 ('absolute abundance data... at the genus level' vs. 'Relative abundances of the 200 most abundant species'), and discrepancy between 2*E/V and reported 'Average degree' in Table 3."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #1's entire technical review consisted of telling the authors to delete the word 'Our' 5 times, move interpretative sentences from Results to Discussion, and add a Conclusion section. Reviewer #2's entire review was 4 lines long. Neither referee noted the arithmetic errors, internal contradictions between Abstract/Results/Discussion, or missing experimental replication details."
+  },
+  {
+    "anon_id": "OPEN_ANON_018",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Clarify the Pou5f1^mKO2 and Sox2^EGFP knock-in/knockout allele structures, maternal Zp3-Cre deletion efficiency, and discussion of trophectoderm transcription factor motifs (GATA, TEAD, EOMES) enriched in upregulated ATAC-seq peaks (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Over-interpretation of distal ATAC-seq peaks as 'active enhancers' without H3K27ac/H3K4me1 profiling in embryos and claiming 'direct target genes' without embryo Oct4 CUT&RUN/ChIP-seq (Reviewer #1, Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Justification of using maternal-only knockout embryos (Pou5f1^Delta/+ or Sox2^Delta/+) as controls ('Ctrl') rather than wild-type embryos (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Asymmetric developmental staging between ATAC-seq and RNA-seq in Figure 2 (pooled ATAC-seq was performed on Oct4-KO at E2.75, E3.25, and E3.5 but only at E3.5 for Sox2-KO, whereas single-embryo RNA-seq was performed on both Oct4-KO and Sox2-KO at E3.25 and E3.5 because weak pre-blastocyst PGK-EGFP fluorescence prevented live fluorescence sorting of Sox2-KO morulae for pooled ATAC-seq, whereas single-embryo RNA-seq allowed post-hoc computational genotyping via reads mapping to the PGK-EGFP-hGHpA cassette).",
+      "Need to clarify whether the 2,493 copies of ERCC RNA spike-in added per embryo (Methods line 183) were used for normalization in DESeq2 or whether standard median-of-ratios size factors were applied across globally asymmetric enhancer/transcriptome loss in knockout ICMs."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_019",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Provide ICD diagnostic code ranges in Table 1 and add leave-one-out, funnel, and scatter plots for the mediation MR analyses to the supplementary materials (Reviewer #1)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Clarify handling of smoking, alcohol, obesity, and depression as potential confounders (Reviewer #3)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Conflation of Higgins' heterogeneity statistic I^2 [48] and Bowden's MR-Egger instrument dilution statistic I^2_GX [47] in Methods line 87 ('where I^2 > 90% indicates considerable reliability of the results') and Table 2 (reporting identical I^2 = 97.42% for both discovery and validation GERD -> Migraine analyses, whereas Cochran's Q = 99.83 on df = 72 and Q = 109.27 on df = 74 yield true heterogeneity I^2 = 27.88% and 32.28%).",
+      "Mathematical error in Table 3 validation mediation effect: the product of coefficients beta_1 * beta_2 = 0.348 * 0.159 = 0.05533 (mediated proportion 0.05533 / 0.247 = 22.40%), but Table 3 misreports beta_3 = 0.065 and mediated proportion = 26.38%, alongside strongly asymmetric 95% CIs (28.72 [17.82-34.98] and 26.38 [9.01-34.48]) inconsistent with symmetric delta-method SEs, and unadjusted univariable estimation of beta_2 (MMD -> Migraine) without conditioning on GERD.",
+      "Sample size arithmetic error in Table 1 for GERD (GCST90000514): Case = 78,707 + Control = 354,285 equals 432,992 (or 446,148 with QSkin), but 'Total sample size' is misreported as 367,441 (obtained by erroneously adding Control = 354,285 and QSkin = 13,156 while omitting the 73,207 UKB cases).",
+      "Unrecognized >80% UK Biobank sample overlap between the GERD exposure GWAS (GCST90000514, which is ~86% UK Biobank) and the validation migraine GWAS (GCST90000016, which is 100% UK Biobank), directly refuting the claim on line 205 that 'there was no overlap with the validation set for migraine'."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Reviewer #2 submitted a notorious boilerplate template demanding exact word counts for every manuscript section ('expand the abstract in 200 words (preferably 200-220 words; max. 250)... Introduction: about 1000 words... Discussion: about 1500 words... Conclusion: 150-200 words... cite more than 60 to 70 references') accompanied by a list of 19 mandatory citations ([1-19], including irrelevant MDPI/cells/biomedicines articles and indeed.com/scribbr.com blog links)."
+  },
+  {
+    "anon_id": "OPEN_ANON_020",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Limitations of public reference databases (incomplete species representation and unverified taxonomic annotations in NCBI) and their impact on eDNA taxonomic resolution across platforms (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Origin and impact of negative control contamination in the 2023 campaign, whether contamination differed between filtration/extraction methods, and implications for excluding Xenopus detections (Reviewer #2)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Exclusion of fish from the main vertebrate comparison and need for ecological site descriptions, study area map, and discussion of species ecological traits and habitat use (Reviewer #2, Reviewer #3, Reviewer #4)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Uncontrolled sequencing depth asymmetry between Nanopore and Illumina in the split-pool platform comparison (mean per-sample read depth was 5.65x higher on Nanopore for 12S [273,710 vs. 48,459 reads] and 1.87x higher for 16S [227,434 vs. 121,653 reads], confounding the detection of 7 extra taxa by Nanopore without rarefaction or read-depth normalization).",
+      "Equal-volume (10 uL, line 56) rather than equimolar pooling of the 48 tagged PCR products prior to sequencing, which explains the extreme 4-5 order-of-magnitude variance in per-sample read depth (3 to 161,352 reads on Illumina 12S; 18 to 2,424,297 reads on Nanopore 12S).",
+      "Internal arithmetic inconsistency on line 111 ('eDNA-based methods yielded 25 detections across all four primary terrestrial vertebrates, out of which 14 were at the species level and 5 at the genus and 7 at the family level', where 14 + 5 + 7 = 26, conflating the 25 Nanopore detections with the 26 combined eDNA detections from 18 shared + 7 Nanopore-only + 1 Illumina-only on line 103) and typographical error on line 74 ('primary non-terrestrial vertebrate classes' instead of 'primary terrestrial vertebrate classes')."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #1 wrote one-word evaluations ('Abstract satisfactory / Introduction satisfactory') and asked the authors of an environmental water DNA (eDNA) metabarcoding study to 'add the morphological identification characters of your each identify species and compare it with previous publication', misunderstanding that aqueous eDNA metabarcoding does not capture physical specimens for morphological measurement."
+  }
+]

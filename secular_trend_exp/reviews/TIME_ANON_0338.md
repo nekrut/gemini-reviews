@@ -1,0 +1,29 @@
+<Blinded Review: TIME_ANON_0338>
+**Composite Score:** 4.2 / 10.0 (Rigor: 1.3/3.5 | Claims: 1.2/2.5 | Biology: 0.7/2.0 | Reproducibility: 1.0/2.0)
+**Bias Category:** Statistical/Design
+**Verdict:** Major Revision
+**Study Modality:** Dry-Lab Theory/Methods/Simulation
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This brief Genetic Analysis Workshop 14 (GAW14) proceedings paper compares five two-point parametric and non-parametric linkage analysis statistics—maximum multipoint/model-maximized LOD score (`MMLS` via MLIP), affected-sib-pair maximum LOD score (`MLS` via GENEHUNTER), Kong & Cox exponential/linear non-parametric LOD (`LOD` via MERLIN), model-maximized `MOD` score (via MLIP), and the Bayesian Posterior Probability of Linkage (`PPL`, computed both by pooling cohorts and by sequential Bayesian updating across populations via MLIP)—across 100 simulation replicates of the GAW14 Kofendrerd Personality Disorder (KPD) dataset. Each replicate contains four populations with divergent ascertainment schemes (three sets of 100 nuclear families [AI, KA, DA] and one set of 50 extended pedigrees [NY], plus a pooled cohort of 350 families). The authors restrict analysis to 13 microsatellite markers: two markers closest to each of the four major simulated disease loci (D1–D4), single markers near two modifier loci (D5, D6), and two unlinked markers on chromosome 4 (`D04S128`, `D04S129`, designated U1). They conclude that Sequential PPL and MOD (around D3) achieve the highest empirical power to detect the four major disease genes relative to the unlinked marker pair U1.
+
+While the study addresses a practical question in statistical genetics (comparing sequential Bayesian updating against pooled likelihood maximization across heterogeneous cohorts), its methodological rigor is severely compromised by calibrating empirical Type I error against only a *single* unlinked marker pair (2 markers), dropping half of the extended pedigrees in two of the comparator programs (MERLIN and GENEHUNTER) due to bit-size limits, restricting all analyses to two-point linkage, and omitting the actual data tables (Tables 1 and 2) from the manuscript text.
+
+### 2. Methodological & Statistical Audit
+- **Severely Under-Sampled Null Distribution for Empirical Power Calibration:** To place the five linkage statistics (which have different asymptotic distributions and degrees of freedom, especially `MOD` and `PPL`) on a common scale, the authors define empirical power $P$ as the proportion of the 100 replicates in which a linked marker's score exceeds the 99th percentile (top score across 100 replicates) of the unlinked locus U1 (`D04S128` and `D04S129`). Calibrating an empirical $\alpha = 0.01$ critical threshold using only **two unlinked markers** across 100 replicates (so the "99th percentile" is literally the single maximum observation out of 100 replicates!) produces an extremely high-variance, sample-maxima-sensitive threshold. A single outlier replicate at U1 for one method (or conversely a lucky low maximum at U1 for PPL) shifts the entire empirical power ranking across all linked loci. Null calibration in GAW14 simulations should use all unlinked chromosomes/markers across the genome (thousands of unlinked marker-replicate pairs).
+- **Confounded Software Comparison in Extended Pedigrees (NY Cohort):** In the Methods (lines 20–21), the authors note that for the NY extended-pedigree cohort ($n=50$ large pedigrees), `MLIP` analyzed all 50 pedigrees exactly, whereas `MERLIN` (`max-bits = 50`) dropped **26 of the 50 pedigrees** (52% of the cohort!) and `GENEHUNTER` (`max-bits = 22–24`) discarded unaffected individuals across large pedigrees. Consequently, the lower performance of `MERLIN` (`LOD`) and `GENEHUNTER` (`MLS`) in the NY and Pooled cohorts reflects pedigree/individual truncation rather than an intrinsic statistical inferiority of the Kong & Cox LOD or MLS statistics.
+- **Missing Tables 1 and 2:** The Results section repeatedly refers to numerical values in "Table 1" (mean linkage summary statistics across 100 replicates for D1–D6 and U1 across the 5 populations) and "Table 2" (empirical power $P$ at each marker), as well as Figure 1, but the actual tables and figure are missing from the manuscript file.
+- **Discrete Grid Approximation in MLIP:** The full trait-and-recombination parameter space ($\alpha, p, f_1, f_2, f_3, \theta$) was discretized into $6 \times 5 \times 11 \times 11 \times 11 \times 12 = 479,160$ grid points (with disease allele frequency $p$ restricted to $\{0.001, 0.01, 0.1, 0.3, 0.5, 0.8\}$ and $\alpha \in \{0.05, 0.2, 0.4, 0.6, 0.8, 1.0\}$—note that 6 values of $\alpha$ are listed in line 16 despite the text saying "five values of $\alpha$").
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **[Moderately Supported]** Sequential Bayesian updating of the two-point PPL across heterogeneously ascertained cohorts preserves linkage signal at major simulated loci (D1–D4) without requiring homogeneous pooling.
+- **[Methodologically Flawed]** Claiming that Sequential PPL and MOD have superior empirical power over Kong & Cox `LOD` and `MLS` is confounded both by the 2-marker null calibration (100 replicates at U1) and by the exclusion of 26/50 extended NY pedigrees in `MERLIN` and pedigree trimming in `GENEHUNTER`.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** The exact parameter grid points for $\alpha, p, f_i, \theta$, the Dirichlet-like prior parameters for the penetrance vector $(u_1, u_2, u_3, b_1, b_2)$, and the uniform/point-mass prior on $\theta$ (95% at $\theta = 0.5$, 5% uniform on $[0, 0.5)$) are explicitly written out in the Methods.
+- **Deficiencies:** Tables 1 and 2 (containing all primary numerical outputs of the study) and Figure 1 are absent from the manuscript text.
+</Blinded Review: TIME_ANON_0338>

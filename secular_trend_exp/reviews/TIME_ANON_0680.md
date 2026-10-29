@@ -1,0 +1,40 @@
+<Blinded Review: TIME_ANON_0680>
+**Composite Score:** 2.8 / 10.0 (Rigor: 0.7/3.5 | Claims: 0.7/2.5 | Biology: 0.7/2.0 | Reproducibility: 0.7/2.0)
+**Bias Category:** Statistical/Design
+**Verdict:** Reject (Fundamental Flaws)
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 2.8/10
+VERDICT: FAILED
+ESTIMATED_DECADE: 2010s
+
+---
+
+### 1. Executive Summary / SUMMARY
+This study performs Illumina GAII RNA-Seq transcriptomic profiling of Crandell Rees Feline Kidney (`CRFK`) epithelial cells infected with virulent Feline Infectious Peritonitis Virus (`FIPV` strain 79-1146, MOI 2) at 3 hours post-infection (hpi) compared to uninfected control cells, aligning reads to the draft $1.9\times$ feline genome via `CLC Genomics Workbench`. From 96 transcripts meeting a threshold of $\ge 50$ reads, $\ge 2\text{-fold}$ change, and Kal's $Z$-test $p \le 0.05$ (`61` up-regulated, `35` down-regulated), the authors select three immune-related genes (`APOBEC3H` [`A3H`], `PD-1` [`PDCD1`], and `PD-L1` [`CD274`]) for SYBR Green RT-qPCR quantification across a 3–48 hpi time course in `CRFK` cells and in peripheral blood mononuclear cells (`PBMCs`) from 6 FIP-diagnosed cats versus 5 healthy cats. A forensic methodological and mathematical audit reveals fundamental flaws across every layer of the study: (1) the RNA-Seq experiment has **no biological replicates** ($n=1$ uninfected vs. $n=1$ infected library), misusing Kal's $Z$-test on single samples; (2) the study uses a non-physiological kidney epithelial cell line (`CRFK`) to model macrophage/lymphocyte immunopathogenesis (`PD-1` was not even detected in the RNA-Seq data, yet is claimed to be induced 8.5-fold in kidney epithelial cells by qPCR); (3) Table 3 reports mathematically impossible/miscomputed RT-qPCR fold changes (e.g., `-0.09`, `-0.37`, `-0.41` for down-regulated genes, where the authors placed a negative sign in front of fractional $2^{-\Delta\Delta C_T}$ values between $0$ and $1$); and (4) the Discussion contradicts the study's own tables regarding `A3H` expression in PBMCs versus `CRFK` cells.
+
+### 2. Methodological & Statistical Audit / WEAKNESSES & METHODOLOGICAL AUDIT
+- **Unreplicated ($n=1$) RNA-Seq Experiment Analyzed with Kal's $Z$-Test:**
+  - Only a single uninfected control sample ($n=1$, $17.85\text{M}$ reads) and a single 3 hpi FIPV-infected sample ($n=1$, $17.16\text{M}$ reads) were sequenced (`Table 1` and `Line 142`: *"Since only one sample per group was analysed, Kal's Z test was used to determine whether there were fold changes between control and FIPV-infected samples that could be considered statistically significant"*).
+  - Kal's $Z$-test compares two proportions of sequencing reads from single libraries under a binomial/multinomial normal approximation. With $N=1$ per group, this test measures only technical Poisson shot noise within two sequencing lanes and has **zero degrees of freedom to estimate biological or experimental replicate variance**, rendering all 96 reported $p$-values statistically invalid as measures of biological treatment effect.
+  - Furthermore, no multiple-testing correction (e.g., Benjamini-Hochberg FDR across the 18,895 feline gene models) was applied; raw unadjusted $p \le 0.05$ was used as the cutoff.
+- **Mathematical Error in RT-qPCR Fold-Change Calculation (`Table 3`):**
+  - In `Materials and Methods` (Line 176), the authors state that relative expression was calculated using the Livak $2^{-\Delta\Delta C_T}$ method (normalized to `GAPDH` and calibrated to uninfected control = $1.0$).
+  - Under the standard $2^{-\Delta\Delta C_T}$ method, an unchanged gene has a ratio of $1.00$, a 2-fold up-regulated gene has a ratio of $+2.00$, and a 2-fold down-regulated gene has a fractional ratio of $0.50$ (which, if converted to signed fold change via $-1 / 2^{-\Delta\Delta C_T}$, equals $-2.00$, as `CLC Genomics Workbench` did in `Table 2` where down-regulated genes are `-2.04` to `-10.04`).
+  - However, in `Table 3` (RT-qPCR fold changes in `CRFK` cells at 6, 9, 12, 24, and 48 hpi), the authors report values of `-0.50 ± 0.07`, `-0.37 ± 0.04`, `-0.41 ± 0.03`, `-0.17 ± 0.03`, `-0.42 ± 0.14`, `-0.36 ± 0.07`, `-0.27 ± 0.03`, and `-0.09 ± 0.01`, describing these in the text (Line 106) as *"either non-regulated or down-regulated to nearly 0 fold"*!
+  - Mathematically, $2^{-\Delta\Delta C_T}$ is strictly positive ($> 0$), and signed fold change $(-\,2^{+\Delta\Delta C_T})$ is strictly $\le -1.0$ for down-regulated genes; values between $-1.0$ and $0$ (such as `-0.09` or `-0.37`) **do not exist on a signed fold-change scale**. The authors took fractional $2^{-\Delta\Delta C_T}$ values ($0.09$ to $0.50$, where $0.09$ actually represents an $11.1\text{-fold}$ reduction!) and arbitrarily prefixed a minus sign (`-0.09`), and then misinterpreted `-0.09` as *"nearly 0 fold"* rather than a $91\%$ reduction!
+- **Direct Self-Contradiction Between Discussion and Tables 3 & 5:**
+  - In the Discussion (Line 144), the authors write: *"However, in the present study, we observed that the expression of A3H is readily expressed at higher levels in PBMCs than in FIPV infected cells (Tables 3 and 5)."*
+  - Inspecting `Table 3` and `Table 5` shows the exact opposite: in FIPV-infected `CRFK` cells (`Table 3`), `A3H` fold change is `5.23 ± 0.87` at 3 hpi and `991.94 ± 217.50` at 48 hpi, whereas in FIP cat `PBMCs` (`Table 5`), `A3H` fold change ranges only from `1.11 ± 0.14` to `3.44 ± 0.25` (with 5 of 6 cats not statistically different from control)!
+- **Non-Specific SYBR Green RT-qPCR Anomaly at 48 hpi (`991.94-fold` Spike in Apoptotic/Necrotic Lysates):**
+  - At 48 hpi in `CRFK` cells (`Table 3`), `A3H`, `PD-1`, and `PD-L1` suddenly jump from `-0.09`/`-0.27`/`-0.36` at 24 hpi to `991.94 ± 217.50`, `247.37 ± 42.34`, and `63.84 ± 7.21` at 48 hpi. Because FIPV 79-1146 at MOI 2 causes extensive cytopathic effect and cell death in `CRFK` monolayers by 24–48 hpi, housekeeping `GAPDH` mRNA degrades ($C_T$ shifts late), causing an artificial explosion in $2^{-\Delta\Delta C_T}$ for low-abundance targets sitting near the SYBR Green primer-dimer/background threshold ($C_T \sim 35$).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality / STRENGTHS
+- **[Methodologically Flawed] Using Kidney Epithelial Cells (`CRFK`) to Model T-Cell/Macrophage `PD-1`/`PD-L1` Exhaustion in FIP:** In vivo, FIPV targets monocytes/macrophages, and `PD-1` (`PDCD1`) is an inhibitory receptor expressed on T and B lymphocytes. Indeed, the authors admit (Line 93) that `PD-1` was **not detected at all** in the `CRFK` RNA-Seq dataset (`Table 2`). Claiming that feline kidney epithelial cells transiently up-regulate T-cell receptor `PD-1` by 8.5-fold at 3 hpi and 247-fold at 48 hpi without protein validation or melt-curve/sequencing verification of the SYBR Green amplicon is biologically implausible.
+- **[Methodologically Flawed] Claim of Coordinated `PD-1` and `PD-L1` Dysregulation in FIP Cat PBMCs (`Table 5`):** In `Table 5` (6 FIP cats vs. 5 controls), 4 of the 6 FIP cats (`N2`, `N4`, `N5`, `N6`) show no significant change in either `PD-1` or `PD-L1` ($p > 0.05$), and in the remaining 2 cats (`N1` and `N3`), `PD-1` and `PD-L1` never change together (`N1` has elevated `PD-1` only; `N3` has elevated `PD-L1` only). Moreover, calculating individual $p$-values for single cats (`N1` through `N6` each tested separately by Student's $t$-test on technical qPCR triplicates against the control pool) treats technical qPCR replicates of a single animal as biological degrees of freedom!
+
+### 4. Reproducibility & Data Completeness
+- **Reproducibility Assessment:** Raw Illumina GAII sequencing reads were not deposited in NCBI SRA/GEO (no accession numbers are provided), and the complete list of 96 transcripts is omitted (only 24 selected transcripts are shown in `Table 2`). Primer sequences for `GAPDH`, `PD-1`, `PD-L1`, and `A3H` are provided in `Table 4`.
+</Blinded Review: TIME_ANON_0680>

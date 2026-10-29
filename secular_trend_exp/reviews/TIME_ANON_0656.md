@@ -1,0 +1,42 @@
+<Blinded Review: TIME_ANON_0656>
+**Composite Score:** 7.2 / 10.0 (Rigor: 2.4/3.5 | Claims: 1.8/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.3/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 7.2/10
+VERDICT: PASS
+ESTIMATED_DECADE: 1990s
+
+---
+
+### 1. Executive Summary / SUMMARY
+This cellular immunology study investigates whether molecular mimicry at the level of HLA-A*0201-restricted $\text{CD8}^+$ cytotoxic T lymphocytes (CTLs) could link chronic Hepatitis C virus (HCV) infection to autoimmune hepatitis (AIH). Observing that an immunogenic HLA-A*0201-restricted viral epitope (`HCV core 178–187`) shares 8 of 10 amino acids with residues `8–17` of human cytochrome P450 isoforms `CYP2A6` and `CYP2A7` (differing only by a conservative anchor substitution `Leu -> Val` at position 2 and a non-conservative substitution `Ser -> Val` or `Ser -> Ala` at position 6), the authors characterize peptide–MHC binding affinity, complex stability, primary CTL induction, cross-reactive target lysis, and recognition of endogenously processed `CYP2A6` protein across 12 HLA-A2+ healthy blood donors and 10 HLA-A2+ patients with chronic HCV infection (without clinical AIH). Using competition binding and `BB7.2` conformational mAb decay assays on mild-acid-stripped `JY` cells, 35-day primary PBMC stimulation cultures, $^{51}\text{Cr}$-release cytotoxicity assays with `OKT8` anti-CD8 blocking, and `AHH-1 TK+/-` target cells stably transfected with human `CYP2A6` (`h2A3`) versus `CYP2D6` (`h2D6`), the authors demonstrate an asymmetric activation hierarchy: `CYP2A6 8–17` and `CYP2A7 8–17` form unstable HLA-A2 complexes ($t_{1/2} \approx 1\text{ h}$) that fail to prime naive CTLs in 12/12 donors, whereas `HCV core 178–187` forms stable HLA-A2 complexes ($t_{1/2} \approx 5\text{ h}$) that prime CTLs in 9/12 healthy donors, 5 of whom generate CTLs that cross-reactively lyse targets pulsed with `CYP2A6`/`CYP2A7` peptides as well as cells endogenously expressing full-length human `CYP2A6`. While the cellular immunology experiments and endogenous antigen-processing controls are well designed and carefully interpreted, the digitized manuscript is missing its primary summary Table and Figure legends, none of the studied HCV patients had AIH, and the canonical autoantigen of AIH type 2 is `CYP2D6` (`LKM-1`) rather than `CYP2A6/2A7`.
+
+### 2. Methodological & Statistical Audit / STRENGTHS, WEAKNESSES & METHODOLOGICAL AUDIT
+
+#### Key Strengths
+- **Mechanistic dissection of asymmetric immunogenicity vs. antigenic recognition (Altered Peptide Ligand model):** The study cleanly resolves why self-reactive `CYP2A6/2A7`-cross-reactive $\text{CD8}^+$ T cells escape thymic/peripheral deletion and remain quiescent in healthy donors (`0/12` donors inducible by `CYP2A6` or `CYP2A7` peptides) yet become cytolytically active once primed by the higher-stability viral mimic `HCV core 178–187` ($t_{1/2} \approx 5\text{ h}$ vs. $1\text{ h}$; `5/12` healthy donors develop cross-reactive CTLs).
+- **Crucial demonstration of endogenous MHC class I processing and presentation (`Fig. 4`):** Testing peptide-pulsed target cells alone often produces false-positive mimicry artifacts because synthetic peptides bypass proteasomal cleavage and TAP transport. By testing `AHH-1 TK+/-` lymphoblastoid cells stably transfected with full-length human `CYP2A6` cDNA (`h2A3`) alongside parental `AHH-1 TK+/-` and `CYP2D6`-transfected (`h2D6`) negative controls, the authors prove that endogenous `CYP2A6` is naturally processed and presented on HLA-A2 to trigger lysis by `HCV core 178`-induced CTLs.
+- **Thoughtful discussion of clinical proportionality:** Rather than overclaiming that `HCV core 178` cross-reactivity alone causes AIH type 2, the authors explicitly note that 0/10 chronic HCV patients in their cohort had AIH markers (`LKM-1`) despite harboring cross-reactive CTL precursors, and articulate a multi-hit model requiring $\text{CD4}^+$ T-cell help and determinant spreading to `CYP2D6`.
+
+#### Methodological Weaknesses & Audit Findings
+1. **Omission of the Summary Table and Figure Legends in the Digitized Text:**
+   - The main text (lines 11, 75, 77) repeatedly cites `(Table)` for the exact 10-mer amino acid sequences of `HCV core 178–187`, `CYP2A6 8–17`, and `CYP2A7 8–17` and the donor-by-donor CTL lysis percentages for the 12 healthy donors and 10 chronic HCV patients. Similarly, `Fig. 1A–B`, `Fig. 2a–c`, `Fig. 3A–C`, and `Fig. 4` are cited in lines 70–87, but the Table and Figure legends were omitted from the text conversion. While the healthy donor counts (`9/12` responders: `2` recognizing all 3 peptides, `3` recognizing `HCV + CYP2A7`, `4` recognizing `HCV` only, `3` non-responders) and sequence differences are written out in the prose, the exact responder counts among the `10` chronic HCV patients are only described qualitatively as *"comparable to that of healthy donors"* (line 77).
+2. **Unresolved Biophysical Paradox in Peptide Off-Rate (`Fig. 3B`) and CD8-Independence (`Fig. 3C`):**
+   - In `Fig. 1`, `CYP2A6 8–17` and `CYP2A7 8–17` bind HLA-A2 with low affinity and dissociate rapidly ($t_{1/2} \approx 1\text{ h}$ by `BB7.2` staining). Yet in `Fig. 3B`, when `JY` target cells are pulsed with `CYP2A6` or `CYP2A7` peptide, washed twice, and incubated in peptide-free medium for **up to 24 hours** before adding CTLs, there is *no reduction* in CTL lysis (`line 82`), and in `Fig. 3C`, blocking `CD8` with `OKT8` mAb abolishes lysis of `HCV core 178`-pulsed targets while having **zero effect** on lysis of `CYP2A6`-pulsed targets!
+   - If the `HLA-A2–CYP2A6` complex has a 1-hour half-life, after 24 hours ($24$ half-lives, $2^{-24} \approx 6 \times 10^{-8}$) virtually no peptide should remain on the cell surface unless trace residual peptide remained in the serum/wells or ultra-high-affinity TCR engagement (`CD8`-independent) requires only a few complexes per cell. While the authors candidly highlight this unexpected result (lines 82–83), it warrants washout controls with brefeldin A or acid-stripping post-wash.
+3. **Antigenic Target Mismatch with Classical AIH Type 2 (`CYP2D6` vs. `CYP2A6/2A7`):**
+   - Classical AIH type 2 is defined by `LKM-1` autoantibodies and liver-infiltrating T cells specific for `CYP2D6` (whereas anti-`CYP2A6` autoantibodies occur primarily in AIH/APS-1 or a minor subset of LKM-positive sera). As shown in `Fig. 4`, the `HCV core 178`-induced CTLs do *not* cross-react with `CYP2D6` (`h2D6` cells). In addition, no patients with active HCV-associated AIH type 2 were studied ex vivo.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** `HCV core 178–187` forms stable complexes with HLA-A*0201 ($t_{1/2} \approx 5\text{ h}$) and primes primary CTL responses in `9/12` HLA-A2+ healthy donors, whereas the homologous self-peptides `CYP2A6 8–17` and `CYP2A7 8–17` form unstable HLA-A2 complexes ($t_{1/2} \approx 1\text{ h}$) and fail to prime primary CTLs (`0/12` donors). `[Well Supported]`
+- **Claim 2:** In `5/12` healthy donors (and a comparable fraction of chronic HCV patients), `HCV core 178–187`-primed CTLs cross-reactively lyse targets presenting `CYP2A7 8–17` and/or `CYP2A6 8–17` as well as target cells endogenously synthesizing full-length human `CYP2A6`. `[Well Supported]`
+- **Claim 3:** Molecular mimicry between `HCV core 178–187` and `CYP2A6/2A7` may contribute to hepatocyte damage and initiate determinant spreading toward `CYP2D6` in HCV-associated AIH. `[Moderately Supported]` — Plausible mechanistic hypothesis supported by in vitro primary human T-cell data, appropriately qualified by the authors as requiring validation in patients with active HCV-AIH.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** Detailed cellular immunology protocols for mild-acid peptide stripping (pH 3.2 citric acid–$\text{Na}_2\text{HPO}_4$), fluorescein-reference peptide competition (`FLPSDC(FL)FPSV` at 150 nM), emetine/`BB7.2` HLA-A2 stability assays, 35-day primary CTL induction, `K562` cold-target inhibition, and `AHH-1 TK+/-` (`h2A3`, `h2D6`) transfectant culture in `L-histidinol` selective media are fully specified.
+- **Deficiencies:** Omission of the summary Table and Figure legends in the converted text file (and duplicate Abstract in lines 7 and 9).
+</Blinded Review: TIME_ANON_0656>

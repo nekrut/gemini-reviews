@@ -1,0 +1,352 @@
+[
+  {
+    "anon_id": "OPEN_ANON_061",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Discuss the absence of MSP1 expression in the double-knockout lines (PbHscB-PbMei2-dKO and mei2/linup) and its implication for reduced protective blood-stage humoral immunity if a rare breakthrough infection occurs."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Acknowledge the limitation of using a small sample size of mice (n = 6 per group) to rule out rare breakthrough blood-stage infections (citing Kumar et al. 2016)."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Quantify mitochondrial colocalization of GFP-tagged PbHscB in Figure 1B using Pearson's correlation coefficient."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Validate liver-stage parasite invasion and development in vivo or in primary/hepatic cell lines rather than relying solely on non-hepatic HeLa cells."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Perform an immunization and infectious sporozoite challenge experiment to demonstrate protective efficacy of the PbHscB-PbMei2-dKO line as a live-attenuated vaccine candidate."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe pseudoreplication in oocyst and liver-stage size comparisons (Figs 2A, 3A, 4A, and S2A Fig), where Kruskal-Wallis tests were run treating n = 500 individual parasites or n = 240-300 individual oocysts pooled from a single representative experiment as independent biological replicates.",
+      "Inappropriate use of a parametric unpaired t-test on binary count proportions of LC3-positive parasites in Fig 2C (n = 200, 107, 137, and 81 pooled parasites across three experiments) instead of a generalized linear mixed model or replicate-level test.",
+      "Omission of the actual numerical Pearson correlation (PCC = 0.44) and Manders overlap (MOC = 0.853, 0.894) values from the published Results text and S1D Fig caption despite the authors stating in the rebuttal letter and Methods that they had calculated and added them.",
+      "Copy-paste error in the published Fig 4A caption claiming that only WT and PbHscB-KO schizont sizes were imaged when four parasite lines (including PbMei2-KO and PbHscB-PbMei2-dKO) are plotted and analyzed.",
+      "Absence of genetic complementation (add-back) or parallel phenotyping of a second independent knockout clone to exclude secondary off-target mutations."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_062",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Explain the rationale for using p < 0.10 to screen interaction terms and p < 0.01 for final significance."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Clarify how internal consistency of the 4-item COVID-19 infection worry scale was assessed across the three countries."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Conflation of biological sex mechanisms (hormones, stress axis) with social and cultural gender norms when interpreting cross-country behavioral differences."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Clarify selection criteria and potential selection bias in choosing only Canada, Colombia, and Ireland out of the 42 countries in the iCARE study."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Failure to estimate a pooled multi-country model testing country-level interaction terms rather than running separate country-stratified logistic regressions with vastly different sample sizes."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical impossibilities and corrupted numbers in published Tables 1 and 3: in Table 3 (Colombia), point estimates fall completely outside their own reported confidence intervals for Infection worry on Healthy eating (OR = 1.45, CI = 0.94-1.40) and Psychological distress x sex on Physical activity (OR = 1.78, CI = 0.95-1.46); Wave 3 Alcohol has a decimal typo in the lower bound (.115 instead of 1.15); Table 1 reports Ireland Female 'Clinical anxiety: No' as 1,101 (17.3%) instead of 71.3% and prints the Canada distress t-statistic as '-.21.6*'.",
+      "Internal contradiction created during revision where the authors replaced inter-item correlations with Cronbach's alpha values of .86, .81, and .87 but left the text describing them as 'moderate (<.80) internal consistency'.",
+      "Inconsistent confidence interval levels (99% CI in main Table 2-4 captions vs. 95% CI in Supporting Information captions) and p < 0.01 significance asterisks placed on intervals (1.01-1.45 and 1.03-1.67 in Table 3) that correspond to p ~ 0.03 under a 95% CI.",
+      "Flawed outcome dichotomization that collapses opposite behavioral changes ('favorable changes' and 'no change') into a single reference category, alongside inverted row labels for Alcohol in Table 1 ('Increase/no change' vs. 'Decrease') that contradict the Methods section.",
+      "Misinterpretation of the conditional main effect of Sex in regression models containing an uncentered interaction term (Table 2), inverted odds-ratio prose ('decreased their odds of healthy eating by 39%' for OR = 1.39 of eating less healthily), and consistent misspelling of Colombia as 'Columbia' throughout the manuscript."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #2 submitted a generic, LLM-style outline of vague writing advice ('a) provide clearer transitions... b) ensure consistent terminology...') with minimal technical engagement, and Reviewer #1 submitted a 4-line superficial note with broken spelling ('1In the abstract , you should provide full nme of COVID19... put variables into the quation')."
+  },
+  {
+    "anon_id": "OPEN_ANON_063",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of clinical validation for the prostate cancer radiotherapy model (with parameters k_M and C_r chosen by 'clinical experience') and small sample size (n = 10) for the head-and-neck cancer validation cohort."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Omission of Normal Tissue Complication Probability (NTCP) and organ-at-risk toxicity constraints when concluding that SBRT is the optimal treatment regimen."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Simplifying assumptions of homogeneous spherical geometry, uniform cell-cycle radiosensitivity (alpha and alpha/beta) in prostate cancer, and omission of anti-tumor immune responses."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Need for parameter sensitivity analysis and Bland-Altman agreement plots for the clinical validation cohort."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of COMSOL simulation files/code and missing explicit numerical definitions for low vs. high vascular density and modified alpha/beta parameters in the Figure 9-11 legends."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Fundamental ODE mass-balance error in Eq. (9) and Eq. (14): the dead-cell accumulation equation dN_n/dt = sum(R_c * c) omits a clearance decay sink (-C_r * N_tot), meaning N_tot monotonically accumulates all cells that have ever died and drives unphysical permanent negative volumetric contraction in Eq. (14).",
+      "Biophysically invalid linear Oxygen Enhancement Ratio formula in Eq. (21) (OER = -10 * c_ox + 3), which replaces the saturating Alper-Howard-Flanders hyperbolic relationship and assigns OER = 2.0 at normoxic physiological oxygen concentrations (c_ox = 0.1 mol/m^3 ~ 75 mmHg).",
+      "Unphysical initial condition placing 100% of tumor cells synchronously in the G1 phase at t = 0 rather than at the steady-state cell-cycle distribution, plus omission of spatial advection/dilution terms in the point-wise cell-cycle ODEs (Eqs. 1-5).",
+      "Severe spatial scale mismatch between the simulated 500 um diameter micro-spheroid (~0.065 mm^3) and the 100-400 mm^3 murine and multi-cm^3 human tumors, where reaction-diffusion oxygen gradients do not scale invariantly.",
+      "Continuum fallacy in Fig 8 claiming 'all radiotherapy schemes manage to eliminate all tumor cells' based on linear percentage plots approaching 0%, and a 7-order-of-magnitude unit error in Table 1 listing tumor bulk modulus k as 10.40 x 10^7 kPa (104 GPa, the stiffness of steel)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #3's report contains a verbatim copy-pasted LLM summary block mid-review (lines 145-263: 'Novelty: First continuous model... Methodological Rigor:... Decision: Minor Revisions... Technical Soundness and Data Support for Conclusions...') and Reviewer #1 wrote a 3-sentence review while selecting 'I Don't Know' for statistical rigor."
+  },
+  {
+    "anon_id": "OPEN_ANON_064",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of quantitative mechanical or structural integrity testing comparing native cell sheets and Geltrex/gelatin-modified cell sheets."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Invalid reliance on crystal violet staining as a quantitative measure of cell viability, since crystal violet binds DNA and proteins indiscriminately in both live and dead fixed cells."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Insufficient in vivo tumor characterization relying solely on a single 8-week average diameter without longitudinal growth curves, variance metrics, or tumor take-rate reporting."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Triple-confounded in vivo study design: Group B injected 5 x 10^6 bare MDA-MB-231 cells orthotopically into the mammary fat pad, whereas Group C implanted 1.5 x 10^6 MDA-MB-231 cells embedded in a Geltrex/gelatin matrix subcutaneously in the dorsal flank, confounding delivery format with anatomic site, a 3.3-fold cell dose difference, and exogenous basement-membrane matrix co-implantation.",
+      "Invalid sample size justification citing an online survey-research margin-of-error calculator ('Creative Research Systems') for population polling to justify n = 3 mice per treatment group (and n = 1 in Group A while contradicting this in Section 2.6 by stating 'three groups, each consisting of 3 mice').",
+      "Self-contradictory published revision in Section 3.1 (line 154), where the authors retained the claim '349 vs. 280 viable cells, respectively (P > 0.05)' from crystal violet staining and immediately appended a sentence admitting that crystal violet cannot distinguish live from dead cells.",
+      "Unsubstantiated claim of higher liver and spleen metastasis in the subcutaneous cell-sheet group based on single anecdotal H&E images without metastatic incidence tables, lesion counts, or human-specific IHC confirmation.",
+      "Internal contradiction in Xylazine anesthetic dosing between Sections 2.6/2.7 (10 mg/kg) and Section 2.6.1 (20 mg/kg)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #2 provided a 6-sentence generic praise-only report ('The manuscript is well-written, with a clear structure and logical flow...') that missed every design flaw, while Reviewer #1 raised valid technical objections in Round 1 but accepted the manuscript in Round 2 after the authors declined to add any experimental data."
+  },
+  {
+    "anon_id": "OPEN_ANON_065",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "The study fails to identify any specific genes, enzymes, or metabolic pathway responsible for coronene degradation despite the manuscript's title and framing."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Table 1 lacked N50 and read quality (Q20/Q30) metrics for the Oxford Nanopore sequencing data."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Clarify the meaning of the 'Total length' column (~1,152,142) in Table 2 across the functional annotation tools."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Lack of wet-lab functional validation (e.g., transcriptomics, metabolomics, or knockouts) to link annotated aromatic-degradation genes to coronene catabolism."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mathematical unit error in Table 2 (introduced in the authors' revision footnote), which falsely states that 'Total length (~1,152,142) refers to the total sequence length (in base pairs) that was processed by each tool', whereas 1,152,142 is actually the sum of translated protein lengths in amino acid residues (~3.46 Mbp of coding DNA in a 3.97 Mbp bacterial genome).",
+      "Severe assembly fragmentation (BUSCO completeness of only 81.7% with 11.6% fragmented and 6.7% missing single-copy orthologs) caused by assembling low-accuracy ONT R9.4.1 / Guppy v5.1.13 reads (where only 2.0% of reads reached Q15 and the authors falsely claimed in their rebuttal that Q20/Q30 scores are 'Illumina-specific and not applicable to ONT') using Miniasm + Medaka without short-read polishing.",
+      "Bioinformatic artifact reporting 75 eukaryotic retrotransposons (LINEs and SINEs) in a prokaryotic Halomonas genome due to running RepeatMasker with default eukaryotic repeat libraries, paired with a mismatched Fig 5 caption attributing RepeatMasker categories to MobileOG-DB.",
+      "Taxonomic reclassification of Halomonas caseinilytica strain 105 to Halomonas elongata based solely on Kraken2 read-level k-mer matching without computing genome-wide Average Nucleotide Identity (ANI), dDDH, or GTDB-Tk phylogenomics.",
+      "Unedited internal draft notes left in the published Results text (line 65: '(maybe repot in Mbp or Kbp)'), a logical contradiction in Table 1 ('Number of contigs' expected '<10' vs. 'Contigs > 50 kbp' expected '>10'), and the false claim that 63.04% GC content indicates evolutionary adaptation to high-temperature environments."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_066",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "The counterfactual reproduction number R_c(t) assumes linear scaling with the population-average immune fraction phi(t) and ignores age-structured contact heterogeneity."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match",
+        "issue": "Clarify the definition of time-varying R_0(t) versus initial R_0 and justify the assumption of negligible immune escape prior to Omicron."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Explain the reconstruction of continuous daily infection curves between serosurvey waves, the waning-immunity decay parameterization, and validation against reinfection/breakthrough data."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Explain how NPI effectiveness psi(t) can take negative values (e.g., during the July 2021 reopening spike)."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Global proportional sensitivity of the entire NPI effectiveness trajectory 1 - psi(t) = R_t / R_c(t) to the single point-anchored baseline R_0^initial = 2.0 on 1 March 2020 and the fixed 4-day generation interval.",
+      "Assumption of statistical independence between vaccination probability and prior natural infection within age strata when estimating hybrid immunity, plus omission of distinct hybrid-immunity waning kinetics.",
+      "Underestimation of uncertainty in Table 2 policy-period effectiveness intervals when applying Fieller's theorem to autocorrelated 7-day moving averages across discrete waning scenarios."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_067",
+    "num_human_reviewers": 4,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Unreliability of manual fluorescence threshold adjustment to suppress DENV-3 to DENV-2 spectral crosstalk in Figure 3, recommending a quantitative Delta-Ct threshold between matched and cross-reacting channels."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Provide inter-assay precision (%CV), LLOD/LLOQ definitions, sample size justification (N = 96), and justify or replace the Chi-square test with Fisher's exact test."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Validate the competition assay progeny using an infectious virus titration assay (FFU/IFA) in addition to qRT-PCR genome copy quantification."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Clarify that the serotype-specific multiplex RT-qPCR assay cannot distinguish competition between genotypes of the same serotype, and include whole-genome phylogenetic characterization of the tested isolates."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Statistically invalid application of Fisher's exact test to continuous qRT-PCR concentrations (copies/uL) and mean percentages across n = 3 biological replicates in Figures 4-7 (ironically introduced during revision after Reviewer #4 asked why the Chi-square test was used instead of Fisher's exact test, with both the reviewer and authors failing to recognize that continuous triplicate concentrations are not discrete 2x2 contingency counts).",
+      "Direct internal contradiction in the clinical validation section (line 236), which claims 'Therefore, no false positives were detected' in the exact same paragraph that reports 9 routine-negative clinical samples testing positive for DENV-3 and calculates a DENV-3 specificity of 86.95% (60/69).",
+      "Post-adsorption inoculum sampling bias in the competition protocol (line 185): sampling the 'inoculum' from the cell supernatant AFTER 2 hours of incubation on HuH7 cells rather than prior to infection confounds the input mixture ratio with differential viral entry/attachment kinetics, explaining why the measured DENV-1:DENV-2 inoculum RNA proportions (14.8% and 9.9% DENV-1 in Fig 4D) deviate sharply from the 33.6% DENV-1 genome-copy ratio implied by Table 1."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_068",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Clarify whether Tandem Repeats Finder identified any other repeats in the terminal 24 kb regions and validate the candidate telomeric repeats directly in the raw long reads using TeloSearchLR."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Provide full methodological details for mitochondrial genome assembly, annotation, and tRNA comparison against related Meloidogyne species."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Violation of the independent-draws assumption of the hypergeometric test (p = 4.63 x 10^-29) due to spatial clustering of tandemly duplicated effector/CAZyme paralog arrays within individual High Recombination Zones (e.g., 23 PSPs clustered inside a single 340 kb HRZ on Scaffold 3) and double-counting of genes spanning HRZ/LRZ boundaries.",
+      "Potential ascertainment bias in change-point boundary precision between High and Low Recombination Zones because recombination markers (eSNPs) were derived from RNA-seq of infected Medicago truncatula root galls and therefore require active gene expression.",
+      "Ambiguity regarding whether the 19 rescued small secreted proteins (<66 aa) and 17 BLAST-identified plant peptide mimics (RALFs, IDAs, CEPs) were incorporated into the 1,258 PSP set tested for HRZ enrichment."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_069",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Compare H-MAGMA risk gene counts and novel distal loop-linked genes against conventional proximity-based MAGMA."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Explain differences in imputation INFO score thresholds across GWAS cohorts and differences in promoter window definitions between PLAC-seq annotation (2,000 bp) and H-MAGMA (1,500 bp upstream / 500 bp downstream)."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Discuss limitations of using pediatric epilepsy surgical resection tissue, European-only GWAS summary statistics, differing GWAS sample sizes, and microglial transcriptional subtype heterogeneity."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Provide genome browser visualizations of representative chromatin loops (e.g., INPP5D, MED12L) and quantify shared versus disease-specific pathways."
+      },
+      {
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match",
+        "issue": "Address discrepancies between computational integration frameworks such as sLDSC and H-MAGMA."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Mechanistic proof that the manuscript's claim of microglial enrichment for ALS in H-MAGMA (contradicting sLDSC in Fig 1d, which shows zero microglial heritability enrichment for ALS) is an artifact of H-MAGMA combining direct exon/promoter SNPs (124 ALS genes in S4A Fig) with distal loop-linked SNPs (47 ALS genes) and microglia having nearly twice as many called PLAC-seq loops (108,802 vs. 61,895 in oligodendrocytes).",
+      "Monte Carlo pseudoreplication in the loop-downsampling analysis (Fig 2b and S4B Fig), where a Kruskal-Wallis / Dunn's test was applied across n = 10 random computational subsamples of the exact same PLAC-seq dataset to report 4- and 5-asterisk p-values (**** / *****).",
+      "Severe Linkage Disequilibrium (LD) gene-cluster inflation at the extended MHC locus (6p21: BAG6, NEU1, PRRC2A, PSMB8, PSMB9, TAP1, TAP2, MICB, HSPA1A/B/L, TNF, HLA-DRB1/DRA) and the 17q21.31 MAPT inversion (KANSL1, KANSL1-AS1, ARHGAP27, PLEKHM1), where single LD blocks sharing common SNPs and enhancer loops are counted as 10-15 independent risk genes in downstream GO pathway over-representation tests."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_070",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match",
+        "issue": "Overstatement of public health and molecular cluster inference conclusions given that the LANL database sequences represent an unlinked global convenience sample rather than a regional epidemiological transmission cohort."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Strictness of the exact-match cluster criterion in Adjusted Mutual Information (AMI), motivating sensitivity analyses with >50% and >66% overlap coefficients and higher wgs proportions (wgs95, wgs99)."
+      },
+      {
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)",
+        "issue": "Clarify how IQ-TREE treats missing characters/gaps in likelihood calculations and why Robinson-Foulds distance variance increases at high wgs proportions."
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Pinpointed the exact phylogenetic and statistical mechanisms causing the non-monotonic 'T-shaped alignment' degradation at 10-40% wgs that the authors and human reviewers left unexplained: (1) fitting an unpartitioned single-matrix GTR+F+I+G4 model across conserved pol and faster-evolving env/gag regions distorts branch-length scaling between pol-only tips and wgs tips (explaining why 64% of clustered sequences at wgs50 are pol-only and why midpoint rooting shifts), and (2) unstratified bootstrap column resampling across a ~9 kb alignment where ~85% of sites are gaps for pol-only sequences dilutes the effective sampling of informative PRRT columns relative to a trimmed 1.3 kb pol alignment (wgs0), directly explaining the cliff-like drop in >=90% bootstrap clusters between wgs0 and wgs10-50 in Fig 6A.",
+      "Omission of any pairwise genetic distance or patristic branch-length cutoff in cluster definition (relying solely on bootstrap support >=70-99%), which groups deep historical subtype B clades rather than acute epidemiological transmission clusters.",
+      "Unadjusted multiple one-tailed t-tests across mixture levels and omission of the IQ-TREE software version, bootstrap algorithm flag (standard non-parametric -b vs. Ultrafast Bootstrap -B), and HXB2 coordinate boundaries."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  }
+]

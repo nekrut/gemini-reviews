@@ -1,0 +1,32 @@
+<Blinded Review: TIME_ANON_0431>
+**Composite Score:** 7.5 / 10.0 (Rigor: 2.5/3.5 | Claims: 1.9/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.3/2.0)
+**Bias Category:** Over-Interpretation/Clinical
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Clinical/Observational
+
+OVERALL_SCORE: 7.5/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2010s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This translational clinical and evolutionary virology study investigates the in vivo role of CD20+ B cells and autologous neutralizing antibodies (`NAbs`) in controlling chronic HIV-1 plasma viral load (`pVL`) by longitudinally following an antiretroviral therapy (`ART`)-naive HIV-1-infected patient who received four weekly infusions of rituximab ($375\text{ mg/m}^2$ starting at day 1,075 post-seroconversion) for a pre-existing low-grade IgM-secreting lymphoplasmacytoid lymphoma. Combining autologous and heterologous `Env`-pseudovirus neutralization assays (`TZM-bl`), monoclonal antibody competition ELISAs (`b12`, `4.8d`, `447-52D`, `2G12`), longitudinal plasma RNA and PBMC proviral `env` sequencing analyzed with `BEAST` and `CODEML`, site-directed mutagenesis (`Q363R`, `R339N/E`), and CD8+ T-cell `IFN-gamma` ELISpot/epitope tracking, the authors show that: (1) rituximab-mediated B-cell depletion coincided with a $>3$-fold decline in autologous `NAb` $\text{IC}_{50}$ titers and a transient $1.7\ \log_{10}$ surge in HIV-1 `pVL` (peaking at $737,400\text{ copies/ml}$ 4 months post-rituximab), followed by spontaneous recovery of `NAb` titers and re-suppression of `pVL` to baseline without `ART`; and (2) during the `NAb` nadir, plasma `env` sequences diversified ($N_e\tau$ increased 5-fold) and transiently reverted at positively selected CD4-binding-site-proximal residue `363` from the escape variant `R363` to the neutralization-sensitive archived variant `Q363`, before re-selecting `R363` and `339E` as `NAbs` rebounded.
+
+### 2. Methodological & Statistical Audit (WEAKNESSES & METHODOLOGICAL AUDIT)
+- **Confounding by Concurrent Acute Hepatitis B Virus (`HBV`) Reactivation and Underlying B-Cell Lymphoma in an $N=1$ Case Study:**
+  - The study's causal inference rests on a single patient ($N=1$) with two major clinical confounders: first, the patient had an active IgM-secreting lymphoplasmacytoid B-cell lymphoma (`CD20+ CD79+`), meaning rituximab lysed neoplastic B cells in lymphoid tissues; second, 20 weeks after the first dose of rituximab (precisely at the peak of the $1.7\ \log_{10}$ HIV-1 `pVL` surge), the patient developed acute clinical malaise, fever, and biochemical hepatitis caused by reactivation of latent `HBV` (`Results`, lines 29, 104).
+  - While the authors appropriately show that HIV-1 `pVL` subsequently declined even while `HBV` DNA remained elevated (`Supplementary Fig. S2`) and provide compelling evolutionary evidence (`Q363R` reversion/re-selection) of fluctuating `NAb` pressure, acute systemic innate immune and pro-inflammatory cytokine activation during the symptomatic `HBV` flare at week 20 could have directly transactivated HIV-1 replication and amplified the magnitude of the `pVL` spike.
+- **Misreporting of Frequentist $P$-Values for Individual Sites in `CODEML` (`M7` vs. `M8`):** In `Results` (line 70) and `Figure 3`, the authors report site-specific $d_N/d_S$ ratios with frequentist $P$-values from `CODEML`: *"position 339 ($d_N/d_S = 7.6$, $P < 0.0001$) and position 363 ($d_N/d_S = 6.977$, $P = 0.03$)."* However, as described in `Methods` (line 156), `CODEML` compared site models `M7` and `M8` via a gene-wide likelihood ratio test (`LRT`) and identified positively selected codons using the Empirical Bayes (`BEB`) approach with a posterior probability cutoff of $>90\%$. In `CODEML` `M8`, individual codons have Bayesian posterior probabilities ($PP$), not frequentist $P$-values (unless a separate site-wise LRT program was run and not documented).
+- **Incomplete Neutralization Timepoint Coverage in Table 2 and Table 3:** Heterologous neutralization (`Table 2`) is shown only for days `1,042` and `1,353` (omitting the nadir timepoints `1,239` and `1,295`), and `IFN-gamma` ELISpot responses (`Table 3`) are reported only for *"pre-rituximab Year 1"* and *"pre-rituximab Year 3"* without post-rituximab ELISpot spot-forming unit counts to directly verify that CD8+ T-cell functional magnitude was unchanged during peak viremia.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality (STRENGTHS)
+- **Convergent Virological, Evolutionary, and Mutational Evidence for Dynamic `NAb` Selection at `gp120` Residues `363` and `339` `[Well Supported]`:** The most compelling aspect of the study is that the authors did not rely solely on the temporal correlation between `NAb` titers and `pVL`. By demonstrating that plasma virus transiently reverted from the `b12`/serum-resistant `R363` allele to the sensitive `Q363` allele during rituximab-induced `NAb` depletion and then re-selected `R363` and `339E` as `CD4bs`-competing antibodies returned (`Figs. 3–4`), and by validating the 2- to 5-fold neutralization shift of `Q363R` and `R339N/E` via site-directed mutagenesis (`Results`, line 77), the authors provide strong mechanistic proof of active humoral selection in vivo.
+- **Demonstration That Anti-HIV-1 `NAbs` Are Maintained by Short-Lived `CD20+` B-Cell Populations `[Moderately Supported]`:** The observation that rituximab reduced total serum IgG by only $30\%$ (sparing `CD20-` long-lived bone marrow plasma cells) while reducing anti-HIV-1 autologous `NAb` $\text{IC}_{50}$ titers and `b12`/`4.8d`/`447-52D` competition titers by $>3\text{-fold}$ supports the hypothesis that HIV-1 envelope-specific neutralizing antibodies depend disproportionately on continuously renewing `CD20+` memory/plasmablast pools.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** Nested RT-PCR and site-directed mutagenesis primer sequences (`env 1A`, `env 1M`, `env F1/2`, `env R1/2`, `R339Nf/r`, `R339Ef/r`, `Q363Rf/r`), pseudovirus titration protocols on `TZM-bl` and `GHOST` cells, competitive ELISA conditions, and `BEAST` MCMC parameters (`60 million` steps, `10%` burn-in, `969 nt` alignment) are clearly documented.
+- **Weaknesses:** No GenBank accession numbers are provided for the longitudinal plasma and PBMC `env` sequences generated in this study.
+</Blinded Review: TIME_ANON_0431>

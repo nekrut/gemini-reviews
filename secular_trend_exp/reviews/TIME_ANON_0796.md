@@ -1,0 +1,35 @@
+<Blinded Review: TIME_ANON_0796>
+**Composite Score:** 7.4 / 10.0 (Rigor: 2.2/3.5 | Claims: 1.9/2.5 | Biology: 1.5/2.0 | Reproducibility: 1.8/2.0)
+**Bias Category:** Technical/Assay
+**Verdict:** Minor Revision
+**Study Modality:** Dry-Lab Secondary Cohort/Database
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 7.4/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2020s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This comparative genomic and evolutionary study investigates the repertoire, domain organization, 3D helicase structure, and developmental/cryptobiotic expression of *dicer* genes across ten tardigrade species spanning both major classes: eight Eutardigrades (*Hypsibius exemplaris*, *Ramazzottius varieornatus*, *Paramacrobiotus metropolitanus*, *P. fairbanksi*, *P. richtersi*, *Richtersius* cf. *coronifer*, *Acutuncus antarcticus*, *Milnesium tardigradum*) and two Heterotardigrades (*Echiniscoides* cf. *sigismundi*, *Echiniscus testudo*). Using `Diamond` homology searches, `IQ-TREE 2` (`LG+C60+F` PMSF) and `PhyloBayes v4.1` (CAT) phylogenetics, NCBI `CDD v3.21` domain annotation, `ColabFold`/`AlphaFold2` helicase structure prediction with `bio3d` RMSD comparison, and `STAR`/`featureCounts` RNA-seq re-analysis across developmental stages and the cryptobiotic tun state in *H. exemplaris* and *R. varieornatus*, the authors classify tardigrade Dicers into five clades (`tDicer1–5`). They show that `tDicer1` is present across both classes and clusters with nematode/pan-ecdysozoan Dicer-1, while `tDicer2–5` form a clade sister to arthropod/kinorhynch/platyhelminth Dicer-2 that subsequently underwent Eutardigrade (`tDicer2`, `tDicer3`, `tDicer4`) and Heterotardigrade (`tDicer5`) lineage-specific duplications. While the site-heterogeneous phylogenetic modeling and data transparency are strong, the inclusion of fragmented transcriptome contigs (208–387 aa) as separate paralogs in copy-number counts and 3D structural RMSD matrices, lack of statistical testing on RNA-seq expression differences, and a methodological misdescription of 18S rRNA as "mitochondrial" with length in "amino acids" require correction.
+
+### 2. Methodological & Statistical Audit (STRENGTHS, WEAKNESSES & METHODOLOGICAL AUDIT)
+**Strengths:**
+* **Site-Heterogeneous Phylogenetic Inference (`LG+C60+F` PMSF & `PhyloBayes` CAT):** Ancient Ecdysozoan Dicer divergences are prone to long-branch attraction (especially given fast-evolving arthropod Dcr-2 and nematode lineages); the use of profile mixture models (`LG+C60+F` PMSF in `IQ-TREE 2` with 1,000 UFBoot/SH-aLRT replicates and Bayesian `CAT` in `PhyloBayes v4.1`) represents best-practice molecular phylogenetics.
+* **Chromosomal Synteny Confirmation in Genome Assemblies:** For the three species with reference genome assemblies (*H. exemplaris*, *R. varieornatus*, *P. metropolitanus*), the authors confirm that the three *dicer* genes reside on distinct chromosomal scaffolds, ruling out allelic haplotigs.
+
+**Weaknesses & Methodological Audit:**
+* **Factual Errors in 18S rRNA Methods Description:** In Methods ("Phylogenetic analysis of tardigrades using 18S", line 39), the authors write: *"Mitochondrial 18S ribosomal RNA sequences of tardigrades from NCBI, in addition to D. melanogaster and C. elegans, were aligned... Redundant and most short (< 500aa) sequences were removed."* First, **18S rRNA is the nuclear small-subunit ribosomal RNA**, not mitochondrial (animal mitochondria encode 12S and 16S rRNAs). Second, 18S rRNA is a non-coding nucleotide sequence (modeled under `SYM + I + R3` in Fig. 1), so filtering by `< 500aa` (amino acids) is a unit error for `< 500 bp/nt`.
+* **Transcriptome Fragmentation Artifacts Inflating Copy Numbers (`tDicer4a–c`, `tDicer5a–c`) and Distorting `AlphaFold2` RMSD:** All three species with complete genome assemblies have exactly **3** full-length *dicer* genes (~1,482–1,858 aa). Conversely, the species reported as having "4 copies" in Table 1 are transcriptome assemblies with low BUSCO completeness (e.g., 43% for *M. tardigradum*), where the putative paralogs are non-overlapping short fragments: *M. tardigradum* `tDicer1` (208 aa), `tDicer4a` (238 aa), `tDicer4b` (303 aa), `tDicer4c` (340 aa); and *E. testudo* `tDicer5a` (1,636 aa, lacking helicase), `tDicer5b` (387 aa, helicase only), and `tDicer5c` (278 aa, helicase only) (Table 1 and Fig. 3). Although the authors note in the Discussion that these non-overlapping fragments may derive from the same transcript, treating them as distinct paralogs (`tDicer4a/b/c`, `tDicer5a/b/c`) in Table 1 and feeding truncated helicase fragments (such as 278-aa *E. testudo* `tDicer5c`) into `AlphaFold2` and `bio3d` 3D superposition directly causes the artifactual outlier RMSD reported in Results (*"Among the four tDicer5 copies with helicases, tDicer5c in E. testudo is the most dissimilar to all other Dicers"*, Fig. 5B).
+* **No Statistical Testing on Developmental/Tun RNA-Seq Expression:** In Results (line 164, Fig. 6), claims that *dicer* genes are expressed at *"higher levels (up to two-fold change) in eggs"* and *"higher levels (up to and over two-fold) during tun"* in *H. exemplaris* and *R. varieornatus* ($n=3$ biological replicates per stage) are based solely on visual inspection of raw TPM boxplots without running formal differential expression statistics (`DESeq2`/`edgeR` or ANOVA with multiple-testing correction).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+* **Claim 1 (Eutardigrades with reference genomes possess three distinct, transcriptionally active *dicer* genes): `[Well Supported]`** — Confirmed by chromosomal coordinates, full-length domain architecture (~1,600–1,858 aa), and RNA-seq expression across life stages in *H. exemplaris* and *R. varieornatus*.
+* **Claim 2 (Tardigrades share an ancient Dicer duplication separating `tDicer1` from `tDicer2–5`, followed by lineage-specific Eutardigrade duplication of `tDicer2` and `tDicer3`): `[Well Supported]`** — Strongly supported (99% UFBoot, 1.0 BPP) under site-heterogeneous `LG+C60+F` PMSF and `PhyloBayes` CAT models.
+* **Claim 3 (*M. tardigradum*, *E. testudo*, and *E. cf. sigismundi* underwent expansions to 4 *dicer* copies with divergent helicase structures): `[Fragile]`** — Confounded by fragmented transcriptome assemblies (208–387 aa contigs containing complementary missing domains) that likely represent split fragments of fewer genes.
+
+### 4. Reproducibility & Data Completeness
+* **Exemplary Archival & Pipeline Transparency:** All NCBI/Ensembl genome, transcriptome (TSA/SRA), and RNA-seq accession numbers, BUSCO v5 (`metazoan_odb12`) scores, software versions and parameters (`MAFFT v7.481`, `BMGE`, `IQ-TREE 2`, `PhyloBayes v4.1`, `Diamond v2.0.4`, `CDD v3.21`, `ColabFold v1.5.5`, `bio3d v2.4-5`, `Trim Galore v0.6.3`, `STAR v2.7.5b`, `featureCounts v1.6.4`), and sequence alignments (Additional files 1–3) are comprehensively documented.
+</Blinded Review: TIME_ANON_0796>

@@ -1,0 +1,32 @@
+<Blinded Review: TIME_ANON_0331>
+**Composite Score:** 5.0 / 10.0 (Rigor: 1.5/3.5 | Claims: 1.3/2.5 | Biology: 1.1/2.0 | Reproducibility: 1.1/2.0)
+**Bias Category:** Technical/Assay
+**Verdict:** Major Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This study examines the expression, functional role, and estrogen-induced histone modification profile of the 7-dehydrocholesterol reductase gene (*DHCR7*) and three of its 5'-UTR splice variants (T1, T3, T4, all encoding the identical 476-aa protein) during ovarian follicle selection in laying hens (*Gallus gallus*, Hy-Line Brown, 35–40 weeks old). Using RT-qPCR and Western blotting across pre-hierarchical (SWF, LWF, SYF) and hierarchical (F6–F1) follicles and isolated granulosa/theca cells (Pre-GCs, Post-GCs, Pre-TCs, Post-TCs), the authors report that *DHCR7* expression rises during the transition from pre-hierarchical to F6 follicles and is concentrated in granulosa cells. Overexpression of the *DHCR7* coding sequence (`pcDNA3.1-DHCR7`) and siRNA knockdown (`si-DHCR7`) in cultured Pre-GCs modulate proliferation markers (*CCND1, CCND2, CDK1, CDK2*, CCK-8, EdU), progesterone secretion and steroidogenic transcripts (*StAR, CYP11A1, HSD3B*), and apoptosis (Annexin V/PI, *CASPASE3/8/9*). Finally, CUT&RUN-qPCR in Pre-GCs treated with $50\,\text{nmol/L}$ estradiol ($E_2$) shows enrichment of active histone marks (H3K4me2, H3K4me3, H3K9ac, H3K27ac) and reduction of H3K4me1 across three subregions of a predicted estrogen response element (ERE) in the *DHCR7* promoter.
+
+While the experimental workflow covers multiple functional assays, the study suffers from a confounding serum concentration difference between cultured Pre-GCs and Post-GCs, failure to measure intracellular cholesterol or 7-dehydrocholesterol levels, disconnect between 5'-UTR splice-variant characterization and CDS-only overexpression/siRNA, and incomplete reporting of CUT&RUN normalization and treatment timing.
+
+### 2. Methodological & Statistical Audit
+- **Confounded Culture Serum Conditions Between Pre-GCs and Post-GCs:** In Section 2.2 ("Isolation and Culture of Follicular Cells"), Pre-GCs are cultured in M199 supplemented with **1% fetal bovine serum (FBS)**, whereas Post-GCs, Pre-TCs, and Post-TCs are cultured in M199 supplemented with **5% FBS**. Because *DHCR7* is a canonical sterol regulatory element-binding protein 2 (SREBP2) target gene whose transcription and protein stability are acutely regulated by exogenous lipoprotein/cholesterol availability in serum, comparing *DHCR7* expression across cell types maintained in 1% vs. 5% FBS introduces a severe nutritional confound if cells were harvested post-plating.
+- **Disconnect Between Transcript Variant Focus and Functional Perturbations:** The manuscript emphasizes the distinct expression patterns of three *DHCR7* transcript variants (T1, T3, T4) that differ exclusively in their 5' non-coding exons while sharing identical coding sequences (CDS). However, the functional gain- and loss-of-function experiments use a single CDS overexpression plasmid (`pcDNA3.1-DHCR7` amplified from positions 215–1642 of `XM_046942254.1`) and a single CDS-targeting siRNA (`si-DHCR7`) that simultaneously knocks down all transcripts. Thus, the functional assays provide zero insight into the biological significance of the alternative 5'-UTR splicing events.
+- **Missing Biochemical Readout (Cholesterol / 7-DHC Quantification):** The central mechanistic hypothesis is that DHCR7 promotes progesterone synthesis by catalyzing the conversion of 7-dehydrocholesterol (7-DHC) to cholesterol (the substrate for StAR/CYP11A1). However, neither cellular cholesterol nor 7-DHC levels were measured upon *DHCR7* overexpression or knockdown, nor were cholesterol rescue experiments performed in `si-DHCR7` cells to prove that the proliferation/progesterone effects are sterol-mediated rather than off-target.
+- **Incomplete CUT&RUN-qPCR Protocol and Normalization:** Section 2.11 describes CUT&RUN-qPCR across three overlapping amplicons (subregions 1–3) of the *DHCR7* promoter after $50\,\text{nmol/L}$ $E_2$ treatment, but omits (1) the duration of $E_2$ treatment prior to harvesting for CUT&RUN, (2) the qPCR quantification formula (whether data in Fig. 8 are normalized to % Input DNA, spiked-in heterologous DNA, or fold enrichment over IgG), and (3) a negative-control genomic locus to rule out global chromatin recovery differences between $E_2$ and control groups.
+- **Unit Typo in EdU Assay:** Line 117 states that cells were incubated with "$50\,\text{mmol/L}$ EdU working solution for 2 h"—a 1,000-fold typographical error for the standard $50\,\mu\text{mol/L}$ concentration in the BeyoClick EdU kit.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **[Moderately Supported]** *DHCR7* mRNA and protein are enriched in chicken ovarian granulosa cells relative to theca cells and increase during the transition from SYF to F6 selected follicles.
+- **[Moderately Supported]** Perturbing total *DHCR7* expression in cultured Pre-GCs alters cell cycle progression, apoptosis rates, and progesterone accumulation in culture supernatants.
+- **[Fragile]** The claim that $E_2$ transcriptionally activates *DHCR7* via an ERE-mediated recruitment of histone methyltransferases/acetyltransferases is correlative: no estrogen receptor ($\text{ER}\alpha/\text{ER}\beta$) CUT&RUN or ChIP, no ERE site-directed mutagenesis luciferase reporter, and no histone-modifier inhibition experiments were conducted.
+- **[Overstated]** Claiming to have elucidated the functional roles of the *DHCR7* transcript variants (T1, T3, T4) in follicle selection is unsupported when no variant-specific 5'-UTR constructs or isoform-specific knockdowns were tested.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** All RT-qPCR, variant-specific qPCR, CDS cloning, and CUT&RUN-qPCR primer sequences, NCBI RefSeq accessions, and antibody vendor catalog numbers (ABclonal, Proteintech, CST, Abcam) are completely tabulated in Tables 1–3 and Methods.
+- **Deficiencies:** Raw Western blot uncropped membranes and primary numerical datasets are not included; single reference gene (*GAPDH*) stability across hormonal/steroidogenic treatments is unvalidated; CUT&RUN normalization math and $E_2$ exposure duration are omitted.
+</Blinded Review: TIME_ANON_0331>

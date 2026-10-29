@@ -1,0 +1,37 @@
+<Blinded Review: TIME_ANON_0976>
+**Composite Score:** 6.7 / 10.0 (Rigor: 2.2/3.5 | Claims: 1.8/2.5 | Biology: 1.5/2.0 | Reproducibility: 1.2/2.0)
+**Bias Category:** Statistical/Design
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 6.7/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2000s
+
+---
+
+### 1. Executive Summary / SUMMARY
+This molecular and *in vivo* neurobiology study identifies the BH3-only Bcl-2 family member *Noxa* (*PMAIP1*) as a direct transcriptional target of HIF-1$\alpha$ that mediates p53-independent hypoxic cell death. Using PCR-based suppression subtractive hybridization in SK-N-MC neuroblastoma cells exposed to $0.5\%\ \text{O}_2$ (in glucose- and serum-free medium), comparisons between $p53^{+/+}$ H719 and $p53^{-/-}$ Saos-2 cells under hypoxia vs. etoposide, serial promoter deletion luciferase assays (`pGL2-Noxa-1` through `-5`), site-directed mutagenesis of a hypoxia-responsive element (HRE, `5'-CGTG-3'` $\to$ `5'-GCAC-3'`) at $-1,275\ \text{bp}$, EMSA with anti-HIF-1$\alpha$ supershift, streptolysin-O-delivered sense/antisense (SE/AS) oligonucleotides, DCF-DA flow cytometry for ROS, $N$-acetylcysteine (NAC) rescue, subcellular fractionation for cytochrome *c* release, and a rat transient (2 h) middle cerebral artery occlusion (MCAO) stroke model with intracerebroventricular liposomal AS oligonucleotide delivery, the authors report that HIF-1$\alpha$ directly transactivates *Noxa* to drive ROS-dependent cytochrome *c* release, caspase-3 activation, and cerebral infarction ($154.24 \pm 28.38\ \text{mm}^3$ in SE vs. $48.86 \pm 13.46\ \text{mm}^3$ in AS). While the transcriptional characterization of the $-1,275\ \text{bp}$ HRE is thorough, the study conflates oxygen-glucose-serum deprivation (OGSD) with pure hypoxia, lacks sample size ($n$) reporting for the rat MCAO experiments, and applies unadjusted two-sample Student's $t$-tests across multi-group time courses.
+
+### 2. Methodological & Statistical Audit / STRENGTHS & WEAKNESSES
+
+#### STRENGTHS
+- **Definitive promoter mapping and p53-independence dissection:** Comparing $p53$-null Saos-2 cells and $p53$-wild-type H719 cells against etoposide (genotoxic control) cleanly separates p53-dependent genotoxic *Noxa* induction from p53-independent hypoxic induction (Fig. 2). The HRE at $-1,275\ \text{bp}$ is rigorously validated by 5' promoter deletions, isolated 256-bp fragment sufficiency (`pGL2-Noxa-5`), core `CGTG` $\to$ `GCAC` point mutation (`pGL2-Noxa-M5`), cold competition EMSA, and anti-HIF-1$\alpha$ antibody supershift (Figs. 3–4).
+- **Multi-level functional validation from cell culture to *in vivo* rat MCAO:** The authors combine overexpression, streptolysin-O antisense knockdown, antioxidant (NAC) rescue, mitochondrial/cytosolic fractionation for cytochrome *c*, and intracerebroventricular antisense delivery in rat focal cerebral ischemia (Figs. 5–9).
+
+#### WEAKNESSES & METHODOLOGICAL AUDIT
+- **Confounding of hypoxia ($0.5\%\ \text{O}_2$) with simultaneous serum and glucose deprivation:** In Materials and Methods ("Cell Culture, Hypoxia Condition...", line 26) and the legends to Figures 1 and 2, the authors state: *"For hypoxic condition, cells in degassed serum- and glucose-deficient medium were transferred to a hypoxic chamber with 0.5% O2."* Normoxic control cells were maintained in standard complete RPMI 1640 medium with serum and glucose. Thus, the "hypoxia" treatment is actually combined oxygen-glucose-serum deprivation (in vitro ischemia), where glucose and growth-factor withdrawal independently trigger metabolic stress, ROS, and BH3-only protein induction. Only the normoxic pcDNA-HIF-1$\alpha$ cotransfection (Fig. 4A) isolates HIF-1$\alpha$ activity from glucose/serum starvation.
+- **Complete omission of animal sample size ($n$), randomization, and blinding in the rat MCAO stroke model:** In Sections "Focal Cerebral Ischemia in Rat" (line 71) and "Liposomal Delivery of Noxa AS Oligonucleotide..." (line 153, Fig. 9), the authors report infarct volumes of $154.24 \pm 28.38\ \text{mm}^3$ (SE) vs. $48.86 \pm 13.46\ \text{mm}^3$ (AS, $P < 0.05$), but never state how many rats per group were operated, excluded, or analyzed, nor whether TTC infarct planimetry was performed blinded to treatment allocation.
+- **Inconsistent EMSA lane numbering between main text and Figure 4C legend:** In the Results text (line 110), the authors write that `32P-labeled Noxa promoter oligonucleotide` + hypoxic nuclear extract is in *"lane 3"*, cold competition in *"lane 5"*, anti-HIF-1$\alpha$ supershift in *"lane 6"*, and control anti-Flag antibody in *"lane 7"*. However, the Figure 4C legend (line 116) lists: *"lane 3, 32P-consensus oligonucleotide and nuclear extracts... lane 4, 32P-Noxa oligonucleotide and NH; lane 5, ... 100-fold excess of unlabeled cold Noxa oligonucleotide... lane 6, ... anti-HIF-1alpha... lane 7, ... isotype control antibody."* Thus, lane 3 vs. lane 4 is misnumbered in the main text, and the control antibody is called "anti-Flag" in the text but "isotype control antibody" in the Methods and legend.
+- **Unadjusted pairwise Student's $t$-tests across multi-point time courses and dose curves:** All multi-group experiments (6 time points in Fig. 1A/C; 5 constructs in Fig. 3B; 5 time points in Fig. 5A/B and Fig. 7D; 4 NAC doses in Fig. 6C) were analyzed by unadjusted Student's $t$-tests without ANOVA or multiple-comparison correction, and figure legends alternate inconsistently between reporting $\text{mean} \pm \text{SD}$ (Figs. 1, 3, 4B, 5) and $\text{mean} \pm \text{SE}$ (Figs. 4A, 7C, 7D) despite the Methods stating *"All data were presented as mean ± SD"*.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim that HIF-1$\alpha$ directly binds and transactivates the human *Noxa* promoter via an HRE at $-1,275\ \text{bp}$ independently of p53:** `[Well Supported]` — Solidly demonstrated by promoter truncation, `CGTG` $\to$ `GCAC` mutagenesis, normoxic HIF-1$\alpha$ cotransfection in $p53$-null Saos-2 cells, and EMSA supershift.
+- **Claim that *Noxa* mediates ROS generation, cytochrome *c* release, and cell death under in vitro hypoxic/ischemic conditions:** `[Moderately Supported]` — Supported by AS knockdown and NAC rescue, though confounded by simultaneous glucose/serum deprivation in the hypoxic chamber protocol and reliance on single-pair phosphorothioate/unmodified SE/AS oligos without a second independent target site.
+- **Claim that intracerebroventricular *Noxa* antisense reduces infarct volume in rat transient MCAO:** `[Fragile]` — Visually and numerically large effect ($68\%$ reduction), but lack of reported animal numbers ($n$), mortality/exclusion criteria, and blinding weakens preclinical rigor.
+
+### 4. Reproducibility & Data Completeness
+Exact oligonucleotide sequences are provided for all promoter cloning primers (`F1`–`F4`, `R1`, `SE`, `AS`), EMSA probes (consensus, native *Noxa* HRE, mutant HRE), human SL-O antisense/sense oligos, and rat ICV antisense/sense oligos, along with the GenBank accession for rat *Noxa* (`XM_225860`). However, the RT-PCR primer sequences for human *Noxa*, *p53*, *p21*, and *GAPDH* are omitted from the Materials and Methods, and exact rat sample sizes ($n$) are missing.
+</Blinded Review: TIME_ANON_0976>

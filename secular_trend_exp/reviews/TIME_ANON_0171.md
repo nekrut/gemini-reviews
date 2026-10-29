@@ -1,0 +1,32 @@
+<Blinded Review: TIME_ANON_0171>
+**Composite Score:** 3.5 / 10.0 (Rigor: 1.0/3.5 | Claims: 0.8/2.5 | Biology: 0.9/2.0 | Reproducibility: 0.8/2.0)
+**Bias Category:** Statistical/Design
+**Verdict:** Reject (Fundamental Flaws)
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Clinical/Observational
+
+---
+
+### 1. Executive Summary
+This case-control candidate-gene association study evaluates 28 tagSNPs in the *PTCH1* (Patched 1) gene across 296 patients with chronic obstructive pulmonary disease (COPD) and 300 healthy controls in a Chinese Han population from Hunan Province. The authors report nominal allelic associations ($P = 0.018 - 0.033$) for three SNPs (`rs28491365`, `rs10512248`, `rs28705285`), a covariate-adjusted recessive model association for `rs34695652` ($\text{OR} = 0.490$, $P = 0.010$), and a covariate-adjusted haplotype association (`rs28504650`–`rs10512248` CG haplotype, $\text{OR} = 6.364$, 95% CI: $1.220 - 33.292$, $P = 0.028$). However, a forensic audit of the text reveals severe statistical, clinical, and arithmetic flaws: (1) a physiologically impossible statement that GOLD-confirmed COPD patients and healthy controls with normal lung function had no significant difference in $\text{FEV}_1\%$ predicted ($P > 0.05$); (2) a mathematically impossible Student's $t$-statistic ($t = 3.215$ instead of $t = 16.18$) for the 12.2-year age mismatch between cases and controls; (3) complete absence of multiple-testing correction across 28 SNPs $\times$ 5 genetic/allelic models ($>140$ tests), under which not a single association in the paper is statistically significant; and (4) claiming positive associations for three SNPs (`rs10512248`, `rs28491365`, `rs28705285`) that lost all statistical significance after adjusting for age, sex, and smoking.
+
+### 2. Methodological & Statistical Audit
+- **Arithmetic Discrepancy in Age Comparison ($t$-Statistic Error):** In the Results (line 51), the authors report that COPD cases ($n = 296$) were significantly older than controls ($n = 300$): $67.1 \pm 8.8$ vs. $54.9 \pm 9.6$ years, reporting "$t = 3.215, P < 0.001$". Calculating the two-sample Student's $t$-statistic directly from these summary statistics:
+  $$\Delta \bar{x} = 67.1 - 54.9 = 12.2\text{ years}, \quad SE = \sqrt{\frac{8.8^2}{296} + \frac{9.6^2}{300}} = \sqrt{0.2616 + 0.3072} = 0.7542\text{ years}$$
+  $$t = \frac{12.2}{0.7542} = 16.18$$
+  The reported value of $t = 3.215$ is off by a factor of 5 and is mathematically incompatible with the stated means, standard deviations, and sample sizes.
+- **Physiologically Contradictory Baseline Clinical Reporting ($\text{FEV}_1\%$ Predicted):** In the Methods (line 31), the authors state that COPD diagnosis was confirmed by GOLD criteria ($\text{FEV}_1/\text{FVC} < 0.70$ with airflow limitation) and that controls were selected to have "normal lung function." Yet in the Results (line 51), they state: *"There were no significant differences in the gender, body mass index, predicted percentage of forced expiratory volume in 1 s ($\text{FEV}_1\%$ predicted) and smoking status between the COPD and the control groups (all $P > 0.05$)."* Having no difference in $\text{FEV}_1\%$ predicted between 296 GOLD-confirmed COPD patients and 300 healthy controls with normal spirometry is clinically and physiologically impossible and points to either a data-coding error or a text fabrication/misreporting error.
+- **Confounding by Severe Age Mismatch and Loss of Significance After Adjustment:** Because cases were on average 12.2 years older than controls ($67.1$ vs. $54.9$ years), unadjusted (crude) comparisons are confounded by age. When the authors actually adjusted for age, gender, and smoking status in logistic regression (line 69), **none** of the three risk SNPs (`rs10512248`, `rs28491365`, `rs28705285`) nor `rs28469297` remained statistically significant in any genotypic model ("However, after adjustment for age, gender, and smoking status, no correlations between these SNPs and COPD were revealed by logistic regression analysis").
+- **Complete Absence of Multiple-Testing Correction:** The study tests 28 tagSNPs across allelic tests, 4 genetic models (co-dominant, dominant, recessive, log-additive), and multi-block haplotypes—well over 140 hypothesis tests—using an unadjusted threshold of $P < 0.05$. Even under a conservative Bonferroni correction for 28 independent SNPs ($\alpha = 0.05 / 28 = 0.00179$), every single reported association fails:
+  - Allelic tests (unadjusted for age): `rs28491365` ($P = 0.018$), `rs10512248` ($P = 0.033$), `rs28705285` ($P = 0.033$) — all non-significant after multiple-testing correction and unadjusted for the 12.2-year age gap.
+  - Recessive model (adjusted): `rs34695652` ($P = 0.010 > 0.00179$) — non-significant after multiple-testing correction.
+  - Haplotype `rs28504650`–`rs10512248` CG: $\text{OR} = 6.364$, 95% CI: $1.220 - 33.292$, $P = 0.028$ — extremely wide confidence interval indicative of sparse cell counts (likely $<5$ controls carrying the CG haplotype) and non-significant after correction.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** Three *PTCH1* SNPs (`rs10512248`, `rs28491365`, `rs28705285`) are positively associated with increased COPD susceptibility in the Chinese Han population. `[Methodologically Flawed]` — Directly contradicted by the authors' own covariate-adjusted logistic regression (line 69), where all three SNPs lost significance after adjusting for age, sex, and smoking, and none survive multiple-testing correction across 28 SNPs.
+- **Claim 2:** The `rs34695652` T/T genotype protects against COPD ($\text{OR} = 0.490, P = 0.010$) and the `rs28504650`–`rs10512248` CG haplotype increases COPD risk ($\text{OR} = 6.364, P = 0.028$). `[Overstated]` — Neither result survives multiple-testing correction across the 28 SNPs and multiple genetic models tested, and no replication cohort or functional expression (eQTL/luciferase) assay is performed.
+
+### 4. Reproducibility & Data Completeness
+- **Missing Tables & Raw Data:** Tables 1, 2, 3, and 4 are present only as empty section headers in the manuscript text, and the external Supplemental Digital Content link (`http://links.lww.com/CM9/A233`) is not embedded. Individual-level genotypes or complete summary count tables for all 28 SNPs are not deposited in a public repository.
+</Blinded Review: TIME_ANON_0171>

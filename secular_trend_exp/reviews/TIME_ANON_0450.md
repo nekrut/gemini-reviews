@@ -1,0 +1,36 @@
+<Blinded Review: TIME_ANON_0450>
+**Composite Score:** 8.0 / 10.0 (Rigor: 2.8/3.5 | Claims: 2.1/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.4/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Dry-Lab Secondary Cohort/Database
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 8.0/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2010s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This comparative paleovirology and molecular evolution study investigates the origin of retroviral-like superantigen (*sag*) genes present in three rhadinoviruses (dsDNA herpesviruses): Saimirine herpesvirus 2 (SaHV2), Ateline herpesvirus 3 (AtHV3), and Rodent herpesvirus Peru (RHVP). By mining mammalian whole-genome shotgun databases (`tBLASTn` with MMTV Sag and Pol queries), the authors uncover endogenous betaretroviral *sag* genes (mostly preserved in solo-LTRs) across 20 mammalian species spanning 8 orders. Using synteny analysis, multi-gene Bayesian phylogenetics (`MrBayes 3.2.2` on concatenated `gag-pro-pol-env-sag`, `pol`-only, and `sag`-only alignments), paired-LTR divergence dating (`BASEML`), relaxed-clock rhadinovirus divergence dating (`BEAST` on 6 core herpesvirus genes), and codon selection models (`PAML CODEML`), the authors demonstrate that: (1) herpesviruses acquired *sag* via two independent retrovirus-to-herpesvirus horizontal gene transfer (HGT) events—once from a New World monkey betaretrovirus into the ancestor of SaHV2/AtHV3, and once from a rodent betaretrovirus into RHVP—both phylogenetically distinct from extant MMTV; (2) the ancestral *sag* genes evolved under purifying selection ($\omega = 0.289$, $p < 0.05$) with episodic positive selection at 4–5 sites on the monkey herpesvirus stem branch ($p < 0.0001$); and (3) the SaHV2–AtHV3 split ($\sim 10.6\text{ Ma}$, 95% HPD: $8.4\text{--}13.0\text{ Ma}$) postdates the *Saimiri*–*Ateles* host divergence ($24.5\text{ Ma}$), indicating cross-species herpesvirus transmission after *sag* capture. The evolutionary synthesis is well-controlled and convincing, with minor methodological caveats regarding `CODEML` branch-site testing on short, divergent alignments.
+
+### 2. Methodological & Statistical Audit (STRENGTHS & WEAKNESSES & METHODOLOGICAL AUDIT)
+#### Strengths
+* **Multi-Pronged Proof of Independent Convergent Capture:** The conclusion of two independent HGT events is supported by three orthogonal lines of evidence: non-syntenic genomic integration sites in RHVP vs. SaHV2/AtHV3 (Figure 1), polyphyly of the recipient herpesviruses in the core 6-gene rhadinovirus phylogeny, and nesting of SaHV2/AtHV3 *sag* within New World primate ERVs (`Callithrix jacchus`, `Aotus nancymaae`, posterior probability = 1.0) vs. RHVP *sag* within rodent ERVs (`Jaculus jaculus`, `Peromyscus maniculatus`).
+* **Sensitivity Controls for Positive Selection and Rooting:** To ensure that the monophyly of SaHV2 and AtHV3 *sag* was not an artifact of convergent adaptation at positively selected residues, the authors stripped the positively selected codons and re-estimated the phylogeny (Supplementary Fig. 5), confirming that SaHV2 and AtHV3 still form a monophyletic sister pair. They also verified outgroup rooting using a diagnostic `pol`-containing alignment before rooting the solo-LTR-inclusive tree on *Tarsius syrichta* ERVs.
+* **Separation of Pre- vs. Post-Endogenization Selection:** Recognizing that tree-wide $\omega = 0.289$ mixes exogenous viral evolution (internal branches) with post-endogenization neutral drift (terminal branches), the authors explicitly tested orthologous *Pteropus* and mouse ERV pairs sharing host flanking sequences (Supplementary Table 3) to test for post-endogenization co-option, appropriately reporting the negative result ($\omega$ not significantly different from 1.0).
+
+#### Weaknesses & Methodological Audit
+* **Short Alignment Length ($\sim 80$ aa) and Triple-Nucleotide Substitutions in `CODEML` Branch-Site Analysis:** The conserved *sag* alignment across all taxa is only $\sim 80\text{ amino acids}$ long (line 34). On the internal branch leading to SaHV2/AtHV3, two of the four highlighted positively selected residues (sites 84 and 136) involve simultaneous triple-nucleotide changes within a single codon (e.g., `AAA` Lys $\to$ `CGC` Arg at site 84, which preserves positive charge). Standard codon models in `CODEML` assume instantaneous single-nucleotide substitutions; across deep branches or indel-rich regions, multi-nucleotide codon changes or local alignment shifts can inflate the branch-site likelihood ratio test ($p < 0.0001$) even when the amino acid change is biochemically conservative (Lys $\to$ Arg).
+* **Paired-LTR Dating Assumes No Inter-LTR Gene Conversion:** Calculating integration age from $5'\text{ vs. }3'\text{ LTR}$ divergence ($d / 2\mu$) assumes that paired LTRs diverge independently at the neutral host rate after integration. However, ectopic gene conversion frequently homogenizes paired LTRs (as the authors note for solo-LTR recombination), which can make ancient integrations appear artificially young (e.g., the $0.8\text{--}6.2\text{ Ma}$ estimates for rodent Clade B ERVs). While the authors rightly frame these as conservative minimum bounds, gene conversion should be explicitly noted alongside rate variation.
+* **Minor Textual Typos:** Line 57 spells lysine as "lycine"; line 90 spells *Nomascus leucogenys* as "Nomascus leucgenys"; line 102 writes "using an LTR" instead of "using a LRT [likelihood ratio test]".
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+* **Claim 1: Herpesvirus *sag* genes were acquired twice independently from distinct rodent and primate betaretroviral lineages rather than from extant MMTV `[Well Supported]`.** Synteny, core viral phylogeny, and multi-gene ERV phylogenies all converge on two independent captures.
+* **Claim 2: The monkey herpesviruses SaHV2 and AtHV3 acquired *sag* once in their common ancestor followed by a cross-species herpesvirus transmission between New World primates `[Well Supported]`.** Collinearity of `sag`, degraded `ORF12`, and `bcl-2` between `dUTPase` and minor capsid in SaHV2 and AtHV3 confirms ancestral capture, while the `BEAST` divergence estimate ($10.6\text{ Ma}$, 95% HPD: $8.4\text{--}13.0\text{ Ma}$) is less than half the *Saimiri*–*Ateles* host split ($24.5\text{ Ma}$).
+* **Claim 3: Four specific residues underwent adaptive positive selection during *sag* co-option by monkey herpesviruses `[Moderately Supported]`.** While the branch-site LRT is significant, two of the four sites (84 and 136) involve triple-nucleotide changes across a deep branch (one being a conservative Lys $\to$ Arg swap) in a short, rapidly evolving alignment.
+
+### 4. Reproducibility & Data Completeness
+* **Sequence and Alignment Availability:** Query accessions (`NP_056884.1`, `NP_056880.1`), shortlisting thresholds ($\ge 80\%$ query coverage, $\ge 45\%$ identity, $\le 45$ mismatches), substitution models (`JTT+G`, `RTREV+G`, `WAG+G`, `GTR+G`), calibration node priors ($71.6, 87.3, 98.9\text{ Ma}$), and `MrBayes`/`BEAST`/`PAML` parameters are thoroughly documented, with alignments and contig tables referenced in Supplementary Data 1 and Supplementary Tables 1–3.
+</Blinded Review: TIME_ANON_0450>

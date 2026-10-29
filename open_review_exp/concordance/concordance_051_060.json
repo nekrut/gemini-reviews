@@ -1,0 +1,342 @@
+[
+  {
+    "anon_id": "OPEN_ANON_051",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Lack of benchmarking against spot deconvolution and reference-based single-cell spatial mapping methods (e.g., RCTD, CARD, Redeconve, CytoSPACE, Celloc)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Semi-simulated benchmarks stripped coordinates from ST spots rather than evaluating real cross-platform scRNA-seq + ST pairs (e.g., MERFISH + Visium/Smart-seq) and testing sensitivity across noise levels",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Unclear mathematical and biological rationale for the Spatial-Organizing Gene (SOG) index Eq. (13) and its distinction from Spatially Variable Genes (SVGs)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Inconsistent visualization comparing scTour RNA velocity in UMAP embedding space vs. iSORT SpaRNA velocity in physical tissue space",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Deterministic regression collapse: formulating spatial mapping as a deterministic MLP y = g(z) under MSE loss predicts the conditional expectation E[y|z], collapsing identically expressed cells in non-contiguous or circular structures to their geometric centroid (necessitating an ad hoc manual polar coordinate transformation for the circular human artery sections).",
+      "Mathematical circularity (tautology) in the in-silico knockout validation of SOGs (Fig 5a-f): SOGs are defined as the genes with the largest input-output Jacobian gradient ||d_xg f(x)|| of the trained neural network f, and then 'validated' by zeroing out those exact inputs in f(x) and observing a larger MSE shift than zeroing out low-gradient SVGs.",
+      "Biological invalidity of applying 'SpaRNA velocity' to adult post-mortem human DLPFC (ID151674) and claiming active cell growth/migration from white matter through Layers 6-2 to Layer 1 (adult cortical neurons are post-mitotic, and embryonic corticogenesis forms Layer 1 earliest before inside-out L6-to-L2 migration).",
+      "Complete absence of biological replication in the primary wet-lab human atherosclerosis cohort (n = 1 normal scRNA-seq, n = 1 AS scRNA-seq, n = 1 AS Visium slice), confounding donor identity with disease state."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_052",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Ex vivo mouse thymocyte apoptosis assay was conducted in disrupted thymic single-cell suspension without TCR stimulation or stromal cross-talk",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Inability to evaluate thymocyte apoptosis and anti-inflammatory efficacy in the same in vivo animal model, compounded by age differences between 5-week mice (thymus involution) and 7-week mice (IMQ inflammation)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "In vivo depletion of CD4+CD8+ DP thymocytes in Fig 2 was attributed to apoptosis without direct in vivo apoptosis staining to rule out premature thymic DP escape",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Questioned why compounds did not selectively target RORgamma over thymus-specific RORgammat and requested discussion of TCRalpha repertoire skewing and T-ALL risk",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Assay protein-binding and cross-species confounding in the central in vitro margin claim: human Th17 IL-17A inhibition was assayed in serum-free X-Vivo15 medium (96 h) whereas mouse thymocyte apoptosis was assayed in 10% FBS RPMI-1640 (26 h), without converting nominal potencies (Table 1) to unbound (free) concentrations despite mouse plasma unbound fractions as low as 0.5%-6.2%.",
+      "In vivo exposure overlap refuting the therapeutic margin: in the 7-day IMQ efficacy model, Compound 3 dosed at 50 mg/kg BID accumulated to steady-state blood concentrations equal to the 150 mg/kg BID high-dose group in the 48-h thymus involution model (S4 Fig) that caused severe depletion of CD4+CD8+ DP thymocytes.",
+      "Unbalanced replication and single-replicate (n = 1) entries in Table 1 (e.g., Compound 6 human/murine binding and inverse agonism all n = 1; Compound 3 150 mg/kg in vivo group had n = 4 and received only 3 doses instead of 4, using an undisclosed 'inactive compound from the same series' as control).",
+      "Malformed Cheng-Prusoff equations on Lines 43 and 129 missing opening parentheses: Ki = IC50 / 1+[L]/Kd)."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Both Reviewer #1 (comment b: 'reference doi: 10.3389/fcell.2022.899752') and Reviewer #2 (comment d & Round 2 comment 2: 'Mukherjee, Soumyadeep et al... Frontiers in cell and developmental biology vol. 10 899752. 13 May. 2022, doi:10.3389/fcell.2022.899752') demanded citation of the exact same unrelated in silico ETP-ALL paper by Mukherjee et al. (2022), with Reviewer #2 insisting in Round 2 that the authors cite it even after the authors noted that the paper did not study RORgammat."
+  },
+  {
+    "anon_id": "OPEN_ANON_053",
+    "num_human_reviewers": 1,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Clarify whether qualitative data coding was performed only in Excel or with dedicated QDA software (NVivo) and whether coding was cross-validated across coders",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Specify the number or percentage of participants supporting thematic claims in the Results section rather than relying on vague quantifiers ('most', 'some', 'a few')",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Discuss study limitations and the potential impact of the $20 (8,300 Naira) participant compensation on recruitment and responses",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Complete omission of participant demographic and clinical summary tables: despite stating in Methods that demographic data were collected from all 30 SMM and 38 HCPs and requiring lab-confirmed HIV diagnosis, the published paper reports zero demographic or clinical statistics (no age, ART status, viral load, or HCP clinical roles).",
+      "Survivorship and clinic-selection bias explaining the core paradox: recruiting all 30 SMM exclusively during programming events at an LGBTQ-affirming CBO selects for the ~31% minority already linked and retained in affirming care, directly explaining why SMM interviewees claimed stigma had 'minimal to no effect' on care engagement while HCPs reported negative effects.",
+      "Methodological contradiction between the Introduction (claiming the study was guided by the Conceptual Framework for HIV-Related Stigma) and the Methods (claiming coding was purely inductive rather than driven by a theoretical framework), when the Results follow the exact deductive categories of the interview guide.",
+      "Complete absence of anonymized participant identifiers or demographic tags on any of the ~30 block quotes in the Results, despite Methods stating each participant was assigned a 4-digit ID, plus garbled text left in the Limitations section (Line 253: 'generalizability of sparticipants to underreport')."
+    ],
+    "human_reviewer_anomalies": "Single-Reviewer Acceptance",
+    "human_anomaly_details": "The manuscript was reviewed across three revision rounds by only a single reviewer (Reviewer #1: Tristan Alain), who answered 'I Don't Know' to Question 2 ('Has the statistical analysis been performed appropriately and rigorously?')."
+  },
+  {
+    "anon_id": "OPEN_ANON_054",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Requested experimental RT-qPCR validation of StFH tissue/drought expression and subcellular localization (authors declined citing lack of funds)",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Original submission used Bowtie2 (a non-splice-aware DNA aligner) to align eukaryotic RNA-seq reads to the potato reference genome",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Requested use of IQ-TREE instead of MEGA for maximum likelihood phylogenetic tree construction with bootstrap values",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Requested use of MCScanX for duplicated gene pair detection instead of pairing genes of >3-fold different length",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Requested analysis of StFH chromosomal distribution across three SpudDB potato genome assemblies (Otava, Phureja DM, and Tuberosum RH89-039-16), which Reviewer #1 erroneously termed 'multiple different subgenomes of S. tuberosum'",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "1,000-fold unit error across Table 1 and Section 3.1: molecular weights of all 26 proteins are reported in Daltons (Da) while labeled as kilodaltons (kDa), claiming StFH proteins weigh 8,881.02 kDa to 186,282.23 kDa (186 MDa).",
+      "Corrupted length-to-mass entry for StFH21 (Soltu.DM.10G001770) in Table 1: listed as 50 A.A. in length but with a molecular mass of 54,435.60 Da (~54.4 kDa, corresponding to ~490 A.A.), and inclusion of 50-107 A.A. truncated fragments (StFH12, StFH13, StFH14, StFH21) that are far too short to encode a ~400-A.A. FH2 domain.",
+      "Copy-paste fabrication and impossible parameter in Methods Section 2.1: claims potato formins were retrieved using 'A. thaliana formin DNA-binding domains' (formins are actin-nucleating cytoskeletal proteins, not transcription factors) with an impossible BLASTP E-value threshold of -1.",
+      "Internal gene-count contradiction for the exact same reference assembly (Phureja DM 1-3 516 R44): Table 1 and Section 3.8 report 26 StFH genes across 10 chromosomes in DM, whereas Section 3.9 reports 23 StFH genes across 9 chromosomes in DM.",
+      "Arithmetic failures in Transcription Factor counts: Abstract claims 'Six major transcription factor families' while listing seven (bZIP, C2H2, ERF, GATA, LBD, NAC, HSF); Section 3.13 claims 36 unique TFs (with 26 ERFs) but lists only 23 ERF IDs, 0 HSF IDs, and the stated family counts sum to 38 != 36.",
+      "Complete absence of statistical differential expression testing (no DESeq2/edgeR, no p-values or FDR, no biological replicate variance, and no untreated control vs. drought comparison at matched stages) in the PRJNA541096 RNA-seq drought analysis."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "Reviewer #2 (Hatem Boubakri) provided a 3-sentence superficial endorsement ('Overall, the paper is clearly presented. The authors are invited to revise the English... Also, genes must be written in Italic'), while Reviewer #1 waived both wet-lab validation requests after the authors cited lack of funds and instructed the authors in Round 2 to refer to three distinct potato cultivar genome assemblies (Otava, DM, RH) as 'multiple different subgenomes of S. tuberosum'."
+  },
+  {
+    "anon_id": "OPEN_ANON_055",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Justify the >= 21-day specimen collection threshold for defining persistent infection vs. >= 30-day symptom-onset definitions, and explain why symptom onset dates were not used",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Claiming 'positive selection' from mutation counts without comparing nonsynonymous vs. synonymous substitution rates (dN/dS)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Evaluate whether immunocompromised/cancer patients had co-infections or specific therapeutic regimens driving accelerated intra-host evolution",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Severe ascertainment and age-confounding bias in the unadjusted Chi-squared tests for hospitalization (Chi^2 = 230.4) and death (Chi^2 = 134.5) in Table 1: persistent cases require repeated longitudinal sampling >=21 days apart (which predominantly occurs in hospitalized/oncology patients), persistent cases were much older (46.3% aged >=65 vs. 10.5% in baseline), and unknown hospitalization/death statuses in the 812,563 baseline registry were coded as 'No'.",
+      "Denominator discrepancy between the text (Line 53, reporting 45.8% White and 30.5% Latino using known ethnicity n = 59 as denominator) and Table 1 (reporting 39.1% White and 26.1% Latino for the exact same counts 27 and 18 using total persistent cases n = 69 as denominator).",
+      "Date typo on Line 185 referring to the '2025-07-11 sample from Case 60' instead of 2023-07-11."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_056",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Strengthen evidence that sTOs are purely fetal-derived trophoblasts without maternal epithelial or fetal stromal contamination, clarify marker selection in the bulk RNA-seq heatmap, and include uterine gland markers",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Justify sTO scRNA-seq clustering resolution (5 clusters), address leaky marker expression across clusters, and explain why sTO Cluster 2 failed to map to Visium trophoblasts while Clusters 1 and 3 both mapped to Areola-2",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Separate the in vivo Visium maternal-fetal CellChat signaling analysis from the sTO vs. Visium inter-trophoblast CellChat comparison",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Make raw sequencing datasets and analysis code publicly available, specify multiple-testing adjusted p-value thresholds, and clarify Seurat SCT/RNA assay usage and pig-human ortholog mapping in CellChat",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Questioned whether the Slingshot differentiation trajectory is truly linear (ProfTroph -> IntTroph -> Areola-2) rather than bifurcating",
+        "resolved_in_published_text": false,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Statistical variance compression from running differential expression (FindAllMarkers) and CellChat ligand-receptor overexpression tests on ALRA zero-imputed expression matrices (RunALRA) rather than non-imputed RNA/SCT counts.",
+      "Misattribution of sTO Cluster 4 as 'Areola-1' based on 20 shared markers dominated by mitochondrially encoded oxidative phosphorylation transcripts (COX1, COX3, ND4, CYTB), which in droplet scRNA-seq (especially as dead-cell removal was omitted for line STO02) reflects stressed/high-mitochondrial cells rather than canonical Areola-1 markers (SPINK4, CCDC162, LIF).",
+      "Internal Methods inconsistencies: gestation day reported as GD66 in Fig 3A caption vs. GD65 in Methods Line 46; contradictory sow/gilt numbers and Lutalyse induction assignments in Methods Line 41 (2 sows + 1 gilt = 3 vs. 2 gilts + 3 sows = 5); and a 1,000x volume unit typo on Line 62 ('resuspended in 500 mL of prewarmed TOM' instead of 500 uL)."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_057",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Thorough Technical",
+    "human_substantive_critiques": [
+      {
+        "issue": "Original submission used a multi-layer neural network with linear activations for PRS integration (which is mathematically equivalent to a linear projection); Reviewer #1 recommended replacing it with regularized linear regression (LASSO)",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Explain why LD between adjacent HFS windows is low and quantify the contribution of rare variants vs. 4,096-bp window segmentation",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Evaluate robustness of HFS to shifting the 4,096-bp window boundaries (sliding window analysis), reverse-complementing sequences, and two-decimal rounding of Sei predictions",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Characterize locus-level HFS vs. SNP GWAS marginal power, quantify false negatives/positives in coding exonic regions, and contextualize limitations of sequence-based DL models (Sei/Enformer) in predicting cross-individual expression variation",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Original manuscript selected the best sequence class per locus via SuSiE (causing multiple-testing overfitting); revised to use only the hg38 reference sequence class, and added sensitivity analysis for indels",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Generative model circularity in the fine-mapping benchmark simulation (Page 2 Lines 40-43): simulated phenotypes were generated directly as a linear combination of the locus HFS scores themselves, guaranteeing by construction that HFS+SuSiE outperforms SNP-based PolyFun.",
+      "Asymmetric fine-mapping comparison in real data: HFS+SuSiE was run on individual-level data (n = 350,587) including rare variants down to MAC >= 10 (where 55.3% of HFS causal signals depend on MAF < 0.01 variants), whereas PolyFun and SBayesRC were run on summary statistics restricted to common SNPs.",
+      "Violation of OLS regression assumptions in pathway/tissue/cell-type enrichment (Page 2 Lines 11-29): fitting standard Gaussian linear regression to bounded, severely zero-inflated SuSiE PIPs in [0, 1] produces heteroscedastic residuals and anti-conservative t-statistics, forcing the authors to manually discard pathways significant in >50% of traits.",
+      "Degrees-of-freedom asymmetry in cross-ancestry PRS tuning (Fig 5C): HFS+LDAK tunes 1,362 parameters (1,361 block-wise HFS scores + 1 LDAK score) via LASSO in the target-ancestry split, whereas the comparator Polypred (LDAK + PolyFun-pred / SBayesRC) tunes only 2 global mixing weights."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_058",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Rename 'susceptibility genes' to 'putative susceptibility genes' / 'susceptibility-like genes' to avoid confusion with verified S-genes edited for disease resistance",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Clarify whether dominant resistance alleles in cultivar Ouro Vermelho are mapped, mention recessive resistance alleles (co-8, co-Indb), and correct the duration of the biotrophic phase of C. lindemuthianum to ~72 hours",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Figures and main tables were completely omitted from the initial submission PDF",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Underpowered RNA-seq sample size (n = 2 biological replicates per cultivar x timepoint, 12 libraries total) and complete absence of time-matched mock-inoculated controls at 48 and 96 hai, confounding pathogen response in Contrasts 2, 3, 5, and 6 with the transfer of plants from a 95% RH dark/mist chamber (0-48 hai) to an 85% RH greenhouse (48-96 hai).",
+      "Omission of the baseline cultivar contrast (OV 0 hai vs. E 0 hai) and lack of a Genotype x Time interaction model: under the authors' intersection rules (Table 1), genes constitutively higher in Ouro Vermelho than BRS Estilo at baseline that merely decline in BRS Estilo at 48 hai are misclassified as pathogen-induced 'putative R48-genes'.",
+      "Statistically invalid gene co-expression networks (Fig 6): Pearson correlation networks (r >= 0.9) and Kleinberg hub centrality scores were computed separately within each cultivar across only N = 6 samples (3 timepoints x 2 replicates), where any two genes peaking at the same timepoint trivially achieve r > 0.9.",
+      "Methodological misstatement on Line 60 claiming DESeq2 log2 fold-changes (>= 2.0) are 'TPM-based' (DESeq2 computes log2FC from size-factor-normalized negative binomial GLMs on raw counts, not TPMs)."
+    ],
+    "human_reviewer_anomalies": "Coercive Self-Citation/Irrelevant Citation Demand",
+    "human_anomaly_details": "Reviewer #1 (who signed his review as Bilal A. Padder) repeatedly instructed the authors across Round 1 ('L92. More studies are on the interaction of beans with race 73. Please check literature') and Round 2 ('Please refer to Mahiya-Farooq (2019) and Padder et al. (2016) for clarification') to cite his own papers on race 73, while Reviewer #2 wrote a 3-sentence boilerplate review ('The manuscript has merit but is too long...'). Neither reviewer noticed that RNA-seq had only n=2 replicates, no mock controls at 48/96 hai, and built correlation networks on N=6 samples."
+  },
+  {
+    "anon_id": "OPEN_ANON_059",
+    "num_human_reviewers": 3,
+    "human_review_depth": "Moderate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Discrepancy between Table 2 and the main text regarding the total number of PCR-positive bats (8 vs. 9) and positive tissue samples",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Contamination rate of NNN/LIT cultures was reported as 31.5% in the Abstract vs. 32.2% in the Results",
+        "resolved_in_published_text": true,
+        "ai_recall": "Missed (Resolved Before Publication)"
+      },
+      {
+        "issue": "Absence of a phylogenetic tree to support species identification of the sequenced 18S rDNA amplicons",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Small sample size from a single urban park and need to contextualize local epidemiology (VL/CL cases in Belo Horizonte) and knowledge gap regarding Trypanosoma sp. Neobat",
+        "resolved_in_published_text": true,
+        "ai_recall": "Partial Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Unresolved arithmetic error in culture sample counts (Line 90): reports 149 total cultured samples with 48 (32.2%) contaminated and 104 (67.8%) negative, but 48 + 104 = 152 != 149 (104 is a math error for 101, since 101/149 = 67.8%), and the organ breakdown (32 blood + 18 ear + 18 wing + 40 liver + 41 heart = 149) completely omits spleen despite spleen being reported as PCR-positive in Table 2.",
+      "Pervasive mathematical corruption across every row and column of Table 2 (left unresolved after R1's revision): the rightmost Total column lists integer counts summing to 9 (1+3+1+1+2+1 = 9) next to percentages calculated with a denominator of 11 (9.1%, 45.4%, 18.2%, where 5/11 = 45.4% is paired with the integer 3!), while the bottom Total row lists counts summing to 9 (5+1+2+1 = 9) next to percentages calculated with denominators of 8 and 10 (50.0%, 12.5%, 25.0%, 12.5%), and contradicts Line 92 (which states N=3 L. infantum in A. lituratus vs. 2 in Table 2).",
+      "Diagnostic limitation and cross-contamination risk of relying solely on a conserved 561 bp 18S SSU rRNA nested-PCR amplicon to distinguish Leishmania species (without hsp70 or ITS1 confirmation) while running four reference Leishmania strains concurrently as nested-PCR positive controls and recovering 0 positive cultures."
+    ],
+    "human_reviewer_anomalies": "None",
+    "human_anomaly_details": ""
+  },
+  {
+    "anon_id": "OPEN_ANON_060",
+    "num_human_reviewers": 2,
+    "human_review_depth": "Superficial/Boilerplate",
+    "human_substantive_critiques": [
+      {
+        "issue": "Provide more details on the statistical methods used to validate inhibition rates in the antagonistic assay and clarify whether in planta rice trials were conducted",
+        "resolved_in_published_text": false,
+        "ai_recall": "Direct Match"
+      },
+      {
+        "issue": "Expand discussion on how heavy metal resistance genes, PGP genes, BGCs (candicidin, streptothricin), and unique homologous genes contribute to biocontrol, and compare against commercial Streptomyces biopesticides",
+        "resolved_in_published_text": true,
+        "ai_recall": "Direct Match"
+      }
+    ],
+    "ai_only_critical_catches": [
+      "Bioinformatic pipeline impossibility in Section 2.4 (Line 48): claims that hybrid PacBio long reads (341,255 reads, mean length 4,546 bp) and Illumina HiSeq reads were de novo assembled into a complete 8.25 Mb chromosome using SOAPdenovo v1.05 (a 2010 short-read-only assembler incapable of assembling PacBio reads).",
+      "Fundamental biochemical misinterpretation in Discussion Line 308, Table 5, and Fig 12: mistakes the universal aerobic assimilatory sulfate reduction pathway for L-cysteine amino acid biosynthesis (cysN, cysD, cysC, cysH, sirA) for dissimilatory H2S gas production that precipitates heavy metal sulfides in soil.",
+      "Misclassification of universal bacterial housekeeping genes as specialized plant-growth-promoting and heavy-metal-resistance traits in Tables 2 and 3: trpC (housekeeping L-tryptophan biosynthesis enzyme) is misclassified as 'Phytohormone synthesis', ppa (inorganic pyrophosphatase), maf (dUTPase/septum formation), and rnhA (RNase H) are misclassified as 'Phosphate solubilization', and ftsH/htpX (membrane quality-control proteases) are misclassified as Zn resistance and antifungal biocatalysts.",
+      "Unresolved contradiction between pan-genome methods in Section 2.7/3.9 (Roary pipeline yielding 17,816 gene families and 2,920 core genes) vs. Section 3.10 (OrthoMCL yielding 8,962 orthologous gene clusters and the exact same 2,920 core clusters).",
+      "Inapplicable statistical test in Section 2.8 (Duncan's multiple range test, a post-hoc test for >=3 groups, applied to a 2-group plate assay), false claim in Abstract/Discussion that 'metabolites' were tested when only live bacterial streaks were used, and unsubstantiated attribution of anti-P. oryzae activity to Cluster 23 (arylpolyene / lipopeptide 8D1-1) while ignoring the 95%-identical candicidin polyene antifungal cluster (Cluster 4)."
+    ],
+    "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
+    "human_anomaly_details": "The peer review process went through 4 decision letters (R0 to R3) across 3 different Academic Editors (Yunzhou Li, Sujata Singh Yadav, Chetan Keswani); in Decision Letter 2, Editor Sujata Singh Yadav copy-pasted Reviewer #1's exact Round 0 review verbatim as the editorial decision letter after Reviewer #1 had already marked 'All comments have been addressed' in Round 1. Both reviewers missed that SOAPdenovo v1.05 cannot assemble PacBio reads and that housekeeping genes (ppa, rnhA, trpC, cysNDCH) were misclassified as PGP/bioremediation genes."
+  }
+]

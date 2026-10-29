@@ -1,0 +1,32 @@
+<Blinded Review: TIME_ANON_0292>
+**Composite Score:** 3.6 / 10.0 (Rigor: 1.0/3.5 | Claims: 0.9/2.5 | Biology: 0.8/2.0 | Reproducibility: 0.9/2.0)
+**Bias Category:** Technical/Assay
+**Verdict:** Reject (Fundamental Flaws)
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Commodity/Hype-Cycle Template
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+---
+
+### 1. Executive Summary
+This single-mitogenome announcement paper sequences and annotates the 14,714 bp circular mitochondrial genome of a laboratory-maintained Chinese isolate of the hard tick *Hyalomma anatolicum* (`CRA010187`). The authors report standard descriptive tables of gene order (13 PCGs, 22 tRNAs, 2 rRNAs), base composition, AT/GC skews, codon usage (RSCU), pairwise Ka/Ks ratios against 13 ixodid ticks, maximum-likelihood phylogenies of concatenated and single PCGs across 50 tick mitogenomes, and a RelTime-ML divergence time tree in MEGA 11. Beyond following a formulaic single-mitogenome template, the manuscript contains multiple objective arithmetic errors, impossible codon/anticodon annotations, contradictory assembly software descriptions (claiming long-read assemblers NECAT and NextDenovo were used on Illumina HiSeq PE150 short reads), and a false novelty claim that directly contradicts its own Table 1.
+
+### 2. Methodological & Statistical Audit
+- **False Novelty Claim Contradicted by Table 1:** The Abstract and Discussion repeatedly claim "As far as we know, this is the first study exploring the complete mitogenome for *Hy. anatolicum*." However, the authors' own Table 1 (line 77) lists a previously published GenBank complete mitogenome for *Hyalomma anatolicum* (`MW546283`, 14,731 bp), which they downloaded from NCBI and included in their comparative dataset without ever comparing their new sequence (`CRA010187`, 14,714 bp) against `MW546283`.
+- **Impossible Assembly Pipeline (Long-Read Assemblers Applied to Illumina PE150 Reads):** The Methods state that libraries were sequenced on "a standard Illumina HiSeq platform with PE150" (line 40) and then assembled using "NECAT (v0.0.1) and NextDenovo de novo assemblers" merged with `quickmerge` (line 45). NECAT is exclusively an error-correction and de novo assembler for noisy Nanopore long reads, and NextDenovo/quickmerge are long-read assembly tools that cannot assemble 150 bp Illumina paired-end reads.
+- **Severe Arithmetic & Table Errors:**
+  - **Base Composition Sum Error (Abstract, Text, and Table 3):** In Table 3 (`Mitogenome` row, 14,714 bp), the nucleotide counts are listed as $A = 5,715$, $G = 1,280$, $T = 6,062$, and $C = 1,657$. While $5,715 + 1,280 + 6,062 + 1,657 = 14,714$, $5,715 / 14,714 = 38.84\%$, **not** $35.05\%$ as reported in the Abstract and text ($35.05\% + 8.70\% + 41.20\% + 11.26\% = 96.21\% \neq 100\%$).
+  - **Truncated Table 2 & Miscounted Overlaps/Intergenic Regions:** Table 2 claims to list all 37 genes of the mitogenome, but stops after `trnL2` (line 150), completely omitting `rrnL`, `trnV`, and `rrnS`. The text also contradicts itself within two sentences: line 111 states "it had 16 gene overlap regions and 14 gene intergenic regions" and immediately follows with "The intergenic region occurred at 24 gene junctions... Overlap regions occurred at 27 gene junctions" (which would sum to 51 junctions in a 37-gene circular genome!).
+  - **Invalid Anticodon and Stop Codon Annotations (Table 2 & Text):** In Table 2 (line 145), the anticodon of `trnR (Arg)` is listed as `TGF` (`F` is not a nucleotide base). Line 136 and line 194 state that `cox2` uses `ACT` as a termination codon (`ACT` encodes Thr in the invertebrate mitochondrial code; ticks typically use an incomplete `T` stop codon completed by polyadenylation, and line 194 lists `cox2` twice—both as using `ACT` and in the parenthetical list of genes using `TAA`). Furthermore, line 196 claims `UAA` is one of the most biased amino-acid codons in RSCU analysis (`UAA` is a stop codon, and does not appear in Table 4).
+  - **Truncated Table 1:** Table 1 is titled "List of the 50 reported mitogenomes analyzed in this study" but only lists 34 species (omitting the remaining 16 species, including all *Ixodes*, *Haemaphysalis* except *H. nepalensis*, Argasidae, *Nuttalliella*, and *Limulus*).
+- **Flawed Positive Selection & Divergence Time Claims:** In the Methods (line 50), the authors write they used "KaKs calculator (v2.0)... M0 model (Branch site model) and invoked from PAML." In PAML, `M0` is the one-ratio global model, not a branch-site model, and `KaKs_Calculator 2.0` computes pairwise $Ka/Ks$ without phylogenetic tree structure or likelihood-ratio testing ($p$-values). Claiming positive selection on *atp8* based solely on uncalibrated pairwise $Ka/Ks > 1$ in a 162 bp (53-codon) hypervariable gene between distant genera (*Hyalomma* vs. *Rhipicephalus* / *Dermacentor*) is a classic stochastic small-sample/saturation artifact.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1: This is the first complete mitogenome sequenced for *Hyalomma anatolicum*.** `[Methodologically Flawed]` — Directly refuted by GenBank accession `MW546283` listed in the authors' own Table 1.
+- **Claim 2: Positive selection acts on *atp8* in *Hy. anatolicum*.** `[Overstated]` — Unadjusted pairwise $Ka/Ks$ on a 53-amino-acid gene across distant genera without a formal codon likelihood-ratio test (e.g., PAML branch-site test with $\chi^2$ $p$-value) does not establish adaptive positive selection.
+- **Claim 3: Nine individual PCGs (`cox3`, `cytb`, `nad1`–`nad6`, `nad4L`) are validated as lineage-specific markers mirroring the full mitogenome topology.** `[Fragile]` — Testing topological congruence among only 7 species of *Hyalomma* (where 4 of 13 genes fail to recover the concatenated tree, frequently with low bootstrap support in Figure 6) provides minimal power to validate genus-wide barcoding markers across all 27 *Hyalomma* species.
+
+### 4. Reproducibility & Data Completeness
+- **Data Deposition:** The raw/annotated sequence is reported under CNCB accession `CRA010187` (`CRA` is a Genome Sequence Archive raw read accession prefix rather than an assembled sequence accession).
+- **Internal Inconsistencies:** Due to the contradiction between Illumina PE150 sequencing and long-read assemblers (NECAT/NextDenovo), truncated Tables 1 and 2, impossible nucleotide percentage sums (96.21%), and invalid nucleotide codes (`TGF`), the computational workflow is not reproducible as written.
+</Blinded Review: TIME_ANON_0292>

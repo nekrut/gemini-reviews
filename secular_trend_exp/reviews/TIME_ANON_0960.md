@@ -1,0 +1,38 @@
+<Blinded Review: TIME_ANON_0960>
+**Composite Score:** 8.0 / 10.0 (Rigor: 2.8/3.5 | Claims: 2.0/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.5/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 8.0/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2010s
+
+---
+
+### 1. Executive Summary / SUMMARY
+This comparative molecular evolution and phylomedicine study characterizes the gene organization, protein architecture, and selective regime of the tooth enamel matrix protein Ameloblastin (`AMBN`) across 56 mammalian species (53 species with functional enamel and 3 enamel-less Xenarthra/Afrotheria species: two-toed sloth *Choloepus hoffmanni*, nine-banded armadillo *Dasypus novemcinctus*, and aardvark *Orycteropus afer*, plus the crocodilian outgroup *Caiman crocodilus*). Adding 50 newly assembled or RT-PCR/gDNA-sequenced mammalian `AMBN` coding sequences (`KJ504145–KJ504149`) to 6 previously published sequences, the authors apply codon-aware alignment (`MAFFT`/`MACSE`), maximum-likelihood phylogenetics (`RAxML` `GTR+GAMMA`), `SignalP` 3.0 signal peptide prediction, `FastML` ancestral sequence reconstruction, `DNAFSMiner` polyadenylation signal prediction, `PAML` (`codeml` v4.7a) site (`M1a` vs `M2a`, `M7` vs `M8`, `M8a` vs `M8`) and branch models (`M0`, `M2\omega`, `M5\omega`, free-ratio), and Bayesian joint evolutionary-trait modeling (`CoEvol` `dsom` controlling for body mass, longevity, and sexual maturity with 24 fossil calibrations).
+
+The study establishes six major evolutionary findings: (1) recruitment of a second, upstream translation initiation site (`TIS`) in exon 1 in the last common eutherian ancestor (>100 Ma), yielding an alternative 26-residue signal peptide alongside the ancestral 16-residue exon 2 signal peptide; (2) identification of an evolutionary duplication hotspot around the 39-bp proline-rich exon 7, which independently underwent tandem duplication in 12 eutherian lineages (reaching 6 copies in horse and 4 copies in macaque/baboon); (3) conservation of three ancestral alternative polyadenylation signals (`PS1`, `PS3`, `PS5`) in the 3' UTR over 200 Myr; (4) mapping of 161 conserved amino acid positions (107 invariant + 54 conservative) across 53 mammals—encompassing key hydroxylated (`P11`), phosphorylated (`S17` in the `SxE` motif, `S86`), O-glycosylated (`S86`), and intra-exonic splicing (`Q87`) sites—while demonstrating that rodent-specific integrin-binding motifs (`VTKG`, `DGEA`) are absent in most mammals; (5) pseudogenization via frameshifts, stop codons, or exon 6 deletion in enamel-less sloth and aardvark (and relaxed purifying selection in armadillo, which retains transient neonatal enamel); and (6) lineage-specific acceleration ($\omega > 1$) in Catarrhini ($\omega = 1.32/1.11, p < 0.001$) and the gnawing lemur *Daubentonia madagascariensis* (aye-aye, $\omega = 1.13$).
+
+### 2. Methodological & Statistical Audit / STRENGTHS & WEAKNESSES & METHODOLOGICAL AUDIT
+
+#### Strengths
+1. **Integration ofFrequentist (`PAML`) and Bayesian Life-History-Controlled (`CoEvol`) Selection Models:** Because lineage-specific $d_N/d_S$ ($\omega$) in mammals is confounded by effective population size ($N_e$) and generation-time correlates, the authors supplement `codeml` branch/site models with `CoEvol` (`dsom`), which explicitly models covariance between $\omega$, $d_S$, and three life-history traits (`PanTHERIA` body mass, longevity, sexual maturity) on a fossil-calibrated chronogram (`Table 2`). Both methods independently identify elevated $\omega$ in Catarrhini (`codeml` $\omega = 1.32$, `CoEvol` $\omega = 1.11$ with posterior probability `0.98` vs. placental mean `0.48`) and aye-aye (`codeml` $\omega = 1.24$, `CoEvol` $\omega = 1.13$).
+2. **Rigorous Alignment Curation of Repetitive Exons:** Because tandem duplications of the 39-bp exon 7 (`8a–8e`, `9a–9e`) violate orthology and inflate false positives in codon selection models, the authors carefully trace orthology via flanking intron sequences (`Additional file 3`) and exclude species-specific supernumerary duplicated exons from the 408-codon `PAML`/`CoEvol` alignment (`379` codons after gap removal).
+3. **Evolutionary Validation of Human Disease (`Amelogenesis Imperfecta`) and Rodent Functional Motifs:** The evolutionary conservation map directly explains why homozygous deletion of human `AMBN` exon 6 causes hypoplastic amelogenesis imperfecta (`AI`, removing 14 invariant and 11 conservative residues including `S86`), while falsifying the long-standing assumption in dental biology that the rodent `VTKG` and `DGEA` cell-adhesion motifs are universally required for mammalian ameloblast attachment.
+
+#### Weaknesses & Methodological Caveats
+1. **Interpretation of Branch Model `LRT` (`\omega \neq \omega_0` vs. `\omega > 1`):** In `Table 1`, the `codeml` 2-ratio (`M2\omega`) and 5-ratio (`M5\omega`) branch models test whether the foreground branch (`Catarrhini`, $\omega = 1.32$) has a significantly different $\omega$ from the background ($\omega_0 = 0.43$; $\text{LRT} = 16.0\text{–}17.2, p < 0.001$). However, rejecting $\omega_{\text{Catarrhini}} = \omega_0$ ($0.43$) proves *accelerated evolution* (or relaxed constraint) relative to the background, not statistically significant positive selection ($\omega > 1$), which requires a likelihood ratio test against a null model where the foreground branch is fixed at $\omega_{\text{Catarrhini}} = 1.0$ (or a branch-site test). Similarly, in `CoEvol`, the posterior probability `pp = 0.98` for Catarrhini tests whether $\omega_{\text{Catarrhini}}$ exceeds the median placental $\omega$ (`0.48`), rather than testing $\text{PP}(\omega > 1.0)$.
+2. **Site-Level Bayes Empirical Bayes (`BEB`) Posterior Thresholds:** Among the five sites reported as positively selected under `M8` (`72A`, `165R`, `210Q`, `268Q`, `299R`), three (`72A`, `165R`, `268Q`) have `BEB` posterior probabilities between `0.91` and `0.93` (below the standard `0.95` threshold), and only `210Q` (`0.98`) and `299R` (`0.99`) exceed `0.95`.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** Ancestral eutherians recruited an upstream translation initiation site (`TIS`) in exon 1 encoding a 26-aa signal peptide, and underwent repeated independent tandem duplications of proline-rich exon 7 across 12 eutherian lineages. `[Well Supported]`
+- **Claim 2:** `AMBN` is an enamel-specific protein that accumulates pseudogenizing frameshifts/stop codons in enamel-less sloth and aardvark, and its 161 conserved residues across 200 Myr of mammalian evolution provide an accurate phylomedicine template for diagnosing pathogenic `AMBN` mutations in amelogenesis imperfecta (`AI`). `[Well Supported]`
+- **Claim 3:** `AMBN` experienced adaptive positive selection ($\omega > 1$) in Catarrhini and aye-aye in response to dietary/enamel-thickness shifts. `[Moderately Supported]` — Point estimates of $\omega$ exceed `1.0` (`1.11–1.32`), but the statistical tests performed (`\omega \neq \omega_0`) formally prove lineage acceleration relative to $\omega_0 = 0.43$ rather than $\omega > 1.0$.
+
+### 4. Reproducibility & Data Completeness
+- **Data Availability:** Newly generated RT-PCR and genomic sequences are deposited in GenBank (`KJ504145–KJ504149`), and all 56 species accessions, full amino acid alignments (`Additional file 2`), intron/exon boundary alignments (`Additional file 3`), and primers are provided.
+</Blinded Review: TIME_ANON_0960>

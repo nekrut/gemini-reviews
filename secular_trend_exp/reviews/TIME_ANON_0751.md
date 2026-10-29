@@ -1,0 +1,37 @@
+<Blinded Review: TIME_ANON_0751>
+**Composite Score:** 7.2 / 10.0 (Rigor: 2.3/3.5 | Claims: 1.8/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.5/2.0)
+**Scientific Core Score:** 5.7 / 8.0
+**Bias Category:** Algorithmic/Model
+**Verdict:** Minor Revision
+**Study Modality:** Hybrid Computational + Wet-Lab
+**Technology Maturity:** Mid-Stage High-Throughput
+**Epistemic Stage:** Basic/Mechanistic Discovery
+
+OVERALL_SCORE: 7.2/10
+VERDICT: PASS
+ESTIMATED_DECADE: 2020s
+
+---
+
+### 1. Executive Summary (SUMMARY)
+This comparative microbial genomics and phenotypic study sequences 12 draft genomes of *Plesiomonas shigelloides* across distinct O-antigen serogroups (`90–100x` Illumina coverage) and combines them with 8 public *P. shigelloides* genomes and 59 reference *Enterobacterales* genomes to resolve its taxonomic placement, pan-genome dynamics, horizontal gene transfer (`HGT`) history, macromolecular secretion systems, and antimicrobial resistance (`AMR`) profiles. Core-genome phylogenetics (`307` single-copy orthologs across *Enterobacterales* and `1,522` recombination-filtered core genes within *P. shigelloides*), Neighbor-Net split networks, and ANI/AAI comparisons (`ANI 69.2–77.1%` vs. other enterobacteria; `>96.6%` within *P. shigelloides*) place *Plesiomonas* as a distinct, deeply branching clade within *Enterobacterales* near *Budviciaceae*. The authors characterize an open pan-genome (`6,056` gene families, Heap's law $\gamma = 0.499$), identify extensive mobile genetic elements and putative horizontal acquisitions from cohabitating aquatic *Vibrionaceae* and *Aeromonadaceae* (including lateral and polar flagellar clusters, `T3SS`, `T4SS`, and `T6SS`), and pair `VFDB`/`CARD` gene screening with 18-antibiotic Vitek2 MIC testing. While the phylogenomic, pan-genome, and secretion-system analyses are thorough, the `HGTector` BLAST-distribution method is prone to misclassifying ancient vertically inherited gammaproteobacterial genes lost in other *Enterobacterales* as "core HGTs" because *Plesiomonas* is a basal lineage of *Enterobacterales*, and the `CARD` screen missed the genetic basis of multidrug resistance in two strains (`G5881` and `G5885`) because point-mutation resistance determinants were not analyzed.
+
+### 2. Methodological & Statistical Audit (STRENGTHS & WEAKNESSES & METHODOLOGICAL AUDIT)
+**Strengths:**
+- **Recombination-Aware Core Phylogenomics:** Filters homologous recombination blocks using `ClonalFrameML` across the 1,522 single-copy core genes (`line 1` of chunk 2) prior to ML phylogenetic inference, and quantifies topological discordance between the core-genome SNP tree and pan-genome presence/absence tree using normalized Robinson–Foulds (`nRF = 0.7844`) and matching-cluster (`nMC = 0.7093`) metrics (`Figure 2D`).
+- **Integration of Comparative Genomics with Phenotypic AST:** Supplements *in silico* `VFDB` and `CARD` screening (`Figure 5A–B`) with standardized broth microdilution MIC testing (`Vitek2 AST-N334/N335`) across 18 antibiotics (`Figure 5C`).
+
+**Weaknesses & Methodological Flaws:**
+- **Basal-Lineage Confounding in `HGTector` Core-Genome HGT Inference (`lines 80–85`, `line 20` of chunk 2):** `HGTector` was run with `self-group = Plesiomonas` and `close-group = Enterobacterales`. However, as `Figure 1A` and `Figure S1` demonstrate, *P. shigelloides* is one of the deepest-branching basal lineages of *Enterobacterales* (`AAI 57.8–67.5%` to other *Enterobacterales*). Under BLAST-hit-weight heuristics like `HGTector`, any ancestral gammaproteobacterial gene that was vertically inherited by *Plesiomonas*, *Vibrionaceae*, and *Aeromonadaceae* but subsequently lost or rapidly diverged in crown *Enterobacterales* exhibits higher BLAST bitscores to *Vibrionaceae*/*Aeromonadaceae* than to `close-group` *Enterobacterales* and is flagged as a "horizontal core gene." While mobile clusters (`Flagellum 1/2`, `T3SS`, `T4SS`, `T6SS`, CRISPR-Cas) have clear structural and syntenic hallmarks of true HGT (`Figure 4B`, `Figure S3`), claiming that 130 core housekeeping/metabolic genes (such as the cytochrome $bc_1$ complex or `pstABC` transporter) were acquired via HGT without explicit gene-tree/species-tree reconciliation or G+C/codon usage amelioration tests likely overestimates core-genome HGT.
+- **Unexplained Genotype–Phenotype Discordance in Multidrug-Resistant Strains `G5881` and `G5885` (`Figure 5B–C`, `line 123`):** Strains `G5881` and `G5885` displayed phenotypic resistance to cephalosporins, carbapenems (`meropenem`), fluoroquinolones (`ciprofloxacin`), tetracycline, and colistin (`Figure 5C`), yet `CARD` presence/absence screening (`BLASTp >60%` identity, `Figure 5B`) detected *fewer* resistance genes in these two strains than in susceptible strains. The authors attribute this solely to "incompleteness of the draft genome" (`line 123`); however, standard `90–100x` Illumina draft assemblies retain plasmid contigs unless explicitly discarded, and resistance to fluoroquinolones (`gyrA/parC` QRDR mutations), colistin (`pmrAB/phoPQ`), and $\beta$-lactams (`ampC`/porin mutations) frequently arises via chromosomal point mutations that a simple `BLASTp` presence/absence search (`>60%` identity) against `CARD` cannot distinguish from wild-type alleles.
+- **Uncorrected Multiple Testing Across 130 `EasyCodeML` M7 vs. M8 Tests (`line 88`, `line 25` of chunk 2):** Testing 130 horizontal core gene families with `M7 vs. M8` likelihood ratio tests without Benjamini–Hochberg FDR correction across the 130 gene families likely inflates the count of families (`64/130`) reported to harbor positively selected sites.
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** *Plesiomonas shigelloides forms a distinct, deeply branching monophyletic lineage within Enterobacterales (sister/neighbor to Budviciaceae) with an open pan-genome and high core-genome recombination.* `[Well Supported]` — Strongly supported by the 307-gene and 1,522-gene phylogenies, Neighbor-Net network, ANI/AAI matrices, and Heap's law modeling (`Figures 1–2`).
+- **Claim 2:** *Acquisition of flagellar systems, secretion systems (`T3SS, T4SS, T6SS`), prophages, and CRISPR-Cas loci via HGT from cohabitating aquatic Vibrionaceae and Aeromonadaceae shaped the adaptation and pathogenic potential of P. shigelloides.* `[Well Supported]` — Supported by syntenic gene-cluster comparisons and high protein sequence identities (`81–100%`) to *Vibrio*, *Photobacterium*, and *Aeromonas* loci (`Figure 4B`, `Figure S3`).
+- **Claim 3:** *130 core metabolic/housekeeping gene families were acquired via HGT and explain the historical taxonomic confusion of P. shigelloides.* `[Moderately Supported]` / `[Fragile]` — Plausible for some accessory-like operons, but `HGTector` without phylogenetic reconciliation cannot separate ancient vertical retention + differential loss in crown *Enterobacterales* from true HGT into the *Plesiomonas* stem.
+
+### 4. Reproducibility & Data Completeness
+- **Strengths:** All 12 newly sequenced draft genomes are deposited in NCBI GenBank under BioProject `PRJNA576348`, strain metadata and accessions for all 79 genomes are provided in `Table S1`, and extensive supplementary tables (`Tables S1–S7`) document the core, pan, HGT, MGE, VFDB, and CARD gene sets.
+- **Weaknesses:** Exact `VelvetOptimiser` assembly statistics (contig counts, N50s, plasmid contig retention) for each of the 12 newly sequenced genomes are not summarized in the main text.
+</Blinded Review: TIME_ANON_0751>

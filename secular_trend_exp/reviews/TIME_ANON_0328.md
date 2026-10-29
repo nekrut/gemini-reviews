@@ -1,0 +1,32 @@
+<Blinded Review: TIME_ANON_0328>
+**Composite Score:** 7.6 / 10.0 (Rigor: 2.6/3.5 | Claims: 1.9/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.5/2.0)
+**Bias Category:** None (Methodologically Sound)
+**Verdict:** Minor Revision
+**Study Modality:** Wet-Lab Primary Experimental
+**Technology Maturity:** Mature/Classical
+**Epistemic Stage:** Translational/Preclinical/Biomarker
+
+---
+
+### 1. Executive Summary
+This study evaluates whether live-attenuated SIVmac239 mutants lacking three or five gp120 N-linked glycosylation sites ($\Delta\text{5G}$, $\Delta\text{5G-ver1}$, $\Delta\text{5G-ver2}$, and $\Delta\text{3G}$) can confer cross-lineage heterologous protection against intravenous challenge with pathogenic SIVsmE543-3 ($1000\,\text{TCID}_{50}$) in Burmese rhesus macaques lacking elite controller MHC-I alleles (*Mamu-A\*01*, *B\*08*, *B\*17*, *90120-Ia*). Across 12 vaccinated macaques (3 per mutant), all four deglycosylated strains replicated to $\sim 10^7\,\text{copies/mL}$ at week 2 before being controlled below detection ($100\,\text{copies/mL}$). Four vaccinees (1 per group) first challenged homologously with SIVmac239 at week 40 showed near-sterile protection. Subsequently, 11 vaccinees (8 directly at weeks 50–117 post-vaccination plus 3 survivors re-challenged after homologous SIVmac239 challenge) and 3 naive controls were challenged with heterologous SIVsmE543-3 (~18.2% Env amino acid divergence, comparable to inter-subtype HIV-1 diversity). All 11 vaccinees suppressed acute-phase heterologous viremia ($>3\text{-log}$ reduction at week 2, undetectable by weeks 4–10, $p < 0.01$). During 80 weeks of chronic follow-up, 7/11 vaccinees ("controllers") maintained viral control, whereas 4/11 ("non-controllers") experienced breakthrough viremia driven in 3 animals by multi-breakpoint recombinants between the vaccine and challenge viruses that acquired $\ge 22\text{--}25$ gp120 N-glycosylation sites.
+
+### 2. Methodological & Statistical Audit
+- **Heterogeneity in Vaccination-to-Challenge Intervals and Prior Homologous Exposure:** While the exclusion of known elite controller MHC alleles and randomization of MHC backgrounds across the four vaccine groups ($n = 3$ per group) is a major design strength, the 11 animals entering the heterologous SIVsmE543-3 challenge had substantially heterogeneous pre-challenge histories (Materials and Methods, line 13 of part 2):
+  1. Three animals (`Mm0517`, `Mm0511`, `Mm0512`) were challenged at **50 weeks** post-vaccination.
+  2. Three animals (`Mm0409`, `Mm0303`, `Mm0518`) were challenged at **61 weeks** post-vaccination.
+  3. Two animals (`Mm0515`, `Mm0516`) were challenged at **117 weeks** post-vaccination.
+  4. Three animals (`Mm0301`, `Mm0513`, `Mm0304`) had already been challenged with $1000\,\text{TCID}_{50}$ of **homologous wild-type SIVmac239 at week 40** and were then re-challenged with SIVsmE543-3 at **week 117** (77 weeks after SIVmac239 exposure).
+  Notably, two of the four non-controllers (`Mm0513` and `Mm0304`) belonged to the subgroup of three animals that had previously received the wild-type SIVmac239 challenge at week 40! Thus, in `Mm0304`, it is unclear whether the "vaccine" parent of the emerging recombinant virus was the original $\Delta\text{3G}$ vaccine or superinfecting wild-type SIVmac239 from the week-40 homologous challenge. Furthermore, pooling these four differently timed/exposed subgroups ($n=11$) vs. $n=3$ naive controls in the Mann-Whitney test (Figure 4D) ignores schedule and boosting heterogeneity.
+- **Strain-Specific RT-qPCR Discrimination vs. Recombination:** In Figure 4B–C, longitudinal viral loads were tracked using *gag*-specific primer/probe sets for SIVmac239 vs. SIVsmE543-3. Because the breakthrough viruses in `Mm0304`, `Mm0409`, and `Mm0518` were recombinants carrying SIVmac239 *gag* and SIVsmE543-3 *pol/env* (Figure 7), the *gag* RT-qPCR scored their chronic viremia as "vaccine virus" (`SIVmac239` open circles in Figure 4C) until full-genome nested RT-PCR sequencing revealed they were actually chimeras bearing the pathogenic SIVsmE543-3 envelope. The authors correctly resolve this by full-genome sequencing (Figure 7 and Table 2), which is a forensic strength of the paper.
+- **Sample Size per Vaccine Construct:** With only $n = 2\text{--}3$ animals per deglycosylated mutant ($\Delta\text{5G}$, $\Delta\text{5G-ver1}$, $\Delta\text{5G-ver2}$, $\Delta\text{3G}$), the study has no statistical power to distinguish efficacy differences among the four glycosylation mutants (each group had 1 non-controller and 1–2 controllers).
+
+### 3. Biological / Experimental Grounding & Claim Proportionality
+- **Claim 1:** *Deglycosylated live-attenuated SIV mutants induce potent acute-phase containment (11/11 animals) and long-term chronic containment (7/11 animals) against a highly pathogenic, clade-divergent heterologous challenge (SIVsmE543-3) across diverse MHC backgrounds.* `[Well Supported]` — Directly supported by longitudinal viral load tracking over 80 weeks post-challenge and comparative sequence divergence analysis (Table 1).
+- **Claim 2:** *Loss of viral control in non-controllers is associated with vaccine–challenge virus recombination and restoration/hyper-accumulation of gp120 N-glycosylation sites (23–25 sites in V1, V2–C-loop, and V4) in the absence of detectable neutralizing antibodies against the challenge strain.* `[Well Supported]` — Supported by near-full-genome nested PCR sequencing from both PBMC proviral DNA and plasma viral RNA (Figures 7–8, Table 2) and neutralization assays (Figure 5).
+- **Claim 3:** *Gag-specific cellular immune responses likely mediate heterologous containment.* `[Moderately Supported]` — While Gag-specific IFN-$\gamma$ ELISPOT responses comprised $>50\%$ of total SIV-specific T-cell responses and cross-reacted between SIVmac239 and SIVsmE543-3 peptides (Figure 6), total or Gag-specific ELISPOT magnitude did not quantitatively differentiate controllers from non-controllers, and no CD8+ cell depletion experiment was performed to prove causality.
+
+### 4. Reproducibility & Data Completeness
+- All 99 newly generated SIV sequence clones from the study are deposited in DDBJ/GenBank under accession numbers `AB553915` to `AB554013`.
+- Strain-specific real-time RT-PCR primer and probe sequences for SIVmac239 and SIVsmE543-3 *gag* are explicitly provided in the Methods text (line 18 of part 2), and MHC class I/II genotyping and nested PCR primers are provided in `File S1`.
+</Blinded Review: TIME_ANON_0328>
