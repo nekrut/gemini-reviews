@@ -1,0 +1,297 @@
+{
+  "corpus_token_stats": {
+    "n_unique_manuscripts": 1565,
+    "n_generated_reviews": 1653,
+    "manuscript_mean_chars": 42449,
+    "manuscript_median_chars": 39638,
+    "manuscript_mean_words": 6691,
+    "manuscript_median_words": 6329,
+    "manuscript_mean_tokens": 11171,
+    "manuscript_median_tokens": 10431,
+    "rubric_tokens": 3807,
+    "total_input_mean_tokens": 14978,
+    "total_input_median_tokens": 14238,
+    "review_mean_chars": 7916,
+    "review_median_chars": 7307,
+    "review_mean_words": 1076,
+    "review_median_words": 977,
+    "review_visible_mean_tokens": 2083,
+    "review_visible_median_tokens": 1923,
+    "review_thinking_mean_tokens": 4600,
+    "total_output_mean_tokens": 6683,
+    "total_tokens_per_review": 21661
+  },
+  "per_paper_api_cost_usd": {
+    "ondemand_single_pass": 0.0856,
+    "ondemand_3run_consensus": 0.2567,
+    "batch_cached_single_pass": 0.0409,
+    "batch_cached_3run_consensus": 0.1226,
+    "flash_screening_single_pass": 0.0212,
+    "our_1665_study_total_ondemand_usd": 142.45,
+    "our_1665_study_total_batch_usd": 68.05
+  },
+  "pubmed_extrapolations": {
+    "annual_2025_pmc_oa": {
+      "n_papers": 921565,
+      "total_tokens_billions": 19.96,
+      "ondemand_single_usd": 78843.23,
+      "ondemand_3run_usd": 236529.68,
+      "batch_single_usd": 37667.42,
+      "batch_3run_usd": 113002.25,
+      "flash_single_usd": 19538.27
+    },
+    "annual_2025_pubmed_all": {
+      "n_papers": 1965335,
+      "total_tokens_billions": 42.57,
+      "ondemand_single_usd": 168141.54,
+      "ondemand_3run_usd": 504424.61,
+      "batch_single_usd": 80329.75,
+      "batch_3run_usd": 240989.26,
+      "flash_single_usd": 41667.43
+    },
+    "stock_1991_2025_pmc_oa": {
+      "n_papers": 7293714,
+      "total_tokens_billions": 157.99,
+      "ondemand_single_usd": 624003.69,
+      "ondemand_3run_usd": 1872011.06,
+      "batch_single_usd": 298118.26,
+      "batch_3run_usd": 894354.77,
+      "flash_single_usd": 154635.39
+    },
+    "stock_alltime_pmc_fulltext": {
+      "n_papers": 10900000,
+      "total_tokens_billions": 236.1,
+      "ondemand_single_usd": 932534.53,
+      "ondemand_3run_usd": 2797603.59,
+      "batch_single_usd": 445519.12,
+      "batch_3run_usd": 1336557.35,
+      "flash_single_usd": 231092.93
+    },
+    "stock_1991_2025_pubmed_all": {
+      "n_papers": 36775289,
+      "total_tokens_billions": 796.58,
+      "ondemand_single_usd": 3146259.35,
+      "ondemand_3run_usd": 9438778.04,
+      "batch_single_usd": 1503127.91,
+      "batch_3run_usd": 4509383.73,
+      "flash_single_usd": 779679.74
+    },
+    "stock_alltime_pubmed_all": {
+      "n_papers": 39400000,
+      "total_tokens_billions": 853.44,
+      "ondemand_single_usd": 3370812.89,
+      "ondemand_3run_usd": 10112438.68,
+      "batch_single_usd": 1610408.55,
+      "batch_3run_usd": 4831225.64,
+      "flash_single_usd": 835326.72
+    }
+  },
+  "human_review_economics": {
+    "mean_human_reviewers_per_paper": 2.61,
+    "assumed_hours_per_reviewer": 5.0,
+    "assumed_editorial_hours": 2.0,
+    "total_human_hours_per_paper": 15.05,
+    "hourly_rate_usd": 100.0,
+    "human_labor_cost_per_paper_usd": 1505.0,
+    "cost_ratio_human_to_ai_ondemand": 17591,
+    "cost_ratio_human_to_ai_batch": 36821,
+    "annual_pubmed_2025_human_hours_millions": 29.58,
+    "annual_pubmed_2025_human_cost_billions_usd": 2.958
+  },
+  "cohort_a_failure_economics": {
+    "n_cohort_a_total": 50,
+    "n_cohort_a_nih_funded": 18,
+    "total_nih_annual_portfolio_usd": 67680947,
+    "mean_nih_annual_portfolio_usd": 3760052.61,
+    "median_nih_annual_portfolio_usd": 2068486.0,
+    "top_funded_failures": [
+      {
+        "anon_id": "ANON_38",
+        "cohort_id": "A17",
+        "pmcid": "PMC6858566",
+        "title": "The fungal mycobiome promotes pancreatic oncogenesis via activation of MBL.",
+        "journal": "Nature",
+        "year": 2019,
+        "composite": 4.2,
+        "nih_annual_portfolio_usd": 14607791,
+        "matched_grants": 9,
+        "core_projects": [
+          "P30CA016087",
+          "R01CA168611",
+          "R01CA206105",
+          "R01CA215471",
+          "R01DE025992",
+          "R01DE027074",
+          "R01DK106025",
+          "T32CA193111",
+          "UL1TR001445"
+        ]
+      },
+      {
+        "anon_id": "ANON_27",
+        "cohort_id": "A22",
+        "pmcid": "PMC3261167",
+        "title": "Genetic signatures of exceptional longevity in humans.",
+        "journal": "PLoS One",
+        "year": 2012,
+        "composite": 2.4,
+        "nih_annual_portfolio_usd": 11048516,
+        "matched_grants": 6,
+        "core_projects": [
+          "K24AG025727",
+          "R01AG027216",
+          "R01AR055115",
+          "R01HL087681",
+          "R01NS036711",
+          "U19AG023122"
+        ]
+      },
+      {
+        "anon_id": "ANON_16",
+        "cohort_id": "A16",
+        "pmcid": "PMC7500457",
+        "title": "Microbiome analyses of blood and tissues suggest cancer diagnostic approach.",
+        "journal": "Nature",
+        "year": 2020,
+        "composite": 4.6,
+        "nih_annual_portfolio_usd": 8124642,
+        "matched_grants": 8,
+        "core_projects": [
+          "F30CA243480",
+          "P01DA012065",
+          "P30CA023100",
+          "P30MH062512",
+          "P50DA026306",
+          "R00AA020235",
+          "R01DA026334",
+          "T32GM007198"
+        ]
+      },
+      {
+        "anon_id": "ANON_11",
+        "cohort_id": "A18",
+        "pmcid": "PMC9567272",
+        "title": "Pan-cancer analyses reveal cancer-type-specific fungal ecologies and bacteriome interactions.",
+        "journal": "Cell",
+        "year": 2022,
+        "composite": 5.8,
+        "nih_annual_portfolio_usd": 7717179,
+        "matched_grants": 10,
+        "core_projects": [
+          "DP1AT010885",
+          "F30CA243480",
+          "K12GM068524",
+          "P01DA012065",
+          "P30MH062512",
+          "P50DA026306",
+          "R00AA020235",
+          "R01DA026334",
+          "U24CA248454",
+          "U24DK131617"
+        ]
+      },
+      {
+        "anon_id": "ANON_06",
+        "cohort_id": "A19",
+        "pmcid": "PMC7757858",
+        "title": "The human tumor microbiome is composed of tumor type-specific intracellular bacteria.",
+        "journal": "Science",
+        "year": 2020,
+        "composite": 7.2,
+        "nih_annual_portfolio_usd": 4831467,
+        "matched_grants": 2,
+        "core_projects": [
+          "P30CA033572",
+          "T32CA009599"
+        ]
+      },
+      {
+        "anon_id": "ANON_14",
+        "cohort_id": "A11",
+        "pmcid": "PMC5182071",
+        "title": "Detection of human adaptation during the past 2000 years.",
+        "journal": "Science",
+        "year": 2016,
+        "composite": 8.1,
+        "nih_annual_portfolio_usd": 3879056,
+        "matched_grants": 6,
+        "core_projects": [
+          "R01ES025009",
+          "R01HG008140",
+          "R01MH084703",
+          "R01MH101825",
+          "T15LM007033",
+          "T32HG000044"
+        ]
+      },
+      {
+        "anon_id": "ANON_152",
+        "cohort_id": "A41",
+        "pmcid": "PMC7458444",
+        "title": "Emergence of SARS-CoV-2 through recombination and strong purifying selection.",
+        "journal": "Sci Adv",
+        "year": 2020,
+        "composite": 5.8,
+        "nih_annual_portfolio_usd": 3761092,
+        "matched_grants": 5,
+        "core_projects": [
+          "R01AI118571",
+          "R01AI122909",
+          "R01AI145655",
+          "R01GM129525",
+          "R37AI150590"
+        ]
+      },
+      {
+        "anon_id": "ANON_97",
+        "cohort_id": "A29",
+        "pmcid": "PMC8110246",
+        "title": "Viable bacterial colonization is highly limited in the human intestine in utero.",
+        "journal": "Nat Med",
+        "year": 2020,
+        "composite": 7.3,
+        "nih_annual_portfolio_usd": 2883129,
+        "matched_grants": 5,
+        "core_projects": [
+          "F31AI136336",
+          "K08AI128007",
+          "P30DK063720",
+          "S10OD021822",
+          "UM1AI114271"
+        ]
+      },
+      {
+        "anon_id": "ANON_26",
+        "cohort_id": "A26",
+        "pmcid": "PMC8135569",
+        "title": "An Evolutionary Portrait of the Progenitor SARS-CoV-2 and Its Dominant Offshoots in COVID-19 Pandemic.",
+        "journal": "Mol Biol Evol",
+        "year": 2021,
+        "composite": 3.3,
+        "nih_annual_portfolio_usd": 2167763,
+        "matched_grants": 5,
+        "core_projects": [
+          "R01AI134384",
+          "R01GM126567",
+          "R35GM139540",
+          "R43GM139504",
+          "R44GM139504"
+        ]
+      },
+      {
+        "anon_id": "ANON_35",
+        "cohort_id": "A15",
+        "pmcid": "PMC7395502",
+        "title": "BCG vaccine protection from severe coronavirus disease 2019 (COVID-19).",
+        "journal": "Proc Natl Acad Sci U S A",
+        "year": 2020,
+        "composite": 3.2,
+        "nih_annual_portfolio_usd": 1969209,
+        "matched_grants": 1,
+        "core_projects": [
+          "ZIAAI000947"
+        ]
+      }
+    ]
+  }
+}
