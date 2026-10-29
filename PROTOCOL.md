@@ -51,7 +51,7 @@ A manuscript is classified as **Failed / Invalidated** when the review identifie
 ### 4.2 Deterministic De-Identification Preprocessor ([`scripts/build_deidentified.py`](scripts/build_deidentified.py))
 Before any blinded review is executed, the deterministic scrubber (`scripts/build_deidentified.py` and `scripts/fetch_and_scrub_125.py`) strips identifying metadata:
 * **Header & Identifier Stripping:** Strips Title (including any `RETRACTED:` or `WITHDRAWN:` prefix), Author Names, Affiliations, Correspondence lines, Journal Name, Publication Year, DOI, and PMCID/PMID (`[REDACTED FOR BLINDED REVIEW]`).
-* **Section & Banner Filtering:** Removes `Acknowledgements`, `Author Contributions`, `Funding`, `Competing Interests`, and any PMC retraction notice banners.
+* **Section & Banner Filtering:** Removes `References` (`<ref-list>` bibliography), `Acknowledgements`, `Author Contributions`, `Funding`, `Competing Interests`, and any PMC retraction notice banners.
 * **Repository URL & Handle Redaction:** Redacts GitHub, GitLab, and Bitbucket URLs containing owner/lab handles (`github.com/<owner>/<repo>` $\to$ `[GITHUB_REPO_REDACTED]`, `gitlab.com/<owner>/<repo>` $\to$ `[GITLAB_REPO_REDACTED]`).
 * **Self-Citation & Surname Redaction:** Redacts `<Surname> et al.` self-citations (for all author surnames $\ge 3$ characters) as well as standalone non-common author surnames ($\ge 5$ characters).
 * **Post-$t_0$ Year Redaction:** Scrubs calendar years strictly greater than the publication year $t_0$ (`[POST_T0_YEAR_REDACTED]`).
