@@ -564,7 +564,7 @@
   <div class="tabs-card">
     <div class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('overview', this)">1. Cohort Overview &amp; Active Filter Distribution</button>
-      <button class="tab-btn" onclick="switchTab('secular', this)">2. 35-Year Secular Trajectory &amp; Dilution (N = 1,000)</button>
+      <button class="tab-btn" onclick="switchTab('secular', this)">2. 35-Year Secular Trajectory &amp; Dilution (N = 915)</button>
       <button class="tab-btn" onclick="switchTab('human', this)">3. Human vs. AI Peer Review Concordance (N = 100 + 20 Pairs)</button>
       <button class="tab-btn" onclick="switchTab('failures', this)">4. Highly Cited Failure Papers (&lt;5.0, Non-Training)</button>
       <button class="tab-btn" onclick="switchTab('selfaudit', this)">5. Blinded Career Self-Audit (N = 164)</button>
@@ -1164,24 +1164,24 @@ function initStaticCharts() {
       labels: ['1991–1995', '1996–2000', '2001–2005', '2006–2010', '2011–2015', '2016–2020', '2021–2025'],
       datasets: [
         {
-          label: 'Established / Selective Journals (Slope -0.01/dec, p=0.96)',
-          data: [6.88, 7.05, 6.72, 6.76, 6.60, 6.46, 6.32],
+          label: 'Established / Selective Journals (Mean 6.88/10)',
+          data: [7.61, 7.49, 6.55, 7.03, 6.57, 6.31, 6.26],
           borderColor: '#059669',
           backgroundColor: '#059669',
           tension: 0.25,
           borderWidth: 2.5
         },
         {
-          label: 'All Sampled Literature (N = 1,000)',
-          data: [6.88, 7.05, 6.72, 6.68, 6.08, 5.79, 5.65],
+          label: 'All Full-Text Secular Literature (N = 915)',
+          data: [7.61, 7.47, 6.48, 6.87, 6.50, 5.93, 5.79],
           borderColor: '#2563eb',
           backgroundColor: '#2563eb',
           tension: 0.25,
           borderWidth: 2.5
         },
         {
-          label: 'Open-Access Megajournals (Mean 5.14/10)',
-          data: [null, null, null, 6.13, 5.12, 5.10, 5.02],
+          label: 'Open-Access Megajournals (Mean 6.07/10 in Secular, 5.80/10 Pooled)',
+          data: [null, null, 6.34, 6.74, 6.42, 5.53, 5.36],
           borderColor: '#dc2626',
           backgroundColor: '#dc2626',
           borderDash: [5, 4],
@@ -1203,9 +1203,9 @@ function initStaticCharts() {
     type: 'bar',
     data: {
       labels: [
-        'NIH R01/U01/P01',
-        'Other Extramural',
-        'Unfunded / None',
+        '2–3 NIH Grants ($0.95M)',
+        '1 NIH Grant ($305k)',
+        'Unfunded (<$25k)',
         'Wet-Lab Primary',
         'Dry-Lab Theory',
         'Secondary Database',
@@ -1214,7 +1214,7 @@ function initStaticCharts() {
       ],
       datasets: [{
         label: 'Mean Composite Score (/10)',
-        data: [6.95, 6.26, 5.44, 6.42, 6.31, 4.98, 6.53, 3.85],
+        data: [7.63, 7.04, 5.24, 6.81, 6.33, 5.33, 6.62, 4.16],
         backgroundColor: ['#059669', '#3b82f6', '#f97316', '#0ea5e9', '#6366f1', '#ef4444', '#10b981', '#dc2626'],
         borderRadius: 4
       }]
@@ -1260,10 +1260,10 @@ function initStaticCharts() {
   chartSelfAuditInst = new Chart(ctxSA, {
     type: 'bar',
     data: {
-      labels: ['First Author (n=10)', 'Senior Author (n=32)', 'All First/Senior (n=42)', 'Middle Co-Author (n=122)', 'Wild Literature (N=1,161)'],
+      labels: ['First Author (n=10)', 'Senior Author (n=32)', 'All First/Senior (n=42)', 'Middle Co-Author (n=122)', 'Wild Literature (N=1,076)'],
       datasets: [{
         label: 'Mean Composite Score (/10)',
-        data: [8.33, 8.19, 8.22, 7.29, 6.08],
+        data: [8.33, 8.19, 8.22, 7.29, 6.38],
         backgroundColor: ['#059669', '#10b981', '#047857', '#3b82f6', '#94a3b8'],
         borderRadius: 4
       }]

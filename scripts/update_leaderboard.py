@@ -401,7 +401,7 @@ def build_unified_catalog(index_entries: list[dict]) -> dict:
                     "uid": f"SEC_{aid}",
                     "code": r.get("sec_id", aid),
                     "anon_id": aid,
-                    "experiment": "35-Year Secular Trend (N=1,000)",
+                    "experiment": "35-Year Secular Trend (N=915)",
                     "is_wild": True,
                     "pmcid": r.get("pmcid", ""),
                     "pmid": str(r.get("pmid") or ""),
@@ -497,7 +497,7 @@ def build_unified_catalog(index_entries: list[dict]) -> dict:
         "Out-of-Domain Wild (N=60)",
         "Preprint vs. Published (N=40)",
         "Open-Review Concordance (N=100)",
-        "35-Year Secular Trend (N=1,000)",
+        "35-Year Secular Trend (N=915)",
         "Career Self-Audit: S. Pond (N=164)",
         "Community / Issue-Triggered Reviews",
     ]
@@ -547,7 +547,7 @@ def format_compact_readme_section(catalog: dict) -> str:
         "Out-of-Domain Wild (N=60)": "[`OOD_GENERALIZATION.md`](OOD_GENERALIZATION.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Out-of-Domain%20Wild%20(N%3D60))",
         "Preprint vs. Published (N=40)": "[`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Preprint%20vs.%20Published%20(N%3D40))",
         "Open-Review Concordance (N=100)": "[`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Open-Review%20Concordance%20(N%3D100))",
-        "35-Year Secular Trend (N=1,000)": "[`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=35-Year%20Secular%20Trend%20(N%3D1%2C000))",
+        "35-Year Secular Trend (N=915)": "[`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=35-Year%20Secular%20Trend%20(N%3D915))",
         "Career Self-Audit: S. Pond (N=164)": "[`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Career%20Self-Audit%3A%20S.%20Pond%20(N%3D164))",
         "Community / Issue-Triggered Reviews": "[`PROTOCOL.md`](PROTOCOL.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Community%20%2F%20Issue-Triggered%20Reviews)",
     }
