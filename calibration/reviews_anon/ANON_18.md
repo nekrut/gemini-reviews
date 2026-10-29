@@ -3,65 +3,49 @@
 **Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
 **Authors:** [REDACTED FOR BLINDED REVIEW]  
 **Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
-**Overall Score:** **7.8 / 10.0** (Strong / Sound) | **Scientific Core Score:** **6.1 / 8.0**  
-**Overall Score:** 7.8 / 10.0  
-* **Score Breakdown:** Rigor: 2.5/3.5 | Claims: 2.0/2.5 | Biology: 1.6/2.0 | Reproducibility: 1.7/2.0  
-**Score Breakdown:** Methodological Rigor: 2.5/3.5 | Claim-Evidence Alignment: 2.0/2.5 | Biological Plausibility: 1.6/2.0 | Reproducibility: 1.7/2.0  
-**Verdict:** Strong / Sound
+**Overall Score:** **8.3 / 10.0** (Strong / Sound) | **Scientific Core Score:** **6.8 / 8.0**  
+* **Score Breakdown:** Methodological Rigor: 2.8/3.5 | Claim-Evidence Alignment: 2.1/2.5 | Biological Plausibility: 1.9/2.0 | Reproducibility: 1.5/2.0  
+* **Score Breakdown (Compact):** Rigor: 2.8/3.5 | Claims: 2.1/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.5/2.0
 
 ---
 
-### 1. SUMMARY AND OVERALL IMPACT STATEMENT (Executive Summary)
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
 
-This application note summarizes functional, algorithmic, and software engineering extensions added to the maximum-likelihood phylogenetic inference package RAxML since its 2006 release. The updates span four bootstrap/branch support schemes (standard non-parametric bootstrap, rapid bootstrap, SH-like support, RELL bootstrap, and automated bootstopping), expanded data types (binary, multi-state morphological, RNA secondary structure) with Lewis ascertainment bias correction, rate-dependent protein substitution models (LG4M, LG4X, GTR, automated model selection, and ML base frequency estimation), coarse- and fine-grained parallelization (PThreads, MPI, hybrid), tree post-analysis operations (Robinson–Foulds distances, consensus trees, rogue taxon identification, Internode/Tree Certainty, and large-tree plausibility checking), short-read Evolutionary Placement Algorithm (EPA) and sliding-window phylogenetic signal scanning, x86 vector intrinsics (SSE3, AVX, AVX2), and missing-data memory footprint reduction. Source code is released under the GNU GPL alongside a 50-page user manual.
+This manuscript presents the reference genome assembly (`gasAcu1.0`) of the threespine stickleback (*Gasterosteus aculeatus*, generated at $9.0\times$ Sanger coverage with contig N50 of 83.2 kb, scaffold N50 of 10.8 Mb, and 400.4 Mb anchored to linkage groups) alongside whole-genome short-read resequencing ($2.3\times$ average Illumina coverage per individual; $48\times$ combined) of 20 additional fish from global Pacific and Atlantic marine-freshwater population pairs. To identify genomic loci underlying parallel ecological adaptation, the authors apply two complementary methods across the 21 genomes: a self-organizing map / iterative Hidden Markov Model (SOM/HMM) of local phylogenetic topologies and a sliding-window (2,500 bp window, 500 bp step) Cluster Separation Score (CSS) with permutation-based FDR control, supplemented by Bayesian data-driven clustering (DDC). They identify 242 divergent regions ($0.5\%$ of the genome) by either method and 147 regions ($0.2\%$) by both, successfully recovering the positive-control *EDA* locus on chromosome IV, discovering three large chromosomal inversions (on chrI, chrXI, and chrXXI) validated by marine BAC paired-end anomalies, and estimating from the top 64 high-confidence regions that $41\%$ map entirely to non-coding intervals, $43\%$ span coding and non-coding sequence without ecotype-specific nonsynonymous SNPs, and $17\%$ carry consistent nonsynonymous substitutions.
 
-As a concise software update note, the manuscript documents a mature, widely used, open-source computational tool whose core algorithms have largely been validated in prior peer-reviewed publications. Its primary limitations lie in the lack of empirical validation or benchmarking for the newly introduced or unpublished features mentioned in the note—specifically the unpublished sliding-window NGS signal algorithm (Section 2.5), the RELL bootstrap implementation (Section 2.1), and the quartet calculation routines (Section 2.8)—as well as an under-specified vectorization benchmark on a single DNA alignment of unstated dimensions (Section 2.6). These issues can be resolved through targeted benchmark reporting and documentation updates without new methodological development.
-
----
-
-### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT (Detailed Rubric Evaluation)
-
-* **SIMD vector intrinsics (SSE3, AVX, AVX2) substantially accelerate likelihood and parsimony calculations (Section 2.6): [Moderately Supported].**  
-  The author reports wall-clock runtimes decreasing from 111.5 s (unvectorized) to 84.4 s (SSE3, 24.3% reduction) and 66.22 s (AVX, 40.6% reduction) on a single-gene DNA alignment under GTR+$\Gamma$ on an Intel i7-2620M processor at 2.70 GHz. However, the dimensions of this test alignment (number of taxa $N$ and site patterns $m$) are not reported, multi-gene/protein vectorization scaling is omitted, and the hardware specified (Intel Core i7-2620M, a Sandy Bridge microarchitecture processor) does not support the AVX2/FMA instruction set, leaving unclear what hardware was used to evaluate the claimed $<5\%$ AVX-to-AVX2 runtime difference.
-
-* **Expanded substitution models and ascertainment bias corrections improve phylogenetic modeling across diverse data types (Section 2.2): [Well Supported].**  
-  Integration of Lewis (2001) ascertainment bias correction for all-variable morphological and SNP matrices and Le et al. (2012) distribution-free/gamma rate-dependent protein mixture matrices (LG4M, LG4X) directly implements established, peer-reviewed likelihood formulations appropriate for heterogeneous sequence data.
-
-* **Tree post-analysis and short-read placement tools scale to tens of thousands of taxa (Sections 2.4–2.5): [Moderately Supported].**  
-  The Evolutionary Placement Algorithm (EPA), rogue taxon detection, consensus tree building, Internode/Tree Certainty (IC/TC), and large-tree plausibility checker are grounded in cited methodological papers (Berger et al. 2011; Pattengale et al. 2011; Salichos and Rokas 2013; Dao et al. 2013). By contrast, the sliding-window algorithm in Section 2.5 for identifying 16S/gene regions with stable phylogenetic signal is explicitly noted as "(unpublished)" and is presented without mathematical definition, window-size parameterization, or validation benchmarks.
-
-* **Missing-data-aware data structures reduce memory footprints proportionally to alignment sparsity (Section 2.7): [Well Supported].**  
-  The gappy-alignment memory optimization relies on the published data structures of Izquierdo-Carrasco et al. (2011), omitting conditional likelihood vectors and ancestral probability pointers for subtrees composed entirely of missing data across partitions.
+This is a foundational genomic resource and evolutionary genomics study that integrates de novo reference assembly, global population resequencing, BAC-based structural variant validation, hybrid-zone differentiation (River Tyne), and common-garden microarray expression profiling. The primary methodological limitations lie in the downstream inference of regulatory versus coding predominance from low-coverage ($2.3\times$ per fish) SNP calls: requiring "perfect allele-ecotype association" across 21 fish at $2.3\times$ depth suffers from substantial allele-dropout and genotype-imputation uncertainty, and classifying an entire 3–5 kb window containing coding sequence as "regulatory" whenever it lacks a *perfectly fixed* nonsynonymous SNP (while possessing at least one perfectly associated non-coding SNP) systematically inflates the regulatory fraction when multiple non-coding SNPs exist per window. Addressing this bias requires probabilistic genotype likelihoods and symmetric criteria for coding versus regulatory variant classification.
 
 ---
 
-### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT (Major Issues, Minor Issues, Concrete Recommendations)
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
 
-#### Major Issues
-1. **Uncharacterized Benchmark Alignment and Hardware Mismatch in Section 2.6:** The single timing experiment in Section 2.6 omits the number of sequences, alignment length, and distinct site patterns of the DNA test dataset, and cites an Intel i7-2620M CPU (which lacks AVX2/FMA support) alongside a claim about AVX vs. AVX2 performance.
-2. **Unpublished Sliding-Window Algorithm Lacks Specification (Section 2.5):** The sliding-window method for selecting informative amplicon regions is cited as unpublished with no description of the objective metric (e.g., topological Robinson–Foulds stability vs. likelihood weight) or validation.
+* **High-quality anchored reference genome assembly (`gasAcu1.0`) and recovery of 147–242 parallel marine-freshwater divergent genomic regions across global stickleback populations: [Well Supported].**  
+  The Sanger reference assembly exhibits high contiguity (83.2 kb contig N50; 86.9% anchored to linkage groups), and the concordance between the topology-based SOM/HMM and distance-based CSS scans (147 shared regions, median size $<5$ kb), recapture of the 16 kb minimal *EDA* haplotype (Figure 2c), and 91% validation rate (10/11 tested regions) via Sequenom genotyping in independent populations provide strong support.
 
-#### Minor Issues
-1. **Newly Implemented RELL and ML Base Frequency Options Lack Validation Numbers (Sections 2.1–2.2):** While RELL (Minh et al. 2013) is cited, no comparison of RAxML's RELL support values or runtimes against standard rapid bootstrap (RBS) is provided.
-2. **Typographical Error in References (Section References):** In the Dao et al. (2013) citation, "phyolgenies" is misspelled.
+* **Chromosomal inversions on chromosomes I (442 kb), XI (412 kb), and XXI (1,700 kb) maintain divergent ecotypic haplotypes across marine-freshwater hybrid zones: [Well Supported].**  
+  The sharp CSS and DDC cluster boundaries are orthogonally validated by size and orientation anomalies of paired-end reads from a marine large-insert ($\sim 220$ kb) BAC library mapped against the freshwater reference (Figure 5a–b), flanked by inverted repeats and showing steep allele-frequency clines across hybrid zones (Supplementary Table 10).
 
-#### Concrete Recommendations
+* **Regulatory changes predominate over protein-coding changes (~84% vs. ~17%) among loci underlying parallel marine-freshwater stickleback evolution: [Overstated].**  
+  To partition the 64 strictest regions into coding versus regulatory categories (Figure 6a), the authors require every region to contain at least one SNP with "perfect allele-ecotype association" across the 21 fish. First, at $2.3\times$ average Illumina coverage per diploid individual, the probability of observing both alleles at a heterozygous site or calling all 21 individuals without dropout is low, making "perfect association" highly sensitive to coverage variance and imputation. Second, the classification rule is asymmetric: the 43% of regions that span *both* coding and non-coding sequence are assigned to regulatory evolution simply because they lack a *perfectly* associated nonsynonymous SNP, even though a causal nonsynonymous variant with 1–2 missing/imperfect calls or an uncalled indel is excluded while any of dozens of linked non-coding SNPs passing the threshold qualifies the locus as regulatory.
 
-#### 1. Specify Dataset Dimensions and AVX2 Hardware in Vector Intrinsics Benchmark
-* **WHY:** Reporting wall-clock runtimes without alignment dimensions ($N$ taxa, $L$ sites, $m$ distinct patterns) or the exact Haswell/later CPU used for AVX2 prevents independent reproduction of the vectorization speedup claims.
-* **WHAT:** Add the taxon count, site count, pattern count, and exact command-line flags for the Section 2.6 DNA alignment, and specify the AVX2-capable processor used to measure the $<5\%$ AVX2/FMA gain.
-* **HOW:** Report a compact summary table comparing Unvectorized, SSE3, AVX, and AVX2 runtimes for both a DNA ($\Gamma$) and a protein (LG+$\Gamma$ or LG4X) alignment on an AVX2-capable CPU, and deposit the test alignments in the Supplementary Data or GitHub repository.
+* **Locally differentiated loci across the River Tyne marine-freshwater hybrid zone substantially overlap globally shared parallel adaptation regions (35.3% of top 0.1% divergent windows): [Moderately Supported].**  
+  While the enrichment of globally shared CSS signal within the top 0.1% divergent windows of the River Tyne pair (Figure 4b) is clear, the Tyne marine and freshwater individuals were themselves included among the 21 fish used to define the global CSS and SOM/HMM scores, introducing partial circularity between local divergence and global score calculation, and single-fish comparisons at $2.3\times$ depth have high sampling variance.
 
-#### 2. Document the Mathematical Metric for the Sliding-Window NGS Approach
-* **WHY:** Introducing an unpublished algorithm in a software note without defining what statistic it computes leaves users unable to evaluate its statistical validity.
-* **WHAT:** Explicitly state the sliding-window input parameters (window size, stride) and the output metric used to quantify "strong and stable phylogenetic signal" in Section 2.5 or Supplementary Material.
-* **HOW:** Add a 3–4 sentence mathematical description (or supplementary section) detailing how sliding-window sub-alignments are scored against a reference topology and include the corresponding RAxML command-line flag.
+---
 
-#### 3. Provide Concordance and Runtime Metrics for the RELL Bootstrap Implementation
-* **WHY:** Minh et al. (2013) coupled RELL with IQ-TREE's candidate tree sampling (UFBoot); implementing RELL inside RAxML's search heuristic may yield different support calibration depending on how candidate trees are collected.
-* **WHAT:** Clarify how candidate trees are sampled during the RAxML ML search for RELL evaluation and report the correlation of branch supports with standard rapid bootstrap (`-f a`).
-* **HOW:** Run RAxML RELL and rapid bootstrap on the benchmark DNA alignment from Section 2.6 and report the runtime ratio and Pearson/Spearman correlation of bipartition support values.
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
 
-#### 4. Technical and Editorial Cleanup
-* **WHY:** Minor bibliographic and URL formatting issues affect archival clarity.
-* **WHAT & HOW:** Correct "phyolgenies" to "phylogenies" in the Dao et al. (2013) reference entry (line 101), and archive a static copy of the 50-page manual and tutorial in the Supplementary Data in addition to the external lab URLs.
+#### 1. Correct for Low-Coverage Ascertainment and Asymmetric Window Classification in the Coding vs. Regulatory Partition
+* **WHY:** At $2.3\times$ per-individual sequencing depth, requiring "perfect allele-ecotype association" across 21 individuals favors regions with higherSNP density (such as non-coding flanking sequences) where at least one variant happens to achieve complete coverage and concordance by chance, while penalizing single causal nonsynonymous sites that suffer a single read-depth dropout or incomplete penetrance in one population.
+* **WHAT:** Re-evaluate the relative contribution of coding versus non-coding variants across the 64 (and 147) parallel regions using genotype likelihoods and site-level (rather than asymmetric window-level) enrichment statistics.
+* **HOW:** Compute site-specific marine-freshwater $F_{ST}$ or CSS directly from genotype likelihoods (e.g., SAMtools/ANGSD) across all callable sites, and compare the empirical excess of high-differentiation nonsynonymous SNPs, synonymous SNPs, Conserved Non-Coding Elements (CNEs), and intergenic SNPs relative to their genome-wide background densities.
+
+#### 2. Eliminate Sample Overlap When Quantifying Global Parallelism in the River Tyne Hybrid Zone
+* **WHY:** Including the River Tyne marine and freshwater individuals inside the 21-fish discovery panel inflates the overlap between the top 0.1% divergent windows in the River Tyne pair and the globally shared divergent regions (35.3%).
+* **WHAT:** Recompute the global CSS and SOM/HMM scores on the 19 non-Tyne individuals (leave-one-pair-out cross-validation).
+* **HOW:** Recalculate the $19 \times 19$ pairwise $\pi$ matrices excluding the two River Tyne fish, call global divergent windows at the same 2% and 5% FDR thresholds, and report the leave-one-pair-out overlap percentage with the top 0.1% River Tyne divergent windows.
+
+#### 3. Account for Recombination Rate Variation and Background Selection in Window Scans
+* **WHY:** Both CSS (based on between-ecotype versus within-ecotype $\pi$) and SOM/HMM are sensitive to local reductions in within-population diversity ($\pi_w$) driven by low recombination rates and background selection, which also correlate with gene density and CNE density.
+* **WHAT:** Test whether the parallel divergent regions show elevated absolute divergence ($d_{XY}$) between marine and freshwater ecotypes rather than solely reduced within-ecotype diversity ($\pi_w$).
+* **HOW:** Using the genetic cross linkage map anchored in `gasAcu1.0`, stratify the 2,500 bp windows by local recombination rate (cM/Mb) and report both absolute divergence ($d_{XY}$) and relative divergence (CSS/$F_{ST}$) for the 147 shared regions and the gene/CNE density enrichment tests (Supplementary Figures 8–9).

@@ -3,65 +3,48 @@
 **Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
 **Authors:** [REDACTED FOR BLINDED REVIEW]  
 **Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
-**Overall Score:** **8.1 / 10.0** (Strong / Sound) | **Scientific Core Score:** **6.5 / 8.0**  
-**Overall Score:** 8.1 / 10.0  
-* **Score Breakdown:** Rigor: 2.6/3.5 | Claims: 2.1/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.6/2.0  
-**Score Breakdown:** Methodological Rigor: 2.6/3.5 | Claim-Evidence Alignment: 2.1/2.5 | Biological Plausibility: 1.8/2.0 | Reproducibility: 1.6/2.0  
-**Verdict:** Strong / Sound
+**Overall Score:** **7.4 / 10.0** (Strong / Sound) | **Scientific Core Score:** **6.5 / 8.0**  
+* **Score Breakdown:** Methodological Rigor: 2.7/3.5 | Claim-Evidence Alignment: 2.0/2.5 | Biological Plausibility: 1.8/2.0 | Reproducibility: 0.9/2.0  
+* **Score Breakdown (Compact):** Rigor: 2.7/3.5 | Claims: 2.0/2.5 | Biology: 1.8/2.0 | Reproducibility: 0.9/2.0
 
 ---
 
-### 1. SUMMARY AND OVERALL IMPACT STATEMENT (Executive Summary)
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT
 
-This manuscript reports the major features and practical usage strategies of MAFFT version 7 for multiple sequence alignment (MSA). It focuses on phylogenetic-aware alignment extension (`--add`, `--addfragments`, and `--addprofile` versus legacy `mafft-profile`), automatic strand orientation adjustment (`--adjustdirection`), multithreaded parallelization (`--thread`), scoring matrix parameterization for closely versus distantly related sequences, and structure-seeded alignment (`--seed` combined with ASH structural equivalences). The authors illustrate these capabilities—and candidly highlight MAFFT's failure modes—across three biological test cases: (1) ~300 full-length fungal rDNA sequences combined with ~5,000 non-overlapping ITS1 or ITS2 pyrosequencing reads, (2) 13,822 bacterial 16S rRNA sequences from the Comparative RNA Website (CRW) extended with up to 138,210 artificial fragments (`16S.B.ALL`), and (3) three highly divergent PIN-domain protein structures (PDB: `3v33`, `2qip`, `1taq`).
+This manuscript investigates the relationship between nonadaptive molecular convergence and evolutionary divergence across 13 concatenated mitochondrial protein-coding genes from 629 tetrapod species (3,596 aligned amino acid sites) alongside biophysical and phenomenological sequence evolution simulations. Using Bayesian ancestral state reconstruction (PLEX under the mtMam+$\Gamma_5$ substitution model) on a fixed cytochrome oxidase 1 (CO1) tree topology, the authors compute the ratio of convergent ($C$) to divergent ($D$) double substitutions across non-sister, non-ancestral branch pairs separated by varying patristic distances. They observe that $C/D$ begins around $0.40$–$0.45$ at short patristic distances and decays to below $0.20$ at larger distances. Specifically—in terms of the primary analytical distinction—even when conditioning on branch pairs that share an identical ancestral amino acid at a site, $C/D$ declines over evolutionary distance (linear slope $99\%$ credible interval $[-0.109, -0.094]$), whereas time-homogeneous site-heterogeneous mixture models (such as CAT-60) predict an increasing $C/D$ with distance for identical-ancestor sites due to survivorship bias toward low-entropy sites. A thermodynamic Stokes–Fisher (SF) folding simulation model incorporating pairwise contact potentials (PDB `1QHW`) reproduces the empirical decline in $C/D$. No public repository, accession list for the 641 downloaded GenBank sequences, or simulation source code is provided (`[ACCESSION_REDACTED in scrubbed input]`).
 
-The paper is unusually transparent about when standard progressive (`FFT-NS-2`), iterative (`L-INS-i`), and profile (`mafft-profile`) alignments fail due to non-additive distance matrices on non-overlapping fragments or root-placement assumptions. However, the empirical evaluation has three notable limitations: (1) hardware configurations are confounded across rows of Table 2 (mixing a 2.67 GHz Xeon E7-8837 with a 3.47 GHz Xeon X5690) and lack comparisons against external fragment-placement tools (e.g., PaPaRa, PAGAN, SEPP), (2) Test Case 1 relies entirely on visual inspection of an unreleased environmental dataset ("Chen W, personal communication"), and (3) the multithreaded iterative refinement mode is noted as non-deterministic without quantifying run-to-run alignment variance. These limitations can be addressed through standardized benchmarking, public deposition of the test alignments, and minor text/equation fixes.
-
----
-
-### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT (Detailed Rubric Evaluation)
-
-* **`--addfragments` accurately aligns non-overlapping fragmentary sequences to a backbone MSA while avoiding the non-additive guide-tree failure of `L-INS-i` and root-placement bias of `mafft-profile` (Test Cases 1 & 2, Table 2, Figs. 1–2): [Well Supported].**  
-  The theoretical explanation—that pairwise distances between disjoint ITS1 and ITS2 fragments are large while both are close to full-length sequences, violating distance additivity and distorting the `L-INS-i` WSP/consistency objective—is mathematically and biologically sound. On the `16S.B.ALL` benchmark (Case 1: 13,822 backbone $\times$ 13,821 fragments), `--multipair --addfragments` and `--6merpair --addfragments` achieve 0.9969 and 0.9949 accuracy against the curated CRW reference in 18.3 h and 36.2 min (10 threads), whereas `mafft-profile` drops to 0.2779 accuracy.
-
-* **`--6merpair --addfragments` scales to >138,000 fragments with minimal accuracy loss on conserved rRNA sequences (Table 2, Cases 2 & 3): [Well Supported].**  
-  Adding 138,210 fragments to 1,000 or 13,822 backbone sequences completes in 33.8 min (accuracy 0.9969) and 5.91 h (accuracy 0.9949) on 10 cores, whereas the default dynamic-programming `--multipair --addfragments` cannot scale to this regime. The authors appropriately caveat that `--6merpair` degrades on more divergent sequences based on prior simulations.
-
-* **Multithreaded iterative refinement (`--thread`) provides comparable accuracy to serial execution (Section "Parallelization"): [Moderately Supported].**  
-  The authors note that while progressive methods yield identical alignments under multithreading, iterative refinement results are non-deterministic across thread counts. No variance or accuracy numbers are shown in the present manuscript (citing only a 2010 application note), and Table 2 only benchmarks multithreading on `--addfragments`.
-
-* **Seeding MAFFT with ASH structural equivalence scores resolves active-site misalignments in highly divergent PIN domains (Test Case 3, Fig. 4): [Moderately Supported].**  
-  Using pairwise ASH structural alignments filtered at $e_{ij} \ge 0.5$ ($d_0 = 4$ Å) via `--seed` successfully aligns the catalytic middle aspartic acid across human regnase-1 (`3v33`), *Vibrio parahaemolyticus* VPA0982 (`2qip`), and *Thermus aquaticus* Pol I nuclease domain (`1taq`) where sequence-only `L-INS-i` fails. However, this is a single 3-taxon illustrative example rather than a systematic benchmark across structural families, and the Gaussian equivalence equation is missing from line 147 of the text.
+The central theoretical insight—that spatial heterogeneity alone (e.g., CAT-60) predicts an upward slope in $C/D$ over time for identical-ancestor sites whereas epistatic/temporal constraint fluctuations predict the empirically observed downward slope—is a sharp and valuable contribution to molecular evolution. However, the empirical analysis is weakened by several methodological vulnerabilities: ancestral substitutions are inferred under a site- and time-homogeneous model (`mtMam`+$\Gamma_5$) on a single gene tree (`CO1`) that ignores topological discordance and strand-asymmetric compositional drift across the mitochondrial genome; display filtering uses a hard posterior threshold ($>90\%$) and divergent-count cutoffs ($D \ge 20$, $D \ge 7$, or $D \ge 10$) that introduce ratio-estimator truncation bias; and branch pairs on a shared phylogeny are treated as independent observations in linear regression without correcting for phylogenetic non-independence. These limitations can be resolved computationally through phylogenetic block-bootstrapping, ancestral reconstruction under site-heterogeneous models, and open archival of the alignment and simulation code.
 
 ---
 
-### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT (Major Issues, Minor Issues, Concrete Recommendations)
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
 
-#### Major Issues
-1. **Confounded Hardware and Missing External Baselines in Table 2:** In Table 2, footnote `b` indicates that `mafft --localpair --add` was run on a slower 2.67 GHz Intel Xeon E7-8837 (256 GB RAM), whereas the other rows were run on a faster 3.47 GHz Intel Xeon X5690 (48 GB RAM), confounding CPU and wall-clock time comparisons. Furthermore, since `16S.B.ALL` was taken directly from the SEPP benchmark (Mirarab et al. 2012), omitting the accuracy and runtime of SEPP, PaPaRa, or PAGAN on the exact same dataset leaves readers unable to judge MAFFT's relative standing.
-2. **Unreleased Test Case 1 Dataset and Qualitative-Only Evaluation:** The fungal ITS dataset (~300 full-length + ~5,000 ITS1/ITS2 reads) is cited as "Chen W, personal communication" and evaluated solely via visual inspection of Jalview blocks (Fig. 2).
+* **Nonadaptive convergence ($C/D$) in vertebrate mitochondrial proteins declines steeply with patristic distance, including at sites with identical ancestral amino acids: [Moderately Supported].**  
+  The decline in $C/D$ from $\sim 0.45$ to $<0.20$ for identical-ancestor sites (Figure 2A) is supported by integrating over posterior ancestral reconstructions in PLEX (Supplementary Figure S2). However, inferring ancestral states under a single global empirical matrix (`mtMam`) systematically biases ancestral reconstructions at constrained sites toward globally common residues at deeper nodes, and using a single `CO1` topology for all 13 concatenated mitochondrial proteins can create artifactual double substitutions on short branches wherever gene-tree discordance or alignment error occurs. Additionally, the $99\%$ credible interval for the slope ($[-0.109, -0.094]$) does not account for the severe statistical non-independence among the $\sim O(N^2)$ branch pairs that share internal evolutionary paths on the same tree.
 
-#### Minor Issues
-1. **Missing Equation on Line 147:** In Section "Strategy for Integrating Structural Alignments and MAFFT" (line 147), the displayed equation for the Gaussian equivalence score $e_{ij} = \exp(-d_{ij}^2 / d_0^2)$ (or its exact ASH functional form) is blank, and the inline threshold expression on line 148 ("at 0.5") is missing the $\ge$ symbol (`e_ij >= 0.5`).
-2. **Missing Complexity Formula on Line 100:** In Section "Estimating the Direction of DNA Sequences" (line 100), the big-$O$ complexity expression before ", where $n$ is the number of sequences" is blank ($O(n^2)$).
-3. **Typo in Abstract Keywords and Table 1:** Line 5 reads "metagemone" instead of "metagenome", and Table 1 (line 21 / line 222) reads `mafft --add mew msa` instead of `mafft --add new msa`.
+* **Time-homogeneous site-heterogeneous models (CAT-60) cannot explain the decline in $C/D$ among sites sharing the same ancestral state, whereas epistatic Stokes–Fisher models capture this trend: [Well Supported].**  
+  The mathematical demonstration in Figure 6A is sound: under a static site-specific amino acid profile (CAT-60), conditioning on the ancestral state remaining unchanged over patristic distance $d$ progressively enriches the surviving site pool for low-entropy (slowly evolving, highly constrained) sites, which forces $C/D$ upward over time. The empirical observation of the opposite trend provides direct qualitative evidence that site-specific amino acid propensities fluctuate over time.
 
-#### Concrete Recommendations
+* **Once ancestral amino acids at a site have diverged between two lineages, the site retains no detectable site-specific information about convergence probabilities beyond the identity of the ancestral amino acids: [Fragile].**  
+  The authors base this claim on a permutation test (Supplementary Figure S4) that resamples descendant amino acids across all sites sharing the same ancestral amino acid, finding $C/D \approx 0.08$ matching Figure 2B. However, pooling across all 3,596 sites averages out local structural environments; the lack of difference in the global mean $C/D$ ratio does not prove that individual sites have lost site-specific biophysical constraints (an effective alphabet of $m = 13.4$ residues under a Jukes–Cantor approximation is an aggregate across heterogeneous sites, not proof of site-level panmixia).
 
-#### 1. Standardize Hardware and Include External Baselines in Table 2
-* **WHY:** Comparing wall-clock runtimes across two different CPU architectures (2.67 GHz E7-8837 vs. 3.47 GHz X5690) distorts the relative computational cost of `--localpair --add`, and omitting published results on `16S.B.ALL` obscures how `--addfragments` compares to dedicated phylogenetic placement aligners.
-* **WHAT:** Re-time or normalize the Case 1 runs on a single machine (or report the single-core CPU speed scaling factor), and add reference rows (or discussion metrics) for SEPP/PaPaRa/PAGAN on `16S.B.ALL` Case 1.
-* **HOW:** Run a subset timing calibration on both Xeon machines to report normalized CPU hours, and include the published CRW recovery accuracy of SEPP/PaPaRa from Mirarab et al. (2012) alongside MAFFT's 0.9969/0.9949 scores.
+* **Excessive molecular convergence at short evolutionary distances cannot be assumed to be adaptive under standard null models: [Well Supported].**  
+  Both the empirical mitochondrial trajectories and the analytical model comparisons (Figures 4–6) demonstrate that standard homogeneous matrices (JC, WAG, Ziheng codon model) underestimate baseline nonadaptive convergence by 2- to 4-fold at short branch distances, invalidating naive parametric tests of adaptive convergence that rely on homogeneous exchangeability matrices.
 
-#### 2. Deposit or Simulate a Publicly Reproducible ITS1/ITS2 Benchmark for Test Case 1
-* **WHY:** Because the fungal ITS dataset is from personal communication and cannot be downloaded, readers cannot reproduce Figure 2 or quantitatively measure alignment accuracy on non-overlapping two-domain fragments.
-* **WHAT:** Deposit the anonymized fungal ITS alignment (or a public equivalent extracted from UNITE/GenBank) and report a quantitative accuracy metric (e.g., fraction of ITS1 and ITS2 fragments aligned Exclusively to the 5' and 3' sides of the 5.8S region, respectively).
-* **HOW:** Count the exact percentage of ITS1 reads erroneously aligned to the ITS2 locus (and vice versa) under `FFT-NS-2`, `L-INS-i`, `mafft-profile`, and `--addfragments`, and archive the input FASTA files as Supplementary Data.
+---
 
-#### 3. Restore Missing Mathematical Expressions and Fix Typos
-* **WHY:** Omitted mathematical formulas in the text prevent readers from implementing or verifying the direction-adjustment complexity and ASH structural equivalence score.
-* **WHAT & HOW:**
-  1. On line 5 (Keywords), change `metagemone` to `metagenome`.
-  2. In Table 1 (lines 21 and 222), change `mafft --add mew msa` to `mafft --add new msa`.
-  3. On line 100, insert $O(n^2)$ in "an algorithm with a time complexity of $O(n^2)$, where $n$ is the number of sequences".
-  4. On line 147, insert the explicit ASH Gaussian equivalence formula $e_{ij} = \exp(-d_{ij}^2 / d_0^2)$, and on line 148 insert $e_{ij} \ge 0.5$.
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+
+#### 1. Correct for Non-Independence of Branch Pairs and Ratio Truncation Bias
+* **WHY:** In Figures 1–3, $C/D$ is plotted and regressed across all eligible branch pairs satisfying $D \ge 20$ (or $D \ge 7, 10$). Because $\binom{2N-2}{2}$ branch pairs on a tree of 629 taxa share internal branches and node reconstructions, treating branch pairs as independent inflates precision, while truncating on $D \ge D_{\min}$ biases the expectation $E[C/D \mid D \ge D_{\min}]$ downward as branch lengths or divergence times change.
+* **WHAT:** Replace the truncated $C/D$ linear regression with a phylogenetic node-jackknife or non-overlapping clade comparison, and model $C$ directly using a binomial/Poisson generalized linear mixed model conditioned on $C+D$.
+* **HOW:** Fit $\text{logit}(P(\text{Convergent} \mid \text{Double Substitution})) = \beta_0 + \beta_1 d_{ij} + u_i + u_j$, where $d_{ij}$ is patristic distance and $u_i, u_j$ are random effects for branches $i$ and $j$, without excluding pairs where $D < 20$. Compute confidence intervals via block-bootstrapping across the 13 mitochondrial genes or non-overlapping tetrapod subtrees.
+
+#### 2. Test Sensitivity of Empirical Ancestral Reconstructions to Site-Heterogeneous Prior Models
+* **WHY:** Ancestral states for the empirical data were inferred in PLEX using the site-homogeneous `mtMam`+$\Gamma_5$ model, which assumes identical equilibrium frequencies and exchangeabilities across all 3,596 sites. Misspecified homogeneous priors can induce systematic errors in ancestral state probabilities as a function of node depth.
+* **WHAT:** Re-estimate ancestral states and posterior substitution mappings using a site-heterogeneous profile mixture model (e.g., CAT or empirical profile mixtures C20/C60).
+* **HOW:** Run PhyloBayes (`pb` with `-cat -gtr` or `-catfix C60`) or IQ-TREE/PLEX equivalents on the concatenated mitochondrial alignment (or on the `CO1` alignment alone to eliminate topological mismatch between `CO1` and the other 12 genes) and verify that the downward slope of $C/D$ for identical-ancestor sites (Figure 2A) persists when ancestral states are reconstructed under site-specific equilibrium profiles.
+
+#### 3. Fix Text-Figure Contradiction and Deposit Alignment and Simulation Code
+* **WHY:** On line 36, the text states: *"The 99% credible region for the slope of a linear model fit to the data from figure 2B shows a clear decrease in C/D ratios with divergence (-0.109, -0.094; supplementary fig. S3)"*—referencing Figure 2B (different ancestral states, which the text says is *"approximately constant at 0.08"*) instead of Figure 2A (identical ancestral states). Furthermore, the list of 641 GenBank accessions, the curated 629-taxon alignment, and the Stokes–Fisher C/C++ simulation code are not deposited.
+* **WHAT & HOW:** Correct *"figure 2B"* to *"figure 2A"* on line 36; verify whether Supplementary Figure S3A cited at the end of line 36 should be Supplementary Figure S5A; and deposit the 629-taxon concatenated alignment, the `CO1` MrBayes tree, and the Stokes–Fisher simulation scripts in Dryad or Zenodo.

@@ -4,8 +4,8 @@
   "open_review_ai_only_catches_total": 385,
   "open_review_ai_only_catches_grounded_in_manuscript": 385,
   "open_review_ai_only_catches_grounded_pct": 100.0,
-  "corpus_accession_rsid_tokens_checked": 1931,
-  "corpus_accession_rsid_tokens_verified": 1931,
+  "corpus_accession_rsid_tokens_checked": 1939,
+  "corpus_accession_rsid_tokens_verified": 1939,
   "corpus_accession_rsid_verified_pct": 100.0,
   "pre_correction_audit_baseline": {
     "active_reviews_checked": 1719,
