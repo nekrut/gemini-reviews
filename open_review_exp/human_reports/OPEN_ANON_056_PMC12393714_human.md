@@ -249,7 +249,7 @@ All three reviewers and our Academic Editor have indicated that they are fully s
 
 3) SUPPLEMENTAL FIGURES: I see in your manuscript that you have 5 supplemental figures - but looking through your PDF and file inventory, I could not seem to find these anywhere. Sorry if I missed something obvious here, but please do double check that you have uploaded all the relevant files for your paper.
 
-4) CODE: Thank you for providing your code on GitHub. While this is great, please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. We therefore ask that you archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Availability Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
+4) CODE: Thank you for providing your code on GitHub. While this is great, please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. We therefore ask that you archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Availability Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: https://docs.[GITHUB_REPO_REDACTED]
 
 5) ETHICS STATEMENT: Thank you for including an ethics statement in your methods section. Please update this to include the specific national or international regulations/guidelines to which your animal care and use protocol adhered. Please note that institutional or accreditation organization guidelines (such as AAALAC) do not meet this requirement.
 
@@ -345,6 +345,6 @@ Submitted filename: Response_to_Reviewers_auresp_3.pdf
 
 ## Data Availability Statement
 
-All code is publicly available on the Coyne Lab Github ( https://github.com/CoyneLabDuke/Swine-maternal-fetal-interface ) and archived via Zenodo ( https://doi.org/10.5281/zenodo.15747602 ). All raw and mapped data obtained via Bulk RNA-Sequencing, Single Cell, and Visium Spatial Transcriptomics data generated in this paper are deposited on the Gene Expression Omnibus (GSE296975 and GSE301436) and additionally are available via the Sequencing Read Archive (under bioproject number PRJNA1252046). Additionally, a searchable, user-friendly version of the Visium Spatial Transcriptomics dataset has been uploaded at https://coynelab.shinyapps.io/myshinyapp/ .
+All code is publicly available on the Coyne Lab Github ( [GITHUB_REPO_REDACTED] ) and archived via Zenodo ( https://doi.org/10.5281/zenodo.15747602 ). All raw and mapped data obtained via Bulk RNA-Sequencing, Single Cell, and Visium Spatial Transcriptomics data generated in this paper are deposited on the Gene Expression Omnibus (GSE296975 and GSE301436) and additionally are available via the Sequencing Read Archive (under bioproject number PRJNA1252046). Additionally, a searchable, user-friendly version of the Visium Spatial Transcriptomics dataset has been uploaded at https://coynelab.shinyapps.io/myshinyapp/ .
 
 Articles from PLOS Biology are provided here courtesy of PLOS

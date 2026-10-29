@@ -20,5 +20,5 @@ This is a sharp, mathematically exact, and practically important methodological 
 * **Practical Guidance on When Discrete Gamma Suffices vs. Fails [Well Supported]:** The conclusion (line 35) avoids overstating the impact on tree topology inference—where rate variation acts as a nuisance parameter—and focuses squarely on studies that interpret the estimated rate distribution moments or empirical Bayes site rates.
 
 ### 4. Reproducibility & Data Completeness
-* **Data & Code Availability:** Exemplary. All 1,721 alignments and phylogenies are archived on GitHub (`https://github.com/srwis/variancebound`), and the exact HyPhy batch file (`dNdSRateAnalysis.bf`) and menu options used for both models are fully specified.
+* **Data & Code Availability:** Exemplary. All 1,721 alignments and phylogenies are archived on GitHub (`[GITHUB_REPO_REDACTED]`), and the exact HyPhy batch file (`dNdSRateAnalysis.bf`) and menu options used for both models are fully specified.
 * **Formatting Note:** In the markdown conversion of lines 19–23, the display equations for the variance inequality and higher moments were stripped of their LaTeX math blocks, and inline square roots (`\sqrt{Var(X)}/E(X)` and `\sqrt{K-1}`) rendered as `Var ( X ) / E ( X )` and `K - 1`; this is a text-extraction artifact of the blinded file rather than an error in the underlying derivation.

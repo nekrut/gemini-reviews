@@ -285,7 +285,7 @@ We will require these files before a manuscript can be accepted so please prepar
 
 (C) Per journal policy, if you have generated any custom code during the course of this investigation, please make it available without restrictions. Please ensure that the code is sufficiently well documented and reusable, and that your Data Statement in the Editorial Manager submission system accurately describes where your code can be found.
 
-Please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. However, you can archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Accessibility Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
+Please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. However, you can archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Accessibility Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: https://docs.[GITHUB_REPO_REDACTED]
 
 (D) Please ensure that your Data Statement in the submission system accurately describes where your data can be found and is in final format, as it will be published as written there.
 

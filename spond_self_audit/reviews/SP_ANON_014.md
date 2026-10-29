@@ -23,5 +23,5 @@ This brief comparative genomics study surveys the length and sequence conservati
 * **Claim 3:** *Stepwise `GTA` insertions and deletions beginning from a 7-nt $\delta$-coronavirus-like ancestor generated the 16-, 22-, 25-, and 31-nt overlaps in $\alpha, \beta$, and $\gamma$ coronaviruses.* **`[Fragile]`** — Plausible homology hypothesis, but presented via manual `WebLogo` alignment inspection without formal phylogenetic ancestral indel reconstruction.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** All `Jupyter` notebooks, `Galaxy` workflows, sequence alignments, and `ObservableHQ` interactive figures (`https://observablehq.com/@spond/frameshift-selection`) are publicly archived (`https://github.com/nekrut/frameshift`).
+* **Strengths:** All `Jupyter` notebooks, `Galaxy` workflows, sequence alignments, and `ObservableHQ` interactive figures (`https://observablehq.com/@spond/frameshift-selection`) are publicly archived (`[GITHUB_REPO_REDACTED]`).
 * **Deficiencies:** The typographical/numerical errors in Table 1 (`13,43`) and Table 2 (`Codon 1` $\alpha=0, \beta=0, \omega=4.286$ vs. purifying selection text; `Codon 31` `13,352` vs. `13,532`) must be corrected.

@@ -29,4 +29,4 @@ The software architecture is clean, modular, and well-suited to asynchronous lon
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open-Source Availability:** The full web application (`https://github.com/veg/datamonkey-js`) and standalone visualization engine (`https://github.com/veg/hyphy-vision`) are publicly available under open-source licenses alongside the live public web services (`http://www.datamonkey.org` and `http://vision.hyphy.org`).
+* **Open-Source Availability:** The full web application (`[GITHUB_REPO_REDACTED]`) and standalone visualization engine (`[GITHUB_REPO_REDACTED]`) are publicly available under open-source licenses alongside the live public web services (`http://www.datamonkey.org` and `http://vision.hyphy.org`).

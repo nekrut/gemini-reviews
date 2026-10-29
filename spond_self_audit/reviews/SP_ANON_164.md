@@ -29,5 +29,5 @@
 - **Claim 3: `NREV12` only yields statistically significant improvements in tree accuracy over `GTR` at `DNR > 8`, which exceeds all empirical viral datasets (`[Methodologically Flawed]`).** This comparison rests on an unnormalized additive rate parameterization in `Table 5` that is not commensurate with the normalized `DNR` metric reported for empirical alignments.
 
 ### 4. Reproducibility & Data Completeness
-- **Code & Model Availability:** The `NucleotideNonREV` `HyPhy` analysis module is publicly available on GitHub and Datamonkey (`https://github.com/veg/hyphy-analyses/tree/master/NucleotideNonREV`), and dataset metadata are referenced in Supplementary File 1.
+- **Code & Model Availability:** The `NucleotideNonREV` `HyPhy` analysis module is publicly available on GitHub and Datamonkey (`[GITHUB_REPO_REDACTED]`), and dataset metadata are referenced in Supplementary File 1.
 - **Data Integrity:** `Tables 1–4` in the manuscript require thorough auditing against the raw `HyPhy` JSON outputs to fix the missing 13 ssRNA rows in `Table 4`, the duplicated `CMV RNA3`/`AMS` row, the `MSV` likelihood/AIC inversion, and the `HMAV_B` (`10.890`) discrepancy.

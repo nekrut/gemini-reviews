@@ -1,3 +1,4 @@
+from pathlib import Path
 import os
 import json
 import random
@@ -6,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from fetch_pmc_html import parse_pmc_html
 from build_deidentified import scrub_manuscript
 
-with open("/Users/sergei/Projects/lit-estimation/cohorts_200.json") as f:
+with open(str(Path(__file__).resolve().parent.parent / "cohorts_200.json") as f:
     cohorts = json.load(f)
 
 with open("/tmp/anon_map_ab.json") as f:
@@ -23,7 +24,7 @@ print(f"New papers to fetch & de-identify: {len(new_papers)}")
 def fetch_one(meta):
     cid = meta["cohort_id"]
     pmcid = meta["pmcid"]
-    out_path = f"/Users/sergei/Projects/lit-estimation/papers/{cid}_{pmcid}.md"
+    out_path = fstr(Path(__file__).resolve().parent.parent / "papers/{cid}_{pmcid}.md"
     if os.path.exists(out_path) and os.path.getsize(out_path) > 5500:
         return (cid, pmcid, "cached", os.path.getsize(out_path))
     

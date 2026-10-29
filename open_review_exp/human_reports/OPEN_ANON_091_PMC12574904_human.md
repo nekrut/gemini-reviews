@@ -152,7 +152,7 @@ Two of the original referees re-reviewed your revision: one of them approves (Re
 
 Reviewer 1: “Explain that each entry of the gene expression matrix represents the scRNAseq result, where the original value x is replaced by log(1+x). Otherwise, readers might wonder how 0 is handled.”
 
-Reviewer 1: “PIDC method has a GitHub page: https://github.com/Tchanders/network_inference_tutorials . What do you mean by “this package is no longer available”?”
+Reviewer 1: “PIDC method has a GitHub page: [GITHUB_REPO_REDACTED] . What do you mean by “this package is no longer available”?”
 
 Reviewer 4: Comments 1, 2, 6.
 
@@ -200,7 +200,7 @@ Development is impossible if the dynamics of gene expression (not GRN) is at sta
 
 Explain that each entry of the gene expression matrix represents the scRNAseq result, where the original value x is replaced by log(1+x). Otherwise, readers might wonder how 0 is handled.
 
-PIDC method has a GitHub page: https://github.com/Tchanders/network_inference_tutorials . What do you mean by “this package is no longer available”?
+PIDC method has a GitHub page: [GITHUB_REPO_REDACTED] . What do you mean by “this package is no longer available”?
 
 Reviewer #2: The authors have addressed my concerns and I have no further comments.
 
@@ -319,6 +319,6 @@ Submitted filename: response_to_reviewers_dazzle.pdf
 
 ## Data Availability Statement
 
-The source code for this project (software + preprocessing scripts) is available at https://github.com/TuftsBCB/dazzle . The processed data used in this study is deposited at https://zenodo.org/records/15762315 . The BEELINE benchmark data was obtained from the authors of DeepSEM but could be regenerated using the provided data and code from BEELINE ( https://github.com/Murali-group/Beeline ). The actual gene expression data files used in BEELINE came from from GEO datasets with the following accession numbers: GSE81252 (hHEP), GSE75748 (hESC), GSE98664 (mESC), GSE48968 (mDC), and GSE81682 (mHSC). The Hammond microglia data is obtained from NCBI’s GEO database under accession number GSE121654 ( https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121654 ).
+The source code for this project (software + preprocessing scripts) is available at [GITHUB_REPO_REDACTED] . The processed data used in this study is deposited at https://zenodo.org/records/15762315 . The BEELINE benchmark data was obtained from the authors of DeepSEM but could be regenerated using the provided data and code from BEELINE ( [GITHUB_REPO_REDACTED] ). The actual gene expression data files used in BEELINE came from from GEO datasets with the following accession numbers: GSE81252 (hHEP), GSE75748 (hESC), GSE98664 (mESC), GSE48968 (mDC), and GSE81682 (mHSC). The Hammond microglia data is obtained from NCBI’s GEO database under accession number GSE121654 ( https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121654 ).
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

@@ -47,4 +47,4 @@ The study is well-executed, appropriately scoped, and transparently reproducible
 ---
 
 ## 4. Reproducibility & Data Completeness
-* **Code & Data Archival:** Exemplary. All 419 alignments, inferred trees, `LEISR` rate outputs, and analysis scripts are permanently archived on GitHub (`github.com/sjspielman/aa_rate_models`) and Zenodo (`doi:10.5281/zenodo.1297092`), and `LEISR` is distributed in open-source `HyPhy` ($\ge$ v2.3.8).
+* **Code & Data Archival:** Exemplary. All 419 alignments, inferred trees, `LEISR` rate outputs, and analysis scripts are permanently archived on GitHub (`[GITHUB_REPO_REDACTED]`) and Zenodo (`doi:10.5281/zenodo.1297092`), and `LEISR` is distributed in open-source `HyPhy` ($\ge$ v2.3.8).

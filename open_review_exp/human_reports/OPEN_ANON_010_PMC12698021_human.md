@@ -293,6 +293,6 @@ Submitted filename: Response_to_Reviewers_comments_auresp_3.docx
 
 ## Data Availability Statement
 
-All datasets and scripts for analysis are available through GitHub ( https://github.com/deanpettinga/strep_manuscript ) and Zenodo ( https://doi.org/10.5281/zenodo.17554086 ). All the 16S rRNA short- and long-read data can be accessed through NCBI BioProject PRJNA655744. Raw metabolomics data is available through MassIVE ( https://massive.ucsd.edu/ ) under accession: MSV000093246. Raw genomics data is also available through the JGI Genome Portal with the Proposal ID 502952.
+All datasets and scripts for analysis are available through GitHub ( [GITHUB_REPO_REDACTED] ) and Zenodo ( https://doi.org/10.5281/zenodo.17554086 ). All the 16S rRNA short- and long-read data can be accessed through NCBI BioProject PRJNA655744. Raw metabolomics data is available through MassIVE ( https://massive.ucsd.edu/ ) under accession: MSV000093246. Raw genomics data is also available through the JGI Genome Portal with the Proposal ID 502952.
 
 Articles from PLOS Biology are provided here courtesy of PLOS

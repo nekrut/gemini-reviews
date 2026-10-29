@@ -1,0 +1,65 @@
+# Forensic Review of FEXP_ANON_041
+
+**Manuscript ID:** `FEXP_ANON_041`  
+**Overall Score:** **2.4 / 10.0** (Fundamentally Invalid) | **Scientific Core Score:** **1.8 / 8.0**  
+* **Score Breakdown:** Rigor: 0.6/3.5 | Claims: 0.5/2.5 | Biology: 0.7/2.0 | Reproducibility: 0.6/2.0
+
+---
+
+## 1. Blinded Metadata Perception
+
+* **Perceived Subfield:** Clinical Bioinformatics & Microbiome Machine Learning / Pancreatic Cancer Liquid Biopsy Biomarkers.
+* **Study Design:** Case-control machine learning classification study using blood-derived bacterial extracellular vesicle (EV) 16S rRNA amplicon profiles from 38 pancreatic cancer (PC) patients and 51–52 propensity-score-matched healthy controls.
+* **Primary Methods:** Greengenes (`gg_13_5_99`) + UCLUST OTU picking, centered log-ratio (CLR) transformation, propensity score matching (PSM) on age and sex, 1:1 train/test split ($N \approx 45$ each) with 2-fold cross-validation ($N \approx 22$/fold) on the Model Development (MD) set, LASSO and forward-backward/exhaustive stepwise feature selection, and Logistic Regression (LR), Random Forest (RF), Support Vector Machine (SVM), and 3- to 4-layer Deep Neural Network (DNN) classifiers.
+
+---
+
+## 2. Executive Summary & Editorial Verdict
+
+This study re-analyzes blood serum extracellular vesicle (EV) 16S rRNA sequencing data from 38 pancreatic cancer (PC) patients and 51–52 propensity-score-matched healthy controls to build diagnostic machine learning classifiers (LR, RF, SVM, and DNN) using phylum- and genus-level microbial features selected via LASSO and two stepwise selection heuristics. Partitioning the cohort 1:1 into a ~45-sample Model Development (MD) set and a ~45-sample test set, the authors highlight a 3-phylum DNN model (`Verrucomicrobia`, `Actinobacteria`, `Proteobacteria`; test $\text{AUC} = 0.959$) and an 11-genus DNN model (test $\text{AUC} = 0.961$) as top diagnostic predictors for early pancreatic cancer detection.
+
+**Editorial Verdict: Reject (Fundamentally Invalid).** The study suffers from a fatal case-control hospital confounding flaw, severe small-sample machine learning overfitting and test-set selection leakage, and pervasive low-biomass 16S reagent contamination ("kitome"): (1) all 38 PC cases were recruited from a single hospital (Seoul National University Hospital), whereas all healthy controls were obtained from two different medical centers (Boramae Medical Center and Inje University Haeundae Paik Hospital), completely confounding disease status with hospital collection site, phlebotomy tubes, and sample processing batches; (2) training 296-feature LASSO/exhaustive-search wrappers and 3- to 4-layer Deep Neural Networks on 2-fold CV splits of just 22 samples per fold results in complete memorization of the training data ($\text{AUC}_{\text{MD}} = 1.000$ across nearly every model in Tables 1–4), and the authors select their "best" model in the Abstract by peeking at the held-out test set (choosing the phylum DNN with test $\text{AUC} = 0.959$ even though its MD cross-validation $\text{AUC}$ was the lowest of all four classifiers at $0.855$); and (3) many selected blood EV "biomarkers" (*Propionibacterium*, *Corynebacterium*, *Pseudomonas*, *Diaphorobacter*, *Burkholderia-Paraburkholderia*, *Deinococcus-Thermus*, *Cyanobacteria*, *Acidobacteria*, *Euryarchaeota*) are textbook skin/phlebotomy and DNA extraction kit contaminants.
+
+### Specific Conclusions and Assessment of Support
+
+* **Propensity score matching balances age and sex distributions between the 38 PC patients and 52 healthy controls: [Well Supported].**  
+  Chi-square ($p = 0.35$) and Wilcoxon ($p = 0.51$) tests confirm that age and sex do not differ significantly between cases and controls after PSM filtering, although the sample count is inconsistently reported as 51 controls in the Abstract (line 5) versus 52 controls in Materials and Methods and Results (lines 38, 72).
+* **LASSO and stepwise selection on blood EV 16S profiles identify genuine pancreatic cancer-associated microbial phyla and genera: [Methodologically Flawed].**  
+  Because 100% of PC patients came from Seoul National University Hospital while 100% of healthy controls came from Boramae Medical Center and Inje University Haeundae Paik Hospital (Section "Study population", line 32), case-control status is 100% colinear with collection center. In low-biomass blood 16S sequencing without negative extraction controls, skin/venipuncture commensals (*Propionibacterium*, *Corynebacterium*) and reagent/water contaminants (*Pseudomonas*, *Diaphorobacter*, *Burkholderia-Paraburkholderia*, *Deinococcus-Thermus*, *Cyanobacteria*, *Chloroflexi*) reflect center-specific collection and kit batch effects rather than tumor biology. Furthermore, surgical resection patients from 2009–2015 represent diagnosed resectable cases, not a prospective pre-diagnostic early-screening cohort.
+* **Deep Neural Network (DNN) models using 3 phyla ($\text{AUC} = 0.959$) and 11 genera ($\text{AUC} = 0.961$) outperform LR, RF, and SVM for PC diagnosis: [Methodologically Flawed].**  
+  First, fitting a 3- to 4-layer DNN on $N = 45$ MD samples ($N \approx 22$ per 2-fold CV split) is severely overparameterized. Second, selecting the "optimal" classifier in the Abstract based on test-set AUC violates test-set independence: in Table 4, for Phylum `Stepwise1 (3)`, DNN had the *worst* cross-validation performance on the MD set ($\text{AUC}_{\text{MD}} = 0.855$ vs. $0.990$ for LR, $1.000$ for RF, and $0.984$ for SVM), yet was crowned the winner based on $\text{AUC}_{\text{ts}} = 0.959$. Third, Table 4 itself contradicts the Abstract's claim that these two models achieved the highest test AUCs: in Table 4, Phylum `Single (2) + LR` achieved $\text{AUC}_{\text{ts}} = 0.964$ ($> 0.959$), Genus `Single (7) + DNN` achieved $\text{AUC}_{\text{ts}} = 0.988$, and Genus `Whole marker (296) + DNN` achieved $\text{AUC}_{\text{ts}} = 0.998$ ($> 0.961$).
+
+---
+
+## 3. Forensic Defect Inventory
+
+### 1. Complete Confounding Between Disease Status and Hospital Collection Site / Kitome Contamination (Pillars 2, 5 & 6)
+* **WHY:** Section "Study population" (line 32) states that all PC patients were obtained from Seoul National University Hospital, whereas healthy controls were obtained from Boramae Medical Center and Inje University Haeundae Paik Hospital. Blood serum EV 16S sequencing is an ultra-low-biomass assay highly susceptible to phlebotomy skin flora, vacutainer tube background, and extraction kit reagent DNA ("kitome"). Nearly half of the selected LASSO/stepwise taxa—including phyla *Deinococcus-Thermus*, *Cyanobacteria*, *Acidobacteria*, *Armatimonadetes*, *Absconditabacteria (SR1)*, and *Euryarchaeota* (Table 1A) and genera *Propionibacterium*, *Corynebacterium*, *Pseudomonas*, *Diaphorobacter*, and *Burkholderia-Paraburkholderia* (Tables 1B and 2B)—are well-documented reagent, water, or skin contaminants. Without controls collected at the same hospital under identical blood-draw protocols and sequenced alongside negative reagent blanks, batch effects masquerade as near-perfect disease classification ($\text{AUC} > 0.95$).
+* **WHAT:** Explicitly acknowledge the hospital-site confounding and reagent-contaminant taxa as a primary limitation, apply bioinformatic contaminant filtering, and refrain from claiming clinical diagnostic utility without an external multi-center validation cohort where cases and controls are matched within the same hospital.
+* **HOW:** Cross-reference all 296 genera against established low-biomass reagent contaminant blacklists (e.g., Salter et al. 2014; Eisenhofer et al. 2019), remove environmental/extremophile phyla (*Deinococcus-Thermus*, *Cyanobacteria*, *Chloroflexi*, *Acidobacteria*) and water/kit genera (*Burkholderia-Paraburkholderia*, *Pseudomonas*, *Diaphorobacter*), and re-evaluate model performance.
+
+### 2. Test-Set Leakage in Model Selection and Severe Overfitting in 2-Fold CV ($N \approx 22$/Fold) (Pillars 3, 4 & 5)
+* **WHY:** With $N = 90$ total subjects split 1:1 into MD ($N=45$) and test ($N=45$), 2-fold CV on the MD set trains models on only 22–23 samples per fold. Screening 296 genera via LASSO or exhaustive subset search (`stepwise2`) and grid-searching hyperparameters for RF, SVM, and 4-layer DNNs on 22 samples yields $\text{AUC}_{\text{tr}} = 1.000$ and $\text{AUC}_{\text{MD}} = 1.000$ across almost all configurations (Tables 1–4). Worse, the authors evaluate all 24 combinations of (feature set $\times$ classifier) on the held-out test set (Table 4) and post-hoc highlight the combinations with high $\text{AUC}_{\text{ts}}$ (`Stepwise1 + DNN` = 0.959 and `LASSO + DNN` = 0.961), even when `Stepwise1 + DNN` had the lowest $\text{AUC}_{\text{MD}}$ (0.855) on the training/validation split and other rows in Table 4 (`Single + LR` = 0.964, `Single + DNN` = 0.988, `Whole marker + DNN` = 0.998) had even higher test AUCs.
+* **WHAT:** Eliminate test-set peeking when selecting the final model, replace 1:1 / 2-fold CV with nested stratified 10-fold or repeated 5-fold cross-validation, and report 95% confidence intervals (DeLong's method or bootstrap) for all AUCs.
+* **HOW:** Lock a single pre-specified model per taxonomic level strictly using the maximum inner-loop CV $\text{AUC}_{\text{MD}}$ (which in Table 4 would select `RF` [$\text{AUC}_{\text{MD}} = 1.000$, $\text{AUC}_{\text{ts}} = 0.891$] or `LR` [$\text{AUC}_{\text{MD}} = 0.990$, $\text{AUC}_{\text{ts}} = 0.934$] for Phylum `Stepwise1`, not `DNN`), and compute DeLong 95% CIs on the 45-sample test set to show that differences between $\text{AUC} = 0.934$ and $0.959$ on $N=45$ are statistically indistinguishable ($P > 0.40$).
+
+### 3. Compositional CLR Transformation Prior to Train/Test Split and Technical/Editorial Errors (Pillars 2 & 7)
+* **WHY:**
+  1. In Section "Study population" (line 34), the OTU table was filtered and CLR-transformed across the entire cohort before splitting into MD and test sets, and in line 62 the authors state "the data were standardized" without specifying whether mean/SD scaling parameters were computed exclusively on the training fold.
+  2. Sample size is reported as 38 PC and **51** controls in the Abstract (line 5) vs. 38 PC and **52** controls in the text (lines 38, 72).
+  3. Line 14 duplicates the title of Reference 13 mid-sentence (*"...by MiSeq sequencing Gut microbial profile analysis by MiSeq sequencing of pancreatic carcinoma patients in China 13"*), and lines 164 and 196 miscite Reference 13 (a Chinese fecal study) instead of Reference 20 (the authors' own prior serum EV study).
+  4. Line 64 reports an non-existent R version: *"R version 1.2.5 on Window 10"* (confusing RStudio v1.2.50xx with R).
+* **WHAT & HOW:** Compute standardization parameters strictly within each training fold, reconcile the control count (51 vs. 52), fix the Reference 13 vs. 20 citation error and duplicated sentence text on line 14, report the actual R version (e.g., R 4.0.x) and `e1071`/`kernlab` package version used for SVM, and deposit the anonymized 90-sample OTU count table and analysis scripts in a public repository (16S bacterial OTU counts contain no human genetic identifiers).
+
+---
+
+## 4. Quantitative Rubric Scoring
+
+| Rubric Dimension | Score | Max | Forensic Justification |
+| :--- | :---: | :---: | :--- |
+| **1. Methodological & Statistical Rigor** | **0.6** | **3.5** | Severe overfitting from training 4-layer DNNs and exhaustive wrapper searches on 2-fold CV splits of $N \approx 22$ samples ($\text{AUC}_{\text{MD}} = 1.000$), post-hoc selection of the "best" model by peeking at test-set AUC despite inferior $\text{AUC}_{\text{MD}}$, and absence of AUC confidence intervals or permutation tests. |
+| **2. Claim-to-Evidence Alignment** | **0.5** | **2.5** | Headline claims that DNN models with 3 phyla ($\text{AUC}=0.959$) and 11 genera ($\text{AUC}=0.961$) outperform other models and provide early PC diagnostic biomarkers are contradicted by Table 4 itself and invalidated by case-control hospital confounding. |
+| **3. Data Integrity & Biological Plausibility** | **0.7** | **2.0** | Complete confounding between disease status and hospital of origin (SNUH for cases vs. Boramae/Haeundae Paik for controls) in a low-biomass blood 16S study without negative blanks; selected markers are heavily enriched for skin and extraction-kit contaminants (*Propionibacterium*, *Corynebacterium*, *Pseudomonas*, *Diaphorobacter*, *Burkholderia*, *Deinococcus-Thermus*, *Cyanobacteria*). |
+| **4. Reproducibility & Data Integrity** | **0.6** | **2.0** | Bacterial 16S OTU table and code are withheld without valid justification (bacterial 16S counts carry no human privacy risk); text contains conflicting sample sizes (51 vs. 52 controls), miscited references ([13] vs. [20]), pasted reference title text (line 14), and an impossible software version ("R version 1.2.5"). |
+| **Scientific Core Score** | **1.8** | **8.0** | Sum of Rigor + Claims + Biology (`0.6 + 0.5 + 0.7`). |
+| **Total Composite Score** | **2.4** | **10.0** | **Fundamentally Invalid** (`0.6 + 0.5 + 0.7 + 0.6`). |

@@ -1,0 +1,69 @@
+# Forensic Review of FEXP_ANON_034
+
+**Manuscript ID:** `FEXP_ANON_034`  
+**Overall Score:** **5.8 / 10.0** (Mixed / Salvageable) | **Scientific Core Score:** **4.2 / 8.0**  
+* **Score Breakdown:** Rigor: 1.7/3.5 | Claims: 1.2/2.5 | Biology: 1.3/2.0 | Reproducibility: 1.6/2.0
+
+---
+
+## 1. Blinded Metadata Perception
+
+* **Perceived Subfield:** Comparative & Evolutionary Genomics / Metazoan A-to-I RNA Editing (*Adar* auto-recoding in Hymenoptera).
+* **Study Design:** Comparative genomic analysis of the *Adar* coding sequence across 104 Hymenoptera genomes and 3 Blattodea outgroups, paired with re-analysis of public RNA-seq datasets from *Apis mellifera* (12 worker brains across 2 castes, 3 unreplicated drone tissues), *Acromyrmex echinatior* (3 unreplicated caste brains), and *Bombus terrestris* (published editome).
+* **Primary Methods:** Codon-aware CDS alignment (MAFFT G-INS-i + TranslatorX), phylogenetic mapping on a 104-species Hymenoptera tree, intragenic baseline comparison against 12 unedited `ATA` codons and 630 unedited adenosines in *Adar*, RNA-seq read mapping (BWA + IGV), RPKM quantification, and pre-mRNA secondary structure prediction (RNAstructure).
+
+---
+
+## 2. Executive Summary & Editorial Verdict
+
+This manuscript investigates the evolutionary maintenance and transcriptomic regulation of an A-to-I auto-recoding site (Ile > Met, `ATA` $\to$ `ATG`, codon #482 in *Apis mellifera*) in the single-copy insect *Adar* gene across 104 Hymenoptera genomes. The authors distinguish between the "G-better" hypothesis (which favors hardwired `ATA` $\to$ `ATG` genomic fixation) and the "flexible RNA editing" hypothesis (which predicts selective avoidance of both `ATA` $\to$ `ATG` and `ATA` $\to$ `ATC`/`ATT` uneditable Ile substitutions). Mapping codon states onto the Hymenoptera phylogeny, they identify a 57-species clade (`node1`, containing 42 eusocial species) where no species has acquired an `ATG` or uneditable `ATC`/`ATT` codon at site #482, whereas 12 unedited `ATA` codons in the same gene accumulate frequent transitions. They also show caste- and tissue-associated differences in editing levels in *A. mellifera* and *A. echinatior*, a positive correlation between *Adar* expression and auto-editing in *A. mellifera*, and absence of the editable `ATA` codon in eusocial termites (Blattodea).
+
+**Editorial Verdict: Major Revision (Mixed / Salvageable).** The conceptual framework—using three-fold degenerate Ile codons (`ATA` vs. `ATC`/`ATT`) and intragenic unedited `ATA` controls to separate selection for editing flexibility from amino acid conservation—is creative and biologically well-motivated. However, the statistical implementation suffers from three major methodological flaws that can and should be fixed via re-analysis: (1) substitution rates in `node1` are quantified by counting raw numbers of extant tip species (`0/57`) rather than phylogenetic branch transitions, resulting in severe phylogenetic pseudoreplication; (2) the claim that site #482 "avoids genomic substitutions to Met or to uneditable Ile codons, but does not avoid mutations to other unrelated amino acids" is an artifact of low statistical power (small expected counts for radical amino acid changes across the 12 control codons), contradicted by the text's own statement that all 57 species in `node1` retain `ATA`; and (3) transcriptomic tests outside the *A. mellifera* nurse-vs-forager comparison rely on $n=1$ libraries or invalidly pool 3 ant castes as "biological replicates" against 12 honeybee worker brains.
+
+### Specific Conclusions and Assessment of Support
+
+* **The editable `ATA` (Ile) codon at the *Adar* Ile > Met auto-recoding site is conserved across a 57-species Hymenoptera clade (`node1`) encompassing all 42 sampled eusocial hymenopterans, and lies within a stable pre-mRNA hairpin: [Well Supported].**  
+  The 104-species CDS alignment (`Additional file 2`) and RNA folding analysis clearly establish deep conservation of the `ATA` codon across `node1` and its local dsRNA structural context in *A. mellifera*, while also demonstrating that eusocial Blattodea (termites) carry an uneditable `ATT` codon at the orthologous site.
+* **In `node1`, the *Adar* Ile > Met site selectively suppresses `ATA > ATG` and `ATA > unIle` transitions while NOT suppressing mutations to other unrelated amino acids or gaps: [Methodologically Flawed].**  
+  First, counting how many of the 57 extant species differ from `ATA` treats shared ancestral mutations along the tree as independent events. Second, there is an internal contradiction between Section "Conservation of Adar Ile > Met..." (line 59: *"there is a monophyletic branch with all species having ATA codon, and we defined its ancestral node as node1"*; see also line 150) and Fig. 3B / Abstract (line 9: *"the editable Ile codon avoids genomic substitutions to Met or to uneditable Ile codons, but does not avoid mutations to other unrelated amino acids"*). Because the expected frequency of radical `ATA > other AA` and `ATA > gap` substitutions at the 12 control `ATA` codons within `node1` is already very close to zero, failing to reach the $2\times\text{SE}$ threshold at site #482 reflects a floor effect (zero statistical power to detect suppression below a near-zero baseline), not selective tolerance of radical amino acid mutations.
+* **Ile > Met auto-editing levels are significantly condition-, tissue-, and caste-specific across eusocial hymenopterans: [Moderately Supported].**  
+  Differential editing between *A. mellifera* nurses ($n=6$) and foragers ($n=6$) in brain tissue is statistically supported by a replicated Wilcoxon rank-sum test, as is the positive correlation with *Adar* expression (Fig. 6A). However, the drone tissue series (1 head, 1 thorax, 1 abdomen) and leaf-cutting ant caste series (1 gyne, 1 large worker, 1 small worker) have $n=1$ per condition; pooling the 3 distinct ant caste libraries as "biological replicates" to run a 3-vs-12 Wilcoxon test against honeybee brains ($P = 0.0057$, line 71) conflates 160 Myr of species divergence and caste heterogeneity with biological replication.
+* **Genome-wide recoding sites in *Bombus terrestris* are adaptively enriched for `Ser > Gly` and `Ile > Met` transitions due to selection for uneditable-to-editable codon transitions: [Fragile].**  
+  In the Discussion (line 145), the authors compare observed proportions of `Ser > Gly` (27/164 = 16.5%) and `Ile > Met` (8/164 = 4.9%) recoding sites in bumblebee against all 6,020,316 CDS adenosines without controlling for ADAR's strong local 5'/3' nearest-neighbor sequence motif preference (e.g., 5'-UAG-3' / 5'-AAG-3' enrichment), which intrinsically favors `AGC`/`AGU` (Ser) and `AUA` (Ile) triplets independently of natural selection on editability.
+
+---
+
+## 3. Forensic Defect Inventory
+
+### 1. Phylogenetic Pseudoreplication from Counting Extant Tips Instead of Independent Branch Substitutions (Pillars 3 & 4)
+* **WHY:** In Sections "Adar Ile > Met site in eusocial hymenopterans is evolutionarily constrained" and "Materials and methods" (lines 86, 183), substitution rates for site #482 and the 12 control `ATA` codons are defined by counting how many of the 57 tip species in `node1` carry a derived state. A single mutation occurring near the base of a 15-species subclade counts as 15 "occurrences," violating phylogenetic independence and inflating variance and false-positive rates when comparing a single focal site against the mean $\pm$ SE of 12 control codons.
+* **WHAT:** Replace tip-state counts in Figs. 3B and 5B with phylogenetically independent substitution counts (or maximum-likelihood codon transition rates) along the branches of `node1` and the full 104-species tree.
+* **HOW:** Perform ancestral state reconstruction (joint or marginal ML in IQ-TREE/HyPhy or stochastic character mapping) on the 104-species tree for site #482 and all 12 control `ATA` codons, count the number of independent branch transitions (`ATA -> ATG`, `ATA -> ATC/ATT`, `ATA -> other AA`) normalized by total `ATA` branch length, and compute an exact empirical or Poisson rate test p-value.
+
+### 2. Floor-Effect Fallacy in Claiming Non-Suppression of Mutations to Other Amino Acids (Pillars 1, 3 & 4)
+* **WHY:** The Abstract (line 9), Results (line 86), and Conclusions (line 160) prominently claim that the Ile > Met site suppresses `ATA > ATG` and `ATA > unIle` transitions *"but does not avoid mutations to other unrelated amino acids."* First, clarify the discrepancy between line 59/150 (which state *all* 57 species in `node1` have `ATA`) and Fig. 2/3B (whether any species in `node1` has a non-`ATA` codon). Second, `ATA >ATG` and `ATA > ATC/ATT` are single-nucleotide transitions/transversions at the 3rd codon position (high baseline mutation rate), whereas `ATA > other AA` requires 1st- or 2nd-position nonsynonymous mutations (low baseline rate) and `ATA > gap` requires an indel. Because the expected count of `ATA > other AA` and `ATA > gap` across the 12 control codons in `node1` is already near zero (Fig. 3B), an observed count of 0 cannot fall $2\times\text{SE}$ below the mean. Treating this lack of statistical power as positive evidence that the site "does not avoid mutations to other unrelated amino acids" is invalid.
+* **WHAT:** Remove the claim that the Ile > Met site does not avoid mutations to other amino acids, and normalize mutation categories by their underlying nucleotide mutation opportunity (3rd-position synonymous/conservative vs. 1st/2nd-position nonsynonymous).
+* **HOW:** Explicitly state in the Abstract, Results, and Conclusions that 1st/2nd-position changes (`ATA > other AA`) and indels occur too rarely across control `ATA` codons within `node1` to evaluate selective suppression, whereas 3rd-position transitions (`ATA > ATG` and `ATA > ATC/ATT`) have high baseline rates and show clear selective constraint.
+
+### 3. Invalid Pooling of Cross-Species / Cross-Caste Samples in Wilcoxon Tests (Pillars 4 & 5)
+* **WHY:** In Section "Remarkable condition-specificity..." (line 71), the authors acknowledge that single libraries without biological replicates cannot be formally tested, yet proceed to run a 1-vs-12 Wilcoxon test ($P = 0.07$) and then pool 3 different *Acromyrmex echinatior* caste brain samples (1 gyne, 1 large worker, 1 small worker) as "biological replicates" against 12 *Apis mellifera* worker brains ($P = 0.0057$). Pooling distinct castes of a different family (Formicidae) to manufacture replication against Apidae is statistically invalid.
+* **WHAT:** Delete the 1-vs-12 and 3-vs-12 cross-species Wilcoxon tests from the Results text.
+* **HOW:** Restrict formal hypothesis testing (Wilcoxon test and Pearson correlation) to the replicated *A. mellifera* nurse ($n=6$) vs. forager ($n=6$) comparison, and present the unreplicated *A. mellifera* drone tissues and *A. echinatior* castes strictly as descriptive point estimates with binomial 95% confidence intervals derived from read coverage depth at codon #482.
+
+### 4. Uncontrolled ADAR Sequence Motif Bias in the Bumblebee Editome Enrichment Test (Pillars 3 & 5)
+* **WHY:** In the Discussion (line 145), Fisher's exact tests comparing `Ser > Gly` (16.5% vs 2.9%) and `Ile > Met` (4.9% vs 2.2%) against all CDS adenosines ignore the well-known ADAR2/Adar nearest-neighbor motif preference (5' uridine/adenosine depletion of 5' G, enrichment of 3' G). Because `ATA` followed by `G` forms an optimal `UAG`/`AAG`-like context and `AGC`/`AGU` contains a 3' G, motif bias alone strongly enriches these codon changes among edited sites.
+* **WHAT:** Control for local tri-nucleotide motif composition when testing whether `Ser > Gly` and `Ile > Met` recoding events are enriched in the bumblebee editome.
+* **HOW:** Re-compute the expected null proportions of `Ser > Gly` and `Ile > Met` across the *B. terrestris* CDS by weighting candidate adenosines by their empirical 5'/3' flanking base frequencies observed at synonymous editing sites.
+
+---
+
+## 4. Quantitative Rubric Scoring
+
+| Rubric Dimension | Score | Max | Forensic Justification |
+| :--- | :---: | :---: | :--- |
+| **1. Methodological & Statistical Rigor** | **1.7** | **3.5** | Clever intragenic control design using unedited `ATA` codons and 3rd-position adenosines, but compromised by tip-counting pseudoreplication across `node1`, conflating low power on rare 1st/2nd-position changes with lack of constraint, and running a 3-vs-12 Wilcoxon test pooling 3 ant castes against 12 honeybee brains. |
+| **2. Claim-to-Evidence Alignment** | **1.2** | **2.5** | Headline claim of selective maintenance of `ATA` editability at site #482 is supported, but the Abstract/Conclusion claim that the site "does not avoid mutations to other unrelated amino acids" is a statistical floor-effect artifact, and links to eusociality are confounded by shared `node1` ancestry (which also includes 15 non-social species with `ATA`). |
+| **3. Data Integrity & Biological Plausibility** | **1.3** | **2.0** | High-quality public genomic and transcriptomic datasets with transparent inclusion of the negative termite (Blattodea) outgroup; however, several transcriptomic conditions have $n=1$ without read-depth CIs, and ADAR motif bias is not controlled in the horizontal editome enrichment analysis. |
+| **4. Reproducibility & Data Integrity** | **1.6** | **2.0** | All NCBI/GSA accessions and software versions (MAFFT v7.310, TranslatorX v1.1, BWA v0.7.17, R v3.6.3) are fully documented and the 104-species *Adar* alignment is provided in Supplementary Data 1; minor internal inconsistency between text (all 57 `node1` species have `ATA`) and Fig. 3B (`ATA > other AAs/gap`). |
+| **Scientific Core Score** | **4.2** | **8.0** | Sum of Rigor + Claims + Biology (`1.7 + 1.2 + 1.3`). |
+| **Total Composite Score** | **5.8** | **10.0** | **Mixed / Salvageable** (`1.7 + 1.2 + 1.3 + 1.6`). |

@@ -255,6 +255,6 @@ Submitted filename: Response to reviewers.pdf
 
 ## Data Availability Statement
 
-All data needed to evaluate the conclusions in the paper are present in the paper and/or the Supplementary Materials. The RNA-seq datasets have been submitted in Gene Expression Omnibus (GEO) with accession number GSE283665. All the scripts for running the DGE and pathway analysis are publicly available at GitHUB ( https://github.com/IRSINGH27/RNA-Seq-Eukaryote/tree/main ) under the MIT license.
+All data needed to evaluate the conclusions in the paper are present in the paper and/or the Supplementary Materials. The RNA-seq datasets have been submitted in Gene Expression Omnibus (GEO) with accession number GSE283665. All the scripts for running the DGE and pathway analysis are publicly available at GitHUB ( [GITHUB_REPO_REDACTED] ) under the MIT license.
 
 Articles from PLOS Pathogens are provided here courtesy of PLOS

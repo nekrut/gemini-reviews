@@ -35,4 +35,4 @@ This multi-modal study investigates the evolutionary, anatomical, electrophysiol
 
 ## 4. Reproducibility & Data Completeness
 
-* **Data & Code Availability:** Raw and processed `ATAC-seq` datasets across all *R. aegyptiacus* brain and somatic tissues are deposited in NCBI GEO (`GSE189316` / `BioProject PRJNA783703`), and the `RERconverge`, `HyPhy`, `TACIT` CNN models, and electrophysiology analysis pipelines are thoroughly documented with public repository links.
+* **Data & Code Availability:** Raw and processed `ATAC-seq` datasets across all *R. aegyptiacus* brain and somatic tissues are deposited in NCBI GEO (`[ACCESSION_REDACTED]` in scrubbed input), and the `RERconverge`, `HyPhy`, `TACIT` CNN models, and electrophysiology analysis pipelines are thoroughly documented with public repository links.

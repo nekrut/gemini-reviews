@@ -318,6 +318,6 @@ Submitted filename: 02_Second_PointbyPointReplytoReviewers_v8.pdf
 
 ## Data Availability Statement
 
-The true positive metagenome-assembled genomes (MAGs) (4638 out of 5217) obtained in this study are available at the National Center for Biotechnology Information (NCBI) repository with the sample accession numbers SAMN34004744 - SAMN34012094 (BioProject PRJNA950613). The complete set of MAGs (including the false positives) and simulated metagenomic libraries are available on the long-term data archive at the Helmholtz Center for Environmental Research – UFZ data center using the link ( https://www.ufz.de/record/dmp/archive/13476 ). All the code used during data analysis is available at https://github.com/mdsufz/mockc_analysis
+The true positive metagenome-assembled genomes (MAGs) (4638 out of 5217) obtained in this study are available at the National Center for Biotechnology Information (NCBI) repository with the sample accession numbers SAMN34004744 - SAMN34012094 (BioProject PRJNA950613). The complete set of MAGs (including the false positives) and simulated metagenomic libraries are available on the long-term data archive at the Helmholtz Center for Environmental Research – UFZ data center using the link ( https://www.ufz.de/record/dmp/archive/13476 ). All the code used during data analysis is available at [GITHUB_REPO_REDACTED]
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

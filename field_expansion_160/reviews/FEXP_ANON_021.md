@@ -1,0 +1,66 @@
+# Review of FEXP_ANON_021
+
+**Overall Score:** **5.5 / 10.0** (Mixed / Salvageable) | **Scientific Core Score:** **4.1 / 8.0**  
+* **Score Breakdown:** Rigor: 1.5/3.5 | Claims: 1.2/2.5 | Biology: 1.4/2.0 | Reproducibility: 1.4/2.0
+
+---
+
+## 1. Blinded Metadata Perception
+
+* **Manuscript ID:** `FEXP_ANON_021`
+* **Perceived Research Domain:** Livestock population genomics and evolutionary selection scans (*Camelus dromedarius* whole-genome resequencing).
+* **Study Design:** Population genomic survey of $N = 29$ dromedary camels sampled across three governorates in northern/southeastern Oman (Muscat $n=10$, Al-Batinah $n=14$, Al-Sharqiya $n=5$), sequenced on Illumina HiSeq 2000 (mean depth $11.4\times$, range $7.93\times\text{–}22.5\times$).
+* **Primary Methods:** Read mapping to `CamDro3` (`GCF_000803125.2`) via BWA-MEM v0.7.17, variant calling and hard filtering via GATK v4.2.5.0 (5,099,313 autosomal SNPs), PLINK v1.9 QC pruning (208,524 SNPs for diversity; 3,138,930 SNPs for selection scan), genetic diversity and structure via `GenABEL` (`hom`), PCA (`prcomp`), and ADMIXTURE v1.23 ($K = 1\text{–}3$), and selection scanning via De-correlated Composite of Multiple Signals (DCMS in `MINOTAUR`, combining Tajima's $D$, nucleotide diversity $\pi$, iHS, and nSL in 100-kb sliding windows with 25-kb step), followed by `g:Profiler`, DAVID v6.7, and SnpEff v4.3 annotation.
+
+---
+
+## 2. Executive Summary & Editorial Verdict
+
+This manuscript analyzes whole-genome resequencing data ($11.4\times$ average depth) from 29 dromedary camels sampled across three regions of Oman (Muscat, Al-Batinah, and Al-Sharqiya) to characterize genetic structure and identify candidate genomic regions under positive selection. Using 208,524 LD-pruned autosomal SNPs, the authors find weak population differentiation ($K = 1$ optimal in ADMIXTURE; PC1 explaining $4.7\%$ of variance separating Muscat production camels from Al-Batinah and Al-Sharqiya racing/beauty camels) and slightly negative, non-significant $F_{IS}$ values ($-0.062$ to $-0.093$). Applying the De-correlated Composite of Multiple Signals (DCMS) statistic across 77,133 sliding 100-kb windows (combining Tajima's $D$, $\pi$, iHS, and nSL on 3,138,930 SNPs), the authors identify 87 outlier windows ($p \le 10^{-4}$) that merge into 47 regions harboring 154 genes, which are discussed in relation to immunity, lipid metabolism, vision, memory, hearing, and fertility. Raw sequencing reads are publicly deposited in ENA (`PRJEB67314`).
+
+While the whole-genome dataset of 29 Omani dromedaries is a solid empirical resource with open ENA deposition, the selection scan and functional interpretation suffer from three major methodological and reporting defects. First, prior to calculating Tajima's $D$ and nucleotide diversity ($\pi$), the authors pruned out all SNPs with minor allele frequency $\text{MAF} \le 5\%$ ($1,039,085$ SNPs removed; Table 1). Because selective sweeps drive an excess of rare alleles (singletons, doubletons, and tripletons, which all have $\text{MAF} \le 3/58 = 5.17\%$ in $N=29$ diploid individuals), truncating the site frequency spectrum at $\text{MAF} \le 5\%$ invalidates Tajima's $D$ and $\pi$. Second, the Results explicitly report that **none** of the DAVID functional clusters reached the significance threshold of Enrichment Score $\ge 1.3$ (highest was $1.04$; line 111), yet the Abstract and Discussion directly contradict this by asserting functional enrichment (e.g., calling Wnt signaling *"a functionally enriched pathway"*, line 161) and constructing speculative adaptive narratives around individual genes (e.g., `SYT3` for remembering desert trade routes). Third, the Results text contains severe numerical errors—multiplying chromosomal coordinates on chromosomes 7 and 20 by a factor of 10 (`117.5–119.8 Mb` and `209.0–211.3 Mb` in line 103 vs. `11.75–11.97 Mb` and `20.90–21.12 Mb` in Table 2) and reporting `12,089` total candidate-region variants in the text versus `29,435` in Table 3. These issues can be resolved by recomputing SFS-based selection statistics without MAF truncation, tempering functional claims, and fixing the coordinate/table discrepancies.
+
+### Specific Assessment of Core Claims
+
+* **Minimal genetic differentiation among northern Omani dromedary populations ($K = 1$ optimal in ADMIXTURE) with mild separation of Muscat camels along PC1 ($4.7\%$ variance) and high admixture:** **[Well Supported].**  
+  The PCA, ADMIXTURE cross-validation, observed homozygosity ($0.563\text{–}0.576$), and $F_{IS}$ analyses on 208,524 stringently filtered, LD-pruned autosomal SNPs are appropriate for $N = 29$ samples and align with historical trade and breeding practices in Oman.
+
+* **Identification of 47 candidate positive-selection regions via DCMS combining Tajima's $D$, $\pi$, iHS, and nSL:** **[Methodologically Flawed].**  
+  Two components of the four-test DCMS composite—Tajima's $D$ and nucleotide diversity ($\pi$)—are site frequency spectrum (SFS) statistics that depend critically on the proportion of rare alleles (singletons, doubletons, tripletons). In $N = 29$ diploid animals ($2N = 58$ chromosomes), alleles with count 1, 2, or 3 have $\text{MAF} = 1.72\%, 3.45\%,$ and $5.17\%$. By excluding $1,039,085$ SNPs with $\text{MAF} \le 5\%$ prior to selection scanning (line 44, Table 1), the authors stripped out all singletons and doubletons and nearly all tripletons, corrupting Watterson's $\theta_W$, $\pi$, and Tajima's $D$. Additionally, converting window statistics to fractional ranks (`stat_to_pvalue`) forces an outlier tail regardless of whether true positive selection occurred, and pooling all 29 animals without accounting for the Muscat vs. Al-Batinah/Al-Sharqiya substructure can confound SFS and haplotype tests.
+
+* **Candidate selection regions are enriched for pathways and genes governing desert adaptation, Wnt signaling, immunity, lipid metabolism, long-term memory of desert routes, and wind-noise auditory protection:** **[Overstated].**  
+  In Results line 111, the authors report that in the DAVID analysis, the eight identified clusters had enrichment scores between $0.26$ and $1.04$ (below the $\ge 1.3$ / $p \le 0.05$ cutoff), concluding *"of which none were significantly enriched"*. Yet Discussion line 161 states: *"The Wnt signaling pathway, a functionally enriched pathway identified among the genes in the candidate regions, has a main role in myogenesis"*. Claiming adaptive evolution for specific traits (such as desert route memory from `SYT3`—a gene whose knockout in mice prevents *forgetting*—or desert wind-noise resistance from `CRIP3`/`SLC22A7`) based on unvalidated outlier windows without phenotypic data or significant pathway enrichment is post-hoc storytelling.
+
+---
+
+## 3. Forensic Defect Inventory
+
+### Defect 1: Truncation of the Site Frequency Spectrum ($\text{MAF} \le 5\%$ Pruning) Prior to Computing Tajima's $D$ and $\pi$ (Pillar 3)
+* **Location:** Section "SNPs quality control pruning" (line 44, Table 1) and Section "Signatures of selection analysis" (lines 66–68).
+* **Diagnostic Finding:** Table 1 shows that identical QC filters were applied to the diversity and selection datasets (except for LD pruning), removing $1,039,085$ autosomal SNPs with $\text{MAF} \le 5\%$ and $70,023$ SNPs with HWE $p < 10^{-6}$. While $\text{MAF} > 5\%$ is standard for phasing and haplotype-based tests (iHS and nSL in `selscan`), applying $\text{MAF} > 5\%$ before running `VCF-kit` Tajima's $D$ and `VCFtools --site-pi` removes all singletons and doubletons ($1/58 = 1.7\%$, $2/58 = 3.4\%$). Because a classic selective sweep is detected by Tajima's $D < 0$ due to an excess of rare/singleton mutations recovering after a sweep, censoring $\text{MAF} \le 5\%$ artificially inflates Tajima's $D$ in genuine sweep regions and rewards windows with an excess of intermediate-frequency alleles or missing data.
+* **Remediation:** Compute window-based Tajima's $D$ and $\pi$ on the complete, call-rate-filtered autosomal SNP set *without* $\text{MAF} \le 5\%$ or HWE pruning (retaining $\text{MAF} > 5\%$ only for the `Beagle`/`selscan` iHS and nSL calculations), then re-run the `MINOTAUR` DCMS integration and report the Benjamini–Hochberg FDR $q$-values across the 77,133 windows.
+
+### Defect 2: Direct Contradiction Between Results and Discussion on Pathway Enrichment (Pillar 1, Pillar 4 & Pillar 5)
+* **Location:** Section "Functional annotation" (line 75), Results (line 111), Discussion (line 161).
+* **Diagnostic Finding:** Line 75 defines the statistical significance threshold for DAVID functional enrichment as an enrichment score $\ge 1.3$ ($p \le 0.05$). Line 111 states that the eight DAVID clusters had enrichment scores ranging from $1.04$ down to $0.26$, *"of which none were significantly enriched (Supplementary Table S7)"*. In the Discussion (line 161), however, the authors write: *"The Wnt signaling pathway, a functionally enriched pathway identified among the genes in the candidate regions, has a main role in myogenesis"* (even though Wnt signaling had a non-significant DAVID enrichment score of $0.66$, equivalent to $p \approx 0.22$).
+* **Remediation:** Remove the claim in the Discussion that Wnt signaling or any other DAVID cluster was significantly enriched, clearly distinguish any `g:Profiler` (`g:SCS`-corrected $p < 0.05$) significant GO terms from non-significant DAVID clusters, and reframe the gene-level discussion as exploratory hypotheses rather than demonstrated adaptations.
+
+### Defect 3: Tenfold Coordinate Errors and Variant Count Contradictions Between Text and Tables (Pillar 7)
+* **Location:** Results lines 103 and 111, Table 2 (lines 114–129), Table 3 (lines 131–151), Discussion lines 165–171.
+* **Diagnostic Finding:**
+  1. **10$\times$ Megabase coordinate error:** In Results line 103, the authors write: *"The largest candidate regions were in chromosomes 20 (117.5 Mb to 119.8 Mb) and 7 (209.0 Mb to 211.3 Mb), while the most significant candidate window was in chromosome 20 (118.3 Mb to 119.3 Mb)"*. These coordinates are off by a factor of $10$: in Table 2 (lines 119, 121, 125–129) and the Discussion (lines 165–171), these exact regions are **`20: 11.75 Mbp - 11.97 Mbp`** ($225\text{ kb}$) and **`7: 20.90 Mbp - 21.12 Mbp`** ($225\text{ kb}$), and the most significant 100-kb window is **`20: 11.83 Mb to 11.93 Mb`**. Note that `117.5 to 119.8 Mb` would be $2,300\text{ kb}$ long (contradicting line 103's statement that regions ranged from *"100 kb to 225 kb"*) and exceeds the total length of dromedary chromosomes 7 and 20!
+  2. **Variant count discrepancy (`12,089` vs. `29,435`):** Results line 111 states that *"A total of 12,089 variants were called on the defined candidate regions"*, citing Table 3. However, in Table 3, the first row alone (`Intron variant`) has a count of `17,514` ($59.50\%$), and the sum of all rows in Table 3 is **`29,435`** SnpEff annotations. Furthermore, Table 3 contains two separate rows for intergenic variants: `Intergenic region` (`4,908`, $16.67\%$) and `Intergenic variant` (`133`, $0.45\%$).
+  3. **Typographical errors:** Line 61 misspells `GenABEL` as *"GenABLE"*; line 163 writes *"by the renal systema"*; line 167 writes *"Alzhiemer's disease"*.
+* **Remediation:** Correct the chromosome 20 and chromosome 7 coordinates in line 103 from `117.5–119.8 Mb`, `209.0–211.3 Mb`, and `118.3–119.3 Mb` to `11.75–11.98 Mb`, `20.90–21.13 Mb`, and `11.83–11.93 Mb`. Clarify in line 111 and Table 3 that `12,089` is the number of unique variant sites whereas `29,435` is the total number of SnpEff transcript/region effect annotations, merge the duplicate intergenic rows in Table 3, and fix the spelling errors.
+
+---
+
+## 4. Quantitative Rubric Scoring
+
+| Rubric Dimension | Score | Max | Diagnostic Justification |
+| :--- | :---: | :---: | :--- |
+| **1. Methodological & Statistical Rigor** | **1.5** | **3.5** | Pruning $\text{MAF} \le 5\%$ prior to computing Tajima's $D$ and $\pi$ removes rare alleles and distorts SFS-based selection tests; DCMS rank $p$-values lack neutral coalescent calibration or formal FDR adjustment; population diversity analyses (PCA, ADMIXTURE) are appropriately executed. |
+| **2. Claim-to-Evidence Alignment** | **1.2** | **2.5** | Discussion claims pathway enrichment (e.g., Wnt signaling) despite Results stating none of the DAVID clusters were statistically significant; adaptive narratives around desert route memory (`SYT3`) and wind-noise hearing protection overreach a 29-sample unphenotyped scan. |
+| **3. Data Integrity & Biological Plausibility** | **1.4** | **2.0** | Whole-genome sequencing quality ($11.4\times$ depth, $99.8\%$ mapping) and GATK/PLINK filtering for population structure are sound, though 10$\times$ coordinate typos in Results line 103 place regions beyond actual chromosome lengths. |
+| **4. Reproducibility & Data Integrity** | **1.4** | **2.0** | Raw sequencing data are openly deposited in ENA (`PRJEB67314`) and standard bioinformatics tool versions/parameters are well documented, but undermined by the 10$\times$ coordinate errors (line 103) and the unexplained `12,089` vs. `29,435` variant count discrepancy between text and Table 3. |
+| **Total Composite Score** | **5.5** | **10.0** | **Mixed / Salvageable** (Scientific Core Score: **4.1 / 8.0**) |

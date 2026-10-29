@@ -3,9 +3,9 @@
 Fetch, extract, and strictly de-identify all full-text PubMed papers matching:
   kosakovsky pond[au] OR pond sl[au] OR pond sk[au]
 Saves:
-- /Users/sergei/Projects/lit-estimation/spond_self_audit/raw_papers/SP_RAW_XXX_PMCXXXX.md
-- /Users/sergei/Projects/lit-estimation/spond_self_audit/anon_papers/SP_ANON_XXX.md
-- /Users/sergei/Projects/lit-estimation/spond_self_audit/manifest.json
+- ./spond_self_audit/raw_papers/SP_RAW_XXX_PMCXXXX.md
+- ./spond_self_audit/anon_papers/SP_ANON_XXX.md
+- ./spond_self_audit/manifest.json
 """
 import json
 import random
@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-base_dir = Path("/Users/sergei/Projects/lit-estimation")
+base_dir = Path(str(Path(__file__).resolve().parent.parent))
 sp_dir = base_dir / "spond_self_audit"
 for sub in ["raw_papers", "anon_papers", "reviews"]:
     (sp_dir / sub).mkdir(parents=True, exist_ok=True)

@@ -25,6 +25,6 @@ This is a mathematically rigorous, well-controlled evolutionary modeling paper w
 - **[Moderately Supported]** The preferentially fractionated subgenome ($S_1$) is not the most sequence-diverged subgenome at surviving triplet loci, suggesting that subgenome dominance and epigenetic silencing after hybridization need not track raw sequence divergence.
 
 ### 4. Reproducibility & Data Completeness
-- **Strengths:**Exemplary computational reproducibility. The `POInT` C++ software package is publicly available under an open-source license on GitHub (`https://github.com/gconant0/POInT`), interactive synteny browsers are hosted at `http://wgd.statgen.ncsu.edu/`, all genome accessions (`PRJNA29083`, `PRJEB8714`, `PRJNA340324`) are cited, and all Supplementary Tables/Figures are deposited on Figshare (`https://doi.org/10.25387/g3.10248929`).
+- **Strengths:**Exemplary computational reproducibility. The `POInT` C++ software package is publicly available under an open-source license on GitHub (`[GITHUB_REPO_REDACTED]`), interactive synteny browsers are hosted at `http://wgd.statgen.ncsu.edu/`, all genome accessions (`[ACCESSION_REDACTED]` in scrubbed input) are cited, and all Supplementary Tables/Figures are deposited on Figshare (`https://doi.org/10.25387/g3.10248929`).
 - **Deficiencies:** None of substance.
 </Blinded Review: TIME_ANON_0334>

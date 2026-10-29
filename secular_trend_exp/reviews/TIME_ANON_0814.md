@@ -25,7 +25,7 @@ This hybrid computational and wet-lab neurogenomics study investigates how const
 
 #### Strengths
 - **Orthogonal Biochemical and Molecular Validation of Key Splicing Mechanisms:** The authors do not stop at `rMATS` RNA-seq re-analysis; they experimentally validate three distinct biological layers in mouse brain tissue: (i) nuclear co-IP demonstrating loss of the Pten–U2af2 physical interaction in $Pten^{m3m4/m3m4}$ cortex (`Figure 3a`), (ii) developmental time-course qRT-PCR of *Srrm4* (P14, P21, P40) paired with RT-PCR quantification of 27 microexons (`Figure 3c`), and (iii) 3' RACE cloning and isoform-specific qRT-PCR confirming $\text{Gfap}\delta/\text{Gfap}\alpha$ isoform switching (`Figure 4b,c`).
-- **Exemplary Code & Data Transparency:** Raw RNA-seq data are publicly archived (`GSE59318`), software versions (`STAR 2.7`, `NOISeq 3.10`, `rMATS 4.0.2`) and filtering thresholds ($p \le 0.05, \text{FDR} \le 0.05, |\Delta\Psi| \ge 0.1$) are explicitly defined, and all custom analysis scripts and IPA outputs are hosted in a public GitHub repository (`https://github.com/Thackes/PTEN-AlternativeSplicing`).
+- **Exemplary Code & Data Transparency:** Raw RNA-seq data are publicly archived (`GSE59318`), software versions (`STAR 2.7`, `NOISeq 3.10`, `rMATS 4.0.2`) and filtering thresholds ($p \le 0.05, \text{FDR} \le 0.05, |\Delta\Psi| \ge 0.1$) are explicitly defined, and all custom analysis scripts and IPA outputs are hosted in a public GitHub repository (`[GITHUB_REPO_REDACTED]`).
 - **Measured Causal Framing:** In both the Results (line 112) and Discussion (lines 119, 129, 131), the authors explicitly acknowledge that their observations in a single mouse model cannot disentangle whether specific ASEs (such as $\text{Gfap}\delta/\text{Gfap}\alpha$ switching) are primary causal drivers or secondary correlates of $Pten^{m3m4/m3m4}$ neuropathology.
 
 #### Weaknesses & Methodological Audit
@@ -44,6 +44,6 @@ This hybrid computational and wet-lab neurogenomics study investigates how const
 ---
 
 ### 4. Reproducibility & Data Completeness
-- **Data & Code Availability:** Raw sequencing data (`GSE59318`) and all analysis scripts (`https://github.com/Thackes/PTEN-AlternativeSplicing`) are publicly available.
+- **Data & Code Availability:** Raw sequencing data (`GSE59318`) and all analysis scripts (`[GITHUB_REPO_REDACTED]`) are publicly available.
 - **Primers & Antibodies:** Genotyping primers (`mPten-F5/F3/R6`), *Srrm4* qRT-PCR primers, *Gfap* 3' RACE primer, and antibody catalog numbers (`U2AF2 #ab37530`, `LI-COR` secondaries) are fully specified.
 </Blinded Review: TIME_ANON_0814>

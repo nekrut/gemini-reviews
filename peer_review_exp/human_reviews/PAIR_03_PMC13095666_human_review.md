@@ -13,7 +13,7 @@ Further information and requests for resources and reagents should be directed t
 
 ## Code availability
 
-Custom scripts for data analysis are hosted in a dedicated publicly accessible GitHub repository ( https://github.com/JvdAlab/mitoPerturb-Seq ) and from Zenodo (10.5281/zenodo.19008664) 132 .
+Custom scripts for data analysis are hosted in a dedicated publicly accessible GitHub repository ( [GITHUB_REPO_REDACTED] ) and from Zenodo (10.5281/zenodo.19008664) 132 .
 
 
 ## Competing interests
@@ -74,6 +74,6 @@ Statistical source data.
 
 Further information and requests for resources and reagents should be directed to and will be fulfilled by the lead contact, J.v.d.A. (jv361@cam.ac.uk). All sequencing data were deposited to the Gene Expression Omnibus (GEO) under accession numbers GSE297416 , GSE297418 and GSE297491 . Additional data are supplied in the Supplementary Information . Source data are provided with this paper.
 
-Custom scripts for data analysis are hosted in a dedicated publicly accessible GitHub repository ( https://github.com/JvdAlab/mitoPerturb-Seq ) and from Zenodo (10.5281/zenodo.19008664) 132 .
+Custom scripts for data analysis are hosted in a dedicated publicly accessible GitHub repository ( [GITHUB_REPO_REDACTED] ) and from Zenodo (10.5281/zenodo.19008664) 132 .
 
 Articles from Nature Structural & Molecular Biology are provided here courtesy of Nature Publishing Group

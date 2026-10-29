@@ -349,6 +349,6 @@ Submitted filename: Response_to_reviewer_comments_auresp_2.pdf
 
 ## Data Availability Statement
 
-All R scripts and input datasets are available in the https://github.com/DepledgeLab/polyAtails repository. Raw DRS002 fast5 (nanopore) datasets generated as part of this study are available at the ENA/SRA under the accession number PRJEB98222 with the exception of the HVS and EBV datasets which are available via accession numbers PRJEB104941 and PRJEB105217, respectively.
+All R scripts and input datasets are available in the [GITHUB_REPO_REDACTED] repository. Raw DRS002 fast5 (nanopore) datasets generated as part of this study are available at the ENA/SRA under the accession number PRJEB98222 with the exception of the HVS and EBV datasets which are available via accession numbers PRJEB104941 and PRJEB105217, respectively.
 
 Articles from PLOS Pathogens are provided here courtesy of PLOS

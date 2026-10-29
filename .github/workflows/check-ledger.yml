@@ -1,4 +1,4 @@
-name: Check ledger
+name: Check ledger, blinding, and fact-verification gate
 
 on:
   push:
@@ -12,5 +12,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Regenerate index.json, catalog.json, and README.md; fail on diff
+      - name: Regenerate index.json, catalog.json, and README.md; fail on diff or dead paths
         run: python3 scripts/update_leaderboard.py && git diff --exit-code index.json catalog.json README.md
+      - name: Lint review score breakdowns against metadata.json
+        run: python3 scripts/lint_reviews.py --strict-score
+      - name: Run blinding, path-existence, and fact-verification gate
+        run: python3 scripts/verify_review_facts.py

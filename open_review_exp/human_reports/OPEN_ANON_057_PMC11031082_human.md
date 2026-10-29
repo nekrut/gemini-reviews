@@ -308,6 +308,6 @@ This section collects any data citations, data availability statements, or suppl
 
 ## Data Availability Statement
 
-The current manuscript is a computational study, so no data have been generated for this manuscript. Data from the UK Biobank (project 84436; Bycroft et al., 2018 ) are available, pending application approval from: https://www.ukbiobank.ac.uk/ . Modeling code is available at https://github.com/WeiCSong/HFS (copy archived at Song, 2024 ).
+The current manuscript is a computational study, so no data have been generated for this manuscript. Data from the UK Biobank (project 84436; Bycroft et al., 2018 ) are available, pending application approval from: https://www.ukbiobank.ac.uk/ . Modeling code is available at [GITHUB_REPO_REDACTED] (copy archived at Song, 2024 ).
 
 Articles from eLife are provided here courtesy of eLife Sciences Publications, Ltd

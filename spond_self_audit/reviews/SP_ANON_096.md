@@ -40,5 +40,5 @@
 ---
 
 ## 4. Reproducibility & Data Completeness
-* **Software & Workflow Availability:** Outstanding. All Stage 1 workflows and Stage 2 notebooks are openly hosted at `covid19.galaxyproject.org`, archived on GitHub (`github.com/galaxyproject/SARS-CoV-2`), registered in `WorkflowHub.eu`, and packaged via `BioConda` (`anaconda.org/bioconda/repo`).
+* **Software & Workflow Availability:** Outstanding. All Stage 1 workflows and Stage 2 notebooks are openly hosted at `covid19.galaxyproject.org`, archived on GitHub (`[GITHUB_REPO_REDACTED]`), registered in `WorkflowHub.eu`, and packaged via `BioConda` (`anaconda.org/bioconda/repo`).
 * **Data Accessibility:** All analyzed raw read datasets are referenced by public NCBI BioProject/SRA and ENA accessions (`PRJNA622837`, `PRJEB37886`), and processed variant call sets are made publicly accessible through the Galaxy data libraries and Zenodo/GitHub links cited in the letter.

@@ -19,7 +19,7 @@ This agricultural genomics and breeding study evaluates five seed nutritional tr
 
 #### STRENGTHS
 - **Multi-year organic field evaluation of 267 diverse USDA germplasm accessions:** Testing 267 accessions across 3 environments (`RAWL20`, `CLEM21`, `CLEM22`) under authentic organic management provides actionable phenotypic baselines for low-input pulse breeding.
-- **Open science and code availability:** All R scripts and data are publicly deposited in a dedicated GitHub repository (`https://github.com/caroballen2/Pea_Protein_GWAS_2025`), and full marker coordinates, MAF, PVE, and LD intervals are transparently tabulated in Table 2.
+- **Open science and code availability:** All R scripts and data are publicly deposited in a dedicated GitHub repository (`[GITHUB_REPO_REDACTED]`), and full marker coordinates, MAF, PVE, and LD intervals are transparently tabulated in Table 2.
 
 #### WEAKNESSES & METHODOLOGICAL AUDIT
 - **Biologically impossible "Average Heterozygosity = 0.883" in Table 1 for inbred pea lines:**
@@ -42,5 +42,5 @@ This agricultural genomics and breeding study evaluates five seed nutritional tr
 - **Claim that `S6LG2_102304910` explains $29.34\%$ of protein digestibility (PDg) variation:** `[Methodologically Flawed]` — Contradicts the trait's reported broad-sense heritability of $H^2 = 0.00$ and 4-value discrete FT-MIR quantization.
 
 ### 4. Reproducibility & Data Completeness
-Reproducibility is high: the authors provide a public GitHub repository (`https://github.com/caroballen2/Pea_Protein_GWAS_2025`), cite the public VCF source (`Powers et al.`) and reference genome (`Cameor v1a` on PulseDB), and specify all software versions (`VCFtools v0.1.17`, `Beagle v5.4`, `ADMIXTURE v1.3.0`, `GAPIT v3`, `PLINK`) and command flags.
+Reproducibility is high: the authors provide a public GitHub repository (`[GITHUB_REPO_REDACTED]`), cite the public VCF source (`Powers et al.`) and reference genome (`Cameor v1a` on PulseDB), and specify all software versions (`VCFtools v0.1.17`, `Beagle v5.4`, `ADMIXTURE v1.3.0`, `GAPIT v3`, `PLINK`) and command flags.
 </Blinded Review: TIME_ANON_0984>

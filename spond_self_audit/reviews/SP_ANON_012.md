@@ -21,5 +21,5 @@ This software and methods manuscript presents `RASCL` (`Rapid Assessment of Sele
 * **Claim 3:** *`RASCL` analysis of the `Mu` (`B.1.621`) variant identifies clade-specific selection signals across `Spike`, `N`, and `ORF1ab`.* **`[Fragile]`** — Vulnerable to the same `TN93` outlier-enrichment and unscreened recombination artifacts without read-level quality verification.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Source code (`https://github.com/veg/rascl`), `Galaxy` workflows, `ObservableHQ` notebooks, and JSON output archives are publicly available under open-source licenses.
+* **Strengths:** Source code (`[GITHUB_REPO_REDACTED]`), `Galaxy` workflows, `ObservableHQ` notebooks, and JSON output archives are publicly available under open-source licenses.
 * **Deficiencies:** The pipeline lacks pre-alignment quality control against reference-backfill / amplicon-dropout artifacts and recombination filtering.

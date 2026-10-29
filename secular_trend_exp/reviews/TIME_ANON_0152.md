@@ -29,5 +29,5 @@ This study presents the *de novo* genome assembly ($4.08\text{ Gb}$, scaffold $\
 - **[Fragile]** Claims regarding the living endosymbiotic bacterial community of the PSG based on a single $n=1$ metatranscriptomic library without negative extraction controls are preliminary, and the authors appropriately note that no published TTX biosynthetic gene template exists to confirm bacterial TTX synthesis directly.
 
 ### 4. Reproducibility & Data Completeness
-- **Exemplary Open Science & Data Availability:** All raw genomic and transcriptomic sequencing reads are deposited under NCBI BioProject `PRJNA602771`, the genome assembly and functional annotations are hosted on GigaDB (`doi:10.5524/100786`), and the full reproducible workflow and custom scripts are publicly available on GitHub (`https://github.com/blwhitelaw/BRO_annotation`).
+- **Exemplary Open Science & Data Availability:** All raw genomic and transcriptomic sequencing reads are deposited under NCBI BioProject `PRJNA602771`, the genome assembly and functional annotations are hosted on GigaDB (`doi:10.5524/100786`), and the full reproducible workflow and custom scripts are publicly available on GitHub (`[GITHUB_REPO_REDACTED]`).
 </Blinded Review: TIME_ANON_0152>

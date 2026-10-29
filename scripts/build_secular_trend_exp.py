@@ -12,7 +12,7 @@ def clean_text(el):
         return ""
     return re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip()
 
-sec_dir = Path("/Users/sergei/Projects/lit-estimation/secular_trend_exp")
+sec_dir = Path(str(Path(__file__).resolve().parent.parent / "secular_trend_exp")
 for sub in ["raw_papers", "anon_papers", "reviews"]:
     d = sec_dir / sub
     d.mkdir(parents=True, exist_ok=True)
@@ -39,9 +39,9 @@ tracks = [
 # Also exclude any PMCIDs already used in our main 200-paper calibration, OOD, or peer-review cohorts
 existing_pmcids = set()
 for mf in [
-    Path("/Users/sergei/Projects/lit-estimation/data/cohort_manifest.json"),
-    Path("/Users/sergei/Projects/lit-estimation/ood_exp/manifest.json"),
-    Path("/Users/sergei/Projects/lit-estimation/peer_review_exp/manifest.json"),
+    Path(str(Path(__file__).resolve().parent.parent / "data/cohort_manifest.json"),
+    Path(str(Path(__file__).resolve().parent.parent / "ood_exp/manifest.json"),
+    Path(str(Path(__file__).resolve().parent.parent / "peer_review_exp/manifest.json"),
 ]:
     if mf.exists():
         try:
@@ -103,6 +103,7 @@ def parse_epmc_xml(xml_bytes, meta):
     return "\n".join(lines)
 
 def scrub_temporal_manuscript(raw_text, meta, anon_id):
+    text = re.sub(r'(?:https?://)?\bgithub\.com/(?!spond/gemini-reviews\b)[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*', '[GITHUB_REPO_REDACTED]', text, flags=re.I)
     lines = raw_text.splitlines()
     body_start = 0
     for idx, line in enumerate(lines):

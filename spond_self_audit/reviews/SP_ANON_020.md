@@ -20,5 +20,5 @@ This software note presents `phylotree.js`, an open-source JavaScript library bu
 * **Claim 3:** *The `traverse_and_compute` abstraction supports client-side layout optimization such as crossing reduction in multi-tissue SIV tanglegrams to prevent spurious visual interpretations of compartmentalization.* **`[Well Supported]`** — Demonstrated on primate multi-tissue SIV phylogenies (Fig. 3).
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Source code, API documentation, and interactive examples are released under the permissive MIT license on GitHub (`https://github.com/veg/phylotree.js`), accompanied by an archival source snapshot (`Additional file 1`, `v0.1.8`).
+* **Strengths:** Source code, API documentation, and interactive examples are released under the permissive MIT license on GitHub (`[GITHUB_REPO_REDACTED]`), accompanied by an archival source snapshot (`Additional file 1`, `v0.1.8`).
 * **Deficiencies:** Adding empirical browser performance benchmarks (node count vs. render/selection latency) would strengthen the technical documentation.

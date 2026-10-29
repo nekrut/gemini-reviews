@@ -21,7 +21,7 @@ This computational phylogenomics benchmark systematically evaluates whether emer
 ### STRENGTHS
 - **Rigorous, Multi-Metric Orthogonal Benchmarking:** Evaluates homology search quality via both `EggNOG` co-orthology recall and `CATH` hierarchical (`C`, `CA`, `CAT`, `CATH`) Jaccard domain homogeneity, and evaluates gene tree topologies via three complementary species-tree congruence criteria (`DISCO` single-copy RF distance, quartet support, and gene duplication/loss reconciliation).
 - **Important Methodological Refutation of Ultrametricity as a Proxy for Tree Accuracy:** Demonstrates that while `Foldtree` (`FT`) and structural ML methods yield trees with lower root-to-tip variance (higher ultrametricity, previously touted as evidence of superior accuracy by Moi et al.), they produce topologies that are significantly *less* congruent with the known eukaryotic species tree than sequence-based ML (`LG`).
-- **Full Workflow Reproducibility:** Implemented as an open-source, configurable `Snakemake` pipeline (`https://github.com/Gabaldonlab/structural_phylome`) using public UniProt and AlphaFold Database releases.
+- **Full Workflow Reproducibility:** Implemented as an open-source, configurable `Snakemake` pipeline (`[GITHUB_REPO_REDACTED]`) using public UniProt and AlphaFold Database releases.
 
 ---
 
@@ -36,5 +36,5 @@ This computational phylogenomics benchmark systematically evaluates whether emer
 - **Claim 2:** *"Foldseek detects remote candidates in the sequence twilight zone (<25% identity) at the cost of higher non-homologous false positives (lower CATH concordance) and missed closer co-orthologs with lower query coverage."* — **[Well Supported]**. Directly supported by the joint distributions of sequence identity, query coverage, pLDDT, TM-score, and CATH Jaccard indices in Figure 2.
 
 ### 4. Reproducibility & Data Completeness
-- **Exemplary Code and Pipeline Availability:** The complete `Snakemake` workflow, scripts, and reproduction instructions are publicly available on GitHub (`https://github.com/Gabaldonlab/structural_phylome`).
+- **Exemplary Code and Pipeline Availability:** The complete `Snakemake` workflow, scripts, and reproduction instructions are publicly available on GitHub (`[GITHUB_REPO_REDACTED]`).
 </Blinded Review: TIME_ANON_0718>

@@ -94,7 +94,7 @@ I would also like the authors to strongly consider doing the following:
 
 2. In addition to their existing analyses, use an alternative method to identify telomere-associated tandemly repeated elements directly from their long-read sequence data (which they have in abundance -- they have 56x genomic coverage of high-accuracy HiFi reads, as well as 143x coverage of less accurate Oxford Nanopore reads). One recently published method that the authors could use for this analysis is TeloSearchLR.
 
-TeloSearchLR code: https://github.com/gchchung/TeloSearchLR
+TeloSearchLR code: [GITHUB_REPO_REDACTED]
 
 TeloSearchLR bioconda package: https://bioconda.github.io/recipes/telosearchlr/README.html
 
@@ -233,6 +233,6 @@ Submitted filename: Reviewer Response_Shakya et al., 2025.docx
 
 ## Data Availability Statement
 
-All sequencing data have been deposited in the Sequence Read Archive (SRA) at the National Center for Biotechnology Information (NCBI). The HiFi, Nanopore, Illumina, HiC, and Iso-Seq data were deposited under Bioproject PRJNA1265270. The processed genome and annotation data is available under Bioproject PRJNA1265270. The supplementary and source data is public-ly available at Zenodo research repository ( https://doi.org/10.5281/zenodo.15484846 ). The scripts used for generation of figures and data analysis can be found in: https://github.com/Siddique-Lab/Mhapla_genome_paper ; https://git.wur.nl/stefan.vanderuitenbeek/rnaseq_variant_calling_snakemake_pipeline/;https://git.wur.nl/published_papers/vw9_genome .
+All sequencing data have been deposited in the Sequence Read Archive (SRA) at the National Center for Biotechnology Information (NCBI). The HiFi, Nanopore, Illumina, HiC, and Iso-Seq data were deposited under Bioproject PRJNA1265270. The processed genome and annotation data is available under Bioproject PRJNA1265270. The supplementary and source data is public-ly available at Zenodo research repository ( https://doi.org/10.5281/zenodo.15484846 ). The scripts used for generation of figures and data analysis can be found in: [GITHUB_REPO_REDACTED] ; https://git.wur.nl/stefan.vanderuitenbeek/rnaseq_variant_calling_snakemake_pipeline/;https://git.wur.nl/published_papers/vw9_genome .
 
 Articles from PLOS Pathogens are provided here courtesy of PLOS

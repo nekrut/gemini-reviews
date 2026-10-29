@@ -34,4 +34,4 @@ This case study documents a SARS-CoV-2 co-infection (superinfection) with Alpha 
 
 ## 4. Reproducibility & Data Completeness
 
-* **Data & Accession Availability:** Consensus sequences, raw sequencing reads, and cloned Sanger sequences are publicly deposited in GISAID (`EPI_ISL_1293195`, `EPI_ISL_1258478`) and NCBI GenBank/SRA (`BioProject PRJNA751848`), with complete site-by-site allele counts and clone matrices provided in Tables 1–2 and S1–S5.
+* **Data & Accession Availability:** Consensus sequences, raw sequencing reads, and cloned Sanger sequences are publicly deposited in GISAID (`EPI_ISL_1293195`, `EPI_ISL_1258478`) and NCBI GenBank/SRA (`BioProject [ACCESSION_REDACTED]`), with complete site-by-site allele counts and clone matrices provided in Tables 1–2 and S1–S5.

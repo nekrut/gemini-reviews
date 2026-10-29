@@ -328,6 +328,6 @@ Submitted filename: Response_to_Reviewers_auresp_3.docx
 
 ## Data Availability Statement
 
-The data is available at https://doi.org/10.6084/m9.figshare.28032008.v2 The code is available at https://github.com/xuanyuanzaishui/Sex-Specific-Classification-of-Antiarrhythmic-Drugs .
+The data is available at https://doi.org/10.6084/m9.figshare.28032008.v2 The code is available at [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

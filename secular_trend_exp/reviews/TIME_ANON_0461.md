@@ -34,6 +34,6 @@ This mechanistic plant molecular genetics and genomics study identifies a role f
 - **Claim 3:** *Inactivating LD reduces RNAPII Ser5P and Ser2P accumulation over highly expressed and late-replicating genes, alleviating transcription-replication conflicts in `pol2a`.* `[Moderately Supported]` — Supported by Ser5P/Ser2P ChIP-seq metagene profiles and synthetic interactions with `atr` and `rad51`, though direct nascent replication fork speed or R-loop assays remain for future work.
 
 ### 4. Reproducibility & Data Completeness
-- **Sequencing Data Availability:** All ChIP-seq and standard/spike-in RNA-seq datasets are deposited in NCBI GEO under accession numbers `GSE273026`, `GSE273027`, and `GSE273028` (`line 119`).
+- **Sequencing Data Availability:** All ChIP-seq and standard/spike-in RNA-seq datasets are deposited in NCBI GEO under accession numbers `[ACCESSION_REDACTED]` (`line 119`).
 - **Methods & Reagents:** Antibody catalog numbers, dilutions, mutant T-DNA accessions (`SAIL_743_B07`, `SALK_015053`, `SALK_032841`, `SAIL_873_C08`), and R version (`4.2.1`) are clearly specified.
 </Blinded Review: TIME_ANON_0461>

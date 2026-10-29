@@ -35,5 +35,5 @@ This bioinformatics database and resource article introduces `Virosaurus` (Virus
 - **Claim 2:** *"Virosaurus90 demonstrates 100% concordance with ezVIR for clinical metagenomics diagnosis."* — **[Moderately Supported / Fragile]**. While all 25 expected viruses across 20 positive specimens were detected, $n = 20$ positive samples without negative controls or specificity metrics is too small to establish diagnostic accuracy across 288 vertebrate genera.
 
 ### 4. Reproducibility & Data Completeness
-- **Publicly Hosted Fasta Files and Pipeline Code:** The database is publicly downloadable at `https://viralzone.expasy.org/8676` and the analysis workflow is hosted at `https://github.com/sib-swiss/virusscan`, although raw clinical fastq files from the 20 patient specimens are not deposited.
+- **Publicly Hosted Fasta Files and Pipeline Code:** The database is publicly downloadable at `https://viralzone.expasy.org/8676` and the analysis workflow is hosted at `[GITHUB_REPO_REDACTED]`, although raw clinical fastq files from the 20 patient specimens are not deposited.
 </Blinded Review: TIME_ANON_0714>

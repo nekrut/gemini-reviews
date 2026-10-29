@@ -151,7 +151,7 @@ Authors’ reply: The authors appreciate the comment and the mentioned reference
 
 2. The second one is something that I see too often: there is no access to or descriptions of data analysis details at all. For example, the github portal, or similar, would be a good way to show the code and how analyses were conducted. We usually do not accept laboratory reports without sufficient descriptions of methods (not always very detailed, agreed!), in the same way reports heavily based on data analysis should show how the data analyses were done.
 
-Authors’ reply: The authors thank and agree with the comment. We have uploaded all the codes involved in this study to a github folder https://github.com/RuiCao34/PRS_Kidney_AR . Unfortunately, due to a consent limitation, the phenotype and genotype data in the DeKAF Genomics cohort are not publicly available. Data from the GEN-03 cohort are available through dbGaP. We also annotated the code to ensure its reproducibility.
+Authors’ reply: The authors thank and agree with the comment. We have uploaded all the codes involved in this study to a github folder [GITHUB_REPO_REDACTED] . Unfortunately, due to a consent limitation, the phenotype and genotype data in the DeKAF Genomics cohort are not publicly available. Data from the GEN-03 cohort are available through dbGaP. We also annotated the code to ensure its reproducibility.
 
 Submitted filename: ResponseToReviewers_Jan312024.docx
 

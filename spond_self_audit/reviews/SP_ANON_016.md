@@ -20,5 +20,5 @@ This study presents a thorough evolutionary and phylogeographic investigation of
 * **Claim 3:** *Overlapping geographic ranges and shared roosting of horseshoe bats—particularly `Rhinolophus pusillus` and `Rhinolophus affinis`—provide the ecological connectivity linking `nCoV` recombinants across southern China and Southeast Asia, though the direct proximal ancestor of SARS-CoV-2 ($\text{tMRCA} \approx 1982$ with the Yunnan cluster) remains unsampled.* **`[Well Supported]`** — Grounded in `IUCN` host range overlays, `RBP 5` divergence dating, and subsequent independent confirmation from Lao bat sampling (`Temmam et al. 2022`).
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Complete genome alignments, `GARD` partition tables, `SANTA-SIM` modified source code (`https://github.com/phillipswanepoel/santa-sim/tree/Recomb_and_align`), and `BEAST`/`IQ-TREE` parameter specifications are thoroughly documented.
+* **Strengths:** Complete genome alignments, `GARD` partition tables, `SANTA-SIM` modified source code (`[GITHUB_REPO_REDACTED]`), and `BEAST`/`IQ-TREE` parameter specifications are thoroughly documented.
 * **Deficiencies:** Providing the exact `ObservableHQ`/`D3` notebook URL used for the geographic visualizations (Tail line 7) would further aid figure reproducibility.

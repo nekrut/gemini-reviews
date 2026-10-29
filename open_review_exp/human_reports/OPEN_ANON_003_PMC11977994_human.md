@@ -259,6 +259,6 @@ Submitted filename: GeneticSafetyRisk_R2R-PLoS_Sub2.docx
 
 ## Data Availability Statement
 
-An analytical dataset and source code are available at https://github.com/ericminikel/genetics_side_effects/ and are sufficient to reproduce all figures and statistics herein.
+An analytical dataset and source code are available at [GITHUB_REPO_REDACTED]/ and are sufficient to reproduce all figures and statistics herein.
 
 Articles from PLOS Genetics are provided here courtesy of PLOS

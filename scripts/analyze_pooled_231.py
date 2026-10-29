@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-base_dir = Path("/Users/sergei/Projects/lit-estimation")
+base_dir = Path(str(Path(__file__).resolve().parent.parent))
 sec_dir = base_dir / "secular_trend_exp"
 
 r200 = json.load(open(base_dir / "results_200.json"))

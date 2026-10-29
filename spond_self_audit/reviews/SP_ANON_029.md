@@ -29,4 +29,4 @@ This PRISMA-compliant systematic review synthesizes *in vitro* neutralizing susc
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open Database and Curation Pipeline:** Exemplary data transparency. Every extracted $\text{IC}_{50}$ value, viral construct detail, cell line, assay readout, and analysis script is publicly available in the Stanford Coronavirus Antiviral & Resistance Database (CoV-RDB) GitHub repository (`https://github.com/hivdb/covid-drdb-payload`) and Supplementary Data tables.
+* **Open Database and Curation Pipeline:** Exemplary data transparency. Every extracted $\text{IC}_{50}$ value, viral construct detail, cell line, assay readout, and analysis script is publicly available in the Stanford Coronavirus Antiviral & Resistance Database (CoV-RDB) GitHub repository (`[GITHUB_REPO_REDACTED]`) and Supplementary Data tables.

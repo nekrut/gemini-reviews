@@ -289,6 +289,6 @@ Submitted filename: #ncov-forecasting-fit reviewer response round 2.pdf
 
 ## Data Availability Statement
 
-Sequence data including date and location of collection as well as clade annotation was obtained via the Nextstrain-curated data set that pulls data from GISAID database. A full list of sequences analyzed with accession numbers, derived data of sequence counts and case counts, along with all source code used to analyze this data and produce figures is available via the GitHub repository github.com/blab/ncov-forecasting-fit.
+Sequence data including date and location of collection as well as clade annotation was obtained via the Nextstrain-curated data set that pulls data from GISAID database. A full list of sequences analyzed with accession numbers, derived data of sequence counts and case counts, along with all source code used to analyze this data and produce figures is available via the GitHub repository [GITHUB_REPO_REDACTED]
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

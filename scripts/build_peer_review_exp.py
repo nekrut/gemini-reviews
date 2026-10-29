@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from fetch_pmc_html import parse_pmc_html, clean_text
 from build_deidentified import scrub_manuscript
 
-pr_dir = Path("/Users/sergei/Projects/lit-estimation/peer_review_exp")
+pr_dir = Path(str(Path(__file__).resolve().parent.parent / "peer_review_exp")
 
 def parse_ppr_xml(xml_bytes, meta):
     soup = BeautifulSoup(xml_bytes, "xml")

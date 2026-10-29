@@ -29,4 +29,4 @@ This manuscript presents FLEA (Full-Length Envelope Analyzer), an end-to-end bio
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open-Source Software Engineering:** Exemplary software reproducibility. Both the Nextflow backend pipeline (`https://github.com/veg/flea-pipeline`) and the interactive web application (`https://github.com/veg/flea-web-app`), along with a live web server (`http://flea.murrell.group`) and interactive P018 session results, are publicly released under open-source licenses.
+* **Open-Source Software Engineering:** Exemplary software reproducibility. Both the Nextflow backend pipeline (`[GITHUB_REPO_REDACTED]`) and the interactive web application (`[GITHUB_REPO_REDACTED]`), along with a live web server (`http://flea.murrell.group`) and interactive P018 session results, are publicly released under open-source licenses.

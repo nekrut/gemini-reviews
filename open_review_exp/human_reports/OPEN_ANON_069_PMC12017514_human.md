@@ -359,6 +359,6 @@ Submitted filename: Response_to_Reviewers_auresp_2.pdf
 
 ## Data Availability Statement
 
-Code is available: https://github.com/aydanasg/cell_hmagma . PLAC-seq, H3K27ac ChIP-seq, H3K4me3 ChIP-seq and ATAC-seq datasets were taken from (1) and processed data is available: https://github.com/nottalexi/brain-cell-type-peak-files .
+Code is available: [GITHUB_REPO_REDACTED] . PLAC-seq, H3K27ac ChIP-seq, H3K4me3 ChIP-seq and ATAC-seq datasets were taken from (1) and processed data is available: [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Genetics are provided here courtesy of PLOS

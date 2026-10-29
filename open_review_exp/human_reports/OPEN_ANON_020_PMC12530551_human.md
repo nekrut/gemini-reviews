@@ -279,6 +279,6 @@ Submitted filename: Response to Reviewers.pdf
 
 ## Data Availability Statement
 
-All sequencing data is deposited in the NCBI Sequence Read Archive (SRA; accession number: PRJNA1195924). The code used for this study is available 457 at: https://github.com/dmgr90/eDNA-Zambia-1 .
+All sequencing data is deposited in the NCBI Sequence Read Archive (SRA; accession number: PRJNA1195924). The code used for this study is available 457 at: [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS One are provided here courtesy of PLOS

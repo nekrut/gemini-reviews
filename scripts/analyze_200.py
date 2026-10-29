@@ -1,3 +1,4 @@
+from pathlib import Path
 import os
 import re
 import json
@@ -12,7 +13,7 @@ UPSTREAM_A_PMCIDS = {"PMC5182071", "PMC3480734", "PMC4125079", "PMC3935878", "PM
 METHODS_B_PMCIDS = {"PMC3395634", "PMC4408417", "PMC8204705", "PMC7182206", "PMC6247931", "PMC4302049", "PMC4495769"}
 
 def parse_anon_review(anon_id):
-    path = f"/Users/sergei/Projects/lit-estimation/reviews_anon/{anon_id}.md"
+    path = fstr(Path(__file__).resolve().parent.parent / "reviews_anon/{anon_id}.md"
     if not os.path.exists(path):
         return None
     txt = open(path).read()
@@ -137,7 +138,7 @@ def main():
         f65 = sum(1 for x in vals if x < 6.5)
         print(f"  {ct:15s} (n={len(vals):2d}) | mean={statistics.mean(vals):.2f} (med={statistics.median(vals):.2f}) | <5.0: {f50:2d}/{len(vals)} ({f50/len(vals)*100:4.1f}%) | <6.5: {f65:2d}/{len(vals)} ({f65/len(vals)*100:4.1f}%)")
 
-    with open("/Users/sergei/Projects/lit-estimation/results_200.json", "w") as f:
+    with open(str(Path(__file__).resolve().parent.parent / "results_200.json", "w") as f:
         json.dump({"cohort_a": ca, "cohort_b": cb, "cohort_c": cc}, f, indent=2)
 
 if __name__ == "__main__":

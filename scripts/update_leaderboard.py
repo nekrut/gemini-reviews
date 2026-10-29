@@ -280,7 +280,56 @@ def build_unified_catalog(index_entries: list[dict]) -> dict:
                 }
             )
 
-    # 3. Preprint-to-Published Pairs (N=20 pairs = 40 full-text reviews)
+    # 2b. 8-Field Expansion Cohort (N=160, expanding all 8 fields to n=40 each)
+    fexp_file = ROOT / "field_expansion_160" / "fexp_results_160.json"
+    if fexp_file.exists():
+        for r in json.loads(fexp_file.read_text(encoding="utf-8")):
+            aid = r["anon_id"]
+            year_val = int(r.get("year") or 2024)
+            j_name = r.get("journal", "")
+            is_mega = any(
+                m in j_name.lower()
+                for m in ["plos one", "scientific reports", "sci rep", "peerj", "front", "bmc ", "heliyon", "mdpi", "int j mol sci", "cancers", "genes", "viruses", "microorganisms", "cells", "biomolecules"]
+            )
+            records.append(
+                {
+                    "uid": f"FEXP_{aid}",
+                    "code": aid,
+                    "anon_id": aid,
+                    "experiment": "8-Field Everyday Expansion (N=160)",
+                    "is_wild": True,
+                    "pmcid": r.get("pmcid", ""),
+                    "pmid": str(r.get("pmid") or ""),
+                    "doi": str(r.get("doi") or ""),
+                    "url": f"https://pmc.ncbi.nlm.nih.gov/articles/{r.get('pmcid')}/" if r.get("pmcid") else "",
+                    "title": r.get("title", ""),
+                    "authors": r.get("authors", ""),
+                    "authors_short": normalize_authors_short(r.get("authors", "")),
+                    "journal": j_name,
+                    "year": year_val,
+                    "decade": infer_decade(year_val),
+                    "subfield": r.get("domain", ""),
+                    "venue_tier": "Megajournal" if is_mega else "Selective / Established",
+                    "citedByCount": int(r.get("citedByCount") or 0),
+                    "overall": round(float(r["overall"]), 2),
+                    "rigor": round(float(r["rigor"]), 2),
+                    "claims": round(float(r["claims"]), 2),
+                    "biology": round(float(r["biology"]), 2),
+                    "reproducibility": round(float(r["reproducibility"]), 2),
+                    "sci_core_8": round(float(r["rigor"]) + float(r["claims"]) + float(r["biology"]), 2),
+                    "tier": r.get("tier") or tier_for(float(r["overall"])),
+                    "study_modality": "Not Annotated",
+                    "tech_maturity": "Not Annotated",
+                    "epistemic_stage": "Not Annotated",
+                    "bias_category": r.get("bias_category", ""),
+                    "verdict": r.get("verdict", ""),
+                    "review_path": f"field_expansion_160/reviews/{aid}.md",
+                    "human_review_path": "",
+                    "has_human_review": False,
+                }
+            )
+
+    # 3. Preprint-to-Published Pairs (N=50 pairs = 100 full-text reviews)
     pr_file = ROOT / "peer_review_exp" / "peer_review_results.json"
     if pr_file.exists():
         pr_data = json.loads(pr_file.read_text(encoding="utf-8"))
@@ -298,14 +347,14 @@ def build_unified_catalog(index_entries: list[dict]) -> dict:
                 ov_val = float(sc.get("overall", sc.get("total_10", 0.0)))
                 delta_val = float(pair["deltas"].get("overall", pair["deltas"].get("total_10", 0.0)))
                 aid = pair[aid_key]
-                wdir = "wave1_reviews" if pair[wave_key] == "wave1" else "wave2_reviews"
+                wdir = "wave1_reviews" if str(pair.get(wave_key)) in ("1", "wave1") or aid.startswith("PR_W1_") else "wave2_reviews"
                 yr = int(pair.get("ppr_year" if "Preprint" in stage_label else "year") or 2024)
                 records.append(
                     {
                         "uid": f"PR_{pid}_{'PPR' if 'Preprint' in stage_label else 'PUB'}",
                         "code": f"{pid} ({stage_label})",
                         "anon_id": aid,
-                        "experiment": "Preprint vs. Published (N=40)",
+                        "experiment": "Preprint vs. Published (N=100)",
                         "is_wild": False,
                         "pmcid": pair.get("pmcid", ""),
                         "pmid": str(pair.get("pmid") or ""),
@@ -495,12 +544,29 @@ def build_unified_catalog(index_entries: list[dict]) -> dict:
         "Calibration: Cohort A (Known Invalid)",
         "Calibration: Cohort C (Wild 2024–2025)",
         "Out-of-Domain Wild (N=60)",
-        "Preprint vs. Published (N=40)",
+        "8-Field Everyday Expansion (N=160)",
+        "Preprint vs. Published (N=100)",
         "Open-Review Concordance (N=100)",
         "35-Year Secular Trend (N=915)",
         "Career Self-Audit: S. Pond (N=164)",
         "Community / Issue-Triggered Reviews",
     ]
+    # Validate all review_path and uid uniqueness before returning
+    seen_uids = set()
+    missing_paths = []
+    for r in records:
+        uid = r["uid"]
+        if uid in seen_uids:
+            raise ValueError(f"Duplicate UID in catalog: {uid}")
+        seen_uids.add(uid)
+        rp = r.get("review_path", "")
+        if rp and not (ROOT / rp).exists():
+            missing_paths.append((uid, rp))
+        hp = r.get("human_review_path", "")
+        if hp and not (ROOT / hp).exists():
+            missing_paths.append((uid, hp))
+    if missing_paths:
+        raise FileNotFoundError(f"Missing review_path/human_review_path files ({len(missing_paths)}): {missing_paths[:5]}")
     cohort_summaries = []
     for c_name in cohort_order:
         grp = [r for r in records if r["experiment"] == c_name]
@@ -545,7 +611,8 @@ def format_compact_readme_section(catalog: dict) -> str:
         "Calibration: Cohort A (Known Invalid)": "[`CALIBRATION.md`](CALIBRATION.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Calibration%3A%20Cohort%20A%20(Known%20Invalid))",
         "Calibration: Cohort C (Wild 2024–2025)": "[`CALIBRATION.md`](CALIBRATION.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Calibration%3A%20Cohort%20C%20(Wild%202024%E2%80%932025))",
         "Out-of-Domain Wild (N=60)": "[`OOD_GENERALIZATION.md`](OOD_GENERALIZATION.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Out-of-Domain%20Wild%20(N%3D60))",
-        "Preprint vs. Published (N=40)": "[`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Preprint%20vs.%20Published%20(N%3D40))",
+        "8-Field Everyday Expansion (N=160)": "[`OOD_GENERALIZATION.md`](OOD_GENERALIZATION.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=8-Field%20Everyday%20Expansion%20(N%3D160))",
+        "Preprint vs. Published (N=100)": "[`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Preprint%20vs.%20Published%20(N%3D100))",
         "Open-Review Concordance (N=100)": "[`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Open-Review%20Concordance%20(N%3D100))",
         "35-Year Secular Trend (N=915)": "[`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=35-Year%20Secular%20Trend%20(N%3D915))",
         "Career Self-Audit: S. Pond (N=164)": "[`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Career%20Self-Audit%3A%20S.%20Pond%20(N%3D164))",

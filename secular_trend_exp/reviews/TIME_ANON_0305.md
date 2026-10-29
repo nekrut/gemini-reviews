@@ -34,6 +34,6 @@ While the study addresses an interesting forensic question and deposits raw sequ
   - Proposing candidate forensic biomarkers from an unadjusted $p$-value in an $n = 2$ vs. $n = 3$ discovery comparison with no orthogonal validation (not even qRT-PCR on the same 5 samples or an independent autopsy cohort) is statistically unsupported. Moreover, in the GTEx dataset ($n = 42$), ischemia duration spans up to ~27 hours ($<2$ days), which does not overlap the 3–5 day forensic PMI window.
 
 ### 4. Reproducibility & Data Completeness
-- **Data Availability:** Raw and processed forensic prostate RNA-seq data are deposited in NCBI GEO under accession `GSE249984`. GTEx v8 prostate data were obtained from `gtexportal.org`.
+- **Data Availability:** Raw and processed forensic prostate RNA-seq data are deposited in NCBI GEO (`[ACCESSION_REDACTED]` in scrubbed input). GTEx v8 prostate data were obtained from `gtexportal.org`.
 - **Metadata & Reporting Gaps:** Individual sample RIN/DV200 scores, total read counts, mapping rates, rRNA depletion efficiency (`TruSeq Stranded Total RNA`), and the exact differential expression software (`DESeq2` vs. `edgeR` vs. `limma`) used prior to filtering are not clearly specified in the Methods.
 </Blinded Review: TIME_ANON_0305>

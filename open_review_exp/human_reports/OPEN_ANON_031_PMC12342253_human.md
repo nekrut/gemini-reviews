@@ -337,6 +337,6 @@ Submitted filename: Response to Reviewers.docx
 
 ## Data Availability Statement
 
-Patient confidentiality is paramount, especially when dealing with sensitive genetic data. While submitting real-life clusters to public databases provides an invaluable resource for research, it also carries a potential risk of breaching confidentiality. We have taken a conservative approach to mitigate this, adhering to the established protocols to protect individual privacy. As a result, only a random 10% sample of lineage A6 sequences has been submitted to GenBank. Sequence accession numbers were collected in Table I in S1 Text . The files required to re-run the phylogeographic analyses and the BEAST XML files are available at: https://github.com/Samer-Julo/HIV1-A6-in-Poland-circulation
+Patient confidentiality is paramount, especially when dealing with sensitive genetic data. While submitting real-life clusters to public databases provides an invaluable resource for research, it also carries a potential risk of breaching confidentiality. We have taken a conservative approach to mitigate this, adhering to the established protocols to protect individual privacy. As a result, only a random 10% sample of lineage A6 sequences has been submitted to GenBank. Sequence accession numbers were collected in Table I in S1 Text . The files required to re-run the phylogeographic analyses and the BEAST XML files are available at: [GITHUB_REPO_REDACTED]
 
 Articles from PLOS Pathogens are provided here courtesy of PLOS

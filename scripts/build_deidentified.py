@@ -1,12 +1,13 @@
+from pathlib import Path
 import os
 import re
 import json
 import random
 
-os.makedirs("/Users/sergei/Projects/lit-estimation/papers_anon", exist_ok=True)
-os.makedirs("/Users/sergei/Projects/lit-estimation/reviews_anon", exist_ok=True)
+os.makedirs(str(Path(__file__).resolve().parent.parent / "papers_anon", exist_ok=True)
+os.makedirs(str(Path(__file__).resolve().parent.parent / "reviews_anon", exist_ok=True)
 
-with open("/Users/sergei/Projects/lit-estimation/cohorts.json") as f:
+with open(str(Path(__file__).resolve().parent.parent / "cohorts.json") as f:
     cohorts = json.load(f)
 
 ab_papers = cohorts["cohort_a"] + cohorts["cohort_b"]
@@ -17,6 +18,7 @@ rng.shuffle(shuffled)
 anon_map = {}
 
 def scrub_manuscript(txt, meta, anon_id):
+    text = re.sub(r'(?:https?://)?\bgithub\.com/(?!spond/gemini-reviews\b)[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*', '[GITHUB_REPO_REDACTED]', text, flags=re.I)
     lines = txt.splitlines()
     # Drop the top metadata header lines (# A01..., **Title:**..., **Authors:**..., **Venue:**...)
     cleaned_lines = []
@@ -130,10 +132,10 @@ if __name__ == "__main__":
         anon_id = f"ANON_{idx:02d}"
         pmcid = meta["pmcid"]
         cid = meta["cohort_id"]
-        src_path = f"/Users/sergei/Projects/lit-estimation/papers/{cid}_{pmcid}.md"
+        src_path = fstr(Path(__file__).resolve().parent.parent / "papers/{cid}_{pmcid}.md"
         raw_txt = open(src_path).read()
         scrubbed = scrub_manuscript(raw_txt, meta, anon_id)
-        out_path = f"/Users/sergei/Projects/lit-estimation/papers_anon/{anon_id}.md"
+        out_path = fstr(Path(__file__).resolve().parent.parent / "papers_anon/{anon_id}.md"
         with open(out_path, "w") as f:
             f.write(scrubbed)
         anon_map[anon_id] = {

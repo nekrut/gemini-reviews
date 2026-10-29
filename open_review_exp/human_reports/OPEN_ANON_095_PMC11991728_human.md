@@ -184,6 +184,6 @@ Submitted filename: response.pdf
 
 ## Data Availability Statement
 
-All of the code and date required to reproduce the simulation study, empirical analyses, and figures/tables are available at https://github.com/LeoFeatherstone/pdp
+All of the code and date required to reproduce the simulation study, empirical analyses, and figures/tables are available at [GITHUB_REPO_REDACTED]
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

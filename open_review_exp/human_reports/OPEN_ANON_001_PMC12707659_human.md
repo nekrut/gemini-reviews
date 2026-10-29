@@ -259,6 +259,6 @@ Submitted filename: Response_to_Reviewers.docx
 
 ## Data Availability Statement
 
-All data generated or analyzed during this study are available in the following public repository: https://github.com/obleym/Grading_Data_Obley .
+All data generated or analyzed during this study are available in the following public repository: [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS One are provided here courtesy of PLOS

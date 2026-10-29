@@ -34,4 +34,4 @@ This study investigates the macroevolutionary drivers and convergent molecular b
 
 ## 4. Reproducibility & Data Completeness
 
-* **Data & Code Availability:** Raw sequencing reads (`BioProject PRJNA1077916`), alignments, trees, `HiSSE`/`SIMMAP`/`phyloglm` outputs, and custom scripts (`Datasets S1–S11`) are archived on Dryad/Zenodo and NCBI SRA, providing comprehensive data access.
+* **Data & Code Availability:** Raw sequencing reads (`Dryad / Zenodo [ACCESSION_REDACTED]`), alignments, trees, `HiSSE`/`SIMMAP`/`phyloglm` outputs, and custom scripts (`Datasets S1–S11`) are archived on Dryad/Zenodo and NCBI SRA, providing comprehensive data access.

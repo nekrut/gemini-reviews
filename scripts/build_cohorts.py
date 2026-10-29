@@ -1,3 +1,4 @@
+from pathlib import Path
 import urllib.request
 import urllib.parse
 import json
@@ -158,7 +159,7 @@ for domain, q_base in STRATA_C:
         c_idx += 1
 
 all_cohorts = {"cohort_a": cohort_a, "cohort_b": cohort_b, "cohort_c": cohort_c}
-with open("/Users/sergei/Projects/lit-estimation/cohorts.json", "w") as f:
+with open(str(Path(__file__).resolve().parent.parent / "cohorts.json", "w") as f:
     json.dump(all_cohorts, f, indent=2)
 
 print(f"Saved cohorts.json: A={len(cohort_a)}, B={len(cohort_b)}, C={len(cohort_c)}")

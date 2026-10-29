@@ -29,7 +29,7 @@ This is a thorough, statistically insightful, and well-validated methodological 
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open Code, Pipelines, and Simulation Archives:** `BUSTED+MH` and `BUSTED+S+MH` are integrated into open-source HyPhy ($\ge 2.5.42$), an automated Snakemake workflow for multi-model fitting and model averaging is provided at `https://github.com/veg/BUSTED_ModelTest`, and all empirical and simulated alignments are archived on Dryad and `https://data.hyphy.org/web/busteds-mh/`.
+* **Open Code, Pipelines, and Simulation Archives:** `BUSTED+MH` and `BUSTED+S+MH` are integrated into open-source HyPhy ($\ge 2.5.42$), an automated Snakemake workflow for multi-model fitting and model averaging is provided at `[GITHUB_REPO_REDACTED]`, and all empirical and simulated alignments are archived on Dryad and `https://data.hyphy.org/web/busteds-mh/`.
 * **Minor Editorial Corrections:**
   1. On line 16, the Enard et al. dataset size is written as *"9,181 of proteins"* (a transposition typo for **9,861** alignments, which is used throughout the rest of the paper).
   2. On line 164, the final sentence of the paragraph is truncated mid-clause (*"For example, among the seven datasets where the maximum likelihood estimate $\hat{\psi} > 0$ in table 1 ."*) and cites Table 1 instead of Table 3.

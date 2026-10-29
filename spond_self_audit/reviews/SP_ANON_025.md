@@ -27,4 +27,4 @@ This manuscript presents IDEPI (IDentifying EPItopes), an open-source Python sof
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Software and Data Packaging:** Exceptional reproducibility. IDEPI and its Cython `sklmrmr` dependency are released under open-source licenses on GitHub (`https://github.com/veg/idepi` and `https://github.com/nlhepler/sklmrmr`), packaged on PyPI, and distributed as a self-contained VirtualBox virtual machine with all benchmark alignments, validation datasets, and exact command-line workflows pre-configured.
+* **Software and Data Packaging:** Exceptional reproducibility. IDEPI and its Cython `sklmrmr` dependency are released under open-source licenses on GitHub (`[GITHUB_REPO_REDACTED]` and `[GITHUB_REPO_REDACTED]`), packaged on PyPI, and distributed as a self-contained VirtualBox virtual machine with all benchmark alignments, validation datasets, and exact command-line workflows pre-configured.

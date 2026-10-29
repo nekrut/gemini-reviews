@@ -1,0 +1,17 @@
+{
+  "total_catalog_records": 1703,
+  "active_fulltext_reviews_verified": 1699,
+  "open_review_ai_only_catches_total": 385,
+  "open_review_ai_only_catches_grounded_in_manuscript": 385,
+  "open_review_ai_only_catches_grounded_pct": 100.0,
+  "corpus_accession_rsid_tokens_checked": 1931,
+  "corpus_accession_rsid_tokens_verified": 1931,
+  "corpus_accession_rsid_verified_pct": 100.0,
+  "pre_correction_audit_baseline": {
+    "active_reviews_checked": 1719,
+    "reviews_with_redacted_input_accession_guess": 17,
+    "review_level_accession_guess_rate_pct": 0.99,
+    "token_level_accession_guess_rate_pct": 1.52,
+    "open_review_100_accession_guess_rate_pct": 0.0
+  }
+}

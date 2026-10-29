@@ -343,6 +343,6 @@ Submitted filename: Response to Reviewers.pdf
 
 ## Data Availability Statement
 
-An open-source Python implementation of the SpaMI toolkit is accessible at https://github.com/Gaocongqiang/SpaMI .
+An open-source Python implementation of the SpaMI toolkit is accessible at [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

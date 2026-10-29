@@ -28,5 +28,5 @@ This study resolves a major paradox in nidovirus evolutionary biology: why molec
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Code and Data Availability:** Exemplary for its class. All alignments, trees, HyPhy batch scripts, and simulation pipelines are publicly archived at `https://github.com/veg/pubs/tree/master/SARS`, and the full list of 43 GenBank accession numbers and genome coordinates for all six loci are tabulated in Table S1.
+* **Code and Data Availability:** Exemplary for its class. All alignments, trees, HyPhy batch scripts, and simulation pipelines are publicly archived at `[GITHUB_REPO_REDACTED]`, and the full list of 43 GenBank accession numbers and genome coordinates for all six loci are tabulated in Table S1.
 * **Model Transparency:** All parameter estimates, likelihood scores, and branch-specific $\omega$ distributions are fully documented.

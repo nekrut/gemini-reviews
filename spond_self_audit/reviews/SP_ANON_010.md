@@ -20,5 +20,5 @@ This resource manuscript describes the architecture, data curation standards, an
 * **Claim 3:** *Sequence-level resistance interpretation rules integrated into the `CoV-RDB` web tool enable automated flagging of reduced mAb and plasma susceptibility from user-submitted consensus or deep-sequencing data.* **`[Well Supported]`** — Validated through the `Sierra`/`Minimap2` web interface and transparent rule tables.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Exemplary open-science execution: all underlying curated CSV tables (`https://github.com/hivdb/cov-rdb`), frontend/backend source code, and mutation annotation rules are publicly released under permissive open-source licenses.
+* **Strengths:** Exemplary open-science execution: all underlying curated CSV tables (`[GITHUB_REPO_REDACTED]`), frontend/backend source code, and mutation annotation rules are publicly released under permissive open-source licenses.
 * **Deficiencies:** Adding random-effects meta-analytic pooling (weighting study rows by sample size and inverse variance while clustering by publication) alongside raw median summaries would further elevate the statistical rigor of the summary views.

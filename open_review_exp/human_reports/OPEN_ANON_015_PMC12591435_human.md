@@ -309,6 +309,6 @@ Submitted filename: Response_to_Reviewers_auresp_2.pdf
 
 ## Data Availability Statement
 
-All codes for reproducing the results are publicly available at https://github.com/AapoKorhonen/HMFGraph-Supplementary . The showcased method can be tested with our R package HMFGraph, also publicly available at Github: https://github.com/AapoKorhonen/HMFGraph .
+All codes for reproducing the results are publicly available at [GITHUB_REPO_REDACTED] . The showcased method can be tested with our R package HMFGraph, also publicly available at Github: [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

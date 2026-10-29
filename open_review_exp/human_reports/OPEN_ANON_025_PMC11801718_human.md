@@ -356,6 +356,6 @@ Submitted filename: Rebuttal letter_third submission_20241106.docx
 
 ## Data Availability Statement
 
-All relevant data are within the paper and its supporting data files. Code scripts for the retrieval and analysis of published genomic and transcriptomic datasets are deposited at https://github.com/nellymak1/Mammalian_IFITM_splicing_analysis .
+All relevant data are within the paper and its supporting data files. Code scripts for the retrieval and analysis of published genomic and transcriptomic datasets are deposited at [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Pathogens are provided here courtesy of PLOS

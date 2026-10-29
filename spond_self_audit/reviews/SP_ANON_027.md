@@ -28,5 +28,5 @@ This study leverages 65,736 HIV-1 *pol* genotypes from the New York City Departm
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Software Availability:** The network clustering tool (`HIV-TRACE`, `https://github.com/veg/hivtrace`) and LASSO modeling framework (`glmnet`) are publicly available and standard.
+* **Software Availability:** The network clustering tool (`HIV-TRACE`, `[GITHUB_REPO_REDACTED]`) and LASSO modeling framework (`glmnet`) are publicly available and standard.
 * **Data Privacy Constraints:** Raw HIV-1 *pol* sequences and patient-level demographic records cannot be publicly released due to legal public health confidentiality mandates for surveillance registries, which is appropriately documented in the Ethics Statement.

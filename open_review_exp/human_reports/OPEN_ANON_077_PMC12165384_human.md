@@ -184,6 +184,6 @@ Submitted filename: ResponseToReviewers.docx
 
 ## Data Availability Statement
 
-The murine data values used for model parameter estimation are available in the supporting data file. This file was created by digitizing data from images previously published by Skovgard et al ., DOI: 10.1016/j.omto.2021.06.006 and Zhao et al ., DOI: 10.1158/0008-5472.CAN-10-2880. MATLAB code used to produce the results included in this work is available on github at https://github.com/lacyk3/RadiallySymmetricCART .
+The murine data values used for model parameter estimation are available in the supporting data file. This file was created by digitizing data from images previously published by Skovgard et al ., DOI: 10.1016/j.omto.2021.06.006 and Zhao et al ., DOI: 10.1158/0008-5472.CAN-10-2880. MATLAB code used to produce the results included in this work is available on github at [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

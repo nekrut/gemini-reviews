@@ -1,0 +1,74 @@
+# Forensic Peer Review: FEXP_ANON_119
+
+**Overall Score:** **5.1 / 10.0** (Mixed / Salvageable) | **Scientific Core Score:** **4.1 / 8.0**  
+* **Score Breakdown:** Rigor: 1.4/3.5 | Claims: 1.2/2.5 | Biology: 1.5/2.0 | Reproducibility: 1.0/2.0
+
+---
+
+## 1. Blinded Metadata Perception
+
+* **Manuscript ID:** `FEXP_ANON_119`
+* **Perceived Domain & Topic:** Tropical Pollination Ecology / Agroforestry Conservation / Bipartite Ecological Networks; comparison of whole-bee and stingless-bee (Meliponini) floral visitation networks across coffee and silvopastoral agroforests in Costa Rica.
+* **Perceived Empirical Scope:** $N = 10$ 1-hectare agroforests (5 coffee, 5 silvopastoral) at 800–1,000 m elevation in San Luis de Monteverde, Costa Rica, sampled 3 times in the rainy season (June–July 2022) and once in the dry season (December 2022); 4,590 total collected bees (3,170 netted on flowers, 2,869 network interactions across 78 rainy-season and 36 dry-season bee species); negative binomial GLMMs, linear regressions with $\text{AICc}$ selection, `bipartite` network metrics (`w-C`, `Q`, `H2'`, `w-NODF`), PCA centrality, and `DIRTLPAwb+` quantitative modularity (`c`/`z` roles).
+
+---
+
+## 2. Executive Summary & Editorial Verdict
+
+This study quantifies plant–pollinator visitation networks across 10 diverse 1-ha agroforests (5 coffee, 5 silvopastoral) in Monteverde, Costa Rica, comparing the full bee assemblage against the economically important stingless bee (Meliponini) subset. Using GLMMs, linear models with $\text{AICc}$ selection across 10 candidate models, Patefield (`r2d`) null-standardized network metrics, PCA species centrality, and `DIRTLPAwb+` modularity roles (`c` and `z` scores), the authors report that bee abundance and richness do not significantly differ between coffee and silvopastoral systems, that agroforests with higher tree species richness have lower weighted connectance (`w-C`) and nestedness (`w-NODF`) but higher modularity (`Q`) and specialization (`H2'`), and that shared key plant species (*Cosmos sulphureus*, *Milleria quinqueflora*, *Hamelia patens*, *Ehretia latifolia*, *Montanoa guatemalensis*, *Musa acuminata*) support both stingless bees and the broader bee community.
+
+**Editorial Verdict: Major Revision / Salvageable Field Dataset with Modeling and Reporting Flaws (5.1 / 10.0).** The field sampling effort (4,590 bees across 10 1-ha agroforests with exhaustive floral censuses and tree DBH/height/shade inventories) is a valuable empirical contribution to Neotropical agroforestry pollination ecology. However, the statistical analysis and manuscript text contain several technical contradictions that require correction:
+1. **Ambiguous and potentially invalid transformation/standardization of network metrics:** Section 2.3 (line 50) states that *"Network indices were log transformed to meet the assumptions of normality,"* while Section 2.3.1 (line 71) states that indices were standardized into Patefield (`r2d`) Z-scores because raw indices depend on network size. In Section 3.4 (lines 125, 146), all `w-C` and `w-NODF` Z-scores are negative ($Z < -2.5$), which cannot be log-transformed. If the regressions in Figures 4–5 modeled log-transformed *raw* indices rather than null-standardized Z-scores, the negative association between connectance (`w-C`) and tree species richness is confounded by network size (matrix dimensions). Furthermore, Section 2.3.1 (lines 61 and 69) defines the `w-NODF` scale backwards (*"where 0 indicates fully nested networks and 100 represents random networks"*, whereas in Almeida-Neto & Ulrich 2011, 0 indicates non-nested and 100 indicates maximally nested).
+2. **Overinterpreting null results ($95\%\text{ CI}$ spanning zero) as positive management effects:** In Results Sections 3.1–3.2 (lines 101, 110), the $95\%$ confidence intervals for all predictors of bee abundance and bee species richness span zero, and the null model is either the top model or within $\Delta\text{AICc} < 2$. Yet the Discussion (line 208) and Conclusions (line 25 of chunk 2) claim that *"increasing the number of tree species, and the number of flowering plant species are the best ways to positively impact the bee community."*
+3. **Missing main-text tables (`Tables 1–4`), duplicated paragraphs, and seasonal contradictions:** All four main tables (`Table 1` through `Table 4`) referenced throughout the text are omitted from the manuscript body; Section 2.3.1 duplicates a four-metric definition block verbatim (lines 61 vs. 63–69); Section 3.4.4 mislabels nestedness as "modularity" (line 148); and *Byrsonima crassifolia* is reported as a rainy-season connector in Results (line 181) but as a dry-season connector in the Discussion (line 9 of chunk 2).
+
+### Assessment of Specific Claims
+
+* **Claim 1 (Key flowering plant species identified via PCA centrality and module hubs—such as *Cosmos sulphureus*, *Milleria quinqueflora*, *Hamelia patens*, *Ehretia latifolia*, and *Montanoa guatemalensis*—are shared between the stingless bee subnetwork and the entire bee community): `[Well Supported]`.**  
+  Stingless bees accounted for 55% of rainy-season and 86% of dry-season floral captures, and the overlap in high-centrality/module-hub plants across both network definitions is empirically grounded (and the authors appropriately note the caveat that *Musa acuminata* is driven 99% by meliponine visits).
+* **Claim 2 (Increasing tree species richness in diverse agroforests decreases network connectance [`w-C`] and nestedness [`w-NODF`] while increasing modularity [`Q`] and specialization [`H2'`]): `[Fragile]`.**  
+  First, fitting 10 candidate regression models via $\text{AICc}$ on just $N = 10$ agroforests risks overfitting to small-sample noise. Second, it is unclear whether the regressions used log-transformed raw network indices (line 50) or Patefield Z-scores (line 71); raw connectance mechanically declines with network richness, and the authors' definition of `w-NODF` (lines 61, 69) inverts the direction of nestedness.
+* **Claim 3 (Increasing the number of flowering plant species and open blooms significantly increases bee abundance and shapes bee species richness and composition): `[Overstated]`.**  
+  Directly contradicted by Results Sections 3.1–3.3 (lines 101, 110, 115), where the model-averaged 95% confidence intervals for floral richness, open blooms, and shade cover all span zero, the null model is top or tied for bee richness and abundance, and the dbRDA effect of open blooms on composition is marginal ($F_{1,8} = 1.6, p = 0.08$).
+* **Claim 4 (No plant species functioned as a network hub [`c > c_crit, z > z_crit`] in any of the four networks, whereas specific species acted as connectors across seasons): `[Moderately Supported]`.**  
+  The `DIRTLPAwb+` / `vaznull` topological role classification is standard, though the Discussion (line 9 of chunk 2) contradicts the Results (line 181) on whether *Byrsonima crassifolia* was a connector in the rainy season or the dry season.
+
+---
+
+## 3. Forensic Defect Inventory
+
+### Defect 1: Contradictory Log-Transformation vs. Z-Score Standardization of Network Metrics and Inverted `w-NODF` Scale Definition [ Pillar 3, Pillar 4 — Critical ]
+* **Location:** Section 2.3 (line 50), Section 2.3.1 (lines 61, 69, 71), and Section 3.4 (lines 125, 132, 139, 146).
+* **Forensic Evidence:**
+  1. **Log-transformation vs. negative Z-scores:** Line 50 states *"Network indices were log transformed to meet the assumptions of normality."* Line 71 states *"Network indices are not directly comparable given their dependency on network size and therefore were standardized using the Patefield null-model algorithm (r2d method)... to obtain a Z-score. Z-scores are directly comparable."* In Section 3.4, all 10 agroforests have $Z_{\text{w-C}} < -2.5$ (line 125) and 9 of 10 have $Z_{\text{w-NODF}} < -2.5$ (line 146). Negative Z-scores cannot be log-transformed. If the linear regressions in Section 3.4 modeled $\log(\text{raw index})$ instead of the Patefield Z-scores, then the strong negative relationship between `w-C` and tree species richness (92% AICc support, line 125) is confounded by network size because unweighted and weighted connectance decrease hyperbolically as matrix dimensions increase.
+  2. **Inverted definition of `w-NODF`:** Lines 61 and 69 state: *"Values of nestedness range from 0 to 100, where 0 indicates fully nested networks and 100 represents random networks."* In the `bipartite` package (`weighted NODF`, Almeida-Neto & Ulrich 2011), `0` denotes complete absence of nestedness and `100` denotes maximum nestedness (not random networks).
+* **Fix:** Clarify whether the linear regressions in Section 3.4 modeled the raw log-transformed indices or the Patefield Z-scores ($\Delta\text{metric} / \sigma_{\text{null}}$). Ensure all regressions of network structure against tree richness use null-standardized Z-scores (or control for realized network matrix size) so that structural effects are decoupled from species richness, and correct the definition of `w-NODF` in Section 2.3.1.
+
+### Defect 2: Dredging 10 Candidate Models on $N = 10$ Agroforests and Overstating Null GLMM Results [ Pillar 1, Pillar 4, Pillar 5 — Major ]
+* **Location:** Section 2.3 (line 52), Section 3.1 (line 101), Section 3.2 (line 110), Section 3.3 (line 115), Discussion Section 4.1 (line 208), and Conclusions Section 4.8 (line 25 of chunk 2).
+* **Forensic Evidence:**
+  1. **Model selection on $N = 10$ observations:** For each of the 8 network response variables (4 indices $\times$ 2 bee groups), the authors compared 10 candidate linear regression models (including a 2-predictor model with 4 estimated parameters: intercept, 2 slopes, variance) on $N = 10$ agroforests using $\text{AICc}$ (line 52). Screening 8 correlated vegetation predictors on $N = 10$ data points inflates false-positive model selection weights.
+  2. **Contradiction between null GLMM results and Discussion/Conclusion claims:** In Sections 3.1 and 3.2, the 95% confidence intervals for all fixed effects on bee abundance and bee species richness span zero, and the null model is the top model for bee richness and within $\equiv 3\%$ model weight (19% vs. 22%) for bee abundance. Yet Section 4.1 (line 208) asserts *"We found that flower abundance and flowering plant species richness were the two most important management practices in diverse agroforests influencing bee abundance, bee species richness and bee community composition,"* and Section 4.8 concludes *"we also provide evidence that certain management actions such as increasing the number of tree species, and the number of flowering plant species are the best ways to positively impact the bee community."*
+* **Fix:** Temper the Discussion and Conclusions to accurately reflect that across these 10 already-diverse agroforests, neither floral richness, open bloom count, shade cover, nor agroforest type (coffee vs. silvopasture) had a statistically significant effect on bee abundance, bee species richness, or community composition.
+
+### Defect 3: Omitted Main Tables (`Tables 1–4`), Verbatim Duplicated Paragraphs, and Factual Inconsistencies Across Sections [ Pillar 7 — Major ]
+* **Location:** Section 2.3.1 (lines 61 vs. 63–69), Section 3.1 (line 99) vs. Section 3.5.1 (lines 161, 163), Section 3.4.4 (line 148), Section 3.5.2 (line 181) vs. Section 4.6 (line 9 of chunk 2), and Section 4.7 (line 18 of chunk 2).
+* **Forensic Evidence:**
+  1. **Missing Tables 1–4:** `Table 1` (agroforest characteristics and network Z-scores), `Table 2` (AICc model selection results), `Table 3` (bee species/specimen list), and `Table 4` (plant centrality and modularity roles) are cited throughout the text but are completely absent from the manuscript file.
+  2. **Verbatim duplicated paragraph:** Lines 63–69 repeat word-for-word the exact four definitions of `w-C`, `modularity`, `H2'`, and `w-NODF` already printed in line 61.
+  3. **Seasonal contradiction for *Byrsonima crassifolia*:** Results Section 3.5.2 (line 181) states that *B. crassifolia* was identified as a connector in the **rainy season** meliponine network, whereas Discussion Section 4.6 (line 9 of chunk 2) states it was identified as a connector in the **dry season** meliponine network.
+  4. **Copy-paste error in Section 3.4.4 (Nestedness):** Line 148 (under `3.4.4. Nestedness`) states *"suggesting that there is not enough evidence to conclude that these variables have an effect on **modularity** in the meliponine network"*, copied from line 134 (`3.4.2. Modularity`).
+  5. **Bee specimen and species count discrepancies:** Line 99 reports $3,170$ bees netted from flowers, whereas the rainy-season ($1,988$) and dry-season ($881$) floral networks sum to $2,869$ interactions (an unexplained difference of $301$ flower-netted bees). Line 161 reports **78** bee species in the rainy-season network, whereas Discussion line 18 (chunk 2) reports **77** rainy-season bee species.
+  6. **Taxonomic spelling inconsistencies:** *Montanoa guatemalensis* is spelled three different ways (`Montonoa guatamelensis` in line 24, `Montonoa guatamalensis` in lines 163, 170, 201); *Cosmos sulphureus* is spelled `Cosmos sulphereus` in line 201; *Plebeia* is spelled `Plebia` in line 210 and `jatiformes` vs. `jatiformis` in lines 192, 210; *Melipona beecheii* is spelled `Melipona beechii` in line 20 of chunk 2.
+
+---
+
+## 4. Quantitative Rubric Scoring
+
+| Rubric Dimension | Score | Max | Diagnostic Justification |
+| :--- | :---: | :---: | :--- |
+| **1. Methodological & Statistical Rigor** | **1.4** | **3.5** | Solid bipartite network null-modeling (`r2d`, `DIRTLPAwb+`/`vaznull`) and rarefaction, but undermined by ambiguous log-transformation vs. negative Z-score regression, inverted `w-NODF` definition, and screening 10 models on $N=10$ farms. |
+| **2. Claim-to-Evidence Alignment** | **1.2** | **2.5** | Key plant species overlap between stingless bees and all bees is well supported, but claims that floral richness and blooms significantly drive bee abundance/richness contradict the null GLMM CIs, and *Byrsonima crassifolia*'s seasonal role is contradicted between Results and Discussion. |
+| **3. Data Integrity & Biological Plausibility** | **1.5** | **2.0** | Strong, well-designed field sampling across 10 1-ha agroforests (4,590 bees, separate accounting of honey-bait vs. floral sweep captures, thoughtful biological discussion of *Musa acuminata* and stingless bee tree-nesting). |
+| **4. Reproducibility & Data Integrity** | **1.0** | **2.0** | All four main tables (`Tables 1–4`) are missing from the text; lines 63–69 duplicate line 61 verbatim; 301 flower-netted bees are unaccounted for between Section 3.1 ($3,170$) and Section 3.5 ($2,869$); data promised in Symbiota without accession numbers or code. |
+| **Total Composite Score** | **5.1** | **10.0** | **Mixed / Salvageable** (Scientific Core Score: **4.1 / 8.0**) |

@@ -1337,6 +1337,696 @@
         "total_with_zero_back_repro": 0.7,
         "exceeds_single_run_mdc95_total": false
       }
+    },
+    {
+      "ppr_id": "PPR1015515",
+      "ppr_doi": "10.1101/2025.05.01.651714",
+      "ppr_year": 2025,
+      "ppr_date": "2025-05-07",
+      "pmid": "41214905",
+      "title": "Chromosome-level genome assembly of the photobiont alga  <i>Trebouxia</i>  sp. \u2018A48\u2019 from  <i>Xanthoria parietina</i>  provides new insight into the lichen symbiosis",
+      "pmcid": "PMC12712428",
+      "journal": "New Phytol",
+      "year": 2026,
+      "doi": "10.1111/nph.70728",
+      "authors": "Tagirdzhanova G, Raistrick J, Talbot NJ.",
+      "citedByCount": 4,
+      "pair_id": "PAIR_21",
+      "cohort_id": "PAIR_21",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_23",
+      "preprint_wave": 1,
+      "preprint_bytes": 34986,
+      "published_anon_id": "PR_W2_41",
+      "published_wave": 2,
+      "published_bytes": 57931
+    },
+    {
+      "ppr_id": "PPR1029561",
+      "ppr_doi": "10.21203/rs.3.rs-6579710/v1",
+      "ppr_year": 2025,
+      "ppr_date": "2025-06-02",
+      "pmid": "42635125",
+      "title": "Distinguishing self from non-self RNA by editing-specific inosine patterns",
+      "pmcid": "PMC13501140",
+      "journal": "Nucleic Acids Res",
+      "year": 2026,
+      "doi": "10.1093/nar/gkag845",
+      "authors": "Varada R, Leuchtenberger AF, Vesely C, Kaczmarek B, Mansouri Khosravi H, Mandl TC, Milanovic K, Honarmand Tamizkar K, Rajendra V, Senoner H, Steinbichl L, Borojevic M, Sombke A, Schmidt K, Eckhard M, Hofacker IL, Walkley C, Heraud-Farlow JE, Picardi E, Bernecky C, Jantsch MF.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_22",
+      "cohort_id": "PAIR_22",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_22",
+      "published_wave": 1,
+      "published_bytes": 77131,
+      "preprint_anon_id": "PR_W2_42",
+      "preprint_wave": 2,
+      "preprint_bytes": 57424
+    },
+    {
+      "ppr_id": "PPR1046707",
+      "ppr_doi": "10.1101/2025.07.04.663135",
+      "ppr_year": 2025,
+      "ppr_date": "2025-07-04",
+      "pmid": "41922341",
+      "title": "Immune-deficient bacteria serve as gateways to genetic exchange and microbial evolution",
+      "pmcid": "PMC13216270",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-71467-z",
+      "authors": "Figueroa W, Sabnis A, Ibarra-Ch\u00e1vez R, Gorzynski J, Fitzgerald JR, Penad\u00e9s JR.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_23",
+      "cohort_id": "PAIR_23",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_35",
+      "preprint_wave": 1,
+      "preprint_bytes": 41235,
+      "published_anon_id": "PR_W2_45",
+      "published_wave": 2,
+      "published_bytes": 56128
+    },
+    {
+      "ppr_id": "PPR1035806",
+      "ppr_doi": "10.1101/2025.06.12.659331",
+      "ppr_year": 2025,
+      "ppr_date": "2025-06-12",
+      "pmid": "41980963",
+      "title": "Phage-Assisted Evolution of Allosteric Protein Switches",
+      "pmcid": "PMC13079736",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-71717-0",
+      "authors": "Southern NT, von Bachmann A, Hovsepyan A, Griebl M, Wolf B, Lemmen N, Kroell AS, Westermann S, Mathony J, Niopek D.",
+      "citedByCount": 3,
+      "pair_id": "PAIR_24",
+      "cohort_id": "PAIR_24",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_43",
+      "published_wave": 1,
+      "published_bytes": 101445,
+      "preprint_anon_id": "PR_W2_27",
+      "preprint_wave": 2,
+      "preprint_bytes": 42275
+    },
+    {
+      "ppr_id": "PPR1232954",
+      "ppr_doi": "10.64898/2025.12.01.691619",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-03",
+      "pmid": "41629301",
+      "title": "Directed cortico-limbic dialogue in the human brain",
+      "pmcid": "PMC12966484",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-68701-z",
+      "authors": "van Maren E, Mignardot CG, Widmer R, Friedrichs-Maeder C, Ans\u00f3 J, Nevalainen P, Fuchs M, Pollo C, Tzovara A, Proix T, Schindler KA, Baud MO.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_25",
+      "cohort_id": "PAIR_25",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_33",
+      "preprint_wave": 1,
+      "preprint_bytes": 35423,
+      "published_anon_id": "PR_W2_33",
+      "published_wave": 2,
+      "published_bytes": 55308
+    },
+    {
+      "ppr_id": "PPR1028689",
+      "ppr_doi": "10.1101/2025.05.30.657039",
+      "ppr_year": 2025,
+      "ppr_date": "2025-05-30",
+      "pmid": "42143056",
+      "title": "Dysfunction of a SET3-like complex underlies a family of related neurological disorders",
+      "pmcid": "PMC13385800",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-73227-5",
+      "authors": "Paton KM, Alexander-Howden B, Hare JI, Guy J, Chhatbar K, Yudina M, Morris ST, Walls R, Mathieson T, Spanos C, Bird AP, Lyst MJ.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_26",
+      "cohort_id": "PAIR_26",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_24",
+      "published_wave": 1,
+      "published_bytes": 79911,
+      "preprint_anon_id": "PR_W2_34",
+      "preprint_wave": 2,
+      "preprint_bytes": 48767
+    },
+    {
+      "ppr_id": "PPR1232639",
+      "ppr_doi": "10.64898/2025.12.04.692101",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-06",
+      "pmid": "42151135",
+      "title": "Nicotine biosynthesis completed by cryptic activating glucosylation",
+      "pmcid": "PMC13184244",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-026-72705-0",
+      "authors": "Schwabe BTW, Angstman IM, Vollheyde K, Ingold Z, Li J, Stankevich KS, Spicer CD, Fascione MA, Grogan G, Geu-Flores F, Lichman BR.",
+      "citedByCount": 3,
+      "pair_id": "PAIR_27",
+      "cohort_id": "PAIR_27",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_36",
+      "preprint_wave": 1,
+      "preprint_bytes": 48264,
+      "published_anon_id": "PR_W2_35",
+      "published_wave": 2,
+      "published_bytes": 62072
+    },
+    {
+      "ppr_id": "PPR1003774",
+      "ppr_doi": "10.1101/2025.04.09.647970",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-15",
+      "pmid": "40966508",
+      "title": "A simple, fast and cost-efficient protocol for ultra-sensitive ribosome profiling",
+      "pmcid": "PMC12448852",
+      "journal": "Nucleic Acids Res",
+      "year": 2025,
+      "doi": "10.1093/nar/gkaf902",
+      "authors": "Koubek J, Jetzinger K, Dror S, Irastortza-Olaziregi M, Frank D, Kotan I, Santos J, Tippmann F, Lafrenz P, Kaessmann H, Amster-Choder O, Bukau B, Kramer G.",
+      "citedByCount": 7,
+      "pair_id": "PAIR_28",
+      "cohort_id": "PAIR_28",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_30",
+      "published_wave": 1,
+      "published_bytes": 46987,
+      "preprint_anon_id": "PR_W2_29",
+      "preprint_wave": 2,
+      "preprint_bytes": 33320
+    },
+    {
+      "ppr_id": "PPR957450",
+      "ppr_doi": "10.1101/2024.12.16.628649",
+      "ppr_year": 2024,
+      "ppr_date": "2024-12-20",
+      "pmid": "42166216",
+      "title": "Lipopolysaccharide stimulates dynamic changes in B cell metabolism to promote proliferation",
+      "pmcid": "PMC13193715",
+      "journal": "Elife",
+      "year": 2026,
+      "doi": "10.7554/elife.109093",
+      "authors": "Cheung DMS, Razsolkov M, Bonacina F, Andrews S, Sumoreeah MC, Sinclair LV, Howden AJM, Arthur JSC.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_29",
+      "cohort_id": "PAIR_29",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_26",
+      "preprint_wave": 1,
+      "preprint_bytes": 82063,
+      "published_anon_id": "PR_W2_31",
+      "published_wave": 2,
+      "published_bytes": 126593
+    },
+    {
+      "ppr_id": "PPR1215075",
+      "ppr_doi": "10.64898/2025.11.30.691401",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-02",
+      "pmid": "42418335",
+      "title": "Disentangling Cephalopod Chromatophores Motor Units with Computer Vision",
+      "pmcid": "PMC13345625",
+      "journal": "Elife",
+      "year": 2026,
+      "doi": "10.7554/elife.110074",
+      "authors": "Renard MDM, Ukrow J, Elmaleh M, Evans DA, Wu Y, Liang X, Laurent G.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_30",
+      "cohort_id": "PAIR_30",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_37",
+      "published_wave": 1,
+      "published_bytes": 79144,
+      "preprint_anon_id": "PR_W2_47",
+      "preprint_wave": 2,
+      "preprint_bytes": 63387
+    },
+    {
+      "ppr_id": "PPR1012188",
+      "ppr_doi": "10.21203/rs.3.rs-6079410/v1",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-29",
+      "pmid": "41330943",
+      "title": "The nasal microbiome redefines Staphylococcus aureus colonisation",
+      "pmcid": "PMC12672568",
+      "journal": "Nat Commun",
+      "year": 2025,
+      "doi": "10.1038/s41467-025-66564-4",
+      "authors": "Aggarwal D, Bellis KL, Blane B, de Goffau MC, Wagner J, Ng DYK, Raven KE, Naydenova P, Kaptoge S, Burton S, Henry R, Perry C, Walker MR, Moore C, Churcher C, Girgis ST, de Sousa CR, Sarkane L, Brennan J, Akram A, Duthie S, Johnson E, Juhasz M, Anderson D, Irvine S, McMahon A, Lay L, Salter SJ, Raisen C, Ba X, Holmes M, van Tonder AJ, Di Angelantonio E, Butterworth AS, Geoghegan JA, Danesh J, Parkhill J, Peacock SJ, Harrison EM.",
+      "citedByCount": 9,
+      "pair_id": "PAIR_31",
+      "cohort_id": "PAIR_31",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_25",
+      "preprint_wave": 1,
+      "preprint_bytes": 50411,
+      "published_anon_id": "PR_W2_30",
+      "published_wave": 2,
+      "published_bytes": 79114
+    },
+    {
+      "ppr_id": "PPR1051716",
+      "ppr_doi": "10.1101/2025.07.11.664136",
+      "ppr_year": 2025,
+      "ppr_date": "2025-07-16",
+      "pmid": "42189994",
+      "title": "Ecological opportunity and the onset of polyploid niche expansion waves",
+      "pmcid": "PMC13229277",
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": 2026,
+      "doi": "10.1073/pnas.2522071123",
+      "authors": "Kauai F, Van de Peer Y, Bonte D.",
+      "citedByCount": 4,
+      "pair_id": "PAIR_32",
+      "cohort_id": "PAIR_32",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_21",
+      "published_wave": 1,
+      "published_bytes": 53109,
+      "preprint_anon_id": "PR_W2_49",
+      "preprint_wave": 2,
+      "preprint_bytes": 42740
+    },
+    {
+      "ppr_id": "PPR1009499",
+      "ppr_doi": "10.1101/2025.04.23.650248",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-23",
+      "pmid": "42411453",
+      "title": "Optimised genome editing for precise DNA insertion and substitution using Prime Editors in zebrafish",
+      "pmcid": "PMC13341114",
+      "journal": "Elife",
+      "year": 2026,
+      "doi": "10.7554/elife.107475",
+      "authors": "Ono Y, Peterka M, Love M, Khan A, Bowers F, Bhandari A, Gordon E, Ball JS, Hammond C, Tyler CR, Rees S, Bohlooly-Y M, Maresca M, Scholpp S.",
+      "citedByCount": 4,
+      "pair_id": "PAIR_33",
+      "cohort_id": "PAIR_33",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_32",
+      "preprint_wave": 1,
+      "preprint_bytes": 41666,
+      "published_anon_id": "PR_W2_22",
+      "published_wave": 2,
+      "published_bytes": 63032
+    },
+    {
+      "ppr_id": "PPR1229765",
+      "ppr_doi": "10.64898/2025.12.17.694863",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-17",
+      "pmid": "42520076",
+      "title": "Biofilm formation during pneumococcal carriage imprints naturally acquired humoral immunity",
+      "pmcid": "PMC13426961",
+      "journal": "PLoS Pathog",
+      "year": 2026,
+      "doi": "10.1371/journal.ppat.1013826",
+      "authors": "Lane JR, Mauser H, Santana-Krimskaya SE, Konda VS, DePass A, Ercoli G, Prokopczuk FI, Mohasin M, D'Mello A, Tettelin H, Brown JS, Reyes LF, Orihuela CJ.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_34",
+      "cohort_id": "PAIR_34",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "published_anon_id": "PR_W1_41",
+      "published_wave": 1,
+      "published_bytes": 49273,
+      "preprint_anon_id": "PR_W2_32",
+      "preprint_wave": 2,
+      "preprint_bytes": 35051
+    },
+    {
+      "ppr_id": "PPR1005112",
+      "ppr_doi": "10.1101/2025.04.10.648203",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-16",
+      "pmid": "41491153",
+      "title": "The visual system of the longest-living vertebrate, the Greenland shark",
+      "pmcid": "PMC12770505",
+      "journal": "Nat Commun",
+      "year": 2026,
+      "doi": "10.1038/s41467-025-67429-6",
+      "authors": "Fogg LG, Tom E, Policarpo M, Cho W, Gao F, Hii D, Fawcett AE, Boileau N, Bech-Poulsen A, Steffensen KF, Ng CJ, Bushnell PG, Steffensen JF, Brill R, Salzburger W, Skowronska-Krawczyk D.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_35",
+      "cohort_id": "PAIR_35",
+      "venue_tier": "Tier 1/2 (Selective Flagship/Society)",
+      "preprint_anon_id": "PR_W1_46",
+      "preprint_wave": 1,
+      "preprint_bytes": 32231,
+      "published_anon_id": "PR_W2_48",
+      "published_wave": 2,
+      "published_bytes": 52162
+    },
+    {
+      "ppr_id": "PPR954378",
+      "ppr_doi": "10.1101/2024.12.12.628171",
+      "ppr_year": 2024,
+      "ppr_date": "2024-12-12",
+      "pmid": "41663464",
+      "title": "Functional imaging of time on task and the involvement of dopaminergic and cholinergic substrates in cognitive effort and reward",
+      "pmcid": "PMC12953907",
+      "journal": "Sci Rep",
+      "year": 2026,
+      "doi": "10.1038/s41598-026-37370-9",
+      "authors": "Orsini C, Bosch JE, Labek K, Viviani R.",
+      "citedByCount": 3,
+      "pair_id": "PAIR_36",
+      "cohort_id": "PAIR_36",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_29",
+      "published_wave": 1,
+      "published_bytes": 50989,
+      "preprint_anon_id": "PR_W2_28",
+      "preprint_wave": 2,
+      "preprint_bytes": 42977
+    },
+    {
+      "ppr_id": "PPR1232357",
+      "ppr_doi": "10.64898/2025.12.04.691221",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-09",
+      "pmid": "42581054",
+      "title": "A large-scale dataset of functional mouse ganglion cell layer responses",
+      "pmcid": "PMC13462126",
+      "journal": "Sci Data",
+      "year": 2026,
+      "doi": "10.1038/s41597-026-08026-0",
+      "authors": "Gonschorek D, Oesterle J, Zenkel T, D'Agostino F, Cai C, Dyszkant N, Szatko KP, Deja F, Schwerd-Kleine T, Arlinghaus R, Franke K, Zhao Z, Schubert T, Berens P, Euler T.",
+      "citedByCount": 3,
+      "pair_id": "PAIR_37",
+      "cohort_id": "PAIR_37",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_44",
+      "preprint_wave": 1,
+      "preprint_bytes": 42914,
+      "published_anon_id": "PR_W2_26",
+      "published_wave": 2,
+      "published_bytes": 62653
+    },
+    {
+      "ppr_id": "PPR1010400",
+      "ppr_doi": "10.21203/rs.3.rs-6395847/v1",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-25",
+      "pmid": "40764348",
+      "title": "NanoTag - an IgG-free method for mapping DNA-protein interactions",
+      "pmcid": "PMC12325602",
+      "journal": "Sci Rep",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-13316-5",
+      "authors": "Dimitriu MA, Arzate-Mej\u00eda RG, Steg LC, Germain PL, Mansuy IM.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_38",
+      "cohort_id": "PAIR_38",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_42",
+      "published_wave": 1,
+      "published_bytes": 46878,
+      "preprint_anon_id": "PR_W2_40",
+      "preprint_wave": 2,
+      "preprint_bytes": 31315
+    },
+    {
+      "ppr_id": "PPR1271087",
+      "ppr_doi": "10.64898/2025.12.04.25341619",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-05",
+      "pmid": "41917253",
+      "title": "Population pharmacokinetics and target attainment of pretomanid in rifampicin-resistant tuberculosis patients.",
+      "pmcid": "PMC13180996",
+      "journal": "Sci Rep",
+      "year": 2026,
+      "doi": "10.1038/s41598-026-46217-2",
+      "authors": "Nyang'wa BT, Motta I, Moodliar R, Solodovnikova V, Rajaram S, Rasool M, Berry C, Huang Z, Davies G, Moore DAJ, Kloprogge F.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_39",
+      "cohort_id": "PAIR_39",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_38",
+      "preprint_wave": 1,
+      "published_anon_id": "PR_W2_24",
+      "published_wave": 2,
+      "preprint_bytes": 15903,
+      "published_bytes": 24369
+    },
+    {
+      "ppr_id": "PPR1037482",
+      "ppr_doi": "10.1101/2025.06.11.659201",
+      "ppr_year": 2025,
+      "ppr_date": "2025-06-17",
+      "pmid": "41008613",
+      "title": "Gene duplication, translocation and molecular evolution of  <i>Dmrt1</i>  and related sex-determining genes in anurans",
+      "pmcid": "PMC12467463",
+      "journal": "Biomolecules",
+      "year": 2025,
+      "doi": "10.3390/biom15091306",
+      "authors": "Shinde SS, Veltsos P, Ma WJ.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_40",
+      "cohort_id": "PAIR_40",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_39",
+      "published_wave": 1,
+      "published_bytes": 78452,
+      "preprint_anon_id": "PR_W2_25",
+      "preprint_wave": 2,
+      "preprint_bytes": 61123
+    },
+    {
+      "ppr_id": "PPR1004274",
+      "ppr_doi": "10.1101/2025.04.09.647556",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-15",
+      "pmid": "40584962",
+      "title": "Decoding stimulus-specific regulation of promoter activity of p53 target genes",
+      "pmcid": "PMC12202600",
+      "journal": "Front Cell Dev Biol",
+      "year": 2025,
+      "doi": "10.3389/fcell.2025.1603603",
+      "authors": "Vigliotti F, Engelmann N, Sinzger-D'Angelo M, Koeppl H, Loewer A.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_41",
+      "cohort_id": "PAIR_41",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_31",
+      "preprint_wave": 1,
+      "preprint_bytes": 54906,
+      "published_anon_id": "PR_W2_44",
+      "published_wave": 2,
+      "published_bytes": 64212
+    },
+    {
+      "ppr_id": "PPR1030901",
+      "ppr_doi": "10.1101/2025.06.02.657343",
+      "ppr_year": 2025,
+      "ppr_date": "2025-06-04",
+      "pmid": "41188480",
+      "title": "TGF-beta coordinates changes in Keratin gene expression during complex tissue regeneration",
+      "pmcid": "PMC12586446",
+      "journal": "Sci Rep",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-22590-2",
+      "authors": "Meshram DD, Liu Y, Worth M, Zhang C, Carney TJ, Roehl HH.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_42",
+      "cohort_id": "PAIR_42",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_40",
+      "published_wave": 1,
+      "published_bytes": 52476,
+      "preprint_anon_id": "PR_W2_23",
+      "preprint_wave": 2,
+      "preprint_bytes": 30701
+    },
+    {
+      "ppr_id": "PPR1004933",
+      "ppr_doi": "10.21203/rs.3.rs-5957432/v1",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-16",
+      "pmid": "40659819",
+      "title": "Long-Term Benefits of TUDCA Supplement in ARSACS Zebrafish Model",
+      "pmcid": "PMC12260040",
+      "journal": "Sci Rep",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-10850-0",
+      "authors": "Naef V, Vecchia SD, Giacich M, Licitra R, Bachetti T, Vargas GC, Ponassi M, Santorelli FM.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_43",
+      "cohort_id": "PAIR_43",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_34",
+      "preprint_wave": 1,
+      "preprint_bytes": 48926,
+      "published_anon_id": "PR_W2_21",
+      "published_wave": 2,
+      "published_bytes": 71204
+    },
+    {
+      "ppr_id": "PPR1011427",
+      "ppr_doi": "10.21203/rs.3.rs-6333922/v1",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-28",
+      "pmid": "40796628",
+      "title": "Genomic analysis of Mycobacterium tuberculosis in Thailand reveals circulating lineage diversity, transmission, and drug resistance mutations",
+      "pmcid": "PMC12344131",
+      "journal": "Sci Rep",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-15093-7",
+      "authors": "Thawong N, Srilohasin P, Phelan JE, Phornsiricharoenphant W, Tongsima S, Suriyaphol P, Prammananan T, Faksri K, Sawaengdee W, Wang L, Hinthong W, Hibberd ML, Campino S, Wattanapokayakit S, Mahasirimongkol S, Chaiprasert A, Clark TG.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_44",
+      "cohort_id": "PAIR_44",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_49",
+      "published_wave": 1,
+      "published_bytes": 41225,
+      "preprint_anon_id": "PR_W2_50",
+      "preprint_wave": 2,
+      "preprint_bytes": 29812
+    },
+    {
+      "ppr_id": "PPR1008001",
+      "ppr_doi": "10.1101/2025.04.23.650272",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-23",
+      "pmid": "41085286",
+      "title": "Activation dynamics and assembly of root zone soil bacterial communities in response to stress-associated phytohormones",
+      "pmcid": "PMC12584755",
+      "journal": "Microbiol Spectr",
+      "year": 2025,
+      "doi": "10.1128/spectrum.01789-25",
+      "authors": "Bandopadhyay S, Bagchi O, Shade A.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_45",
+      "cohort_id": "PAIR_45",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_47",
+      "preprint_wave": 1,
+      "preprint_bytes": 41918,
+      "published_anon_id": "PR_W2_36",
+      "published_wave": 2,
+      "published_bytes": 56635
+    },
+    {
+      "ppr_id": "PPR1232482",
+      "ppr_doi": "10.64898/2025.12.03.692149",
+      "ppr_year": 2025,
+      "ppr_date": "2025-12-08",
+      "pmid": "42311381",
+      "title": "Microbiome-behavior coupling shapes infant adaptation to early maternal unpredictability",
+      "pmcid": "PMC13269231",
+      "journal": "Front Microbiol",
+      "year": 2026,
+      "doi": "10.3389/fmicb.2026.1830339",
+      "authors": "Amso D, Fahur Bottino G, Forest TT, Bonham KS, Zieff MR, Patel F, Miles M, Herr D, Khula South Africa Data Collection Team, Espinoza-Heredia C, D'Amato CL, Ren J, Gladstone M, Mbale E, Alexander DC, Jones DK, Williams SCR, Fifer WP, Gabard-Durnam LJ, Donald KA, Klepac-Ceraj V.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_46",
+      "cohort_id": "PAIR_46",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_27",
+      "published_wave": 1,
+      "published_bytes": 69729,
+      "preprint_anon_id": "PR_W2_43",
+      "preprint_wave": 2,
+      "preprint_bytes": 57654
+    },
+    {
+      "ppr_id": "PPR1029360",
+      "ppr_doi": "10.1101/2025.05.30.657047",
+      "ppr_year": 2025,
+      "ppr_date": "2025-05-30",
+      "pmid": "42069813",
+      "title": "Development of a bioassay guided genome mining approach for antifungal natural product discovery from pseudomonads",
+      "pmcid": "PMC13197424",
+      "journal": "Sci Rep",
+      "year": 2026,
+      "doi": "10.1038/s41598-026-48020-5",
+      "authors": "Lund G, Mosquito S, Withall DM, Caulfield J, Hughes D, Clark IM, Rudd J, Mauchline TH.",
+      "citedByCount": 0,
+      "pair_id": "PAIR_47",
+      "cohort_id": "PAIR_47",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_50",
+      "preprint_wave": 1,
+      "preprint_bytes": 39191,
+      "published_anon_id": "PR_W2_37",
+      "published_wave": 2,
+      "published_bytes": 48110
+    },
+    {
+      "ppr_id": "PPR1029646",
+      "ppr_doi": "10.1101/2025.06.02.25328497",
+      "ppr_year": 2025,
+      "ppr_date": "2025-06-02",
+      "pmid": "41725262",
+      "title": "Impact of first SARS-CoV-2 infection variant on serological responses against Omicron: findings from the SIREN study",
+      "pmcid": "PMC12928044",
+      "journal": "Influenza Other Respir Viruses",
+      "year": 2026,
+      "doi": "10.1111/irv.70204",
+      "authors": "Insalata F, Atti A, Carr EJ, Otter AD, SIREN study group, Foulkes S, Dowgier G, Hobbs A, Wu MY, Hopkins S, Charlett A, Beale R, Hall V.",
+      "citedByCount": 2,
+      "pair_id": "PAIR_48",
+      "cohort_id": "PAIR_48",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_45",
+      "published_wave": 1,
+      "published_bytes": 29018,
+      "preprint_anon_id": "PR_W2_39",
+      "preprint_wave": 2,
+      "preprint_bytes": 20562
+    },
+    {
+      "ppr_id": "PPR1027543",
+      "ppr_doi": "10.1101/2025.05.26.656077",
+      "ppr_year": 2025,
+      "ppr_date": "2025-05-27",
+      "pmid": "41884005",
+      "title": "Transcriptional and cellular maturation of the chick spinal cord in the context of distinct neuromuscular circuits",
+      "pmcid": "PMC13010115",
+      "journal": "iScience",
+      "year": 2026,
+      "doi": "10.1016/j.isci.2026.115196",
+      "authors": "Sacher F, Berki B, Fages A, Gavrilov L, Klar A, Luxey M, Tschopp P.",
+      "citedByCount": 1,
+      "pair_id": "PAIR_49",
+      "cohort_id": "PAIR_49",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "preprint_anon_id": "PR_W1_48",
+      "preprint_wave": 1,
+      "preprint_bytes": 54859,
+      "published_anon_id": "PR_W2_46",
+      "published_wave": 2,
+      "published_bytes": 77242
+    },
+    {
+      "ppr_id": "PPR1008513",
+      "ppr_doi": "10.1101/2025.04.17.649298",
+      "ppr_year": 2025,
+      "ppr_date": "2025-04-17",
+      "pmid": "41284650",
+      "title": "amr.watch \u2013 monitoring antimicrobial resistance trends from global genomics data",
+      "pmcid": "PMC12643278",
+      "journal": "PLOS Glob Public Health",
+      "year": 2025,
+      "doi": "10.1371/journal.pgph.0005256",
+      "authors": "David S, Caballero JD, Couto N, Abudahab K, Alikhan NF, Yeats C, Underwood A, Molloy A, Connor D, Shane HM, Ashton PM, Grundmann H, Holden MTG, Feil EJ, Sia SB, Donado-Godoy P, Lingegowda RK, Okeke IN, Argim\u00f3n S, Aanensen DM, NIHR Global Health Research Unit on Genomics and enabling data for the Surveillance of AMR.",
+      "citedByCount": 5,
+      "pair_id": "PAIR_50",
+      "cohort_id": "PAIR_50",
+      "venue_tier": "Tier 3 (Megajournal / Open-Threshold)",
+      "published_anon_id": "PR_W1_28",
+      "published_wave": 1,
+      "published_bytes": 33970,
+      "preprint_anon_id": "PR_W2_38",
+      "preprint_wave": 2,
+      "preprint_bytes": 29224
     }
   ],
   "wave1_map": {
@@ -1419,6 +2109,126 @@
     "PR_W1_20": {
       "pair_id": "PAIR_20",
       "version": "published"
+    },
+    "PR_W1_21": {
+      "pair_id": "PAIR_32",
+      "version": "published"
+    },
+    "PR_W1_22": {
+      "pair_id": "PAIR_22",
+      "version": "published"
+    },
+    "PR_W1_23": {
+      "pair_id": "PAIR_21",
+      "version": "preprint"
+    },
+    "PR_W1_24": {
+      "pair_id": "PAIR_26",
+      "version": "published"
+    },
+    "PR_W1_25": {
+      "pair_id": "PAIR_31",
+      "version": "preprint"
+    },
+    "PR_W1_26": {
+      "pair_id": "PAIR_29",
+      "version": "preprint"
+    },
+    "PR_W1_27": {
+      "pair_id": "PAIR_46",
+      "version": "published"
+    },
+    "PR_W1_28": {
+      "pair_id": "PAIR_50",
+      "version": "published"
+    },
+    "PR_W1_29": {
+      "pair_id": "PAIR_36",
+      "version": "published"
+    },
+    "PR_W1_30": {
+      "pair_id": "PAIR_28",
+      "version": "published"
+    },
+    "PR_W1_31": {
+      "pair_id": "PAIR_41",
+      "version": "preprint"
+    },
+    "PR_W1_32": {
+      "pair_id": "PAIR_33",
+      "version": "preprint"
+    },
+    "PR_W1_33": {
+      "pair_id": "PAIR_25",
+      "version": "preprint"
+    },
+    "PR_W1_34": {
+      "pair_id": "PAIR_43",
+      "version": "preprint"
+    },
+    "PR_W1_35": {
+      "pair_id": "PAIR_23",
+      "version": "preprint"
+    },
+    "PR_W1_36": {
+      "pair_id": "PAIR_27",
+      "version": "preprint"
+    },
+    "PR_W1_37": {
+      "pair_id": "PAIR_30",
+      "version": "published"
+    },
+    "PR_W1_38": {
+      "pair_id": "PAIR_39",
+      "version": "preprint"
+    },
+    "PR_W1_39": {
+      "pair_id": "PAIR_40",
+      "version": "published"
+    },
+    "PR_W1_40": {
+      "pair_id": "PAIR_42",
+      "version": "published"
+    },
+    "PR_W1_41": {
+      "pair_id": "PAIR_34",
+      "version": "published"
+    },
+    "PR_W1_42": {
+      "pair_id": "PAIR_38",
+      "version": "published"
+    },
+    "PR_W1_43": {
+      "pair_id": "PAIR_24",
+      "version": "published"
+    },
+    "PR_W1_44": {
+      "pair_id": "PAIR_37",
+      "version": "preprint"
+    },
+    "PR_W1_45": {
+      "pair_id": "PAIR_48",
+      "version": "published"
+    },
+    "PR_W1_46": {
+      "pair_id": "PAIR_35",
+      "version": "preprint"
+    },
+    "PR_W1_47": {
+      "pair_id": "PAIR_45",
+      "version": "preprint"
+    },
+    "PR_W1_48": {
+      "pair_id": "PAIR_49",
+      "version": "preprint"
+    },
+    "PR_W1_49": {
+      "pair_id": "PAIR_44",
+      "version": "published"
+    },
+    "PR_W1_50": {
+      "pair_id": "PAIR_47",
+      "version": "preprint"
     }
   },
   "wave2_map": {
@@ -1500,6 +2310,126 @@
     },
     "PR_W2_20": {
       "pair_id": "PAIR_14",
+      "version": "preprint"
+    },
+    "PR_W2_21": {
+      "pair_id": "PAIR_43",
+      "version": "published"
+    },
+    "PR_W2_22": {
+      "pair_id": "PAIR_33",
+      "version": "published"
+    },
+    "PR_W2_23": {
+      "pair_id": "PAIR_42",
+      "version": "preprint"
+    },
+    "PR_W2_24": {
+      "pair_id": "PAIR_39",
+      "version": "published"
+    },
+    "PR_W2_25": {
+      "pair_id": "PAIR_40",
+      "version": "preprint"
+    },
+    "PR_W2_26": {
+      "pair_id": "PAIR_37",
+      "version": "published"
+    },
+    "PR_W2_27": {
+      "pair_id": "PAIR_24",
+      "version": "preprint"
+    },
+    "PR_W2_28": {
+      "pair_id": "PAIR_36",
+      "version": "preprint"
+    },
+    "PR_W2_29": {
+      "pair_id": "PAIR_28",
+      "version": "preprint"
+    },
+    "PR_W2_30": {
+      "pair_id": "PAIR_31",
+      "version": "published"
+    },
+    "PR_W2_31": {
+      "pair_id": "PAIR_29",
+      "version": "published"
+    },
+    "PR_W2_32": {
+      "pair_id": "PAIR_34",
+      "version": "preprint"
+    },
+    "PR_W2_33": {
+      "pair_id": "PAIR_25",
+      "version": "published"
+    },
+    "PR_W2_34": {
+      "pair_id": "PAIR_26",
+      "version": "preprint"
+    },
+    "PR_W2_35": {
+      "pair_id": "PAIR_27",
+      "version": "published"
+    },
+    "PR_W2_36": {
+      "pair_id": "PAIR_45",
+      "version": "published"
+    },
+    "PR_W2_37": {
+      "pair_id": "PAIR_47",
+      "version": "published"
+    },
+    "PR_W2_38": {
+      "pair_id": "PAIR_50",
+      "version": "preprint"
+    },
+    "PR_W2_39": {
+      "pair_id": "PAIR_48",
+      "version": "preprint"
+    },
+    "PR_W2_40": {
+      "pair_id": "PAIR_38",
+      "version": "preprint"
+    },
+    "PR_W2_41": {
+      "pair_id": "PAIR_21",
+      "version": "published"
+    },
+    "PR_W2_42": {
+      "pair_id": "PAIR_22",
+      "version": "preprint"
+    },
+    "PR_W2_43": {
+      "pair_id": "PAIR_46",
+      "version": "preprint"
+    },
+    "PR_W2_44": {
+      "pair_id": "PAIR_41",
+      "version": "published"
+    },
+    "PR_W2_45": {
+      "pair_id": "PAIR_23",
+      "version": "published"
+    },
+    "PR_W2_46": {
+      "pair_id": "PAIR_49",
+      "version": "published"
+    },
+    "PR_W2_47": {
+      "pair_id": "PAIR_30",
+      "version": "preprint"
+    },
+    "PR_W2_48": {
+      "pair_id": "PAIR_35",
+      "version": "published"
+    },
+    "PR_W2_49": {
+      "pair_id": "PAIR_32",
+      "version": "preprint"
+    },
+    "PR_W2_50": {
+      "pair_id": "PAIR_44",
       "version": "preprint"
     }
   }

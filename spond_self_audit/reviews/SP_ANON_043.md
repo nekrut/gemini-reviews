@@ -29,4 +29,4 @@ LEISR is a well-engineered, practical addition to the HyPhy suite, and all valid
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open-Source Software & Validation Pipeline:** Reproducibility is exemplary. LEISR is distributed directly within the open-source HyPhy platform ($\ge 2.3.8$, `LEISR.bf`) with documented JSON output schemas, and the complete Python (`pyvolve`) simulation pipeline, empirical alignment, and figure-generation scripts are publicly archived at `https://github.com/sjspielman/leisr_validation`.
+* **Open-Source Software & Validation Pipeline:** Reproducibility is exemplary. LEISR is distributed directly within the open-source HyPhy platform ($\ge 2.3.8$, `LEISR.bf`) with documented JSON output schemas, and the complete Python (`pyvolve`) simulation pipeline, empirical alignment, and figure-generation scripts are publicly archived at `[GITHUB_REPO_REDACTED]`.

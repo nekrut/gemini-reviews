@@ -235,6 +235,6 @@ Submitted filename: Response_to_reviewers.pdf
 
 ## Data Availability Statement
 
-All data is publicly available, either as open data or as additional data sets on the github repository accompanying this study: github.com/rivm-syso/effectiveness_NPIs. This repository also contains the code used to produce the results and analyses presented in this manuscript.
+All data is publicly available, either as open data or as additional data sets on the github repository accompanying this study: [GITHUB_REPO_REDACTED] This repository also contains the code used to produce the results and analyses presented in this manuscript.
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

@@ -32,5 +32,5 @@ This comprehensive evolutionary genomics and molecular ecology study investigate
 - **Claim 3:** *Symbiotic `Nostoc` phylogroups (`PopCOGenT` gene-flow clusters) remain genetically cohesive and isolated even when co-occurring at the same local site and sharing the same `Peltigera` mycobiont species.* `[Well Supported]` — Demonstrated across 2,316 genotyped cyanolichen specimens from 366 sites in Alberta (`Fig. 4`, `Table 1`, `Fig. S6`).
 
 ### 4. Reproducibility & Data Completeness
-- **Exceptional Open-Science Reproducibility:** All 124 new MAGs, 1,519 gene alignments and trees, `MCMCTree` dated phylogenies (`Supplementary Data S2`), 2,316 PacBio `rbcLX` and `nrITS-LSU` sequences, 384 barcode tables (`Supplementary Data S3`), and classification tutorials/scripts are publicly documented and deposited in a dedicated GitHub repository (`https://github.com/cjpardodelahoz/nostoc`).
+- **Exceptional Open-Science Reproducibility:** All 124 new MAGs, 1,519 gene alignments and trees, `MCMCTree` dated phylogenies (`Supplementary Data S2`), 2,316 PacBio `rbcLX` and `nrITS-LSU` sequences, 384 barcode tables (`Supplementary Data S3`), and classification tutorials/scripts are publicly documented and deposited in a dedicated GitHub repository (`[GITHUB_REPO_REDACTED]`).
 </Blinded Review: TIME_ANON_0936>

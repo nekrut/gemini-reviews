@@ -18,7 +18,7 @@ Raw growth data can be found at https://zenodo.org/records/17456178 or in the su
 
 ## Code availability
 
-The code to reproduce the growth assay data analysis is available at https://github.com/mateuslab-prot/SpeciesSpeciesInteractions (10.5281/zenodo.21494737).
+The code to reproduce the growth assay data analysis is available at [GITHUB_REPO_REDACTED] (10.5281/zenodo.21494737).
 
 
 ## Competing interests
@@ -47,6 +47,6 @@ Description of Additional Supplementary Files
 
 Raw growth data can be found at https://zenodo.org/records/17456178 or in the supplementary data. The mass spectrometry proteomics data have been deposited to the ProteomeXchange Consortium via the PRIDE partner repository with the dataset identifier PXD070029 . The mass spectrometry metabolomics data have been deposited to MassIVE with the dataset identifier MSV000102556 .
 
-The code to reproduce the growth assay data analysis is available at https://github.com/mateuslab-prot/SpeciesSpeciesInteractions (10.5281/zenodo.21494737).
+The code to reproduce the growth assay data analysis is available at [GITHUB_REPO_REDACTED] (10.5281/zenodo.21494737).
 
 Articles from Nature Communications are provided here courtesy of Nature Publishing Group

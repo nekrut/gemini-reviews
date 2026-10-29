@@ -29,5 +29,5 @@ The engineering architecture is clean, genuinely solves the upload latency, queu
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **Open-Source Availability:** The complete application (`github.com/veg/datamonkey3`, MIT license), live deployment (`v3.datamonkey.org`), and MCP endpoint (`mcp.datamonkey.org/mcp`) are publicly available.
+* **Open-Source Availability:** The complete application (`[GITHUB_REPO_REDACTED]`, MIT license), live deployment (`v3.datamonkey.org`), and MCP endpoint (`mcp.datamonkey.org/mcp`) are publicly available.
 * **Typographical Fixes Required:** In the section comparing performance on the 100 alignments, fix the garbled typesetting strings *"sequence bisite products"* and *"sequence itsite products"* to *"sequence $\times$ site products"*, and include a link or supplementary table listing the 100 benchmark alignments and their individual CLI/Wasm runtimes so the benchmark itself is fully reproducible.

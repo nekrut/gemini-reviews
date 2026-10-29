@@ -21,5 +21,5 @@ This comprehensive longitudinal study characterizes the developmental pathway, s
 * **Claim 3:** *Sub-optimal $\text{Man}_5$ glycan occupancy at `N160` limits `PCT64` neutralization potency and maximum percent neutralization (`MPN`) on certain heterologous isolates.* **`[Moderately Supported]`** — Strongly supported by $\text{GnTI}^{-/-}$ vs. WT `BLI` and neutralization rescue experiments, though direct mass-spectrometric quantification of `N160` glycoforms on the resistant virions would provide definitive biochemical confirmation.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Crystal structure coordinates (`PDB: 5FEH`), EM density maps (`EMD-7089`), antibody sequences (`GenBank: MF565848`–`MF565913`), next-generation repertoire reads (`BioProject: PRJNA395218`), and interactive longitudinal `FLEA` viral env sessions (`http://flea.murrell.group/view/PC64`) are all publicly deposited.
+* **Strengths:** Crystal structure coordinates (`PDB: 5FEH`), EM density maps (`EMD-7089`), antibody sequences (`GenBank: MF565848`–`MF565913`), next-generation repertoire reads (`BioProject: [ACCESSION_REDACTED]`), and interactive longitudinal `FLEA` viral env sessions (`http://flea.murrell.group/view/PC64`) are all publicly deposited.
 * **Deficiencies:** None of material significance.

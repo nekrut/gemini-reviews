@@ -31,5 +31,5 @@ While the contribution of four full-length North American ECoV genomes and raw m
 ---
 
 ### 4. Reproducibility & Data Completeness
-* **High Data & Workflow Transparency:** Raw metagenomic sequencing reads (`PRJNA1005627`), assembled genomes (`OR468097–OR468100`), the Galaxy LoFreq workflow, HyPhy analysis scripts (`github.com/veg/hyphy-analyses`), and all alignments and trees (`data.hyphy.org/web/ECoV/ECoV-data/`) are publicly accessible.
+* **High Data & Workflow Transparency:** Raw metagenomic sequencing reads (`PRJNA1005627`), assembled genomes (`OR468097–OR468100`), the Galaxy LoFreq workflow, HyPhy analysis scripts (`[GITHUB_REPO_REDACTED]`), and all alignments and trees (`data.hyphy.org/web/ECoV/ECoV-data/`) are publicly accessible.
 * **Required Fixes:** Apply Benjamini–Hochberg FDR correction across all codons tested in Table 3 and Table S8, partition Spike at the RDP5 Event 12 breakpoint before running selection analyses, correct the false statement regarding PCR amplification in NEBNext RNA-seq library preparation, and reconcile the HCoV-HKU1 site count (2 vs. 1) between the Results and Discussion.

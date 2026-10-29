@@ -35,6 +35,6 @@ This methodological benchmarking study evaluates deep-sequencing accuracy, cover
 - **Claim 3:** *Coverage dips in influenza PA and NP segments on MiSeq are caused by Nextera XT transposase cleavage bias rather than Illumina sequencing chemistry.* — `[Well Supported]` by the controlled `Covaris + NEBNext Ultra` vs. `Nextera XT` comparison on MiSeq (Figure 9).
 
 ### 5. Reproducibility & Data Completeness
-- **Data Availability:** Raw sequencing reads for all 34 libraries (16 plasmid + 16 viral + 2 Covaris-sheared viral libraries) are publicly deposited in the NCBI Sequence Read Archive under BioProject `PRJNA268616`.
+- **Data Availability:** Raw sequencing reads for all 34 libraries (16 plasmid + 16 viral + 2 Covaris-sheared viral libraries) are publicly deposited in the NCBI Sequence Read Archive under NCBI SRA (`SRP052225` and `SRP052608`).
 - **Protocol & Parameter Transparency:** Exact primer sequences, thermocycling profiles, read mapping parameters (`BWA-MEM v0.7.5a`, `Samtools v0.1.19`), custom Python filtering thresholds, and *de novo* assembler parameters (`Velvet v1.2.10`, `MIRA v4.0`, `CLC Genomics Workbench v6.0.2`) are thoroughly documented.
 </Blinded Review: TIME_ANON_0554>

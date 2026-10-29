@@ -25,6 +25,6 @@ While the biological question linking ciliate macronuclear fragmentation and ger
 ### 4. Reproducibility & Data Completeness
 * **Unresolved Template Placeholders and Typos:**
   * Abstract line 6 contains an unreplaced placeholder: *"we analyzed lineage specific gene families from a set of 46 transcriptomes and 12 genomes representing **x species** from eight ciliate classes."*
-  * Methods line 25 and line 28 contain an anonymized placeholder GitHub URL (`https://github.com/xxmalcala/Ciliate_LSGF`).
+  * Methods line 25 and line 28 contain an anonymized placeholder GitHub URL (`[GITHUB_REPO_REDACTED]`).
   * Table 1 (line 83) reports the KA positively selected proportion as `3 (01.20)` instead of `3 (0.120)`.
   * Results line 35 writes *"comparing the null model ($K_G = 1$ for every non-reference group) to the alternative model ($K_G = 1$ are estimated separately...)"* where the alternative should be $K_G \ne 1$.

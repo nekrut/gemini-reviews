@@ -21,5 +21,5 @@ This methods manuscript introduces `RelTime with Dated Tips` (`RTDT`), an algebr
 * **Claim 3:** *`RTDT` is orders of magnitude faster than `BEAST` and `MCMCTree`, completing 289-taxon timetree and CI inference within minutes on a single CPU core.* **`[Well Supported]`** — Directly benchmarked in Figure 8.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Simulated alignments and true/inferred trees are deposited on GitHub (`https://github.com/cathyqqtao/RTDT`), and `RTDT` is freely available in cross-platform `MEGA X` (`v10.1+`).
+* **Strengths:** Simulated alignments and true/inferred trees are deposited on GitHub (`[GITHUB_REPO_REDACTED]`), and `RTDT` is freely available in cross-platform `MEGA X` (`v10.1+`).
 * **Deficiencies:** Table 1 row `Rabies Node 3` lists `1982 (1936–1973)`, where the point estimate `1982` falls outside the reported 95% CI `(1936–1973)`; additionally, behavior on zero-length branches (identical sequences) should be benchmarked rather than filtered out.

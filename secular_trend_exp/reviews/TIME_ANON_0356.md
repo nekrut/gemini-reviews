@@ -30,5 +30,5 @@ The authors benchmark these statistics using forward-in-time SLiM 2 simulations 
 * **Claim 3:** *"Two missense SNPs in the gene ACSBG2, rs17856650 and rs17856651, have standardized $\beta$ scores in the top 99.9 percentile in the CEU population..."* — **[Moderately Supported]**. *ACSBG2* is a compelling statistical candidate (top 0.1% in CEU, top 0.5% in CHB, top 1% in YRI, and concordant with $T_2$), though functional validation of balancing selection on spermatogenesis/fatty acid metabolism remains a hypothesis for future experimental work.
 
 ### 4. Reproducibility & Data Completeness
-* **Code & Data Availability:** The open-source implementation (`BetaScan2`) is publicly hosted at `https://github.com/ksiewert/BetaScan`, data conversion uses `glactools`, and all empirical scans use public 1000 Genomes Phase 3, GTEx, and GWAS Catalog datasets. Analytical derivations and simulation parameters are thoroughly documented in the Supplementary Material.
+* **Code & Data Availability:** The open-source implementation (`BetaScan2`) is publicly hosted at `[GITHUB_REPO_REDACTED]`, data conversion uses `glactools`, and all empirical scans use public 1000 Genomes Phase 3, GTEx, and GWAS Catalog datasets. Analytical derivations and simulation parameters are thoroughly documented in the Supplementary Material.
 </Blinded Review: TIME_ANON_0356>

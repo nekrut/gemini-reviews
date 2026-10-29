@@ -279,6 +279,6 @@ Submitted filename: response_to_reviewers.docx
 
 ## Data Availability Statement
 
-All data required to replicate the study’s findings can be found here https://www.hiv.lanl.gov/content/sequence/HIV/mainpage.html . All analysis source code is available at https://github.com/dunnlab/hiv_wide .
+All data required to replicate the study’s findings can be found here https://www.hiv.lanl.gov/content/sequence/HIV/mainpage.html . All analysis source code is available at [GITHUB_REPO_REDACTED] .
 
 Articles from PLOS Computational Biology are provided here courtesy of PLOS

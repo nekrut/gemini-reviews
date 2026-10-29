@@ -390,7 +390,7 @@ This section collects any data citations, data availability statements, or suppl
 
 ## Data Availability Statement
 
-Sequencing data is available via the EBI BioStudies database within the ArrayExpress collection (RNA-seq: E-MTAB-12721; ATAC-seq: E-MTAB-12722). The code employed for data analysis is available from https://github.com/mansuylab/SC_postnatal_adult (copy archived at Tanwar, 2025 ) and https://github.com/mansuylab/Lazar-Contes2024_Deconvolution (copy archived at Uzel, 2025 ).
+Sequencing data is available via the EBI BioStudies database within the ArrayExpress collection (RNA-seq: E-MTAB-12721; ATAC-seq: E-MTAB-12722). The code employed for data analysis is available from [GITHUB_REPO_REDACTED] (copy archived at Tanwar, 2025 ) and [GITHUB_REPO_REDACTED] (copy archived at Uzel, 2025 ).
 
 The following datasets were generated:
 

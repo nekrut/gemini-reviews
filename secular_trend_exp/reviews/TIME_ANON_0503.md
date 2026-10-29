@@ -38,5 +38,5 @@ This genomics and quantitative genetics study integrates pooled single-cell RNA 
   - `[Methodologically Flawed]` Claims that PC1 of `DISCERN`-imputed expression explains 99.6% of biological transcriptome variance, that genotype explains 75.7% of total expression variance via PC1, and that individual gene expression heritability has a minimum of $31.0\%$ across all 6,240 yeast genes.
 
 ### 4. Reproducibility & Data Completeness
-- Data and code availability are exemplary: raw scRNA-seq reads are deposited in NCBI BioProject (`PRJNA1022775`), processed expression matrices (`Matrix_gene_expression_barcodes_1_to_9000.csv.tar.gz` and `9001_to_18233.csv.tar.gz`) and all Python/R pipelines for HMM genotyping, lineage assignment, variance partitioning, and sc-eQTL mapping are publicly archived on GitHub (`https://github.com/arnaud00013/sc-eQTL`).
+- Data and code availability are exemplary: raw scRNA-seq reads are deposited in NCBI BioProject (`PRJNA1022775`), processed expression matrices (`Matrix_gene_expression_barcodes_1_to_9000.csv.tar.gz` and `9001_to_18233.csv.tar.gz`) and all Python/R pipelines for HMM genotyping, lineage assignment, variance partitioning, and sc-eQTL mapping are publicly archived on GitHub (`[GITHUB_REPO_REDACTED]`).
 </Blinded Review: TIME_ANON_0503>

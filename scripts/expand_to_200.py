@@ -1,3 +1,4 @@
+from pathlib import Path
 import os
 import re
 import json
@@ -8,7 +9,7 @@ from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 from build_deidentified import scrub_manuscript
 
-with open("/Users/sergei/Projects/lit-estimation/cohorts.json") as f:
+with open(str(Path(__file__).resolve().parent.parent / "cohorts.json") as f:
     cohorts = json.load(f)
 
 # Move B02 (PMC8135569, Kumar et al. 2021 proCoV2) to A26
@@ -172,7 +173,7 @@ for domain, q_base in STRATA_C:
         })
         c_idx += 1
 
-with open("/Users/sergei/Projects/lit-estimation/cohorts_200.json", "w") as f:
+with open(str(Path(__file__).resolve().parent.parent / "cohorts_200.json", "w") as f:
     json.dump({"cohort_a": cohort_a, "cohort_b": cohort_b, "cohort_c": cohort_c}, f, indent=2)
 
 print(f"Saved cohorts_200.json: A={len(cohort_a)}, B={len(cohort_b)}, C={len(cohort_c)}")

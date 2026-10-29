@@ -25,6 +25,6 @@ This study investigates morphological divergence, phylogenetic relationships, an
 - **Claim 3:** Seven candidate genes (`DLK1`, `CLOCK`, `PER3`, `BCO2`, `TYR`, `MMP17`, `WNK2`) show evidence of positive selection in *M. m. maxima*. `[Methodologically Flawed]` — Every single one of these genes has a completely non-significant McDonald-Kreitman Fisher's exact test ($p = 0.524$ to $1.0$), and the two nominally significant genes (`CD36`, `LAP3`) reflect $D_n = 0$ (purifying selection / polymorphism excess) and fail multiple-testing correction.
 
 ### 4. Reproducibility & Data Completeness
-- **Open Science & Repositories:** Excellent data and code availability: raw WGS reads are archived in NCBI SRA under BioProject `PRJNA1114297`, reference genome annotations are specified (`GCF_035770615.1`), and both the morphometric R scripts/raw measurements (`github.com/coliverbrown/melospiza-melodia-phenotype`) and custom MK-test scripts (`github.com/g33k5p34k/Melospiza_mktest`) are publicly available on GitHub.
+- **Open Science & Repositories:** Excellent data and code availability: raw WGS reads are archived in NCBI SRA under BioProject `PRJNA1114297`, reference genome annotations are specified (`GCF_035770615.1`), and both the morphometric R scripts/raw measurements (`[GITHUB_REPO_REDACTED]`) and custom MK-test scripts (`[GITHUB_REPO_REDACTED]`) are publicly available on GitHub.
 - **Table Completeness:** Table 1 must be corrected to restore the missing 3 salt-tolerance genes (`MMP17`, `WNK2`, and the third salt-tolerance gene).
 </Blinded Review: TIME_ANON_0169>

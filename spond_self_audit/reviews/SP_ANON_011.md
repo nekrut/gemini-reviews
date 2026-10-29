@@ -21,5 +21,5 @@ This study evaluates whether partitioning HIV-1 and SIV `gp120` nucleotide align
 * **Claim 3:** *Sliding-window correlation between $1 - \text{SHAPE}$ and $P_{\text{prob}}$ identifies conserved functional RNA structures across `gp120` constant/variable regions analogous to the Rev-Response Element (`RRE`).* **`[Moderately Supported]`** — Validated on the `RRE` positive control, though window correlations in `gp120` are modest ($r_s < 0.39$ across most regions) and lack direct mutagenesis validation.
 
 ### 4. Reproducibility & Data Completeness
-* **Strengths:** Sequence alignments and custom `HyPhy` scripts are deposited in public GitHub repositories (`https://github.com/rifebd88/HIV-SIV-RNA-structure-manuscript.git` and `pubs/tree/master/HIV-RNA`), with full GenBank accession lists and `IQ-TREE` likelihood-mapping quartet diagnostics in the Supplement.
+* **Strengths:** Sequence alignments and custom `HyPhy` scripts are deposited in public GitHub repositories (`[GITHUB_REPO_REDACTED]` and `pubs/tree/master/HIV-RNA`), with full GenBank accession lists and `IQ-TREE` likelihood-mapping quartet diagnostics in the Supplement.
 * **Deficiencies:** The exact proportion and coordinates of discarded "discordant" sites in each patient alignment should be tabulated in the main text alongside the concordant category results.

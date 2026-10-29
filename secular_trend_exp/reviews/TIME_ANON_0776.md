@@ -34,5 +34,5 @@ This computational biology manuscript introduces `PHACE`, a phylogeny-aware resi
 - **Claim 2:** *Phylogeny-aware ASR scoring distinguishes independent co-substitutions on multiple branches from single-clade ancestral divergence.* `[Well Supported]` — Illustrated clearly by the `1A0S_1` (`163–164` vs `128–137`) and `1M9Z_1` phylogenetic tree examples (`Figure 4`).
 
 ### 4. Reproducibility & Data Completeness
-- **Code & Data Availability:** Excellent availability of source code (`https://github.com/CompGenomeLab/PHACE`) and full 652-protein prediction matrices (`https://zenodo.org/records/14043199`), though the mathematical display formulas in the manuscript text need to be restored so readers do not have to reverse-engineer them from the codebase.
+- **Code & Data Availability:** Excellent availability of source code (`[GITHUB_REPO_REDACTED]`) and full 652-protein prediction matrices (`https://zenodo.org/records/14043199`), though the mathematical display formulas in the manuscript text need to be restored so readers do not have to reverse-engineer them from the codebase.
 </Blinded Review: TIME_ANON_0776>

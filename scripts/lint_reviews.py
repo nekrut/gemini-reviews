@@ -45,7 +45,7 @@ SCORE_KEYS = [
     ("Reproducibility", "reproducibility"),
 ]
 BREAKDOWN_RE = re.compile(
-    r"Score Breakdown:?\**:?\s*"
+    r"Score Breakdown(?:\s*\([^)]*\))?:?\**:?\s*"
     + r"\s*\|\s*".join(rf"{label}:\s*([0-9]+(?:\.[0-9]+)?)\s*/\s*[0-9.]+" for label, _ in SCORE_KEYS),
     re.IGNORECASE,
 )
@@ -118,6 +118,7 @@ def lint_file(path: Path, headers: list[str]) -> list[tuple[int, str, str]]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.strip().splitlines()[0])
     parser.add_argument("--strict", action="store_true", help="exit 1 if any violation is found")
+    parser.add_argument("--strict-score", action="store_true", help="exit 1 if any SCORE violation is found")
     args = parser.parse_args()
 
     headers = required_headers()
@@ -132,7 +133,7 @@ def main() -> None:
     total = sum(counts.values())
     summary = ", ".join(f"{code}={n}" for code, n in sorted(counts.items())) or "none"
     print(f"\nLinted {n_files} review(s): {total} violation(s) ({summary}).")
-    if args.strict and total:
+    if (args.strict and total) or (args.strict_score and counts.get("SCORE", 0) > 0):
         raise SystemExit(1)
 
 

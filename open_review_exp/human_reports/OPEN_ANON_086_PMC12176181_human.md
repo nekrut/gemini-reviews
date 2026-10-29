@@ -125,13 +125,13 @@ a) If there are ethical or legal restrictions on sharing a de-identified data se
 
 b) If there are no restrictions, please upload the minimal anonymized data set necessary to replicate your study findings to a stable, public repository and provide us with the relevant URLs, DOIs, or accession numbers. For a list of recommended repositories, please see https://journals.plos.org/plosone/s/recommended-repositories . You also have the option of uploading the data as Supporting Information files, but we would recommend depositing data directly to a data repository if possible.
 
-A dataset and workflow can be found at the following public domain address: https://github.com/bioinfonupeb/redemicro-thayane
+A dataset and workflow can be found at the following public domain address: [GITHUB_REPO_REDACTED]
 
 The sequencing data is deposited at NCBI under the BioProject ID PRJNA1223961 http://www.ncbi.nlm.nih.gov/bioproject/1223961
 
 6. In the online submission form, you indicated that [The data is available. Contact corresponding author Renata Guerra-Sá email rguerra@ufop.edu.br]. All PLOS journals now require all data underlying the findings described in their manuscript to be freely available to other researchers, either 1. In a public repository, 2. Within the manuscript itself, or 3. Uploaded as supplementary information. This policy applies to all data except where public deposition would breach compliance with the protocol approved by your research ethics board. If your data cannot be made publicly available for ethical or legal reasons (e.g., public availability would compromise patient privacy), please explain your reasons on resubmission and your exemption request will be escalated for approval.
 
-A dataset and workflow can be found at the following public domain address: https://github.com/bioinfonupeb/redemicro-thayane
+A dataset and workflow can be found at the following public domain address: [GITHUB_REPO_REDACTED]
 
 The sequencing data is deposited at NCBI under the BioProject ID PRJNA1223961 http://www.ncbi.nlm.nih.gov/bioproject/1223961
 
@@ -467,6 +467,6 @@ Submitted filename: Response_to_Reviewers_auresp_2.docx
 
 ## Data Availability Statement
 
-The datasets used and/or analyzed during the current study are available from the corresponding author and also in a public domain repository https://github.com/bioinfonupeb/redemicro-thayane and the data underlying the results presented in the study are available from the National Center for Biotechnology Information (NCBI, https://www.ncbi.nlm.nih.gov/ ) under the BioProject ID PRJNA1223961.
+The datasets used and/or analyzed during the current study are available from the corresponding author and also in a public domain repository [GITHUB_REPO_REDACTED] and the data underlying the results presented in the study are available from the National Center for Biotechnology Information (NCBI, https://www.ncbi.nlm.nih.gov/ ) under the BioProject ID PRJNA1223961.
 
 Articles from PLOS One are provided here courtesy of PLOS

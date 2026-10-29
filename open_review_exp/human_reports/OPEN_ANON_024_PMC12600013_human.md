@@ -230,6 +230,6 @@ This section collects any data citations, data availability statements, or suppl
 
 ## Data Availability Statement
 
-Data and code accompanying this manuscript is publicly available at the GitHub repository https://github.com/bartonlab/paper-HIV-coevolution (copy archived at Shimagaki and Barton, 2025a ). This repository contains source files that process HIV-1 and SHIV sequences, infer selection coefficients, and identify and characterize mutations. The included Jupyter notebooks can be run to reproduce the figures presented here. The original HIV-1 sequences can be retrieved from the LANL database ( https://www.hiv.lanl.gov/content/index ), and SHIV sequences can be found at GenBank ( https://www.ncbi.nlm.nih.gov/ ).
+Data and code accompanying this manuscript is publicly available at the GitHub repository [GITHUB_REPO_REDACTED] (copy archived at Shimagaki and Barton, 2025a ). This repository contains source files that process HIV-1 and SHIV sequences, infer selection coefficients, and identify and characterize mutations. The included Jupyter notebooks can be run to reproduce the figures presented here. The original HIV-1 sequences can be retrieved from the LANL database ( https://www.hiv.lanl.gov/content/index ), and SHIV sequences can be found at GenBank ( https://www.ncbi.nlm.nih.gov/ ).
 
 Articles from eLife are provided here courtesy of eLife Sciences Publications, Ltd

@@ -22,5 +22,5 @@ As a fast data-reduction heuristic for visualizing common pandemic clades on a l
 * **Distinguishing Alternative Early SARS-CoV-2 Rooting Scenarios [Fragile]:** In Figure 7, scenarios A, B, and C all require exactly 9 parsimony steps (with one homoplasy/reversion in either $\alpha_1$ or $x$) and differ in log-likelihood by $<1.7$ units, while scenario D (PANGO A/B sister rooting) requires 10 steps (1 additional step). A difference of 1 parsimony step or $\Delta \ln L < 1.7$ on 8 ascertained sites is statistically indistinguishable from noise and cannot definitively refute scenario D.
 
 ### 4. Reproducibility & Data Completeness
-* **Code and Data Availability:** TopHap source code is available on GitHub (`https://github.com/SayakaMiura/TopHap`), and GISAID data sources and filtering criteria are documented.
+* **Code and Data Availability:** TopHap source code is available on GitHub (`[GITHUB_REPO_REDACTED]`), and GISAID data sources and filtering criteria are documented.
 * **Simulation Benchmarking Gap:** While Figure 1 presents a 3-site cartoon schematic to motivate haplotype filtering, the manuscript includes no quantitative simulation benchmark (e.g., coalescent/epidemiological trees simulated with realistic sequencing error rates and $\text{C}\to\text{U}$ homoplasy) comparing TopHap's topological accuracy against UShER, IQ-TREE2, or MAPLE.

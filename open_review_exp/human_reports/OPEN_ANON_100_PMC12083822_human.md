@@ -317,6 +317,6 @@ Submitted filename: Revision Letter PLOSone January 25th 2025.doc
 
 ## Data Availability Statement
 
-The datasets generated and/or analyzed during the current study are available in the Garrett Lab Data Directory ( https://github.com/TroyCarnwath/garrett_lab ).
+The datasets generated and/or analyzed during the current study are available in the Garrett Lab Data Directory ( [GITHUB_REPO_REDACTED] ).
 
 Articles from PLOS One are provided here courtesy of PLOS

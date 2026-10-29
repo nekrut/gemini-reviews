@@ -28,5 +28,5 @@ This computational structural bioinformatics study introduces DeepGNHV, a graph 
 * **Claim 4 (GNNExplainer accurately pinpoints key binding interface residues without residue-level supervision):** `[Fragile]` — Works moderately on the human receptor CD4 (10/22 in interface) but fails on the viral ligand gp120 (1/43 in interface) due to late fusion after global max pooling.
 
 ### 4. Reproducibility & Data Completeness
-* **Code & Data Availability:** Source code, model weights, and dataset splits are publicly hosted on GitHub (`https://github.com/bioboy0415/DeepGNHV`, cited in the Abstract; note that lines 135 and 143 truncated the URL to `https://github.com/`). Hyperparameters, optimizer settings, and hardware specifications are completely documented.
+* **Code & Data Availability:** Source code, model weights, and dataset splits are publicly hosted on GitHub (`[GITHUB_REPO_REDACTED]`, cited in the Abstract; note that lines 135 and 143 truncated the URL to `https://github.com/`). Hyperparameters, optimizer settings, and hardware specifications are completely documented.
 </Blinded Review: TIME_ANON_0854>
