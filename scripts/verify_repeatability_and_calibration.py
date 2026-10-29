@@ -244,25 +244,30 @@ def main():
     print("\n=================================================================")
     print("3. COHORT B CONTROL COMPOSITION SENSITIVITY (ISSUE #4)")
     print("=================================================================")
-    refutation_b = {"B03", "B05", "B06", "B07", "B10", "B16", "B17", "B18", "B31", "B32", "B33", "B34", "B50"}
-    pond_b = {"B01", "B03", "B08", "B12", "B19", "B20", "B21"}
-    non_flagship_8 = [cid for cid in b_all_ids if meta_b[cid]["journal"] in {"Virus Evol", "mBio", "Bioinformatics", "Mol Syst Biol", "Microbiome", "BMC Biol", "RNA", "Genome Res"}]
-    flagship_42 = [cid for cid in b_all_ids if cid not in non_flagship_8]
-    specialist_b = [cid for cid in b_all_ids if meta_b[cid]["journal"] not in {"Nature", "Science", "Cell", "Nat Genet", "Nat Med", "Nat Microbiol", "Nat Commun", "Elife", "PLoS Biol", "PLoS Genet", "Genome Biol"}]
-    strictly_non_ncs_b = [cid for cid in b_all_ids if meta_b[cid]["journal"] not in {"Nature", "Science", "Cell"} and not meta_b[cid]["journal"].startswith("Nat ")]
+    refutation_b = {"B10", "B16", "B17", "B18", "B31", "B32", "B33", "B34", "B50"}
+    pond_b = {"B19", "B20"}
+    non_flagship_journals = {
+        "Virus Evol", "mBio", "Bioinformatics", "Bioinformatics (Oxford, England)",
+        "Mol Syst Biol", "Microbiome", "BMC Biol", "RNA", "Genome Res", "Genome research",
+        "PLoS computational biology", "GigaScience", "Nucleic acids research"
+    }
+    non_flagship_b = [cid for cid in b_all_ids if meta_b[cid]["journal"] in non_flagship_journals]
+    flagship_b = [cid for cid in b_all_ids if cid not in non_flagship_b]
+    specialist_b = [cid for cid in b_all_ids if meta_b[cid]["journal"] not in {"Nature", "Science", "Cell", "Nat Genet", "Nature genetics", "Nat Med", "Nat Microbiol", "Nat Commun", "Elife", "PLoS Biol", "PLoS Genet", "Genome Biol", "Genome biology"}]
+    strictly_non_ncs_b = [cid for cid in b_all_ids if meta_b[cid]["journal"] not in {"Nature", "Science", "Cell"} and not meta_b[cid]["journal"].startswith("Nat ") and not meta_b[cid]["journal"].startswith("Nature ")]
     ncs_b = [cid for cid in b_all_ids if cid not in strictly_non_ncs_b]
 
     b_subsets = [
         ("Full Cohort B (N=50)", b_all_ids),
-        ("Excluding 13 Refutation/Forensic Controls (N=37 Primary Discovery/Methods)", [x for x in b_all_ids if x not in refutation_b]),
-        ("13 Refutation/Forensic Controls Alone (N=13)", sorted(list(refutation_b))),
-        ("Excluding 7 Pond-Affiliated Controls (N=43)", [x for x in b_all_ids if x not in pond_b]),
-        ("Excluding BOTH Refutation AND Pond Controls (N=31 Independent Primary)", [x for x in b_all_ids if x not in (refutation_b | pond_b)]),
-        ("High-Impact Flagship Subset of Cohort B (N=42, per Issue #4 definition)", flagship_42),
-        ("Non-Flagship / Specialist Journal Subset of Cohort B (N=8, per Issue #4)", non_flagship_8),
-        ("Nature / Science / Cell Portfolio Subset of Cohort B (N=31)", ncs_b),
-        ("Non-Nature/Science/Cell (Society/Specialist/Open) Subset of Cohort B (N=19)", strictly_non_ncs_b),
-        ("Specialist Domain Society Journals incl. MBE (N=11)", specialist_b),
+        ("Excluding 9 Refutation/Forensic Controls (N=41 Primary Discovery/Methods)", [x for x in b_all_ids if x not in refutation_b]),
+        ("9 Refutation/Forensic Controls Alone (N=9)", sorted(list(refutation_b))),
+        ("Excluding 2 Senior-Author Controls (N=48)", [x for x in b_all_ids if x not in pond_b]),
+        ("Excluding BOTH Refutation AND Senior-Author Controls (N=39 Independent Primary)", [x for x in b_all_ids if x not in (refutation_b | pond_b)]),
+        ("High-Impact Flagship Subset of Cohort B (N=36)", flagship_b),
+        ("Non-Flagship / Specialist Journal Subset of Cohort B (N=14)", non_flagship_b),
+        ("Nature / Science / Cell Portfolio Subset of Cohort B (N=24)", ncs_b),
+        ("Non-Nature/Science/Cell (Society/Specialist/Open) Subset of Cohort B (N=26)", strictly_non_ncs_b),
+        ("Specialist Domain Society Journals incl. MBE (N=18)", specialist_b),
     ]
     sa_full = [by_cid[x]["overall"] for x in a_all_ids]
     for bname, bids in b_subsets:

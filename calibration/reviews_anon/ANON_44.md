@@ -3,54 +3,60 @@
 **Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
 **Authors:** [REDACTED FOR BLINDED REVIEW]  
 **Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
-**Overall Score:** **8.1 / 10.0** (Strong / Sound)  
-* **Score Breakdown:** Rigor: 2.5/3.5 | Claims: 1.9/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.9/2.0
+**Overall Score:** **8.6 / 10.0** (Strong / Sound) | **Scientific Core Score:** **6.8 / 8.0**  
+**Overall Score:** 8.6 / 10.0  
+* **Score Breakdown:** Rigor: 2.9/3.5 | Claims: 2.2/2.5 | Biology: 1.7/2.0 | Reproducibility: 1.8/2.0  
+**Score Breakdown:** Methodological Rigor: 2.9/3.5 | Claim-Evidence Alignment: 2.2/2.5 | Biological Plausibility: 1.7/2.0 | Reproducibility: 1.8/2.0  
+**Verdict:** Strong / Sound
 
 ---
 
-### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT (Executive Summary)
 
-This manuscript announces version 2.5 of HyPhy (HYpothesis testing using PHYlogenies), an open-source C++14 software package and domain-specific scripting environment (HyPhy Batch Language, HBL) for maximum-likelihood and Bayesian evolutionary modeling of molecular sequence alignments. The v2.5 release introduces a re-engineered computational core utilizing SIMD vectorization, OpenMP multiprocessing, and MPI distributed parallelism; non-interactive command-line keyword execution and Bioconda/Homebrew packaging for pipeline integration; standardized Markdown progress reporting and machine-readable JSON output coupled with the `hyphy-vision` JavaScript visualization library; and continuous integration testing featuring $>90\%$ HBL function unit test coverage and cross-package likelihood verification (`testiphy`). Source code, documentation, test suites, and web interfaces (Datamonkey) are publicly available.
+This manuscript presents `UFBoot2`, an accelerated and bias-corrected version of the ultrafast bootstrap approximation (`UFBoot`) implemented in IQ-TREE v1.6. The authors address three primary challenges in maximum-likelihood (ML) phylogenetic branch support estimation: (1) computational speed, achieved via RAxML-style reversible root-pulley likelihood pruning and SIMD (SSE/AVX) vectorization across site pairs/quartets, yielding a $2.4\times$ median speedup over UFBoot v0.9.6, $778\times$ over standard nonparametric bootstrap (`SBS`), and $8.4\times$ over RAxML rapid bootstrap (`RBS`) across 70 DNA and 45 protein TreeBASE alignments; (2) false-positive branch support on unresolved polytomies, addressed by randomly tie-breaking among candidate trees within $\varepsilon_{\text{boot}} = 0.5$ RELL log-likelihood units of the best score (validated on 100 4-taxon star-tree simulations); and (3) overestimation of branch supports under severe substitution model violations, resolved by `UFBoot2 + NNI` (`-bnni`), which applies hill-climbing nearest-neighbor interchange (NNI) optimization directly on each bootstrap alignment starting from the best RELL tree (validated across 5,690 simulated PANDIT DNA alignments, Fig. 1). Finally, the authors implement partition-aware resampling schemes (`MSA-site`, `gene`, and `gene-site`, `-bsam`) for phylogenomic supermatrices, demonstrated on a 21-species, 225-gene metazoan dataset (Fig. 2) and 14 additional empirical matrices.
 
-HyPhy 2.5 represents a substantial software engineering upgrade that modernizes a widely used molecular evolution platform for reproducible command-line workflows and automated quality assurance. The primary limitation of the manuscript is the complete absence of empirical benchmarks to substantiate its performance and scalability claims: despite dedicating a section to "Optimized for Larger Data Sets," the paper provides no runtime tables, scaling curves, memory profiles, or numerical concordance comparisons against prior HyPhy versions (e.g., v2.2) or external likelihood engines. Adding a compact benchmark suite quantifying wall-clock speedups across core selection analyses (e.g., MEME, BUSTED, aBSREL, FUBAR) and verifying statistical concordance with earlier releases would directly align the empirical evidence with the manuscript's claims.
-
----
-
-### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
-
-* **HyPhy 2.5 modernizes CLI usability, package distribution, output standardization, and continuous integration testing: [Well Supported].**  
-  The implementation of non-interactive keyword CLI arguments, relative path resolution, Bioconda/Homebrew distribution, standardized JSON output schemas paired with `hyphy-vision`, $>90\%$ HBL unit test coverage, and automated cross-software likelihood checks against IQ-TREE, RAxML, and MrBayes via `testiphy` are concrete, verifiable software engineering improvements.
-
-* **Core numerical routines are optimized via SIMD, OpenMP, and MPI to enable analysis of large-scale alignments containing thousands of sequences: [Moderately Supported].**  
-  While the codebase implements SIMD, OpenMP, and MPI parallelization alongside variational/grid approximations (such as FUBAR), the manuscript presents zero quantitative benchmarks demonstrating runtime speedups over previous HyPhy releases or defining the practical alignment size limits ($N$ sequences $\times$ $L$ codons) for computationally intensive branch-site and site-level random-effects models (e.g., BUSTED, MEME, aBSREL, RELAX) versus grid-based approximations (FUBAR).
-
-* **Popular analyses implemented in HyPhy do not significantly benefit from GPU acceleration compared with tuned multicore CPU optimizations: [Fragile].**  
-  In the "Optimized for Larger Data Sets" section, the authors state that "the majority of popular analyses implemented in HyPhy do not significantly benefit from GPU acceleration compared with tuned multicore CPU optimizations (in our hands at least, also see Izquierdo-Carrasco et al. 2013)." No experimental timings on modern GPU architectures or BEAGLE v3 codon-model kernels are presented to support this claim, and citing a 2013 nucleotide-level study does not establish CPU vs. GPU performance for 61-state codon transition probability exponentiation and pruning in 2019–2020.
-
-* **The re-engineered computational core and standard libraries maintain backward compatibility and numerical consistency with previous HyPhy releases: [Moderately Supported].**  
-  Although `testiphy` validates base likelihood evaluations against external phylogenetic packages, the manuscript does not report regression benchmarks comparing parameter estimates ($\omega$ distributions, branch lengths) and hypothesis test $p$-values from HyPhy 2.5 against HyPhy 2.2 across the standard suite of codon selection models where optimization heuristics and convergence criteria were updated.
+`UFBoot2` and `UFBoot2 + NNI` provide a practical, well-engineered advance that substantially mitigates the two principal failure modes of RELL-based bootstrap approximations while retaining a $424\times\text{--}778\times$ speedup over standard bootstrapping. The primary methodological limitations are: (1) the polytomy tie-breaking tolerance $\varepsilon_{\text{boot}} = 0.5$ is fixed as an absolute constant without analyzing how RELL log-likelihood variance scales with alignment length $L$ or taxon count $N$ beyond a 4-taxon star tree, (2) RAxML rapid bootstrap (`RBS`) is omitted from the model-violation benchmark (Fig. 1B) on the grounds that RAxML only implements GTR+$\Gamma$, whereas simulating under a more complex model (e.g., codon or site-heterogeneous mixture models) and inferring under GTR+$\Gamma$ would have permitted a symmetric comparison, and (3) the comparison of resampling strategies across 14 empirical phylogenomic datasets is cited as "(data not shown)" rather than tabulated in the supplement. All three issues can be resolved through straightforward supplementary additions and text clarifications.
 
 ---
 
-### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT (Detailed Rubric Evaluation)
 
-#### 1. Add a Quantitative Runtime and Scalability Benchmark Table Across Core Analyses
-* **WHY:** Claiming that HyPhy 2.5 is "optimized extensively to enable analysis of modern large-scale molecular data sets" without providing any empirical runtime or memory measurements leaves readers unable to assess the performance gains of the v2.5 rewrite or the practical scaling limits of each method.
-* **WHAT:** Include a benchmark table or figure comparing HyPhy 2.5 against the previous major release (e.g., HyPhy 2.2) across representative empirical alignments ranging from $N=50$ to $N=2,000$ sequences.
-* **HOW:** Run the flagship stock analyses (`BUSTED`, `MEME`, `aBSREL`, `RELAX`, `FEL`, and `FUBAR`) on 3–4 standard alignments of increasing size on a specified multicore CPU node (reporting 1, 4, and 16 OpenMP threads), and tabulate wall-clock runtime, peak RAM usage, and relative speedup factor.
+* **Reversible root-pulley pruning and SIMD vectorization accelerate `UFBoot2` to $778\times$ (median) faster than `SBS` and $8.4\times$ faster than RAxML `RBS` (Section "Accelerating UFBoot", Supplementary Figs. S1–S3): [Well Supported].**  
+  Across 115 empirical TreeBASE alignments (70 DNA, 45 protein; archived at Zenodo DOI `10.5281/zenodo.854445`), `UFBoot2` achieves a $2.4\times$ median speedup (max $77.3\times$) over `UFBoot` v0.9.6 and $778\times$ (range $200\text{--}1,848\times$) over `SBS`, while `UFBoot2 + NNI` remains $424\times$ faster than `SBS` and $5.0\times$ faster than `RBS`.
 
-#### 2. Validate Statistical Concordance Between HyPhy 2.5 and Prior Releases
-* **WHY:** Re-engineering the C++14 optimization core and modifying runtime convergence criteria can alter maximum-likelihood trajectories on multi-modal codon model surfaces, potentially changing biological inferences relative to earlier versions.
-* **WHAT:** Summarize the numerical agreement of log-likelihoods, parameter estimates, and selection test results between HyPhy 2.5 and HyPhy 2.2 on a reference validation set.
-* **HOW:** Using the method test suite already referenced in the "Software Engineering" section, report the distribution of log-likelihood differences ($\Delta \ln L$) and the concordance of positively selected sites/branches (at $p \le 0.05$ or posterior probability $\ge 0.90$) between HyPhy 2.5 and v2.2.
+* **Optimizing RELL bootstrap trees via hill-climbing NNI (`UFBoot2 + NNI`, `-bnni`) eliminates the severe overestimation of branch support under model misspecification (Section "Reducing the Impact of Model Violations", Fig. 1): [Well Supported].**  
+  Across 5,690 simulated PANDIT DNA alignments, standard `UFBoot2` is well calibrated under the true substitution model (Fig. 1A, lying near the $y = x$ diagonal) but substantially overestimates branch probability under severe model violations (Fig. 1B, curve well below the diagonal because suboptimal candidate topologies from the misspecified original tree search constrain the RELL pool). Adding direct NNI refinement on each bootstrap replicate (`UFBoot2 + NNI`) restores calibration in Fig. 1B to slightly conservative levels closely tracking `SBS` at only a $2\times$ runtime cost over `UFBoot2`.
 
-#### 3. Clarify Method-Specific Scaling Regimes and Temper Unbenchmarked GPU Claims
-* **WHY:** Readers may infer from Line 36 ("alignments containing thousands of sequences") that all HyPhy selection analyses scale to thousands of taxa, whereas full maximum-likelihood branch-site models (`aBSREL`, `MEME`, `RELAX`) have much steeper computational scaling with $N$ than grid/variational methods (`FUBAR`) or counting methods (`SLAC`). Similarly, the claim that GPU acceleration offers no significant benefit for codon models is unsupported by data in the manuscript.
-* **WHAT:** Explicitly distinguish the scaling regimes of different stock analyses and qualify the GPU statement.
-* **HOW:** Add a summary table under "Analyses and Models Supported" listing each stock method, its biological scope (gene-wide, branch, site, branch-site, coevolution, recombination), and its recommended maximum alignment size ($N$ taxa $\times$ $L$ sites) for routine desktop/Datamonkey execution; rephrase the GPU sentence to note that GPU support is omitted in v2.5 pending benchmarking of modern 61-state codon kernels in libraries such as BEAGLE v3.
+* **Randomized RELL tie-breaking within $\varepsilon_{\text{boot}} = 0.5$ prevents false-positive resolution of polytomies (Section "Correction for Polytomies"): [Moderately Supported].**  
+  On 100 simulated 4-taxon star-tree alignments ($L = 15,000$ bp, terminal branches 0.05 under JC), selecting uniformly among encountered trees within $\varepsilon_{\text{boot}} = 0.5$ log-likelihood units of the maximum RELL score caps internal branch support at $\le 88\%$ (zero false positives at the $\ge 95\%$ threshold), matching Simmons & Norton (2014). However, a 4-taxon star tree has only three possible bifurcating topologies, all of which are guaranteed to be visited during the search; in larger trees ($N \ge 50$) with internal polytomies or multiple short internodes, whether the candidate tree pool uniformly samples all $2k-3$ resolutions of a multifurcation—and whether a fixed $\varepsilon_{\text{boot}} = 0.5$ threshold remains optimal across varying alignment lengths $L$—is not tested.
 
-#### 4. Technical and Editorial Cleanup
-* **WHY:** Minor grammatical typos detract from the presentation.
-* **WHAT & HOW:**
-  * In "Optimized for Larger Data Sets" (Line 36): Fix the missing preposition in *"and refinements open-source libraries supporting gpGPUs"* $\rightarrow$ *"and refinements in open-source libraries supporting GPGPUs"*, and change *"100$\times$ fold speedup"* $\rightarrow$ *"100-fold speedup"*.
-  * In "Discussion" (Line 89): Fix the spelling of *"previously developed analyzes"* $\rightarrow$ *"previously developed analyses"*.
+* **Site, gene, and gene-site resampling strategies (`-bsam`) can yield discordant branch supports on empirical phylogenomic matrices (Section "Resampling Strategies for Phylogenomic Data", Fig. 2): [Moderately Supported].**  
+  On the 21-species, 225-gene metazoan alignment (171,077 amino acid sites; Salichos & Rokas 2013), `MSA-site` and `gene` resampling yield $>95\%$ support along backbone internodes whereas `gene-site` resampling yields 80% support (Fig. 2). However, the broader claim across 14 additional empirical phylogenomic datasets—that some branches show $\le 10\%$ support under one scheme and $\ge 95\%$ under the other two with "no tendency toward systematically lower supports"—is presented as "(data not shown)", preventing verification of the underlying distributions.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT (Major Issues, Minor Issues, Concrete Recommendations)
+
+#### Major Issues
+1. **Unreported Empirical Results for the 14 Phylogenomic Datasets ("data not shown", Line 61):** In Section "Resampling Strategies for Phylogenomic Data", the authors analyze 14 published phylogenomic datasets and report striking discrepancies ($\le 10\%$ vs. $\ge 95\%$ support across `MSA-site`, `gene`, and `gene-site` resampling) as "(data not shown)". Since the runs have already been executed, withholding the summary statistics and branch support distributions from the Supplementary Material violates data completeness standards.
+2. **Narrow Validation of Polytomy Correction ($\varepsilon_{\text{boot}} = 0.5$) on a 4-Taxon Tree Only (Section "Correction for Polytomies"):** In a 4-taxon tree, there is only 1 internal branch and 3 possible topologies, so visiting all resolutions is trivial. On larger trees ($N = 20\text{--}100$) with one or more zero-length internal branches, `UFBoot2` only evaluates trees encountered during the original MSA search; if the search heuristic does not visit all three NNI resolutions around a polytomy equally often, random selection within $\varepsilon_{\text{boot}} = 0.5$ could still be biased unless combined with NNI exploration (`-bnni`).
+
+#### Minor Issues
+1. **Omission of `RBS` from Figure 1B:** The authors state that `RBS` is omitted from Figure 1B "because RAxML does not support simpler models" (i.e., when PANDIT data were simulated under GTR+$\Gamma$ and inferred under JC). While true for JC, model violation in RAxML can be evaluated either by using `RAxML-NG` / `ExaML` or by simulating under a codon/mixture model and inferring under unpartitioned GTR+$\Gamma$ (or at minimum noting how `UFBoot2 + NNI` compares to `SBS` on the subset of models supported by both).
+
+#### Concrete Recommendations
+
+#### 1. Replace "(data not shown)" with a Supplementary Table Summarizing the 14 Phylogenomic Datasets
+* **WHY:** Reporting extreme support discrepancies ($\le 10\%$ vs. $\ge 95\%$) across 14 empirical datasets as "data not shown" deprives readers of the empirical evidence supporting the section's conclusions.
+* **WHAT:** Add a Supplementary Table (e.g., Table S2) listing all 15 empirical phylogenomic datasets (number of taxa, number of genes, total sites, mean/median branch support under `MSA-site`, `gene`, and `gene-site` resampling, and number of branches with $|\Delta \text{support}| \ge 20\%$ or discordant $\ge 95\%$ vs. $\le 10\%$ calls).
+* **HOW:** Tabulate the existing `UFBoot2` log outputs from the 14 datasets cited on line 61 and include them in the Supplementary Material and the Zenodo archive (`10.5281/zenodo.854445`).
+
+#### 2. Evaluate Polytomy Calibration on Embedded Multifurcations in Larger Trees and Under `-bnni`
+* **WHY:** A 4-taxon star tree cannot test whether IQ-TREE's candidate tree pool explores all resolutions of an internal polytomy embedded within a larger tree, nor how $\varepsilon_{\text{boot}} = 0.5$ interacts with `UFBoot2 + NNI`.
+* **WHAT:** Test `UFBoot2` and `UFBoot2 + NNI` on a simulated tree with $N \ge 20$ taxa containing internal zero-length branches (or on the PANDIT trees with near-zero internal branches) and report the false-positive rate (support $\ge 95\%$) on the zero-length branches.
+* **HOW:** Collapse 2–3 internal branches to length 0.0 on a 20-taxon topology, simulate 100 alignments in `Seq-Gen` at $L = 1,000$ and $L = 15,000$, and verify that both `UFBoot2` and `UFBoot2 + NNI` maintain support $< 95\%$ on the collapsed branches across alignment lengths.
+
+#### 3. Clarify the Theoretical Variance of `gene-site` Resampling vs. `MSA-site` and `gene` Resampling
+* **WHY:** On line 61, the authors note that `gene-site` resampling yields lower support (80% vs. $>95\%$) on the metazoan tree (Fig. 2) but state there is no systematic tendency across datasets. Statistically, two-stage resampling (resampling $G$ genes with replacement, AND resampling sites with replacement within each sampled gene) doubles the bootstrap variance relative to one-stage resampling because it compounds inter-gene variance with intra-gene multinomial site variance.
+* **WHAT:** Add a brief statistical explanation in Section "Resampling Strategies for Phylogenomic Data" noting that `gene-site` resampling injects both gene-level and site-level resampling variance simultaneously, whereas `gene` resampling alone is the standard non-parametric cluster bootstrap when genes are the independent sampling units.
+* **HOW:** Add 2–3 sentences discussing the two-stage cluster bootstrap variance properties of `-bsam GENESITE` vs. `-bsam GENE` to guide users on which flag is statistically appropriate when testing species trees against gene-tree heterogeneity.

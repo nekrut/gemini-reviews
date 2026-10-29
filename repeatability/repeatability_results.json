@@ -342,70 +342,94 @@
   {
     "cohort_id": "B03",
     "cohort": "B",
-    "domain": "Viral Evolution",
-    "title": "Natural selection in the evolution of SARS-CoV-2 in bats created a generalist virus and highly capable human pathogen.",
+    "domain": "Molecular Evolution",
+    "title": "MAFFT multiple sequence alignment software version 7: improvements in performance and usability.",
     "anon_id": "ANON_07",
     "rep2_id": "REP2_07",
     "rep3_id": "REP3_19",
     "run1": {
-      "overall": 8.4,
-      "rigor": 2.9,
-      "claims": 2.0,
+      "overall": 8.1,
+      "rigor": 2.6,
+      "claims": 2.1,
       "biology": 1.8,
-      "reproducibility": 1.7
+      "reproducibility": 1.6,
+      "core_8": 6.5,
+      "tier": "Strong / Sound"
     },
     "run2": {
-      "overall": 9.0,
-      "rigor": 3.1,
-      "claims": 2.2,
-      "biology": 1.9,
-      "reproducibility": 1.8
+      "overall": 7.8,
+      "rigor": 2.6,
+      "claims": 2.0,
+      "biology": 1.7,
+      "reproducibility": 1.5,
+      "core_8": 6.3,
+      "tier": "Strong / Sound"
     },
     "run3": {
-      "overall": 9.3,
-      "rigor": 3.3,
-      "claims": 2.3,
-      "biology": 1.9,
-      "reproducibility": 1.8
+      "overall": 7.8,
+      "rigor": 2.6,
+      "claims": 2.0,
+      "biology": 1.7,
+      "reproducibility": 1.5,
+      "core_8": 6.3,
+      "tier": "Strong / Sound"
     },
-    "mean_overall": 8.9,
-    "sd_overall": 0.4582575694955841,
+    "mean_overall": 7.9,
+    "sd_overall": 0.173,
     "mad_pair": 0.6000000000000002,
-    "range": 0.9000000000000004
+    "range": 0.9000000000000004,
+    "pmcid": "PMC3603318",
+    "journal": "Molecular biology and evolution",
+    "year": 2013,
+    "range_overall": 0.3,
+    "mean_core8": 6.367,
+    "sd_core8": 0.115
   },
   {
     "cohort_id": "B05",
     "cohort": "B",
-    "domain": "Viral Evolution",
-    "title": "The emergence of SARS-CoV-2 in Europe and North America.",
+    "domain": "Molecular Evolution",
+    "title": "BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis.",
     "anon_id": "ANON_36",
     "rep2_id": "REP2_10",
     "rep3_id": "REP3_28",
     "run1": {
-      "overall": 9.0,
-      "rigor": 3.3,
+      "overall": 8.9,
+      "rigor": 3.0,
       "claims": 2.2,
-      "biology": 1.9,
-      "reproducibility": 1.6
+      "biology": 1.8,
+      "reproducibility": 1.9,
+      "core_8": 7.0,
+      "tier": "Strong / Sound"
     },
     "run2": {
-      "overall": 9.5,
-      "rigor": 3.4,
-      "claims": 2.4,
-      "biology": 1.9,
-      "reproducibility": 1.8
+      "overall": 8.5,
+      "rigor": 2.9,
+      "claims": 2.0,
+      "biology": 1.8,
+      "reproducibility": 1.8,
+      "core_8": 6.7,
+      "tier": "Strong / Sound"
     },
     "run3": {
-      "overall": 9.2,
-      "rigor": 3.3,
-      "claims": 2.3,
-      "biology": 1.9,
-      "reproducibility": 1.7
+      "overall": 8.5,
+      "rigor": 2.9,
+      "claims": 2.0,
+      "biology": 1.8,
+      "reproducibility": 1.8,
+      "core_8": 6.7,
+      "tier": "Strong / Sound"
     },
-    "mean_overall": 9.233333333333333,
-    "sd_overall": 0.2516611478423584,
+    "mean_overall": 8.633,
+    "sd_overall": 0.231,
     "mad_pair": 0.3333333333333333,
-    "range": 0.5
+    "range": 0.5,
+    "pmcid": "PMC6472827",
+    "journal": "PLoS computational biology",
+    "year": 2019,
+    "range_overall": 0.4,
+    "mean_core8": 6.8,
+    "sd_core8": 0.173
   },
   {
     "cohort_id": "B39",

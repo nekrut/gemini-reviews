@@ -3,55 +3,62 @@
 **Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
 **Authors:** [REDACTED FOR BLINDED REVIEW]  
 **Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
-**Overall Score:** **7.9 / 10.0** (Strong / Sound)  
-* **Score Breakdown:** Rigor: 2.6/3.5 | Claims: 2.1/2.5 | Biology: 1.8/2.0 | Reproducibility: 1.4/2.0
+**Overall Score:** **9.5 / 10.0** (Exemplary) | **Scientific Core Score:** **7.7 / 8.0**  
+**Overall Score:** 9.5 / 10.0  
+* **Score Breakdown:** Rigor: 3.4/3.5 | Claims: 2.4/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.8/2.0  
+**Score Breakdown:** Methodological Rigor: 3.4/3.5 | Claim-Evidence Alignment: 2.4/2.5 | Biological Plausibility: 1.9/2.0 | Reproducibility: 1.8/2.0  
+**Verdict:** Exemplary
 
 ---
 
-### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT (Executive Summary)
 
-This manuscript reports the discovery, genomic characterization, phylodynamic reconstruction, and early epidemiological growth analysis of the SARS-CoV-2 Omicron variant (B.1.1.529, comprising sublineages BA.1, BA.2, and BA.3) in South Africa and Botswana during November–December 2021. Combining national COVID-19 case reporting, TaqPath S-gene target failure (SGTF) PCR surveillance, and multi-platform whole-genome sequencing (686 global Omicron genomes and 553 southern African BA.1 genomes contextualized against >12,600 reference sequences), the authors estimate a BA.1 time to most recent common ancestor (TMRCA) in early October 2021 (9 October 2021, 95% HPD: 30 September–20 October), an effective reproduction number $R_e \approx 2.79$ across South Africa/Botswana ($3.61\text{--}3.86$ in Gauteng), and a logistic growth advantage of $\rho = 0.24\text{ day}^{-1}$ (95% CI: $0.16\text{--}0.33$) over Delta. Consensus sequences and raw sequencing reads are publicly deposited in GISAID and NCBI SRA (`PRJNA784038`), and epidemiological datasets are available on GitHub.
+This manuscript introduces `BOLT-LMM`, a fast linear mixed model (LMM) association method that overcomes the $O(MN^2)$ / $O(N^3)$ computational and $O(N^2)$ memory bottlenecks of existing GWAS mixed models while increasing statistical power under non-infinitesimal genetic architectures. The algorithm operates in four steps requiring a small number of $O(MN)$-time iterations directly on packed 2-bit raw genotypes ($\approx MN/4$ bytes RAM): (1a) Monte Carlo REML variance component estimation via conjugate gradient iteration (circumventing GRM construction and spectral decomposition), (1b) leave-one-chromosome-out (LOCO) infinitesimal mixed-model testing (`BOLT-LMM-inf`) calibrated against prospective LMM statistics at 30 random SNPs, (2a) 5-fold cross-validation over a 2-component Gaussian spike-and-slab mixture prior fit via factored variational Bayes (iterative conditional expectation / cyclic coordinate descent), and (2b) retrospective quasi-likelihood score testing of LOCO mixture residuals calibrated via LD Score regression. Evaluated on mosaic WTCCC2 simulations up to $N = 480,000$ individuals ($M = 300,000$ SNPs) and applied to nine quantitative traits in the Women's Genome Health Study ($N = 23,294$, $M = 324,488$), `BOLT-LMM` scales empirically as $\approx O(MN^{1.5})$, matches `GCTA-LOCO` under the infinitesimal model ($R^2 > 0.999$), controls false positives under ancestry stratification, and increases association power equivalent to up to a 25% sample-size increase in simulations and up to a 10% effective sample-size gain on WGHS lipid traits (ApoB).
 
-This is a well-executed rapid-response genomic surveillance study whose core descriptive, evolutionary, and epidemiological conclusions are well supported and appropriately caveated regarding geographic origin and the trade-off between intrinsic transmissibility ($\tau$) and immune evasion ($\epsilon$). Nevertheless, several methodological choices warrant refinement: (1) the multinomial logistic regression of sequence counts in Gauteng ($n=805$) does not adjust for the preferential sequencing of SGTF-positive diagnostic specimens during mid-November, which can upward-bias the estimated growth rate $\rho$; (2) the birth–death skyline (BDSKY) phylodynamic model fixes the tree topology to the coalescent maximum clade credibility (MCC) tree and assumes a constant $R_e$ over the study period, underestimating posterior uncertainty; and (3) codon- and gene-level selection analyses (BUSTED, RELAX, MEME) are applied to BA.2 and BA.3 alignments containing a median of only 3 and 2.5 unique sequences, respectively. Addressing these issues requires straightforward computational sensitivity analyses and editorial completion of omitted Extended Data tables.
-
----
-
-### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
-
-* **Claim 1: Omicron (BA.1) drove a rapid fourth epidemic wave in South Africa and Botswana starting in mid-November 2021, with a TMRCA in early October 2021 and a doubling time of 2.8–5.1 days. [Well Supported]**  
-  The convergence of independent lines of evidence—exponential rises in provincial case incidence, test positivity surging from <1% to 35% in Gauteng, nationwide TaqPath SGTF proportions reaching ~90%, and time-calibrated Bayesian coalescent and birth–death phylogenetics across 553 southern African genomes—robustly supports both the timing of the BA.1 expansion and its early October 2021 TMRCA across clock-rate and infectious-period sensitivity analyses.
-
-* **Claim 2: Omicron carries an extensive constellation of Spike RBD, NTD, and furin cleavage site mutations that arose under strong episodic positive selection along the ancestral B.1.1-to-BA.1 stem branch. [Well Supported]**  
-  Structural mapping onto the Spike trimer (PDB: 7A94) and branch-site selection tests (BUSTED, MEME) on a median of 110 unique BA.1 sequences against ~100 background B.1.1 sequences provide strong statistical support ($P < 0.0001$) for adaptive bursts along the basal BA.1 branch, as well as early within-BA.1 convergent evolution at Spike residues 346, 452, and 701. The authors also transparently document and manually curate amplicon primer dropouts in the RBD and Ion Torrent homopolymer/frameshift assembly artifacts.
-
-* **Claim 3: Omicron had a daily growth advantage of $\rho = 0.24\text{ day}^{-1}$ over Delta in Gauteng, which in a high-immunity population ($\Omega > 0.6$) is primarily driven by partial immune evasion. [Moderately Supported]**  
-  The mechanistic compartmental decomposition $\rho = (1+\tau)\beta(S + \epsilon(1-S)) - \beta S$ appropriately illustrates the identifiability trade-off between intrinsic transmissibility ($\tau$) and immune evasion ($\epsilon$) as a function of prior population immunity ($\Omega = 1 - S$). However, the empirical input $\hat{\rho} = 0.24\text{ day}^{-1}$ is estimated via multinomial logistic regression on 805 Gauteng sequences uploaded to GISAID between 1 September and 1 December 2021. Because the authors explicitly enriched sequencing in mid-November with targeted SGTF specimens from Tshwane outbreaks (Methods, line 92), sequence proportions in GISAID over-represent BA.1 during its initial upswing. While the authors acknowledge this limitation qualitatively in the text (line 74), they do not compare the sequence-based $\hat{\rho}$ against an unbiased estimator derived from routine random SGTF PCR screening.
-
-* **Claim 4: Gene-wide and site-level positive selection and selection intensification ($K = 6.25, P = 0.005$) can be resolved within the BA.2 and BA.3 sublineages. [Fragile]**  
-  In the selection analysis section (lines 59 and 65), the authors report running BUSTED, RELAX, and MEME on a median of only 3 unique BA.2 sequences and 2.5 unique BA.3 sequences per ORF. With only 2–3 sequences in a foreground clade, asymptomatic likelihood-ratio approximations for branch-site random-effects models have minimal statistical power and unstable parameter estimates, and the reported "positively selected sites within BA.2/BA.3 sequences" (Spike 371, 376, 405, 477, 505) are simply fixed clade-defining mutations on the ancestral stem branches rather than polymorphisms segregating within BA.2 or BA.3.
+This is a mathematically rigorous, thoroughly validated methodological contribution. The authors verify every approximation step—benchmarking variational Bayes against an exact MCMC Gibbs sampler, verifying calibration on null chromosome halves under population stratification, and providing an unusually candid eight-point discussion of methodological boundaries (such as case-control ascertainment loss in low-prevalence diseases and single variance component limits). Only minor statistical refinements (such as increasing the default number of random SNPs used for $c_{\text{inf}}$ calibration and providing the explicit software repository URL in the main text) are recommended.
 
 ---
 
-### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT (Detailed Rubric Evaluation)
 
-#### 1. Cross-Validate Sequence-Based Growth Advantage ($\rho$) Against Unbiased SGTF PCR Proportions
-* **WHY:** Targeted prioritization of SGTF-positive diagnostic samples for whole-genome sequencing in Gauteng during mid-November 2021 violates the random-sampling assumption of the multinomial logistic regression applied to GISAID sequence counts ($n=805$), potentially inflating $\hat{\rho} = 0.24\text{ day}^{-1}$.
-* **WHAT:** Re-estimate the logistic growth advantage $\rho$ (1) restricting the GISAID sequence dataset strictly to routine randomly sampled surveillance specimens (excluding targeted SGTF and outbreak-enriched batches) and (2) fitting the logistic growth model directly to the weekly/daily TaqPath SGTF PCR test proportions from the National Health Laboratory Service and Lancet Laboratories (shown in Fig. 1c).
-* **HOW:** Fit the same logistic growth model (`nnet::multinom` / binomial GLM) to the daily/weekly SGTF vs. non-SGTF PCR counts in Gauteng from October to early December 2021, and propagate the resulting SGTF-derived $\hat{\rho}$ and its 95% CI into the $(\tau, \epsilon)$ trade-off curves in Fig. 4b–e.
+* **`BOLT-LMM` reduces mixed-model computational complexity from $O(MN^2)$ to $\approx O(MN^{1.5})$ time and $\approx MN/4$ bytes of memory, scaling to $N = 480,000$ samples (Section "Computational cost of BOLT-LMM versus existing methods", Fig. 1, Table 1): [Well Supported].**  
+  By replacing explicit $N \times N$ GRM formation and $O(N^3)$ eigendecomposition with conjugate gradient linear solvers and Monte Carlo REML trace estimation on 2-bit packed genotypes, `BOLT-LMM` completes analyses up to $N = 480,000$ within 10 days and $<96$ GB RAM, whereas `GCTA-LOCO`, `FaST-LMM`, `GEMMA`, and `EMMAX` fail above $N = 7,500\text{--}30,000$. The authors accurately characterize the empirical $O(N^{0.5})$ scaling of conjugate gradient iteration count with sample size, heritability, and relatedness.
 
-#### 2. Account for Phylogenetic Topology Uncertainty and Time-Varying $R_e$ in BDSKY Phylodynamics
-* **WHY:** In the BEAST2 BDSKY analysis (Methods, chunk 2, line 5), fixing the tree topology to the single MCC tree from the coalescent run and constraining $R_e$ to be strictly constant from early October to early December 2021 artificially narrows the 95% HPD intervals for $R_e$ and doubling time and can conflate changes in transmission rate with changes in the piecewise-constant sampling proportion.
-* **WHAT:** Allow joint estimation of tree topology and node heights in BEAST2 (or integrate over a posterior sample of trees) and include a sensitivity model where $R_e$ is estimated across epochs alongside the sampling proportion.
-* **HOW:** Run the BDSKY MCMC without the fixed-topology constraint on the 277-genome Gauteng subset and the 552-genome southern African dataset, and compare the posterior HPD widths for TMRCA, $R_e$, and doubling time against the fixed-topology estimates in Extended Data Tables 4 and 5.
+* **Modeling non-infinitesimal architectures via a variational Gaussian mixture prior increases association power in proportion to $h_g^2 N / M_{\text{causal}}$ while controlling Type I error (Section "Power and false positive control of BOLT-LMM in simulations", Fig. 2): [Well Supported].**  
+  Across ancestry-stratified WTCCC2 simulations where causal variants reside on the first halves of chromosomes and the second halves serve as null controls, `BOLT-LMM` achieves up to a 25% gain in mean $\chi^2$ at standardized-effect causal SNPs ($M_{\text{causal}} = 1,250$) over `GCTA-LOCO` and `BOLT-LMM-inf` while keeping null-chromosome mean $\chi^2$ and Type I error calibrated. Moreover, replacing Step 2b's variational Bayes updates with an MCMC Gibbs sampler at $N = 5,211$ (Supplementary Table 6a) produces statistically indistinguishable power and calibration, confirming that the factored variational approximation does not degrade inference.
 
-#### 3. Reframe BA.2 and BA.3 Selection Analyses as Stem-Branch Divergence
-* **WHY:** Applying within-clade site-level selection tests (MEME) and relaxation/intensification tests (RELAX) to alignments with a median of 3 (BA.2) and 2.5 (BA.3) unique sequences conflates ancestral stem-branch substitutions with ongoing intra-lineage diversifying selection.
-* **WHAT:** Temper the claims regarding intra-clade selection in BA.2 and BA.3, or update the selection screen using the expanded set of 148 BA.2 and 19 BA.3 sequences that were already added to the phylogenetic analysis during revision (Methods, line 131).
-* **HOW:** Either re-run the RASCL/HyPhy pipeline on the expanded 148 BA.2 and 19 BA.3 genome set from Extended Data Fig. 4c–d, or explicitly restrict the current BA.2/BA.3 selection claims in the text to the ancestral branches separating BA.1, BA.2, and BA.3.
+* **`BOLT-LMM-inf` reproduces standard prospective LOCO mixed-model statistics (`GCTA-LOCO`) with $R^2 > 0.999$ while avoiding proximal contamination (Online Methods Eqs. 7–10, Supplementary Table 7): [Well Supported].**  
+  Because the prospective denominator $x_{\text{test}}' V_{\text{LOCO}}^{-1} x_{\text{test}}$ is nearly constant across common SNPs in human cohorts without extreme family structure, scaling the retrospective numerator $(x_{\text{test}}' V_{\text{LOCO}}^{-1} y)^2$ by a constant $c_{\text{inf}}$ matches `GCTA-LOCO` almost identically while avoiding the power loss from proximal contamination seen in `EMMAX` and `GEMMA`.
 
-#### 4. Technical, Mathematical, and Editorial Cleanup
-* **WHY:** Several minor numerical discrepancies and missing table bodies reduce the completeness of the manuscript.
+* **On nine quantitative traits in WGHS ($N = 23,294$), `BOLT-LMM` significantly improves cross-validated prediction $R^2$ (9/9 traits, $p < 0.0002$) and known-locus $\chi^2$ statistics (6/9 traits, up to 10% gain for ApoB) while eliminating false-positive *LCT* stratification on height (Section "Application of BOLT-LMM to WGHS phenotypes", Fig. 3): [Well Supported].**  
+  Empirical gains track the inferred sparsity of each trait's genetic architecture and match the theoretical asymptotic effective sample-size relationship $1 / (1 - R_{\text{pred}}^2)$. Uncorrected marginal regression yields a spurious genome-wide significant signal at the lactase (*LCT*) locus for height due to European substructure, which is completely abolished by `PCA`, `BOLT-LMM-inf`, and `BOLT-LMM`.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT (Major Issues, Minor Issues, Concrete Recommendations)
+
+#### Major Issues
+None; the mathematical derivations, simulation controls, and empirical validations are sound.
+
+#### Minor Issues
+1. **Monte Carlo Variance in $c_{\text{inf}}$ Calibration from 30 Random SNPs (Online Methods, Step 1b):** Estimating the constant calibration factor $c_{\text{inf}}$ in Equation (9) using only 30 pseudorandom SNPs with $\chi^2_{\text{GRAMMAR}} < 5$ introduces a $\sim 1\%$ standard error in the scale of all genome-wide $\chi^2_{\text{BOLT-LMM-inf}}$ test statistics (and by extension the target LD Score regression intercept for Step 2b). Because a 1% shift in $\chi^2$ at the genome-wide significance threshold ($\chi^2 = 29.7$, $p = 5 \times 10^{-8}$) alters $p$-values by $\approx 15\%$, reducing this Monte Carlo noise is desirable.
+2. **Typographical Formatting in Eq. (13) and Parameter Grid (Online Methods):** In Equation (13) (line 100), the normal prior is typeset as $\beta_m \sim N(0, \sigma_g^2) / M_{\text{LOCO}}$ instead of $\beta_m \sim N(0, \sigma_g^2 / M_{\text{LOCO}})$, and on line 133 the grid for $p$ has a period instead of a comma (`p \in {0.5, 0.2. 0.1, 0.05, 0.02, 0.01}`).
+
+#### Concrete Recommendations
+
+#### 1. Increase or Adaptively Stop the Random SNP Sample Size for $c_{\text{inf}}$ Calibration
+* **WHY:** A $\sim 1\%$ calibration standard error from averaging 30 SNPs in Equation (9) translates to a $\sim 0.3$ shift in $\chi^2$ at $\chi^2 = 30$, which can flip borderline genome-wide significant loci across runs with different random seeds.
+* **WHAT:** Increase the default number of calibration SNPs (or implement an adaptive stopping rule based on the Jackknife standard error of the ratio in Eq. 9) so that the standard error of $c_{\text{inf}}$ is $\le 0.2\%$.
+* **HOW:** Solve $V_{\text{LOCO}}^{-1} x_{\text{test}}$ via conjugate gradients for 100–150 random SNPs (or block-CG across multiple RHS vectors simultaneously, which amortizes memory bandwidth over the genotype matrix $X$) so that calibration variance becomes negligible with minimal runtime overhead.
+
+#### 2. Quantify the Breakdown of Constant-Denominator Approximation for Rare Variants
+* **WHY:** In the Discussion, the authors note that treating the prospective denominator $x_{\text{test}}' V_{\text{LOCO}}^{-1} x_{\text{test}}$ as constant (after normalizing $x_{\text{test}}$) may be violated for very rare variants or cohorts with strong family relatedness.
+* **WHAT:** Provide a quantitative MAF or variance-ratio diagnostic guideline indicating when the constant-denominator retrospective approximation diverges from the exact prospective statistic.
+* **HOW:** Using the 30–100 calibration SNPs stratified across MAF bins in the WTCCC2/WGHS datasets, report the coefficient of variation of $x_{\text{test}}' V_{\text{LOCO}}^{-1} x_{\text{test}}$ (for unit-variance normalized $x_{\text{test}}$) as a function of MAF.
+
+#### 3. Technical and Editorial Cleanup
+* **WHY:** Minor equation typesetting errors should be corrected for clarity.
 * **WHAT & HOW:**
-  * **Selection Analysis Text (Main Text, line 61):** Fix the internal contradiction between *"acting on **11** genes or ORFs: M gene, N gene, nsp3, S gene, exonuclease, RdRp, methyltransferase, helicase, ORF7a, ORF6 and ORF3a"* and the immediately following sentence *"In all **ten** genes, this selection was strong..."* (11 genes are listed; change "ten" to "11").
-  * **Extended Data Tables 1–5 (Tables section, chunk 2, lines 50–71):** The titles and footnotes for Extended Data Tables 1–5 are present, but the data rows are missing from the manuscript file. Ensure all five tables are fully populated in the final text.
-  * **Extended Data Fig. 6 Caption (chunk 2, line 84):** Fix the typographical error *"The a 897nt region 2 segment"* to *"The 897-nt region 2 segment"* (note also that $22198 - 21690 + 1 = 509\text{ nt}$ in the main text line 52 vs. $897\text{ nt}$ in the caption; reconcile the exact nucleotide coordinates of region 2 between line 52 and Extended Data Fig. 6).
+  1. In Online Methods Equation (13) (line 100), move `/ M_{\text{LOCO}}$` inside the variance argument of the normal distribution: $\beta_m \sim \mathcal{N}(0, \sigma_g^2 / M_{\text{LOCO}})$.
+  2. In Online Methods Step 2a (line 133), change `p \in {0.5,0.2.0.1,0.05,0.02,0.01}` to `p \in {0.5, 0.2, 0.1, 0.05, 0.02, 0.01}`.
+  3. In Online Methods Step 2a (line 129), fix the typo `analyis` to `analysis`.

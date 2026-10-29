@@ -3,50 +3,69 @@
 **Manuscript Title:** [REDACTED FOR BLINDED REVIEW]  
 **Authors:** [REDACTED FOR BLINDED REVIEW]  
 **Journal / Preprint:** [REDACTED FOR BLINDED REVIEW]  
-**Overall Score:** **8.9 / 10.0** (Strong / Sound)  
-* **Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.2/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.7/2.0
+**Overall Score:** **9.1 / 10.0** (Exemplary) | **Scientific Core Score:** **7.2 / 8.0**  
+**Overall Score:** 9.1 / 10.0  
+* **Score Breakdown:** Rigor: 3.1/3.5 | Claims: 2.2/2.5 | Biology: 1.9/2.0 | Reproducibility: 1.9/2.0  
+**Score Breakdown:** Methodological Rigor: 3.1/3.5 | Claim-Evidence Alignment: 2.2/2.5 | Biological Plausibility: 1.9/2.0 | Reproducibility: 1.9/2.0  
+**Verdict:** Exemplary
 
 ---
 
-### 1. SUMMARY AND OVERALL IMPACT STATEMENT
+### 1. SUMMARY AND OVERALL IMPACT STATEMENT (Executive Summary)
 
-This manuscript characterizes the transmissibility, candidate biological mechanisms, clinical severity, and projected 2021 healthcare burden of SARS-CoV-2 lineage B.1.1.7 (VOC 202012/01) following its emergence in southeast England in late 2020. Integrating $>150,000$ COG-UK viral genomes, Public Health England Pillar 2 S-gene target failure (SGTF) community testing records, Google Community Mobility indices, CoMix social contact surveys, and international surveillance series from Denmark, Switzerland, and the United States, the authors apply negative-binomial state-space growth models, multinomial and misclassification-adjusted binomial generalized linear mixed models (GLMMs), upper-tier local authority (UTLA) $R_t$ regressions, and an age- and regionally structured two-strain deterministic compartmental transmission model across seven NHS England regions. They estimate a 43% to 90% increase in reproduction number (range of 95% credible/confidence intervals: 38% to 130%) relative to preexisting lineages, identify increased per-contact transmissibility (and/or prolonged infectious period) as the most parsimonious mechanistic driver via Deviance Information Criterion (DIC), find inconclusive early ecological evidence for altered infection fatality or hospitalization risk, and project substantial 2021 waves requiring both stringent nonpharmaceutical interventions (NPIs) including school closures and accelerated vaccination (2 million individuals/week).
+This foundational genomic resource manuscript presents the GENCODE 7 reference gene annotation of the human genome, integrating manual curation by HAVANA, automated gene building by Ensembl (`HavanaAdder` merge), and targeted experimental validation via multiplexed RT-PCR-seq, CAGE, polyA-seq, comparative genomics (`PhyloCSF`), protein structural/functional conservation (`APPRIS`), and tandem mass spectrometry (`X!Tandem` against PeptideAtlas/GPM). GENCODE 7 catalogs 20,687 protein-coding loci (140,066 transcripts, including 33,977 CDSs absent from RefSeq and UCSC), 9,640 long noncoding RNA (lncRNA) loci (15,512 transcripts), 8,801 small ncRNAs, and 11,224 manually curated pseudogenes (7,183 Level 1 three-way consensus pseudogenes and 934 transcribed pseudogenes). Targeted RT-PCR-seq across eight human tissues validates 82% of 5,871 tested low-confidence splice junctions (5$\times$ higher sensitivity than deep unstranded RNA-seq) and 73% of novel Illumina Human Body Map 2.0 (HBM) transcript models (confirming 1,168 novel loci), while mass spectrometry at 1% target-decoy FDR maps 83,054 tryptic peptides to 8,098 protein-coding genes (39.1%) and detects alternative isoform translation at 194 loci. All annotations and evidence tracks are publicly available via `gencodegenes.org`, Ensembl, and the UCSC Genome Browser.
 
-This is a thorough epidemiological modeling study whose core finding—a substantial intrinsic transmission advantage for B.1.1.7—is triangulated across multiple statistical frameworks, independent surveillance streams (whole-genome sequencing and SGTF PCR), and four countries while ruling out regional contact-rate confounding. The main methodological limitations are: (1) the two-stage UTLA $R_t$ regression (Models 4a/4b) treats point estimates of $R_t$ from `EpiNow2` as known observations without propagating estimation uncertainty or accounting for single-strain generation-interval assumptions; (2) the mechanistic compartmental model estimates severity odds ratios from right-censored ecological time series truncated on 24 December 2020 rather than linked individual patient outcomes, and combines regional posteriors post-hoc rather than via a joint hierarchical likelihood; and (3) there are minor numerical and typographical discrepancies between the main text and tables (e.g., the US upper confidence bound of 63% in the text vs. 83% in Table 1). These issues can be addressed through uncertainty propagation in the $R_t$ regression and targeted editorial corrections.
-
----
-
-### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT
-
-* **VOC 202012/01 exhibits a 43% to 90% higher reproduction number than preexisting variants across England, Denmark, Switzerland, and the United States, independent of regional contact behavior: [Well Supported].**  
-  Multinomial spline fits to COG-UK sequences (+77%, 95% CI 73%–81% vs. B.1.177), misclassification-corrected binomial GLMMs on English SGTF counts (+83%, 95% CI 81%–84%), UTLA $R_t$ regressions (+43% to +57%), two-strain compartmental transmission fits (+82%, 95% CrI 43%–130%), and international replicates in Denmark (+55%), Switzerland (+74%), and the US (+59%) consistently demonstrate rapid displacement across all age, sex, and socioeconomic strata. CoMix contact surveys and Google Mobility data confirm that Tier 4 regions with high VOC prevalence did not have elevated baseline social contact rates.
-
-* **Increased transmissibility per contact (or a longer infectious period) explains the observed spread better than immune escape or a shorter generation time alone: [Well Supported].**  
-  Evaluating five mechanistic variants of the two-strain compartmental model against out-of-sample data from 25 December 2020 to 7 January 2021 shows that a shorter generation interval alone (Hypothesis 5) fails because it predicts VOC frequency should decline when $R_t < 1$ during late-December restrictions, whereas observed VOC frequency continued to rise monotonically.
-
-* **In the absence of stringent NPIs (including school closures) and accelerated vaccination (2 million/week), 2021 hospitalizations and deaths in England would exceed 2020 totals: [Well Supported].**  
-  Scenario projections across four NPI tiers and three vaccination rates (Table 2, Fig. 4) clearly separate the role of January NPIs in capping peak ICU demand from the role of high-throughput vaccination in preventing spring resurgences upon NPI relaxation, and hold under a 20% winter seasonality sensitivity analysis.
-
-* **Infection with VOC 202012/01 shows no clear evidence of altered clinical severity (OR for death 0.90, 95% CrI 0.68–1.20; OR for hospitalization 0.92, 95% CrI 0.77–1.10): [Fragile].**  
-  Inferring variant-specific infection hospitalization and fatality ratios from aggregate regional hospital/death time series truncated on 24 December 2020 is underpowered and susceptible to ecological confounding because B.1.1.7 incidence surged exponentially in mid-December 2020 and clinical outcomes lag infection by 2–4 weeks. While the authors appropriately caution in the main text that fitting up to 24 December 2020 cannot reliably resolve severity, the wide credible intervals reflect right-censoring and ecological aggregation rather than evidence of equivalent severity.
+GENCODE 7 represents a gold-standard, multi-tiered genomic resource backed by rigorous manual curation rules, automated consistency checks (`AnnoTrack`), and orthogonal wet-lab validation. Its primary technical caveats are: (1) first-pass manual curation was completed on only 18 of 24 chromosomes in release 7 (leaving chromosomes 14–19 dependent on Level 3 automated annotation, which induces chromosome-level ascertainment skew for lncRNAs and alternative isoforms), (2) 85% of lncRNA 5' ends and 83.2% of lncRNA 3' ends lack CAGE/polyA support, meaning the sharp two-exon modal peak reported for lncRNAs (Fig. 2) remains partially sensitive to 5'/3' terminal exon truncation, and (3) the proteomics method combines per-experiment `X!Tandem` $P$-values across repositories without specifying the mathematical combination formula or controlling for correlated decoy hits across repeated spectra. These caveats can be clarified through explicit methodological documentation and chromosome-stratified summary statistics.
 
 ---
 
-### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT
+### 2. SPECIFIC CONCLUSIONS AND ASSESSMENT OF SUPPORT (Detailed Rubric Evaluation)
 
-#### 1. Propagate First-Stage $R_t$ Estimation Uncertainty in the UTLA Regression (Models 4a and 4b)
-* **WHY:** Models 4a and 4b regress weekly UTLA $R_t$ point estimates generated by `EpiNow2` on SGTF proportions without propagating the posterior variance or temporal smoothing covariance of the `EpiNow2` estimates, which yields overly narrow 95% credible intervals (`43% [38, 48]` and `57% [52, 62]`).
-* **WHAT:** Incorporate the local authority $R_t$ standard errors (or posterior draws) from `EpiNow2` into the second-stage hierarchical regression.
-* **HOW:** Modify the Bayesian regression for Models 4a and 4b to treat the true log reproduction number in UTLA $i$ at week $t$ as a latent variable measured with normal error $\hat{R}_{i,t} \sim \mathcal{N}(R_{i,t}, \sigma^2_{i,t})$ using the reported `EpiNow2` standard deviations $\sigma_{i,t}$, and report the updated credible intervals in Table 1.
+* **Combining HAVANA manual genomic curation with Ensembl automated annotation and targeted RT-PCR-seq yields the most comprehensive, high-accuracy catalog of human coding transcripts, lncRNAs, and pseudogenes (Figs. 1, 4, 7, 8): [Well Supported].**  
+  By curating directly on the finished reference genome rather than full-length cDNAs alone, GENCODE captures 33,977 unique coding sequences outside RefSeq/UCSC while flagging partial transcripts (`start_not_found` / `end_not_found`) and classifying evidence into Levels 1–3. Targeted RT-PCR-seq across 8 tissues confirms 82% of 5,871 tested splice junctions, outperforming 5-billion-read unbiased RNA-seq (16% detection on single-transcript junctions) by $5\times$ for low-abundance isoforms.
 
-#### 2. Clarify Counterintuitive Post-Relaxation Rebound Effects in Table 2 Peak Death Projections
-* **WHY:** In Table 2 under "No vaccination," the "Very high (March 2020)" lockdown scenario lists higher `Peak deaths` (`1,830 [1,670–2,000]`) and higher `Total deaths` (`149,000`) than the less restrictive "High with schools closed" scenario (`1,500 [1,440–1,570]` peak deaths; `147,000` total deaths). Without an explanation in the Table 2 caption, readers may misinterpret this as a model error rather than the consequence of an unmitigated spring exit wave after restrictions are lifted on 1 March 2021 in a still-susceptible population.
-* **WHAT:** Add an explicit note to Table 2 distinguishing the winter peak (during restrictions) from the spring rebound peak (after the simulated March 2021 relaxation).
-* **HOW:** Annotate the "No vaccination" rows in Table 2 (or report winter and post-relaxation peaks separately) to explain that under the strictest January–February lockdown without vaccination, preserved population susceptibility produces a larger exit wave when NPIs are relaxed in March 2021.
+* **Human lncRNAs exhibit a distinct two-exon modal structure and low evolutionary coding potential, whereas few unannotated conserved protein-coding loci remain in the human genome (Sections "Analyzing long noncoding transcript annotation" & "Assessing coding potential of RNA-seq models using PhyloCSF", Fig. 2): [Moderately Supported].**  
+  Screening 3,689 novel intergenic HBM RNA-seq loci with `PhyloCSF` across 33 placental mammals yields only 5 manually confirmed novel coding genes (plus 9 from `Scripture`), strongly supporting the conclusion that the conserved human protein-coding gene catalog is near completion. However, because only 15% of GENCODE lncRNA TSSs and 16.8% of 3' ends are supported by CAGE and polyA features, the conclusion that the two-exon distribution of lncRNAs is a bona fide biological property rather than an assembly/truncation artifact is only moderately supported: short-read HBM assemblies (`Exonerate` / `Scripture`) used for corroboration are themselves prone to fragmenting multi-exonic low-abundance transcripts at GC-rich or repetitive junctions.
 
-#### 3. Fix Numerical and Date Typos Between the Main Text and Tables
-* **WHY:** Numerical mismatches between the text and Table 1 and date typos in the Methods undermine technical precision.
+* **Nearly 60% of alternative translated isoforms lose functional domains, structural integrity, or catalytic residues relative to the constitutive `APPRIS` principal isoform, while ~40% of coding loci have mass-spectrometry peptide support (Sections "Analyzing the protein-coding complement..." & "Assessing coding potential... using mass spectrometry data"): [Well Supported].**  
+  `APPRIS` structural and Pfam domain mapping across 84,408 translated transcripts demonstrates that 59.9% of alternative isoforms (and 79.5% of NMD-predicted isoforms) alter or lose conserved domains/residues. At the protein level, 83,054 peptides at 1% target-decoy FDR map uniquely to 8,098 coding genes, validating 83 "novel"/"putative" transcripts and 8 NMD-candidate isoforms, though the exact $P$-value combination formula across PeptideAtlas/GPM experiments should be stated in Methods.
+
+* **Multi-pipeline consensus and RT-PCR-seq identify 7,183 Level 1 pseudogenes and hundreds of locus-specific transcribed pseudogenes (Section "Integration of pseudogenes into GENCODE", Fig. 3): [Well Supported].**  
+  Cross-validating `PseudoPipe` (18,046), `RetroFinder` (13,644), and HAVANA manual curation (11,224) establishes a 7,183-locus Level 1 consensus set, with 63 of 162 tested transcribed pseudogene candidates confirmed by RT-PCR-seq across 8 tissues.
+
+---
+
+### 3. CONSTRUCTIVE AND DOABLE SUGGESTIONS FOR IMPROVEMENT (Major Issues, Minor Issues, Concrete Recommendations)
+
+#### Major Issues
+1. **Incomplete Manual Annotation on Chromosomes 14–19 Creates Chromosome-Level Ascertainment Bias (Section "Evolution of the GENCODE gene set", Figs. 5, 8):** Because HAVANA had completed first-pass manual curation on only 18 chromosomes in GENCODE 7 (leaving chr14–19 without full manual curation), Level 2 lncRNAs, pseudogenes, and alternative splice variants are severely depleted on chr14–19 (clearly visible in the chromosome-stratified bars of Fig. 5 and Fig. 8B). Downstream users performing genome-wide window or chromosome enrichment analyses on GENCODE 7 could mistake this curation boundary for biological depletion if not prominently warned.
+2. **Unspecified Multi-Experiment $P$-Value Combination Rule in Mass Spectrometry Validation (Section "Assessing coding potential of putative models using mass spectrometry data"):** The text states that peptide $P$-values were generated "by combining the X!Tandem $P$-values for each individual experimental peptide-spectrum match, and a target-decoy approach is used to determine false-discovery rates," referring to an unpublished manuscript ("in prep."). Combining raw PSM $P$-values (e.g., via Fisher's method or Stouffer's Z) across dozens of experiments without accounting for repeated non-independent fragmentation spectra of common contaminants/homologs can inflate multi-experiment false positives unless the decoy distribution is subjected to the identical multi-experiment aggregation procedure.
+
+#### Minor Issues
+1. **Inconsistent Protein-Coding Locus Counts Between Abstract/Main Text and Proteomics Section:** The Abstract states that GENCODE 7 contains `20,687` protein-coding loci, whereas the mass spectrometry section (line 165) states that peptides mapped to `8,098 of the 20,700 annotated protein-coding genes`.
+2. **Exon-Count Peak Discrepancy Between Text Sections (Lines 59 vs. 103):** Line 59 states that lncRNA and protein-coding exon distributions peak "at two and five exons, respectively (see Fig. 2)", whereas line 103 states "Transcripts annotated at protein-coding loci demonstrate a peak at four exons per transcript, while lncRNAs... with a distinct peak at two exons." Inspection of Fig. 2 should be reconciled to report the exact mode (4 vs. 5 exons).
+3. **Minor Typos:** Line 73 ("pseuodgene decorated resource") and Chunk 2 Line 44 ("12.5 $\mu$Ll").
+
+#### Concrete Recommendations
+
+#### 1. Explicitly Flag Chromosomes 14–19 in Genome-Wide Summary Statistics and Completeness Analyses
+* **WHY:** Including the 6 manually unannotated chromosomes (chr14–19) in genome-wide averages of lncRNA density, transcripts per locus, and polyA coverage dilutes the metrics of the manually curated set and creates artificial inter-chromosomal variance.
+* **WHAT:** Report key GENCODE 7 summary statistics (transcripts per coding locus, lncRNA density per Mb, and % polyA/CAGE support) stratified by the 18 manually completed chromosomes versus chr14–19, and mark chr14–19 with an asterisk in Figures 5 and 8.
+* **HOW:** Add a column to Supplemental Table 4 / Table 6 reporting metrics restricted to the 18 manually curated chromosomes alongside the whole-genome totals, and update the captions of Figs. 5 and 8.
+
+#### 2. Test Whether the Two-Exon lncRNA Peak Persists in the Subset of Full-Length (5'-CAGE + 3'-polyA Supported) lncRNAs
+* **WHY:** Because ~85% of annotated lncRNAs lack 5' CAGE and 3' polyA support, the two-exon modal peak in Fig. 2 could be inflated by incomplete 5'/3' terminal exon annotation.
+* **WHAT:** Plot or report the exon-count distribution specifically for the subset of GENCODE 7 lncRNA transcripts that have both 5' CAGE cluster overlap and 3' polyA support.
+* **HOW:** Filter the 15,512 lncRNA transcripts to those validated at both termini (the ~15–16.8% subset described on line 59) and compare their median and modal exon counts against the full lncRNA catalog in Figure 2.
+
+#### 3. Document the Exact Proteomics $P$-Value Combination and Target-Decoy Aggregation Protocol in Methods
+* **WHY:** Because the proteomics validation paper is cited as "in prep.", the current manuscript must provide enough mathematical detail in the Methods section for readers to verify the 1% peptide-level FDR calculation.
+* **WHAT:** Add a "Mass spectrometry validation" subsection to the Methods detailing the `X!Tandem` search parameters (mass tolerances, cleavage rules, decoy database construction), the exact mathematical formula used to combine PSM $P$-values across experiments, and how peptide-level 1% FDR was enforced.
+* **HOW:** Write out the multi-experiment score combination equation and confirm that decoy peptides were aggregated across experiments identically to target peptides before applying the 1% FDR cutoff.
+
+#### 4. Reconcile Numerical Discrepancies and Fix Typos
+* **WHY:** Exact numerical consistency across sections is essential for a reference annotation paper.
 * **WHAT & HOW:**
-  * **Table 1, Model 3c (Lines 40 and 161) vs. Main Text (Line 25):** In the main text, the US multiplicative increase in $R$ is reported as *"59% (95% CI, 56 to 63%)"*, which matches $\exp(\Delta r \times 5.5) - 1$ for $\Delta r = 0.084\text{ [0.080, 0.088]}$ ($\exp(0.088 \times 5.5) - 1 = 62.3\%$). However, Table 1 row 3c prints **`59%[56, 83]`**. Change `83` to `63` (or `62`) in Table 1.
-  * **Materials and Methods — Data sources (Line 116):** Fix the collection date range for the US Helix surveillance dataset from *"6 September–11 February 2020"* $\rightarrow$ *"6 September 2020–11 February 2021"*.
-  * **Data and Code Availability:** Add an explicit URL/DOI for the manuscript's analysis code and compartmental model repository at the end of the Methods section.
+  1. Reconcile the coding gene count (`20,687` on line 5 vs. `20,700` on line 165).
+  2. Reconcile the modal exon number for protein-coding transcripts (`five exons` on line 59 vs. `four exons` on line 103).
+  3. Fix `pseuodgene` to `pseudogene` (line 73) and `12.5 μLl` to `12.5 μL` (Methods, "Amplification and sequencing").
