@@ -1,5 +1,5 @@
 {
-  "total_records": 1482,
+  "total_records": 1483,
   "cohort_summaries": [
     {
       "experiment": "Calibration: Cohort B (Validated Controls)",
@@ -75,12 +75,12 @@
     },
     {
       "experiment": "Community / Issue-Triggered Reviews",
-      "n": 2,
-      "mean": 6.65,
-      "sd": 1.2,
-      "median": 6.65,
+      "n": 3,
+      "mean": 7.03,
+      "sd": 1.08,
+      "median": 7.5,
       "fail_50_pct": 0.0,
-      "flaw_65_pct": 50.0
+      "flaw_65_pct": 33.3
     }
   ],
   "records": [
@@ -18533,6 +18533,41 @@
         "human_reviewer_anomalies": "Generic/Suspect Boilerplate",
         "human_anomaly_details": "Reviewer #1 wrote one-word evaluations ('Abstract satisfactory / Introduction satisfactory') and asked the authors of an environmental water DNA (eDNA) metabarcoding study to 'add the morphological identification characters of your each identify species and compare it with previous publication', misunderstanding that aqueous eDNA metabarcoding does not capture physical specimens for morphological measurement."
       }
+    },
+    {
+      "uid": "CAL_META_01",
+      "code": "META_01",
+      "anon_id": "MANUSCRIPT_META_01",
+      "experiment": "Community / Issue-Triggered Reviews",
+      "is_wild": true,
+      "pmcid": "",
+      "pmid": "",
+      "doi": "",
+      "url": "https://github.com/spond/gemini-reviews",
+      "title": "Blinded AI Peer Review Reveals Widespread Flaws and a 35-Year Quality Decline in Biomedical Publishing (Self-Referential Blinded Meta-Audit of Initial Draft)",
+      "authors": "Kosakovsky Pond SL, Pond SJ, Makova KD, Martin DP, Nekrutenko A.",
+      "authors_short": "Kosakovsky Pond SL et al. (Nekrutenko A.)",
+      "journal": "Preprint / Working Manuscript Draft",
+      "year": 2026,
+      "decade": "2020s",
+      "subfield": "Metascience & Biomedical Peer Review",
+      "venue_tier": "Selective / Established",
+      "citedByCount": 0,
+      "overall": 7.8,
+      "rigor": 2.6,
+      "claims": 1.9,
+      "biology": 1.7,
+      "reproducibility": 1.6,
+      "sci_core_8": 6.2,
+      "tier": "Strong / Sound",
+      "study_modality": "Not Annotated (Calibration)",
+      "tech_maturity": "Not Annotated (Calibration)",
+      "epistemic_stage": "Not Annotated (Calibration)",
+      "bias_category": "",
+      "verdict": "",
+      "review_path": "reviews/2026/blinded-ai-peer-review-meta-audit/review.md",
+      "human_review_path": "",
+      "has_human_review": false
     },
     {
       "uid": "CAL_B23",

@@ -96,7 +96,7 @@ Across all **`1,480` unique scrubbed full-text manuscripts** and **`1,568` gener
 ## Running Tab & Manuscript Leaderboard (1–10 Scale)
 
 <!-- LEADERBOARD_START -->
-### Interactive GitHub Pages Explorer (`1,482` Audited Manuscripts & Reviews)
+### Interactive GitHub Pages Explorer (`1,483` Audited Manuscripts & Reviews)
 
 > **[Launch Interactive Review Explorer & Graphical Dashboard (`spond.github.io/gemini-reviews`)](https://spond.github.io/gemini-reviews/)**
 >
@@ -112,7 +112,7 @@ Across all **`1,480` unique scrubbed full-text manuscripts** and **`1,568` gener
 | **Open-Review Concordance (N=100)** | `100` | **6.25** $\pm$ 1.98 | **6.60** | **28.0%** | **45.0%** | [`PEER_REVIEW_VALUE_ADDED.md`](PEER_REVIEW_VALUE_ADDED.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Open-Review%20Concordance%20(N%3D100)) |
 | **35-Year Secular Trend (N=915)** | `915` | **6.57** $\pm$ 1.75 | **6.80** | **19.7%** | **41.5%** | [`SECULAR_TRENDS_AND_COVARIATES.md`](SECULAR_TRENDS_AND_COVARIATES.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=35-Year%20Secular%20Trend%20(N%3D915)) |
 | **Career Self-Audit: S. Pond (N=164)** | `164` | **7.53** $\pm$ 1.38 | **7.85** | **4.9%** | **20.7%** | [`SPOND_SELF_AUDIT.md`](SPOND_SELF_AUDIT.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Career%20Self-Audit%3A%20S.%20Pond%20(N%3D164)) |
-| **Community / Issue-Triggered Reviews** | `2` | **6.65** $\pm$ 1.20 | **6.65** | **0.0%** | **50.0%** | [`PROTOCOL.md`](PROTOCOL.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Community%20%2F%20Issue-Triggered%20Reviews) |
+| **Community / Issue-Triggered Reviews** | `3` | **7.03** $\pm$ 1.08 | **7.50** | **0.0%** | **33.3%** | [`PROTOCOL.md`](PROTOCOL.md) · [Explore](https://spond.github.io/gemini-reviews/#experiment=Community%20%2F%20Issue-Triggered%20Reviews) |
 
 *Complete machine-readable indices are committed in [`catalog.json`](catalog.json) (all cohorts) and [`index.json`](index.json) (calibration & issue ledger).*
 <!-- LEADERBOARD_END -->

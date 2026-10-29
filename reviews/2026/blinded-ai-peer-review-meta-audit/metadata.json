@@ -1,0 +1,26 @@
+{
+  "id": "MANUSCRIPT_META_01",
+  "pmid": "",
+  "doi": "",
+  "url": "https://github.com/spond/gemini-reviews",
+  "title": "Blinded AI Peer Review Reveals Widespread Flaws and a 35-Year Quality Decline in Biomedical Publishing (Self-Referential Blinded Meta-Audit of Initial Draft)",
+  "authors": "Kosakovsky Pond SL, Pond SJ, Makova KD, Martin DP, Nekrutenko A.",
+  "authors_short": "Kosakovsky Pond SL et al. (Nekrutenko A.)",
+  "venue": "Preprint / Working Manuscript Draft (2026)",
+  "year": 2026,
+  "cohort": "Self-Audit",
+  "cohort_id": "META_01",
+  "anon_id": "MANUSCRIPT_META_01",
+  "domain": "Metascience & Biomedical Peer Review",
+  "reviewed_at": "2026-10-29T09:42:00-04:00",
+  "scores": {
+    "rigor": 2.6,
+    "claims": 1.9,
+    "biology": 1.7,
+    "reproducibility": 1.6,
+    "overall": 7.8
+  },
+  "tier": "Strong / Sound",
+  "model": "gemini-4-argon",
+  "rubric_version": "REVIEW_TEMPLATE v1.1"
+}
